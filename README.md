@@ -11,10 +11,6 @@ Soy un desarrollador apasionado por la astronomía y la física. Mi interés por
 - 😄 Pronombres: mix.
 - ⚡ Dato curioso: Todo es divertido si te gusta.
 
-
- Visión Personal para Capgemini
----
-
 #
 
 ## Visión
