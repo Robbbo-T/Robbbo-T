@@ -1,4 +1,4 @@
-# 👋 Hi, I’m @Robbbo-T
+https://www.t-systems.com/es/es/whitepaper-download/sustainable-transformation?wt_mc=ss.es-es.go.MKT_2023_LBU_IB_SEA_LEADS_IBERIA.7012o000001HwP7AAK.Whitepaper-leads.ma.sustainable-transformation-es-New-campaign-name-Always-on&wt_ga=154689050142_686539089046&wt_kw=b_154689050142_transformación%20sostenible&wt_mc=154689050142.686539089046.b.transformación%20sostenible&gad_source=1&gbraid=0AAAAACfUzi_efOaagGRdaLR5uBmuUDJ7i&gclid=CjwKCAjw4_K0BhBsEiwAfVVZ_1Ain7spjWIsolDcDB8xv_asR4lJBmavWG7sOebzBlOD5C_IrujtYxoCn6cQAvD_BwE&gclsrc=aw.ds# 👋 Hi, I’m @Robbbo-T
 
 ## Sobre Mí
 Soy un desarrollador apasionado por la astronomía y la física. Mi interés por la ciencia comenzó cuando comprendí el funcionamiento del espacio-tiempo y cómo la luz viaja a través del universo. Me fascina cómo vemos las cosas en el universo no en tiempo real, sino en la luz reflejada del pasado. Esta comprensión me impulsó a integrar la ciencia y la tecnología para crear proyectos innovadores.
