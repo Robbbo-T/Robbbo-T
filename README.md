@@ -1,4 +1,4 @@
-# 👋 Hi, I’m @Robbbo-T
+https://github.com/AmePelliccia/Quantum_Ident-idfix/blob/main/README.md# 👋 Hi, I’m @Robbbo-T
 
 ## Sobre Mí
 Soy un desarrollador apasionado por la astronomía y la física. Mi interés por la ciencia comenzó cuando comprendí el funcionamiento del espacio-tiempo y cómo la luz viaja a través del universo. Me fascina cómo vemos las cosas en el universo no en tiempo real, sino en la luz reflejada del pasado. Esta comprensión me impulsó a integrar la ciencia y la tecnología para crear proyectos innovadores.
