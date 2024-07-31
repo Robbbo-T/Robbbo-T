@@ -1,4 +1,4 @@
-Manifesto Fundacional de TerraQueueing
+README.md Fundacional de TerraQueueing
 
 #espejoscosmicos: #polarizacionpositiva vs #polarizacionnegativa de Estados Primordiales
 
