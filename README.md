@@ -1,3 +1,19 @@
+c5c91-ea0c2
+c8afc-a67bd
+5af98-d0347
+be68d-98c70
+c3445-a37ac
+a171c-3497d
+3cec2-f7340
+6b441-1b46e
+793c1-d1409
+119fa-8a987
+aa5e5-e3b29
+bc408-f65a3
+232cb-eab48
+c01d9-4b35e
+6fb84-07f5f
+2cd7e-166b6
 README.md Fundacional de TerraQueueing
 
 #espejoscosmicos: #polarizacionpositiva vs #polarizacionnegativa de Estados Primordiales
