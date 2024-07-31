@@ -1,3 +1,25 @@
+Manifesto Fundacional de TerraQueueing
+
+#espejoscosmicos: #polarizacionpositiva vs #polarizacionnegativa de Estados Primordiales
+
+Quantum Computing Clouds and TerraQueUeing GreenTech Di Amedeo Pelliccia
+
+Mostrar el repositorio Robbbo-T/Robbbo-T A380MRTT A330GAL A350ExtrqWidelyGreen
+
+Quantum Computing Clouds and TerraQueUeing GreenTech Di Amedeo Pelliccia
+
+The Storytelling API EPI IPI OPI UPI IPPN En el contexto de la teoría de las ondas gravitatorias y las perturbaciones en el universo temprano, la polarización de las ondas gravitatorias desempeña un papel crucial. Las ondas gravitatorias tienen dos estados de polarización principales: polarización positiva y polarización negativa. Estos estados afectan la forma en que las perturbaciones en el espacio-tiempo se propagan y se observan.
+
+Polarización Positiva (( + ))
+
+Descripción: La polarización positiva se caracteriza por una deformación del espacio-tiempo en las direcciones x e y, de manera que se estira en una dirección mientras se contrae en la perpendicular.
+Ecuación: Para una onda que se propaga en la dirección z, las componentes de la perturbación ( h_{\mu\nu} ) son: [ h_{xx} = -h_{yy} = A \cos(\omega t - kz) ]
+Efecto en el espacio-tiempo: Las distancias entre los puntos a lo largo de los ejes x e y cambian de manera alternada. Este efecto es perpendicular a la dirección de propagación de la onda gravitatoria.
+Polarización Negativa (( \times ))
+
+Descripción: La polarización negativa también deforma el espacio-tiempo, pero lo hace de una manera que es diagonal a los ejes coordenados principales.
+Ecuación: Para una onda que se propaga en la dirección z, las componentes de la perturbación ( h_{\mu\nu} ) son: [ h_{xy} = h_{yx} = A \cos(\omega t - kz) ]
+Efecto en el espacio-tiempo: Las distancias entre los puntos a lo largo de los ejes diagonales (45 grados con respecto a los ejes x e y) cambian de manera alternada. Este efecto también es perpendicular a la dirección de propagación de la onda gravitatoria.
 https://1drv.ms/x/s!AhtBRXXEiW1ogT4Vv-8VmHhI6CYa
 https://github.com/datasciencemasters/go/issues/208
 https://github.com/Robbbo-T
