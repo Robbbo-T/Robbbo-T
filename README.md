@@ -1,4 +1,4 @@
-Amoelsystems de Amedeo Pelliccia, AMPEL. Create the Genesis Block
+AMPEL Systems  de Amedeo Pelliccia, AMPEL. Create the Genesis Block
 genesis_bloc AMPEL create_block(0, "0", genesis_da
 # Create the Genesis Block
 genesis_block = create_block(0, "0", genesis_data)
