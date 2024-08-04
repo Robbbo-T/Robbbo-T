@@ -1,4 +1,4 @@
-AMPEL Systems  de Amedeo Pelliccia, AMPEL predictivo quantum  machine. Create the Genesis Block
+AMPEL Systems  de Amedeo Pelliccia, AMPEL predictive quantum maintenance and machines. Create the Genesis Block
 # AMPEL Predictive Maintenance Machine
 
 ## Introduction
