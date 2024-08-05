@@ -1,3 +1,78 @@
+#ATA (Air Transport Association) codes, or ATA chapters, are used to organize aircraft technical data. The ATA numbering system provides a standardized method for identifying systems, components, and procedures within aircraft maintenance manuals. Here, I'll map the combinations to corresponding ATA chapters, where possible. Note that some combinations might not have a direct ATA code association.
+
+### 1 bit:
+- 0: (No direct association)
+- 1: (No direct association)
+
+### 2 bits:
+- 00: (No direct association)
+- 01: (No direct association)
+- 10: (No direct association)
+- 11: (No direct association)
+
+### 3 bits:
+- 000: (No direct association)
+- 001: ATA Chapter 1 - Introduction
+- 010: ATA Chapter 2 - Table of Contents
+- 011: ATA Chapter 3 - General
+- 100: ATA Chapter 4 - Airplane Tail Numbers
+- 101: ATA Chapter 5 - Time Limits/Maintenance Checks
+- 110: ATA Chapter 6 - Dimensions and Areas
+- 111: ATA Chapter 7 - Lifting and Shoring
+
+### 4 bits:
+- 0000: (No direct association)
+- 0001: ATA Chapter 8 - Leveling and Weighing
+- 0010: ATA Chapter 9 - Towing and Taxiing
+- 0011: ATA Chapter 10 - Parking, Mooring, Storage and Return to Service
+- 0100: ATA Chapter 11 - Placards and Markings
+- 0101: ATA Chapter 12 - Servicing - Routine Maintenance
+- 0110: ATA Chapter 13 - Reserved
+- 0111: ATA Chapter 14 - Reserved
+- 1000: ATA Chapter 15 - Reserved
+- 1001: ATA Chapter 16 - Reserved
+- 1010: ATA Chapter 17 - Reserved
+- 1011: ATA Chapter 18 - Reserved
+- 1100: ATA Chapter 19 - Reserved
+- 1101: ATA Chapter 20 - Standard Practices - Airframe
+- 1110: ATA Chapter 21 - Air Conditioning and Pressurization
+- 1111: ATA Chapter 22 - Auto Flight
+
+### 5 bits:
+- 00000: (No direct association)
+- 00001: ATA Chapter 23 - Communications
+- 00010: ATA Chapter 24 - Electrical Power
+- 00011: ATA Chapter 25 - Equipment/Furnishings
+- 00100: ATA Chapter 26 - Fire Protection
+- 00101: ATA Chapter 27 - Flight Controls
+- 00110: ATA Chapter 28 - Fuel
+- 00111: ATA Chapter 29 - Hydraulic Power
+- 01000: ATA Chapter 30 - Ice and Rain Protection
+- 01001: ATA Chapter 31 - Indicating/Recording Systems
+- 01010: ATA Chapter 32 - Landing Gear
+- 01011: ATA Chapter 33 - Lights
+- 01100: ATA Chapter 34 - Navigation
+- 01101: ATA Chapter 35 - Oxygen
+- 01110: ATA Chapter 36 - Pneumatic
+- 01111: ATA Chapter 37 - Vacuum
+- 10000: ATA Chapter 38 - Water/Waste
+- 10001: ATA Chapter 39 - Electrical - Electronic Panels and Multiplex Data Buses
+- 10010: ATA Chapter 40 - Multiplies
+- 10011: ATA Chapter 41 - Water Ballast
+- 10100: ATA Chapter 42 - Integrated Modular Avionics
+- 10101: ATA Chapter 43 - Digital Techniques
+- 10110: ATA Chapter 44 - Cabin Systems
+- 10111: ATA Chapter 45 - Central Maintenance System
+- 11000: ATA Chapter 46 - Information Systems
+- 11001: ATA Chapter 47 - Reserved
+- 11010: ATA Chapter 48 - Reserved
+- 11011: ATA Chapter 49 - Auxiliary Power Unit (APU)
+- 11100: ATA Chapter 50 - Cargo and Accessory Compartments
+- 11101: ATA Chapter 51 - Structures - General
+- 11110: ATA Chapter 52 - Doors
+- 11111: ATA Chapter 53 - Fuselage
+
+This list provides a mapping for many ATA chapters, though not all binary combinations have a direct association.
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import PCA
