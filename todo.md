@@ -1,4 +1,22 @@
-To embed the AMPEL concepts and methods into the "Terrabrain-Ai-Crafts-Aircrafts-3IIA-EuropeDM-AISATCRAFTs" project, we will incorporate key ideas from AMPEL, such as modular development, sustainability, interdisciplinary collaboration, and continuous improvement through feedback loops. Here's the enhanced XML structure:
+# Example of TODO.md
+
+This is an example of TODO.md
+
+View the raw content of this file to understand the format.
+
+### Todo
+
+- [ ] Work on the website ~3d #feat @john 2020-03-20  
+- [ ] Fix the homepage ~1d #bug @jane  
+  - [ ] Sub-task or description  
+
+### In Progress
+
+- [ ] Work on Github Repo [JIRA-345]  
+
+### Done ✓
+
+- [x] Create my first TODO.md  To embed the AMPEL concepts and methods into the "Terrabrain-Ai-Crafts-Aircrafts-3IIA-EuropeDM-AISATCRAFTs" project, we will incorporate key ideas from AMPEL, such as modular development, sustainability, interdisciplinary collaboration, and continuous improvement through feedback loops. Here's the enhanced XML structure:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
