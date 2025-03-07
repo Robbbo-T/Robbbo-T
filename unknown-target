@@ -201,7 +201,7 @@ api-integration-strategy/
 ├── common/
 ├── examples/
 ├── docs/
-│   └─��� diagrams/
+│   └── diagrams/
 │       └── architecture.png
 ├── .github/
 │   └── workflows/
