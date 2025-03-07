@@ -1302,9 +1302,7 @@ This section would cover systems and components common to multiple space vehicle
 
 </details>
 
-<details id="part-vi-summary"><b>Part VI: Project Management and Operations (GP-PMO)</b></summary>
 
-[Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
 **Part Name:** Project Management
 
@@ -1392,9 +1390,7 @@ This section would cover systems and components common to multiple space vehicle
 *   **P/N:** GP-PMO-REG-0608
     *   📄 **IN:** GP-PMO-REG-0608-001-A - **[GAIA AIR Regulatory Compliance Plan](docs/GP-PMO/GP-PMO-REG-0608-001-A.md)**
 
-</details>
 
-<details>
 <summary id="part-vii-summary"><b>Part VII: Documentation and Knowledge Management</b></summary>
 
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
@@ -1410,9 +1406,8 @@ This section would cover systems and components common to multiple space vehicle
 *   📄 **IN:** GP-DKM-CSDB-0705-001-A - **[Common Source Database (CSDB) Implementation Guide](docs/GP-DKM/GP-DKM-CSDB-0705-001-A.md)**
 *   📄 **IN:** GP-DKM-COAFI-0706-001-A - **[Cosmic Omnidevelopable Aero Foresights Index (COAFI) - User Guide and Maintenance](docs/GP-DKM/GP-DKM-COAFI-0706-001-A.md)**
 
-</details>
 
-<details id="part-viii-summary"><b>Part VIII: Appendices</b></summary>
+<summaary id="part-viii-summary"><b>Part VIII: Appendices</b></summary>
 
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
@@ -1455,9 +1450,9 @@ This section would cover systems and components common to multiple space vehicle
         *   **Content:** [Placeholder: Content for Appendix C]
     *   ... *(Add more appendices as needed, following the IN pattern)*
 
-</details>
 
-<details id="part-ix-summary">
+
+<summary id="part-ix-summary">
 <summary><b>Part IX: GAIA GALACTIC MINING OPERATIONS (GGMO)</b></summary>
 
 [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
@@ -1552,4 +1547,4 @@ This section would cover systems and components common to multiple space vehicle
 
 ---
 
-### Fin
+### Fin of the Coafi index
