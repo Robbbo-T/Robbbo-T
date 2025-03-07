@@ -170,7 +170,7 @@ The COAFI framework is designed for extensibility, allowing for the incorporatio
 
 **Introduction:** *Part II provides comprehensive documentation for the AMPEL360XWLRGA aircraft, organized by ATA chapters and encompassing design, analysis, manufacturing, maintenance, and certification information.*
 
-### 2.1 AMPEL360XWLRGA (Advanced Aircraft Systems)
+## 2.1 AMPEL360XWLRGA (Advanced Aircraft Systems)
 [Back to Part II](#part-ii-gaia-pulse-air-modules-gpam---atmospheric-operations) | [Back to Top](#cosmic-omnidevelopable-aero-foresights-index-coafi---complete-table-of-contents)
 
 **Section Name:** AMPEL360XWLRGA Aircraft
