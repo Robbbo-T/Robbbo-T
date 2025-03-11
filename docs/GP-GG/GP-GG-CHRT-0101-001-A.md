@@ -56,3 +56,14 @@ This section provides links to general documentation applicable across all modul
 - **Project History**: [Project History & Background](docs/GP-ID/GP-ID-HIST-0102-001-A.md)
 - **Current Project Status**: [Project Status & Objectives](docs/GP-ID/GP-ID-STAT-0103-001-A.md)
 - **Open Skyway Initiative**: [Open Skyway Initiative Charter](docs/GP-ID/GP-ID-OPENSKY-0108-001-A.md)
+
+## Explainable AI (XAI) Definitions
+
+### Transparency
+Transparency in AI refers to the clarity and openness with which AI systems operate. It involves making the decision-making processes of AI models understandable to humans. Transparent AI systems provide insights into how they arrive at specific conclusions, allowing users to trust and verify the results.
+
+### Interpretability
+Interpretability is the degree to which a human can understand the cause of a decision made by an AI system. It involves creating models that are not only accurate but also explainable. Interpretability ensures that users can comprehend the reasoning behind AI decisions, making it easier to identify and correct errors.
+
+### Accountability
+Accountability in AI involves ensuring that AI systems and their outcomes can be traced back to their creators and operators. It includes establishing mechanisms for monitoring and evaluating AI performance, as well as implementing policies to address any negative impacts. Accountability ensures that AI systems are used responsibly and ethically.
