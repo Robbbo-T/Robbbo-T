@@ -15,7 +15,8 @@
 5. [Systems Airworthiness Limitations](#5-systems-airworthiness-limitations)
 6. [Operational Limitations](#6-operational-limitations)
 7. [Certification Maintenance Requirements](#7-certification-maintenance-requirements)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -380,7 +381,24 @@ The following powerplant Certification Maintenance Requirements are mandatory:
 | Thrust Reverser | Verification of reverser lockout integrity | 1,500 FC | ±75 FC | CS 25.933 |
 | Engine Control | Verification of thrust control integrity | 1,000 FH | ±50 FH | CS 25.1141 |
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - Airworthiness & Certification Requirements Report (GP-AM-EDR-00-003)
 - Scheduled Maintenance Program Specification (GP-AM-EDR-05-001)
 - Component Lifing & Time-Limit Data Report (GP-AM-EDR-05-004)

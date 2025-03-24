@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "test": "print here my project",
+    "build": "incapsulate into my projects",
+    "launch": "publish my project"
+  }
+}

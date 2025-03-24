@@ -15,7 +15,8 @@
 5. [Critical Measurement Points](#5-critical-measurement-points)
 6. [Tolerance Specifications](#6-tolerance-specifications)
 7. [Dimensional Verification Methods](#7-dimensional-verification-methods)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -388,7 +389,24 @@ Water lines are numbered in centimeters from the Z=0 reference plane. Key water 
 - Trend analysis
 - Final dimensional compliance statement
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - Aircraft General Arrangement Drawing (GP-AM-DRW-00-001)
 - Calibration & Measurement Procedures Document (GP-AM-EDR-06-002)
 - Structural Integration Analysis Report (GP-AM-EDR-06-003)

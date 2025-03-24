@@ -15,7 +15,8 @@
 5. [Predictive Analytics Models](#5-predictive-analytics-models)
 6. [Implementation Strategy](#6-implementation-strategy)
 7. [Validation and Performance Metrics](#7-validation-and-performance-metrics)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -350,7 +351,24 @@ The i-Aher0 module ensures:
 - Lifecycle cost impact (target: 20% reduction)
 - Revenue impact from improved availability (target: 3% increase)
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - i-Aher0 Architecture Document (GPGM-IAHER-06XX-001-A)
 - Central Maintenance System Specification (GP-AM-EDR-45-001)
 - Digital Twin Interface Specification (GP-DT-IF-001)
