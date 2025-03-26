@@ -15,7 +15,8 @@
 5. [Key Performance Parameters](#5-key-performance-parameters)
 6. [Operational Envelope](#6-operational-envelope)
 7. [Sustainability Features](#7-sustainability-features)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -165,7 +166,24 @@ The AEHCS integrates multiple energy harvesting technologies:
 - Optimized aerodynamic surfaces to minimize airframe noise
 - Low-noise approach and departure procedures
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - GAIA AIR Design Philosophy Document (GP-PHIL-001)
 - AMPEL360XWLRGA Preliminary Design Review Documentation (GP-AM-PDR-001)
 - Alternative Energy Harvesting and Control System Specification (GP-AM-EDR-28-004)

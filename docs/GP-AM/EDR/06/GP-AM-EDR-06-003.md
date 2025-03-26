@@ -15,7 +15,8 @@
 5. [Systems Integration](#5-systems-integration)
 6. [Tolerance Stack-Up Analysis](#6-tolerance-stack-up-analysis)
 7. [Integration Risk Assessment](#7-integration-risk-assessment)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -470,7 +471,24 @@ The following contingency plans address potential manufacturing issues:
 | MR-004 | Backup tooling deployment, manual operations | Tool failure | Medium |
 | MR-005 | Temporary assembly suspension, portable environment | Control failure | High |
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - Dimensional Data Report (GP-AM-EDR-06-001)
 - Calibration & Measurement Procedures Document (GP-AM-EDR-06-002)
 - Internal Compartment Layout Document (GP-AM-EDR-06-004)

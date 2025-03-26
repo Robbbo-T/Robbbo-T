@@ -15,7 +15,8 @@
 5. [Aircraft Systems Life Cycle Analysis](#5-aircraft-systems-life-cycle-analysis)
 6. [Economic and Operational Considerations](#6-economic-and-operational-considerations)
 7. [Life Extension Strategies](#7-life-extension-strategies)
-8. [References](#8-references)
+8. [Mission Classification](#8-mission-classification)
+9. [References](#9-references)
 
 ## 1. Introduction
 ### 1.1 Purpose
@@ -431,7 +432,24 @@ The following tools and techniques are employed:
 - Control system optimization
 - Energy harvesting integration
 
-## 8. References
+## 8. Mission Classification
+### 8.1 M1: Suborbital
+- Description: Missions that involve suborbital flights, typically for research, tourism, or short-duration space missions.
+- Key Features: High-altitude flight capabilities, rapid ascent and descent, minimal time in space.
+
+### 8.2 M2: Orbital
+- Description: Missions that involve placing payloads or crew into orbit around Earth.
+- Key Features: Sustained orbital flight, re-entry capabilities, long-duration space missions.
+
+### 8.3 M3: Vuelo comercial
+- Description: Commercial flights for passenger and cargo transport.
+- Key Features: High efficiency, low emissions, optimized for frequent use.
+
+### 8.4 M4: Carga automatizada
+- Description: Automated cargo transport missions.
+- Key Features: Autonomous operation, high payload capacity, integration with logistics networks.
+
+## 9. References
 - Fatigue and Damage Tolerance Analysis Report (GP-AM-FDTAR-001)
 - Quantum Propulsion Life Substantiation Report (GP-AM-EDR-72-Q01-007)
 - Alternative Energy Harvesting System Life Test Report (GP-AM-EDR-28-AEHS-005)
