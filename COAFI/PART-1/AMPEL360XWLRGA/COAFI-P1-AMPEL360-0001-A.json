@@ -73,36 +73,39 @@
         }
       ]
     },
-    "chapter_number": "07",
-  "system_name": "Lifting and Shoring",
-  "overall_status": "Definition",
-  "pdr_milestone": { "status": "Not Started", "date": null },
-  "cdr_milestone": { "status": "Not Started", "date": null },
-  "pbs_link": "/pbs/ref/ata07",
-  "bom_link": "/bom/ref/ata07",
-  "requires_cad_model": true,
-  "documents": [
-    {
-      "in": "001",
-      "dmc": "AMPEL360-ATA07-PROC-LIFT-A",
-      "document_title": "Lifting Procedures and Diagrams",
-      "document_filename": "AMPEL360-ATA07-PROC-LIFT-A.md",
-      "document_type": "PROC",
-      "status": "Draft",
-      "revision": "A",
-      "date_issued": "YYYY-MM-DD",
-      "notes": "Procedimientos preliminares para levantar y manipular la estructura Q-01. Incluye checklist de verificación."
-    },
-    {
-      "in": "002",
-      "dmc": "AMPEL360-ATA07-DWG-SHOR-A",
-      "document_title": "Shoring Structure Diagrams",
-      "document_filename": "AMPEL360-ATA07-DWG-SHOR-A.dwg",
-      "document_type": "DWG",
-      "status": "Draft",
-      "revision": "A",
-      "date_issued": "YYYY-MM-DD",
-      "notes": "Diagramas preliminares del sistema de apuntalamiento y soporte para maniobras en tierra."
+    "ATA_07": {
+      "chapter_number": "07",
+      "system_name": "Lifting and Shoring",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": "/pbs/ref/ata07",
+      "bom_link": "/bom/ref/ata07",
+      "requires_cad_model": true,
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "AMPEL360-ATA07-PROC-LIFT-A",
+          "document_title": "Lifting Procedures and Diagrams",
+          "document_filename": "AMPEL360-ATA07-PROC-LIFT-A.md",
+          "document_type": "PROC",
+          "status": "Draft",
+          "revision": "A",
+          "date_issued": "YYYY-MM-DD",
+          "notes": "Procedimientos preliminares para levantar y manipular la estructura Q-01. Incluye checklist de verificación."
+        },
+        {
+          "in": "002",
+          "dmc": "AMPEL360-ATA07-DWG-SHOR-A",
+          "document_title": "Shoring Structure Diagrams",
+          "document_filename": "AMPEL360-ATA07-DWG-SHOR-A.dwg",
+          "document_type": "DWG",
+          "status": "Draft",
+          "revision": "A",
+          "date_issued": "YYYY-MM-DD",
+          "notes": "Diagramas preliminares del sistema de apuntalamiento y soporte para maniobras en tierra."
+        }
+      ]
     },
     "ATA_08": {
       "chapter_number": "08",
@@ -256,7 +259,30 @@
       "pbs_link": "/pbs/ref/ata26",
       "bom_link": "/bom/ref/ata26",
       "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "AMPEL360-ATA26-PLAN-FIRE-A",
+          "document_title": "Fire Protection Plan",
+          "document_filename": "AMPEL360-ATA26-PLAN-FIRE-A.pdf",
+          "document_type": "PLAN",
+          "status": "Draft",
+          "revision": "A",
+          "date_issued": "YYYY-MM-DD",
+          "notes": "Initial fire protection plan for AMPEL360XWLRGA."
+        },
+        {
+          "in": "002",
+          "dmc": "AMPEL360-ATA26-PROC-FIRE-A",
+          "document_title": "Fire Suppression Procedures",
+          "document_filename": "AMPEL360-ATA26-PROC-FIRE-A.docx",
+          "document_type": "PROC",
+          "status": "Draft",
+          "revision": "A",
+          "date_issued": "YYYY-MM-DD",
+          "notes": "Procedures for fire suppression system."
+        }
+      ]
     },
     "ATA_27": {
       "chapter_number": "27",
@@ -734,5 +760,3 @@
     }
   }
 }
-```
-
