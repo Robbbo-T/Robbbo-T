@@ -108,3 +108,44 @@
 - [GP-AM-EDR-26-002-CAL]: Fire Suppression Volume Calculations  
 - [GP-AM-DRW-26-004]: Suppression Agent Routing Schematics  
 - [GP-Q-TEST-49-026]: Fire Resistance Test Results for QPS Modules  
+
+---
+
+# COAFI Part I – ATA 32: LANDING GEAR SYSTEM
+**Document ID:** REQ-32-LG-1.0
+**Review Type:** PDR (Preliminary Design Review)
+**Author:** [Author Name]
+**Date:** [Date]
+
+## System Overview
+
+The Landing Gear system is a critical component of the aircraft, responsible for supporting the aircraft during ground operations, takeoff, and landing. The system includes the main landing gear, nose gear, and associated hydraulic and electronic control systems. The primary functions of the Landing Gear system are extension and retraction, which are essential for safe aircraft operations.
+
+## Functional Requirements
+
+### 1. Extension Capability
+- **REQ-32-LG-EXT-001:** The Landing Gear system shall extend the landing gear within 10 seconds.
+- **REQ-32-LG-EXT-002:** The extension mechanism shall be operable under all standard flight conditions.
+- **REQ-32-LG-EXT-003:** The system shall provide feedback to the cockpit indicating successful extension.
+
+### 2. Retraction Capability
+- **REQ-32-LG-RET-001:** The Landing Gear system shall retract the landing gear within 10 seconds.
+- **REQ-32-LG-RET-002:** The retraction mechanism shall be operable under all standard flight conditions.
+- **REQ-32-LG-RET-003:** The system shall provide feedback to the cockpit indicating successful retraction.
+
+## Performance Requirements
+- **REQ-32-LG-PERF-001:** The Landing Gear system shall operate in temperatures ranging from -40°C to +70°C.
+- **REQ-32-LG-PERF-002:** The system shall withstand the impact forces experienced during landing without failure.
+
+## Interface Requirements
+- **REQ-32-LG-INT-001:** The Landing Gear system shall interface with the aircraft's hydraulic system.
+- **REQ-32-LG-INT-002:** The system shall interface with the cockpit control panel for operation commands and status feedback.
+
+## Safety Requirements
+- **REQ-32-LG-SAFE-001:** The Landing Gear system shall include a fail-safe mechanism to ensure gear extension in case of hydraulic failure.
+- **REQ-32-LG-SAFE-002:** The system shall undergo regular maintenance checks as per the aircraft maintenance schedule.
+
+## Additional Sections
+- Environmental Requirements
+- Verification and Validation
+- Compliance with Regulatory Standards

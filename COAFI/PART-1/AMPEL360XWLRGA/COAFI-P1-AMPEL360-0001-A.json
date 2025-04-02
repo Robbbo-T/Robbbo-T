@@ -322,7 +322,19 @@
       "pbs_link": "/pbs/ref/ata32/lg",
       "bom_link": "/bom/ref/ata32/lg",
       "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
+      "documents": [
+        {
+          "in": "001",
+          "dmc": "REQ-32-LG-1.0",
+          "document_title": "Requirements Document for Landing Gear System",
+          "document_filename": "REQ-32-LG-1.0.md",
+          "document_type": "REQ",
+          "status": "Draft",
+          "revision": "1.0",
+          "date_issued": "YYYY-MM-DD",
+          "notes": "Initial draft for PDR review."
+        }
+      ]
     },
     "ATA_33": {
       "chapter_number": "33",
@@ -734,5 +746,3 @@
     }
   }
 }
-```
-

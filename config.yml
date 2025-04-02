@@ -114,3 +114,9 @@ quantum_computing:
     speedup_factor: 100
     fidelity_improvement: "99.9%"
     optimization_quality: "High"
+
+# Landing Gear System Configuration
+landing_gear:
+  document_id: "REQ-32-LG-1.0"
+  review_type: "PDR (Preliminary Design Review)"
+  system_overview: "The Landing Gear system is a critical component of the aircraft, responsible for supporting the aircraft during ground operations, takeoff, and landing. The system includes the main landing gear, nose gear, and associated hydraulic and electronic control systems. The primary functions of the Landing Gear system are extension and retraction, which are essential for safe aircraft operations."
