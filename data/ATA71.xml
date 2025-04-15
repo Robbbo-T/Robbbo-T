@@ -6,9 +6,8 @@
 
   <identAndStatusSection>
     <dmAddress>
-      <modelIdentCode modelIdentCode="AMPEL360" systemDiffCode="A" systemCode="71" subSystemCode="00" subSubSystemCode="00" assyCode="00" disassyCodeVariant="A" infoCode="020" infoCodeVariant="A" itemLocationCode="00" language="EN-US" issueNumber="002" revNumber="00" dmType="DMC" learnCode="A">
-        GPAM-AMPEL-0201-71-000-A
-      </modelIdentCode>
+      <systemDiffCode>A</systemDiffCode>
+      <systemCode>71</systemCode>
     </dmAddress>
 
     <issueInfo>
@@ -20,23 +19,8 @@
   </identAndStatusSection>
 
   <content>
-    <illustrations>
-      <figure id="fig-powerplant-diagram">
-        <para>Figure 1: Hybrid-Electric Propulsion System Block Diagram</para>
-        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-DIAG-001"/>
-      </figure>
-      <figure id="fig-powerplant-installation">
-        <para>Figure 2: Power Plant Installation Overview</para>
-        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-INSTALL-001"/>
-      </figure>
-      <figure id="fig-quantum-propulsion">
-        <para>Figure 3: Quantum Propulsion System Overview</para>
-        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-QUANTUM-001"/>
-      </figure>
-      <figure id="fig-thermal-management">
-        <para>Figure 4: Thermal Management System Diagram</para>
-        <graphic boardNo="ILL-GPAM-AMPEL-0201-71-THERMAL-001"/>
-      </figure>
-    </illustrations>
+    <procedures>
+      <!-- Add procedure-related elements here -->
+    </procedures>
   </content>
 </dmodule>
