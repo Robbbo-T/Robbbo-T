@@ -55,4 +55,3 @@ The Vibration Monitoring System comprises a network of sensors strategically pla
 *   Timestamped data records.
 
 ---
-
