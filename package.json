@@ -1,0 +1,29 @@
+{
+  "name": "gaia-air-memories",
+  "version": "1.0.0",
+  "description": "Proyecto GAIA AIR Memories",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Robbbo-T/gaia-air-memories-project.git"
+  },
+  "keywords": [
+    "GAIA",
+    "AIR",
+    "Memories",
+    "Project"
+  ],
+  "author": "Robbbo-T",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

@@ -1,0 +1,159 @@
+'use client';
+
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CheckCircle } from 'lucide-react';
+
+const FunctionalTiers = () => (
+  <table className="w-full text-left border-collapse border border-gray-300">
+    <thead>
+      <tr className="bg-gray-100">
+        <th className="p-2 border">Tier</th>
+        <th className="p-2 border">Scope</th>
+        <th className="p-2 border">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td className="p-2 border">F1</td><td className="p-2 border">System-Level</td><td className="p-2 border">Provide Propulsion</td></tr>
+      <tr><td className="p-2 border">F2</td><td className="p-2 border">Subsystem</td><td className="p-2 border">Generate Quantum Thrust</td></tr>
+      <tr><td className="p-2 border">F3</td><td className="p-2 border">Component</td><td className="p-2 border">Modulate Emission Pattern</td></tr>
+      <tr><td className="p-2 border">F4</td><td className="p-2 border">Behavioral</td><td className="p-2 border">React &lt;0.01s</td></tr>
+    </tbody>
+  </table>
+);
+
+const IntegrationNodes = () => (
+  <table className="w-full text-left border-collapse border border-gray-300 mt-4">
+    <thead>
+      <tr className="bg-gray-100">
+        <th className="p-2 border">Component</th>
+        <th className="p-2 border">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td className="p-2 border">C-COAFI</td><td className="p-2 border">Manages training, feedback, and adaptive instruction</td></tr>
+      <tr><td className="p-2 border">QAO</td><td className="p-2 border">Executes quantum-optimized propulsion commands</td></tr>
+      <tr><td className="p-2 border">INFRANET</td><td className="p-2 border">Ensures secure and verifiable communication</td></tr>
+      <tr><td className="p-2 border">DTO</td><td className="p-2 border">Synchronizes system lifecycle and configuration</td></tr>
+      <tr><td className="p-2 border">PCCQI</td><td className="p-2 border">Quantum communication interface for secure data flows</td></tr>
+    </tbody>
+  </table>
+);
+
+const ImplementationExample = ({ title, command, pathway, result }: { title: string; command: string; pathway: string; result: string }) => (
+  <Card className="mb-4">
+    <CardContent className="p-4">
+      <h4 className="font-semibold text-lg mb-2">{title}</h4>
+      <p><strong>Command:</strong> {command}</p>
+      <p><strong>Pathway:</strong> {pathway}</p>
+      <p><strong>Result:</strong> {result}</p>
+    </CardContent>
+  </Card>
+);
+
+const StrategicBenefits = () => (
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    {[
+      'Unified Command Grammar Across Systems',
+      'Quantum-Ethical Compliance via QAO',
+      'Secure Orchestration with INFRANET and PCCQI',
+      'Full-Lifecycle Traceability Through DTO'
+    ].map((benefit, idx) => (
+      <div key={idx} className="flex items-center space-x-2">
+        <CheckCircle className="text-green-600" />
+        <span>{benefit}</span>
+      </div>
+    ))}
+  </div>
+);
+
+export default function MppCoafiIntegration() {
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold">Latest Breakthrough: MPP-C-COAFI + GAIA AIR for AMPEL360 XWLRGA</h2>
+
+      <Card>
+        <CardContent className="p-4">
+          <p>
+            The <strong>MPP-C-COAFI</strong> (Mastering Prompts Protocol - Control Cognitive Operating Airsystem Flying Instructor)
+            represents a significant advancement in orchestrating complex aerospace operations.
+          </p>
+          <p className="mt-2">
+            This cognitive command protocol framework enables structured, interpretable communication between AI systems,
+            quantum components, and human operators across the <strong>AMPEL360 XWLRGA</strong> platform.
+          </p>
+          <p className="mt-2">
+            <strong>Key Innovations:</strong>
+          </p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
+            <li><strong>Unified Command Grammar</strong> – Standardized semantic structure for high-trust dispatch and system interpretability.</li>
+            <li><strong>Quantum-Ethical Compliance</strong> – QAO ensures propulsion/control align with ethical boundaries and performance goals.</li>
+            <li><strong>Secure Orchestration</strong> – Commands validated by INFRANET and PCCQI for trust, confidentiality, and traceability.</li>
+            <li><strong>Full-Lifecycle Traceability</strong> – DTO ensures continuity and auditability across system design and operation.</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Tabs defaultValue="tiers">
+        <TabsList>
+          <TabsTrigger value="tiers">Functional Tiers</TabsTrigger>
+          <TabsTrigger value="integration">Integration Points</TabsTrigger>
+          <TabsTrigger value="examples">Examples</TabsTrigger>
+          <TabsTrigger value="benefits">Key Innovations</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="tiers">
+          <FunctionalTiers />
+        </TabsContent>
+
+        <TabsContent value="integration">
+          <IntegrationNodes />
+        </TabsContent>
+
+        <TabsContent value="examples">
+          <ImplementationExample
+            title="Propulsion Optimization"
+            command="@motor-cuantico : potencia=0.75 >> optimizar-rendimiento"
+            pathway="MPP → QAO → Engine Subsystem"
+            result="Optimized thrust with eco-mode and emission control"
+          />
+          <ImplementationExample
+            title="Flight Training Execution"
+            command="@entrenamiento : escenario=123 >> mejorar-habilidades"
+            pathway="MPP → C-COAFI → Performance Module"
+            result="Scenario initiated with adaptive telemetry and feedback"
+          />
+          <ImplementationExample
+            title="System Integrity Verification"
+            command="@sistema : verificar=completo >> garantizar-seguridad"
+            pathway="MPP → DTO + INFRANET → Validation Nodes"
+            result="Full integrity sweep and compliance check"
+          />
+          <ImplementationExample
+            title="Thrust Generation"
+            command="@qee-control : potencia=0.85 >> generar-empuje"
+            pathway="MPP → QAO → Ion Core + Plasma Engine"
+            result="Stable 1.2kN thrust with feedback control enabled"
+          />
+          <ImplementationExample
+            title="Real-Time Emission Control"
+            command="@patron-emision : geometria=\"conica\" >> optimizar-aerodinamica"
+            pathway="MPP → QAO → Emission Modulator"
+            result="Emission pattern shaped for supersonic conditions"
+          />
+          <ImplementationExample
+            title="Adaptive Propulsion Cycle"
+            command="@sistema-propulsion : inicializacion=\"completa\" >> preparar-despegue"
+            pathway="MPP → INFRANET → QAO + DTO + QEE + Telemetry"
+            result="Full sequence initiated with quantum-guided thrust synchronization"
+          />
+        </TabsContent>
+
+        <TabsContent value="benefits">
+          <StrategicBenefits />
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}

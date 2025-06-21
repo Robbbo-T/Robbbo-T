@@ -1,266 +1,1236 @@
-name: Create API Integration Repository Structure
 
-on:
-  workflow_dispatch:
+          cat > docs/GP-AM/00/GP-AM-AMPEL-0100-00-001-A.md << 'EOL'
+          # GP-AM-AMPEL-0100-00-001-A: Aircraft General – System Description (ATA 00)
 
-jobs:
-  create-structure:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        
-      - name: Set up directory structure
-        run: |
-          mkdir -p adaptation-layer/src
-          mkdir -p microservices-facades/src
-          mkdir -p transformation-framework/src
-          mkdir -p metadata-driven-approach/src
-          mkdir -p api-orchestration/src
-          mkdir -p common/src
-          mkdir -p docs/diagrams
-          
-      - name: Create package.json
-        run: |
-          cat > package.json << 'EOL'
-          {
-            "name": "api-integration-strategy",
-            "version": "1.0.0",
-            "description": "Comprehensive API Integration Strategy with multiple approaches",
-            "scripts": {
-              "start:adaptation": "node adaptation-layer/src/index.js",
-              "start:facades": "node microservices-facades/src/index.js",
-              "start:transformation": "node transformation-framework/src/index.js",
-              "start:metadata": "node metadata-driven-approach/src/index.js",
-              "start:orchestration": "node api-orchestration/src/index.js",
-              "test": "jest"
-            },
-            "keywords": ["api", "integration", "rest", "graphql", "soap", "facade", "adaptation", "transformation"],
-            "author": "Robbbo-T",
-            "license": "MIT",
-            "dependencies": {
-              "express": "^4.18.2",
-              "axios": "^1.3.4",
-              "graphql": "^16.6.0",
-              "apollo-server-express": "^3.12.0",
-              "soap": "^1.0.0",
-              "protobufjs": "^7.2.3",
-              "ajv": "^8.12.0",
-              "openapi-types": "^12.1.0",
-              "swagger-ui-express": "^4.6.2"
-            },
-            "devDependencies": {
-              "typescript": "^5.0.4",
-              "jest": "^29.5.0",
-              "supertest": "^6.3.3",
-              "@types/express": "^4.17.17",
-              "@types/node": "^18.15.11"
-            }
-          }
-          EOL
-          
-      - name: Create architecture diagram
-        run: |
-          cat > docs/diagrams/architecture-diagram.mmd << 'EOL'
-          graph TD
-              Client[Client Applications] --> Gateway[API Gateway]
-              Gateway --> AL[Adaptation Layer]
-              Gateway --> MSF[Microservices with API Facades]
-              Gateway --> TF[Transformation Framework]
-              Gateway --> MDA[Metadata-Driven Approach]
-              Gateway --> AO[API Orchestration]
-              
-              AL -->|Transforms| Backend1[Backend Services]
-              MSF --> |Routes to| Backend2[Backend Services]
-              TF --> |Converts data for| Backend3[Backend Services]
-              MDA --> |Generates endpoints for| Backend4[Backend Services]
-              AO --> |Orchestrates calls to| Backend5[Backend Services]
-              
-              subgraph "Integration Strategies"
-                  AL
-                  MSF
-                  TF
-                  MDA
-                  AO
-              end
-              
-              subgraph "Backend Systems"
-                  Backend1
-                  Backend2
-                  Backend3
-                  Backend4
-                  Backend5
-              end
-          EOL
-      
-      - name: Create CONTRIBUTING.md
-        run: |
-          cat > CONTRIBUTING.md << 'EOL'
-          # Contributing to API Integration Strategy
-          
-          Thank you for considering contributing to this project! Here's how you can help:
-          
-          ## Code of Conduct
-          
-          This project adheres to a Code of Conduct. By participating, you are expected to uphold this code.
-          
-          ## How to Contribute
-          
-          1. Fork the repository
-          2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-          3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-          4. Push to the branch (`git push origin feature/amazing-feature`)
-          5. Open a Pull Request
-          
-          ## Development Setup
-          
-          ```bash
-          npm install
-          ```
-          
-          ## Testing
-          
-          ```bash
-          npm test
-          ```
-          
-          ## Style Guide
-          
-          Please follow the existing code style and structure.
-          
-          ## Issue Reporting
-          
-          For bug reports or feature requests, please use the GitHub issue tracker.
-          EOL
-          
-      - name: Create LICENSE
-        run: |
-          cat > LICENSE << 'EOL'
-          MIT License
-          
-          Copyright (c) 2025 Robbbo-T
-          
-          Permission is hereby granted, free of charge, to any person obtaining a copy
-          of this software and associated documentation files (the "Software"), to deal
-          in the Software without restriction, including without limitation the rights
-          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-          copies of the Software, and to permit persons to whom the Software is
-          furnished to do so, subject to the following conditions:
-          
-          The above copyright notice and this permission notice shall be included in all
-          copies or substantial portions of the Software.
-          
-          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-          SOFTWARE.
-          EOL
-          
-      - name: Initialize approach directories with READMEs
-        run: |
-          for dir in adaptation-layer microservices-facades transformation-framework metadata-driven-approach api-orchestration common; do
-            cat > ${dir}/README.md << EOL
-          # ${dir}
-          
-          This directory contains the implementation for the ${dir} approach of the API Integration Strategy.
-          
-          ## Overview
-          
-          TODO: Add specific information about this approach.
-          
-          ## Getting Started
-          
-          \`\`\`bash
-          npm install
-          npm run start:${dir#*/}
-          \`\`\`
-          
-          ## Architecture
-          
-          TODO: Add architecture diagram specific to this approach.
-          
-          ## Implementation Details
-          
-          TODO: Add implementation details.
-          EOL
-          done
-          
-      - name: Create API Orchestration sample
-        run: |
-          mkdir -p api-orchestration/src/examples
-          cat > api-orchestration/src/examples/OrderProcessingOrchestration.ts << 'EOL'
-          import { OrchestrationBuilder } from '../OrchestrationBuilder';
-          
-          /**
-           * Example Order Processing Orchestration that coordinates between
-           * multiple backend services to process an order
-           */
-          export function createOrderProcessingOrchestration() {
-            const builder = new OrchestrationBuilder('order-processing');
-            
-            return builder
-              .step('validate-inventory')
-                .callService('inventory-service', '/api/check-availability')
-                .withRequestTransform((request) => ({
-                  productIds: request.items.map(item => item.productId),
-                  quantities: request.items.map(item => item.quantity)
-                }))
-                .withResponseCondition((response) => response.allAvailable)
-              .step('process-payment')
-                .callService('payment-service', '/api/payments')
-                .withRequestTransform((request, context) => ({
-                  amount: request.totalAmount,
-                  currency: request.currency,
-                  paymentMethod: request.paymentDetails,
-                  orderId: context.orderId
-                }))
-              .step('reserve-inventory')
-                .callService('inventory-service', '/api/reserve')
-                .withRequestTransform((request, context) => ({
-                  orderId: context.orderId,
-                  items: request.items
-                }))
-              .step('create-shipment')
-                .callService('logistics-service', '/api/shipments')
-                .withRequestTransform((request, context) => ({
-                  orderId: context.orderId,
-                  address: request.shippingAddress,
-                  items: request.items
-                }))
-              .step('send-confirmation')
-                .callService('notification-service', '/api/notify')
-                .withRequestTransform((request, context) => ({
-                  to: request.customerEmail,
-                  template: 'order-confirmation',
-                  data: {
-                    orderId: context.orderId,
-                    items: request.items,
-                    total: request.totalAmount,
-                    shipmentId: context.shipmentId
-                  }
-                }))
-              .build();
-          }
-          EOL
-          
-      - name: Validate XML against S1000D Schema
-        run: |
-          xmllint --noout --schema schemas/S1000D_6.0_Schema.xsd data/ATA71.xml
+          **Document ID:** GP-AM-AMPEL-0100-00-001-A  
+          **Revision:** A  
+          **Status:** Released  
+          **Date:** 2025-01-15  
 
-      - name: Run BREX Compliance Check
-        run: |
-          python tools/brex_check.py rules/ProjectBREX.xml data/ATA71.xml
+          ## 1. Introduction
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Initialize API Integration Strategy repository structure"
-          git push
+          ### 1.1 Purpose and Scope
+
+          This document provides a comprehensive overview of the AMPEL360XWLRGA aircraft system. It serves as the primary entry point to the complete aircraft documentation and establishes the foundation for all subsequent technical documentation. The scope encompasses the general characteristics, design philosophy, operational concept, and high-level specifications of the aircraft.
+
+          ### 1.2 Document Structure
+
+          This document is organized as follows:
+          - Section 1: Introduction and document overview
+          - Section 2: Aircraft concept and mission profile
+          - Section 3: General characteristics and specifications
+          - Section 4: Design philosophy and innovation areas
+          - Section 5: Operational concept
+          - Section 6: Documentation schema and navigation
+
+          ### 1.3 Applicable Documents
+
+          The following documents form an integral part of this specification:
+
+          - GP-AM-EDR-00-001-SDD-A: Overall Aircraft System Description Document
+          - GP-AM-EDR-00-002-OV-A: COAFI Framework Overview for Part I
+          - GP-AM-EDR-00-003-RPT-A: Airworthiness & Certification Requirements Report
+
+          ### 1.4 Terminology and Abbreviations
+
+          | Abbreviation | Definition |
+          |--------------|------------|
+          | AEHCS | Advanced Energy Harvesting and Conversion System |
+          | ATA | Air Transport Association |
+          | COAFI | Comprehensive Operational and Functional Integration |
+          | CCS | Cryogenic Cooling System |
+          | QEE | Quantum Entanglement Engine |
+          | XWLRGA | Extended Wide Long Range Green Aircraft |
+
+          ## 2. Aircraft Concept and Mission Profile
+
+          ### 2.1 Concept Overview
+
+          The AMPEL360XWLRGA (Atmospheric Multi-Propulsion Eco-Logical 360° Extended Wide Long Range Green Aircraft) represents a revolutionary approach to commercial aviation. It is designed as a 100% green, zero-emission aircraft that integrates conventional aerospace technologies with quantum propulsion systems and advanced sustainable energy solutions.
+
+          The aircraft embodies GAIA Air's commitment to transforming air transportation through radical innovation while maintaining the highest standards of safety, reliability, and operational efficiency.
+
+          ### 2.2 Mission Profile
+
+          The AMPEL360XWLRGA is designed to fulfill the following mission profiles:
+
+          - **Primary Mission**: Long-range commercial passenger transport (up to 12,000 km) with zero direct emissions
+          - **Secondary Mission**: Medium-range high-capacity routes (3,000-6,000 km)
+          - **Tertiary Mission**: Specialized cargo transport for time-sensitive, high-value goods
+
+          The aircraft is optimized for:
+          - Cruise altitude: 10,000-13,000 meters
+          - Cruise speed: Mach 0.85-0.92
+          - Maximum operating altitude: 15,000 meters
+          - Range with maximum payload: 12,000 kilometers
+
+          ### 2.3 Market Positioning
+
+          The AMPEL360XWLRGA is positioned as a flagship long-range aircraft that demonstrates the viability of zero-emission aviation at scale. It targets the premium long-haul market segment while establishing new standards for environmental performance in commercial aviation.
+
+          ## 3. General Characteristics and Specifications
+
+          ### 3.1 Aircraft Configuration
+
+          The AMPEL360XWLRGA features a wide-body, twin-aisle configuration with the following key characteristics:
+
+          - **Fuselage**: Extended wide-body design with optimized aerodynamics
+          - **Wings**: High-aspect ratio composite wings with advanced aerodynamic features
+          - **Empennage**: Conventional tail configuration with composite structures
+          - **Landing Gear**: Retractable tricycle configuration with multi-wheel bogies
+          - **Propulsion**: Hybrid system combining hydrogen fuel cells, quantum propulsion, and advanced energy harvesting
+
+          ### 3.2 Dimensions
+
+          | Parameter | Value | Units |
+          |-----------|-------|-------|
+          | Overall Length | 73.8 | meters |
+          | Wingspan | 68.5 | meters |
+          | Height | 19.4 | meters |
+          | Cabin Width (interior) | 5.96 | meters |
+          | Cabin Length | 55.7 | meters |
+          | Cabin Height | 2.55 | meters |
+
+          ### 3.3 Weights
+
+          | Parameter | Value | Units |
+          |-----------|-------|-------|
+          | Maximum Takeoff Weight (MTOW) | 280,000 | kg |
+          | Maximum Landing Weight (MLW) | 223,000 | kg |
+          | Maximum Zero Fuel Weight (MZFW) | 195,000 | kg |
+          | Operating Empty Weight (OEW) | 138,000 | kg |
+          | Maximum Payload | 57,000 | kg |
+          | Maximum Fuel Capacity | 85,000 | kg |
+
+          ### 3.4 Performance
+
+          | Parameter | Value | Units |
+          |-----------|-------|-------|
+          | Maximum Range | 12,000 | km |
+          | Cruise Speed | 945 | km/h |
+          | Maximum Operating Mach Number (MMO) | 0.92 | Mach |
+          | Service Ceiling | 15,000 | meters |
+          | Takeoff Field Length (MTOW, SL, ISA) | 2,850 | meters |
+          | Landing Field Length (MLW, SL, ISA) | 1,800 | meters |
+          | Maximum Operating Altitude | 15,000 | meters |
+
+          ### 3.5 Capacity
+
+          | Configuration | Passengers | Class Distribution |
+          |---------------|------------|-------------------|
+          | Three-class | 350 | 40 First, 60 Business, 250 Economy |
+          | Two-class | 410 | 60 Business, 350 Economy |
+          | Single-class | 480 | All Economy |
+          | Cargo | 57,000 kg | Full cargo configuration |
+
+          ## 4. Design Philosophy and Innovation Areas
+
+          ### 4.1 Design Philosophy
+
+          The AMPEL360XWLRGA embodies the following design principles:
+
+          - **Zero Emissions**: Elimination of direct carbon emissions through innovative propulsion
+          - **Sustainability**: Use of sustainable materials and manufacturing processes
+          - **Safety**: Uncompromising approach to safety through redundancy and fail-safe design
+          - **Efficiency**: Optimization of energy use across all aircraft systems
+          - **Passenger Experience**: Enhanced comfort, space, and amenities
+          - **Operational Flexibility**: Adaptability to various route structures and mission profiles
+          - **Future-Proof Design**: Accommodation of technology evolution through modular systems
+
+          ### 4.2 Key Innovation Areas
+
+          #### 4.2.1 Propulsion Systems
+
+          The aircraft features a revolutionary multi-modal propulsion system:
+
+          - **Primary**: Q-01 Quantum Entanglement Engine (QEE) with Cryogenic Cooling System
+          - **Secondary**: Hydrogen fuel cell electric propulsion
+          - **Tertiary**: Advanced Energy Harvesting and Conversion System (AEHCS)
+
+          #### 4.2.2 Materials and Structures
+
+          - Advanced carbon-nanotube reinforced composites
+          - Self-healing structural materials
+          - Biomimetic design principles for weight optimization
+          - Integrated structural health monitoring
+
+          #### 4.2.3 Aerodynamics
+
+          - Active flow control surfaces
+          - Morphing wing technology
+          - Boundary layer ingestion propulsion integration
+          - Laminar flow optimization
+
+          #### 4.2.4 Systems Integration
+
+          - Comprehensive Operational and Functional Integration (COAFI) framework
+          - Distributed electrical architecture
+          - Quantum-secured communications
+          - Advanced sensor fusion and data analytics
+
+          #### 4.2.5 Passenger Experience
+
+          - Customizable cabin environments
+          - Enhanced pressurization (equivalent to 1,500m altitude)
+          - Active noise cancellation
+          - Immersive entertainment systems
+          - Biometric passenger flow management
+
+          ## 5. Operational Concept
+
+          ### 5.1 Normal Operations
+
+          The AMPEL360XWLRGA is designed for conventional airline operations with enhanced capabilities:
+
+          - Standard airport infrastructure compatibility
+          - Reduced turnaround times through optimized systems
+          - Enhanced dispatch reliability through redundant systems
+          - Simplified maintenance procedures
+          - Reduced crew workload through automation
+
+          ### 5.2 Ground Operations
+
+          - Automated pre-flight checks
+          - Integrated ground support equipment interfaces
+          - Rapid hydrogen refueling capability
+          - Quantum propulsion system ground servicing
+          - Enhanced baggage and cargo handling
+
+          ### 5.3 Flight Operations
+
+          - Optimized flight profiles for energy efficiency
+          - Automated energy management
+          - Enhanced navigation precision
+          - Reduced weather sensitivity
+          - Extended operational envelope
+
+          ### 5.4 Maintenance Concept
+
+          - Condition-based maintenance approach
+          - Integrated health monitoring systems
+          - Predictive maintenance capabilities
+          - Modular design for rapid component replacement
+          - Remote diagnostics and troubleshooting
+
+          ## 6. Documentation Schema and Navigation
+
+          ### 6.1 Documentation Structure
+
+          The AMPEL360XWLRGA documentation follows the ATA chapter system with adaptations for novel technologies. This document (GP-AM-AMPEL-0100-00-001-A) serves as the entry point to the complete documentation set.
+
+          ### 6.2 Supporting Documents
+
+          The following key documents provide additional detail on the general aircraft system:
+
+          - **GP-AM-EDR-00-001-SDD-A**: Overall Aircraft System Description Document
+            - Provides detailed system-level description of the entire aircraft
+            - Serves as the primary reference for understanding the aircraft's architecture
+
+          - **GP-AM-EDR-00-002-OV-A**: COAFI Framework Overview for Part I
+            - Outlines the Comprehensive Operational and Functional Integration framework
+            - Explains the methodology for system integration
+
+          - **GP-AM-EDR-00-003-RPT-A**: Airworthiness & Certification Requirements Report
+            - Documents the certification basis and airworthiness requirements
+            - Addresses the unique challenges of certifying novel technologies
+
+          ### 6.3 Cross-References to Other ATA Chapters
+
+          For detailed information on specific aircraft systems, refer to the following ATA chapters within the documentation suite (referencing the master index JSON `COAFI-P1-AMPEL360-0001-A.json` for specific DMCs):
+
+          - **ATA 05-12**: General aircraft documentation (Maintenance Programs, Dimensions, Servicing, etc.)
+          - **ATA 20-49**: Aircraft systems (ECS, Autoflight, Comms, Power, Controls, Fuel, Hydraulics, Nav, CMS, etc.)
+          - **ATA 51-57**: Structures (Fuselage, Wings, Doors, Stabilizers, etc.)
+          - **ATA 71-80**: Power plant (Installation, Engine Core, Controls, Indicating, etc., adapted for Q-01)
+          - **ATA 91-100**: Charts, Wiring, Certification, etc.
+
+          *(Note: The following sections provide direct links to specific key documents within selected ATA chapters for convenience. The complete list resides in the master JSON index.)*
+
+          ### 6.4 ATA 07 – Lifting, Shoring, and Related Procedures
+
+          #### **GP-AM-AMPEL-0100-07-001-A: Lifting Procedures and Diagrams (ATA 07)**
+          - **Document Link:** `GPAM-AMPEL-0201-07-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-07-001-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Detailed steps for aircraft lifting using specified points and equipment. Includes safety precautions.
+
+          #### **GP-AM-AMPEL-0100-07-002-A: Shoring Procedures and Diagrams (ATA 07)**
+          - **Document Link:** `GPAM-AMPEL-0201-07-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-07-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for supporting the aircraft structure during maintenance activities, including shoring point diagrams.
+
+          ### 6.5 ATA 08 – Leveling and Weighing
+
+          #### **GP-AM-AMPEL-0100-08-001-A: Leveling Procedures (ATA 08)**
+          - **Document Link:** `GPAM-AMPEL-0201-08-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-08-001-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Instructions for leveling the aircraft for maintenance or weighing.
+
+          #### **GP-AM-AMPEL-0100-08-002-A: Weighing Procedures (ATA 08)**
+          - **Document Link:** `GPAM-AMPEL-0201-08-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-08-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for accurately weighing the aircraft to determine weight and balance.
+
+          ### 6.6 ATA 09 – Towing and Taxiing
+
+          #### **GP-AM-AMPEL-0100-09-001-A: Towing Procedures (ATA 09)**
+          - **Document Link:** `GPAM-AMPEL-0201-09-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-09-001-A-001-00_EN-US`)
+          - **Document Type:** Operational Procedure
+          - **Content:** Ground handling procedures for towing the aircraft, including tow bar connections and limitations.
+
+          #### **GP-AM-AMPEL-0100-09-002-A: Taxiing Procedures (ATA 09)**
+          - **Document Link:** `GPAM-AMPEL-0201-09-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-09-002-A-001-00_EN-US`)
+          - **Document Type:** Operational Procedure
+          - **Content:** Standard operating procedures for taxiing the aircraft under its own power.
+
+          ### 6.7 ATA 10 – Parking, Mooring, Storage, and Return to Service
+
+          #### **GP-AM-AMPEL-0100-10-001-A: Parking Procedures (ATA 10)**
+          - **Document Link:** `GPAM-AMPEL-0201-10-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-001-A-001-00_EN-US`)
+          - **Document Type:** Operational Procedure
+          - **Content:** Procedures for parking the aircraft, including brake setting and chocking.
+
+          #### **GP-AM-AMPEL-0100-10-002-A: Mooring Procedures (ATA 10)**
+          - **Document Link:** `GPAM-AMPEL-0201-10-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-002-A-001-00_EN-US`)
+          - **Document Type:** Operational Procedure
+          - **Content:** Instructions for securing the aircraft in high-wind conditions or during extended parking.
+
+          #### **GP-AM-AMPEL-0100-10-003-A: Storage Procedures (ATA 10)**
+          - **Document Link:** `GPAM-AMPEL-0201-10-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-003-A-001-00_EN-US`)
+          - **Document Type:** Operational Procedure / Maintenance Procedure
+          - **Content:** Procedures for preparing and maintaining the aircraft during short-term or long-term storage.
+
+          #### **GP-AM-AMPEL-0100-10-004-A: Return to Service Procedures (ATA 10)**
+          - **Document Link:** `GPAM-AMPEL-0201-10-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-10-004-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Steps required to de-preserve and prepare the aircraft for operational service after storage.
+
+          ### 6.8 ATA 11 – Placards and Markings
+
+          #### **GP-AM-AMPEL-0100-11-001-A: Exterior Placard Locations (ATA 11)**
+          - **Document Link:** `GPAM-AMPEL-0201-11-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-001-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Diagrams showing the location and content of all required exterior placards.
+
+          #### **GP-AM-AMPEL-0100-11-002-A: Interior Placard Locations (ATA 11)**
+          - **Document Link:** `GPAM-AMPEL-0201-11-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Diagrams showing the location and content of all required interior (cockpit and cabin) placards.
+
+          #### **GP-AM-AMPEL-0100-11-003-A: Marking Specifications (ATA 11)**
+          - **Document Link:** `GPAM-AMPEL-0201-11-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-11-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Specification
+          - **Content:** Specifications for aircraft livery, mandatory markings, materials, and application methods.
+
+          ### 6.9 ATA 12 – Servicing
+
+          #### **GP-AM-AMPEL-0100-12-001-A: Fluid Servicing Procedures (ATA 12)**
+          - **Document Link:** `GPAM-AMPEL-0201-12-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-001-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for servicing hydraulic fluid, engine oil/coolant (adapted for Q-01), etc.
+
+          #### **GP-AM-AMPEL-0100-12-002-A: Nitrogen/Oxygen Servicing Procedures (ATA 12)**
+          - **Document Link:** `GPAM-AMPEL-0201-12-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for servicing high-pressure nitrogen (e.g., landing gear struts) and oxygen systems.
+
+          #### **GP-AM-AMPEL-0100-12-003-A: Lubrication Procedures (ATA 12)**
+          - **Document Link:** `GPAM-AMPEL-0201-12-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-003-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Detailed lubrication schedule and procedures for various aircraft components.
+
+          #### **GP-AM-AMPEL-0100-12-004-A: Water Servicing Procedures (ATA 12)**
+          - **Document Link:** `GPAM-AMPEL-0201-12-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-12-004-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for servicing the potable water system and waste system (rinse/flush).
+
+          ### 6.10 ATA 18 – Vibration and Noise Analysis
+
+          #### **GP-AM-AMPEL-0100-18-001-A: Vibration Analysis Procedures (ATA 18)**
+          - **Document Link:** `GPAM-AMPEL-0201-18-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-001-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure / Diagnostic
+          - **Content:** Procedures for collecting and analyzing vibration data from engines (Q-01), APU, and rotating machinery.
+
+          #### **GP-AM-AMPEL-0100-18-002-A: Noise Level Measurement Procedures (ATA 18)**
+          - **Document Link:** `GPAM-AMPEL-0201-18-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure / Test
+          - **Content:** Procedures for measuring exterior and interior noise levels for certification and troubleshooting.
+
+          #### **GP-AM-AMPEL-0100-18-003-A: Vibration and Noise Limits and Acceptability Criteria (ATA 18)**
+          - **Document Link:** `GPAM-AMPEL-0201-18-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-18-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Specification / Data
+          - **Content:** Specifies the acceptable limits for vibration and noise levels during various operational phases.
+
+          ### 6.11 ATA 20 – Standard Practices - Airframe
+
+          #### **GP-AM-AMPEL-0100-20-001-A: Airframe Standard Practices Manual (ATA 20)**
+          - **Document Link:** `GPAM-AMPEL-0201-20-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-001-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Manual / Standard
+          - **Content:** General procedures, techniques, and standards for airframe maintenance (e.g., fastener installation, sealing, composite repair basics).
+
+          #### **GP-AM-AMPEL-0100-20-002-A: Corrosion Prevention and Control Program (CPCP)**
+          - **Document Link:** `GPAM-AMPEL-0201-20-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Program / Plan
+          - **Content:** Outlines the program for preventing and controlling corrosion on the aircraft structure.
+
+          #### **GP-AM-AMPEL-0100-20-003-A: Non-Destructive Testing (NDT) Manual**
+          - **Document Link:** `GPAM-AMPEL-0201-20-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-20-003-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure / Manual
+          - **Content:** Specific procedures for various NDT methods (ultrasonic, eddy current, radiography, etc.) applicable to the aircraft structure.
+
+          ### 6.12 ATA 21 – Air Conditioning and Pressurization
+
+          #### **GP-AM-AMPEL-0100-21-001-A: Air Conditioning System Description and Operation (ATA 21)**
+          - **Document Link:** `GPAM-AMPEL-0201-21-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Detailed description of the air conditioning packs, distribution, and temperature control.
+
+          #### **GP-AM-AMPEL-0100-21-002-A: Pressurization System Description and Operation (ATA 21)**
+          - **Document Link:** `GPAM-AMPEL-0201-21-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Detailed description of the cabin pressure control system, including outflow valves and controllers.
+
+          #### **GP-AM-AMPEL-0100-21-003-A: Quantum Enhanced Air Purification System (QE-APS) Description (ATA 21)**
+          - **Document Link:** `GPAM-AMPEL-0201-21-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-21-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the novel QE-APS technology for air filtration and revitalization.
+
+          ### 6.13 ATA 22 – Autoflight
+
+          #### **GP-AM-AMPEL-0100-22-001-A: Autopilot System Description and Operation (ATA 22)**
+          - **Document Link:** `GPAM-AMPEL-0201-22-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the autopilot modes, flight director, and servo control systems.
+
+          #### **GP-AM-AMPEL-0100-22-002-A: Flight Management System (FMS) Description and Operation (ATA 22)**
+          - **Document Link:** `GPAM-AMPEL-0201-22-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Operational Manual
+          - **Content:** Description of FMS capabilities, database structure, flight planning, and performance management.
+
+          #### **GP-AM-AMPEL-0100-22-003-A: AI-Enhanced Flight Control System (AI-FCS) Description (ATA 22)**
+          - **Document Link:** `GPAM-AMPEL-0201-22-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-22-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the AI algorithms (OIP, Heuristics), learning capabilities, and integration with conventional autoflight.
+
+          ### 6.14 ATA 23 – Communications
+
+          #### **GP-AM-AMPEL-0100-23-001-A: Communication Systems Overview (ATA 23)**
+          - **Document Link:** `GPAM-AMPEL-0201-23-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all communication systems (VHF, HF, SATCOM, Datalink, QCS) and their interactions.
+
+          #### **GP-AM-AMPEL-0100-23-002-A: Satellite Communication (SATCOM) System Description and Operation (ATA 23)**
+          - **Document Link:** `GPAM-AMPEL-0201-23-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Detailed description of the SATCOM equipment, antenna, network providers, and capabilities.
+
+          #### **GP-AM-AMPEL-0100-23-003-A: Air-to-Ground Communication System Description and Operation (ATA 23)**
+          - **Document Link:** `GPAM-AMPEL-0201-23-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of VHF/HF voice and data communication systems, ACARS, etc.
+
+          #### **GP-AM-AMPEL-0100-23-004-A: Quantum Communication System (QCS) Description (ATA 23)**
+          - **Document Link:** `GPAM-AMPEL-0201-23-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-23-004-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the quantum communication hardware, protocols (potentially QKD), and integration for secure data links.
+
+          ### 6.15 ATA 24 – Electrical Power
+
+          #### **GP-AM-AMPEL-0100-24-001-A: Electrical Power Generation System Description and Operation (ATA 24)**
+          - **Document Link:** `GPAM-AMPEL-0201-24-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of primary power generation sources (AEHCS, Fuel Cells, Q-01 bleed if any) and control.
+
+          #### **GP-AM-AMPEL-0100-24-002-A: Electrical Power Distribution System Description and Operation (ATA 24)**
+          - **Document Link:** `GPAM-AMPEL-0201-24-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the HVDC/LVDC architecture, bus bars, circuit breakers, contactors, and wiring philosophy.
+
+          #### **GP-AM-AMPEL-0100-24-003-A: Quantum Energy Management System (Q-EMS / AAESCCCTS) Description (ATA 24)**
+          - **Document Link:** `GPAM-AMPEL-0201-24-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-24-003-A-001-00_EN-US`) / `AGIS-MOD-AAESCCCTS-01`
+          - **Document Type:** System Description (SDD) / Module Specification
+          - **Content:** Description of energy storage (Quantum Batteries), power conversion, intelligent load management, and integration with MOD-XAI/QUAD.
+
+          ### 6.16 ATA 25 – Equipment / Furnishings
+
+          #### **GP-AM-AMPEL-0100-25-001-A: Flight Deck Equipment and Furnishings (ATA 25)**
+          - **Document Link:** `GPAM-AMPEL-0201-25-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-001-A-001-00_EN-US`)
+          - **Document Type:** System Description / Drawing Set
+          - **Content:** Layout, specifications, and part numbers for cockpit seats, panels, controls integration, etc.
+
+          #### **GP-AM-AMPEL-0100-25-002-A: Cabin Equipment and Furnishings (ATA 25)**
+          - **Document Link:** `GPAM-AMPEL-0201-25-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-002-A-001-00_EN-US`)
+          - **Document Type:** System Description / Drawing Set / Catalog
+          - **Content:** Layout, specifications for passenger seats, galleys, lavatories, overhead bins, lighting integration, IFE hardware.
+
+          #### **GP-AM-AMPEL-0100-25-003-A: Emergency Equipment (ATA 25)**
+          - **Document Link:** `GPAM-AMPEL-0201-25-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-25-003-A-001-00_EN-US`)
+          - **Document Type:** System Description / Data
+          - **Content:** Location, description, and maintenance requirements for emergency equipment (slides, rafts, first aid kits, fire extinguishers, ELTs).
+
+          ### 6.17 ATA 26 – Fire Protection
+
+          #### **GP-AM-AMPEL-0100-26-001-A: Fire Detection System Description and Operation (ATA 26)**
+          - **Document Link:** `GPAM-AMPEL-0201-26-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-26-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the fire detection sensors, control units, and alerting mechanisms.
+
+          #### **GP-AM-AMPEL-0100-26-002-A: Fire Suppression System Description and Operation (ATA 26)**
+          - **Document Link:** `GPAM-AMPEL-0201-26-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-26-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the fire suppression agents, distribution systems, and activation protocols.
+
+          #### **GP-AM-AMPEL-0100-26-003-A: Quantum Fire Protection System (QFPS) Description (ATA 26)**
+          - **Document Link:** `GPAM-AMPEL-0201-26-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-26-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QFPS technology, including quantum sensors and rapid suppression mechanisms.
+
+          ### 6.18 ATA 27 – Flight Controls
+
+          #### **GP-AM-AMPEL-0100-27-001-A: Primary Flight Control System Description and Operation (ATA 27)**
+          - **Document Link:** `GPAM-AMPEL-0201-27-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-27-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the primary flight control surfaces, actuators, and control laws.
+
+          #### **GP-AM-AMPEL-0100-27-002-A: Secondary Flight Control System Description and Operation (ATA 27)**
+          - **Document Link:** `GPAM-AMPEL-0201-27-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-27-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the secondary flight control surfaces (flaps, slats, spoilers) and their control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-27-003-A: AI-Enhanced Flight Control System (AI-FCS) Description (ATA 27)**
+          - **Document Link:** `GPAM-AMPEL-0201-27-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-27-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the AI algorithms (OIP, Heuristics), learning capabilities, and integration with conventional flight controls.
+
+          ### 6.19 ATA 28 – Fuel
+
+          #### **GP-AM-AMPEL-0100-28-001-A: Fuel System Description and Operation (ATA 28)**
+          - **Document Link:** `GPAM-AMPEL-0201-28-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-28-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the fuel storage, distribution, and management systems, including hydrogen fuel cells.
+
+          #### **GP-AM-AMPEL-0100-28-002-A: Fuel System Maintenance Procedures (ATA 28)**
+          - **Document Link:** `GPAM-AMPEL-0201-28-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-28-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the fuel system components.
+
+          #### **GP-AM-AMPEL-0100-28-003-A: Quantum Fuel Management System (QFMS) Description (ATA 28)**
+          - **Document Link:** `GPAM-AMPEL-0201-28-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-28-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QFMS technology, including quantum sensors and intelligent fuel management algorithms.
+
+          ### 6.20 ATA 29 – Hydraulic Power
+
+          #### **GP-AM-AMPEL-0100-29-001-A: Hydraulic Power System Description and Operation (ATA 29)**
+          - **Document Link:** `GPAM-AMPEL-0201-29-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-29-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the hydraulic power generation, distribution, and control systems.
+
+          #### **GP-AM-AMPEL-0100-29-002-A: Hydraulic Power System Maintenance Procedures (ATA 29)**
+          - **Document Link:** `GPAM-AMPEL-0201-29-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-29-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the hydraulic power system components.
+
+          #### **GP-AM-AMPEL-0100-29-003-A: Quantum Hydraulic Management System (QHMS) Description (ATA 29)**
+          - **Document Link:** `GPAM-AMPEL-0201-29-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-29-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QHMS technology, including quantum sensors and intelligent hydraulic management algorithms.
+
+          ### 6.21 ATA 30 – Ice and Rain Protection
+
+          #### **GP-AM-AMPEL-0100-30-001-A: Ice and Rain Protection System Description and Operation (ATA 30)**
+          - **Document Link:** `GPAM-AMPEL-0201-30-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-30-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the ice and rain protection systems, including anti-icing and de-icing mechanisms.
+
+          #### **GP-AM-AMPEL-0100-30-002-A: Ice and Rain Protection System Maintenance Procedures (ATA 30)**
+          - **Document Link:** `GPAM-AMPEL-0201-30-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-30-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the ice and rain protection system components.
+
+          #### **GP-AM-AMPEL-0100-30-003-A: Quantum Ice and Rain Protection System (QIRPS) Description (ATA 30)**
+          - **Document Link:** `GPAM-AMPEL-0201-30-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-30-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QIRPS technology, including quantum sensors and intelligent ice and rain protection algorithms.
+
+          ### 6.22 ATA 31 – Indicating / Recording Systems
+
+          #### **GP-AM-AMPEL-0100-31-001-A: Indicating and Recording Systems Overview (ATA 31)**
+          - **Document Link:** `GPAM-AMPEL-0201-31-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-31-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all indicating and recording systems (EFIS, FDR, CVR, QDR) and their interactions.
+
+          #### **GP-AM-AMPEL-0100-31-002-A: Electronic Flight Instrument System (EFIS) Description and Operation (ATA 31)**
+          - **Document Link:** `GPAM-AMPEL-0201-31-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-31-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Detailed description of the EFIS components, displays, and control interfaces.
+
+          #### **GP-AM-AMPEL-0100-31-003-A: Flight Data Recorder (FDR) System Description and Operation (ATA 31)**
+          - **Document Link:** `GPAM-AMPEL-0201-31-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-31-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the FDR components, data acquisition, storage, and retrieval processes.
+
+          #### **GP-AM-AMPEL-0100-31-004-A: Cockpit Voice Recorder (CVR) System Description and Operation (ATA 31)**
+          - **Document Link:** `GPAM-AMPEL-0201-31-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-31-004-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the CVR components, data acquisition, storage, and retrieval processes.
+
+          #### **GP-AM-AMPEL-0100-31-005-A: Quantum Data Recorder (QDR) System Description and Operation (ATA 31)**
+          - **Document Link:** `GPAM-AMPEL-0201-31-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-31-005-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QDR technology, including quantum sensors and intelligent data recording algorithms.
+
+          ### 6.23 ATA 32 – Landing Gear
+
+          #### **GP-AM-AMPEL-0100-32-001-A: Landing Gear System Description and Operation (ATA 32)**
+          - **Document Link:** `GPAM-AMPEL-0201-32-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the landing gear components, retraction/extension mechanisms, and control systems.
+
+          #### **GP-AM-AMPEL-0100-32-002-A: Landing Gear System Maintenance Procedures (ATA 32)**
+          - **Document Link:** `GPAM-AMPEL-0201-32-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the landing gear system components.
+
+          #### **GP-AM-AMPEL-0100-32-003-A: Quantum Landing Gear Management System (QLGMS) Description (ATA 32)**
+          - **Document Link:** `GPAM-AMPEL-0201-32-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-32-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QLGMS technology, including quantum sensors and intelligent landing gear management algorithms.
+
+          ### 6.24 ATA 33 – Lights
+
+          #### **GP-AM-AMPEL-0100-33-001-A: Lighting System Description and Operation (ATA 33)**
+          - **Document Link:** `GPAM-AMPEL-0201-33-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-33-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the exterior and interior lighting systems, including LED technology and control interfaces.
+
+          #### **GP-AM-AMPEL-0100-33-002-A: Lighting System Maintenance Procedures (ATA 33)**
+          - **Document Link:** `GPAM-AMPEL-0201-33-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-33-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the lighting system components.
+
+          #### **GP-AM-AMPEL-0100-33-003-A: Quantum Lighting Management System (QLMS) Description (ATA 33)**
+          - **Document Link:** `GPAM-AMPEL-0201-33-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-33-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QLMS technology, including quantum sensors and intelligent lighting management algorithms.
+
+          ### 6.25 ATA 34 – Navigation
+
+          #### **GP-AM-AMPEL-0100-34-001-A: Navigation System Description and Operation (ATA 34)**
+          - **Document Link:** `GPAM-AMPEL-0201-34-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-34-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the navigation systems, including GPS, INS, and quantum-enhanced navigation technologies.
+
+          #### **GP-AM-AMPEL-0100-34-002-A: Navigation System Maintenance Procedures (ATA 34)**
+          - **Document Link:** `GPAM-AMPEL-0201-34-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-34-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the navigation system components.
+
+          #### **GP-AM-AMPEL-0100-34-003-A: Quantum Navigation Management System (QNMS) Description (ATA 34)**
+          - **Document Link:** `GPAM-AMPEL-0201-34-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-34-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QNMS technology, including quantum sensors and intelligent navigation management algorithms.
+
+          ### 6.26 ATA 35 – Oxygen
+
+          #### **GP-AM-AMPEL-0100-35-001-A: Oxygen System Description and Operation (ATA 35)**
+          - **Document Link:** `GPAM-AMPEL-0201-35-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-35-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the oxygen system components, distribution, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-35-002-A: Oxygen System Maintenance Procedures (ATA 35)**
+          - **Document Link:** `GPAM-AMPEL-0201-35-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-35-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the oxygen system components.
+
+          #### **GP-AM-AMPEL-0100-35-003-A: Quantum Oxygen Management System (QOMS) Description (ATA 35)**
+          - **Document Link:** `GPAM-AMPEL-0201-35-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-35-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QOMS technology, including quantum sensors and intelligent oxygen management algorithms.
+
+          ### 6.27 ATA 36 – Pneumatic
+
+          #### **GP-AM-AMPEL-0100-36-001-A: Pneumatic System Description and Operation (ATA 36)**
+          - **Document Link:** `GPAM-AMPEL-0201-36-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-36-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the pneumatic system components, distribution, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-36-002-A: Pneumatic System Maintenance Procedures (ATA 36)**
+          - **Document Link:** `GPAM-AMPEL-0201-36-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-36-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the pneumatic system components.
+
+          #### **GP-AM-AMPEL-0100-36-003-A: Quantum Pneumatic Management System (QPMS) Description (ATA 36)**
+          - **Document Link:** `GPAM-AMPEL-0201-36-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-36-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QPMS technology, including quantum sensors and intelligent pneumatic management algorithms.
+
+          ### 6.28 ATA 38 – Water / Waste
+
+          #### **GP-AM-AMPEL-0100-38-001-A: Water and Waste System Description and Operation (ATA 38)**
+          - **Document Link:** `GPAM-AMPEL-0201-38-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-38-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the water and waste system components, distribution, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-38-002-A: Water and Waste System Maintenance Procedures (ATA 38)**
+          - **Document Link:** `GPAM-AMPEL-0201-38-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-38-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the water and waste system components.
+
+          #### **GP-AM-AMPEL-0100-38-003-A: Quantum Water and Waste Management System (QWWMS) Description (ATA 38)**
+          - **Document Link:** `GPAM-AMPEL-0201-38-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-38-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QWWMS technology, including quantum sensors and intelligent water and waste management algorithms.
+
+          ### 6.29 ATA 45 – Central Maintenance System (CMS)
+
+          #### **GP-AM-AMPEL-0100-45-001-A: Central Maintenance System Description and Operation (ATA 45)**
+          - **Document Link:** `GPAM-AMPEL-0201-45-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-45-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the CMS components, data acquisition, storage, and retrieval processes.
+
+          #### **GP-AM-AMPEL-0100-45-002-A: Central Maintenance System Maintenance Procedures (ATA 45)**
+          - **Document Link:** `GPAM-AMPEL-0201-45-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-45-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the CMS components.
+
+          #### **GP-AM-AMPEL-0100-45-003-A: Quantum Central Maintenance System (QCMS) Description (ATA 45)**
+          - **Document Link:** `GPAM-AMPEL-0201-45-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-45-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QCMS technology, including quantum sensors and intelligent maintenance management algorithms.
+
+          ### 6.30 ATA 46 – Information Systems
+
+          #### **GP-AM-AMPEL-0100-46-001-A: Information Systems Overview (ATA 46)**
+          - **Document Link:** `GPAM-AMPEL-0201-46-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-46-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all information systems (EFB, EICAS, QIS) and their interactions.
+
+          #### **GP-AM-AMPEL-0100-46-002-A: Electronic Flight Bag (EFB) System Description and Operation (ATA 46)**
+          - **Document Link:** `GPAM-AMPEL-0201-46-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-46-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Detailed description of the EFB components, displays, and control interfaces.
+
+          #### **GP-AM-AMPEL-0100-46-003-A: Engine Indicating and Crew Alerting System (EICAS) Description and Operation (ATA 46)**
+          - **Document Link:** `GPAM-AMPEL-0201-46-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-46-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the EICAS components, data acquisition, storage, and retrieval processes.
+
+          #### **GP-AM-AMPEL-0100-46-004-A: Quantum Information System (QIS) Description (ATA 46)**
+          - **Document Link:** `GPAM-AMPEL-0201-46-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-46-004-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QIS technology, including quantum sensors and intelligent information management algorithms.
+
+          ### 6.31 ATA 49 – Airborne Auxiliary Power
+
+          #### **GP-AM-AMPEL-0100-49-001-A: Airborne Auxiliary Power System Description and Operation (ATA 49)**
+          - **Document Link:** `GPAM-AMPEL-0201-49-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-49-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the airborne auxiliary power system components, distribution, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-49-002-A: Airborne Auxiliary Power System Maintenance Procedures (ATA 49)**
+          - **Document Link:** `GPAM-AMPEL-0201-49-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-49-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the airborne auxiliary power system components.
+
+          #### **GP-AM-AMPEL-0100-49-003-A: Quantum Airborne Auxiliary Power Management System (QAAPMS) Description (ATA 49)**
+          - **Document Link:** `GPAM-AMPEL-0201-49-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-49-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QAAPMS technology, including quantum sensors and intelligent auxiliary power management algorithms.
+
+          ### 6.32 ATA 51 – Structures - General / Standard Practices
+
+          #### **GP-AM-AMPEL-0100-51-001-A: Structures - General Description and Standard Practices (ATA 51)**
+          - **Document Link:** `GPAM-AMPEL-0201-51-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-51-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Standard Practices Manual
+          - **Content:** General description of the aircraft structures and standard practices for maintenance and repair.
+
+          #### **GP-AM-AMPEL-0100-51-002-A: Composite Structures Description and Repair Procedures (ATA 51)**
+          - **Document Link:** `GPAM-AMPEL-0201-51-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-51-002-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Maintenance Procedure
+          - **Content:** Description of the composite structures and detailed repair procedures.
+
+          #### **GP-AM-AMPEL-0100-51-003-A: Quantum Structural Health Monitoring System (QSHMS) Description (ATA 51)**
+          - **Document Link:** `GPAM-AMPEL-0201-51-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-51-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QSHMS technology, including quantum sensors and intelligent structural health monitoring algorithms.
+
+          ### 6.33 ATA 52 – Doors
+
+          #### **GP-AM-AMPEL-0100-52-001-A: Doors System Description and Operation (ATA 52)**
+          - **Document Link:** `GPAM-AMPEL-0201-52-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-52-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the doors system components, operation, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-52-002-A: Doors System Maintenance Procedures (ATA 52)**
+          - **Document Link:** `GPAM-AMPEL-0201-52-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-52-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the doors system components.
+
+          #### **GP-AM-AMPEL-0100-52-003-A: Quantum Doors Management System (QDMS) Description (ATA 52)**
+          - **Document Link:** `GPAM-AMPEL-0201-52-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-52-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QDMS technology, including quantum sensors and intelligent doors management algorithms.
+
+          ### 6.34 ATA 53 – Fuselage
+
+          #### **GP-AM-AMPEL-0100-53-001-A: Fuselage System Description and Operation (ATA 53)**
+          - **Document Link:** `GPAM-AMPEL-0201-53-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-53-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the fuselage system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-53-002-A: Fuselage System Maintenance Procedures (ATA 53)**
+          - **Document Link:** `GPAM-AMPEL-0201-53-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-53-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the fuselage system components.
+
+          #### **GP-AM-AMPEL-0100-53-003-A: Quantum Fuselage Management System (QFMS) Description (ATA 53)**
+          - **Document Link:** `GPAM-AMPEL-0201-53-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-53-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QFMS technology, including quantum sensors and intelligent fuselage management algorithms.
+
+          ### 6.35 ATA 54 – Nacelles / Pylons
+
+          #### **GP-AM-AMPEL-0100-54-001-A: Nacelles and Pylons System Description and Operation (ATA 54)**
+          - **Document Link:** `GPAM-AMPEL-0201-54-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-54-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the nacelles and pylons system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-54-002-A: Nacelles and Pylons System Maintenance Procedures (ATA 54)**
+          - **Document Link:** `GPAM-AMPEL-0201-54-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-54-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the nacelles and pylons system components.
+
+          #### **GP-AM-AMPEL-0100-54-003-A: Quantum Nacelles and Pylons Management System (QNPM) Description (ATA 54)**
+          - **Document Link:** `GPAM-AMPEL-0201-54-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-54-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QNPM technology, including quantum sensors and intelligent nacelles and pylons management algorithms.
+
+          ### 6.36 ATA 55 – Stabilizers
+
+          #### **GP-AM-AMPEL-0100-55-001-A: Stabilizers System Description and Operation (ATA 55)**
+          - **Document Link:** `GPAM-AMPEL-0201-55-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-55-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the stabilizers system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-55-002-A: Stabilizers System Maintenance Procedures (ATA 55)**
+          - **Document Link:** `GPAM-AMPEL-0201-55-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-55-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the stabilizers system components.
+
+          #### **GP-AM-AMPEL-0100-55-003-A: Quantum Stabilizers Management System (QSMS) Description (ATA 55)**
+          - **Document Link:** `GPAM-AMPEL-0201-55-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-55-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QSMS technology, including quantum sensors and intelligent stabilizers management algorithms.
+
+          ### 6.37 ATA 56 – Windows
+
+          #### **GP-AM-AMPEL-0100-56-001-A: Windows System Description and Operation (ATA 56)**
+          - **Document Link:** `GPAM-AMPEL-0201-56-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-56-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the windows system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-56-002-A: Windows System Maintenance Procedures (ATA 56)**
+          - **Document Link:** `GPAM-AMPEL-0201-56-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-56-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the windows system components.
+
+          #### **GP-AM-AMPEL-0100-56-003-A: Quantum Windows Management System (QWMS) Description (ATA 56)**
+          - **Document Link:** `GPAM-AMPEL-0201-56-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-56-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QWMS technology, including quantum sensors and intelligent windows management algorithms.
+
+          ### 6.38 ATA 57 – Wings
+
+          #### **GP-AM-AMPEL-0100-57-001-A: Wings System Description and Operation (ATA 57)**
+          - **Document Link:** `GPAM-AMPEL-0201-57-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-57-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the wings system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-57-002-A: Wings System Maintenance Procedures (ATA 57)**
+          - **Document Link:** `GPAM-AMPEL-0201-57-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-57-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the wings system components.
+
+          #### **GP-AM-AMPEL-0100-57-003-A: Quantum Wings Management System (QWMS) Description (ATA 57)**
+          - **Document Link:** `GPAM-AMPEL-0201-57-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-57-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QWMS technology, including quantum sensors and intelligent wings management algorithms.
+
+          ### 6.39 ATA 71 – Power Plant - Installation (Q-01)
+
+          #### **GP-AM-AMPEL-0100-71-001-A: Power Plant Installation Description and Operation (ATA 71)**
+          - **Document Link:** `GPAM-AMPEL-0201-71-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-71-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the power plant installation components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-71-002-A: Power Plant Installation Maintenance Procedures (ATA 71)**
+          - **Document Link:** `GPAM-AMPEL-0201-71-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-71-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the power plant installation components.
+
+          #### **GP-AM-AMPEL-0100-71-003-A: Quantum Power Plant Installation Management System (QPPIMS) Description (ATA 71)**
+          - **Document Link:** `GPAM-AMPEL-0201-71-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-71-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QPPIMS technology, including quantum sensors and intelligent power plant installation management algorithms.
+
+          ### 6.40 ATA 72 – Power Plant - Engine (Q-01 Core)
+
+          #### **GP-AM-AMPEL-0100-72-001-A: Power Plant Engine Description and Operation (ATA 72)**
+          - **Document Link:** `GPAM-AMPEL-0201-72-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-72-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the power plant engine components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-72-002-A: Power Plant Engine Maintenance Procedures (ATA 72)**
+          - **Document Link:** `GPAM-AMPEL-0201-72-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-72-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the power plant engine components.
+
+          #### **GP-AM-AMPEL-0100-72-003-A: Quantum Power Plant Engine Management System (QPPEMS) Description (ATA 72)**
+          - **Document Link:** `GPAM-AMPEL-0201-72-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-72-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QPPEMS technology, including quantum sensors and intelligent power plant engine management algorithms.
+
+          ### 6.41 ATA 73 – Engine Fuel and Control (Q-01 Energy Input & Control)
+
+          #### **GP-AM-AMPEL-0100-73-001-A: Engine Fuel and Control System Description and Operation (ATA 73)**
+          - **Document Link:** `GPAM-AMPEL-0201-73-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-73-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the engine fuel and control system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-73-002-A: Engine Fuel and Control System Maintenance Procedures (ATA 73)**
+          - **Document Link:** `GPAM-AMPEL-0201-73-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-73-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the engine fuel and control system components.
+
+          #### **GP-AM-AMPEL-0100-73-003-A: Quantum Engine Fuel and Control Management System (QEFMS) Description (ATA 73)**
+          - **Document Link:** `GPAM-AMPEL-0201-73-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-73-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QEFMS technology, including quantum sensors and intelligent engine fuel and control management algorithms.
+
+          ### 6.42 ATA 74 – Ignition (Q-01 Activation/Initiation)
+
+          #### **GP-AM-AMPEL-0100-74-001-A: Ignition System Description and Operation (ATA 74)**
+          - **Document Link:** `GPAM-AMPEL-0201-74-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-74-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the ignition system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-74-002-A: Ignition System Maintenance Procedures (ATA 74)**
+          - **Document Link:** `GPAM-AMPEL-0201-74-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-74-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the ignition system components.
+
+          #### **GP-AM-AMPEL-0100-74-003-A: Quantum Ignition Management System (QIMS) Description (ATA 74)**
+          - **Document Link:** `GPAM-AMPEL-0201-74-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-74-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QIMS technology, including quantum sensors and intelligent ignition management algorithms.
+
+          ### 6.43 ATA 75 – Air (Q-01 Cooling & Environmental Interface)
+
+          #### **GP-AM-AMPEL-0100-75-001-A: Air System Description and Operation (ATA 75)**
+          - **Document Link:** `GPAM-AMPEL-0201-75-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-75-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the air system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-75-002-A: Air System Maintenance Procedures (ATA 75)**
+          - **Document Link:** `GPAM-AMPEL-0201-75-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-75-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the air system components.
+
+          #### **GP-AM-AMPEL-0100-75-003-A: Quantum Air Management System (QAMS) Description (ATA 75)**
+          - **Document Link:** `GPAM-AMPEL-0201-75-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-75-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QAMS technology, including quantum sensors and intelligent air management algorithms.
+
+          ### 6.44 ATA 76 – Engine Controls (Q-01 Quantum Field Control)
+
+          #### **GP-AM-AMPEL-0100-76-001-A: Engine Controls System Description and Operation (ATA 76)**
+          - **Document Link:** `GPAM-AMPEL-0201-76-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-76-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the engine controls system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-76-002-A: Engine Controls System Maintenance Procedures (ATA 76)**
+          - **Document Link:** `GPAM-AMPEL-0201-76-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-76-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the engine controls system components.
+
+          #### **GP-AM-AMPEL-0100-76-003-A: Quantum Engine Controls Management System (QECMS) Description (ATA 76)**
+          - **Document Link:** `GPAM-AMPEL-0201-76-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-76-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QECMS technology, including quantum sensors and intelligent engine controls management algorithms.
+
+          ### 6.45 ATA 77 – Engine Indicating (Q-01 Quantum State Indicating)
+
+          #### **GP-AM-AMPEL-0100-77-001-A: Engine Indicating System Description and Operation (ATA 77)**
+          - **Document Link:** `GPAM-AMPEL-0201-77-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-77-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the engine indicating system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-77-002-A: Engine Indicating System Maintenance Procedures (ATA 77)**
+          - **Document Link:** `GPAM-AMPEL-0201-77-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-77-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the engine indicating system components.
+
+          #### **GP-AM-AMPEL-0100-77-003-A: Quantum Engine Indicating Management System (QEIMS) Description (ATA 77)**
+          - **Document Link:** `GPAM-AMPEL-0201-77-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-77-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QEIMS technology, including quantum sensors and intelligent engine indicating management algorithms.
+
+          ### 6.46 ATA 78 – Exhaust (Q-01 Byproduct Management / Thrust Vectoring)
+
+          #### **GP-AM-AMPEL-0100-78-001-A: Exhaust System Description and Operation (ATA 78)**
+          - **Document Link:** `GPAM-AMPEL-0201-78-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-78-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the exhaust system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-78-002-A: Exhaust System Maintenance Procedures (ATA 78)**
+          - **Document Link:** `GPAM-AMPEL-0201-78-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-78-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the exhaust system components.
+
+          #### **GP-AM-AMPEL-0100-78-003-A: Quantum Exhaust Management System (QEMS) Description (ATA 78)**
+          - **Document Link:** `GPAM-AMPEL-0201-78-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-78-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QEMS technology, including quantum sensors and intelligent exhaust management algorithms.
+
+          ### 6.47 ATA 79 – Oil (Q-01 Lubrication/Coolant Systems)
+
+          #### **GP-AM-AMPEL-0100-79-001-A: Oil System Description and Operation (ATA 79)**
+          - **Document Link:** `GPAM-AMPEL-0201-79-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-79-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the oil system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-79-002-A: Oil System Maintenance Procedures (ATA 79)**
+          - **Document Link:** `GPAM-AMPEL-0201-79-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-79-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the oil system components.
+
+          #### **GP-AM-AMPEL-0100-79-003-A: Quantum Oil Management System (QOMS) Description (ATA 79)**
+          - **Document Link:** `GPAM-AMPEL-0201-79-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-79-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QOMS technology, including quantum sensors and intelligent oil management algorithms.
+
+          ### 6.48 ATA 80 – Starting (Q-01 System Priming/Initialization)
+
+          #### **GP-AM-AMPEL-0100-80-001-A: Starting System Description and Operation (ATA 80)**
+          - **Document Link:** `GPAM-AMPEL-0201-80-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-80-001-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD)
+          - **Content:** Description of the starting system components, structure, and control mechanisms.
+
+          #### **GP-AM-AMPEL-0100-80-002-A: Starting System Maintenance Procedures (ATA 80)**
+          - **Document Link:** `GPAM-AMPEL-0201-80-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-80-002-A-001-00_EN-US`)
+          - **Document Type:** Maintenance Procedure
+          - **Content:** Procedures for inspecting, servicing, and maintaining the starting system components.
+
+          #### **GP-AM-AMPEL-0100-80-003-A: Quantum Starting Management System (QSMS) Description (ATA 80)**
+          - **Document Link:** `GPAM-AMPEL-0201-80-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-80-003-A-001-00_EN-US`)
+          - **Document Type:** System Description (SDD) / Technical Specification
+          - **Content:** Description of the QSMS technology, including quantum sensors and intelligent starting management algorithms.
+
+          ### 6.49 ATA 91 – Charts and Diagrams
+
+          #### **GP-AM-AMPEL-0100-91-001-A: Charts and Diagrams Overview (ATA 91)**
+          - **Document Link:** `GPAM-AMPEL-0201-91-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-91-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all charts and diagrams (wiring, hydraulic, pneumatic, etc.) and their interactions.
+
+          #### **GP-AM-AMPEL-0100-91-002-A: Wiring Diagrams (ATA 91)**
+          - **Document Link:** `GPAM-AMPEL-0201-91-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-91-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed wiring diagrams for all electrical systems, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-91-003-A: Hydraulic Diagrams (ATA 91)**
+          - **Document Link:** `GPAM-AMPEL-0201-91-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-91-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed hydraulic diagrams for all hydraulic systems, including landing gear, flight controls, and brakes.
+
+          #### **GP-AM-AMPEL-0100-91-004-A: Pneumatic Diagrams (ATA 91)**
+          - **Document Link:** `GPAM-AMPEL-0201-91-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-91-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed pneumatic diagrams for all pneumatic systems, including air conditioning, pressurization, and anti-icing.
+
+          #### **GP-AM-AMPEL-0100-91-005-A: Quantum Diagrams (ATA 91)**
+          - **Document Link:** `GPAM-AMPEL-0201-91-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-91-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed quantum diagrams for all quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.50 ATA 92 – Aircraft Wiring Diagrams
+
+          #### **GP-AM-AMPEL-0100-92-001-A: Aircraft Wiring Diagrams Overview (ATA 92)**
+          - **Document Link:** `GPAM-AMPEL-0201-92-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-92-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all aircraft wiring diagrams, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-92-002-A: Power Distribution Wiring Diagrams (ATA 92)**
+          - **Document Link:** `GPAM-AMPEL-0201-92-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-92-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed wiring diagrams for power distribution systems, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-92-003-A: Avionics Wiring Diagrams (ATA 92)**
+          - **Document Link:** `GPAM-AMPEL-0201-92-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-92-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed wiring diagrams for avionics systems, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-92-004-A: Lighting Wiring Diagrams (ATA 92)**
+          - **Document Link:** `GPAM-AMPEL-0201-92-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-92-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed wiring diagrams for lighting systems, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-92-005-A: Quantum Wiring Diagrams (ATA 92)**
+          - **Document Link:** `GPAM-AMPEL-0201-92-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-92-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed wiring diagrams for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.51 ATA 93 – Programmed Wiring Systems
+
+          #### **GP-AM-AMPEL-0100-93-001-A: Programmed Wiring Systems Overview (ATA 93)**
+          - **Document Link:** `GPAM-AMPEL-0201-93-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-93-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all programmed wiring systems, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-93-002-A: Power Distribution Programmed Wiring Systems (ATA 93)**
+          - **Document Link:** `GPAM-AMPEL-0201-93-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-93-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed programmed wiring systems for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-93-003-A: Avionics Programmed Wiring Systems (ATA 93)**
+          - **Document Link:** `GPAM-AMPEL-0201-93-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-93-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed programmed wiring systems for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-93-004-A: Lighting Programmed Wiring Systems (ATA 93)**
+          - **Document Link:** `GPAM-AMPEL-0201-93-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-93-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed programmed wiring systems for lighting, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-93-005-A: Quantum Programmed Wiring Systems (ATA 93)**
+          - **Document Link:** `GPAM-AMPEL-0201-93-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-93-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed programmed wiring systems for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.52 ATA 94 – Testing and Validations
+
+          #### **GP-AM-AMPEL-0100-94-001-A: Testing and Validations Overview (ATA 94)**
+          - **Document Link:** `GPAM-AMPEL-0201-94-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-94-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all testing and validations, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-94-002-A: Power Distribution Testing and Validations (ATA 94)**
+          - **Document Link:** `GPAM-AMPEL-0201-94-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-94-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed testing and validations for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-94-003-A: Avionics Testing and Validations (ATA 94)**
+          - **Document Link:** `GPAM-AMPEL-0201-94-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-94-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed testing and validations for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-94-004-A: Lighting Testing and Validations (ATA 94)**
+          - **Document Link:** `GPAM-AMPEL-0201-94-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-94-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed testing and validations for lighting, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-94-005-A: Quantum Testing and Validations (ATA 94)**
+          - **Document Link:** `GPAM-AMPEL-0201-94-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-94-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed testing and validations for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.53 ATA 95 – Manufacturing and Assembly
+
+          #### **GP-AM-AMPEL-0100-95-001-A: Manufacturing and Assembly Overview (ATA 95)**
+          - **Document Link:** `GPAM-AMPEL-0201-95-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-95-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all manufacturing and assembly, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-95-002-A: Power Distribution Manufacturing and Assembly (ATA 95)**
+          - **Document Link:** `GPAM-AMPEL-0201-95-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-95-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed manufacturing and assembly for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-95-003-A: Avionics Manufacturing and Assembly (ATA 95)**
+          - **Document Link:** `GPAM-AMPEL-0201-95-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-95-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed manufacturing and assembly for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-95-004-A: Lighting Manufacturing and Assembly (ATA 95)**
+          - **Document Link:** `GPAM-AMPEL-0201-95-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-95-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed manufacturing and assembly for lighting, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-95-005-A: Quantum Manufacturing and Assembly (ATA 95)**
+          - **Document Link:** `GPAM-AMPEL-0201-95-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-95-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed manufacturing and assembly for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.54 ATA 96 – Area Maintenance and Operations
+
+          #### **GP-AM-AMPEL-0100-96-001-A: Area Maintenance and Operations Overview (ATA 96)**
+          - **Document Link:** `GPAM-AMPEL-0201-96-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-96-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all area maintenance and operations, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-96-002-A: Power Distribution Area Maintenance and Operations (ATA 96)**
+          - **Document Link:** `GPAM-AMPEL-0201-96-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-96-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed area maintenance and operations for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-96-003-A: Avionics Area Maintenance and Operations (ATA 96)**
+          - **Document Link:** `GPAM-AMPEL-0201-96-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-96-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed area maintenance and operations for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-96-004-A: Lighting Area Maintenance and Operations (ATA 96)**
+          - **Document Link:** `GPAM-AMPEL-0201-96-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-96-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed area maintenance and operations for lighting, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-96-005-A: Quantum Area Maintenance and Operations (ATA 96)**
+          - **Document Link:** `GPAM-AMPEL-0201-96-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-96-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed area maintenance and operations for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.55 ATA 97 – Scheduled Maintenance
+
+          #### **GP-AM-AMPEL-0100-97-001-A: Scheduled Maintenance Overview (ATA 97)**
+          - **Document Link:** `GPAM-AMPEL-0201-97-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-97-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all scheduled maintenance, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-97-002-A: Power Distribution Scheduled Maintenance (ATA 97)**
+          - **Document Link:** `GPAM-AMPEL-0201-97-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-97-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed scheduled maintenance for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-97-003-A: Avionics Scheduled Maintenance (ATA 97)**
+          - **Document Link:** `GPAM-AMPEL-0201-97-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-97-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed scheduled maintenance for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-97-004-A: Lighting Scheduled Maintenance (ATA 97)**
+          - **Document Link:** `GPAM-AMPEL-0201-97-004-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-97-004-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed scheduled maintenance for lighting, including exterior and interior lighting.
+
+          #### **GP-AM-AMPEL-0100-97-005-A: Quantum Scheduled Maintenance (ATA 97)**
+          - **Document Link:** `GPAM-AMPEL-0201-97-005-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-97-005-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed scheduled maintenance for quantum systems, including Q-01, QFMS, QCMS, and QNMS.
+
+          ### 6.56 ATA 98 – Flight Test Program
+
+          #### **GP-AM-AMPEL-0100-98-001-A: Flight Test Program Overview (ATA 98)**
+          - **Document Link:** `GPAM-AMPEL-0201-98-001-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-98-001-A-001-00_EN-US`)
+          - **Document Type:** System Overview / Architecture
+          - **Content:** High-level overview of all flight test programs, including power distribution, avionics, and lighting.
+
+          #### **GP-AM-AMPEL-0100-98-002-A: Power Distribution Flight Test Program (ATA 98)**
+          - **Document Link:** `GPAM-AMPEL-0201-98-002-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-98-002-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed flight test program for power distribution, including HVDC, LVDC, and emergency power.
+
+          #### **GP-AM-AMPEL-0100-98-003-A: Avionics Flight Test Program (ATA 98)**
+          - **Document Link:** `GPAM-AMPEL-0201-98-003-A` (DMC: `DMC-GAIAPULSE-AMPEL-0201-98-003-A-001-00_EN-US`)
+          - **Document Type:** Technical Drawing / Data
+          - **Content:** Detailed flight test program for avionics, including communication, navigation, and flight control.
+
+          #### **GP-AM-AMPEL-0100-98-004-A:
+

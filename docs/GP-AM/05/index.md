@@ -11,8 +11,3 @@
 - **[GP-AM-EDR-05-006-REQ-A](#ata-05--maintenance-programs)**: Airworthiness Limitations Document
 - **[GP-AM-EDR-05-007-PLAN-A](#ata-05--maintenance-programs)**: Compliance & Certification Roadmap
 
-#### **GP-AM-AMPEL-0100-26-001-A: Fire Protection (ATA 26)**
-- **[GP-AM-EDR-26-001](#ata-26--fire-protection)**: Fire Protection System Description
-- **[GP-AM-EDR-26-002-CAL](#ata-26--fire-protection)**: Fire Suppression Volume Calculations
-- **[GP-AM-DRW-26-004](#ata-26--fire-protection)**: Suppression Agent Routing Schematics
-- **[GP-Q-TEST-49-026](#ata-26--fire-protection)**: Fire Resistance Test Results for QPS Modules

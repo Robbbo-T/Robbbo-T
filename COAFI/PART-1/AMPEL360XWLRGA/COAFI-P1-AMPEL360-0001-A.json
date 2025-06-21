@@ -116,7 +116,7 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC, DATA)
+      "documents": []
     },
     "ATA_09": {
       "chapter_number": "09",
@@ -127,7 +127,7 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC)
+      "documents": []
     },
     "ATA_10": {
       "chapter_number": "10",
@@ -138,7 +138,7 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC)
+      "documents": []
     },
     "ATA_11": {
       "chapter_number": "11",
@@ -149,7 +149,7 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely DATA, DWG refs)
+      "documents": []
     },
     "ATA_12": {
       "chapter_number": "12",
@@ -160,18 +160,18 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC)
+      "documents": []
     },
     "ATA_18": {
-        "chapter_number": "18",
-        "system_name": "Vibration and Noise Analysis",
-        "overall_status": "Definition",
-        "pdr_milestone": { "status": "Not Started", "date": null },
-        "cdr_milestone": { "status": "Not Started", "date": null },
-        "pbs_link": null,
-        "bom_link": null,
-        "requires_cad_model": false,
-        "documents": [] // Placeholder - To be populated (likely PROC, DATA)
+      "chapter_number": "18",
+      "system_name": "Vibration and Noise Analysis",
+      "overall_status": "Definition",
+      "pdr_milestone": { "status": "Not Started", "date": null },
+      "cdr_milestone": { "status": "Not Started", "date": null },
+      "pbs_link": null,
+      "bom_link": null,
+      "requires_cad_model": false,
+      "documents": []
     },
     "ATA_20": {
       "chapter_number": "20",
@@ -182,7 +182,7 @@
       "pbs_link": null,
       "bom_link": null,
       "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC, STDS)
+      "documents": []
     },
     "ATA_21": {
       "chapter_number": "21",
@@ -193,7 +193,7 @@
       "pbs_link": "/pbs/ref/ata21/ecs",
       "bom_link": "/bom/ref/ata21/ecs",
       "requires_cad_model": true,
-      "documents": [ /* Populated example from previous response */
+      "documents": [
         { "in": "001", "dmc": "AGIS-MOD-ECS-01-DWG-ARCH-A", "document_title": "ECS Architecture Diagram", "document_filename": "AGIS-MOD-ECS-01-DWG-ARCH-A.dwg", "document_type": "DWG", "status": "Approved", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Includes semantic layer v1. TwinFi Bundle: /twin/ECS-ARCH-A" },
         { "in": "002", "dmc": "AGIS-MOD-ECS-01-CAL-LOADS-B", "document_title": "ECS Thermal Load Calculations", "document_filename": "AGIS-MOD-ECS-01-CAL-LOADS-B.xlsx", "document_type": "CAL", "status": "In Review", "revision": "B", "date_issued": "YYYY-MM-DD", "notes": "Simulation file: /sim/ECS-LOADS-B.fem. FID: FUNC-ECS-THERMAL" },
         { "in": "003", "dmc": "AGIS-MOD-ECS-01-PROC-OPS-A", "document_title": "ECS Normal Operation Procedures", "document_filename": "AGIS-MOD-ECS-01-PROC-OPS-A.md", "document_type": "PROC", "status": "Draft", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Automation Level: Semi-Automated. JSON: /json/ECS-PROC-OPS-A.json" },
@@ -210,7 +210,7 @@
       "pbs_link": "/pbs/ref/ata22/afcs",
       "bom_link": "/bom/ref/ata22/afcs",
       "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
+      "documents": []
     },
     "ATA_23": {
       "chapter_number": "23",
@@ -221,7 +221,7 @@
       "pbs_link": "/pbs/ref/ata23/com",
       "bom_link": "/bom/ref/ata23/com",
       "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
+      "documents": []
     },
     "ATA_24": {
       "chapter_number": "24",
@@ -232,7 +232,7 @@
       "pbs_link": "/pbs/ref/ata24/eps",
       "bom_link": "/bom/ref/ata24/eps",
       "requires_cad_model": true,
-      "documents": [ /* Populated example from previous response */
+      "documents": [
         { "in": "001", "dmc": "AGIS-MOD-EPS-01-DWG-DIST-B", "document_title": "HVDC/LVDC Distribution Schematic", "document_filename": "AGIS-MOD-EPS-01-DWG-DIST-B.dwg", "document_type": "DWG", "status": "Approved", "revision": "B", "date_issued": "YYYY-MM-DD", "notes": "Semantic Layer v2. TwinFi Bundle: /twin/EPS-DIST-B" },
         { "in": "002", "dmc": "AGIS-MOD-AAESCCCTS-01-CAL-QBATTERY-A", "document_title": "Quantum Battery Dimensioning Calc", "document_filename": "AGIS-MOD-AAESCCCTS-01-CAL-QBATTERY-A.ipynb", "document_type": "CAL", "status": "Draft", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Simulation file ref: /sim/QBattery_v1.qsim. FID: FUNC-APUQ-*" },
         { "in": "003", "dmc": "AGIS-MOD-EPS-01-PROC-LOADMGMT-A", "document_title": "Load Management Procedures", "document_filename": "AGIS-MOD-EPS-01-PROC-LOADMGMT-A.md", "document_type": "PROC", "status": "Draft", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Automation Level: Full-Autonomous (MOD-XAI controlled)" },
@@ -248,7 +248,7 @@
       "pbs_link": "/pbs/ref/ata25",
       "bom_link": "/bom/ref/ata25",
       "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
+      "documents": []
     },
     "ATA_26": {
       "chapter_number": "26",
@@ -259,504 +259,3 @@
       "pbs_link": "/pbs/ref/ata26",
       "bom_link": "/bom/ref/ata26",
       "requires_cad_model": true,
-      "documents": [
-        {
-          "in": "001",
-          "dmc": "AMPEL360-ATA26-PLAN-FIRE-A",
-          "document_title": "Fire Protection Plan",
-          "document_filename": "AMPEL360-ATA26-PLAN-FIRE-A.pdf",
-          "document_type": "PLAN",
-          "status": "Draft",
-          "revision": "A",
-          "date_issued": "YYYY-MM-DD",
-          "notes": "Initial fire protection plan for AMPEL360XWLRGA."
-        },
-        {
-          "in": "002",
-          "dmc": "AMPEL360-ATA26-PROC-FIRE-A",
-          "document_title": "Fire Suppression Procedures",
-          "document_filename": "AMPEL360-ATA26-PROC-FIRE-A.docx",
-          "document_type": "PROC",
-          "status": "Draft",
-          "revision": "A",
-          "date_issued": "YYYY-MM-DD",
-          "notes": "Procedures for fire suppression system."
-        }
-      ]
-    },
-    "ATA_27": {
-      "chapter_number": "27",
-      "system_name": "Flight Controls",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata27/fcs",
-      "bom_link": "/bom/ref/ata27/fcs",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_28": {
-      "chapter_number": "28",
-      "system_name": "Fuel",
-      "overall_status": "Definition", // Status reflects adaptation needed for Q-01
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata28/fuel",
-      "bom_link": "/bom/ref/ata28/fuel",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated (needs adaptation for non-fuel primary engine)
-    },
-    "ATA_29": {
-      "chapter_number": "29",
-      "system_name": "Hydraulic Power",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "In Progress", "date": null },
-      "pbs_link": "/pbs/ref/ata29/hyd",
-      "bom_link": "/bom/ref/ata29/hyd",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_30": {
-      "chapter_number": "30",
-      "system_name": "Ice and Rain Protection",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata30/ice",
-      "bom_link": "/bom/ref/ata30/ice",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_31": {
-      "chapter_number": "31",
-      "system_name": "Indicating / Recording Systems",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata31/irs",
-      "bom_link": "/bom/ref/ata31/irs",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_32": {
-      "chapter_number": "32",
-      "system_name": "Landing Gear",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata32/lg",
-      "bom_link": "/bom/ref/ata32/lg",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_33": {
-      "chapter_number": "33",
-      "system_name": "Lights",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "In Progress", "date": null },
-      "pbs_link": "/pbs/ref/ata33/lights",
-      "bom_link": "/bom/ref/ata33/lights",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_34": {
-      "chapter_number": "34",
-      "system_name": "Navigation",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata34/nav",
-      "bom_link": "/bom/ref/ata34/nav",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_35": {
-      "chapter_number": "35",
-      "system_name": "Oxygen",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "In Progress", "date": null },
-      "pbs_link": "/pbs/ref/ata35/oxy",
-      "bom_link": "/bom/ref/ata35/oxy",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_36": {
-      "chapter_number": "36",
-      "system_name": "Pneumatic",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata36/pneu",
-      "bom_link": "/bom/ref/ata36/pneu",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_37": {
-        "chapter_number": "37",
-        "system_name": "Vacuum",
-        "overall_status": "Not Applicable", // Often not used in modern aircraft
-        "pdr_milestone": { "status": "N/A", "date": null },
-        "cdr_milestone": { "status": "N/A", "date": null },
-        "pbs_link": null,
-        "bom_link": null,
-        "requires_cad_model": false,
-        "documents": []
-    },
-    "ATA_38": {
-      "chapter_number": "38",
-      "system_name": "Water / Waste",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Not Started", "date": null },
-      "pbs_link": "/pbs/ref/ata38/waw",
-      "bom_link": "/bom/ref/ata38/waw",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_45": {
-      "chapter_number": "45",
-      "system_name": "Central Maintenance System (CMS)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata45/cms",
-      "bom_link": "/bom/ref/ata45/cms",
-      "requires_cad_model": true, // For the computer hardware
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_46": {
-      "chapter_number": "46",
-      "system_name": "Information Systems",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata46/info",
-      "bom_link": "/bom/ref/ata46/info",
-      "requires_cad_model": true, // For servers, network hardware
-      "documents": [] // Placeholder - To be populated
-    },
-     "ATA_47": {
-        "chapter_number": "47",
-        "system_name": "Inert Gas System",
-        "overall_status": "Requirement Analysis", // Check if needed for fuel or other systems
-        "pdr_milestone": { "status": "Not Started", "date": null },
-        "cdr_milestone": { "status": "Not Started", "date": null },
-        "pbs_link": "/pbs/ref/ata47",
-        "bom_link": "/bom/ref/ata47",
-        "requires_cad_model": true,
-        "documents": [] // Placeholder
-    },
-    "ATA_49": {
-      "chapter_number": "49",
-      "system_name": "Airborne Auxiliary Power (APU)",
-      "overall_status": "Development", // Note: Might refer to Demo APU-Q (battery) or a small conventional APU
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata49/apu",
-      "bom_link": "/bom/ref/ata49/apu",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_51": {
-      "chapter_number": "51",
-      "system_name": "Structures - General / Standard Practices",
-      "overall_status": "Definition",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata51/struct",
-      "bom_link": null,
-      "requires_cad_model": true, // References overall structural philosophy/models
-      "documents": [] // Placeholder - Likely standards, analysis methods
-    },
-    "ATA_52": {
-      "chapter_number": "52",
-      "system_name": "Doors",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata52/doors",
-      "bom_link": "/bom/ref/ata52/doors",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_53": {
-      "chapter_number": "53",
-      "system_name": "Fuselage",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata53/fuse",
-      "bom_link": "/bom/ref/ata53/fuse",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_54": {
-      "chapter_number": "54",
-      "system_name": "Nacelles / Pylons",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata54/nacelles",
-      "bom_link": "/bom/ref/ata54/nacelles",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_55": {
-      "chapter_number": "55",
-      "system_name": "Stabilizers",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata55/stab",
-      "bom_link": "/bom/ref/ata55/stab",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_56": {
-      "chapter_number": "56",
-      "system_name": "Windows",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "In Progress", "date": null },
-      "pbs_link": "/pbs/ref/ata56/windows",
-      "bom_link": "/bom/ref/ata56/windows",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-    "ATA_57": {
-      "chapter_number": "57",
-      "system_name": "Wings",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata57/wings",
-      "bom_link": "/bom/ref/ata57/wings",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - To be populated
-    },
-     "ATA_61": {
-        "chapter_number": "61", // Example - Propellers may be N/A for Q-01
-        "system_name": "Propellers / Propulsion Fans",
-        "overall_status": "Not Applicable",
-        "pdr_milestone": { "status": "N/A", "date": null },
-        "cdr_milestone": { "status": "N/A", "date": null },
-        "pbs_link": null,
-        "bom_link": null,
-        "requires_cad_model": false,
-        "documents": []
-    },
-    "ATA_70": {
-      "chapter_number": "70",
-      "system_name": "Standard Practices - Engine / Power Plant",
-      "overall_status": "Definition", // Needs adaptation for Q-01 practices
-      "pdr_milestone": { "status": "N/A", "date": null },
-      "cdr_milestone": { "status": "N/A", "date": null },
-      "pbs_link": null,
-      "bom_link": null,
-      "requires_cad_model": false,
-      "documents": [] // Placeholder - To be populated (likely PROC, STDS)
-    },
-    "ATA_71": {
-      "chapter_number": "71",
-      "system_name": "Power Plant - Installation (Q-01)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata71/q01install",
-      "bom_link": "/bom/ref/ata71/q01install",
-      "requires_cad_model": true,
-      "documents": [ /* Populated example from previous response */
-         { "in": "001", "dmc": "AGIS-MOD-PROP-Q01-71-DWG-MOUNT-A", "document_title": "Q-01 Mounting Structure Assembly", "document_filename": "AGIS-MOD-PROP-Q01-71-DWG-MOUNT-A.catpart", "document_type": "DWG", "status": "Approved", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Semantic Layer v1. TwinFi Bundle: /twin/Q01-MOUNT-A" },
-         { "in": "002", "dmc": "AGIS-MOD-PROP-Q01-71-CAL-VIBE-A", "document_title": "Vibration Isolation Analysis", "document_filename": "AGIS-MOD-PROP-Q01-71-CAL-VIBE-A.rpt", "document_type": "CAL", "status": "In Review", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Simulation file: /sim/Q01-VIBE-A.fem" },
-         { "in": "003", "dmc": "AGIS-MOD-PROP-Q01-71-PROC-INSTALL-A", "document_title": "Q-01 Installation Procedure", "document_filename": "AGIS-MOD-PROP-Q01-71-PROC-INSTALL-A.md", "document_type": "PROC", "status": "Draft", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "Includes inline verification checklist. Automation Level: Manual." },
-         { "in": "004", "dmc": "AGIS-MOD-PROP-Q01-71-TEST-ALIGN-A", "document_title": "Q-01 Alignment Test Procedure", "document_filename": "AGIS-MOD-PROP-Q01-71-TEST-ALIGN-A.pdf", "document_type": "TEST", "status": "Approved", "revision": "A", "date_issued": "YYYY-MM-DD", "notes": "References alignment tools." }
-      ]
-    },
-    "ATA_72": {
-      "chapter_number": "72",
-      "system_name": "Power Plant - Engine (Q-01 Core)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata72/q01core",
-      "bom_link": "/bom/ref/ata72/q01core",
-      "requires_cad_model": true,
-      "documents": [ /* Populated example from previous response */
-        { "in": "001", "dmc": "AGIS-MOD-PROP-Q01-72-CAL-PERF-B", "document_title": "Q-01 Core Performance Model", "document_filename": "AGIS-MOD-PROP-Q01-72-CAL-PERF-B.m", "document_type": "CAL", "status": "Approved", "revision": "B", "date_issued": "YYYY-MM-DD", "notes": "Includes quantum simulation links. FID: FUNC-Q01-THRUST" }
-      ]
-    },
-    "ATA_73": {
-      "chapter_number": "73",
-      "system_name": "Engine Fuel and Control (Q-01 Energy Input & Control)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata73/q01control",
-      "bom_link": "/bom/ref/ata73/q01control",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - Needs adaptation for Q-01 energy source/control
-    },
-    "ATA_74": {
-      "chapter_number": "74",
-      "system_name": "Ignition (Q-01 Activation/Initiation)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata74/q01activate",
-      "bom_link": "/bom/ref/ata74/q01activate",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - Needs adaptation for Q-01
-    },
-    "ATA_75": {
-      "chapter_number": "75",
-      "system_name": "Air (Q-01 Cooling & Environmental Interface)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata75/q01cooling",
-      "bom_link": "/bom/ref/ata75/q01cooling",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - Needs adaptation for Q-01 cooling/containment interface
-    },
-    "ATA_76": {
-      "chapter_number": "76",
-      "system_name": "Engine Controls (Q-01 Quantum Field Control)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata76/q01qfc",
-      "bom_link": "/bom/ref/ata76/q01qfc",
-      "requires_cad_model": true,
-      "documents": [] // Placeholder - Needs adaptation for QFCU
-    },
-    "ATA_77": {
-      "chapter_number": "77",
-      "system_name": "Engine Indicating (Q-01 Quantum State Indicating)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata77/q01indicate",
-      "bom_link": "/bom/ref/ata77/q01indicate",
-      "requires_cad_model": true, // For sensors, displays interface
-      "documents": [] // Placeholder - Needs adaptation for quantum sensors/monitors
-    },
-    "ATA_78": {
-      "chapter_number": "78",
-      "system_name": "Exhaust (Q-01 Byproduct Management / Thrust Vectoring)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata78/q01exhaust",
-      "bom_link": "/bom/ref/ata78/q01exhaust",
-      "requires_cad_model": true, // For any physical ducting or vectoring mech
-      "documents": [] // Placeholder - Needs adaptation based on 71-70
-    },
-    "ATA_79": {
-      "chapter_number": "79",
-      "system_name": "Oil (Q-01 Lubrication/Coolant Systems)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata79/q01coolant",
-      "bom_link": "/bom/ref/ata79/q01coolant",
-      "requires_cad_model": true, // For pumps, reservoirs, lines
-      "documents": [] // Placeholder - Needs adaptation for Q-01 specific fluids/systems
-    },
-    "ATA_80": {
-      "chapter_number": "80",
-      "system_name": "Starting (Q-01 System Priming/Initialization)",
-      "overall_status": "Development",
-      "pdr_milestone": { "status": "Completed", "date": "YYYY-MM-DD" },
-      "cdr_milestone": { "status": "Scheduled", "date": "YYYY-MM-DD" },
-      "pbs_link": "/pbs/ref/ata80/q01start",
-      "bom_link": "/bom/ref/ata80/q01start",
-      "requires_cad_model": true, // For any specific starting hardware
-      "documents": [] // Placeholder - Needs adaptation based on 71-60 / 74
-    },
-    "ATA_81": {
-        "chapter_number": "81",
-        "system_name": "Turbines (Q-01 Energy Conversion/Extraction)",
-        "overall_status": "Requirement Analysis", // Check applicability to Q-01 energy extraction mechanism
-        "pdr_milestone": { "status": "Not Started", "date": null },
-        "cdr_milestone": { "status": "Not Started", "date": null },
-        "pbs_link": "/pbs/ref/ata81/q01extract",
-        "bom_link": "/bom/ref/ata81/q01extract",
-        "requires_cad_model": true, // If physical components involved
-        "documents": [] // Placeholder
-    },
-    "ATA_82": {
-        "chapter_number": "82",
-        "system_name": "Water Injection",
-        "overall_status": "Not Applicable", // Assumed N/A for Q-01
-        "pdr_milestone": { "status": "N/A", "date": null },
-        "cdr_milestone": { "status": "N/A", "date": null },
-        "pbs_link": null,
-        "bom_link": null,
-        "requires_cad_model": false,
-        "documents": []
-    },
-    "ATA_83": {
-        "chapter_number": "83",
-        "system_name": "Accessory Gear Boxes (Q-01 Power Take-Off / Aux Systems)",
-        "overall_status": "Requirement Analysis", // Check applicability to Q-01 auxiliary drives
-        "pdr_milestone": { "status": "Not Started", "date": null },
-        "cdr_milestone": { "status": "Not Started", "date": null },
-        "pbs_link": "/pbs/ref/ata83/q01aux",
-        "bom_link": "/bom/ref/ata83/q01aux",
-        "requires_cad_model": true, // If physical gearboxes exist
-        "documents": [] // Placeholder
-    },
-    "ATA_91": {
-      "chapter_number": "91",
-      "system_name": "Charts",
-      "overall_status": "Definition", // Often integrated into other system docs now
-      "pdr_milestone": { "status": "N/A", "date": null },
-      "cdr_milestone": { "status": "N/A", "date": null },
-      "pbs_link": null,
-      "bom_link": null,
-      "requires_cad_model": false,
-      "documents": [] // Placeholder
-    },
-    "ATA_92": {
-        "chapter_number": "92",
-        "system_name": "Aircraft Wiring Diagrams (Consolidated)",
-        "overall_status": "Generated", // Typically generated from system-level DWGs
-        "pdr_milestone": { "status": "N/A", "date": null },
-        "cdr_milestone": { "status": "N/A", "date": null },
-        "pbs_link": null,
-        "bom_link": null,
-        "requires_cad_model": false, // Is a representation of CAD/schematic data
-        "documents": [
-            // Documents here might be auto-generated WDM references
-        ]
-    },
-    // Omitting ATA 93-99 based on previous JSON structure, can be added if needed
-    "ATA_100": {
-      "chapter_number": "100",
-      "system_name": "GAIA AIR Specific Integrations / Certification",
-      "overall_status": "Definition",
-      "pdr_milestone": { "status": "Not Started", "date": null },
-      "cdr_milestone": { "status": "Not Started", "date": null },
-      "pbs_link": null,
-      "bom_link": null,
-      "requires_cad_model": false,
-      "documents": [
-         // Could include Certification Plan, Compliance docs from previous JSON or specific GAIA integration docs
-          {
-          "in": "001",
-          "dmc": "AMPEL360-ATA100-PLAN-CERT-A",
-          "document_title": "Overall Aircraft Certification Plan",
-          "document_filename": "AMPEL360-ATA100-PLAN-CERT-A.pdf",
-          "document_type": "PLAN",
-          "status": "Draft",
-          "revision": "A",
-          "date_issued": "YYYY-MM-DD",
-          "notes": "References specific system cert plans."
-          }
-      ]
-    }
-  }
-}

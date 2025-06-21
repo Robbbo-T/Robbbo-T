@@ -1,5 +1,3 @@
-[The file .github/workflows/readme.md in the add-api-integration-strategy branch is currently empty. You can view it here.
-](https://claude.site/artifacts/72220a12-5af4-48df-a0d3-d3c08e1a7d6b)
 # GitHub Workflows
 
 This directory contains the GitHub Actions workflows that automate various processes in our API Integration Strategy project.
@@ -51,6 +49,24 @@ Ensures all new API endpoints meet our quality standards and documentation requi
 - Pull requests that add new API endpoints (detected via path filters)
 - Manual trigger for verification
 
+### `pull-request-check.yml`
+
+Automates checking and solving pull requests.
+
+**Purpose:**
+- Run code linting
+- Execute tests
+- Check for merge conflicts
+- Automatically add labels and comments based on the results of the checks
+- Validate documentation
+- Generate UI
+- Generate technical reference documents
+- Check for potential security issues and performance regressions
+- Verify that new features or changes are well-documented
+
+**Trigger Events:**
+- Pull request creation and updates targeting the `main` branch
+
 ## Usage
 
 ### Running Workflows Manually
@@ -70,6 +86,7 @@ You can add workflow status badges to your documentation:
 ```markdown
 ![Main Workflow](https://github.com/Robbbo-T/api-integration-strategy/actions/workflows/main.yml/badge.svg)
 ![Endpoints Check](https://github.com/Robbbo-T/api-integration-strategy/actions/workflows/new-endpoint-checklist.yml/badge.svg)
+![Pull Request Check](https://github.com/Robbbo-T/api-integration-strategy/actions/workflows/pull-request-check.yml/badge.svg)
 ```
 
 ## Customization

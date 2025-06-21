@@ -18,7 +18,7 @@ subgraph "Backend Systems"
 REST[REST Services]
 SOAP[SOAP Services]
 GraphQL[GraphQL Services]
-gRPC[gRPC Services]
+gRPC[Backend Services]
 Legacy[Legacy Systems]
 Quantum[Quantum Systems]
 end

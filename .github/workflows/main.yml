@@ -18,7 +18,6 @@ jobs:
       - name: Install XML Lint (xmllint)
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
-      # (Optional) Set up Python if a specific version or venv is needed for BREX script
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -28,16 +27,13 @@ jobs:
         run: |
           # Validate the data module XML against the S1000D Issue 6.0 schema
           xmllint --noout --schema schemas/S1000D_6.0_Schema.xsd data/ATA71.xml
-      # You can repeat the above xmllint command for other XML modules or use a loop if needed.
+          # Repeat or loop for additional XMLs as needed
 
       - name: Run BREX Compliance Check
         run: |
           # Run a BREX compliance validation (using a custom script or tool).
-          # This script should parse the BREX XML and the target data module, 
-          # and print any rule violations as warnings/errors.
           python tools/brex_check.py rules/ProjectBREX.xml data/ATA71.xml
-      # The brex_check.py script should exit with non-zero status if critical BREX violations are found.
-      # Ensure the script prints clear messages for any non-conformance.
+          # Script should exit non-zero if critical BREX violations are found
 
   run-tests:
     runs-on: ubuntu-latest
@@ -102,3 +98,18 @@ jobs:
 
       - name: Generate UI Backend
         run: node ui/generate-ui-backend.js
+
+  generate-technical-reference:
+    runs-on: ubuntu-latest
+    needs: validate-documentation
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Technical Reference Document
+        run: |
+          python tools/generate_technical_reference.py > docs/Technical_Reference_Aerospace.md
+
+      - name: Validate Technical Reference Document
+        run: |
+          python tools/validate_technical_reference.py docs/Technical_Reference_Aerospace.md

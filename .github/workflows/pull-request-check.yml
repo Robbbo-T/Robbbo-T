@@ -1,0 +1,83 @@
+name: Pull Request Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run linters
+        run: |
+          npm install
+          npm run lint
+
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest flake8 coverage
+
+      - name: Run tests
+        run: pytest
+
+      - name: Run flake8
+        run: flake8 .
+
+      - name: Run coverage
+        run: |
+          coverage run -m pytest
+          coverage report
+          coverage xml
+
+  check-merge-conflicts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check for merge conflicts
+        run: |
+          git fetch origin main
+          git checkout -b temp-branch
+          git merge origin/main --no-commit --no-ff
+          if [ $? -ne 0 ]; then
+            echo "Merge conflicts detected"
+            exit 1
+          fi
+
+  add-labels-and-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add labels and comments
+        run: |
+          if [ -f lint-results.txt ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "Linting issues found. Please fix them."
+            gh pr label ${{ github.event.pull_request.number }} --label "linting issues"
+          fi
+          if [ -f test-results.txt ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "Test failures found. Please fix them."
+            gh pr label ${{ github.event.pull_request.number }} --label "test failures"
+          fi
+          if [ -f merge-conflicts.txt ]; then
+            gh pr comment ${{ github.event.pull_request.number }} --body "Merge conflicts detected. Please resolve them."
+            gh pr label ${{ github.event.pull_request.number }} --label "merge conflicts"
+          fi

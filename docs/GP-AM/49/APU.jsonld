@@ -1,0 +1,486 @@
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "amedeo": "http://gaiaair.org/ontology/amedeo#",
+    "apu": "http://gaiaair.org/ontology/amedeo-apu#",
+    "swrl": "http://www.w3.org/2003/11/swrl#",
+    "swrlb": "http://www.w3.org/2003/11/swrlb#",
+    "label": "rdfs:label",
+    "comment": "rdfs:comment",
+    "subClassOf": "rdfs:subClassOf",
+    "domain": "rdfs:domain",
+    "range": "rdfs:range",
+    "type": "rdf:type",
+    "Class": "owl:Class",
+    "ObjectProperty": "owl:ObjectProperty",
+    "DatatypeProperty": "owl:DatatypeProperty",
+    "NamedIndividual": "owl:NamedIndividual"
+  },
+  "@graph": [
+    {
+      "@id": "apu:",
+      "@type": "owl:Ontology",
+      "owl:versionIRI": { "@id": "http://gaiaair.org/ontology/amedeo-apu/1.0" },
+      "owl:imports": { "@id": "http://gaiaair.org/ontology/amedeo" },
+      "label": "AMEDEO APU Extension",
+      "comment": "Extension of the AMEDEO core ontology for Auxiliary Power Unit (APU) maintenance, certification, and ethical safety enforcement",
+      "owl:versionInfo": "1.0"
+    },
+    
+    {
+      "@id": "apu:APU",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:GAIAComponent" },
+      "label": "APU",
+      "comment": "Auxiliary Power Unit - provides electrical power and compressed air to aircraft systems when main engines are not operating"
+    },
+    
+    {
+      "@id": "apu:LRU",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:GAIAComponent" },
+      "label": "Line Replaceable Unit",
+      "comment": "A modular component designed to be replaced quickly at the operational level"
+    },
+    
+    {
+      "@id": "apu:SafetyCriticalComponent",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:GAIAComponent" },
+      "label": "Safety Critical Component",
+      "comment": "A component whose failure could lead to hazardous or catastrophic conditions"
+    },
+    
+    {
+      "@id": "apu:BleedAirControlValve",
+      "@type": "Class",
+      "subClassOf": [
+        { "@id": "apu:LRU" },
+        { "@id": "apu:SafetyCriticalComponent" }
+      ],
+      "label": "Bleed Air Control Valve",
+      "comment": "Controls the flow of compressed air from the APU to aircraft systems"
+    },
+    
+    {
+      "@id": "apu:GeneratorControlUnit",
+      "@type": "Class",
+      "subClassOf": { "@id": "apu:LRU" },
+      "label": "Generator Control Unit",
+      "comment": "Controls and regulates the electrical output from the APU generator"
+    },
+    
+    {
+      "@id": "apu:FuelControlUnit",
+      "@type": "Class",
+      "subClassOf": [
+        { "@id": "apu:LRU" },
+        { "@id": "apu:SafetyCriticalComponent" }
+      ],
+      "label": "Fuel Control Unit",
+      "comment": "Regulates fuel flow to the APU combustion chamber"
+    },
+    
+    {
+      "@id": "apu:APUOperationalState",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:SystemState" },
+      "label": "APU Operational State",
+      "comment": "Represents the current operational state of an APU"
+    },
+    
+    {
+      "@id": "apu:Running",
+      "@type": "Class",
+      "subClassOf": { "@id": "apu:APUOperationalState" },
+      "label": "Running",
+      "comment": "APU is currently operating"
+    },
+    
+    {
+      "@id": "apu:Shutdown",
+      "@type": "Class",
+      "subClassOf": { "@id": "apu:APUOperationalState" },
+      "label": "Shutdown",
+      "comment": "APU is currently not operating"
+    },
+    
+    {
+      "@id": "apu:FaultCode",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:InformationAsset" },
+      "label": "Fault Code",
+      "comment": "A diagnostic code indicating a specific fault condition in the APU"
+    },
+    
+    {
+      "@id": "apu:MaintenanceProcedure",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:OperationalTask" },
+      "label": "Maintenance Procedure",
+      "comment": "A defined sequence of actions to maintain, repair, or inspect an APU component"
+    },
+    
+    {
+      "@id": "apu:FuelLineDisconnect",
+      "@type": "Class",
+      "subClassOf": { "@id": "apu:MaintenanceProcedure" },
+      "label": "Fuel Line Disconnect",
+      "comment": "Procedure to disconnect the fuel line from the APU"
+    },
+    
+    {
+      "@id": "apu:CertificationRecord",
+      "@type": "Class",
+      "subClassOf": { "@id": "amedeo:InformationAsset" },
+      "label": "Certification Record",
+      "comment": "Documentation of certification status for a component or procedure"
+    },
+    
+    {
+      "@id": "apu:CertifiedProcedureForSafetyCriticalComponent",
+      "@type": "Class",
+      "owl:equivalentClass": {
+        "@type": "owl:Class",
+        "owl:intersectionOf": [
+          { "@id": "apu:MaintenanceProcedure" },
+          {
+            "@type": "owl:Restriction",
+            "owl:onProperty": { "@id": "apu:targetsComponent" },
+            "owl:someValuesFrom": { "@id": "apu:SafetyCriticalComponent" }
+          },
+          {
+            "@type": "owl:Restriction",
+            "owl:onProperty": { "@id": "apu:hasCertificationRecord" },
+            "owl:someValuesFrom": {
+              "@type": "owl:Class",
+              "owl:intersectionOf": [
+                { "@id": "apu:CertificationRecord" },
+                {
+                  "@type": "owl:Restriction",
+                  "owl:onProperty": { "@id": "apu:status" },
+                  "owl:hasValue": "Approved"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "label": "Certified Procedure For Safety Critical Component",
+      "comment": "A maintenance procedure that targets a safety-critical component and has an approved certification record"
+    },
+    
+    {
+      "@id": "apu:PermissibleAPUStateForProcedure",
+      "@type": "Class",
+      "label": "Permissible APU State For Procedure",
+      "comment": "Represents valid combinations of APU states and maintenance procedures"
+    },
+    
+    {
+      "@id": "apu:InvalidProcedureWhileRunning",
+      "@type": "Class",
+      "owl:equivalentClass": {
+        "@type": "owl:Class",
+        "owl:intersectionOf": [
+          {
+            "@type": "owl:Restriction",
+            "owl:onProperty": { "@id": "apu:hasOperationalState" },
+            "owl:hasValue": { "@id": "apu:Running" }
+          },
+          {
+            "@type": "owl:Restriction",
+            "owl:onProperty": { "@id": "apu:requiresProcedure" },
+            "owl:hasValue": { "@id": "apu:FuelLineDisconnect" }
+          }
+        ]
+      },
+      "owl:disjointWith": { "@id": "apu:PermissibleAPUStateForProcedure" },
+      "label": "Invalid Procedure While Running",
+      "comment": "Represents the invalid state of attempting a fuel line disconnect while the APU is running"
+    },
+    
+    {
+      "@id": "apu:NonCompliantProcedure",
+      "@type": "Class",
+      "subClassOf": { "@id": "apu:MaintenanceProcedure" },
+      "label": "Non-Compliant Procedure",
+      "comment": "A maintenance procedure that violates safety or ethical constraints"
+    },
+    
+    {
+      "@id": "apu:hasOperationalState",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:APU" },
+      "range": { "@id": "apu:APUOperationalState" },
+      "label": "has operational state",
+      "comment": "Relates an APU to its current operational state"
+    },
+    
+    {
+      "@id": "apu:targetsComponent",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "amedeo:GAIAComponent" },
+      "label": "targets component",
+      "comment": "Relates a maintenance procedure to the component it targets"
+    },
+    
+    {
+      "@id": "apu:hasCertificationRecord",
+      "@type": "ObjectProperty",
+      "domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": [
+          { "@id": "apu:MaintenanceProcedure" },
+          { "@id": "amedeo:GAIAComponent" }
+        ]
+      },
+      "range": { "@id": "apu:CertificationRecord" },
+      "label": "has certification record",
+      "comment": "Relates a component or procedure to its certification record"
+    },
+    
+    {
+      "@id": "apu:requiresProcedure",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:FaultCode" },
+      "range": { "@id": "apu:MaintenanceProcedure" },
+      "label": "requires procedure",
+      "comment": "Relates a fault code to the maintenance procedure required to address it"
+    },
+    
+    {
+      "@id": "apu:hasComponent",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:APU" },
+      "range": { "@id": "amedeo:GAIAComponent" },
+      "label": "has component",
+      "comment": "Relates an APU to its components"
+    },
+    
+    {
+      "@id": "apu:hasProvenance",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "amedeo:InformationAsset" },
+      "range": { "@id": "amedeo:DataSource" },
+      "label": "has provenance",
+      "comment": "Relates an information asset to its provenance information"
+    },
+    
+    {
+      "@id": "apu:performedBy",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "amedeo:HumanAgent" },
+      "label": "performed by",
+      "comment": "Relates a maintenance procedure to the human agent performing it"
+    },
+    
+    {
+      "@id": "apu:hasSkillLevel",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "amedeo:HumanAgent" },
+      "range": { "@id": "amedeo:Skill" },
+      "label": "has skill level",
+      "comment": "Relates a human agent to their skill level"
+    },
+    
+    {
+      "@id": "apu:requiresSkillLevel",
+      "@type": "ObjectProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "amedeo:Skill" },
+      "label": "requires skill level",
+      "comment": "Relates a maintenance procedure to the skill level required to perform it"
+    },
+    
+    {
+      "@id": "apu:hasPartNumber",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "amedeo:GAIAComponent" },
+      "range": { "@id": "xsd:string" },
+      "label": "has part number",
+      "comment": "The manufacturer's part number for a component"
+    },
+    
+    {
+      "@id": "apu:generatesPower",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:GeneratorControlUnit" },
+      "range": { "@id": "xsd:boolean" },
+      "label": "generates power",
+      "comment": "Indicates whether the generator control unit is currently generating power"
+    },
+    
+    {
+      "@id": "apu:controlsAirflow",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:BleedAirControlValve" },
+      "range": { "@id": "xsd:boolean" },
+      "label": "controls airflow",
+      "comment": "Indicates whether the bleed air control valve is currently controlling airflow"
+    },
+    
+    {
+      "@id": "apu:status",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:CertificationRecord" },
+      "range": { "@id": "xsd:string" },
+      "label": "status",
+      "comment": "The status of a certification record (e.g., \"Approved\", \"Pending\", \"Rejected\")"
+    },
+    
+    {
+      "@id": "apu:tlsUtidsIdentifier",
+      "@type": "DatatypeProperty",
+      "domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": [
+          { "@id": "amedeo:GAIAComponent" },
+          { "@id": "apu:MaintenanceProcedure" },
+          { "@id": "apu:FaultCode" }
+        ]
+      },
+      "range": { "@id": "xsd:string" },
+      "label": "TLS-UTidS identifier",
+      "comment": "The TLS-UTidS identifier for a component, procedure, or fault code"
+    },
+    
+    {
+      "@id": "apu:complianceStatus",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "xsd:string" },
+      "label": "compliance status",
+      "comment": "The compliance status of a maintenance procedure (e.g., \"PASS\", \"FAIL\")"
+    },
+    
+    {
+      "@id": "apu:reasoningExplanation",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "xsd:string" },
+      "label": "reasoning explanation",
+      "comment": "Human-readable explanation of the reasoning behind a compliance decision"
+    },
+    
+    {
+      "@id": "apu:suggestedFix",
+      "@type": "DatatypeProperty",
+      "domain": { "@id": "apu:MaintenanceProcedure" },
+      "range": { "@id": "xsd:string" },
+      "label": "suggested fix",
+      "comment": "Suggested action to fix a non-compliant procedure"
+    },
+    
+    {
+      "@id": "apu:APU_001",
+      "@type": ["NamedIndividual", "apu:APU"],
+      "apu:hasOperationalState": { "@id": "apu:Running" },
+      "apu:hasComponent": { "@id": "apu:FuelControlUnit_4823AB12" },
+      "apu:hasPartNumber": "GTCP331-350",
+      "apu:tlsUtidsIdentifier": "[CMP:APU_001#live]"
+    },
+    
+    {
+      "@id": "apu:FuelControlUnit_4823AB12",
+      "@type": ["NamedIndividual", "apu:FuelControlUnit"],
+      "apu:hasCertificationRecord": { "@id": "apu:Cert_00123" },
+      "apu:hasPartNumber": "4823-AB12",
+      "apu:tlsUtidsIdentifier": "[CMP:FCU_4823AB12#live]"
+    },
+    
+    {
+      "@id": "apu:Cert_00123",
+      "@type": ["NamedIndividual", "apu:CertificationRecord"],
+      "apu:hasProvenance": { "@id": "apu:BITT_Hash_ABC123" },
+      "apu:status": "Approved",
+      "apu:tlsUtidsIdentifier": "[DOC:CERT_00123#auth]"
+    },
+    
+    {
+      "@id": "apu:BITT_Hash_ABC123",
+      "@type": ["NamedIndividual", "amedeo:DataSource"]
+    },
+    
+    {
+      "@id": "apu:FuelLineDisconnect_Procedure",
+      "@type": ["NamedIndividual", "apu:FuelLineDisconnect"],
+      "apu:targetsComponent": { "@id": "apu:FuelControlUnit_4823AB12" },
+      "apu:hasCertificationRecord": { "@id": "apu:Cert_00123" },
+      "apu:requiresSkillLevel": { "@id": "apu:APU_Maintenance_L2" },
+      "apu:tlsUtidsIdentifier": "[OP:FLD_PROC_001#maint]"
+    },
+    
+    {
+      "@id": "apu:APU_Maintenance_L2",
+      "@type": ["NamedIndividual", "amedeo:Skill"]
+    },
+    
+    {
+      "@id": "apu:Technician_John",
+      "@type": ["NamedIndividual", "amedeo:HumanAgent"],
+      "apu:hasSkillLevel": { "@id": "apu:APU_Maintenance_L2" },
+      "apu:tlsUtidsIdentifier": "[AGT:TECH_JOHN#resp]"
+    },
+    
+    {
+      "@id": "apu:FaultCode_FC001",
+      "@type": ["NamedIndividual", "apu:FaultCode"],
+      "apu:requiresProcedure": { "@id": "apu:FuelLineDisconnect_Procedure" },
+      "apu:tlsUtidsIdentifier": "[ERR:FC001#diag]"
+    },
+    
+    {
+      "@id": "apu:APU_Running_FuelLineDisconnect_Rule",
+      "@type": "swrl:Imp",
+      "swrl:body": {
+        "@type": "swrl:AtomList",
+        "rdf:first": {
+          "@type": "swrl:ClassAtom",
+          "swrl:classPredicate": { "@id": "apu:APU" },
+          "swrl:argument1": { "@id": "urn:swrl:var#a" }
+        },
+        "rdf:rest": {
+          "@type": "swrl:AtomList",
+          "rdf:first": {
+            "@type": "swrl:IndividualPropertyAtom",
+            "swrl:propertyPredicate": { "@id": "apu:hasOperationalState" },
+            "swrl:argument1": { "@id": "urn:swrl:var#a" },
+            "swrl:argument2": { "@id": "apu:Running" }
+          },
+          "rdf:rest": {
+            "@type": "swrl:AtomList",
+            "rdf:first": {
+              "@type": "swrl:ClassAtom",
+              "swrl:classPredicate": { "@id": "apu:MaintenanceProcedure" },
+              "swrl:argument1": { "@id": "urn:swrl:var#p" }
+            },
+            "rdf:rest": {
+              "@type": "swrl:AtomList",
+              "rdf:first": {
+                "@type": "swrl:ClassAtom",
+                "swrl:classPredicate": { "@id": "apu:FuelLineDisconnect" },
+                "swrl:argument1": { "@id": "urn:swrl:var#p" }
+              },
+              "rdf:rest": { "@id": "rdf:nil" }
+            }
+          }
+        }
+      },
+      "swrl:head": {
+        "@type": "swrl:AtomList",
+        "rdf:first": {
+          "@type": "swrl:ClassAtom",
+          "swrl:classPredicate": { "@id": "apu:NonCompliantProcedure" },
+          "swrl:argument1": { "@id": "urn:swrl:var#p" }
+        },
+        "rdf:rest": { "@id": "rdf:nil" }
+      }
+    }
+  ]
+}

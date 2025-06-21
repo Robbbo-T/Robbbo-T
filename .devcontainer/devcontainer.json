@@ -1,0 +1,31 @@
+{
+  "name": "API Integration Strategy Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "14"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "tasks": {
+    "build": "npm install",
+    "test": "npm test",
+    "launch": "npm run start"
+  }
+}

@@ -135,6 +135,281 @@
 *   [Link to documentation for Landing Gear (ATA 32), Environmental Control (ATA 21), Fire Protection (ATA 26), Information Systems (ATA 46), CMS (ATA 45), etc.]
 *   [Reference relevant AGIS modules and their subdocuments.]
 
+### 3.6 Lifting and Shoring (ATA 07)
+
+*   [Link to documentation for Lifting and Shoring procedures and diagrams.]
+*   [Reference relevant `PROC`, `DWG` subdocuments.]
+
+### 3.7 Leveling and Weighing (ATA 08)
+
+*   [Link to documentation for Leveling and Weighing procedures.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.8 Towing and Taxiing (ATA 09)
+
+*   [Link to documentation for Towing and Taxiing procedures.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.9 Parking, Mooring, Storage, and Return to Service (ATA 10)
+
+*   [Link to documentation for Parking, Mooring, Storage, and Return to Service procedures.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.10 Placards and Markings (ATA 11)
+
+*   [Link to documentation for Placards and Markings.]
+*   [Reference relevant `PROC`, `DWG` subdocuments.]
+
+### 3.11 Servicing (ATA 12)
+
+*   [Link to documentation for Servicing procedures.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.12 Vibration and Noise Analysis (ATA 18)
+
+*   [Link to documentation for Vibration and Noise Analysis procedures.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.13 Standard Practices - Airframe (ATA 20)
+
+*   [Link to documentation for Standard Practices related to Airframe.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.14 Air Conditioning and Pressurization (ATA 21)
+
+*   [Link to documentation for Air Conditioning and Pressurization systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.15 Autoflight (ATA 22)
+
+*   [Link to documentation for Autoflight systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.16 Communications (ATA 23)
+
+*   [Link to documentation for Communications systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.17 Electrical Power (ATA 24)
+
+*   [Link to documentation for Electrical Power systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.18 Equipment / Furnishings (ATA 25)
+
+*   [Link to documentation for Equipment and Furnishings.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.19 Fire Protection (ATA 26)
+
+*   [Link to documentation for Fire Protection systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.20 Flight Controls (ATA 27)
+
+*   [Link to documentation for Flight Controls systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.21 Fuel (ATA 28)
+
+*   [Link to documentation for Fuel systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.22 Hydraulic Power (ATA 29)
+
+*   [Link to documentation for Hydraulic Power systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.23 Ice and Rain Protection (ATA 30)
+
+*   [Link to documentation for Ice and Rain Protection systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.24 Indicating / Recording Systems (ATA 31)
+
+*   [Link to documentation for Indicating and Recording systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.25 Landing Gear (ATA 32)
+
+*   [Link to documentation for Landing Gear systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.26 Lights (ATA 33)
+
+*   [Link to documentation for Lights systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.27 Navigation (ATA 34)
+
+*   [Link to documentation for Navigation systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.28 Oxygen (ATA 35)
+
+*   [Link to documentation for Oxygen systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.29 Pneumatic (ATA 36)
+
+*   [Link to documentation for Pneumatic systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.30 Water / Waste (ATA 38)
+
+*   [Link to documentation for Water and Waste systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.31 Central Maintenance System (CMS) (ATA 45)
+
+*   [Link to documentation for Central Maintenance System (CMS).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.32 Information Systems (ATA 46)
+
+*   [Link to documentation for Information Systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.33 Airborne Auxiliary Power (ATA 49)
+
+*   [Link to documentation for Airborne Auxiliary Power systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.34 Structures - General / Standard Practices (ATA 51)
+
+*   [Link to documentation for Structures - General and Standard Practices.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.35 Doors (ATA 52)
+
+*   [Link to documentation for Doors systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.36 Fuselage (ATA 53)
+
+*   [Link to documentation for Fuselage systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.37 Nacelles / Pylons (ATA 54)
+
+*   [Link to documentation for Nacelles and Pylons systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.38 Stabilizers (ATA 55)
+
+*   [Link to documentation for Stabilizers systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.39 Windows (ATA 56)
+
+*   [Link to documentation for Windows systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.40 Wings (ATA 57)
+
+*   [Link to documentation for Wings systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.41 Power Plant - Installation (Q-01) (ATA 71)
+
+*   [Link to documentation for Power Plant - Installation (Q-01).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.42 Power Plant - Engine (Q-01 Core) (ATA 72)
+
+*   [Link to documentation for Power Plant - Engine (Q-01 Core).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.43 Engine Fuel and Control (Q-01 Energy Input & Control) (ATA 73)
+
+*   [Link to documentation for Engine Fuel and Control (Q-01 Energy Input & Control).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.44 Ignition (Q-01 Activation/Initiation) (ATA 74)
+
+*   [Link to documentation for Ignition (Q-01 Activation/Initiation).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.45 Air (Q-01 Cooling & Environmental Interface) (ATA 75)
+
+*   [Link to documentation for Air (Q-01 Cooling & Environmental Interface).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.46 Engine Controls (Q-01 Quantum Field Control) (ATA 76)
+
+*   [Link to documentation for Engine Controls (Q-01 Quantum Field Control).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.47 Engine Indicating (Q-01 Quantum State Indicating) (ATA 77)
+
+*   [Link to documentation for Engine Indicating (Q-01 Quantum State Indicating).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.48 Exhaust (Q-01 Byproduct Management / Thrust Vectoring) (ATA 78)
+
+*   [Link to documentation for Exhaust (Q-01 Byproduct Management / Thrust Vectoring).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.49 Oil (Q-01 Lubrication/Coolant Systems) (ATA 79)
+
+*   [Link to documentation for Oil (Q-01 Lubrication/Coolant Systems).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.50 Starting (Q-01 System Priming/Initialization) (ATA 80)
+
+*   [Link to documentation for Starting (Q-01 System Priming/Initialization).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.51 Charts and Diagrams (ATA 91)
+
+*   [Link to documentation for Charts and Diagrams.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.52 Aircraft Wiring Diagrams (ATA 92)
+
+*   [Link to documentation for Aircraft Wiring Diagrams.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.53 Programmed Wiring Systems (ATA 93)
+
+*   [Link to documentation for Programmed Wiring Systems.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.54 Testing and Validations (ATA 94)
+
+*   [Link to documentation for Testing and Validations.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.55 Manufacturing and Assembly (ATA 95)
+
+*   [Link to documentation for Manufacturing and Assembly.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.56 Area Maintenance and Operations (ATA 96)
+
+*   [Link to documentation for Area Maintenance and Operations.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.57 Scheduled Maintenance (ATA 97)
+
+*   [Link to documentation for Scheduled Maintenance.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.58 Flight Test Program (ATA 98)
+
+*   [Link to documentation for Flight Test Program.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.59 General (Miscellaneous) (ATA 99)
+
+*   [Link to documentation for General (Miscellaneous).]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
+### 3.60 Certification and Documentation (ATA 100)
+
+*   [Link to documentation for Certification and Documentation.]
+*   [Reference relevant `PROC`, `CAL` subdocuments.]
+
 ---
 
 ## 4. Integration & Interfaces
