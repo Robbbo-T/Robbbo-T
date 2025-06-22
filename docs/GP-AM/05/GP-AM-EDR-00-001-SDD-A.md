@@ -73,6 +73,11 @@ This SDD serves multiple critical functions within the AMPEL360XWLRGA documentat
 - Quantum computing architecture
 - Quantum computing performance metrics
 
+### Section 9: JSON Structure and ATA 26 Documentation
+- Overview of the JSON structure for AMPEL360XWLRGA aircraft systems documentation
+- Details for each ATA chapter, including chapter number, system name, overall status, milestones, links, and documents
+- Reference to the markdown file for ATA 26: Fire Protection
+
 ## Key Features
 
 The GP-AM-EDR-00-001-SDD-A document is distinguished by several key features:
