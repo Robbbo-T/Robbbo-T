@@ -2178,3 +2178,27 @@ All changes to this standard are managed via the GQOIS LiveKernel and require du
 [8]: https://kiuey.com/key-as9100/
 [9]: https://www.lrqa.com/en-us/latest-news/understanding-the-upcoming-changes-to-as-9100/
 [10]: https://www.aanda.org/articles/aa/full_html/2023/06/aa44178-22/aa44178-22.html
+
+## 8. License and Usage Terms
+
+This document and its associated technical assets are released under the **QAO‑Public Reference License**, which allows free use, adaptation, and distribution of the content for aerospace, academic, or sustainable innovation purposes, under the following conditions:
+
+- Full **authorship and system traceability must be preserved**.
+- Modifications or derivatives must include a changelog and identifier references (e.g., GQOIS ID).
+- Commercial use is permitted **only under attribution and compliance with GAIA‑QAO root principles**.
+- Integration into certification or manufacturing pipelines requires explicit mapping to DE‑RE‑MA components.
+
+This license reflects the commitment of GAIA‑QAO to foster open, auditable, and sustainable innovation ecosystems.
+
+---
+
+**Author / Maintainer:**  
+*Amedeo Pelliccia*  
+✉️ [amedepelliccia@gaiaqao.org]  
+🔗 [https://gaia-qao.com](https://gaia-qao.com)
+
+**Document ID:** `ROOTDOC-GIP-AMP360-20250623`  
+**Version:** 1.1.0 | **Date:** 2025‑06‑23  
+**System Domain:** GAIA‑QAO / AMPEL360 / Q‑AIR / Q‑GREENTECH / Q‑SCIRES
+
+
