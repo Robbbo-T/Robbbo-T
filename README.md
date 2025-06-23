@@ -373,7 +373,7 @@ graph TD
     A -->|Efficiency| D[Constraint: eta_total > 65%]
     B --> E[Equation: F = m_dot * v_e]
     C --> F[Equation: m_dot = P / LHV_H2]
-    D --> G[Equation: eta_total = (W_net + P_FC) / E_in]
+    D --> G[Equation: eta_total = (W_net + P_FC) div E_in]
 ```
 
 #### 6.2.7 Digital Twin Integration
