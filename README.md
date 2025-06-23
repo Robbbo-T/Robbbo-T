@@ -360,7 +360,7 @@ graph TD
     D --> E[Exhaust + Heat Recovery]
     E --> F[Thermoelectric System]
     G[Hydrogen Supply] --> C
-    G --> H[Fuel Cell (SOFC/PEM)]
+    G --> H[Fuel Cell SOFC/PEM]
     H --> I[Electric Fan]
     F --> I[Heat Integration]
 ```
@@ -407,7 +407,7 @@ graph TD
     A[Hydrogen Fuel] --> B[Combustor]
     A --> C[Fuel Cell]
     B --> D[Turbine]
-    D --> E[Mechanical Power (Fan)]
+    D --> E[Mechanical Power - Fan]
     C --> F[Electrical Power]
     F --> E
     F --> G[Auxiliary Systems]
