@@ -338,7 +338,7 @@ graph TD
     D --> F[Electric Fan Engages]
     E --> G[Thermal Recovery Activates]
     F --> G
-    G --> H[AI Controller Optimizes H₂/O₂ Ratio]
+    G --> H[AI Controller Optimizes H₂-O₂ Ratio]
     H --> I[Steady-State Operation]
     I --> J[Quantum Sensors Monitor Performance]
     J --> H[Feedback Loop]
@@ -352,7 +352,7 @@ The State Machine Diagram precisely models the dynamic behavior of the zero-impa
 stateDiagram-v2
     [*] --> Off
     Off --> Startup : Pilot Initiates [FADEC Active]
-    Startup --> CombustorIgnition : H₂/O₂ Flow Started
+    Startup --> CombustorIgnition : H2-O2 Flow Started
     Startup --> FuelCellActive : Electrical Output > 50%
     CombustorIgnition --> Cruise : Turbine RPM > 6000
     FuelCellActive --> Cruise : Fan Power Stable
@@ -360,7 +360,6 @@ stateDiagram-v2
     Fault --> SafeShutdown : AI Controller Mitigates
     SafeShutdown --> Off : Pilot Confirms
     Cruise --> Off : Pilot Commands Shutdown
-    linkStyle default stroke:purple,stroke-width:2px;
 ```
 
 #### 6.2.6 SysML Parametric Diagram
@@ -370,12 +369,11 @@ The Parametric Diagram serves to formally specify the critical performance const
 ```mermaid
 graph TD
     A[HybridTurbofan] -->|Thrust| B[Constraint: Thrust > 25 kN]
-    A -->|H2 Flow| C[Constraint: H₂ Flow < 10 kg/h]
-    A -->|Efficiency| D[Constraint: η_total > 65%]
+    A -->|H2 Flow| C[Constraint: H2 Flow < 10 kg/h]
+    A -->|Efficiency| D[Constraint: eta_total > 65%]
     B --> E[Equation: F = m_dot * v_e]
     C --> F[Equation: m_dot = P / LHV_H2]
-    D --> G[Equation: η_total = (W_net + P_FC) / E_in]
-    linkStyle default stroke:orange,stroke-width:2px;
+    D --> G[Equation: eta_total = (W_net + P_FC) / E_in]
 ```
 
 #### 6.2.7 Digital Twin Integration
@@ -482,7 +480,7 @@ graph TD
     D --> E[Exhaust + Heat Recovery]
     E --> F[Thermoelectric System]
     G[Hydrogen Supply] --> C
-    G --> H[Fuel Cell (SOFC/PEM)]
+    G --> H[Fuel Cell SOFC/PEM]
     H --> I[Electric Fan]
     F --> I[Heat Integration]
 ```
