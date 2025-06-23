@@ -368,12 +368,12 @@ The Parametric Diagram serves to formally specify the critical performance const
 
 ```mermaid
 graph TD
-    A[HybridTurbofan] -->|Thrust| B[Constraint: Thrust > 25 kN]
-    A -->|H2 Flow| C[Constraint: H2 Flow < 10 kg/h]
-    A -->|Efficiency| D[Constraint: eta_total > 65%]
-    B --> E[Equation: F = m_dot * v_e]
-    C --> F[Equation: m_dot = P / LHV_H2]
-    D --> G[Equation: eta_total = (W_net + P_FC) div E_in]
+    A[HybridTurbofan] -->|Thrust| B[Constraint: Thrust greater than 25 kN]
+    A -->|H2 Flow| C[Constraint: H2 Flow less than 10 kg/h]
+    A -->|Efficiency| D[Constraint: Total Efficiency greater than 65 percent]
+    B --> E[Equation: Force calculation]
+    C --> F[Equation: Mass flow calculation]
+    D --> G[Equation: Total efficiency calculation]
 ```
 
 #### 6.2.7 Digital Twin Integration
