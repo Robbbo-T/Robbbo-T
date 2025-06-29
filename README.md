@@ -663,7 +663,11 @@ This section provides a technical specification for the zero-impact hybrid turbo
 
 ---
 
-![image](https://github.com/user-attachments/assets/04f9335b-163e-4978-8e9a-6c5d2c991ca8)
+![image](https://github.com/user-attachments/assets/0fc14f86-3963-45c9-98bc-632bca44bfff)
+
+![image](https://github.com/user-attachments/assets/1f24540d-7952-4402-b680-843a7ba18c0f)
+
+
 
 
 ### 6.2 System Architecture (SysML/MBSE)
