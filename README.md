@@ -663,6 +663,9 @@ This section provides a technical specification for the zero-impact hybrid turbo
 
 ---
 
+![image](https://github.com/user-attachments/assets/04f9335b-163e-4978-8e9a-6c5d2c991ca8)
+
+
 ### 6.2 System Architecture (SysML/MBSE)
 
 The hybrid turbofan engine leverages a dual propulsion architecture integrating hydrogen combustion and solid oxide/proton exchange membrane (SOFC/PEM) fuel cells. The system is modeled using SysML v2 to ensure traceability and modularity, compliant with GAIA-QAO-STD-DE-RE-MA-001.
