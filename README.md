@@ -1486,6 +1486,9 @@ The DE-RE-MA framework extends traditional aerospace data management approaches:
 
 *For detailed task card procedures and acceptance criteria, see Appendix E.*
 
+![image](https://github.com/user-attachments/assets/6e7c21c3-1fc4-42bf-b287-a723ab0c6454)
+
+
 ---
 
 <div style="page-break-after: always;"></div>
@@ -1702,6 +1705,9 @@ All components are designed for seamless integration with the GAIA-QAO digital e
 | 011 | GQ-CTRL-PMU-01 | Power Management Unit | 1 | EA | N/A | DO-254 DAL-A | Collins Aerospace | 16 weeks | DE-RE-MA-ELEC |
 | 012 | GQ-CTRL-NACELLE-01 | Nacelle Control Computer | 1 | EA | N/A | DO-178C DAL-A | Thales | 18 weeks | DE-RE-MA-ELEC |
 
+![image](https://github.com/user-attachments/assets/0a21b1fd-f927-4f25-942b-aa7b8632e4a1)
+
+
 ### A.2 Electrical Components
 
 **Table A-2: Electrical Component BOM**
@@ -1714,6 +1720,9 @@ All components are designed for seamless integration with the GAIA-QAO digital e
 | 016 | GQ-CONN-DATA-01 | AFDX Connector | 12 | EA | Aluminum | EN3545 | Radiall | 4 weeks | DE-RE-MA-ELEC |
 | 017 | GQ-EMI-SHIELD-01 | EMI Shielding Gasket | 20 | M | Mu-metal | MIL-DTL-83528 | Parker Chomerics | 6 weeks | DE-RE-MA-ELEC |
 
+![image](https://github.com/user-attachments/assets/f54a8ce5-7f2c-4fe0-af9c-b420cc9a8817)
+
+
 ### A.3 Hardware & Consumables
 
 **Table A-3: Hardware and Consumables BOM**
@@ -1725,6 +1734,9 @@ All components are designed for seamless integration with the GAIA-QAO digital e
 | 020 | GQ-SEAL-ORING-01 | O-Ring Seal (Various) | 24 | EA | Viton | AS568-214 | Parker Hannifin | 3 weeks | DE-RE-MA-SEC |
 | 021 | GQ-LUBR-OIL-01 | Synthetic Turbine Oil | 10 | L | Synthetic | MIL-PRF-23699F | Mobil Aviation | 1 week | DE-RE-MA-LIFECYCLE |
 | 022 | GQ-COATING-NANO-01 | Nano-Erosion Coating | 5 | KG | Ceramic | GAIA-NANO-001 | NanoAero Tech | 12 weeks | DE-RE-MA-LIFECYCLE |
+
+![image](https://github.com/user-attachments/assets/c23c29b6-560b-4978-95ce-ddfc6753383f)
+
 
 ---
 
