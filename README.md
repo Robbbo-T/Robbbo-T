@@ -663,9 +663,8 @@ This section provides a technical specification for the zero-impact hybrid turbo
 
 ---
 
-![image](https://github.com/user-attachments/assets/0fc14f86-3963-45c9-98bc-632bca44bfff)
+![image](https://github.com/user-attachments/assets/9cd784ca-8b0a-47cc-8bdf-57a883bcf4e5)
 
-![image](https://github.com/user-attachments/assets/1f24540d-7952-4402-b680-843a7ba18c0f)
 
 
 
