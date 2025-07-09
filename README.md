@@ -1,3 +1,353 @@
+# 🛩️ AMPEL360 BWB-Q100 – GAIA-QAO | ARMADO
+
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Robbbo-T/Robbbo-T/ci.yml?branch=main)
+![Repo size](https://img.shields.io/github/repo-size/Robbbo-T/Robbbo-T)
+![Last commit](https://img.shields.io/github/last-commit/Robbbo-T/Robbbo-T)
+![License](https://img.shields.io/github/license/Robbbo-T/Robbbo-T)
+
+**Assembly Requirements Master Document Ontology (ARMADO)**  
+**Programa:** AMPEL360 BWB-Q100  
+**GQOIS ID:** `GQ-REQ-ARMADO-BWBQ100-V1R0`  
+**Versión:** 1.0.0 | **Responsable:** A. Pelliccia  
+
+---
+
+## 🚀 Introducción
+
+Este repositorio integra la documentación, requisitos, modelos de ingeniería y automatización para el aircraft **AMPEL360 BWB-Q100**.  
+Sigue la metodología ARMADO bajo el marco GAIA-QAO, aplicando DevOps, control de versiones, trazabilidad semántica y validación automatizada mediante CI/CD.
+
+---
+
+## 📦 ¿Qué es ARMADO?
+
+**ARMADO** es el documento y contenedor maestro que orquesta y da trazabilidad a todos los artefactos críticos del ciclo de vida del sistema para el aircraft **AMPEL360 BWB-Q100**:
+
+- **SRS**: Aircraft System Requirements Specification
+- **FHA**: Functional Hazard Assessment
+- **PSSA**: Preliminary System Safety Assessment
+- **SSA**: System Safety Assessment
+- **SDD**: System Design Description
+- **ICD**: Interface Control Document
+- **CMP**: Configuration Management Plan
+
+Todos estos documentos están versionados, interrelacionados y validados automáticamente por pipelines CI/CD, garantizando control, consistencia y compliance regulatorio.
+
+---
+
+## 📂 Estructura de directorios
+
+```text
+GAIA-QAO-AdVent/
+└── fleet/
+    └── ampel360/
+        └── BWBQ100/
+            └── requirements/
+                ├── ARMADO.md
+                ├── asrs/
+                │   └── ASRS_v5.1.md
+                ├── certification/
+                │   ├── EASA_CS-25_Compliance_Matrix.md
+                │   ├── DO-178C_Compliance_Plan.md
+                │   ├── DO-254_Compliance_Plan.md
+                │   └── FHA_PSSA_SSA_Plan.md
+                ├── engineering/
+                │   ├── SDD_System_Design_Description.md
+                │   ├── ICD_Interface_Control_Document.md
+                │   └── CMP_Configuration_Management_Plan.md
+                └── materials/
+                    └── ANNEX_A_Innovative_Materials.md
+```
+
+---
+
+## 📑 Tabla de Contenidos
+
+1. [Resumen Ejecutivo](#resumen-ejecutivo)
+2. [Introducción](#🚀-introducción)
+3. [¿Qué es ARMADO?](#📦-qué-es-armado)
+4. [Estructura de directorios](#📂-estructura-de-directorios)
+5. [Certificación y Regulación](#1-certificación-y-regulación)
+6. [Desarrollo e Ingeniería](#2-desarrollo-e-ingeniería)
+7. [Materiales Innovadores](#3-materiales-innovadores)
+8. [Automatización y DevOps](#4-automatización-y-devops)
+9. [Integración GAIA-QAO](#🔗-integración-gaia-qao)
+10. [Ejemplos de Snippets](#5-ejemplos-de-snippets)
+11. [Contribuir](#6-contribuir)
+12. [Licencia](#7-licencia)
+
+---
+
+## Resumen Ejecutivo
+
+ARMADO define la ontología y estructura para la gestión integral de requisitos, diseño, verificación y compliance del programa AMPEL360 BWB-Q100.
+Todos los artefactos están versionados y validados automáticamente mediante pipelines CI/CD, asegurando trazabilidad y validación rigurosa conforme a la Trinity Architecture.
+
+---
+
+## 1. Certificación y Regulación
+
+### Snippet desde `certification/EASA_CS-25_Compliance_Matrix.md`:
+
+```markdown
+---
+gqois_id: GQ-REQ-CERT-CS25-V1R0
+doc_type: Compliance Matrix
+program: AMPEL360 BWB-Q100
+version: 1.0.0
+status: Draft
+last_updated: 2025-07-12
+---
+
+| CS-25/Part 25 Paragraph | Título | Requisito ASRS | Método | Evidencia | Estado |
+|-------------------------|--------|----------------|--------|-----------|--------|
+| CS 25.1309 | Equipos, sistemas, instalaciones | GQ-REQ-ASRS-BWBQ100-22-80-003-T | FHA/SSA y Test | GQ-SAF-SSA-SYS22-V1R0 | En progreso |
+```
+
+---
+
+## 2. Desarrollo e Ingeniería
+
+### Snippet desde `engineering/SDD_System_Design_Description.md`:
+
+```markdown
+---
+gqois_id: GQ-REQ-ENG-SDD-V1R0
+doc_type: System Design Description
+program: AMPEL360 BWB-Q100
+version: 1.0.0
+status: In Progress
+---
+
+### Arquitectura General del Sistema
+
+Basado en la **Trinity Architecture**:
+```
+
+```mermaid
+graph TD
+    subgraph AMPEL360 Trinity Architecture
+        PM[Physical Modules - 525]
+        DT[Digital Twins - 525]
+        CA[Consciousness Artifacts - 525]
+    end
+    PM -- Sync <10ms --> DT
+    DT -- Predictive Data --> CA
+    CA -- Intuitive Guidance --> PM
+```
+
+### Sub-Sistemas Principales
+
+- **Propulsión**: Híbrido-eléctrico, turbinas de hidrógeno, motores eléctricos distribuidos.
+- **Aviónica**: Arquitectura IMA con núcleo de computación cuántica.
+
+---
+
+## 3. Materiales Innovadores
+
+Esta sección proporciona detalles sobre los materiales avanzados y sus propiedades clave, fundamentales para la "Trinity Architecture" y los objetivos de longevidad y sostenibilidad del AMPEL360 BWB-Q100.
+
+**Ejemplo y enlace al documento completo:**
+
+```markdown
+---
+gqois_id: GQ-ANNEX-MAT-BWBQ100-V1R0
+doc_type: Materials Annex
+program: AMPEL360 BWB-Q100
+version: 1.0.0
+classification: GAIA-QAO Trinity Technical Documentation
+---
+
+- Grafeno reforzado para estructuras primarias.
+- Polímeros auto-reparadores en superficies móviles.
+- Metamateriales para blindaje cuántico.
+```
+
+Para el documento completo sobre materiales innovadores, consulte: [`./materials/ANNEX_A_Innovative_Materials.md`](./materials/ANNEX_A_Innovative_Materials.md)
+
+---
+
+## 4. Automatización y DevOps
+
+Todo commit lanza pipelines GitHub Actions que:
+
+- ✅ Validan sintaxis y formato de todos los archivos Markdown.
+- ✅ Verifican unicidad y correspondencia de los GQOIS ID.
+- ✅ Simulan firmas criptográficas Q-SIGN sobre artefactos clave.
+- ✅ Las baselines de configuración se establecen en SRR, PDR, CDR y TRR.
+- ✅ Integración directa con sistemas de gestión de requisitos y trazabilidad semántica.
+
+### Ejemplo de workflow YAML (`.github/workflows/ci.yml`):
+
+```yaml
+name: ARMADO CI
+on: [push, pull_request]
+jobs:
+  validate-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v13
+      - name: Validate GQOIS IDs
+        run: python scripts/validate_gqois.py
+```
+
+---
+
+## 🔗 Integración GAIA-QAO
+
+| Módulo | Propósito |
+|--------|-----------|
+| **GQOIS** | Identificación y trazabilidad semántica de artefactos |
+| **DE-RE-MA** | Repositorio maestro de configuración y diseño |
+| **QAOgen** | Generación automática de documentación técnica |
+| **CI/CD PLM** | Orquestación del ciclo de vida mediante pipelines verificables |
+
+---
+
+## 5. Ejemplos de Snippets
+
+### `requirements/ARMADO.md`
+
+```markdown
+---
+gqois_id: GQ-REQ-ARMADO-BWBQ100-V1R0
+program: AMPEL360 BWB-Q100
+classification: Requisito de Ensamblaje y Cumplimiento Técnico
+author: A. Pelliccia
+last_revision: 2025-07-09
+status: Released
+---
+```
+
+### `engineering/CMP_Configuration_Management_Plan.md`
+
+```markdown
+---
+gqois_id: GQ-REQ-ENG-CMP-V1R0
+doc_type: Configuration Management Plan
+program: AMPEL360 BWB-Q100
+version: 1.0.0
+status: Baseline
+---
+## 1. Control de versiones
+- Sistema: Git, alojado en GAIA-QAO/AdVent.
+- Ramas: GitFlow (main, develop, feature, release, hotfix).
+```
+
+---
+
+## 6. Contribuir
+
+1. **Haz fork** y crea una rama descriptiva.
+2. **Sigue la nomenclatura** y estructura ARMADO. Usa la plantilla propuesta abajo.
+3. **Haz un pull request** explicando los cambios.
+4. **Asegúrate** que tu contribución pasa las pipelines CI/CD y cumple con los requisitos de trazabilidad y formato.
+
+### Template Oficial del Documento ARMADO
+
+Para crear nuevos documentos en el marco ARMADO, utiliza la siguiente plantilla. Asegúrate de rellenar todos los campos del front matter YAML y de seguir la estructura de secciones propuesta.
+
+<details>
+<summary>📄 Click para ver el Template Completo</summary>
+
+```markdown
+---
+gqois_id: GQ-[CATEGORIA_DOCUMENTO]-[IDENTIFICATORE_DOCUMENTO]-BWBQ100-V[X]R[Y] # Esempio: GQ-REQ-ASRS-BWBQ100-V5R1, GQ-ANNEX-MAT-BWBQ100-V1R0
+program: AMPEL360 BWB-Q100
+version: 1.0.0 # Versione di questo specifico documento Markdown
+classification: [Classification Level, e.g., Technical Specification, Compliance Plan]
+author: [Author Name]
+contributors: [] # Lista degli autori secondari o revisori principali
+last_revision: [YYYY-MM-DD] # Data dell'ultima modifica significativa a questo file
+approval_date: [YYYY-MM-DD or null] # Data di approvazione formale del documento
+status: [Draft|In Review|Released|Obsolete] # Stato corrente del ciclo di vita del documento
+layout: default # Layout predefinito (può essere document-specific come 'main-doc' o 'compliance-matrix' per ARMADO.md)
+parent: [Parent GQOIS ID or null] # GQOIS ID del documento genitore nella gerarchia ARMADO
+children: [] # Lista esplicita dei GQOIS ID dei documenti figli diretti
+linked_artifacts: [] # Lista dei GQOIS ID di altri artefatti collegati per la tracciabilità (1:N)
+dependencies: [] # Dipendenze esterne (es. standard normativi con versione, strumenti SW specifici)
+tags: [] # Parole chiave per la categorizzazione e la ricerca (es. [compliance, safety, materials, quantum])
+review_cycle: [quarterly|semi-annual|annual] # Frequenza di revisione pianificata
+next_review: [YYYY-MM-DD] # Data della prossima revisione pianificata
+security_classification: [GAIA-QAO Internal|Confidential|Public] # Livello di sicurezza/confidenzialità del documento
+change_history_url: https://github.com/GAIA-QAO/AdVent/commits/main/fleet/ampel360/BWBQ100/requirements/[PATH_TO_THIS_DOC].md # URL alla cronologia dei commit su GitHub per questo specifico file
+evidence_tracking: # Sezione per il tracciamento delle evidenze di verifica e validazione
+  test_coverage: 0.0 # Percentuale di copertura dei test (es. requisito testato/requisito totale)
+  last_validated: null # Data dell'ultima esecuzione della validazione automatizzata (CI/CD) per questo documento
+  validation_method: null # Metodo di validazione utilizzato (es. automated_ci_lint, automated_compliance_check, manual_review)
+  evidence_packages: [] # Lista degli ID dei pacchetti di evidenza generati (es. test reports, simulation logs, audit trails)
+---
+
+# [Document Title]
+
+## Executive Summary
+
+[Brief description of the document's purpose and scope. This should provide a high-level overview of what the document covers and its significance within the AMPEL360 program.]
+
+## 1. Introduction
+
+[Provide context and background information for the document. This section sets the stage for the detailed content that follows, explaining why this document exists and its relationship to other project artifacts.]
+
+## 2. [Main Content Section Title]
+
+[This section will contain the primary content of the document. The structure and depth will vary based on the `doc_type` and `classification` specified in the YAML front matter. For instance, an ASRS document would detail system requirements, while an SDD would describe design architecture.]
+
+## 3. Trinity Architecture Considerations
+
+### 3.1 Physical Module (PM)
+[Detail specific requirements, design choices, or evidence related to the Physical Modules (PMs) as they pertain to this document. This includes material specifications, physical interfaces, and hardware functionalities.]
+
+### 3.2 Digital Twin (DT)
+[Detail specific requirements, design choices, or evidence related to the Digital Twins (DTs). This covers aspects like synchronization fidelity, simulation capabilities, data models, and predictive analytics.]
+
+### 3.3 Consciousness Artifact (CA)
+[Detail specific requirements, design choices, or evidence related to the Consciousness Artifacts (CAs). This involves aspects like intuition accuracy, wisdom accumulation, metaphysical awareness, and their interaction with PMs and DTs.]
+
+## 4. Verification & Validation
+
+[Describe the specific approach for verifying and validating the content of this document. This should include methodologies, tools, and expected outcomes of the V&V activities. Reference the `evidence_tracking` section in the YAML front matter for specific package IDs.]
+
+## 5. References
+
+[List all internal and external documents, standards, or specifications referenced within this document. For internal documents, include their `GQOIS ID` for full traceability.]
+
+---
+
+**Document Control**
+
+| Version | Date | Author | Description |
+|:--------|:-----|:-------|:------------|
+| 1.0.0 | [Date] | [Author] | Initial release of this document |
+
+---
+```
+
+</details>
+
+---
+
+## 7. Licencia
+
+Proyecto bajo licencia **MIT**.  
+Consulta el archivo [LICENSE](./LICENSE) para más detalles.
+
+---
+
+## ¿Tienes dudas, necesitas un ejemplo más o quieres proponer mejoras?
+
+¡Abre una [issue](https://github.com/GAIA-QAO/AdVent/issues) o contacta al equipo responsable!
+
+---
+
+<div align="center">
+
+**AMPEL360 BWB-Q100** | **GAIA-QAO** | **Trinity Architecture**  
+*Building the Future of Sustainable Aviation*
+
+</div>
+
 # DE-RE-MA-GQ-AIR-TURB-FAN-01-V1R0
 ## Design Reference Master - Data Management Assembly
 ### Fan Module Technical Documentation
