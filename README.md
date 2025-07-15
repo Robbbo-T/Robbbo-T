@@ -16,6 +16,118 @@ Each deliverable is assigned a quantum state reflecting its status within the AL
 - **ψ (Psi - Measurement):** A deliverable related to testing, analysis, or data sensing
 - **φ (Phi - Entangled):** An intrinsically quantum deliverable representing a live, dynamic link
 
+
+```mermaid
+%% ━━━━━━━━━━━  GLOBAL GRAPH  ━━━━━━━━━━━
+flowchart LR
+
+%% ——— class styles ———
+classDef phase fill:#edf2f7,stroke:#8a8a8a,rx:6,ry:6,font-size:11px,color:#222222
+classDef twin  fill:#c6f6d5,stroke:#22543d,rx:14,ry:14,font-size:12px,color:#222222
+classDef qsys  fill:#fbb6ce,stroke:#97266d,rx:6,ry:6,font-size:11px,color:#222222
+classDef leg   fill:#ffffff,stroke:#666,font-size:10px,color:#222222
+classDef invis fill:none,stroke:none,stroke-width:0px,font-size:0
+
+%% ────────── DIGITAL ↔ PHYSICAL TWIN ──────────
+subgraph TWIN["Digital ↔ Physical Twin"]
+  direction TB
+  ALI((ALI<br/>Physical Aircraft))
+  BOB((BOB<br/>Digital Twin))
+  ALI -. "Quantum Entanglement" .- BOB
+  T_ANCHOR["•"]
+end
+class ALI,BOB twin
+class T_ANCHOR invis
+
+%% ────────── ATA LIFECYCLE RIBBON ──────────
+subgraph LIFECYCLE["ATA Lifecycle 00‑99"]
+  direction LR
+  CONCEPT("CONCEPT<br/>β φ")
+  DESIGN("DESIGN<br/>α φ")
+  TESTING("TESTING<br/>ψ φ")
+  CERT("CERT<br/>α ψ")
+  PROD("PROD<br/>α ψ φ")
+  MAINT("MAINT<br/>α ψ φ")
+  SUPPORT("SUPPORT<br/>α φ")
+  REPAIR("REPAIR<br/>α ψ φ")
+  OPS("OPS<br/>α ψ φ")
+  RETIRE("RETIRE<br/>α β φ")
+  L_ANCHOR["•"]
+end
+class CONCEPT,DESIGN,TESTING,CERT,PROD,MAINT,SUPPORT,REPAIR,OPS,RETIRE phase
+class L_ANCHOR invis
+
+%% ────────── INNOVATIVE QUANTUM SYSTEMS ──────────
+subgraph QUANTUM_SYS["Innovative Quantum Systems 90‑99"]
+  direction TB
+  Q90("90<br/>Q Nav")
+  Q91("91<br/>Q Comp")
+  Q92("92<br/>Q Sens")
+  Q93("93<br/>Q Comms")
+  Q94("94<br/>Digital Twin")
+  Q95("95<br/>Fleet Consc.")
+  Q96("96<br/>Digital Sust.")
+  Q97("97<br/>Evolution Eng.")
+  Q98("98<br/>Consc. Core")
+  Q99("99<br/>Q Supremacy")
+  Q_ANCHOR["•"]
+end
+class Q90,Q91,Q92,Q93,Q94,Q95,Q96,Q97,Q98,Q99 qsys
+class Q_ANCHOR invis
+
+%% ────────── CROSS‑BLOCK LINKS ──────────
+%% flujo directo de datos
+T_ANCHOR --> L_ANCHOR
+%% influencia indirecta
+Q_ANCHOR -.-> L_ANCHOR
+
+%% ────────── LEGEND ──────────
+subgraph LEGEND["Legend – Quantum States"]
+  direction TB
+  A["α = Stable / Coherent"]
+  B["β = Conceptual / Superposition"]
+  P["ψ = Measurement / Testing"]
+  F["φ = Entangled / Q‑Link"]
+end
+class A,B,P,F leg
+
+%% ────────── PROJECT STRUCTURE (KEY ELEMENTS) ──────────
+subgraph PROJECT_SCOPE["Project Structure"]
+  direction TB
+  DELIVERABLES["2,847 total deliverables<br/>(1,935 AI-assistable, 912 manual)"]
+  AGAD_PHASES["4 AGAD phases"]
+  TYPES["10 deliverable types<br/>(5 technical + 5 business)"]
+  TWIN_PAIRS["345 Alice-Bob digital twin pairs"]
+end
+class DELIVERABLES,AGAD_PHASES,TYPES,TWIN_PAIRS phase
+
+%% ────────── Q-DIVISIONS ──────────
+subgraph QDIVISIONS["Q-Divisions Workload"]
+  direction LR
+  QAIR["Q-AIR: 847 (29.7%)"]
+  QSTRUCT["Q-STRUCTURES: 623 (21.9%)"]
+  QGREEN["Q-GREENTECH: 445 (15.6%)"]
+  QHPC["Q-HPC: 387 (13.6%)"]
+  QSEC["Q-SECURITY: 267 (9.4%)"]
+  QTEST["Q-TESTING: 234 (8.2%)"]
+  QTRAIN["Q-TRAINING: 189 (6.6%)"]
+  QMAN["Q-MANUFACTURING: 178 (6.3%)"]
+  QOTHER["Other Division"]
+end
+class QAIR,QSTRUCT,QGREEN,QHPC,QSEC,QTEST,QTRAIN,QMAN,QOTHER phase
+
+%% ────────── TECHNICAL FRAMEWORK ──────────
+subgraph TECH_FRAMEWORK["Technical Framework"]
+  direction TB
+  QS["Quantum-enhanced systems: 897"]
+  CS["Classical systems: 1,456"]
+  HS["Hybrid systems: 494"]
+  CERTCOMPL["EASA/FAA certification compliance"]
+  EXPORTCTRL["ITAR/EAR export control considerations"]
+end
+class QS,CS,HS,CERTCOMPL,EXPORTCTRL phase
+```
+
 ## 📊 Lifecycle Structure
 
 Each ATA system progresses through 10 distinct phases:
