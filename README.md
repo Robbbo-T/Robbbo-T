@@ -8796,28 +8796,41 @@ Esta estructura **ORB** formaliza y organiza todos los artefactos de soporte que
 ├── ALI/
 │   ├── 00_GENERAL_AIRCRAFT/
 │   │   ├── CON/
-│   │   │   └── ALI-00-CON-001_Market_Requirements-β.md
+│   │   │   ├── ALI-00-CON-001_Market_Requirements-β.md
+│   │   │   ├── AMM/
+│   │   │   │   └── ALI-00-CON-AMM-001_Maintainability_Concept_Report-β.ietp.html
+│   │   │   ├── CMM/
+│   │   │   │   └── ALI-00-CON-CMM-001_Component_Serviceability_Study-β.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-CON-IPC-001_Conceptual_Parts_Breakdown-β.json
+│   │   │   ├── SRM/
+│   │   │   │   └── ALI-00-CON-SRM-001_Structural_Repair_Concept_Guidelines-β.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-CON-TSM-001_Troubleshooting_Philosophy_Brief-β.ietp.html
 │   │   ├── DES/
+│   │   │   ├── ALI-00-DES-001_General_Arrangement-α.dwg
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-DES-AMM-001_Maintainability_Analysis_Report-β.ietp.html
 │   │   │   ├── CMM/
 │   │   │   │   └── ALI-00-DES-CMM-001_Component_Maintainability_Design-β.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-DES-IPC-001_Preliminary_Parts_List-β.json
 │   │   │   ├── SRM/
 │   │   │   │   └── ALI-00-DES-SRM-001_Structural_Damage_Tolerance_Design_Principles-β.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-DES-TSM-001_Fault_Isolation_Logic_Design-β.ietp.html
-│   │   │   └── ALI-00-DES-001_General_Arrangement-α.dwg
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-DES-TSM-001_Fault_Isolation_Logic_Design-β.ietp.html
 │   │   ├── TST/
+│   │   │   ├── ALI-00-TST-001_Integration_Test_Plan-ψ.ietp.html
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-TST-AMM-001_Test_Fleet_Maintenance_Procedures-ψ.ietp.html
 │   │   │   ├── CMM/
 │   │   │   │   └── ALI-00-TST-CMM-001_Component_Test_Bench_Procedures-ψ.ietp.html
 │   │   │   ├── SRM/
 │   │   │   │   └── ALI-00-TST-SRM-001_Repair_Validation_Test_Reports-ψ.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-TST-TSM-001_System_Diagnostic_Test_Procedures-ψ.ietp.html
-│   │   │   └── ALI-00-TST-001_Integration_Test_Plan-ψ.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-TST-TSM-001_System_Diagnostic_Test_Procedures-ψ.ietp.html
 │   │   ├── CRT/
+│   │   │   ├── ALI-00-CRT-001_Type_Certificate_Data_Sheet-α.ietp.html
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-CRT-AMM-001_Certified_Aircraft_Maintenance_Manual-α.ietp.html
 │   │   │   ├── CMM/
@@ -8826,18 +8839,22 @@ Esta estructura **ORB** formaliza y organiza todos los artefactos de soporte que
 │   │   │   │   └── ALI-00-CRT-IPC-001_Certified_Illustrated_Parts_Catalog-α.ietp.html
 │   │   │   ├── SRM/
 │   │   │   │   └── ALI-00-CRT-SRM-001_Certified_Structural_Repair_Manual-α.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-CRT-TSM-001_Certified_Troubleshooting_Manual-α.ietp.html
-│   │   │   └── ALI-00-CRT-001_Type_Certificate_Data_Sheet-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-CRT-TSM-001_Certified_Troubleshooting_Manual-α.ietp.html
 │   │   ├── PRD/
+│   │   │   ├── ALI-00-PRD-001_Manufacturing_Plan-α.ietp.html
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-PRD-AMM-001_Production_Maintenance_Instructions-α.ietp.html
 │   │   │   ├── CMM/
 │   │   │   │   └── ALI-00-PRD-CMM-001_Component_Assembly_Maintenance_Instructions-α.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-PRD-TSM-001_Production_Test_Fault_Isolation_Guide-α.ietp.html
-│   │   │   └── ALI-00-PRD-001_Manufacturing_Plan-α.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-PRD-IPC-001_Production_Illustrated_Parts_List-α.json
+│   │   │   ├── SRM/
+│   │   │   │   └── ALI-00-PRD-SRM-001_Structural_Assembly_Repair_Guidelines-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-PRD-TSM-001_Production_Test_Fault_Isolation_Guide-α.ietp.html
 │   │   ├── MNT/
+│   │   │   ├── ALI-00-MNT-001_Maintenance_Planning_Document-α.ietp.html
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-MNT-AMM-001_Aircraft_Maintenance_Manual-α.ietp.html
 │   │   │   ├── CMM/
@@ -8846,147 +8863,178 @@ Esta estructura **ORB** formaliza y organiza todos los artefactos de soporte que
 │   │   │   │   └── ALI-00-MNT-IPC-001_Illustrated_Parts_Catalog-α.ietp.html
 │   │   │   ├── SRM/
 │   │   │   │   └── ALI-00-MNT-SRM-001_Structural_Inspection_and_Reference_Manual-α.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-MNT-TSM-001_Troubleshooting_Manual-α.ietp.html
-│   │   │   └── ALI-00-MNT-001_Maintenance_Planning_Document-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-MNT-TSM-001_Troubleshooting_Manual-α.ietp.html
 │   │   ├── SUP/
+│   │   │   ├── ALI-00-SUP-001_Customer_Support_Plan-α.ietp.html
 │   │   │   ├── AMM/
 │   │   │   │   └── ALI-00-SUP-AMM-001_AMM_Revisions_and_Supplements-α.ietp.html
 │   │   │   ├── CMM/
 │   │   │   │   └── ALI-00-SUP-CMM-001_CMM_Revisions_and_Service_Letters-α.ietp.html
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-SUP-TSM-001_Field_Troubleshooting_Guide-α.ietp.html
-│   │   │   └── ALI-00-SUP-001_Customer_Support_Plan-α.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-SUP-IPC-001_Spares_Provisioning_Guidance-α.ietp.html
+│   │   │   ├── SRM/
+│   │   │   │   └── ALI-00-SUP-SRM-001_Structural_Support_Bulletin-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-SUP-TSM-001_Field_Troubleshooting_Guide-α.ietp.html
 │   │   ├── REP/
+│   │   │   ├── ALI-00-REP-001_Allowable_Damage_Limits-α.ietp.html
+│   │   │   ├── AMM/
+│   │   │   │   └── ALI-00-REP-AMM-001_Temporary_Repair_Maintenance_Procedures-α.ietp.html
 │   │   │   ├── CMM/
 │   │   │   │   └── ALI-00-REP-CMM-001_Component_Repair_Manual-α.ietp.html
-│   │   │   └── ALI-00-REP-001_Allowable_Damage_Limits-α.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-REP-IPC-001_Repair_Parts_Ordering_Guide-α.ietp.html
+│   │   │   ├── SRM/
+│   │   │   │   └── ALI-00-REP-SRM-001_Structural_Repair_Manual-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-REP-TSM-001_Repair_Verification_Troubleshooting-α.ietp.html
 │   │   ├── OPS/
-│   │   │   ├── TSM/
-│   │   │   │   └── ALI-00-OPS-TSM-001_In-Flight_Troubleshooting_Quick_Reference-α.ietp.html
-│   │   │   └── ALI-00-OPS-001_Performance_Database-ψ.xlsx
+│   │   │   ├── ALI-00-OPS-001_Performance_Database-ψ.xlsx
+│   │   │   ├── AMM/
+│   │   │   │   └── ALI-00-OPS-AMM-001_Flight_Operations_Daily_Checks-α.ietp.html
+│   │   │   ├── CMM/
+│   │   │   │   └── ALI-00-OPS-CMM-001_Onboard_Component_Status_Checklist-α.ietp.html
+│   │   │   ├── IPC/
+│   │   │   │   └── ALI-00-OPS-IPC-001_Operational_Spares_List-α.xlsx
+│   │   │   ├── SRM/
+│   │   │   │   └── ALI-00-OPS-SRM-001_In-Flight_Damage_Assessment_Guide-α.ietp.html
+│   │   │   └── TSM/
+│   │   │       └── ALI-00-OPS-TSM-001_In-Flight_Troubleshooting_Quick_Reference-α.ietp.html
 │   │   └── RET/
+│   │       ├── ALI-00-RET-001_Retirement_Planning_Guide-β.md
 │   │       ├── AMM/
 │   │       │   └── ALI-00-RET-AMM-001_Decommissioning_Maintenance_Procedures-α.ietp.html
 │   │       ├── CMM/
 │   │       │   └── ALI-00-RET-CMM-001_Component_Disposal_Procedures-α.ietp.html
-│   │       └── ALI-00-RET-001_Retirement_Planning_Guide-β.md
-│   └── (Otros ATA chapters 01-99, siguiendo la misma estructura detallada para cada uno)
+│   │       ├── IPC/
+│   │       │   └── ALI-00-RET-IPC-001_End_of_Life_Parts_List_for_Recycling-β.docx
+│   │       ├── SRM/
+│   │       │   └── ALI-00-RET-SRM-001_Structural_Disassembly_Manual-β.ietp.html
+│   │       └── TSM/
+│   │           └── ALI-00-RET-TSM-001_Retirement_Fault_Analysis_Report-β.ietp.html
+│   ├── 01_WEIGHT_AND_BALANCE/
+│   │   └── ... (misma estructura de fases y entregables)
+│   └── (Otros ATA chapters 02-99, siguiendo la misma estructura detallada para cada uno)
 ├── BOB/
 │   ├── BOB-DT/
 │   │   ├── 00_GENERAL_DIGITAL_TWIN/
 │   │   │   ├── CON/
+│   │   │   │   ├── BOB-DT-00-CON-001_Digital_Architecture_Concept-β.json
+│   │   │   │   ├── IPC/
+│   │   │   │   │   └── BOB-DT-00-CON-IPC-001_Conceptual_Parts_Breakdown-β.json
 │   │   │   │   └── SIM/
 │   │   │   │       └── BOB-DT-00-CON-SIM-001_Maintenance_Simulation_Concept-β.json
-│   │   │   │   └── IPC/
-│   │   │   │       └── BOB-DT-00-CON-IPC-001_Conceptual_Parts_Breakdown-β.json
-│   │   │   │   └── BOB-DT-00-CON-001_Digital_Architecture_Concept-β.json
 │   │   │   ├── DES/
-│   │   │   │   ├── SIM/
-│   │   │   │   │   └── BOB-DT-00-DES-SIM-001_Maintenance_Simulation_Model_Definition-α.glb
+│   │   │   │   ├── BOB-DT-00-DES-001_Digital_Twin_Framework-α.glb
 │   │   │   │   ├── IPC/
 │   │   │   │   │   └── BOB-DT-00-DES-IPC-001_Preliminary_Parts_Breakdown-β.json
-│   │   │   │   └── BOB-DT-00-DES-001_Digital_Twin_Framework-α.glb
+│   │   │   │   └── SIM/
+│   │   │   │       └── BOB-DT-00-DES-SIM-001_Maintenance_Simulation_Model_Definition-α.glb
 │   │   │   ├── TST/
+│   │   │   │   ├── BOB-DT-00-TST-001_Quantum_Correlation_Tests-φ.qasm
 │   │   │   │   └── SIM/
 │   │   │   │       └── BOB-DT-00-TST-SIM-001_Simulation_Accuracy_Validation_Report-ψ.mat
-│   │   │   │   └── BOB-DT-00-TST-001_Quantum_Correlation_Tests-φ.qasm
 │   │   │   ├── CRT/
 │   │   │   │   └── BOB-DT-00-CRT-001_Digital_Certification_Package-α.zip
 │   │   │   ├── PRD/
-│   │   │   │   ├── SIM/
-│   │   │   │   │   └── BOB-DT-00-PRD-SIM-001_Assembly_Process_Optimization_Simulation-ψ.sim
+│   │   │   │   ├── BOB-DT-00-PRD-001_Digital_Birth_Certificate-α.json
 │   │   │   │   ├── IPC/
 │   │   │   │   │   └── BOB-DT-00-PRD-IPC-001_Manufacturing_Bill_of_Materials-α.json
-│   │   │   │   └── BOB-DT-00-PRD-001_Digital_Birth_Certificate-α.json
+│   │   │   │   └── SIM/
+│   │   │   │       └── BOB-DT-00-PRD-SIM-001_Assembly_Process_Optimization_Simulation-ψ.sim
 │   │   │   ├── MNT/
+│   │   │   │   ├── BOB-DT-00-MNT-001_MSG3_Analysis-ψ.xlsx
 │   │   │   │   └── SIM/
 │   │   │   │       └── BOB-DT-00-MNT-SIM-001_Maintenance_Task_Simulation_Model-φ.onnx
-│   │   │   │   └── BOB-DT-00-MNT-001_MSG3_Analysis-ψ.xlsx
 │   │   │   ├── SUP/
+│   │   │   │   ├── BOB-DT-00-SUP-001_Remote_Diagnostic_Portal-φ.html
 │   │   │   │   └── SIM/
 │   │   │   │       └── BOB-DT-00-SUP-SIM-001_Virtual_Training_Environment_Module-φ.exe
-│   │   │   │   └── BOB-DT-00-SUP-001_Remote_Diagnostic_Portal-φ.html
 │   │   │   ├── REP/
+│   │   │   │   ├── BOB-DT-00-REP-001_Repair_Schemes_Manual-α.dwg
 │   │   │   │   └── SIM/
 │   │   │   │       └── BOB-DT-00-REP-SIM-001_Repair_Scenario_Simulation_Model-ψ.sim
-│   │   │   │   └── BOB-DT-00-REP-001_Repair_Schemes_Manual-α.dwg
 │   │   │   ├── OPS/
 │   │   │   │   └── BOB-DT-00-OPS-001_Real-time_Performance_Monitor-ψ.js
 │   │   │   └── RET/
 │   │   │       └── BOB-DT-00-RET-001_Digital_Legacy_Archive-α.zip
-│   │   └── (Otros ATA chapters 01-99, siguiendo la misma estructura)
+│   │   ├── 01_WEIGHT_AND_BALANCE/
+│   │   │   └── ... (misma estructura de fases y entregables)
+│   │   └── (Otros ATA chapters 02-99, siguiendo la misma estructura)
 │   └── BOB-DA/
 │       ├── 00_GENERAL_DIGITAL_AGENT/
 │       │   ├── CON/
-│       │   │   ├── DMM/
+│       │   │   ├── BOB-DA-00-CON-001_Mission_Definition-β.docx
+│   │   │   │   ├── BOB-DA-00-CON-002_Quantum_Integration_Study-φ.qml
+│   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-CON-DMM-001_Digital_Manual_Concept-β.json
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-CON-PIM-001_Predictive_Analytics_Framework_Concept-β.md
-│   │   │   │   └── BOB-DA-00-CON-001_Mission_Definition-β.docx
-│   │   │   │   └── BOB-DA-00-CON-002_Quantum_Integration_Study-φ.qml
 │   │   │   ├── DES/
+│   │   │   │   ├── BOB-DA-00-DES-001_System_Architecture-α.ietp.html
+│   │   │   │   ├── BOB-DA-00-DES-002_Bidirectional_Observer_Design-φ.py
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-DES-DMM-001_Digital_Manual_Platform_Design-α.ietp.html
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-DES-PIM-001_AI_Prognostic_Model_Design-α.py
-│   │   │   │   └── BOB-DA-00-DES-001_System_Architecture-α.ietp.html
-│   │   │   │   └── BOB-DA-00-DES-002_Bidirectional_Observer_Design-φ.py
 │   │   │   ├── TST/
+│   │   │   │   ├── BOB-DA-00-TST-001_System_Test_Procedures-ψ.docx
+│   │   │   │   ├── BOB-DA-00-TST-002_Digital_Validation_Suite-ψ.exe
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-TST-DMM-001_Digital_Manual_Usability_Test_Report-ψ.docx
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-TST-PIM-001_Model_Performance_Validation_Data-ψ.csv
-│   │   │   │   └── BOB-DA-00-TST-001_System_Test_Procedures-ψ.docx
-│   │   │   │   └── BOB-DA-00-TST-002_Digital_Validation_Suite-ψ.exe
 │   │   │   ├── CRT/
+│   │   │   │   ├── BOB-DA-00-CRT-001_Compliance_Matrix-α.xlsx
+│   │   │   │   ├── BOB-DA-00-CRT-002_Quantum_System_Approval-ψ.ietp.html
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-CRT-DMM-001_Digital_Manual_Data_Integrity_Compliance-α.xlsx
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-CRT-PIM-001_AI_Prognostics_Certification_Evidence-α.zip
-│   │   │   │   └── BOB-DA-00-CRT-001_Compliance_Matrix-α.xlsx
-│   │   │   │   └── BOB-DA-00-CRT-002_Quantum_System_Approval-ψ.ietp.html
 │   │   │   ├── PRD/
+│   │   │   │   ├── BOB-DA-00-PRD-001_Quality_Procedures-ψ.docx
+│   │   │   │   ├── BOB-DA-00-PRD-002_Production_Tracking_System-φ.db
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-PRD-DMM-001_Digital_Work_Instructions_for_Production-α.html
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-PRD-PIM-001_Production_Quality_Prediction_Model-φ.onnx
-│   │   │   │   └── BOB-DA-00-PRD-001_Quality_Procedures-ψ.docx
-│   │   │   │   └── BOB-DA-00-PRD-002_Production_Tracking_System-φ.db
 │   │   │   ├── MNT/
+│   │   │   │   ├── BOB-DA-00-MNT-001_Predictive_Maintenance_Model-φ.onnx
+│   │   │   │   ├── BOB-DA-00-MNT-002_Digital_Health_Monitor-φ.py
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-MNT-DMM-001_Digital_Maintenance_Manual-α.html
-│   │   │   │   ├── PIM/
-│   │   │   │   │   └── BOB-DA-00-MNT-PIM-001_Predictive_Maintenance_Algorithm-φ.py
-│   │   │   │   └── BOB-DA-00-MNT-001_Predictive_Maintenance_Model-φ.onnx
-│   │   │   │   └── BOB-DA-00-MNT-002_Digital_Health_Monitor-φ.py
+│   │   │   │   └── PIM/
+│   │   │   │       └── BOB-DA-00-MNT-PIM-001_Predictive_Maintenance_Algorithm-φ.py
 │   │   │   ├── SUP/
+│   │   │   │   ├── BOB-DA-00-SUP-001_24x7_Support_Procedures-α.docx
+│   │   │   │   ├── BOB-DA-00-SUP-002_AI_Support_Assistant-φ.exe
 │   │   │   │   ├── DMM/
 │   │   │   │   │   └── BOB-DA-00-SUP-DMM-001_Interactive_Digital_Support_Platform-φ.html
 │   │   │   │   ├── IPC/
 │   │   │   │   │   └── BOB-DA-00-SUP-IPC-001_Spares_Provisioning_Analysis-α.xlsx
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-SUP-PIM-001_Automated_Prognostic_Support_Tool-φ.exe
-│   │   │   │   └── BOB-DA-00-SUP-001_24x7_Support_Procedures-α.docx
-│   │   │   │   └── BOB-DA-00-SUP-002_AI_Support_Assistant-φ.exe
 │   │   │   ├── REP/
+│   │   │   │   ├── BOB-DA-00-REP-001_Damage_Assessment_AI-ψ.h5
+│   │   │   │   ├── BOB-DA-00-REP-002_Repair_Design_Optimizer-φ.py
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-REP-PIM-001_Repair_Outcome_Prediction_Model-φ.py
-│   │   │   │   └── BOB-DA-00-REP-001_Damage_Assessment_AI-ψ.h5
-│   │   │   │   └── BOB-DA-00-REP-002_Repair_Design_Optimizer-φ.py
 │   │   │   ├── OPS/
+│   │   │   │   ├── BOB-DA-00-OPS-001_Flight_Operations_Manual-α.ietp.html
+│   │   │   │   ├── BOB-DA-00-OPS-002_Quantum_Route_Optimizer-φ.qml
 │   │   │   │   └── PIM/
 │   │   │   │       └── BOB-DA-00-OPS-PIM-001_Real-time_Operational_Risk_Predictor-φ.py
-│   │   │   │   └── BOB-DA-00-OPS-001_Flight_Operations_Manual-α.ietp.html
-│   │   │   │   └── BOB-DA-00-OPS-002_Quantum_Route_Optimizer-φ.qml
 │   │   │   └── RET/
+│   │   │       ├── BOB-DA-00-RET-001_Disassembly_Procedures-α.docx
+│   │   │       ├── BOB-DA-00-RET-002_Material_Recovery_Optimizer-φ.py
 │   │   │       ├── DMM/
 │   │   │       │   └── BOB-DA-00-RET-DMM-001_Digital_Manual_Archiving_Plan-α.docx
-│   │   │       ├── IPC/
-│   │   │       │   └── BOB-DA-00-RET-IPC-001_End_of_Life_Parts_List_for_Recycling-β.docx
-│   │   │       └── BOB-DA-00-RET-001_Disassembly_Procedures-α.docx
-│   │   │       └── BOB-DA-00-RET-002_Material_Recovery_Optimizer-φ.py
-│   │   └── (Otros ATA chapters 01-99, siguiendo la misma estructura)
+│   │   │       └── IPC/
+│   │   │           └── BOB-DA-00-RET-IPC-001_End_of_Life_Parts_List_for_Recycling-β.docx
+│   │   ├── 01_WEIGHT_AND_BALANCE/
+│   │   │   └── ... (misma estructura de fases y entregables)
+│   │   └── (Otros ATA chapters 02-99, siguiendo la misma estructura)
 ├── ORB/
 │   ├── ORB-FIN/
 │   │   ├── ORB-FIN-01-BUDGET-MASTER.xlsx
@@ -9033,5 +9081,4 @@ Esta estructura **ORB** formaliza y organiza todos los artefactos de soporte que
 │       ├── ORB-LEG-04-EXPORT-CONTROL.md
 │       ├── ORB-LEG-05-NDAs.archive
 │       └── ORB-LEG-06-DATA-PRIVACY-POLICY.pdf
-└── README.md (Contendría la explicación de la estructura, nomenclaturas, etc.)
-```
+└── README.md
