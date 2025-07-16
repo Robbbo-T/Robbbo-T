@@ -4467,6 +4467,48 @@ Estos entregables no se organizan por ATA, sino por **función departamental**. 
 
 ---
 
+```mermaid
+flowchart TD
+  %% Núcleo Técnico
+  subgraph core["🔧 Núcleo Técnico"]
+    direction LR
+    ALICE["🛩️ ALICE\nPhysical Agent"]
+    BOB_DT["📦 BOB DT\nDigital Twin"]
+    BOB_DA["🧠 BOB DA\nDigital Agent"]
+  end
+
+  %% ORB – Organizational Resource Beacons
+  subgraph orb["📡 ORB – Organizational Resource Beacons"]
+    direction LR
+    ORB_FIN["💰 ORB-FIN\nFinance & Budget"]
+    ORB_PMO["📅 ORB-PMO\nProgram Management"]
+    ORB_HR["👥 ORB-HR\nHuman Resources"]
+    ORB_MKTG["📢 ORB-MKTG\nMarketing"]
+    ORB_CSR["🌍 ORB-CSR\nCSR"]
+    ORB_LEGAL["⚖️ ORB-LEG\nLegal"]
+  end
+
+  %% Interconexión Núcleo <-> ORB
+  core --> orb
+  orb --> core
+
+  %% Conexiones internas núcleo técnico
+  ALICE -- GQOIS ID --> BOB_DT
+  BOB_DT <--> BOB_DA
+  BOB_DA -- Operación --> ALICE
+
+  %% Interfaz directa ORB ↔ Núcleo
+  ORB_PMO -- Milestone Feed --> BOB_DT
+  BOB_DT -- Required Data --> ORB_PMO
+
+  %% Estilos visuales
+  classDef coreStyle fill:#e6f3ff,stroke:#007bff,stroke-width:1px
+  classDef orbStyle fill:#e8f5e9,stroke:#4caf50,stroke-width:1px
+
+  class core coreStyle
+  class orb orbStyle
+```
+
 ### **Integración del Núcleo Técnico con los Nodos ORB**
 
 La clave de este ecosistema es la interconexión. Por ejemplo:
