@@ -3718,7 +3718,6 @@ ATA 59 - RESERVED FOR FUTURE USE
 └── BOB-DA-79-RET-002_Component_Remanufacture_Analysis-ψ.py (Q-GREENTECH)
 ```
 </details>
-📋 ANEXO 80-89: SISTEMAS AUXILIARES
 <details>
 <summary><b>ANEXO 80: ENGINE STARTING</b></summary>
 
