@@ -1,96 +1,3 @@
-# 🌐 GQAOA
-
-### **Global Quantum Aerospace Organization Advent**
-
-**Mission Statement**
-The **Global Quantum Aerospace Organization Advent (GQAOA)** is a pioneering initiative dedicated to becoming a transformative global actor in the aerospace, quantum computing, and high-performance computing (HPC) industries.
-
-**Vision**
-GQAOA envisions a future where quantum-enhanced intelligence, sustainable engineering, and secure digital twin ecosystems converge to reshape the lifecycle of advanced aerospace systems — from concept to retirement, and from simulation to self-aware flight.
-
-**Strategic Objectives**
-
-* 🌍 **Global Leadership in quantum-enhanced aerospace innovation
-* ✈️ **Development of AI-driven, sustainable flight systems**
-* 🧠 **Deployment of intelligent digital twins and cyber-physical agents**
-* 🔐 **Integration of quantum-secure communication, control, and certification**
-* ♻️ **Commitment to environmental sustainability and green propulsion**
-* 💡 **Open collaboration with academia, industry, and government partners**
-
-**Core Pillars**
-
-| **División GQAOA** | **ATA Chapters**      | **Descripción Funcional**                        |
-| ------------------ | --------------------- | ------------------------------------------------ |
-| **Q-AIR**          | 21–26, 28, 30–38      | Sistemas de vuelo, cabina, oxígeno, navegación   |
-| **Q-GREENTECH**    | 49, 61, 70–80, 96     | Propulsión sostenible, hidrógeno, emisiones cero |
-| **Q-STRUCTURES**   | 11–12, 14, 51–57      | Fuselaje, puertas, estructuras, aeroelasticidad  |
-| **Q-HPC**          | 42, 44–46, 91, 94, 98 | Computación cuántica, AI embarcada, diagnósticos |
-| **Q-DATAGOV**      | 00–04, 92             | Gobernanza de datos, sensores, documentación     |
-| **Q-INDUSTRY**     | 05–08, 41             | Mantenimiento autónomo, inspección robotizada    |
-| **Q-SPACE**        | 23, 34, 90, 93        | Sistemas compatibles con entorno espacial        |
-| **Q-GROUND**       | 09–10, 47             | Sistemas en tierra, soporte en plataforma        |
-| **Q-MECHANICS**    | 27, 29, 32            | Controles de vuelo, tren de aterrizaje           |
-| **Q-SCIRES**       | 95, 97, 99            | Investigación científica, supremacía cuántica    |
-
----
-
-## 🚀 **Ongoing and Future Programs**
-
-### ✈️ **Aerospace Programs**
-
-| **ID**                         | **Nombre / Descripción**                                                               |
-| ------------------------------ | -------------------------------------------------------------------------------------- |
-| **AMPEL360XWLRGA**             | *Aircraft Sky Cleaner* – Aeronave de remediación ambiental atmosférica a nivel flota   |
-| **AMPEL360BWBQ100**            | *Passenger Aircraft – BWB 100 pax* – Avión regional BWB con impacto climático positivo |
-| **AMPEL360BWBQ250**            | *Passenger Aircraft – BWB 250 pax* – Aeronave intercontinental de 0 emisiones          |
-| **AMPEL360plus**               | *Spacecraft for Space Tourism* – Lanzadera orbital para 6 pasajeros (12 en versión ++) |
-| **GAIA SAT ECOSYSTEM**         | Conjunto de satélites cuánticos-autónomos para observación, comunicación y resiliencia |
-| **ORBITAL SYSTEMS & ROBOTICS** | Plataforma de sistemas robóticos orbitales y módulos de ensamblaje en microgravedad    |
-
----
-
-### 💻 **Computing and Innovation Platforms**
-
-| **ID**                | **Nombre / Descripción**                                                                   |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| **GAIA-QAO ADVENT**   | Plataforma de innovación cuántica-aeronáutica – 2,800+ entregables, 12 divisiones          |
-| **AMPEL360 OS MEDIA** | Sistema Operativo Cuántico-Medial – Fusión de sensores, agentes, digital twin y conciencia |
-
----
-
-### 🌐 **Formato YAML para integración (e.g., `programs.yaml`)**
-
-```yaml
-aerospace_programs:
-  - id: AMPEL360XWLRGA
-    name: "Aircraft Sky Cleaner"
-    description: "Quantum-enhanced aircraft for atmospheric environmental remediation"
-  - id: AMPEL360BWBQ100
-    name: "Passenger Aircraft - BWB 100"
-    description: "Net-positive 100-passenger regional blended wing body aircraft"
-  - id: AMPEL360BWBQ250
-    name: "Passenger Aircraft - BWB 250"
-    description: "Zero-impact 250-passenger intercontinental blended wing body aircraft"
-  - id: AMPEL360plus
-    name: "Spacecraft for Space Tourism"
-    description: "Shuttle for 6 passengers (12 in plusplus version), for orbital tourism and microgravity access"
-  - id: GAIA_SAT_ECOSYSTEM
-    name: "GAIA Satellite Ecosystem"
-    description: "Constellation of autonomous, quantum-coordinated satellites"
-  - id: ORBITAL_SYSTEMS_AND_ROBOTICS
-    name: "Orbital Robotics"
-    description: "Robotic platforms for orbital construction, inspection, and servicing"
-
-computing_programs:
-  - id: GAIA_QAO_ADVENT
-    name: "GAIA-QAO ADVENT Platform"
-    description: "Global innovation ecosystem integrating AI, quantum computing, and aerospace lifecycle management"
-  - id: AMPEL360_OS_MEDIA
-    name: "AMPEL360 Operating System Media"
-    description: "Cyber-physical OS bridging digital twins, quantum agents, and embedded intelligence"
-```
-
-
 # 🌳 GQAOA INTERACTIVE TREE STRUCTURE
 ## Global Quantum Aerospace Organization Advent - Navegación Visual Expandible
 
@@ -107,7 +14,19 @@ computing_programs:
 ### De Concepto a Retiro - Todos los Capítulos ATA Activos
 ### Document ID: AB-MPP-MASTER-V7.1.0-ES
 
----
+```mermaid
+flowchart TD
+  subgraph "🌐 GQAOA Quantum Twin System"
+    ALICE["🛩️ ALICE<br>Agente Físico Real<br>(Componente/Subproducto)"]
+    BOB_DT["📦 BOB DT<br>Digital Twin Estructural<br>CAD/BOM Serializado"]
+    BOB_DA["🧠 BOB DA<br>Digital Agent Contextual<br>Procedural + Semántico"]
+
+    ALICE --| GQOIS ID + Quantum Sync |--> BOB_DT
+    BOB_DT --| Configuration Export |--> BOB_DA
+    BOB_DA --| Feedback Operacional |--> BOB_DT
+    BOB_DA --| Control y Diagnóstico |--> ALICE
+  end
+```
 
 ## **Visión General del Sistema: Matriz de Responsabilidad Q-Division (Final)**
 
@@ -134,8 +53,8 @@ Cada entregable se asigna a una división "Q-" que lidera su desarrollo, reconoc
 
 <details>
 <summary><b>ANEXO 00: GENERAL AIRCRAFT</b></summary>
-```
-ATA 00 - GENERAL AIRCRAFT MASTER PREDICTION PLAN
+
+```ATA 00 - GENERAL AIRCRAFT MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-00-CON-001_Market_Requirements-β.md (Q-DATAGOV)
@@ -191,8 +110,8 @@ ATA 00 - GENERAL AIRCRAFT MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 01: WEIGHT AND BALANCE</b></summary>
-```
-ATA 01 - WEIGHT AND BALANCE MASTER PREDICTION PLAN
+
+```ATA 00 - GENERAL AIRCRAFT MASTER PREDICTION PLANATA 01 - WEIGHT AND BALANCE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-01-CON-001_Weight_Budget_Allocation-β.md (Q-DATAGOV)
@@ -248,8 +167,8 @@ ATA 01 - WEIGHT AND BALANCE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 02: OPERATIONAL LIMITS</b></summary>
-```
-ATA 02 - OPERATIONAL LIMITS MASTER PREDICTION PLAN
+
+```ATA 02 - OPERATIONAL LIMITS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-02-CON-001_Performance_Requirements-β.md (Q-DATAGOV)
@@ -305,8 +224,8 @@ ATA 02 - OPERATIONAL LIMITS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 03: EMERGENCY EQUIPMENT</b></summary>
-```
-ATA 03 - EMERGENCY EQUIPMENT MASTER PREDICTION PLAN
+
+```ATA 03 - EMERGENCY EQUIPMENT MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-03-CON-001_Emergency_System_Requirements-β.md (Q-DATAGOV)
@@ -362,8 +281,8 @@ ATA 03 - EMERGENCY EQUIPMENT MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 04: AIRWORTHINESS LIMITATIONS</b></summary>
-```
-ATA 04 - AIRWORTHINESS LIMITATIONS MASTER PREDICTION PLAN
+
+```ATA 04 - AIRWORTHINESS LIMITATIONS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-04-CON-001_Design_Service_Goal-β.md (Q-DATAGOV)
@@ -419,8 +338,8 @@ ATA 04 - AIRWORTHINESS LIMITATIONS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 05: TIME LIMITS/MAINTENANCE CHECKS</b></summary>
-```
-ATA 05 - TIME LIMITS/MAINTENANCE CHECKS MASTER PREDICTION PLAN
+
+```ATA 05 - TIME LIMITS/MAINTENANCE CHECKS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │   ├── ALI-05-CON-001_Maintenance_Philosophy-β.md (Q-INDUSTRY)
@@ -476,8 +395,8 @@ ATA 05 - TIME LIMITS/MAINTENANCE CHECKS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 06: DIMENSIONS AND AREAS</b></summary>
-```
-ATA 06 - DIMENSIONS AND AREAS MASTER PREDICTION PLAN
+
+```ATA 06 - DIMENSIONS AND AREAS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-06-CON-001_Aircraft_Size_Requirements-β.md (Q-INDUSTRY)
@@ -533,8 +452,8 @@ ATA 06 - DIMENSIONS AND AREAS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 07: LIFTING AND SHORING</b></summary>
-```
-ATA 07 - LIFTING AND SHORING MASTER PREDICTION PLAN
+
+```ATA 07 - LIFTING AND SHORING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-07-CON-001_Lifting_Point_Requirements-β.md (Q-INDUSTRY)
@@ -590,8 +509,8 @@ ATA 07 - LIFTING AND SHORING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 08: LEVELING AND WEIGHING</b></summary>
-```
-ATA 08 - LEVELING AND WEIGHING MASTER PREDICTION PLAN
+
+```ATA 08 - LEVELING AND WEIGHING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-08-CON-001_Level_Reference_Concept-β.md (Q-INDUSTRY)
@@ -647,8 +566,8 @@ ATA 08 - LEVELING AND WEIGHING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 09: TOWING AND TAXIING</b></summary>
-```
-ATA 09 - TOWING AND TAXIING MASTER PREDICTION PLAN
+
+```ATA 09 - TOWING AND TAXIING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-09-CON-001_Ground_Movement_Concept-β.md (Q-GROUND)
@@ -704,8 +623,8 @@ ATA 09 - TOWING AND TAXIING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 10: PARKING, MOORING, STORAGE</b></summary>
-```
-ATA 10 - PARKING, MOORING, STORAGE MASTER PREDICTION PLAN
+
+```ATA 10 - PARKING, MOORING, STORAGE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-10-CON-001_Long_Term_Storage_Reqs-β.md (Q-GROUND)
@@ -761,8 +680,8 @@ ATA 10 - PARKING, MOORING, STORAGE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 11: PLACARDS AND MARKINGS</b></summary>
-```
-ATA 11 - PLACARDS AND MARKINGS MASTER PREDICTION PLAN
+
+```ATA 11 - PLACARDS AND MARKINGS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-11-CON-001_Placard_Philosophy-β.md (Q-STRUCTURES)
@@ -818,65 +737,65 @@ ATA 11 - PLACARDS AND MARKINGS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 12: SERVICING</b></summary>
-```
-ATA 12 - SERVICING MASTER PREDICTION PLAN
+
+```ATA 12 - SERVICING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
-│ ├── ALI-12-CON-001_Servicing_Philosophy-β.md (Q-STRUCTURES)
-│ ├── BOB-DT-12-CON-001_Digital_Servicing_Model-β.json (Q-HPC)
-│ ├── BOB-DA-12-CON-001_Turnaround_Time_Goals-β.xlsx (Q-GROUND)
-│ └── BOB-DA-12-CON-002_Quantum_Replenishment_Study-φ.qml (Q-SCIRES)
+│   ├── ALI-12-CON-001_Servicing_Philosophy-β.md (Q-STRUCTURES)
+│   ├── BOB-DT-12-CON-001_Digital_Servicing_Model-β.json (Q-HPC)
+│   ├── BOB-DA-12-CON-001_Turnaround_Time_Goals-β.xlsx (Q-GROUND)
+│   └── BOB-DA-12-CON-002_Quantum_Replenishment_Study-φ.qml (Q-SCIRES)
 ├── DESIGN PHASE
-│ ├── ALI-12-DES-001_Servicing_Point_Layout-α.dwg (Q-STRUCTURES)
-│ ├── BOB-DT-12-DES-001_Turnaround_Simulation-ψ.sim (Q-HPC)
-│ ├── BOB-DA-12-DES-001_GSE_Interface_Design-α.step (Q-GROUND)
-│ └── BOB-DA-12-DES-002_Digital_Servicing_Twin-α.glb (Q-HPC)
+│   ├── ALI-12-DES-001_Servicing_Point_Layout-α.dwg (Q-STRUCTURES)
+│   ├── BOB-DT-12-DES-001_Turnaround_Simulation-ψ.sim (Q-HPC)
+│   ├── BOB-DA-12-DES-001_GSE_Interface_Design-α.step (Q-GROUND)
+│   └── BOB-DA-12-DES-002_Digital_Servicing_Twin-α.glb (Q-HPC)
 ├── TESTING PHASE
-│ ├── ALI-12-TST-001_Servicing_Task_Validation-ψ.ietp.html (Q-GROUND)
-│ ├── BOB-DT-12-TST-001_Servicing_Optimizer_AI-φ.mat (Q-HPC)
-│ ├── BOB-DA-12-TST-001_Ground_Time_Trials-ψ.docx (Q-GROUND)
-│ └── BOB-DA-12-TST-002_Virtual_Servicing_Test-ψ.exe (Q-HPC)
+│   ├── ALI-12-TST-001_Servicing_Task_Validation-ψ.ietp.html (Q-GROUND)
+│   ├── BOB-DT-12-TST-001_Servicing_Optimizer_AI-φ.mat (Q-HPC)
+│   ├── BOB-DA-12-TST-001_Ground_Time_Trials-ψ.docx (Q-GROUND)
+│   └── BOB-DA-12-TST-002_Virtual_Servicing_Test-ψ.exe (Q-HPC)
 ├── CERTIFICATION PHASE
-│ ├── ALI-12-CRT-001_Certified_Servicing_Manual-α.ietp.html (Q-DATAGOV)
-│ ├── BOB-DT-12-CRT-001_Digital_Servicing_Evidence-α.zip (Q-DATAGOV)
-│ ├── BOB-DA-12-CRT-001_GSE_Compatibility_Report-ψ.xlsx (Q-GROUND)
-│ └── BOB-DA-12-CRT-002_Automated_Servicing_Approval-ψ.ietp.html (Q-DATAGOV)
+│   ├── ALI-12-CRT-001_Certified_Servicing_Manual-α.ietp.html (Q-DATAGOV)
+│   ├── BOB-DT-12-CRT-001_Digital_Servicing_Evidence-α.zip (Q-DATAGOV)
+│   ├── BOB-DA-12-CRT-001_GSE_Compatibility_Report-ψ.xlsx (Q-GROUND)
+│   └── BOB-DA-12-CRT-002_Automated_Servicing_Approval-ψ.ietp.html (Q-DATAGOV)
 ├── PRODUCTION PHASE
-│ ├── ALI-12-PRD-001_Servicing_Point_Installation-α.ietp.html (Q-INDUSTRY)
-│ ├── BOB-DT-12-PRD-001_AR_Servicing_Guide-φ.usdz (Q-INDUSTRY)
-│ ├── BOB-DA-12-PRD-001_Initial_Servicing_Checks-ψ.xlsx (Q-INDUSTRY)
-│ └── BOB-DA-12-PRD-002_Automated_Fluid_Check-ψ.py (Q-ROBOTICS)
+│   ├── ALI-12-PRD-001_Servicing_Point_Installation-α.ietp.html (Q-INDUSTRY)
+│   ├── BOB-DT-12-PRD-001_AR_Servicing_Guide-φ.usdz (Q-INDUSTRY)
+│   ├── BOB-DA-12-PRD-001_Initial_Servicing_Checks-ψ.xlsx (Q-INDUSTRY)
+│   └── BOB-DA-12-PRD-002_Automated_Fluid_Check-ψ.py (Q-ROBOTICS)
 ├── MAINTENANCE PHASE
-│ ├── ALI-12-MNT-001_Servicing_Schedule-α.ietp.html (Q-INDUSTRY)
-│ ├── BOB-DT-12-MNT-001_Predictive_Replenishment-φ.onnx (Q-HPC)
-│ ├── BOB-DA-12-MNT-001_Consumables_Tracking-ψ.docx (Q-INDUSTRY)
-│ └── BOB-DA-12-MNT-002_Servicing_Task_Manager-φ.py (Q-HPC)
+│   ├── ALI-12-MNT-001_Servicing_Schedule-α.ietp.html (Q-INDUSTRY)
+│   ├── BOB-DT-12-MNT-001_Predictive_Replenishment-φ.onnx (Q-HPC)
+│   ├── BOB-DA-12-MNT-001_Consumables_Tracking-ψ.docx (Q-INDUSTRY)
+│   └── BOB-DA-12-MNT-002_Servicing_Task_Manager-φ.py (Q-HPC)
 ├── SUPPORT PHASE
-│ ├── ALI-12-SUP-001_Servicing_Manual-α.ietp.html (Q-GROUND)
-│ ├── BOB-DT-12-SUP-001_Mobile_Servicing_App-φ.html (Q-HPC)
-│ ├── BOB-DA-12-SUP-001_Consumables_Specification-α.xlsx (Q-GROUND)
-│ └── BOB-DA-12-SUP-002_Interactive_Servicing_Guide-φ.exe (Q-HPC)
+│   ├── ALI-12-SUP-001_Servicing_Manual-α.ietp.html (Q-GROUND)
+│   ├── BOB-DT-12-SUP-001_Mobile_Servicing_App-φ.html (Q-HPC)
+│   ├── BOB-DA-12-SUP-001_Consumables_Specification-α.xlsx (Q-GROUND)
+│   └── BOB-DA-12-SUP-002_Interactive_Servicing_Guide-φ.exe (Q-HPC)
 ├── REPAIR PHASE
-│ ├── ALI-12-REP-001_Servicing_Point_Repair-α.ietp.html (Q-STRUCTURES)
-│ ├── BOB-DT-12-REP-001_Servicing_Damage_Scanner-ψ.apk (Q-HPC)
-│ ├── BOB-DA-12-REP-001_Panel_Repair_Manual-α.dwg (Q-STRUCTURES)
-│ └── BOB-DA-12-REP-002_Repair_Validation_AI-φ.py (Q-HPC)
+│   ├── ALI-12-REP-001_Servicing_Point_Repair-α.ietp.html (Q-STRUCTURES)
+│   ├── BOB-DT-12-REP-001_Servicing_Damage_Scanner-ψ.apk (Q-HPC)
+│   ├── BOB-DA-12-REP-001_Panel_Repair_Manual-α.dwg (Q-STRUCTURES)
+│   └── BOB-DA-12-REP-002_Repair_Validation_AI-φ.py (Q-HPC)
 ├── OPERATION PHASE
-│ ├── ALI-12-OPS-001_Line_Servicing_Procedures-α.ietp.html (Q-GROUND)
-│ ├── BOB-DT-12-OPS-001_Real-time_Servicing_Monitor-ψ.js (Q-HPC)
-│ ├── BOB-DA-12-OPS-001_Turnaround_Checklist-ψ.xlsx (Q-GROUND)
-│ └── BOB-DA-12-OPS-002_Quantum_Turnaround_Optimizer-φ.qml (Q-SCIRES)
+│   ├── ALI-12-OPS-001_Line_Servicing_Procedures-α.ietp.html (Q-GROUND)
+│   ├── BOB-DT-12-OPS-001_Real-time_Servicing_Monitor-ψ.js (Q-HPC)
+│   ├── BOB-DA-12-OPS-001_Turnaround_Checklist-ψ.xlsx (Q-GROUND)
+│   └── BOB-DA-12-OPS-002_Quantum_Turnaround_Optimizer-φ.qml (Q-SCIRES)
 └── RETIREMENT PHASE
-├── ALI-12-RET-001_Fluid_Draining_Procedures-α.ietp.html (Q-GREENTECH)
-├── BOB-DT-12-RET-001_Digital_Servicing_History-α.json (Q-DATAGOV)
-├── BOB-DA-12-RET-001_Final_Servicing_Records-α.docx (Q-DATAGOV)
-└── BOB-DA-12-RET-002_Consumables_Recycling_Plan-φ.py (Q-GREENTECH)
+    ├── ALI-12-RET-001_Fluid_Draining_Procedures-α.ietp.html (Q-GREENTECH)
+    ├── BOB-DT-12-RET-001_Digital_Servicing_History-α.json (Q-DATAGOV)
+    ├── BOB-DA-12-RET-001_Final_Servicing_Records-α.docx (Q-DATAGOV)
+    └── BOB-DA-12-RET-002_Consumables_Recycling_Plan-φ.py (Q-GREENTECH)
 ```
 </details>
 <details>
 <summary><b>ANEXO 14: HARDWARE</b></summary>
-```
-ATA 14 - HARDWARE MASTER PREDICTION PLAN
+
+```ATA 14 - HARDWARE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-14-CON-001_Standard_Parts_Philosophy-β.md (Q-STRUCTURES)
@@ -932,8 +851,8 @@ ATA 14 - HARDWARE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 15: EXTERNAL FINISHES</b></summary>
-```
-ATA 15 - EXTERNAL FINISHES MASTER PREDICTION PLAN
+
+```ATA 15 - EXTERNAL FINISHES MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-15-CON-001_Paint_and_Finish_Requirements-β.md (Q-STRUCTURES)
@@ -989,8 +908,8 @@ ATA 15 - EXTERNAL FINISHES MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 16: GROUND DAMAGE</b></summary>
-```
-ATA 16 - GROUND DAMAGE MASTER PREDICTION PLAN
+
+```ATA 16 - GROUND DAMAGE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-16-CON-001_Damage_Tolerance_Philosophy-β.md (Q-STRUCTURES)
@@ -1046,8 +965,8 @@ ATA 16 - GROUND DAMAGE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 17: ADDITIONAL EQUIPMENT</b></summary>
-```
-ATA 17 - ADDITIONAL EQUIPMENT MASTER PREDICTION PLAN
+
+```ATA 17 - ADDITIONAL EQUIPMENT MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-17-CON-001_Optional_Equipment_List-β.md (Q-AIR)
@@ -1103,8 +1022,8 @@ ATA 17 - ADDITIONAL EQUIPMENT MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 18: VIBRATION AND NOISE</b></summary>
-```
-ATA 18 - VIBRATION AND NOISE MASTER PREDICTION PLAN
+
+```ATA 18 - VIBRATION AND NOISE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-18-CON-001_Acoustic_and_Vibration_Targets-β.md (Q-AIR)
@@ -1160,14 +1079,14 @@ ATA 18 - VIBRATION AND NOISE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 19: RESERVED</b></summary>
-```
-ATA 19 - RESERVED FOR FUTURE USE
+
+```ATA 19 - RESERVED FOR FUTURE USE
 ```
 </details>
 <details>
 <summary><b>ANEXO 20: STANDARD PRACTICES - AIRFRAME</b></summary>
-```
-ATA 20 - STANDARD PRACTICES - AIRFRAME MASTER PREDICTION PLAN
+
+```ATA 20 - STANDARD PRACTICES - AIRFRAME MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-20-CON-001_Practices_Philosophy-β.md (Q-STRUCTURES)
@@ -1223,8 +1142,8 @@ ATA 20 - STANDARD PRACTICES - AIRFRAME MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 21: AIR CONDITIONING</b></summary>
-```
-ATA 21 - AIR CONDITIONING MASTER PREDICTION PLAN
+
+```ATA 21 - AIR CONDITIONING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-21-CON-001_Cabin_Comfort_Requirements-β.md (Q-AIR)
@@ -1280,8 +1199,8 @@ ATA 21 - AIR CONDITIONING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 22: AUTO FLIGHT</b></summary>
-```
-ATA 22 - AUTO FLIGHT MASTER PREDICTION PLAN
+
+```ATA 22 - AUTO FLIGHT MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-22-CON-001_Autopilot_Requirements-β.md (Q-AIR)
@@ -1337,8 +1256,8 @@ ATA 22 - AUTO FLIGHT MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 23: COMMUNICATIONS</b></summary>
-```
-ATA 23 - COMMUNICATIONS MASTER PREDICTION PLAN
+
+```ATA 23 - COMMUNICATIONS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-23-CON-001_Comms_System_Requirements-β.md (Q-SPACE)
@@ -1394,8 +1313,8 @@ ATA 23 - COMMUNICATIONS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 24: ELECTRICAL POWER</b></summary>
-```
-ATA 24 - ELECTRICAL POWER MASTER PREDICTION PLAN
+
+```ATA 24 - ELECTRICAL POWER MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-24-CON-001_Power_System_Requirements-β.md (Q-AIR)
@@ -1451,8 +1370,8 @@ ATA 24 - ELECTRICAL POWER MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 25: EQUIPMENT/FURNISHINGS</b></summary>
-```
-ATA 25 - EQUIPMENT/FURNISHINGS MASTER PREDICTION PLAN
+
+```ATA 25 - EQUIPMENT/FURNISHINGS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-25-CON-001_Cabin_Interior_Concept-β.md (Q-SPACE)
@@ -1508,8 +1427,8 @@ ATA 25 - EQUIPMENT/FURNISHINGS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 26: FIRE PROTECTION</b></summary>
-```
-ATA 26 - FIRE PROTECTION MASTER PREDICTION PLAN
+
+```ATA 26 - FIRE PROTECTION MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-26-CON-001_Fire_Safety_Requirements-β.md (Q-AIR)
@@ -1565,8 +1484,8 @@ ATA 26 - FIRE PROTECTION MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 27: FLIGHT CONTROLS</b></summary>
-```
-ATA 27 - FLIGHT CONTROLS MASTER PREDICTION PLAN
+
+```ATA 27 - FLIGHT CONTROLS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-27-CON-001_Control_System_Requirements-β.md (Q-MECHANICS)
@@ -1622,8 +1541,8 @@ ATA 27 - FLIGHT CONTROLS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 28: FUEL</b></summary>
-```
-ATA 28 - FUEL MASTER PREDICTION PLAN
+
+```ATA 28 - FUEL MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-28-CON-001_Fuel_System_Requirements-β.md (Q-GREENTECH)
@@ -1679,8 +1598,8 @@ ATA 28 - FUEL MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 29: HYDRAULIC POWER</b></summary>
-```
-ATA 29 - HYDRAULIC POWER MASTER PREDICTION PLAN
+
+```ATA 29 - HYDRAULIC POWER MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-29-CON-001_Hydraulic_System_Requirements-β.md (Q-MECHANICS)
@@ -1736,8 +1655,8 @@ ATA 29 - HYDRAULIC POWER MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 30: ICE AND RAIN PROTECTION</b></summary>
-```
-ATA 30 - ICE AND RAIN PROTECTION MASTER PREDICTION PLAN
+
+```ATA 30 - ICE AND RAIN PROTECTION MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-30-CON-001_Icing_Protection_Requirements-β.md (Q-AIR)
@@ -1793,8 +1712,8 @@ ATA 30 - ICE AND RAIN PROTECTION MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 31: INDICATING/RECORDING SYSTEMS</b></summary>
-```
-ATA 31 - INDICATING/RECORDING SYSTEMS MASTER PREDICTION PLAN
+
+```ATA 31 - INDICATING/RECORDING SYSTEMS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-31-CON-001_Cockpit_Display_Philosophy-β.md (Q-AIR)
@@ -1850,8 +1769,8 @@ ATA 31 - INDICATING/RECORDING SYSTEMS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 32: LANDING GEAR</b></summary>
-```
-ATA 32 - LANDING GEAR MASTER PREDICTION PLAN
+
+```ATA 32 - LANDING GEAR MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-32-CON-001_Landing_Gear_Requirements-β.md (Q-MECHANICS)
@@ -1907,8 +1826,8 @@ ATA 32 - LANDING GEAR MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 33: LIGHTS</b></summary>
-```
-ATA 33 - LIGHTS MASTER PREDICTION PLAN
+
+```ATA 33 - LIGHTS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-33-CON-001_Lighting_System_Requirements-β.md (Q-AIR)
@@ -1964,8 +1883,8 @@ ATA 33 - LIGHTS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 34: NAVIGATION</b></summary>
-```
-ATA 34 - NAVIGATION MASTER PREDICTION PLAN
+
+```ATA 34 - NAVIGATION MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-34-CON-001_Navigation_System_Requirements-β.md (Q-SPACE)
@@ -2021,8 +1940,8 @@ ATA 34 - NAVIGATION MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 35: OXYGEN</b></summary>
-```
-ATA 35 - OXYGEN MASTER PREDICTION PLAN
+
+```ATA 35 - OXYGEN MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-35-CON-001_Oxygen_System_Requirements-β.md (Q-AIR)
@@ -2078,8 +1997,8 @@ ATA 35 - OXYGEN MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 36: PNEUMATIC</b></summary>
-```
-ATA 36 - PNEUMATIC MASTER PREDICTION PLAN
+
+```ATA 36 - PNEUMATIC MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-36-CON-001_Pneumatic_System_Requirements-β.md (Q-MECHANICS)
@@ -2135,8 +2054,8 @@ ATA 36 - PNEUMATIC MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 37: VACUUM</b></summary>
-```
-ATA 37 - VACUUM MASTER PREDICTION PLAN
+
+```ATA 37 - VACUUM MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-37-CON-001_Vacuum_System_Requirements-β.md (Q-AIR)
@@ -2192,8 +2111,8 @@ ATA 37 - VACUUM MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 38: WATER/WASTE</b></summary>
-```
-ATA 38 - WATER/WASTE MASTER PREDICTION PLAN
+
+```ATA 38 - WATER/WASTE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-38-CON-001_Water_Waste_System_Requirements-β.md (Q-AIR)
@@ -2249,8 +2168,8 @@ ATA 38 - WATER/WASTE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 39: ELECTRICAL - ELECTRONIC PANELS AND MULTIPLEXING</b></summary>
-```
-ATA 39 - ELECTRICAL/ELECTRONIC PANELS & MULTIPLEXING MASTER PREDICTION PLAN
+
+```ATA 39 - ELECTRICAL/ELECTRONIC PANELS & MULTIPLEXING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-39-CON-001_Panel_Design_Philosophy-β.md (Q-AIR)
@@ -2306,14 +2225,14 @@ ATA 39 - ELECTRICAL/ELECTRONIC PANELS & MULTIPLEXING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 40: RESERVED</b></summary>
-```
-ATA 40 - RESERVED FOR FUTURE USE
+
+```ATA 40 - RESERVED FOR FUTURE USE
 ```
 </details>
 <details>
 <summary><b>ANEXO 41: WATER BALLAST</b></summary>
-```
-ATA 41 - WATER BALLAST MASTER PREDICTION PLAN
+
+```ATA 41 - WATER BALLAST MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-41-CON-001_Water_Ballast_System_Requirements-β.md (Q-INDUSTRY)
@@ -2369,8 +2288,8 @@ ATA 41 - WATER BALLAST MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 42: INTEGRATED MODULAR AVIONICS</b></summary>
-```
-ATA 42 - INTEGRATED MODULAR AVIONICS (IMA) MASTER PREDICTION PLAN
+
+```ATA 42 - INTEGRATED MODULAR AVIONICS (IMA) MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-42-CON-001_IMA_Architecture_Philosophy-β.md (Q-HPC)
@@ -2426,8 +2345,8 @@ ATA 42 - INTEGRATED MODULAR AVIONICS (IMA) MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 44: CABIN SYSTEMS</b></summary>
-```
-ATA 44 - CABIN SYSTEMS MASTER PREDICTION PLAN
+
+```ATA 44 - CABIN SYSTEMS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-44-CON-001_Cabin_Systems_Requirements-β.md (Q-HPC)
@@ -2483,8 +2402,8 @@ ATA 44 - CABIN SYSTEMS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 45: CENTRAL MAINTENANCE SYSTEM</b></summary>
-```
-ATA 45 - CENTRAL MAINTENANCE SYSTEM (CMS) MASTER PREDICTION PLAN
+
+```ATA 45 - CENTRAL MAINTENANCE SYSTEM (CMS) MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-45-CON-001_CMS_Philosophy_and_Requirements-β.md (Q-HPC)
@@ -2540,8 +2459,8 @@ ATA 45 - CENTRAL MAINTENANCE SYSTEM (CMS) MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 46: INFORMATION SYSTEMS</b></summary>
-```
-ATA 46 - INFORMATION SYSTEMS MASTER PREDICTION PLAN
+
+```ATA 46 - INFORMATION SYSTEMS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-46-CON-001_Information_Systems_Architecture-β.md (Q-HPC)
@@ -2597,8 +2516,8 @@ ATA 46 - INFORMATION SYSTEMS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 47: NITROGEN GENERATION SYSTEM</b></summary>
-```
-ATA 47 - NITROGEN GENERATION SYSTEM (NGS) MASTER PREDICTION PLAN
+
+```ATA 47 - NITROGEN GENERATION SYSTEM (NGS) MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-47-CON-001_NGS_Requirements_(Fuel_Tank_Inerting)-β.md (Q-GROUND)
@@ -2654,8 +2573,8 @@ ATA 47 - NITROGEN GENERATION SYSTEM (NGS) MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 49: AIRBORNE AUXILIARY POWER</b></summary>
-```
-ATA 49 - AIRBORNE AUXILIARY POWER (APU) MASTER PREDICTION PLAN
+
+```ATA 49 - AIRBORNE AUXILIARY POWER (APU) MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-49-CON-001_APU_Performance_Requirements-β.md (Q-GREENTECH)
@@ -2711,8 +2630,8 @@ ATA 49 - AIRBORNE AUXILIARY POWER (APU) MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 50: CARGO & ACCESSORY COMPARTMENTS</b></summary>
-```
-ATA 50 - CARGO & ACCESSORY COMPARTMENTS MASTER PREDICTION PLAN
+
+```ATA 50 - CARGO & ACCESSORY COMPARTMENTS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-50-CON-001_Compartment_Layout_Requirements-β.md (Q-SPACE)
@@ -2768,8 +2687,8 @@ ATA 50 - CARGO & ACCESSORY COMPARTMENTS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 51: STRUCTURES - STANDARD PRACTICES</b></summary>
-```
-ATA 51 - STRUCTURES - STANDARD PRACTICES MASTER PREDICTION PLAN
+
+```ATA 51 - STRUCTURES - STANDARD PRACTICES MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-51-CON-001_Structural_Philosophy-β.md (Q-STRUCTURES)
@@ -2825,8 +2744,8 @@ ATA 51 - STRUCTURES - STANDARD PRACTICES MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 52: DOORS</b></summary>
-```
-ATA 52 - DOORS MASTER PREDICTION PLAN
+
+```ATA 52 - DOORS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-52-CON-001_Door_System_Requirements-β.md (Q-STRUCTURES)
@@ -2882,8 +2801,8 @@ ATA 52 - DOORS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 53: FUSELAGE</b></summary>
-```
-ATA 53 - FUSELAGE MASTER PREDICTION PLAN
+
+```ATA 53 - FUSELAGE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-53-CON-001_BWB_Fuselage_Concept-β.md (Q-STRUCTURES)
@@ -2939,8 +2858,8 @@ ATA 53 - FUSELAGE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 54: NACELLES/PYLONS</b></summary>
-```
-ATA 54 - NACELLES/PYLONS MASTER PREDICTION PLAN
+
+```ATA 54 - NACELLES/PYLONS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-54-CON-001_Nacelle_Aerodynamic_Concept-β.md (Q-STRUCTURES)
@@ -2996,8 +2915,8 @@ ATA 54 - NACELLES/PYLONS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 55: STABILIZERS</b></summary>
-```
-ATA 55 - STABILIZERS MASTER PREDICTION PLAN
+
+```ATA 55 - STABILIZERS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-55-CON-001_Stabilizer_Requirements_BWB-β.md (Q-STRUCTURES)
@@ -3053,8 +2972,8 @@ ATA 55 - STABILIZERS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 56: WINDOWS</b></summary>
-```
-ATA 56 - WINDOWS MASTER PREDICTION PLAN
+
+```ATA 56 - WINDOWS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-56-CON-001_Window_Requirements_BWB-β.md (Q-STRUCTURES)
@@ -3110,8 +3029,8 @@ ATA 56 - WINDOWS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 57: WINGS</b></summary>
-```
-ATA 57 - WINGS MASTER PREDICTION PLAN
+
+```ATA 57 - WINGS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-57-CON-001_BWB_Wing_Concept_and_Requirements-β.md (Q-STRUCTURES)
@@ -3167,15 +3086,15 @@ ATA 57 - WINGS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 58-59: RESERVED</b></summary>
-```
-ATA 58 - RESERVED FOR FUTURE USE
+
+```ATA 58 - RESERVED FOR FUTURE USE
 ATA 59 - RESERVED FOR FUTURE USE
 ```
 </details>
 <details>
 <summary><b>ANEXO 61: PROPELLERS/PROPULSORS</b></summary>
-```
-ATA 61 - PROPELLERS/PROPULSORS MASTER PREDICTION PLAN
+
+```ATA 61 - PROPELLERS/PROPULSORS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-61-CON-001_Distributed_Propulsor_Concept-β.md (Q-GREENTECH)
@@ -3231,8 +3150,8 @@ ATA 61 - PROPELLERS/PROPULSORS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 70: STANDARD PRACTICES - ENGINES</b></summary>
-```
-ATA 70 - STANDARD PRACTICES - ENGINES MASTER PREDICTION PLAN
+
+```ATA 70 - STANDARD PRACTICES - ENGINES MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-70-CON-001_Engine_Practices_Philosophy-β.md (Q-GREENTECH)
@@ -3288,8 +3207,8 @@ ATA 70 - STANDARD PRACTICES - ENGINES MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 71: POWER PLANT</b></summary>
-```
-ATA 71 - POWER PLANT MASTER PREDICTION PLAN
+
+```ATA 71 - POWER PLANT MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-71-CON-001_Hybrid_Propulsion_Concept-β.md (Q-GREENTECH)
@@ -3345,8 +3264,8 @@ ATA 71 - POWER PLANT MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 72: ENGINE</b></summary>
-```
-ATA 72 - ENGINE MASTER PREDICTION PLAN
+
+```ATA 72 - ENGINE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-72-CON-001_Engine_Cycle_Concept-β.md (Q-GREENTECH)
@@ -3402,8 +3321,8 @@ ATA 72 - ENGINE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 73: ENGINE FUEL AND CONTROL</b></summary>
-```
-ATA 73 - ENGINE FUEL AND CONTROL MASTER PREDICTION PLAN
+
+```ATA 73 - ENGINE FUEL AND CONTROL MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-73-CON-001_Fuel_Control_System_Requirements-β.md (Q-GREENTECH)
@@ -3459,8 +3378,8 @@ ATA 73 - ENGINE FUEL AND CONTROL MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 74: IGNITION</b></summary>
-```
-ATA 74 - IGNITION MASTER PREDICTION PLAN
+
+```ATA 74 - IGNITION MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-74-CON-001_Ignition_System_Requirements-β.md (Q-GREENTECH)
@@ -3516,8 +3435,8 @@ ATA 74 - IGNITION MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 75: ENGINE AIR</b></summary>
-```
-ATA 75 - ENGINE AIR MASTER PREDICTION PLAN
+
+```ATA 75 - ENGINE AIR MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-75-CON-001_Engine_Air_System_Requirements-β.md (Q-GREENTECH)
@@ -3573,8 +3492,8 @@ ATA 75 - ENGINE AIR MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 76: ENGINE CONTROLS</b></summary>
-```
-ATA 76 - ENGINE CONTROLS MASTER PREDICTION PLAN
+
+```ATA 76 - ENGINE CONTROLS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-76-CON-001_FADEC_System_Requirements-β.md (Q-GREENTECH)
@@ -3630,8 +3549,8 @@ ATA 76 - ENGINE CONTROLS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 77: ENGINE INDICATING</b></summary>
-```
-ATA 77 - ENGINE INDICATING MASTER PREDICTION PLAN
+
+```ATA 77 - ENGINE INDICATING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-77-CON-001_Engine_Indicating_Requirements-β.md (Q-GREENTECH)
@@ -3687,8 +3606,8 @@ ATA 77 - ENGINE INDICATING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 78: ENGINE EXHAUST</b></summary>
-```
-ATA 78 - ENGINE EXHAUST MASTER PREDICTION PLAN
+
+```ATA 78 - ENGINE EXHAUST MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-78-CON-001_Exhaust_System_Requirements-β.md (Q-GREENTECH)
@@ -3744,8 +3663,8 @@ ATA 78 - ENGINE EXHAUST MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 79: ENGINE OIL</b></summary>
-```
-ATA 79 - ENGINE OIL MASTER PREDICTION PLAN
+
+```ATA 79 - ENGINE OIL MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-79-CON-001_Oil_System_Requirements-β.md (Q-GREENTECH)
@@ -3802,8 +3721,8 @@ ATA 79 - ENGINE OIL MASTER PREDICTION PLAN
 📋 ANEXO 80-89: SISTEMAS AUXILIARES
 <details>
 <summary><b>ANEXO 80: ENGINE STARTING</b></summary>
-```
-ATA 80 - ENGINE STARTING MASTER PREDICTION PLAN
+
+```ATA 80 - ENGINE STARTING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-80-CON-001_Starting_System_Requirements-β.md (Q-GREENTECH)
@@ -3859,8 +3778,8 @@ ATA 80 - ENGINE STARTING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 90: QUANTUM NAVIGATION SUITE</b></summary>
-```
-ATA 90 - QUANTUM NAVIGATION SUITE (QNS) MASTER PREDICTION PLAN
+
+```ATA 90 - QUANTUM NAVIGATION SUITE (QNS) MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-90-CON-001_QNS_Requirements-β.md (Q-SPACE)
@@ -3916,8 +3835,8 @@ ATA 90 - QUANTUM NAVIGATION SUITE (QNS) MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 91: QUANTUM COMPUTING</b></summary>
-```
-ATA 91 - QUANTUM COMPUTING MASTER PREDICTION PLAN
+
+```ATA 91 - QUANTUM COMPUTING MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-91-CON-001_QPU_Requirements-β.md (Q-HPC)
@@ -3973,8 +3892,8 @@ ATA 91 - QUANTUM COMPUTING MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 92: QUANTUM SENSORS</b></summary>
-```
-ATA 92 - QUANTUM SENSORS MASTER PREDICTION PLAN
+
+```ATA 92 - QUANTUM SENSORS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-92-CON-001_Sensor_Network_Requirements-β.md (Q-DATAGOV)
@@ -4030,8 +3949,8 @@ ATA 92 - QUANTUM SENSORS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 93: QUANTUM COMMUNICATIONS</b></summary>
-```
-ATA 93 - QUANTUM COMMUNICATIONS MASTER PREDICTION PLAN
+
+```ATA 93 - QUANTUM COMMUNICATIONS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-93-CON-001_QComm_System_Requirements-β.md (Q-SPACE)
@@ -4087,8 +4006,8 @@ ATA 93 - QUANTUM COMMUNICATIONS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 94: DIGITAL TWIN SYSTEMS</b></summary>
-```
-ATA 94 - DIGITAL TWIN SYSTEMS MASTER PREDICTION PLAN
+
+```ATA 94 - DIGITAL TWIN SYSTEMS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-94-CON-001_Twin_Interface_Requirements-β.md (Q-HPC)
@@ -4144,8 +4063,8 @@ ATA 94 - DIGITAL TWIN SYSTEMS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 95: FLEET CONSCIOUSNESS</b></summary>
-```
-ATA 95 - FLEET CONSCIOUSNESS MASTER PREDICTION PLAN
+
+```ATA 95 - FLEET CONSCIOUSNESS MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-95-CON-001_Fleet_Consciousness_Concept-β.md (Q-SCIRES)
@@ -4201,8 +4120,8 @@ ATA 95 - FLEET CONSCIOUSNESS MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 96: DIGITAL SUSTAINABILITY</b></summary>
-```
-ATA 96 - DIGITAL SUSTAINABILITY MASTER PREDICTION PLAN
+
+```ATA 96 - DIGITAL SUSTAINABILITY MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-96-CON-001_Sustainability_Goals_and_Metrics-β.md (Q-GREENTECH)
@@ -4258,8 +4177,8 @@ ATA 96 - DIGITAL SUSTAINABILITY MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 97: EVOLUTION ENGINE</b></summary>
-```
-ATA 97 - EVOLUTION ENGINE MASTER PREDICTION PLAN
+
+```ATA 97 - EVOLUTION ENGINE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-97-CON-001_System_Evolution_Philosophy-β.md (Q-SCIRES)
@@ -4315,8 +4234,8 @@ ATA 97 - EVOLUTION ENGINE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 98: CONSCIOUSNESS CORE</b></summary>
-```
-ATA 98 - CONSCIOUSNESS CORE MASTER PREDICTION PLAN
+
+```ATA 98 - CONSCIOUSNESS CORE MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-98-CON-001_Digital_Consciousness_Framework-β.md (Q-HPC)
@@ -4372,8 +4291,8 @@ ATA 98 - CONSCIOUSNESS CORE MASTER PREDICTION PLAN
 </details>
 <details>
 <summary><b>ANEXO 99: QUANTUM SUPREMACY</b></summary>
-```
-ATA 99 - QUANTUM SUPREMACY MASTER PREDICTION PLAN
+
+```ATA 99 - QUANTUM SUPREMACY MASTER PREDICTION PLAN
 │
 ├── CONCEPT PHASE
 │ ├── ALI-99-CON-001_Quantum_Advantage_Goals-β.md (Q-SCIRES)
@@ -4558,3 +4477,4 @@ La clave de este ecosistema es la interconexión. Por ejemplo:
 *   El **ORB-MKTG-03-PRESS-RELEASES** se activa cuando el `BOB-DT-99-CRT-001_Digital_Supremacy_Evidence-α.zip` es validado, permitiendo anunciar un hito de supremacía cuántica.
 
 Esta estructura **ORB** formaliza y organiza todos los artefactos de soporte que hacen posible el desarrollo técnico, creando un sistema documental verdaderamente holístico y completo para todo el programa.
+
