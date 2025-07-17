@@ -228,7 +228,7 @@ GQAQA/
     │   │   │       ├── 📁 8_Flight_Operations/
     │   │   │       └── 📁 9_Structural_Repair/
     │   │   │
-    │   │   ├── 📁 Docs/
+    │   │   ├── 📁 LCA Engineering and Technical Data/
     │   │   │   ├── 📄 README.md
     │   │   │   │
     │   │   │   ├── 📁 1_Concept/
