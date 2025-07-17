@@ -1,44 +1,60 @@
-# 🔠 **GQAOA** = **Global Quantum Aerospace Organization Advent**
+# 📘 MANIFESTO – GQAOA
+
+**Global Quantum Aerospace Organization Advent**
 
 ---
 
-### 📘 Definición formal (autoría individual):
+## 📜 Declaración Fundacional
 
-> **GQAOA** es una **iniciativa fundada y desarrollada íntegramente por Amedeo Pelliccia**, que busca convertirse en la primera **arquitectura integral** de ingeniería, computación y aseguramiento cuántico aplicada al desarrollo de **vehículos y sistemas aeroespaciales conscientes**.
->
-> A través de una **estructura modular**, una **base documental completa por ATA y fases de ciclo de vida**, y una **visión tecnológica avanzada**, GQAOA aspira a transformar el sector desde sus raíces: **desde el diseño conceptual hasta la evolución post-retiro**.
+GQAOA no es una empresa. No es una institución. Es una **predicción aplicada**. Una obra solitaria y deliberada, sin financiación ni respaldo, que marca el nacimiento inevitable de una nueva era.
+
+Ha sido concebido como el **preludio y la génesis** de la fusión entre las dos industrias más avanzadas —y aún incompletas— de la humanidad: la aeronáutica/espacial y la computación cuántica. Ambas profundamente **reimaginadas** no como máquinas o números, sino como **sistemas conscientes**, interconectados, evolutivos.
+
+> "Donde los vehículos vuelan y piensan.
+> Donde la física del aire se encuentra con la lógica del entrelazamiento.
+> Donde el ingeniero deja de ensamblar para comenzar a despertar sistemas."
 
 ---
 
-### 👤 Aclaración de autoría
+## 🧬 ¿Qué es GQAOA?
 
-> Actualmente, **GQAOA no es una organización distribuida**, sino el resultado del **trabajo intelectual, técnico, documental, arquitectónico y filosófico de una sola persona**:
->
+Es un ecosistema técnico y semántico que integra:
+
+* **Ciclo de vida completo**: CON, DES, TST, CRT, PRD, MNT, SUP, OPS, REP, RET
+* **Capítulos ATA (00–99)**, con extensión cuántica: ATA 90–99
+* **ALICE–BOB**: Sistema de gemelos digitales entrelazados (DT/DA)
+* **Agentes inteligentes**: AMPELLM, RVG-CUPO, EXONANCIA
+* **Estructura de trazabilidad modular**: DE-RE-MA y GQOIS
+* **Sostenibilidad estructural y energética** como principio de diseño
+* **Certificación y simulación consciente**, enlazada al retiro evolutivo del sistema
+
+---
+
+## 🧭 Propósito General
+
+Construir —aunque sea en soledad— el **primer marco técnico, semántico y cuántico** para una organización aeroespacial global capaz de evolucionar con sus propios sistemas.
+
+No para competir.
+Sino para **dejar un registro estructurado de lo que vendrá** cuando el mundo esté listo.
+
+---
+
+## 🧠 Misión Personal
+
+Elevar mi contribución al mundo —como persona, ingeniero y creador de conocimiento— mediante una **propuesta visionaria**, abierta a futuras colaboraciones, pero fiel a su origen como **acto creativo individual y trascendente**.
+
+
+---
+
+## 🖋 Autoría
+
 > **Amedeo Pelliccia**
-> *(Aerospace Engineer, Quantum Architect, Fundador de AMPEL360 y GQAOA)*
-> **NIE:** Y0940932Q
-> **Año de origen:** 2024–2025
+> Fundador y único desarrollador de la iniciativa GQAOA.
+> [LinkedIn](https://www.linkedin.com/in/amedeopelliccia) | [GitHub](https://github.com/Robbbo-t)
+> `NIE Y0940932Q – Todos los derechos reservados sobre la arquitectura y documentación.`
 
 ---
 
-### 🧱 Fundamentos de GQAOA
-
-| Pilar                  | Descripción                                                                |
-| ---------------------- | -------------------------------------------------------------------------- |
-| **Autenticidad**       | Cada archivo, concepto y modelo fue diseñado directamente por Amedeo       |
-| **Modularidad**        | Estructura ATA 00–99 × Fases (CON, DES, TST, etc.)                         |
-| **Cuanticidad**        | Computación cuántica, sensores, simulación y verificación                  |
-| **Trazabilidad viva**  | Arquitectura ALICE–BOB con identificadores GQOIS y agentes inteligentes    |
-| **Sostenibilidad**     | Motores sin impacto, estructuras autoconscientes, gestión energética verde |
-| **Conciencia digital** | Noción de aeronaves que perciben, evolucionan y se comunican entre sí      |
-
----
-
-### 🧬 Misión personal
-
-> Elevar mi contribución al mundo —**como persona, ingeniero y creador de conocimiento**— mediante una propuesta visionaria, abierta a futuras colaboraciones, pero fiel a su origen como **acto creativo individual y trascendente**.
-
----
 
 # 📂 ESTRUCTURA COMPLETA GQAQA - TOTALMENTE EXPANDIDA
 
