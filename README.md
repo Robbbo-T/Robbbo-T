@@ -71,10 +71,9 @@ Elevar mi contribución al mundo —como persona, ingeniero y creador de conocim
 > `NIE Y0940932Q – Todos los derechos reservados sobre la arquitectura y documentación.`
 
 ---
----
-
 
 # ESTRUCTURA COMPLETA GQAQA - INTEGRADA CON COMUNICACIONES AVANZADAS
+
 
 ```
 GQAQA/
@@ -87,14 +86,25 @@ GQAQA/
 │   └── 📁 workflows/
 │       ├── 📄 doc_validation.yml
 │       ├── 📄 nomenclature_check.yml
-│       └── 📄 structure_integrity.yml
+│       ├── 📄 structure_integrity.yml
+│       └── 📁 dpp_workflows/          # <-- NEW BLOCK START
+│           ├── 📄 dpp_compliance_check.yml
+│           ├── 📄 passport_generation.yml
+│           ├── 📄 circular_metrics_update.yml
+│           └── 📄 regulatory_sync.yml     # <-- NEW BLOCK END
 │
 ├── 📁 scripts/
 │   ├── 📄 doc_generator.py
 │   ├── 📄 structure_validator.py
 │   ├── 📄 nomenclature_enforcer.py
 │   ├── 📄 ata_mapper.py
-│   └── 📄 phase_transition_automator.py
+│   ├── 📄 phase_transition_automator.py
+│   └── 📁 dpp_automation/             # <-- NEW BLOCK START
+│       ├── 📄 dpp_validator.py
+│       ├── 📄 passport_migrator.py
+│       ├── 📄 compliance_checker.py
+│       ├── 📄 circular_metrics_calculator.py
+│       └── 📄 eu_standard_mapper.py     # <-- NEW BLOCK END
 │
 ├── 📁 templates/
 │   ├── 📁 phase_templates/
@@ -300,7 +310,7 @@ GQAQA/
     │   │   │   │   └── 📁 ATA_99_QUANTUM_SUPREMACY/
     │   │   │   │
     │   │   │   ├── 📁 2_Design/
-    │   │   │   │   └── [... misma estructura ATA que en 1_Concept]
+    │   │   │   │   └── [... same ATA structure as in 1_Concept]
     │   │   │   │
     │   │   │   ├── 📁 3_Testing/
     │   │   │   │   ├── 📄 README.md
@@ -314,28 +324,28 @@ GQAQA/
     │   │   │   │   │       ├── 📁 automated_tests/
     │   │   │   │   │       ├── 📁 manual_tests/
     │   │   │   │   │       └── 📁 regression_tests/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 4_Certification/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 5_Production/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 6_In_Line_Maintenance/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 7_In_Service_Support/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 8_Flight_Operations/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   ├── 📁 9_Structural_Repair/
-    │   │   │   │   └── [... estructura ATA]
+    │   │   │   │   └── [... ATA structure]
     │   │   │   │
     │   │   │   └── 📁 10_Retirement/
-    │   │   │       └── [... estructura ATA]
+    │   │   │       └── [... ATA structure]
     │   │   │
     │   │   ├── 📁 Hardware_and_Airframe_Specifications/
     │   │   │   ├── 📄 README.md
@@ -453,184 +463,236 @@ GQAQA/
     │   │   │   │           ├── 📄 safety_monitor.cpp
     │   │   │   │           └── 📄 performance_analytics.py
     │   │   │   │
-    │   │   │   └── 📁 On_Board/
+    │   │   │   └── 📁 On_Board/                 # <-- START OF MAIN DPP INTEGRATION BLOCK
     │   │   │       ├── 📄 README.md
     │   │   │       ├── 📁 Blockchain_Registry/
     │   │   │       │   ├── 📄 flight_data_ledger.sol
     │   │   │       │   ├── 📄 maintenance_records.sol
     │   │   │       │   ├── 📄 blockchain_interface.py
     │   │   │       │   ├── 📄 smart_contract_manager.js
-    │   │   │       │   └── 📁 consensus/
-    │   │   │       ├── 📁 Communication/
+    │   │   │       │   ├── 📁 consensus/
+    │   │   │       │   └── 📁 DPP_Smart_Contracts/
+    │   │   │       │       ├── 📄 product_passport_registry.sol
+    │   │   │       │       ├── 📄 circular_tracking.sol
+    │   │   │       │       ├── 📄 compliance_verification.sol
+    │   │   │       │       ├── 📄 material_certification.sol
+    │   │   │       │       └── 📄 lifecycle_events.sol
+    │   │   │       │
+    │   │   │       ├── 📁 DPP/
     │   │   │       │   ├── 📄 README.md
-    │   │   │       │   ├── 📁 SATCOM_Integration/
-    │   │   │       │   │   ├── 📄 onboard_satcom_terminal.cpp
-    │   │   │       │   │   ├── 📄 antenna_steering_control.py
-    │   │   │       │   │   ├── 📄 beam_switching_logic.cpp
-    │   │   │       │   │   └── 📄 signal_processor.vhdl
-    │   │   │       │   ├── 📁 VHF_UHF_Radios/
-    │   │   │       │   │   ├── 📄 vhf_transceiver.cpp
-    │   │   │       │   │   ├── 📄 uhf_transceiver.cpp
-    │   │   │       │   │   └── 📄 radio_management.py
-    │   │   │       │   ├── 📁 ACARS_CPDLC/
-    │   │   │       │   │   ├── 📄 acars_encoder.cpp
-    │   │   │       │   │   ├── 📄 cpdlc_handler.py
-    │   │   │       │   │   └── 📄 datalink_router.js
-    │   │   │       │   ├── 📁 Internal_Network/
-    │   │   │       │   │   ├── 📄 cabin_wifi_system.py
-    │   │   │       │   │   ├── 📄 crew_network.cpp
-    │   │   │       │   │   └── 📄 passenger_services.js
-    │   │   │       │   ├── 📁 Neural_Networks/
-    │   │   │       │   │   ├── 📄 onboard_neural_mesh.py
-    │   │   │       │   │   ├── 📄 aircraft_brain_interface.cpp
-    │   │   │       │   │   ├── 📄 distributed_cognition.js
-    │   │   │       │   │   ├── 📄 neural_routing_protocol.py
-    │   │   │       │   │   └── 📄 synaptic_data_flow.cpp
-    │   │   │       │   ├── 📁 Network_Nodes/
-    │   │   │       │   │   ├── 📄 aircraft_node_manager.py
-    │   │   │       │   │   ├── 📄 mesh_topology_controller.cpp
-    │   │   │       │   │   ├── 📄 edge_computing_unit.js
-    │   │   │       │   │   ├── 📄 node_health_monitor.py
-    │   │   │       │   │   └── 📄 dynamic_node_discovery.cpp
-    │   │   │       │   ├── 📁 Hybrid_Extended_Realities/
-    │   │   │       │   │   ├── 📄 cockpit_ar_overlay.cpp
-    │   │   │       │   │   ├── 📄 passenger_xr_experience.py
-    │   │   │       │   │   ├── 📄 maintenance_mr_assistant.js
-    │   │   │       │   │   ├── 📄 virtual_presence_engine.cpp
-    │   │   │       │   │   └── 📄 holographic_displays.py
-    │   │   │       │   ├── 📁 Digital_Infrastructure/
-    │   │   │       │   │   ├── 📄 aircraft_digital_backbone.py
-    │   │   │       │   │   ├── 📄 onboard_cloud_node.cpp
-    │   │   │       │   │   ├── 📄 data_highway_manager.js
-    │   │   │       │   │   ├── 📄 infrastructure_monitor.py
-    │   │   │       │   │   └── 📄 service_mesh_controller.cpp
-    │   │   │       │   ├── 📁 Quantum_Link/
-    │   │   │       │   │   ├── 📄 quantum_comm_interface.py
-    │   │   │       │   │   ├── 📄 entanglement_transceiver.cpp
-    │   │   │       │   │   ├── 📄 qkd_protocol_handler.js
-    │   │   │       │   │   ├── 📄 quantum_channel_monitor.py
-    │   │   │       │   │   └── 📄 post_quantum_crypto.cpp
-    │   │   │       │   ├── 📁 Fast_Secure_Stable_Connections/
-    │   │   │       │   │   ├── 📄 ultra_low_latency_router.py
-    │   │   │       │   │   ├── 📄 redundancy_manager.cpp
-    │   │   │       │   │   ├── 📄 adaptive_qos_engine.js
-    │   │   │       │   │   ├── 📄 connection_optimizer.py
-    │   │   │       │   │   └── 📄 failover_controller.cpp
-    │   │   │       │   ├── 📁 InfraNet_Robotics_Telepathy/
-    │   │   │       │   │   ├── 📄 crew_bci_interface.py
-    │   │   │       │   │   ├── 📄 aircraft_mind_link.cpp
-    │   │   │       │   │   ├── 📄 telepathic_control_system.js
-    │   │   │       │   │   ├── 📄 consciousness_bridge.py
-    │   │   │       │   │   └── 📄 synthetic_intuition.cpp
-    │   │   │       │   └── 📁 Knowledge_Transfer/
-    │   │   │       │       ├── 📄 flight_knowledge_base.py
-    │   │   │       │       ├── 📄 experience_transfer.cpp
-    │   │   │       │       ├── 📄 skill_sharing_protocol.js
-    │   │   │       │       ├── 📄 collective_learning.py
-    │   │   │       │       └── 📄 wisdom_aggregator.cpp
-    │   │   │       ├── 📁 Control/
-    │   │   │       │   ├── 📄 fbw_quantum_enhanced.cpp
-    │   │   │       │   ├── 📄 autopilot_ai.py
-    │   │   │       │   ├── 📄 control_law_manager.cpp
-    │   │   │       │   ├── 📄 envelope_protection.py
-    │   │   │       │   └── 📁 control_modes/
-    │   │   │       ├── 📁 Cybersecurity/
-    │   │   │       │   ├── 📄 quantum_firewall.py
-    │   │   │       │   ├── 📄 intrusion_detection.cpp
-    │   │   │       │   ├── 📄 threat_analyzer.py
-    │   │   │       │   ├── 📄 security_orchestrator.js
-    │   │   │       │   └── 📁 encryption/
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 Core_Architecture/
+    │   │   │       │   │   ├── 📄 dpp_core_engine.py
+    │   │   │       │   │   ├── 📄 uid_generator.cpp
+    │   │   │       │   │   ├── 📄 passport_factory.js
+    │   │   │       │   │   ├── 📄 version_controller.py
+    │   │   │       │   │   └── 📄 digital_thread_manager.cpp
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 Knowledge_Graph/
+    │   │   │       │   │   ├── 📄 ontology_manager.py
+    │   │   │       │   │   ├── 📄 graphdb_interface.js
+    │   │   │       │   │   ├── 📄 semantic_mapper.cpp
+    │   │   │       │   │   ├── 📁 schemas/
+    │   │   │       │   │   │   ├── 📄 eclass_mapping.json
+    │   │   │       │   │   │   ├── 📄 iec_cdd_schema.json
+    │   │   │       │   │   │   ├── 📄 ata_dpp_linkage.json
+    │   │   │       │   │   │   └── 📄 eu_dpp_fields.json
+    │   │   │       │   │   └── 📁 ontologies/
+    │   │   │       │   │       ├── 📄 aerospace_dpp.owl
+    │   │   │       │   │       ├── 📄 circular_economy.ttl
+    │   │   │       │   │       └── 📄 compliance_rules.n3
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 Traceability/
+    │   │   │       │   │   ├── 📄 uid_registry.py
+    │   │   │       │   │   ├── 📄 qr_nfc_generator.cpp
+    │   │   │       │   │   ├── 📄 rfid_manager.js
+    │   │   │       │   │   ├── 📄 gs1_barcode_engine.py
+    │   │   │       │   │   ├── 📄 quantum_stamps.cpp
+    │   │   │       │   │   └── 📁 tracking_interfaces/
+    │   │   │       │   │       ├── 📄 material_tracker.py
+    │   │   │       │   │       ├── 📄 component_tracker.js
+    │   │   │       │   │       └── 📄 assembly_tracker.cpp
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 Compliance_Engine/
+    │   │   │       │   │   ├── 📄 eu_compliance_checker.py
+    │   │   │       │   │   ├── 📄 easa_validator.cpp
+    │   │   │       │   │   ├── 📄 icao_compliance.js
+    │   │   │       │   │   ├── 📄 espr_monitor.py
+    │   │   │       │   │   ├── 📄 crm_materials_verifier.cpp
+    │   │   │       │   │   └── 📁 regulatory_updates/
+    │   │   │       │   │       ├── 📄 auto_updater.py
+    │   │   │       │   │       ├── 📄 legal_feed_parser.js
+    │   │   │       │   │       └── 📄 compliance_alerter.cpp
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 LCA_Integration/
+    │   │   │       │   │   ├── 📄 lifecycle_calculator.py
+    │   │   │       │   │   ├── 📄 carbon_footprint_analyzer.cpp
+    │   │   │       │   │   ├── 📄 water_usage_tracker.js
+    │   │   │       │   │   ├── 📄 material_impact_scorer.py
+    │   │   │       │   │   └── 📄 circularity_index.cpp
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 APIs/
+    │   │   │       │   │   ├── 📄 dpp_rest_api.py
+    │   │   │       │   │   ├── 📄 graphql_dpp_schema.js
+    │   │   │       │   │   ├── 📄 eu_dpp_connector.cpp
+    │   │   │       │   │   ├── 📄 interoperability_layer.py
+    │   │   │       │   │   └── 📁 external_integrations/
+    │   │   │       │   │       ├── 📄 catena_x_connector.py
+    │   │   │       │   │       ├── 📄 cirpass_interface.js
+    │   │   │       │   │       ├── 📄 gs1_integration.cpp
+    │   │   │       │   │       └── 📄 circularise_bridge.py
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 Data_Export/
+    │   │   │       │   │   ├── 📄 passport_generator.py
+    │   │   │       │   │   ├── 📄 pdf_a_exporter.cpp
+    │   │   │       │   │   ├── 📄 json_ld_formatter.js
+    │   │   │       │   │   ├── 📄 qr_embedder.py
+    │   │   │       │   │   └── 📄 offline_verifier.cpp
+    │   │   │       │   │
+    │   │   │       │   ├── 📁 AI_Circular_Design/
+    │   │   │       │   │   ├── 📄 ecodesign_recommender.py
+    │   │   │       │   │   ├── 📄 material_optimizer_ml.cpp
+    │   │   │       │   │   ├── 📄 degradation_predictor.js
+    │   │   │       │   │   ├── 📄 remanufacturing_ai.py
+    │   │   │       │   │   └── 📁 models/
+    │   │   │       │   │       ├── 📄 circular_design_nn.h5
+    │   │   │       │   │       ├── 📄 material_selection.pkl
+    │   │   │       │   │       └── 📄 lifecycle_optimizer.onnx
+    │   │   │       │   │
+    │   │   │       │   └── 📁 Dashboards/
+    │   │   │       │       ├── 📄 dpp_overview.html
+    │   │   │       │       ├── 📄 circularity_metrics.vue
+    │   │   │       │       ├── 📄 compliance_status.tsx
+    │   │   │       │       ├── 📄 lifecycle_visualizer.js
+    │   │   │       │       └── 📁 components/
+    │   │   │       │           ├── 📄 passport_viewer.vue
+    │   │   │       │           ├── 📄 material_flow_chart.js
+    │   │   │       │           ├── 📄 compliance_matrix.tsx
+    │   │   │       │           └── 📄 eco_gamification.vue
+    │   │   │       │
     │   │   │       ├── 📁 Information_Data_Management/
     │   │   │       │   ├── 📄 data_lake_manager.py
     │   │   │       │   ├── 📄 real_time_processor.cpp
     │   │   │       │   ├── 📄 data_fusion_engine.py
     │   │   │       │   ├── 📄 storage_optimizer.js
-    │   │   │       │   └── 📁 databases/
-    │   │   │       ├── 📁 Load_and_Energy_Distribution/
-    │   │   │       │   ├── 📄 smart_grid_controller.py
-    │   │   │       │   ├── 📄 power_optimizer.cpp
-    │   │   │       │   ├── 📄 load_balancer.py
-    │   │   │       │   ├── 📄 energy_storage_manager.js
-    │   │   │       │   └── 📁 subsystems/
-    │   │   │       ├── 📁 ML_and_AI/
-    │   │   │       │   ├── 📄 neural_pilot_assistant.py
-    │   │   │       │   ├── 📄 anomaly_detector.py
-    │   │   │       │   ├── 📄 predictive_analytics.cpp
-    │   │   │       │   ├── 📄 decision_support_system.py
-    │   │   │       │   └── 📁 models/
-    │   │   │       ├── 📁 Monitoring/
-    │   │   │       │   ├── 📄 health_monitor_system.py
-    │   │   │       │   ├── 📄 performance_tracker.cpp
-    │   │   │       │   ├── 📄 diagnostics_engine.py
-    │   │   │       │   ├── 📄 alert_manager.js
-    │   │   │       │   └── 📁 sensors/
-    │   │   │       ├── 📁 Navigation/
-    │   │   │       │   ├── 📄 quantum_ins.cpp
-    │   │   │       │   ├── 📄 gps_denied_nav.py
-    │   │   │       │   ├── 📄 multi_sensor_fusion.cpp
-    │   │   │       │   ├── 📄 terrain_reference.py
-    │   │   │       │   └── 📁 algorithms/
-    │   │   │       ├── 📁 Passenger_Entertainment_and_Immersive_Reality/
-    │   │   │       │   ├── 📄 xr_experience_engine.cpp
-    │   │   │       │   ├── 📄 quantum_entertainment.py
-    │   │   │       │   ├── 📄 content_delivery_network.js
-    │   │   │       │   ├── 📄 personalization_engine.py
-    │   │   │       │   └── 📁 content/
-    │   │   │       ├── 📁 Protocols_and_IoT/
-    │   │   │       │   ├── 📄 aircraft_iot_hub.js
-    │   │   │       │   ├── 📄 sensor_network_manager.py
-    │   │   │       │   ├── 📄 mqtt_broker.cpp
-    │   │   │       │   ├── 📄 device_registry.json
-    │   │   │       │   └── 📁 protocols/
-    │   │   │       ├── 📁 Quantum_Computing/
-    │   │   │       │   ├── 📄 qpu_interface.py
-    │   │   │       │   ├── 📄 quantum_algorithms.qml
-    │   │   │       │   ├── 📄 error_correction.cpp
-    │   │   │       │   ├── 📄 quantum_simulator.py
-    │   │   │       │   └── 📁 circuits/
-    │   │   │       ├── 📁 Sensorialization_Consciousness/
-    │   │   │       │   ├── 📄 consciousness_core.py
-    │   │   │       │   ├── 📄 sensory_integration.cpp
-    │   │   │       │   ├── 📄 decision_engine.py
-    │   │   │       │   ├── 📄 self_awareness_module.py
-    │   │   │       │   └── 📁 archetypes/
-    │   │   │       ├── 📁 Operational_Telemetry/
-    │   │   │       │   ├── 📄 flight_data_streamer.py
-    │   │   │       │   ├── 📄 telemetry_encoder.cpp
-    │   │   │       │   ├── 📄 real_time_analytics.js
-    │   │   │       │   ├── 📄 data_compression.py
-    │   │   │       │   └── 📁 protocols/
-    │   │   │       └── 📁 Health_Analytics/
-    │   │   │           ├── 📄 fms_analytics_engine.py
-    │   │   │           ├── 📄 hums_processor.cpp
-    │   │   │           ├── 📄 predictive_health_model.py
-    │   │   │           ├── 📄 anomaly_correlator.js
-    │   │   │           └── 📁 dashboards/
+    │   │   │       │   ├── 📁 databases/
+    │   │   │       │   └── 📁 DPP_Data_Store/
+    │   │   │       │       ├── 📄 passport_database.sql
+    │   │   │       │       ├── 📄 material_registry.db
+    │   │   │       │       ├── 📄 compliance_records.json
+    │   │   │       │       └── 📄 lifecycle_events.log
+    │   │   │       └── 📁 Communication/              # <-- Adding Communication sub-folder for DPP context
+    │   │   │           ├── 📄 README.md
+    │   │   │           ├── 📁 SATCOM_Integration/
+    │   │   │           │   ├── 📄 onboard_satcom_terminal.cpp
+    │   │   │           │   ├── 📄 antenna_steering_control.py
+    │   │   │           │   ├── 📄 beam_switching_logic.cpp
+    │   │   │           │   └── 📄 signal_processor.vhdl
+    │   │   │           ├── 📁 VHF_UHF_Radios/
+    │   │   │           │   ├── 📄 vhf_transceiver.cpp
+    │   │   │           │   ├── 📄 uhf_transceiver.cpp
+    │   │   │           │   └── 📄 radio_management.py
+    │   │   │           ├── 📁 ACARS_CPDLC/
+    │   │   │           │   ├── 📄 acars_encoder.cpp
+    │   │   │           │   ├── 📄 cpdlc_handler.py
+    │   │   │           │   └── 📄 datalink_router.js
+    │   │   │           ├── 📁 Internal_Network/
+    │   │   │           │   ├── 📄 cabin_wifi_system.py
+    │   │   │           │   ├── 📄 crew_network.cpp
+    │   │   │           │   └── 📄 passenger_services.js
+    │   │   │           ├── 📁 Neural_Networks/
+    │   │   │           │   ├── 📄 onboard_neural_mesh.py
+    │   │   │           │   ├── 📄 aircraft_brain_interface.cpp
+    │   │   │           │   ├── 📄 distributed_cognition.js
+    │   │   │           │   ├── 📄 neural_routing_protocol.py
+    │   │   │           │   └── 📄 synaptic_data_flow.cpp
+    │   │   │           ├── 📁 Network_Nodes/
+    │   │   │           │   ├── 📄 aircraft_node_manager.py
+    │   │   │           │   ├── 📄 mesh_topology_controller.cpp
+    │   │   │           │   ├── 📄 edge_computing_unit.js
+    │   │   │           │   ├── 📄 node_health_monitor.py
+    │   │   │           │   └── 📄 dynamic_node_discovery.cpp
+    │   │   │           ├── 📁 Hybrid_Extended_Realities/
+    │   │   │           │   ├── 📄 cockpit_ar_overlay.cpp
+    │   │   │           │   ├── 📄 passenger_xr_experience.py
+    │   │   │           │   ├── 📄 maintenance_mr_assistant.js
+    │   │   │           │   ├── 📄 virtual_presence_engine.cpp
+    │   │   │           │   └── 📄 holographic_displays.py
+    │   │   │           ├── 📁 Digital_Infrastructure/
+    │   │   │           │   ├── 📄 aircraft_digital_backbone.py
+    │   │   │           │   ├── 📄 onboard_cloud_node.cpp
+    │   │   │           │   ├── 📄 data_highway_manager.js
+    │   │   │           │   ├── 📄 infrastructure_monitor.py
+    │   │   │           │   └── 📄 service_mesh_controller.cpp
+    │   │   │           ├── 📁 Quantum_Link/
+    │   │   │           │   ├── 📄 quantum_comm_interface.py
+    │   │   │           │   ├── 📄 entanglement_transceiver.cpp
+    │   │   │           │   ├── 📄 qkd_protocol_handler.js
+    │   │   │           │   ├── 📄 quantum_channel_monitor.py
+    │   │   │           │   └── 📄 post_quantum_crypto.cpp
+    │   │   │           ├── 📁 Fast_Secure_Stable_Connections/
+    │   │   │           │   ├── 📄 ultra_low_latency_router.py
+    │   │   │           │   ├── 📄 redundancy_manager.cpp
+    │   │   │           │   ├── 📄 adaptive_qos_engine.js
+    │   │   │           │   ├── 📄 connection_optimizer.py
+    │   │   │           │   └── 📄 failover_controller.cpp
+    │   │   │           ├── 📁 InfraNet_Robotics_Telepathy/
+    │   │   │           │   ├── 📄 crew_bci_interface.py
+    │   │   │           │   ├── 📄 aircraft_mind_link.cpp
+    │   │   │           │   ├── 📄 telepathic_control_system.js
+    │   │   │           │   ├── 📄 consciousness_bridge.py
+    │   │   │           │   └── 📄 synthetic_intuition.cpp
+    │   │   │           └── 📁 Knowledge_Transfer/
+    │   │   │               ├── 📄 flight_knowledge_base.py
+    │   │   │               ├── 📄 experience_transfer.cpp
+    │   │   │               ├── 📄 skill_sharing_protocol.js
+    │   │   │               ├── 📄 collective_learning.py
+    │   │   │               └── 📄 wisdom_aggregator.cpp
     │   │   │
-    │   │   └── 📁 Sustainability/
+    │   │   └── 📁 Sustainability/           # <-- START OF MAIN SUSTAINABILITY BLOCK
     │   │       ├── 📄 README.md
     │   │       ├── 📁 EcoMetrics/
     │   │       │   ├── 📄 carbon_footprint_calculator.py
     │   │       │   ├── 📄 energy_efficiency_monitor.js
     │   │       │   ├── 📄 waste_tracking_system.py
     │   │       │   ├── 📄 water_usage_analytics.cpp
-    │   │       │   └── 📁 dashboards/
+    │   │       │   ├── 📁 dashboards/
+    │   │       │   └── 📁 DPP_Integration/      # <-- DPP Integration within Sustainability
+    │   │       │       ├── 📄 dpp_eco_linker.py
+    │   │       │       ├── 📄 passport_metrics_sync.js
+    │   │       │       └── 📄 circular_kpi_tracker.cpp
+    │   │       │
     │   │       ├── 📁 LCA_Models/
     │   │       │   ├── 📄 lifecycle_assessment_engine.py
     │   │       │   ├── 📄 material_impact_analyzer.js
     │   │       │   ├── 📄 manufacturing_footprint.cpp
     │   │       │   ├── 📄 operational_impact_model.py
-    │   │       │   └── 📁 databases/
+    │   │       │   ├── 📁 databases/
+    │   │       │   └── 📁 DPP_LCA_Bridge/        # <-- DPP Integration within LCA Models
+    │   │       │       ├── 📄 lca_dpp_mapper.py
+    │   │       │       ├── 📄 impact_passport_generator.js
+    │   │       │       └── 📄 lifecycle_data_exporter.cpp
+    │   │       │
     │   │       ├── 📁 Carbon_Footprint_Tracking/
     │   │       │   ├── 📄 real_time_emissions_monitor.py
     │   │       │   ├── 📄 carbon_offset_calculator.js
     │   │       │   ├── 📄 blockchain_carbon_credits.sol
-    │   │       │   └── 📁 reports/
+    │   │       │   ├── 📁 reports/
+    │   │       │   └── 📁 DPP_Carbon_Registry/   # <-- DPP Integration within Carbon Tracking
+    │   │       │       ├── 📄 carbon_passport_fields.json
+    │   │       │       ├── 📄 emissions_tracker_dpp.py
+    │   │       │       └── 📄 offset_verifier.cpp
+    │   │       │
     │   │       └── 📁 Circular_Economy/
     │   │           ├── 📄 recycling_optimizer.py
     │   │           ├── 📄 material_recovery_planner.js
     │   │           ├── 📄 remanufacturing_tracker.cpp
-    │   │           └── 📄 end_of_life_strategy.md
+    │   │           ├── 📄 end_of_life_strategy.md
+    │   │           └── 📁 DPP_Circularity/        # <-- DPP Integration within Circular Economy
+    │   │               ├── 📄 circular_passport_engine.py
+    │   │               ├── 📄 material_flow_tracker.js
+    │   │               ├── 📄 second_life_simulator.cpp
+    │   │               └── 📄 recycling_passport_gen.py
     │   │
     │   └── 📁 AMPEL360-BWB-Q250/
     │       └── 📄 README.md
@@ -640,8 +702,8 @@ GQAQA/
     │
     └── 📁 Robbbo-T_Robotics_PRD/
         └── 📄 README.md
-```
 
+```
 
 # 🌳 GQAOA INTERACTIVE TREE STRUCTURE
 ## Global Quantum Aerospace Organization Advent - Navegación Visual Expandible
