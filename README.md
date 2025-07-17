@@ -17,7 +17,7 @@
 > **Amedeo Pelliccia**
 > *(Aerospace Engineer, Quantum Architect, Fundador de AMPEL360 y GQAOA)*
 > **NIE:** Y0940932Q
-> **Año de origen:** 2023–2025
+> **Año de origen:** 2024–2025
 
 ---
 
