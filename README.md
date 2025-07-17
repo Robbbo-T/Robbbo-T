@@ -71,7 +71,7 @@ Elevar mi contribución al mundo —como persona, ingeniero y creador de conocim
 > `NIE Y0940932Q – Todos los derechos reservados sobre la arquitectura y documentación.`
 
 ---
-
+```
 GQAQA/
 │
 ├── 📄 .gitignore
