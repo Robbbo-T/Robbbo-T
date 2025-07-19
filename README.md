@@ -79,6 +79,256 @@ Elevar mi contribución al mundo —como persona, ingeniero y creador de conocim
 > `NIE Y0940932Q – Todos los derechos reservados sobre la arquitectura y documentación.`
 
 ---
+# GAIA-QAO ADVENT Portfolio Strategy v2.0
+## Market-Driven Aerospace Innovation Roadmap 2025-2040
+
+<div align="center">
+<img src="https://img.shields.io/badge/Portfolio-AMPEL360_&_GAIA-0D9488?style=for-the-badge" alt="Portfolio"/>
+<img src="https://img.shields.io/badge/Market_Value-$4.2_Trillion-gold?style=for-the-badge" alt="Market Value"/>
+<img src="https://img.shields.io/badge/Programs-8_Active-success?style=for-the-badge" alt="Programs"/>
+<img src="https://img.shields.io/badge/Version-2.0_Revised-blue?style=for-the-badge" alt="Version"/>
+</div>
+
+---
+
+## Executive Summary
+
+The GAIA-QAO ADVENT portfolio represents a strategically curated selection of aerospace programs designed to capture **$4.2 trillion** in market opportunities through 2040. By leveraging quantum-enhanced technologies, AI-driven optimization, and sustainable design principles, this portfolio addresses critical gaps in both commercial aviation and emerging space markets.
+
+### Portfolio Thesis
+> "Capture market transitions through technology leapfrogging, not incremental improvement"
+
+---
+
+## 🌍 Market Landscape Analysis
+
+### Global Aerospace Market Dynamics (2025-2040)
+
+| Segment | Market Size | CAGR | Key Drivers |
+|---------|------------|------|-------------|
+| **Single-Aisle** | $2.1T | 4.8% | LCC expansion, route fragmentation, sustainability mandates |
+| **Middle Market (NMA)** | $800B | 6.2% | Point-to-point demand, 757/767 replacement wave |
+| **Widebody & Cargo** | $570B | 3.9% | E-commerce growth, freighter conversions |
+| **Space Tourism** | $180B | 28.5% | Cost reduction, safety improvements, democratization |
+| **Deep Space Operations** | $450B | 15.3% | Resource extraction, scientific missions, defense |
+| **Space Infrastructure** | $200B | 12.1% | Orbital stations, lunar bases, servicing |
+| **Total Addressable Market** | **$4.2T** | | |
+
+### Critical Market Gaps Identified
+
+1. **The Middle Market Void**: 4,000+ aircraft needed between single-aisle and widebody
+2. **Sustainable Single-Aisle**: 75% of emissions from short/medium-haul requiring radical efficiency
+3. **Accessible Space**: $250K→$50K price point unlocks **200× market expansion**
+4. **Deep Space Infrastructure**: No current integrated platform for beyond-LEO operations
+
+---
+
+## ✈️ AMPEL360 Atmospheric Programs
+
+### 🔷 AMPEL360BWB Q100
+**Market Position**: Next-Generation Single-Aisle Leader
+
+#### Economic Rationale
+- **Target Market**: 15,000 aircraft replacements by 2040
+- **Unit Economics**: 
+  - Development: $15B over 7-8 years (2025-2032)
+  - Unit Cost: $85M (competitive with A320neo)
+  - Operating Cost: **-35% vs current generation**
+- **Break-even**: 450 units (Year 6 of production)
+
+#### Strategic Advantages
+```mermaid
+graph LR
+    A[Q100 Program] --> B[25% Fuel Reduction]
+    A --> C[AI Maintenance -40% MRO]
+    A --> D[Quantum Route Optimization]
+    B --> E[$2.2M Annual Savings/Aircraft]
+    C --> E
+    D --> E
+```
+
+#### Emissions Reduction Pathway
+- **Design Efficiency**: -25% (BWB design, advanced materials)
+- **Propulsion**: -20% (Open-fan engines)
+- **Operations**: -15% (AI optimization, quantum routing)
+- **SAF Compatibility**: -15% (100% SAF capable)
+- **Total Potential**: **-75% by 2040** vs 2005 baseline
+
+---
+
+### 🔷 AMPEL360BWB Q250
+**Market Position**: Smart New Midsize Aircraft (NMA)
+
+#### Economic Rationale
+- **Target Market**: 4,000 aircraft addressing the "Middle of the Market" gap
+- **Unit Economics**:
+  - Development: $20B over 8-9 years (2026-2034)
+  - Unit Cost: $145M
+  - Trip Cost: **-30% vs widebody on 4,000nmi routes**
+- **Break-even**: 350 units (Year 5 of production)
+
+#### Revenue Opportunity Analysis
+| Route Type | Current Solution | Q250 Advantage | Annual Savings |
+|------------|-----------------|----------------|----------------|
+| Transatlantic Secondary | A330/787 (oversized) | Right-sized capacity | $3.5M/route |
+| Long Domestic | 757 (aging) + A321XLR (limited) | Range + comfort | $2.8M/route |
+| Asia-Pacific Island | Widebody (inefficient) | Optimal efficiency | $4.1M/route |
+
+---
+
+## 🚀 AMPEL360 Space Tourism Programs
+
+### 🔷 AMPEL360 PLUS
+**Market Position**: Suborbital Tourism Pioneer
+
+#### Economic Rationale
+- **Market Evolution**: 
+  - Current: 10,000 potential customers at $250K+
+  - PLUS Target: 2,000,000 potential at $50K (**200× expansion**)
+  - Future Goal: 20,000,000 at $25K
+- **Unit Economics**:
+  - Development: $2B over 4 years (2025-2029)
+  - Per Flight Cost: $180K (6 passengers = $30K/seat)
+  - Margin at $50K ticket: 40%
+- **Break-even**: 850 flights (Year 3 of operations)
+
+#### Flight Operations to Support 1M Passengers by 2040
+- Fleet Size: 25 vehicles by 2035
+- Flights/Year: 15,000 by 2038
+- Total Capacity: 90,000 passengers/year peak
+- Cumulative 2029-2040: 1,000,000+ passengers
+
+---
+
+### 🔷 AMPEL360 PLUSPLUS
+**Market Position**: Orbital Tourism & Commercial LEO Access
+
+#### Economic Rationale
+- **Dual Revenue Streams**:
+  1. Tourism: $500K/seat for 48-hour orbital experiences
+  2. Commercial: Crew rotation, private station servicing
+- **Infrastructure Development**:
+  - 2 orbital stations by 2035
+  - 4 docking-capable vehicles
+  - Lunar transfer capability by 2038
+
+---
+
+## 🌌 GAIA Deep Space Programs
+
+### Strategic Infrastructure Development
+
+#### 🔷 GAIA-MARS
+**Permanent Infrastructure by 2040**:
+- Mars Forward Operating Base (2038)
+- ISRU Fuel Production Facility (2039)
+- Emergency Shelter Network (2040)
+
+#### 🔷 GAIA-ORBITAL-X
+**Asteroid Mining Infrastructure**:
+- 3 Prospector Satellites (2034)
+- Mobile Refinery Platform (2037)
+- Return Vehicle Fleet (2039)
+
+---
+
+## 💰 Portfolio Financial Projections
+
+### Investment & Return Timeline
+
+```mermaid
+gantt
+    title GAIA-QAO ADVENT Portfolio Development Timeline
+    dateFormat  YYYY
+    section AMPEL360
+    Q100 Dev (7-8yr)    :2025, 2032
+    Q100 Production     :2031, 2040
+    Q250 Dev (8-9yr)    :2026, 2034
+    Q250 Production     :2033, 2040
+    PLUS Dev (4yr)      :2025, 2029
+    PLUS Operations     :2029, 2040
+    PLUSPLUS Dev (5yr)  :2027, 2032
+    PLUSPLUS Ops        :2032, 2040
+    section GAIA
+    MARS Development    :2025, 2035
+    SATURN Development  :2028, 2038
+    DEEP Development    :2026, 2036
+    ORBITAL-X Dev       :2027, 2034
+```
+
+### Cumulative Portfolio Returns
+
+| Year | Investment | Revenue | Cumulative ROI |
+|------|------------|---------|----------------|
+| 2030 | $35B | $8B | -77% |
+| 2035 | $65B | $95B | +46% |
+| 2040 | $85B | $340B | **+300%** |
+
+---
+
+## 🎯 Strategic Synergies
+
+### Technology Cross-Pollination
+
+#### Shared Component Ecosystem
+- **Quantum Processing Units (QPUs)**: 
+  - Aircraft: Route optimization, weather prediction
+  - Spacecraft: Trajectory planning, deep space navigation
+  - Volume production for Q100/Q250 reduces unit cost by 60%
+  
+- **AI Lifecycle Management Suite**:
+  - Aircraft: Predictive maintenance, crew scheduling
+  - Spacecraft: Autonomous operations, fault tolerance
+  - Shared codebase reduces development by $2B
+
+- **Advanced Materials**:
+  - BWB composite structures → Spacecraft pressure vessels
+  - Thermal management systems → Re-entry heat shields
+  - Combined procurement saves 25% on materials
+
+### Supply Chain Integration Example
+```
+Quantum Sensor Production:
+- Q100/Q250 Annual Need: 10,000 units
+- Space Programs Need: 500 units
+- Volume Pricing Benefit: -65% unit cost
+- Space Program Savings: $125M annually
+```
+
+---
+
+## 🚀 Conclusion: The GAIA-QAO Advantage
+
+This portfolio selection represents the optimal balance of:
+
+✅ **Near-term Revenue** (Q100/Q250: $150B by 2035)  
+✅ **Growth Markets** (Space tourism: 28.5% CAGR)  
+✅ **Strategic Positioning** (Deep space: first-mover advantages)  
+✅ **Technology Leadership** (Quantum/AI integration across all programs)  
+✅ **Sustainability Impact** (75% emission reduction pathway clearly defined)
+
+By 2040, GAIA-QAO ADVENT will have:
+- Captured **15% of single-aisle market** (2,250 aircraft)
+- Dominated **25% of NMA segment** (1,000 aircraft)  
+- Enabled **1 million space tourists** (with operational plan)
+- Established **permanent deep space infrastructure** (Mars base, asteroid mining)
+
+### The Time is Now
+With $4.2 trillion in addressable markets and first-mover advantages in quantum aerospace, this portfolio positions GAIA-QAO ADVENT as the definitive leader in next-generation aerospace.
+
+---
+
+*"Ab initio, non ad exhibitionem" - Building the future of flight from first principles*
+
+<div align="center">
+
+**GAIA-QAO ADVENT** | Quantum Aerospace Organization  
+*Where Earth Meets the Stars*
+
+### Revision History
+v2.0 - January 2025: Addressed market composition, corrected multipliers, unified currency, detailed emission pathways
+
+</div>
 
 ```
 GQAQA/
