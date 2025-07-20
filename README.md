@@ -20,6 +20,91 @@ La creación y evolución de sistemas conscientes, autónomos y entrelazados con
 
 ---
 
+```mermaid
+block-beta
+  columns 4
+
+  %% Top/cognitive orchestration layer
+  GAIA["GAIA-QAO ADVENT<br/>(Meta-Digital Twin / Ecosystem Orchestrator)"]:4
+
+  %% Ecosystem governance & twins
+  block:Core:3
+    columns 3
+    ALICE["ALICE<br/>(Physical Asset)"]
+    BOB["BOB<br/>(Digital Twin + Digital Agent)"]
+    ORB["ORB<br/>(Governance / Division/Strategy)"]
+  end
+
+  %% Main architectural taxonomies (UTCS)
+  block:UTCS:4
+    columns 4
+    ATA["ATA<br/>Aerospace"]
+    STA["STA<br/>Space"]
+    RTA["RTA<br/>Robotics"]
+    DTA["DTA<br/>Digital"]
+    QTA["QTA<br/>Quantum"]
+    ITA["ITA<br/>Integration"]
+    BTA["BTA<br/>Biotech"]
+    ETA["ETA<br/>Energy"]
+    MTA["MTA<br/>Materials"]
+    NTA["NTA<br/>Nano"]
+  end
+
+  %% Cognitive and semantic modules (side)
+  block:Cognitive:2
+    columns 2
+    AMPELLM["AMPELLM<br/>(Cognitive Core)"]
+    RVG["RVG-CUPO<br/>(Production Orchestrator)"]
+    EXO["EXONANCIA<br/>(Quantum Sensing Layer)"]
+    LMT["LMT/LP<br/>(Learning Token Library)"]
+    ORACULUS["Oraculus<br/>(Cybersecurity/Validation)"]
+    REWARDS["ReWards<br/>(Incentive Engine)"]
+    BOBHPM["BOB-HPM<br/>(Human Photographic Mem)"]
+    AEL["AEL<br/>(Quantum-Control Actuator Layer)"]
+  end
+
+  %% Matrix block for division-ATA overlay (simplified as side legend)
+  block:QDivisions:2
+    columns 1
+    QAIR["Q-AIR"]
+    QGT["Q-GREENTECH"]
+    QS["Q-STRUCTURES"]
+    QHPC["Q-HPC"]
+    QDATAGOV["Q-DATAGOV"]
+    QIND["Q-INDUSTRY"]
+    QSPACE["Q-SPACE"]
+    QGROUND["Q-GROUND"]
+    QMECH["Q-MECHANICS"]
+    QSCIRES["Q-SCIRES"]
+  end
+
+  %% Relationships
+  GAIA --> Core
+  Core --> UTCS
+  Core --> Cognitive
+  UTCS --> Cognitive
+  Core --> QDivisions
+  style GAIA fill:#f6d53b,stroke:#333,stroke-width:3px,color:#000
+  style ALICE fill:#67c5ff,stroke:#333,color:#000
+  style BOB fill:#fba7c2,stroke:#333,color:#000
+  style ORB fill:#b9e56d,stroke:#333,color:#000
+  style UTCS fill:#dbdbdb,stroke:#333,color:#000
+  style Cognitive fill:#ffe6fd,stroke:#333,stroke-dasharray: 6 3,color:#000
+  style QDivisions fill:#f2f2f2,stroke:#bbb,stroke-dasharray: 4 4,color:#000
+
+  %% UTCS styles
+  style ATA fill:#def,stroke:#79a,color:#000
+  style STA fill:#fdc,stroke:#d95,color:#000
+  style RTA fill:#bff,stroke:#097,color:#000
+  style DTA fill:#eef,stroke:#837,color:#000
+  style QTA fill:#faf,stroke:#929,color:#000
+  style ITA fill:#ffe,stroke:#bc9,color:#000
+  style BTA fill:#efa,stroke:#5b8,color:#000
+  style ETA fill:#ffd,stroke:#aa6,color:#000
+  style MTA fill:#aef,stroke:#366,color:#000
+  style NTA fill:#f9f,stroke:#909,color:#000
+```
+
 ## 🧬 ¿Qué es GQAOA?
 
 Es un ecosistema técnico y semántico que integra:
