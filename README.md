@@ -11,23 +11,20 @@ Proveer un **marco modular y extensible** para clasificar cualquier tecnología 
 
 ## 🌐 Arquitecturas Base **v1.1**
 
-| Código AAA  | Nombre completo                                        | Rango de capítulos | Enfoque primario                                             | Ejemplos / dominios                                        | Extensión cuántica                         |
-| :---------- | :----------------------------------------------------- | :----------------- | :----------------------------------------------------------- | :--------------------------------------------------------- | :----------------------------------------- |
-| **ATA**     | *Aerospace Technology Architecture*                    | 000‑099              | Sistemas aeronáuticos tradicionales, BWB, UAM, eVTOL         | Flight controls, estructuras, aviónica                     | `50+` secciones con Q‑aviónica, Q‑sensores |
-| **STA**     | *Space Technology Architecture*                        | 100‑199            | Operaciones y exploración espacial                           | Propulsión deep‑space, hábitats, ISRU                      | Todos los capítulos Q‑ready                |
-| **DTTA**    | *Defence Technology Type Architecture*                 | 200‑299            | Sistemas de defensa multisector (aire‑mar‑tierra‑ciber)      | Submarinos, MRTT, sistemas antidesastre                    | Q‑optimización logística, Q‑radar          |
-| **DTCEC**   | *Digital Twins, Cloud & Edge Computing*                | 300‑399            | TIC, AI/ML, simulación cuántica, XR                          | Digital twins, AR/MR cockpits                              | Híbridos Q‑ML, Q‑sim                       |
-| **EPTA**    | *Energy & Propulsion Technology Architecture*          | 400‑499            | Generación, almacenamiento y propulsión                      | H₂, nucleares, eléctricos, scramjet                        | Q‑baterías, Q‑combustibles                 |
-| **AMTA**    | *Advanced Material, Bio & Nanotechnology Architecture* | 500‑599            | Materiales avanzados, **biotecnología** y **nanotecnología** | CFRP‑grafeno, metamateriales, bio‑polímeros, nano‑sensores | Q‑metamateriales, Q‑biointerfaces          |
-| **OGATA**   | *On‑Ground Automation Technology Architecture*         | 600‑699            | Automatización industrial, robótica, infra                   | Fábricas 4.0, drones logísticos, A‑GVs                     | Q‑path planning                            |
-| **ACV**     | *Aerial City Viability*                                | 700‑799            | Movilidad aérea urbana & infraestructura                     | Vertipuertos, UTM, ruido, sostenibilidad                   | Q‑optimización tráfico                     |
-| **CYB**     | *Cybersecurity Architecture*                           | 800‑899            | Seguridad de la información y ciber‑resiliencia              | Zero‑Trust, criptografía post‑Q                            | Capítulos 880‑889 reservados Q‑secure      |
-| **QCSAA**   | *Quantum Computing and Sentient Agency Architecture*   | 900‑999            | Sistemas cuánticos avanzados y autonomía consciente         | Computación cuántica, IA consciente, robótica cuántica     | Todos los capítulos Q‑native              |
-
+| Código AAA  | Nombre completo                                        | Rango de capítulos | Enfoque primario                                             | Ejemplos / dominios                                        | 
+| :---------- | :----------------------------------------------------- | :----------------- | :----------------------------------------------------------- | :--------------------------------------------------------- | 
+| **ATA**     | *Aerospace Technology Architecture*                    | 000‑099              | Sistemas aeronáuticos tradicionales, BWB, UAM, eVTOL         | Flight controls, estructuras, aviónica                     |
+| **STA**     | *Space Technology Architecture*                        | 100‑199            | Operaciones y exploración espacial                           | Propulsión deep‑space, hábitats, ISRU                      |
+| **DTTA**    | *Defence Technology Type Architecture*                 | 200‑299            | Sistemas de defensa multisector (aire‑mar‑tierra‑ciber)      | Submarinos, MRTT, sistemas antidesastre                    | 
+| **DTCEC**   | *Digital Twins, Cloud & Edge Computing*                | 300‑399            | TIC, AI/ML, simulación cuántica, XR                          | Digital twins, AR/MR cockpits                              | 
+| **EPTA**    | *Energy & Propulsion Technology Architecture*          | 400‑499            | Generación, almacenamiento y propulsión                      | H₂, nucleares, eléctricos, scramjet                        |
+| **AMTA**    | *Advanced Material, Bio & Nanotechnology Architecture* | 500‑599            | Materiales avanzados, **biotecnología** y **nanotecnología** | CFRP‑grafeno, metamateriales, bio‑polímeros, nano‑sensores |
+| **OGATA**   | *On‑Ground Automation Technology Architecture*         | 600‑699            | Automatización industrial, robótica, infra                   | Fábricas 4.0, drones logísticos, A‑GVs                     | 
+| **ACV**     | *Aerial City Viability*                                | 700‑799            | Movilidad aérea urbana & infraestructura                     | Vertipuertos, UTM, ruido, sostenibilidad                   | 
+| **CYB**     | *Cybersecurity Architecture*                           | 800‑899            | Seguridad de la información y ciber‑resiliencia              | Zero‑Trust, criptografía post‑Q                            | 
+| **QCSAA**   | *Quantum Computing and Sentient Agency Architecture*   | 900‑999            | Sistemas cuánticos avanzados y autonomía consciente         | Computación cuántica, IA consciente, robótica cuántica     | 
 ---
-
-## 📚 Desglose Detallado por Arquitectura
-
+# DESGLOSE DETALLADO
 ---
 ## ✈️ ATA 000-099: Aerospace Technology Architecture
 
