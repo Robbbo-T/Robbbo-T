@@ -3980,7 +3980,7 @@ La **Energy & Propulsion Technology Architecture (EPTA)** cubre la generación, 
 
 </details>
 
-### 🧬 AMTA 500-599: Advanced Material, Bio & Nanotechnology Architecture
+## 🧬 AMTA 500-599: Advanced Material, Bio & Nanotechnology Architecture
 
 La **Advanced Material, Bio & Nanotechnology Architecture (AMTA)** se dedica a la investigación, desarrollo y aplicación de materiales de vanguardia, sistemas biológicos y estructuras a escala nanométrica. Este framework es crucial para impulsar la innovación en sectores como el aeroespacial, la medicina, la energía y la defensa, a través de la manipulación de la materia a nivel fundamental.
 
@@ -5242,23 +5242,483 @@ La **Aerial City Viability (ACV)** se dedica a las tecnologías y la infraestruc
 </details>
 
 ---
+Aquí tienes el desglose completo y detallado de la **Cybersecurity Architecture (CYB) 800-899**, con los *insights* de la evaluación aplicados directamente para reflejar su completitud, coherencia técnica, rigor regulatorio y potencial transformador.
 
 ---
 
-### 🔒 CYB 800-899: Cybersecurity Architecture
+## 🔒 CYB 800-899: Cybersecurity Architecture
 
-La **Cybersecurity Architecture (CYB)** se centra en la protección de la información, los sistemas y las redes contra amenazas digitales, asegurando la resiliencia y la privacidad en todos los dominios.
+La **Cybersecurity Architecture (CYB)** se centra en la protección de la información, los sistemas y las redes contra amenazas digitales, asegurando la resiliencia y la privacidad en todos los dominios. Este framework es esencial para proteger infraestructuras críticas, datos sensibles y operaciones en un panorama de amenazas en constante evolución, incluyendo la emergencia de capacidades ofensivas cuánticas y la integración con la industria aeroespacial.
 
-*   **800-809: Gobernanza y Gestión de Riesgos de Ciberseguridad** (Marcos de ciberseguridad, Evaluación de riesgos, Cumplimiento normativo, Políticas de seguridad).
-*   **810-819: Seguridad de Redes y Comunicaciones** (Firewalls, IDS/IPS, VPNs, Seguridad Wi-Fi, Microsegmentación).
-*   **820-829: Seguridad de Datos y Almacenamiento** (Cifrado de datos, DLP, Gestión de claves, Seguridad de bases de datos, Respaldo y recuperación).
-*   **830-839: Gestión de Identidades y Acceso (IAM)** (Autenticación multifactor, SSO, Control de acceso basado en roles, Privileged Access Management).
-*   **840-849: Seguridad de Aplicaciones y Software** (Desarrollo seguro, Pruebas de seguridad, Análisis de vulnerabilidades, Seguridad de APIs).
-*   **850-859: Ciberseguridad Operacional (SecOps)** (Monitoreo de seguridad, Detección de amenazas, Respuesta a incidentes, Forense digital).
-*   **860-869: Seguridad de Cloud y Edge Computing** (Seguridad de la infraestructura en la nube, Seguridad de contenedores, Protección de datos en el edge).
-*   **870-879: Ciberseguridad de Sistemas de Control Industrial (ICS/OT)** (Seguridad SCADA, Protección de PLCs, Seguridad de infraestructuras críticas).
-*   **880-889: Criptografía Post-Cuántica y Seguridad Cuántica (Espacio Reservado Q-Secure)** (Algoritmos resistentes a ataques cuánticos, QKD, Pruebas de conocimiento cero).
-*   **890-899: Inteligencia de Amenazas y Ciber-resiliencia** (Análisis de amenazas, Modelado de adversarios, Planificación de continuidad de negocio, Recuperación de desastres).
+<details><summary><strong>CYB 800-809: Gobernanza y Gestión de Riesgos de Ciberseguridad</strong></summary>
+
+*   **800-00-00: Marcos de Gobernanza de Ciberseguridad**
+    *   **800-10-00: Estándares y Frameworks de Ciberseguridad**
+        *   800-10-10: NIST Cybersecurity Framework (CSF) v2.0 (Marco actualizado para gestión de riesgos)
+        *   800-10-20: ISO/IEC 27001:2022 (Sistema de Gestión de Seguridad de la Información - SGSI, con nuevos controles)
+        *   800-10-30: COBIT 2019 (Control Objectives for Information and Related Technologies, para gobierno corporativo)
+        *   800-10-40: CIS Controls v8 (Center for Internet Security Controls, con implementación por grupos)
+    *   **800-20-00: Modelos de Gobernanza y Roles**
+        *   800-20-10: Estructuras Organizativas de Ciberseguridad (CISO Office, SOC) (Alineado con mejores prácticas SANS)
+        *   800-20-20: Roles y Responsabilidades de Seguridad (CISO, Security Architect, Analyst)
+        *   800-20-30: Junta de Gobernanza de Ciberseguridad
+*   **801-00-00: Gestión de Riesgos de Ciberseguridad**
+    *   **801-10-00: Metodologías de Evaluación de Riesgos**
+        *   801-10-10: Análisis de Riesgos Cuantitativo (Factor de Riesgo Anualizado - ARO, SLE)
+        *   801-10-20: Análisis de Riesgos Cualitativo (Matriz de Riesgos)
+        *   801-10-30: ISO 31000:2018 (Gestión de Riesgos) y ISO 27005 (Gestión de Riesgos de Seguridad de la Información)
+    *   **801-20-00: Estrategias de Mitigación de Riesgos**
+        *   801-20-10: Aceptar, Mitigar, Transferir, Evitar Riesgos
+        *   801-20-20: Controles de Seguridad (Técnicos, Administrativos, Físicos)
+*   **802-00-00: Cumplimiento Normativo y Auditoría de Ciberseguridad**
+    *   **802-10-00: Leyes y Regulaciones de Ciberseguridad**
+        *   802-10-10: GDPR (General Data Protection Regulation) (Impacto en la privacidad de datos)
+        *   802-10-20: HIPAA (Health Insurance Portability and Accountability Act)
+        *   802-10-30: NIS2 Directive (Network and Information Security Directive) (Para infraestructuras críticas en la UE)
+        *   802-10-40: DORA (Digital Operational Resilience Act) (Para el sector financiero, enfocado en resiliencia operacional)
+        *   802-10-50: Regulaciones de Exportación de Tecnología (ITAR/EAR, Enlace con DTTA 240-20-30 para tecnologías sensibles militares/aeroespaciales)
+    *   **802-20-00: Auditoría y Certificación de Cumplimiento**
+        *   802-20-10: Auditorías Internas y Externas de Ciberseguridad
+        *   802-20-20: Certificaciones de Cumplimiento (SOC 2, FedRAMP)
+        *   802-20-30: Gestión de No Conformidades y Acciones Correctivas
+*   **803-00-00: Políticas y Procedimientos de Seguridad**
+    *   **803-10-00: Desarrollo de Políticas de Seguridad**
+        *   803-10-10: Políticas de Uso Aceptable, Contraseñas, Acceso Remoto
+        *   803-10-20: Políticas de Clasificación y Manejo de Datos
+    *   **803-20-00: Implementación y Reforzamiento de Políticas**
+        *   803-20-10: Concienciación y Formación del Personal en Ciberseguridad
+        *   803-20-20: Auditoría de Cumplimiento de Políticas y Aplicación de Medidas Disciplinarias
+*   **804-00-00: Gestión de Riesgos de Terceros y Cadena de Suministro**
+    *   **804-10-00: Evaluación de Riesgos de Proveedores**
+        *   804-10-10: Due Diligence de Seguridad para Terceros
+        *   804-10-20: Cuestionarios de Evaluación de Seguridad (SIG, CAIQ)
+    *   **804-20-00: Resiliencia de la Cadena de Suministro (Supply Chain Resilience)**
+        *   804-20-10: Protección de la Cadena de Suministro de Software (SBOM, Enlace con DTCEC 377-xx) (Crítico post-SolarWinds)
+        *   804-20-20: Auditoría de la Cadena de Suministro Física y Lógica
+
+</details>
+
+<details><summary><strong>CYB 810-819: Seguridad de Redes y Comunicaciones</strong></summary>
+
+*   **810-00-00: Segmentación de Redes y Zero Trust**
+    *   **810-10-00: Firewalls de Próxima Generación (NGFW)**
+        *   810-10-10: Inspección Profunda de Paquetes (DPI) y Control de Aplicaciones
+        *   810-10-20: Prevención de Intrusiones (IPS) Integrada
+        *   810-10-30: Web Application Firewalls (WAF)
+    *   **810-20-00: Microsegmentación y Zero Trust Network Access (ZTNA)**
+        *   810-20-10: Aislamiento de Workloads y Aplicaciones (Principios de "never trust, always verify")
+        *   810-20-20: Autenticación Continua y Acceso de Mínimo Privilegio
+        *   810-20-30: Gateways de Acceso Confiable (Trust Brokers)
+*   **811-00-00: Detección y Prevención de Intrusiones (IDS/IPS)**
+    *   **811-10-00: Sistemas de Detección de Intrusiones (IDS)**
+        *   811-10-10: IDS Basados en Firma y en Anomalías (Network/Host-based)
+        *   811-10-20: Detección de Intrusiones con IA/ML para Patrones Complejos
+    *   **811-20-00: Sistemas de Prevención de Intrusiones (IPS)**
+        *   811-20-10: IPS en Línea (In-line IPS) y Basados en Host
+        *   811-20-20: Bloqueo Automatizado de Tráfico Malicioso
+*   **812-00-00: Redes Privadas Virtuales (VPN)**
+    *   **812-10-00: Tecnologías VPN**
+        *   812-10-10: IPsec VPN para Conexiones Sitio a Sitio
+        *   812-10-20: SSL/TLS VPN para Acceso Remoto
+        *   812-10-30: VPN de Capa 2 (L2TP) y GRE
+    *   **812-20-00: Implementación y Gestión de VPN**
+        *   812-20-10: Clientes VPN y Gateways
+        *   812-20-20: Gestión de Claves y Certificados VPN
+*   **813-00-00: Seguridad Wi-Fi y Redes Inalámbricas**
+    *   **813-10-00: Protocolos de Seguridad Wi-Fi**
+        *   813-10-10: WPA3 (Wi-Fi Protected Access 3)
+        *   813-10-20: EAP-TLS (Extensible Authentication Protocol - Transport Layer Security)
+    *   **813-20-00: Gestión de Seguridad Inalámbrica**
+        *   813-20-10: Detección de Puntos de Acceso Maliciosos (Rogue AP Detection)
+        *   813-20-20: Segmentación de Redes Inalámbricas (Red de Invitados)
+*   **814-00-00: Seguridad de la Capa de Acceso a la Red**
+    *   **814-10-00: Control de Acceso a la Red (NAC)**
+        *   814-10-10: Autenticación 802.1X para Dispositivos y Usuarios
+        *   814-10-20: Perfilado y Postura de Dispositivos (Device Profiling and Posture)
+    *   **814-20-00: Prevención de Ataques en la Capa de Enlace**
+        *   814-20-10: Protección contra Ataques ARP Spoofing y MAC Flooding
+        *   814-20-20: Seguridad de Puertos (Port Security)
+*   **815-00-00: Seguridad de Redes Definidas por Software (SDN)**
+    *   **815-10-00: Controladores SDN Seguros**
+        *   815-10-10: Hardening del Controlador SDN
+        *   815-10-20: Autenticación y Autorización en el Plano de Control
+    *   **815-20-00: Automatización de Políticas de Seguridad en SDN**
+        *   815-20-10: Políticas de Seguridad Basadas en Aplicaciones
+        *   815-20-20: Orquestación de Controles de Seguridad en Redes Virtualizadas
+
+</details>
+
+<details><summary><strong>CYB 820-829: Seguridad de Datos y Almacenamiento</strong></summary>
+
+*   **820-00-00: Cifrado de Datos**
+    *   **820-10-00: Cifrado en Reposo (Encryption at Rest)**
+        *   820-10-10: Cifrado de Discos Completos (Full Disk Encryption - FDE) (Ej. BitLocker)
+        *   820-10-20: Cifrado a Nivel de Archivo (File-Level Encryption)
+        *   820-10-30: Cifrado de Bases de Datos (Database Encryption) (Ej. TDE en SQL Server)
+    *   **820-20-00: Cifrado en Tránsito (Encryption in Transit)**
+        *   820-20-10: TLS/SSL para Comunicaciones Web y de Aplicaciones (Ej. TLS 1.3)
+        *   820-20-20: IPsec para Túneles de Red
+        *   820-20-30: SSH para Acceso Remoto Seguro
+*   **821-00-00: Prevención de Fuga de Datos (DLP)**
+    *   **821-10-00: Estrategias de DLP**
+        *   821-10-10: Detección Basada en Reglas y Expresiones Regulares
+        *   821-10-20: Detección Basada en Huellas Digitales de Datos (Fingerprinting)
+        *   821-10-30: Clasificación Automática de Datos Sensibles (Ej. Microsoft Purview)
+    *   **821-20-00: Implementación de DLP**
+        *   821-20-10: DLP para Endpoints (USB, Impresión)
+        *   821-20-20: DLP para Red (Email, Web)
+        *   821-20-30: DLP para Cloud Storage
+*   **822-00-00: Gestión de Claves Criptográficas (KMS)**
+    *   **822-10-00: Ciclo de Vida de Claves**
+        *   822-10-10: Generación de Claves (Key Generation)
+        *   822-10-20: Almacenamiento y Distribución Segura de Claves
+        *   822-10-30: Rotación y Revocación de Claves
+    *   **822-20-00: Hardware Security Modules (HSM)**
+        *   822-20-10: HSM Basados en Hardware para Protección de Claves (FIPS 140-2 Level 3 para protección maestra)
+        *   822-20-20: Servicios de Gestión de Claves Basados en la Nube (Cloud KMS) (Ej. AWS KMS, Azure Key Vault)
+*   **823-00-00: Seguridad de Bases de Datos**
+    *   **823-10-00: Controles de Seguridad de Bases de Datos**
+        *   823-10-10: Enmascaramiento y Tokenización de Datos
+        *   823-10-20: Cifrado a Nivel de Celda y Columna
+        *   823-10-30: Auditoría de Acceso a Bases de Datos (Database Activity Monitoring - DAM)
+    *   **823-20-00: Protección contra Ataques a Bases de Datos**
+        *   823-20-10: Prevención de Inyección SQL y XSS
+        *   823-20-20: Patch Management y Gestión de Vulnerabilidades
+*   **824-00-00: Respaldo y Recuperación de Datos (Backup & Recovery)**
+    *   **824-10-00: Estrategias de Respaldo**
+        *   824-10-10: Respaldo Completo, Incremental, Diferencial
+        *   824-10-20: Respaldo en la Nube y Offsite
+    *   **824-20-00: Planes de Recuperación de Desastres (DRP)**
+        *   824-20-10: Objetivos de Tiempo de Recuperación (RTO) y Punto de Recuperación (RPO)
+        *   824-20-20: Pruebas de Recuperación y Simulación de Desastres
+
+</details>
+
+<details><summary><strong>CYB 830-839: Gestión de Identidades y Acceso (IAM)</strong></summary>
+
+*   **830-00-00: Autenticación y Autorización**
+    *   **830-10-00: Métodos de Autenticación**
+        *   830-10-10: Autenticación de Contraseña Fuerte y Hashing
+        *   830-10-20: Autenticación Multifactor (MFA: TOTP, Biométricos)
+        *   830-10-30: Autenticación Sin Contraseña (Passwordless: FIDO2, WebAuthn) (Impulsado por Microsoft, Google, Apple)
+    *   **830-20-00: Modelos de Autorización**
+        *   830-20-10: Control de Acceso Basado en Roles (RBAC)
+        *   830-20-20: Control de Acceso Basado en Atributos (ABAC)
+        *   830-20-30: Control de Acceso Basado en Políticas (PBAC)
+*   **831-00-00: Inicio de Sesión Único (SSO) y Federación de Identidades**
+    *   **831-10-00: Tecnologías de SSO**
+        *   831-10-10: SAML (Security Assertion Markup Language)
+        *   831-10-20: OAuth 2.0 y OpenID Connect (Ej. OAuth 2.1)
+        *   831-10-30: Kerberos
+    *   **831-20-00: Federación de Identidades**
+        *   831-20-10: Gestión de Identidades en Entornos Multi-Organización
+        *   831-20-20: Proveedores de Identidad (IdP) y de Servicio (SP) (Ej. Active Directory Federation Services, Azure AD)
+*   **832-00-00: Gestión de Acceso Privilegiado (PAM)**
+    *   **832-10-00: Control de Cuentas Privilegiadas**
+        *   832-10-10: Bóvedas de Contraseñas (Password Vaulting)
+        *   832-10-20: Gestión de Sesiones Privilegiadas (Session Management)
+        *   832-10-30: Rotación y Control de Credenciales
+    *   **832-20-00: Auditoría de Acceso Privilegiado**
+        *   832-20-10: Monitoreo y Grabación de Sesiones Privilegiadas
+        *   832-20-20: Alertas sobre Actividad Anómala de Cuentas Privilegiadas
+*   **833-00-00: Directorios de Identidades y Gestión de Ciclo de Vida**
+    *   **833-10-00: Servicios de Directorio**
+        *   833-10-10: LDAP (Lightweight Directory Access Protocol)
+        *   833-10-20: Active Directory y Azure AD
+        *   833-10-30: Directorios Virtuales
+    *   **833-20-00: Gestión del Ciclo de Vida de Identidades**
+        *   833-20-10: Aprovisionamiento y Desaprovisionamiento de Usuarios
+        *   833-20-20: Flujos de Trabajo de Aprobación de Acceso
+        *   833-20-30: Auditoría de Cumplimiento de Políticas de Acceso
+*   **834-00-00: Biometría y Acceso Físico/Lógico**
+    *   **834-10-00: Tecnologías Biométricas**
+        *   834-10-10: Huella Dactilar y Reconocimiento Facial
+        *   834-10-20: Reconocimiento de Iris y Voz
+        *   834-10-30: Comportamiento Biométrico (Behavioral Biometrics)
+    *   **834-20-00: Integración Biometría en Control de Acceso**
+        *   834-20-10: Control de Acceso Físico (Puertas, Torniquetes)
+        *   834-20-20: Autenticación Lógica (Inicio de Sesión en Sistemas)
+        *   834-20-30: Protección de Datos Biométricos (Privacidad)
+</details>
+
+<details><summary><strong>CYB 840-849: Seguridad de Aplicaciones y Software</strong></summary>
+
+*   **840-00-00: Ciclo de Desarrollo de Software Seguro (SSDLC)**
+    *   **840-10-00: Integración de Seguridad en el SDLC**
+        *   840-10-10: Seguridad desde el Diseño (Security by Design) y Análisis de Amenazas (Ej. STRIDE, PASTA)
+        *   840-10-20: Revisión de Código Seguro y Pruebas de Seguridad en Cada Fase
+        *   840-10-30: Formación de Desarrolladores en Codificación Segura
+    *   **840-20-00: DevSecOps**
+        *   840-20-10: Integración Continua de Seguridad en Pipelines de CI/CD (Ej. GitLab, GitHub Advanced Security)
+        *   840-20-20: Automatización de Herramientas de Seguridad (SAST, DAST) (Ej. Snyk)
+        *   840-20-30: Policy as Code (Ej. Open Policy Agent para controles consistentes)
+*   **841-00-00: Pruebas de Seguridad de Aplicaciones**
+    *   **841-10-00: Análisis de Seguridad de Código Estático (SAST)**
+        *   841-10-10: Herramientas SAST para Detección de Vulnerabilidades en Código Fuente
+        *   841-10-20: Integración SAST en Entornos de Desarrollo (IDE)
+    *   **841-20-00: Análisis de Seguridad de Aplicaciones Dinámico (DAST)**
+        *   841-20-10: Herramientas DAST para Pruebas de Aplicaciones en Ejecución
+        *   841-20-20: Escaneo de Vulnerabilidades Web y API
+*   **842-00-00: Gestión de Vulnerabilidades de Aplicaciones**
+    *   **842-10-00: Identificación y Clasificación de Vulnerabilidades**
+        *   842-10-10: Escaneo de Vulnerabilidades (Vulnerability Scanning)
+        *   842-10-20: Base de Datos de Vulnerabilidades (CVE, NVD)
+        *   842-10-30: Priorización de Vulnerabilidades (CVSS Scoring)
+    *   **842-20-00: Remedio y Patch Management**
+        *   842-20-10: Aplicación de Parches de Seguridad (Patch Management)
+        *   842-20-20: Pruebas de Regresión tras Aplicación de Parches
+*   **843-00-00: Seguridad de APIs y Microservicios**
+    *   **843-10-00: Seguridad de APIs**
+        *   843-10-10: Autenticación y Autorización para APIs (OAuth 2.0, OpenID Connect)
+        *   843-10-20: API Gateways y Gestión de Tráfico de APIs (Ej. Kong, Apigee, AWS API Gateway)
+        *   843-10-30: Protección contra Ataques Específicos de APIs (OWASP API Security Top 10)
+    *   **843-20-00: Seguridad de Microservicios**
+        *   843-20-10: Service Mesh Security (mTLS, Políticas de Tráfico)
+        *   843-20-20: Seguridad de Contenedores y Orquestación (Kubernetes Security)
+*   **844-00-00: Protección de Aplicaciones Web**
+    *   **844-10-00: Web Application Firewalls (WAF)**
+        *   844-10-10: Detección y Bloqueo de Ataques Web (SQL Injection, XSS)
+        *   844-10-20: Protección contra Bots y Ataques de Credenciales
+    *   **844-20-00: Seguridad de Aplicaciones Web Lado Cliente (Client-Side)**
+        *   844-20-10: Content Security Policy (CSP)
+        *   844-20-20: JavaScript Security y Protección contra Ataques de Web Skimming
+
+</details>
+
+<details><summary><strong>CYB 850-859: Ciberseguridad Operacional (SecOps)</strong></summary>
+
+*   **850-00-00: Monitoreo de Seguridad**
+    *   **850-10-00: Sistemas SIEM (Security Information and Event Management)**
+        *   850-10-10: Recopilación y Agregación de Logs (Log Management)
+        *   850-10-20: Correlación de Eventos de Seguridad y Detección de Amenazas
+        *   850-10-30: Monitoreo de Seguridad en Tiempo Real
+    *   **850-20-00: Detección y Respuesta Extendida (XDR)**
+        *   850-20-10: Integración de Datos de Endpoint, Red, Cloud y Email (Ej. Microsoft Defender XDR, CrowdStrike Falcon)
+        *   850-20-20: Análisis de Comportamiento de Entidades y Usuarios (UEBA)
+        *   850-20-30: Detección de Amenazas con IA/ML (AI-driven Threat Detection)
+*   **851-00-00: Detección de Amenazas y Threat Hunting**
+    *   **851-10-00: Técnicas de Detección de Amenazas**
+        *   851-10-10: Detección Basada en Firmas y Reglas
+        *   851-10-20: Detección Basada en Comportamiento y Anomalías (Behavioral Analytics)
+        *   851-10-30: Uso de Indicadores de Compromiso (IOCs) y TTPs
+    *   **851-20-00: Threat Hunting**
+        *   851-20-10: Búsqueda Proactiva de Amenazas en la Red y Endpoints (Ej. Basado en MITRE ATT&CK Framework)
+        *   851-20-20: Modelado de Amenazas y Casos de Uso de Caza (Hunting Use Cases)
+*   **852-00-00: Respuesta a Incidentes (Incident Response)**
+    *   **852-10-00: Planificación y Preparación para Incidentes**
+        *   852-10-10: Plan de Respuesta a Incidentes (IR Plan) y Playbooks
+        *   852-10-20: Equipos de Respuesta a Incidentes (CSIRT, CERT)
+    *   **852-20-00: Proceso de Respuesta a Incidentes (Detección, Contención, Erradicación, Recuperación)**
+        *   852-20-10: Triage y Clasificación de Incidentes
+        *   852-20-20: Contención de Ataques y Aislamiento de Sistemas
+        *   852-20-30: Erradicación de Amenazas y Recuperación de Sistemas
+        *   852-20-40: Análisis Post-Incidente y Lecciones Aprendidas (Post-Incident Analysis)
+*   **853-00-00: Orquestación, Automatización y Respuesta de Seguridad (SOAR)**
+    *   **853-10-00: Orquestación de Seguridad**
+        *   853-10-10: Integración de Herramientas de Seguridad (SIEM, EDR, Firewall)
+        *   853-10-20: Automatización de Workflows de Seguridad (Playbooks, Runbooks)
+    *   **853-20-00: Respuesta Automatizada de Seguridad**
+        *   853-20-10: Respuesta Automática a Amenazas (Bloqueo de IPs, Aislamiento de Endpoints)
+        *   853-20-20: Procesos de Triage Automatizados
+*   **854-00-00: Forense Digital (Digital Forensics)**
+    *   **854-10-00: Adquisición y Análisis Forense**
+        *   854-10-10: Adquisición de Evidencia Digital (Disk Imaging, Memory Capture)
+        *   854-10-20: Análisis de Malware y Reverse Engineering
+        *   854-10-30: Análisis de Tráfico de Red y Logs
+    *   **854-20-00: Forense de Red y Móvil**
+        *   854-20-10: Análisis Forense de Red (Network Forensics)
+        *   854-20-20: Forense de Dispositivos Móviles
+*   **855-00-00: Gestión de Eventos y Logs (Log Management)**
+    *   **855-10-00: Recopilación y Normalización de Logs**
+        *   855-10-10: Fuentes de Logs (Sistemas Operativos, Aplicaciones, Dispositivos de Red)
+        *   855-10-20: Normalización y Enriquecimiento de Datos de Log
+    *   **855-20-00: Almacenamiento y Retención de Logs**
+        *   855-20-10: Almacenamiento Seguro y a Largo Plazo de Logs
+        *   855-20-20: Políticas de Retención de Logs para Cumplimiento Normativo
+</details>
+
+<details><summary><strong>CYB 860-869: Seguridad de Cloud y Edge Computing</strong></summary>
+
+*   **860-00-00: Seguridad de la Infraestructura en la Nube (Cloud Infrastructure Security)**
+    *   **860-10-00: Gestión de Postura de Seguridad en la Nube (CSPM)**
+        *   860-10-10: Evaluación Continua de la Configuración de la Nube (Ej. Conformity de AWS, Security Center de Azure)
+        *   860-10-20: Detección y Remediación de Desconfiguraciones
+    *   **860-20-00: Protección de Infraestructura como Servicio (IaaS)**
+        *   860-20-10: Seguridad de Máquinas Virtuales (VM) y Servidores
+        *   860-20-20: Seguridad de Redes Virtuales y Segmentación
+*   **861-00-00: Seguridad de Contenedores y Serverless**
+    *   **861-10-00: Seguridad de Contenedores (Container Security)**
+        *   861-10-10: Escaneo de Vulnerabilidades en Imágenes de Contenedores
+        *   861-10-20: Seguridad en Tiempo de Ejecución de Contenedores (Runtime Security)
+        *   861-10-30: Seguridad de Orquestadores de Contenedores (Kubernetes Security)
+    *   **861-20-00: Seguridad de Serverless (Serverless Security)**
+        *   861-20-10: Seguridad de Funciones como Servicio (FaaS)
+        *   861-20-20: Gestión de Permisos de Mínimo Privilegio para Funciones
+*   **862-00-00: Protección de Datos en la Nube**
+    *   **862-10-00: Cifrado y Clasificación de Datos en la Nube**
+        *   862-10-10: Cifrado de Datos en Reposo y en Tránsito en Servicios Cloud
+        *   862-10-20: Clasificación de Datos Sensibles en la Nube
+    *   **862-20-00: Prevención de Fuga de Datos (DLP) en la Nube**
+        *   862-20-10: Detección de Datos Sensibles en Plataformas Cloud
+        *   862-20-20: Control de Acceso y Colaboración en la Nube
+*   **863-00-00: Seguridad de la Aplicación en la Nube (Cloud Application Security)**
+    *   **863-10-00: Seguridad de Aplicaciones SaaS (Software as a Service)**
+        *   863-10-10: Evaluación de Seguridad de Aplicaciones SaaS de Terceros
+        *   863-10-20: Gestión de Identidades y Acceso (IAM) para SaaS
+    *   **863-20-00: Seguridad de Plataformas como Servicio (PaaS)**
+        *   863-20-10: Configuración Segura de Entornos PaaS
+        *   863-20-20: Gestión de Vulnerabilidades en Componentes PaaS
+*   **864-00-00: Seguridad en el Borde (Edge Computing Security)**
+    *   **864-10-00: Protección de Dispositivos Edge**
+        *   864-10-10: Hardening de Hardware y Firmware en Dispositivos Edge
+        *   864-10-20: Gestión Remota de Parches y Actualizaciones (OTA)
+    *   **864-20-00: Seguridad de Datos y Procesamiento en el Edge**
+        *   864-20-10: Cifrado de Datos en Reposo y en Tránsito en el Edge
+        *   864-20-20: Aislamiento de Workloads y Procesos en Dispositivos Edge (Enlace con DTCEC 313-xx)
+
+</details>
+
+<details><summary><strong>CYB 870-879: Ciberseguridad de Sistemas de Control Industrial (ICS/OT)</strong></summary>
+
+*   **870-00-00: Fundamentos de Ciberseguridad ICS/OT**
+    *   **870-10-00: Diferencias entre TI y OT Security**
+        *   870-10-10: Enfoque en Disponibilidad y Seguridad de Vida (Safety) en OT
+        *   870-10-20: Desafíos de Parcheo en Sistemas Críticos (Legacy Systems)
+    *   **870-20-00: Modelos de Referencia para OT Security**
+        *   870-20-10: Modelo Purdue Enterprise Reference Architecture (Niveles de Red)
+        *   870-20-20: ISA/IEC 62443 (Normas de Ciberseguridad para Sistemas de Control) (Estándar global para OT Security)
+*   **871-00-00: Protección de Sistemas SCADA y DCS**
+    *   **871-10-00: Seguridad de Protocolos de Comunicación Industrial**
+        *   871-10-10: Protección de Modbus, DNP3, OPC UA
+        *   871-10-20: Implementación de Protocolos Seguros y Cifrado
+    *   **871-20-00: Hardening de Componentes SCADA/DCS**
+        *   871-20-10: Protección de RTUs (Remote Terminal Units) y PLCs (Programmable Logic Controllers)
+        *   871-20-20: Seguridad de Estaciones de Operador y Servidores de Historiales
+*   **872-00-00: Segmentación de Redes OT y Zonas de Confianza**
+    *   **872-10-00: Segmentación de Redes Perimetrales y Internas**
+        *   872-10-10: Demilitarized Zones (DMZ) entre Redes IT y OT
+        *   872-10-20: Microsegmentación dentro de la Red OT
+    *   **872-20-00: Gestión de Zonas de Confianza**
+        *   872-20-10: Aplicación de Políticas de Acceso Estrictas entre Zonas
+        *   872-20-20: Monitoreo de Tráfico entre Zonas para Detectar Anomalías
+*   **873-00-00: Detección de Amenazas y Monitoreo en OT**
+    *   **873-10-00: Sistemas de Detección de Intrusiones para OT (OT-IDS)**
+        *   873-10-10: Monitoreo Pasivo de Tráfico de Red OT (Non-Intrusive)
+        *   873-10-20: Detección de Ataques Específicos de Protocolos Industriales
+    *   **873-20-00: Análisis de Vulnerabilidades y Gestión de Parches en OT**
+        *   873-20-10: Evaluación de Vulnerabilidades en Sistemas ICS (con Precaución)
+        *   873-20-20: Estrategias de Parcheo para Sistemas OT (Ventanas de Mantenimiento Limitadas)
+*   **874-00-00: Gestión de Incidentes y Respuesta en OT**
+    *   **874-10-00: Planes de Respuesta a Incidentes OT**
+        *   874-10-10: Procedimientos para Contención y Erradicación de Ataques en OT
+        *   874-10-20: Recuperación de Sistemas Críticos y Restauración de Operaciones
+    *   **874-20-00: Ejercicios y Simulacros de Ciberseguridad OT**
+        *   874-20-10: Simulacros de Ataques a Infraestructuras Críticas (Ej. "Tabletop Exercises")
+        *   874-20-20: Formación de Equipos de Respuesta en Entornos de Simulación
+*   **875-00-00: Protección de Infraestructuras Críticas (Nacionales/Militares)**
+    *   **875-10-00: Ciberseguridad para Redes Eléctricas y de Agua**
+        *   875-10-10: Protección de Subestaciones, Centrales de Generación y Plantas de Tratamiento
+        *   875-10-20: Resiliencia Cibernética de Microgrids (Enlace con EPTA 431-xx)
+    *   **875-20-00: Seguridad de Transporte y Logística**
+        *   875-20-10: Ciberseguridad de Sistemas de Control de Tráfico Ferroviario y Aéreo (Enlace con ACV 724-xx)
+        *   875-20-20: Protección de Puertos y Sistemas de Gestión de la Cadena de Suministro (Enlace con DTTA 240-xx)
+
+</details>
+
+<details><summary><strong>CYB 880-889: Criptografía Post-Cuántica y Seguridad Cuántica (Espacio Reservado Q-Secure)</strong></summary>
+
+*   **880-00-00: Algoritmos de Criptografía Post-Cuántica (PQC)**
+    *   **880-10-00: Algoritmos PQC de Establecimiento de Claves (KEM) (TRL 6-7)**
+        *   880-10-10: CRYSTALS-Kyber (Estándar NIST, basado en retículas)
+        *   880-10-20: NTRU-HRSS (Basado en retículas, candidato)
+    *   **880-20-00: Algoritmos PQC de Firmas Digitales (TRL 6-7)**
+        *   880-20-10: CRYSTALS-Dilithium (Estándar NIST, basado en retículas)
+        *   880-20-20: SPHINCS+ (Estándar NIST, basado en hash)
+        *   880-20-30: Falcon (Basado en retículas, candidato)
+*   **881-00-00: Distribución de Claves Cuánticas (QKD)**
+    *   **881-10-00: Implementaciones QKD Terrestres (TRL 7)**
+        *   881-10-10: QKD por Fibra Óptica (Redes Metropolitanas) (Ej. Redes comerciales en Suiza, China)
+        *   881-10-20: QKD por Espacio Libre (Free-Space)
+    *   **881-20-00: Implementaciones QKD Satelitales (TRL 5-6) (Enlace con STA 154-xx)**
+        *   881-20-10: Satélites QKD de Órbita Baja (LEO) (Ej. Misión Micius de China)
+        *   881-20-20: Redes Globales de QKD Híbridas (Fibra + Satélite)
+*   **882-00-00: Marcos de Seguridad Cuánticamente Segura (Quantum-Safe Frameworks)**
+    *   **882-10-00: Estrategias de Migración a Quantum-Safe**
+        *   882-10-10: Enfoque Híbrido (Clásico + PQC) para Transición (Alineado con EO 14028 de EE. UU. y plan UE 2030)
+        *   882-10-20: Planificación de Despliegue y Gestión de Inventario Criptográfico (Guía NIST SP 800-208)
+    *   **882-20-00: Auditoría y Certificación de Sistemas Quantum-Safe**
+        *   882-20-10: Evaluación de Riesgos de Vulnerabilidad Cuántica
+        *   882-20-20: Certificación de Conformidad con Estándares PQC (Enlace con QCSAA 931-xx)
+*   **883-00-00: Pruebas de Conocimiento Cero (Zero-Knowledge Proofs - ZKP)**
+    *   **883-10-00: Algoritmos de ZKP**
+        *   883-10-10: ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)
+        *   883-10-20: ZK-STARKs (Scalable Transparent Arguments of Knowledge)
+    *   **883-20-00: Aplicaciones de ZKP para Privacidad y Verificación**
+        *   883-20-10: Autenticación Preservando la Privacidad
+        *   883-20-20: Verificación de Datos sin Revelar Información Subyacente (Blockchain, Enlace con DTCEC 368-xx)
+*   **884-00-00: Quantum Random Number Generation (QRNG)**
+    *   **884-10-00: Tecnologías QRNG (TRL 7-8)**
+        *   884-10-10: Generación de Números Aleatorios Basada en Propiedades Cuánticas (ej. Ruido de Vacío, Fotones)
+        *   884-10-20: Dispositivos Hardware para QRNG (Ej. ID Quantique, QuintessenceLabs)
+    *   **884-20-00: Aplicaciones de QRNG**
+        *   884-20-10: Generación de Claves Criptográficas de Alta Calidad
+        *   884-20-20: Simulaciones Monte Carlo Cuánticamente Aleatorias
+*   **885-00-00: Conciencia Situacional Cuántica (Q-SA)**
+    *   **885-10-00: Detección de Amenazas Cuánticas**
+        *   885-10-10: Monitoreo de Actividad de Computación Cuántica Maliciosa
+        *   885-10-20: Detección de Ataques a Sistemas QKD (Ataques de Interceptación y Resend)
+    *   **885-20-00: Análisis de Riesgos Cuánticos**
+        *   885-20-10: Modelado de Impacto de Algoritmos Cuánticos en la Seguridad Actual
+        *   885-20-20: Simulación de Ataques Cuánticos a Infraestructuras (Enlace con DTTA 284-xx)
+
+</details>
+
+<details><summary><strong>CYB 890-899: Inteligencia de Amenazas y Ciber-resiliencia</strong></summary>
+
+*   **890-00-00: Inteligencia de Amenazas (Threat Intelligence - TI)**
+    *   **890-10-00: Recopilación de Inteligencia de Amenazas**
+        *   890-10-10: Fuentes de TI (OSINT, Comerciales, Gubernamentales)
+        *   890-10-20: Feeds de Amenazas (IPs Maliciosas, Dominios, Hashes)
+    *   **890-20-00: Análisis y Consumo de Inteligencia de Amenazas**
+        *   890-20-10: Procesamiento de TI (IOCs, TTPs)
+        *   890-20-20: Integración de TI en SIEM y SOAR (AI-enhanced)
+*   **891-00-00: Modelado de Adversarios y Red Teaming**
+    *   **891-10-00: Modelado de Adversarios**
+        *   891-10-10: Perfilado de Grupos de Amenazas (APT Groups)
+        *   891-10-20: Tácticas, Técnicas y Procedimientos (TTPs) de Adversarios (MITRE ATT&CK Framework)
+    *   **891-20-00: Red Teaming y Ejercicios de Guerra Cibernética**
+        *   891-20-10: Simulación de Ataques Realistas para Probar Defensas
+        *   891-20-20: Purple Teaming (Colaboración Red Team y Blue Team)
+*   **892-00-00: Ciber-resiliencia**
+    *   **892-10-00: Principios de Ciber-resiliencia**
+        *   892-10-10: Anticipación y Resistencia a Ataques Cibernéticos
+        *   892-10-20: Recuperación Rápida y Adaptación
+    *   **892-20-00: Arquitecturas Resilientes**
+        *   892-20-10: Arquitecturas Orientadas a Servicios y Basadas en Microservicios
+        *   892-20-20: Infraestructura como Código (IoC) y Configuración Inmutable
+*   **893-00-00: Planificación de Continuidad de Negocio (BCP)**
+    *   **893-10-00: Desarrollo de BCP**
+        *   893-10-10: Análisis de Impacto en el Negocio (BIA)
+        *   893-10-20: Identificación de Procesos Críticos y Dependencias
+    *   **893-20-00: Implementación y Pruebas de BCP**
+        *   893-20-10: Planes de Comunicación de Crisis
+        *   893-20-20: Simulacros y Ejercicios de BCP (Tabletop Exercises)
+*   **894-00-00: Recuperación de Desastres (DR)**
+    *   **894-10-00: Estrategias de DR**
+        *   894-10-10: Sitios de Recuperación (Hot, Warm, Cold Sites)
+        *   894-10-20: Replicación de Datos y Sistemas
+    *   **894-20-00: Herramientas y Automatización de DR**
+        *   894-20-10: Software de Orquestación de Recuperación
+        *   894-20-20: Recuperación Automatizada en la Nube
+*   **895-00-00: Evaluación de la Postura de Ciberseguridad**
+    *   **895-10-00: Auditorías de Postura de Seguridad**
+        *   895-10-10: Análisis de Brechas (Gap Analysis) vs. Estándares y Frameworks
+        *   895-10-20: Evaluación de la Madurez de la Ciberseguridad (CMMI, C2M2)
+    *   **895-20-00: Benchmarking de Ciberseguridad**
+        *   895-20-10: Comparación con Mejores Prácticas de la Industria
+        *   895-20-20: Uso de Métricas y KPIs de Seguridad para Seguimiento del Rendimiento
+
+</details>
 
 ---
 
