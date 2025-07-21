@@ -68,7 +68,9 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
 
 ---
 
-## ✈️ ATA 00-99 *Aerospace Technology Architecture*  
+### ✈️ ATA 00-99: Aerospace Technology Architecture
+
+La clasificación ATA (Air Transport Association) constituye la **columna vertebral** de la documentación aeronáutica. Aporta un marco modular para todos los sistemas, subsistemas y componentes, y continúa siendo extensible hacia arquitecturas disruptivas como **BWB, UAM, eVTOL** y los futuros dominios **Q‑aviónica/Q‑sensores**.
 
 <details><summary><strong>ATA 00‑09: Información General y Servicio</strong></summary>
 
@@ -480,7 +482,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
         *   50-20-10: Sensores de Deformación y Fatiga (Integrados)
         *   50-20-20: Análisis Acústico de Daños
         *   50-20-30: Algoritmos de Detección de Daños por IA
-        *   50-20-40: Gemelos Digitales Estructurales (Enlace con DCEC 340-xx)
+        *   50-20-40: Gemelos Digitales Estructurales (Enlace con DTCEC 340-xx)
         *   50-20-50: Sistemas de Inspección Autónoma (Drones, Robots)
 *   **51-00-00: Standard Practices - Structures**
     *   **51-10-00: Especificaciones de Materiales Estructurales**
@@ -555,11 +557,11 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
         *   50-50-10: Integración de Materiales Auto-Curativos
         *   50-50-20: Aplicación de Nano-recubrimientos Aero-eficientes
         *   50-50-30: Sensores Biométricos Integrados en Cabina (enlace con AMTA 560-xx)
-    *   **50-51-00: Interfaz con DCEC (Digital Cloud & Edge Computing)**
+    *   **50-51-00: Interfaz con DTCEC (Digital Twins, Cloud & Edge Computing)**
         *   50-51-10: Streaming de Datos de Gemelos Digitales Estructurales
         *   50-51-20: Simulación en Tiempo Real de Degradación de Componentes
-        *   50-51-30: Soporte para Realidad Aumentada en Inspección (enlace con DCEC 350-xx)
-        *   50-51-40: Servicios de Modelado Edge-AI para Mantenimiento Predictivo (Enlace con DCEC 330-xx)
+        *   50-51-30: Soporte para Realidad Aumentada en Inspección (enlace con DTCEC 350-xx)
+        *   50-51-40: Servicios de Modelado Edge-AI para Mantenimiento Predictivo (Enlace con DTCEC 330-xx)
     *   **50-52-00: Interfaz con CYB (Ciberseguridad)**
         *   50-52-10: Cifrado de Datos de Sensores Estructurales
         *   50-52-20: Aseguramiento de la Cadena de Suministro de Componentes (Blockchain)
@@ -635,7 +637,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
         *   69-10-20: Generador Eléctrico y Compresor de Aire Neumático del APU
     *   **69-20-00: Sistemas de Control y Mantenimiento del APU**
         *   69-20-10: FADEC del APU
-        *   69-20-20: Mantenimiento Predictivo Específico del APU (Enlace con ATA 45)
+        *   69-20-20: Mantenimiento Predictivo Específico del APU (Enlace con ATA 45-xx)
 *   **70-00-00: Estándares y Prácticas para Motores (Eco-Tech)**
     *   **70-10-00: Combustibles Sostenibles (SAF) y Bio-Combustibles**
         *   70-10-10: Producción y Certificación de SAF (Rutas, Trazabilidad Blockchain)
@@ -658,10 +660,10 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
         *   72-20-10: Magnetos y Bujías
         *   72-20-20: Inyección de Combustible
 *   **73-00-00: Motor - Fuel and Control (Control de Combustible)**
-    *   **73-10-00: Smart Fuel Control con AI**
+    *   **73-10-00: Smart Fuel Control con IA**
         *   73-10-10: Unidades de Control de Combustible (FCU)
         *   73-10-20: Sensores de Flujo y Presión de Combustible
-        *   73-10-30: Algoritmos AI para Optimización de Consumo (Eco-Tech)
+        *   73-10-30: Algoritmos IA para Optimización de Consumo (Eco-Tech)
         *   73-10-40: Detección Predictiva de Anomalías en el Sistema de Combustible
 *   **74-00-00: Ignition System**
     *   **74-10-00: Sistemas de Encendido del Motor**
@@ -725,7 +727,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
     *   **82-10-00: Celdas de Combustible de Hidrógeno (PEMFC, SOFC)**
         *   82-10-10: Diseño Ligero y Compacto
         *   82-10-20: Gestión Térmica y de Agua
-    *   **82-20-00: Integración de Sistemas de Celdas de Combustible**
+    *   **82-20-00: Integración de Sistemas de Celda de Combustible**
         *   82-20-10: Almacenamiento de Hidrógeno a Bordo
         *   82-20-20: Gestión de la Potencia de Salida
 *   **83-00-00: Propulsión Distribuida y Sistemas de Levantamiento**
@@ -856,6 +858,8 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
         *   99-20-10: Constitución Digital
         *   99-20-20: Motor de Evolución
 </details>
+
+---
 
 
 ---
