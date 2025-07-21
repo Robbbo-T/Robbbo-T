@@ -9,18 +9,6 @@ Proveer un **marco modular y extensible** para clasificar cualquier tecnología 
 
 ---
 
-## 🧩 Rasgos Clave
-
-| # | Característica                              | Valor Añadido                                                                                                                                  |
-|---|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | **Estructura Jerárquica** `AAA 00-99-SS-UU` | 10 arquitecturas (AAA) × 100 capítulos × 100 secciones × 100 unidades ≈ 10 M identificadores singulares                                          |
-| 2 | **Extensión Cuántica Estándar**             | Reservas `80-XX` y `90-XX` permiten insertar módulos cuánticos en cualquier arquitectura (excepto CYB, que mantiene espacio reservado 880-889) |
-| 3 | **Conectividad Inter-Arquitectura**         | Capítulos `50-59` en cada AAA definen interfaces con las demás arquitecturas, posibilitando sistemas *plug-&‑play*                             |
-| 4 | **Innovación Sostenible & IA**              | Capítulos `60-69` dedicados a AI/ML nativos y `70-79` a Eco-Tech, alineados con objetivos Net-Zero 2050                                        |
-| 5 | **Cobertura Bio-Nano**                      | La arquitectura **AMTA** ahora abarca materiales avanzados **+** biotecnología **+** nanotecnología                                           |
-
----
-
 ## 🌐 Arquitecturas Base **v1.1**
 
 | Código AAA  | Nombre completo                                        | Rango de capítulos | Enfoque primario                                             | Ejemplos / dominios                                        | Extensión cuántica                         |
@@ -35,32 +23,6 @@ Proveer un **marco modular y extensible** para clasificar cualquier tecnología 
 | **ACV**     | *Aerial City Viability*                                | 700‑799            | Movilidad aérea urbana & infraestructura                     | Vertipuertos, UTM, ruido, sostenibilidad                   | Q‑optimización tráfico                     |
 | **CYB**     | *Cybersecurity Architecture*                           | 800‑899            | Seguridad de la información y ciber‑resiliencia              | Zero‑Trust, criptografía post‑Q                            | Capítulos 880‑889 reservados Q‑secure      |
 | **QCSAA**   | *Quantum Computing and Sentient Agency Architecture*   | 900‑999            | Sistemas cuánticos avanzados y autonomía consciente         | Computación cuántica, IA consciente, robótica cuántica     | Todos los capítulos Q‑native              |
----
-
-## 🔗 Conectividad Inter-Arquitectura (Capítulos 50-59)
-
-Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir interfaces y puntos de enlace con las demás arquitecturas. Esto permite la creación de sistemas híbridos y *plug-and-play*. Ejemplos:
-
-*   **AMTA 52-xx** (nanorecubrimientos auto-curativos) se enlaza con **ATA 50-xx** para aplicación aerodinámica en alas BWB.
-*   **DCEC 50-xx** (gemelos digitales) se integra para rastrear la degradación de materiales de AMTA en tiempo real.
-
----
-
-##  Casos de Uso Rápidos
-
-1.  **Panel Compuesto Bio-Nano Auto-Reparable para AMPEL360**
-    `AMTA-30-15-04` → ARQ AMTA · Cap 30 (*Estructuras Compuestas*) · Sec 15 (*Bio-Polímero Auto-Curativo*) · Unidad 04 (*Nano-Sensor de Hidrólisis*).
-2.  **Red de Sensores Cuánticos de Peso en Alas**
-    `AMTA-90-20-01` + `ATA-34-10-12`
-    El primer código designa el sensor nano-cuántico; el segundo la interfaz Pitot-estática modificada.
-
----
-
-## 🛠️ Siguientes Pasos Propuestos
-
-1.  **Plantilla Excel/CSV** con los 900 capítulos actualizados, incluyendo bio-nano extensiones en AMTA.
-2.  **Script de Validación** para verificar unicidad y concordancia entre arquitecturas enlazadas.
-3.  **Diagrama Mermaid** que muestre flujos entre AMTA ↔ ATA ↔ DCEC.
 
 ---
 
