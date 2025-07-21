@@ -5,8 +5,7 @@
 
 Proveer un **marco modular y extensible** para clasificar cualquier tecnología —desde un dron industrial hasta un ecosistema cuántico en la nube— garantizando **trazabilidad 360°** a lo largo de todo el ciclo de vida (concepto → mantenimiento) y, en particular, soportar las integraciones multidominio que exigen programas como **AMPEL360 BWB‑Q100**.
 
-> **Revisión v1.1 — 20 jul 2025**
-> Se amplía la arquitectura **AMTA** para integrar **biotecnología** y **nanotecnología** dentro del mismo marco de materiales avanzados.
+> **Revisión v1.1 — jul 2025**
 
 ---
 
@@ -14,7 +13,7 @@ Proveer un **marco modular y extensible** para clasificar cualquier tecnología 
 
 | # | Característica                              | Valor Añadido                                                                                                                                  |
 |---|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | **Estructura Jerárquica** `AAA 00-99-SS-UU` | 9 arquitecturas (AAA) × 100 capítulos × 100 secciones × 100 unidades ≈ 9 M identificadores singulares                                          |
+| 1 | **Estructura Jerárquica** `AAA 00-99-SS-UU` | 10 arquitecturas (AAA) × 100 capítulos × 100 secciones × 100 unidades ≈ 10 M identificadores singulares                                          |
 | 2 | **Extensión Cuántica Estándar**             | Reservas `80-XX` y `90-XX` permiten insertar módulos cuánticos en cualquier arquitectura (excepto CYB, que mantiene espacio reservado 880-889) |
 | 3 | **Conectividad Inter-Arquitectura**         | Capítulos `50-59` en cada AAA definen interfaces con las demás arquitecturas, posibilitando sistemas *plug-&‑play*                             |
 | 4 | **Innovación Sostenible & IA**              | Capítulos `60-69` dedicados a AI/ML nativos y `70-79` a Eco-Tech, alineados con objetivos Net-Zero 2050                                        |
@@ -3520,43 +3519,925 @@ La **Digital Twin, Cloud & Edge Computing Architecture (DTCEC)** abarca todas la
 
 </details>
 
----
-
-**Nota**: Este framework DTCEC 300-399 está diseñado para evolucionar con los avances tecnológicos y puede expandirse para incluir nuevas categorías y subcategorías según sea necesario. Las conexiones con otras arquitecturas (especialmente QCSAA 900-999 para aspectos cuánticos, CYB 800-899 para seguridad, y ATA/STA/EPTA para aplicaciones específicas de dominio) son fundamentales para la implementación práctica de estos sistemas.
----
-
-### ⚡ EPTA 400-499: Energy & Propulsion Technology Architecture
-
-La **Energy & Propulsion Technology Architecture (EPTA)** cubre la generación, almacenamiento, conversión y sistemas de propulsión para diversas aplicaciones, con un enfoque en la sostenibilidad.
-
-*   **400-409: Fuentes de Energía Convencionales y Avanzadas** (Reactores nucleares, Fusión, Combustibles fósiles optimizados, Captura de carbono).
-*   **410-419: Energías Renovables** (Solar fotovoltaica/térmica, Eólica, Geotérmica, Hidroeléctrica, Mareomotriz).
-*   **420-429: Almacenamiento de Energía** (Baterías de estado sólido, Supercondensadores, Almacenamiento de hidrógeno, Almacenamiento de aire comprimido).
-*   **430-439: Gestión y Distribución de Energía** (Redes inteligentes - Smart Grids, Microgrids, Sistemas de carga/descarga, Eficiencia energética).
-*   **440-449: Propulsión por Combustión** (Motores de turbina optimizados, Motores de pistón eficientes, Scramjets, Motores hipersónicos).
-*   **450-459: Propulsión Eléctrica e Híbrida** (Motores eléctricos, Sistemas híbridos, Motores de flujo canalizado - Ducted fan, Propulsión distribuida).
-*   **460-469: Propulsión de Hidrógeno y Celdas de Combustible** (Sistemas de hidrógeno líquido/gaseoso, Celdas de combustible de alta densidad).
-*   **470-479: Nuevas Formas de Propulsión** (Propulsión de plasma, Propulsión de iones, Conceptos de propulsión avanzada para el espacio).
-*   **480-489: Optimización Energética y Cuántica** (Q-baterías, Q-combustibles, Algoritmos cuánticos para optimización de redes energéticas y ciclos de potencia).
-*   **490-499: Sistemas de Recuperación de Energía** (Regeneración, Sistemas de recuperación de calor residual, Reutilización de energía).
 
 ---
+
+# ⚡ EPTA 400-499: Energy & Propulsion Technology Architecture
+
+La **Energy & Propulsion Technology Architecture (EPTA)** cubre la generación, almacenamiento, conversión y sistemas de propulsión para diversas aplicaciones, con un enfoque en la sostenibilidad y la eficiencia energética. Este framework está diseñado para clasificar tecnologías desde fuentes de energía convencionales hasta propulsores cuánticos avanzados, anticipando la convergencia entre sostenibilidad, eficiencia y la innovación más disruptiva.
+
+<details><summary><strong>EPTA 400-409: Fuentes de Energía Convencionales y Avanzadas</strong></summary>
+
+*   **400-00-00: Centrales Nucleares (Fisión)**
+    *   **400-10-00: Reactores de Fisión de Próxima Generación (TRL 7-9 para SMRs)**
+        *   400-10-10: Small Modular Reactors (SMR) y Microreactors (Ej. NuScale Power con aprobación de diseño NRC en 2020)
+        *   400-10-20: Reactores de Sal Fundida (Molten Salt Reactors - MSR) (Ej. China TMSR-LF1 2 MWt, primer MSR comercial)
+        *   400-10-30: Reactores de Lecho de Bolas (Pebble Bed Reactors - PBR)
+        *   400-10-40: Reactores Rápidos con Refrigerante Sódico (SFR)
+        *   400-10-50: Seguridad Intrínseca y Tolerancia a Accidentes (Ej. Conceptos "walk-away safety" de TerraPower y X-energy)
+    *   **400-20-00: Gestión de Residuos Nucleares y Desmantelamiento**
+        *   400-20-10: Reprocesamiento Avanzado de Combustible Nuclear
+        *   400-20-20: Almacenamiento Geológico Profundo (Deep Geological Repositories)
+        *   400-20-30: Desmantelamiento de Centrales Nucleares (Robótica, Remediación)
+        *   400-20-40: Trazabilidad de Residuos Nucleares (Blockchain, Enlace con DTCEC 360-xx)
+*   **401-00-00: Fusión Nuclear (Confinamiento Magnético e Inercial)**
+    *   **401-10-00: Reactores de Fusión por Confinamiento Magnético (MCF) (TRL 6-7 para ITER, TRL 3-4 para tokamaks compactos)**
+        *   401-10-10: Tokamaks Esféricos (ST) y Stellarators (Ej. ITER, Wendelstein 7-X)
+        *   401-10-20: Imanes Superconductores de Alta Temperatura (HTS)
+        *   401-10-30: Calentamiento de Plasma (NBI, ICRH, ECRH)
+        *   401-10-40: Mantas Generadoras de Tritio (Tritium Breeding Blankets)
+        *   401-10-50: Diagnóstico de Plasma en Tiempo Real (AI-enhanced)
+    *   **401-20-00: Fusión por Confinamiento Inercial (ICF) y Otras Fusiónes (TRL 2-3 para aplicaciones energéticas)**
+        *   401-20-10: Fusión por Láser de Alta Potencia (National Ignition Facility)
+        *   401-20-20: Fusión Aneutrónica (p-B11) y Reactores de Campo Invertido (FRC) (Ej. TAE Technologies con 75 millones °C)
+        *   401-20-30: Compact Fusion Reactors para Aplicaciones Distribuibles (Ej. Commonwealth Fusion Systems, proyecta demostraciones en 2025; Enlace con STA 135-xx)
+        *   401-20-40: Optimización Cuántica de Reacciones de Fusión (Enlace con QCSAA 950-xx)
+*   **402-00-00: Combustibles Fósiles Optimizados y Captura de Carbono**
+    *   **402-10-00: Tecnologías de Combustión Limpia**
+        *   402-10-10: Combustión de Lecho Fluidizado (Fluidized Bed Combustion)
+        *   402-10-20: Gasificación Integrada de Ciclo Combinado (IGCC)
+        *   402-10-30: Motores de Combustión Interna de Alta Eficiencia y Bajas Emisiones
+    *   **402-20-00: Captura, Utilización y Almacenamiento de Carbono (CCUS)**
+        *   402-20-10: Captura de Carbono Post-combustión (Adsorción, Absorción)
+        *   402-20-20: Captura de Carbono Pre-combustión y Oxicombustión
+        *   402-20-30: Utilización de CO2 (Producción de Combustibles Sintéticos, Materiales)
+        *   402-20-40: Almacenamiento Geológico de CO2 (Formaciones Salinas, Yacimientos Agotados)
+*   **403-00-00: Bioenergía y Biocombustibles Avanzados**
+    *   **403-10-00: Biocombustibles de Segunda y Tercera Generación**
+        *   403-10-10: Biocombustibles Celulósicos (Etanol, Diesel)
+        *   403-10-20: Biocombustibles a Base de Algas (Biodiesel, Biojet Fuel)
+        *   403-10-30: Pirolisis y Gasificación de Biomasa
+    *   **403-20-00: Bioenergía para Generación Eléctrica**
+        *   403-20-10: Cogeneración (CHP) y Trigeneración de Biomasa
+        *   403-20-20: Plantas de Incineración de Residuos con Recuperación de Energía
+    *   **403-30-00: Regulación y Certificación de Biocombustibles**
+        *   403-30-10: Marcos Regulatorios para Combustibles Renovables (Ej. RTFO en UK, RFS en USA)
+        *   403-30-20: Certificación de Sostenibilidad y Trazabilidad de la Biomasa
+        *   403-30-30: Normativas para la Producción y Uso de Biocombustibles Avanzados
+*   **404-00-00: Geotermia Profunda y Sistemas de Energía de Marea**
+    *   **404-10-00: Geotermia de Rocas Calientes Secas (EGS)**
+        *   404-10-10: Perforación y Fracturación Hidráulica para EGS
+        *   404-10-20: Sistemas de Intercambio de Calor en Rocas Calientes
+    *   **404-20-00: Energía de Mareas y Olas**
+        *   404-20-10: Turbinas Submarinas para Generación de Marea
+        *   404-20-20: Convertidores de Energía de Olas (Point Absorbers, Oscillating Water Columns)
+
+</details>
+
+<details><summary><strong>EPTA 410-419: Energías Renovables</strong></summary>
+
+*   **410-00-00: Energía Solar Fotovoltaica (PV)**
+    *   **410-10-00: Células Solares de Alta Eficiencia**
+        *   410-10-10: Células de Silicio Monocristalino y Policristalino
+        *   410-10-20: Células de Película Delgada (Thin-Film: CdTe, CIGS)
+        *   410-10-30: Células Perovskitas (Ej. Oxford PV, 26.9% eficiencia en módulo comercial en 2024)
+        *   410-10-40: Células PV Transparentes y Flexibles
+        *   410-10-50: Quantum Dot Solar Cells (Quantum-Ready, potencial >40% eficiencia mediante multiple exciton generation)
+    *   **410-20-00: Módulos PV e Integración de Sistemas**
+        *   410-20-10: Módulos Bifaciales y de Doble Cara
+        *   410-20-20: Inversores y Optimizadores de Potencia (MPPT)
+        *   410-20-30: Sistemas PV Flotantes (Floating Solar) (Ej. Planta de 60 MWp en el embalse de Tengeh, Singapur)
+        *   410-20-40: Agrivoltaica (PV Integrado con Agricultura)
+        *   410-20-50: Concentrated Photovoltaics (CPV)
+*   **411-00-00: Energía Solar Térmica (CSP)**
+    *   **411-10-00: Tecnologías de Concentración Solar**
+        *   411-10-10: Colectores Parabólicos (Parabolic Troughs)
+        *   411-10-20: Torrees Solares de Receptor Central (Central Receiver Towers)
+        *   411-10-30: Discos Parabólicos (Dish Stirling Systems)
+        *   411-10-40: Lentes de Fresnel para Concentración Solar
+    *   **411-20-00: Almacenamiento Térmico y Ciclos de Potencia**
+        *   411-20-10: Sales Fundidas (Molten Salt) para Almacenamiento de Calor
+        *   411-20-20: Sistemas de Almacenamiento Térmico de Gran Escala
+        *   411-20-30: Ciclos Rankine y Brayton con Concentración Solar
+*   **412-00-00: Energía Eólica**
+    *   **412-10-00: Turbinas Eólicas Terrestres**
+        *   412-10-10: Turbinas de Eje Horizontal (HAWT) y Vertical (VAWT)
+        *   412-10-20: Diseño de Palas Aerodinámicas y Materiales Compuestos (Enlace con AMTA 500-xx)
+        *   412-10-30: Generadores Direct-Drive y Gearbox
+    *   **412-20-00: Energía Eólica Marina (Offshore Wind)**
+        *   412-20-10: Turbinas Eólicas Marinas de Cimentación Fija (Fixed-Bottom)
+        *   412-20-20: Turbinas Eólicas Marinas Flotantes (Floating Offshore Wind)
+        *   412-20-30: Subestaciones Marinas y Cables de Transmisión HVDC
+*   **413-00-00: Energía Hidroeléctrica y Hidrógeno Verde**
+    *   **413-10-00: Tipos de Centrales Hidroeléctricas**
+        *   413-10-10: Centrales de Gran Escala (Reservorio)
+        *   413-10-20: Centrales de Pequeña Escala y Flujo Continúo (Run-of-River)
+        *   413-10-30: Centrales Hidroeléctricas de Bombeo (Pumped-Hydro Storage)
+    *   **413-20-00: Hidrógeno Verde (Producción por Electrólisis)**
+        *   413-20-10: Electrolizadores de Membrana de Intercambio Protónico (PEM)
+        *   413-20-20: Electrolizadores Alcalinos y de Óxido Sólido (SOEC)
+        *   413-20-30: Acoplamiento de Electrolizadores con Energías Renovables (Directamente)
+        *   413-20-40: Celdas Fotocatalíticas para Producción Directa de H2 (Quantum-Ready)
+*   **414-00-00: Sistemas de Cogeneración y Trigeneración**
+    *   **414-10-00: Cogeneración (CHP)**
+        *   414-10-10: Motores de Gas/Diesel para CHP
+        *   414-10-20: Turbinas de Vapor y Gas para CHP
+        *   414-10-30: Uso de Calor Residual para Calefacción/Refrigeración
+    *   **414-20-00: Trigeneración (CCHP)**
+        *   414-20-10: Absorbedores y Adsorbedores para Refrigeración a Partir de Calor
+        *   414-20-20: Ciclos Termoeléctricos para Generación de Frío
+
+</details>
+
+<details><summary><strong>EPTA 420-429: Almacenamiento de Energía</strong></summary>
+
+*   **420-00-00: Baterías Avanzadas (Estado Sólido, Litio-Ion)**
+    *   **420-10-00: Baterías de Ión-Litio de Última Generación (TRL 8-9)**
+        *   420-10-10: Níquel-Manganeso-Cobalto (NMC) y Níquel-Cobalto-Aluminio (NCA) (Ej. Tesla 4680 cells, alta densidad energética)
+        *   420-10-20: Litio-Ferrofosfato (LFP) para Seguridad y Ciclo de Vida
+        *   420-10-30: Ánodos de Silicio y Litio Metálico para Alta Densidad Energética
+        *   420-10-40: Protocolos de Reciclaje y Disposición Final de Baterías Li-ion (Ej. Directiva UE 2023/1542)
+    *   **420-20-00: Baterías de Estado Sólido (Solid-State Batteries - SSB) (TRL 4-6)**
+        *   420-20-10: Electrolitos Sólidos (Cerámicos, Poliméricos, de Sulfuro)
+        *   420-20-20: Celdas de Estado Sólido con Ánodos de Litio Metálico (Ej. QuantumScape demostró >15 minutos de carga al 80%)
+        *   420-20-30: Materiales para Cátodos y Ánodos SSB (Quantum-Ready)
+        *   420-20-40: Q-Baterías (Optimización de Materiales y Electrolitos Cuánticos, Ej. celdas con Litio en grafeno-nitruro de boro; Enlace con AMTA 500-xx)
+*   **421-00-00: Supercondensadores y Condensadores Híbridos**
+    *   **421-10-00: Supercondensadores de Doble Capa (EDLC)**
+        *   421-10-10: Materiales de Electrodo de Carbón Activado y Grafeno
+        *   421-10-20: Electrolitos Iónicos para Amplio Rango de Temperatura
+    *   **421-20-00: Condensadores Híbridos y Pseudocondensadores**
+        *   421-20-10: Híbridos Batería-Condensador para Alta Densidad de Potencia y Energía
+        *   421-20-20: Pseudocondensadores Basados en Óxidos Metálicos
+*   **422-00-00: Almacenamiento de Hidrógeno**
+    *   **422-10-00: Almacenamiento Físico de H2**
+        *   422-10-10: Tanques de H2 Gaseoso a Alta Presión (700 bar)
+        *   422-10-20: Tanques de H2 Líquido Criogénico (LH2) (Ej. Pérdidas por "boil-off" en largos periodos de almacenamiento)
+        *   422-10-30: Hidratos de Gas y Almacenamiento por Criotanqueo
+    *   **422-20-00: Almacenamiento de H2 Basado en Materiales**
+        *   422-20-10: Hidruros Metálicos para Absorción/Desorción de H2
+        *   422-20-20: Metal-Organic Frameworks (MOF) y Carbones Porosos para Adsorción
+        *   422-20-30: Captura de H2 en Nanoestructuras (Quantum-Ready)
+*   **423-00-00: Almacenamiento de Energía Mecánica y Térmica**
+    *   **423-10-00: Sistemas de Almacenamiento de Aire Comprimido (CAES)**
+        *   423-10-10: CAES Adiabático y Diabático (Con/Sin Combustión)
+        *   423-10-20: Almacenamiento Subterráneo en Cavernas de Sal
+    *   **423-20-00: Almacenamiento de Energía por Volantes de Inercia (Flywheels)**
+        *   423-20-10: Flywheels de Materiales Compuestos de Alta Velocidad (Enlace con AMTA 500-xx)
+        *   423-20-20: Sistemas de Rodamientos Magnéticos y Vacío
+    *   **423-30-00: Almacenamiento Térmico de Larga Duración (UTES)**
+        *   423-30-10: Almacenamiento en Acuíferos y Estratos Rocosos (ATES/BTES)
+        *   423-30-20: Materiales de Cambio de Fase (PCM) para Almacenamiento de Calor Latente
+    *   **423-40-00: Almacenamiento de Energía Gravitacional**
+        *   423-40-10: Sistemas de Energía de Gravedad (Gravitational Energy Storage - GESS) basados en pesos elevados (Ej. Energy Vault, tecnología de torres de concreto).
+        *   423-40-20: Sistemas Hidráulicos y de Cable para Levantamiento y Descenso Controlado de Masa.
+        *   423-40-30: Generación de Electricidad por Descenso Controlado (Potencial de LCOE competitivo para larga duración).
+*   **424-00-00: Power-to-X (P2X) y Portadores de Energía Sintéticos**
+    *   **424-10-00: Producción de Power-to-Gas (P2G)**
+        *   424-10-10: Metanación de CO2 (Power-to-Methane)
+        *   424-10-20: Producción de Amoniaco Verde (Power-to-Ammonia)
+    *   **424-20-00: Producción de Power-to-Liquid (P2L) y Power-to-Chemicals (P2C)**
+        *   424-20-10: Síntesis Fischer-Tropsch (Power-to-Liquids)
+        *   424-20-20: Producción de Metanol y Combustibles Sintéticos (e-fuels)
+        *   424-20-30: Q-Combustibles (Simulación Cuántica de Procesos de Síntesis, Enlace con QCSAA 950-xx)
+*   **425-00-00: Product Assurance para Componentes de Almacenamiento Cuántico**
+    *   **425-10-00: Estándares de Calidad y Fiabilidad para Q-Baterías y Supercondensadores Cuánticos**
+        *   425-10-10: Protocolos de Pruebas de Ciclo de Vida para Materiales Cuánticos
+        *   425-10-20: Resistencia a la Radiación y Temperaturas Extremas para Componentes Cuánticos
+    *   **425-20-00: Auditoría y Certificación de Sistemas Cuánticos de Energía**
+        *   425-20-10: Marcos Regulatorios para la Seguridad de Q-Baterías (Enlace con CYB 850-xx, QCSAA 930-xx)
+        *   425-20-20: Trazabilidad de la Cadena de Suministro de Materiales Cuánticos (Blockchain)
+
+</details>
+
+<details><summary><strong>EPTA 430-439: Gestión y Distribución de Energía</strong></summary>
+
+*   **430-00-00: Redes Inteligentes (Smart Grids)**
+    *   **430-10-00: Arquitecturas de Smart Grid**
+        *   430-10-10: Medidores Inteligentes (Smart Meters) y AMI (Advanced Metering Infrastructure)
+        *   430-10-20: Sensores en la Red (Frontera, Subestaciones)
+        *   430-10-30: Control Distribuido y Sistemas SCADA
+        *   430-10-40: Infraestructura de Comunicaciones Seguras para Smart Grid
+        *   430-10-50: Integración de Blockchain para Transacciones Energéticas (Enlace con DTCEC 360-xx)
+    *   **430-20-00: Gestión de la Demanda y Carga**
+        *   430-20-10: Respuesta a la Demanda (Demand Response - DR) y Reducción de Carga
+        *   430-20-20: Gestión Activa de la Distribución (Active Distribution Management - ADM)
+        *   430-20-30: Previsión de Carga (Load Forecasting) con IA
+        *   430-20-40: Optimización Cuántica de Redes Eléctricas (Enlace con EPTA 480-xx)
+    *   **430-30-00: Frameworks de Ciberseguridad para Smart Grids (ICS/OT)**
+        *   430-30-10: Protección de Sistemas de Control Industrial (ICS) y Sistemas Operacionales (OT) (Ej. ISA/IEC 62443 para Ciberseguridad en OT)
+        *   430-30-20: Detección de Intrusiones y Análisis de Anomalías para Infraestructuras Críticas
+        *   430-30-30: Protocolos de Comunicación Seguros (ej. IEC 61850) para la Red Eléctrica
+        *   430-30-40: Mitigación de Ciberriesgos en Redes de Hidrógeno (Producción, Almacenamiento, Distribución)
+*   **431-00-00: Microgrids y Nanogrids**
+    *   **431-10-00: Diseño y Operación de Microgrids**
+        *   431-10-10: Fuentes de Energía Distribuida (Distributed Energy Resources - DER) en Microgrids
+        *   431-10-20: Control de Frecuencia y Voltaje en Modo Isla (Island Mode)
+        *   431-10-30: Puntos de Interconexión y Acoplamiento a la Red Principal
+    *   **431-20-00: Nanogrids y Electrificación Rural**
+        *   431-20-10: Sistemas de Energía Aislados (Off-Grid) para Comunidades Remotas
+        *   431-20-20: Integración de Microrredes DC y Sistemas Híbridos
+*   **432-00-00: Sistemas de Carga/Descarga de Vehículos Eléctricos (EV)**
+    *   **432-10-00: Infraestructura de Carga de EV**
+        *   432-10-10: Puntos de Carga Rápida (DC Fast Charging) y Ultra-rápida
+        *   432-10-20: Carga Inalámbrica para EVs (Wireless Charging)
+        *   432-10-30: Carga Bidireccional (Vehicle-to-Grid - V2G) (Ej. Nissan LEAF ya implementa V2G comercial)
+    *   **432-20-00: Gestión de la Carga Inteligente (Smart Charging)**
+        *   432-20-10: Algoritmos de Optimización de Carga para Reducir Picos
+        *   432-20-20: Integración de Carga EV con Energías Renovables
+*   **433-00-00: Eficiencia Energética y Conservación**
+    *   **433-10-00: Tecnologías de Eficiencia Energética en Edificios**
+        *   433-10-10: Edificios de Energía Neta Cero (Net Zero Energy Buildings)
+        *   433-10-20: Sistemas de Gestión Energética de Edificios (BEMS)
+        *   433-10-30: Materiales Aislantes Avanzados y Ventanas Inteligentes
+    *   **433-20-00: Optimización Energética Industrial**
+        *   433-20-10: Auditorías Energéticas y Optimización de Procesos Industriales
+        *   433-20-20: Motores de Alta Eficiencia y Variadores de Frecuencia
+*   **434-00-00: Mercados Eléctricos y Trading de Energía**
+    *   **434-10-00: Diseño de Mercados Eléctricos**
+        *   434-10-10: Mercados Mayoristas de Energía (Spot, Futuros)
+        *   434-10-20: Mercados de Servicios Auxiliares (Regulación de Frecuencia)
+    *   **434-20-00: Trading de Energía y Optimización**
+        *   434-20-10: Algoritmos de Trading de Alta Frecuencia (AI-enhanced)
+        *   434-20-20: Optimización de Portafolios de Generación y Demanda
+*   **435-00-00: Sistemas de Transmisión de Energía Eléctrica**
+    *   **435-10-00: Redes de Transmisión de Alto Voltaje**
+        *   435-10-10: Líneas de Transmisión de Corriente Alterna (HVAC) y Directa (HVDC)
+        *   435-10-20: Transformadores y Subestaciones Inteligentes
+    *   **435-20-00: Grid Modernization y Resiliencia**
+        *   435-20-10: Sensores y Monitoreo de la Red en Tiempo Real (PMU)
+        *   435-20-20: Sistemas de Control de Área Amplia (WAMS) y Protecciones Avanzadas
+
+</details>
+
+<details><summary><strong>EPTA 440-449: Propulsión por Combustión</strong></summary>
+
+*   **440-00-00: Motores de Turbina (Aeroespacial y Marino)**
+    *   **440-10-00: Turbinas de Gas Avanzadas (Aeroespacial)**
+        *   440-10-10: Motores Turbofan de Ultra-Alto Bypass Ratio (UBPR)
+        *   440-10-20: Turbinas de Gas de Ciclo Adaptativo (Adaptive Cycle Engines) (Ej. GE XA100 para F-35, >25% mejora en eficiencia)
+        *   440-10-30: Componentes de Palas y Cámaras de Combustión de Próxima Generación
+        *   440-10-40: Materiales Cerámicos de Matriz Compuesta (CMC) para Altas Temperaturas (>1650°C, Enlace con AMTA 500-xx)
+        *   440-10-50: Optimización Cuántica de Procesos de Combustión (Enlace con EPTA 480-xx)
+    *   **440-20-00: Turbinas de Gas Industriales y Marinas**
+        *   440-20-10: Turbinas de Gas de Gran Escala para Generación Eléctrica
+        *   440-20-20: Turbinas de Gas para Propulsión Naval (CODAG, COGAG, COGLAG)
+        *   440-20-30: Sistemas de Cogeneración con Turbinas de Gas
+*   **441-00-00: Motores de Pistón (Aeronáutico y Terrestre)**
+    *   **441-10-00: Motores de Aviación de Pistón Optimizados**
+        *   441-10-10: Motores de Gasolina y Diesel para Aviación Ligera
+        *   441-10-20: Sistemas de Inyección Directa y Sobrealimentación
+        *   441-10-30: Combustibles Sostenibles (SAF) para Motores de Pistón (Enlace con ATA 70-xx)
+    *   **441-20-00: Motores de Combustión Interna Terrestres**
+        *   441-20-10: Motores de Combustión Lean-Burn y Reactividad Controlada (RCCI)
+        *   441-20-20: Sistemas de Post-tratamiento de Gases de Escape (SCR, DPF)
+*   **442-00-00: Propulsión Hipersónica (Scramjets y RAMjets)**
+    *   **442-10-00: Motores Scramjet (Supersonic Combustion Ramjet)**
+        *   442-10-10: Diseño de Entradas de Aire y Toberas para Vuelo Hipersónico
+        *   442-10-20: Combustión Supersónica de Hidrógeno y Propelentes de Alta Energía
+        *   442-10-30: Materiales Ultrarresistentes a Altas Temperaturas (CMC, Enlace con AMTA 500-xx)
+    *   **442-20-00: Motores RAMjet y Dual-Mode Ramjet (DMRJ)**
+        *   442-20-10: Motores RAMjet para Velocidades Supersónicas
+        *   442-20-20: Dual-Mode Ramjets para Vuelo en un Rango Amplio de Mach
+*   **443-00-00: Combustión y Control de Flujo**
+    *   **443-10-00: Técnicas de Control de Flujo Activo (AFC)**
+        *   443-10-10: Actuadores Piezoeléctricos y de Plasma para Control de Separación
+        *   443-10-20: Inyección de Micro-Chorros y Succión/Soplado en Superficies
+    *   **443-20-00: Modelado y Simulación de Combustión**
+        *   443-20-10: Simulación de Dinámica de Fluidos Reactivos (CFD-Reacting Flow)
+        *   443-20-20: Modelos de Formación de Contaminantes y Optimización de la Combustión
+*   **444-00-00: Sistemas de Combustible y Monitoreo**
+    *   **444-10-00: Sistemas de Gestión de Combustible**
+        *   444-10-10: Sensores de Calidad y Contaminación de Combustible (Enlace con ATA 28-xx)
+        *   444-10-20: Sistemas de Transferencia y Drenaje Automatizados
+    *   **444-20-00: Monitoreo de Parámetros del Motor**
+        *   444-20-10: Sensores de Presión, Temperatura y Vibración del Motor
+        *   444-20-20: Diagnóstico Predictivo de Salud del Motor (AI-enhanced, Enlace con ATA 45-xx)
+*   **445-00-00: Reducción de Emisiones y Ruido (Eco-Tech)**
+    *   **445-10-00: Tecnologías de Bajas Emisiones (Low Emissions Technologies)**
+        *   445-10-10: Cámaras de Combustión Lean-Burn y LPP (Lean Premixed Prevaporized)
+        *   445-10-20: Inyección de Agua y Sistemas de Recirculación de Gases de Escape (EGR)
+    *   **445-20-00: Reducción de Ruido de Propulsión**
+        *   445-20-10: Diseño de Toberas Silenciosas (Chevron Nozzles, Lobed Nozzles)
+        *   445-20-20: Nacelles Acústicamente Tratadas y Amortiguadores de Ruido
+*   **446-00-00: Certificación y Regulación de Propulsión por Combustión**
+    *   **446-10-00: Estándares de Emisiones y Ruido**
+        *   446-10-10: Normativa ICAO para Emisiones de Aeronaves (CAEP)
+        *   446-10-20: Certificación de Ruido de Aeronaves (Capítulo 3, 4, 14 de ICAO Annex 16)
+    *   **446-20-00: Procesos de Certificación de Motores**
+        *   446-20-10: Pruebas de Resistencia y Ciclo de Vida del Motor
+        *   446-20-20: Cumplimiento de Requisitos de Seguridad y Rendimiento (EASA/FAA)
+
+</details>
+
+<details><summary><strong>EPTA 450-459: Propulsión Eléctrica e Híbrida</strong></summary>
+
+*   **450-00-00: Motores Eléctricos para Propulsión**
+    *   **450-10-00: Motores de Imán Permanente (PMSM) de Alta Densidad de Potencia (TRL 8-9)**
+        *   450-10-10: Motores Radiales y Axiales para Aviación (Ej. Rolls-Royce ACCEL, densidad de potencia >9 kW/kg; Enlace con ATA 80-xx)
+        *   450-10-20: Materiales Magnéticos Avanzados (Tierras Raras, Ferrocobalto)
+        *   450-10-30: Refrigeración Avanzada (Líquida, Directa al Bobinado)
+    *   **450-20-00: Motores Síncronos de Reluctancia y Asíncronos**
+        *   450-20-10: Motores Síncronos de Reluctancia (SynRM) para Eficiencia
+        *   450-20-20: Motores de Inducción para Aplicaciones Industriales y Marinas
+*   **451-00-00: Inversores y Convertidores de Potencia**
+    *   **451-10-00: Electrónica de Potencia de Carburo de Silicio (SiC) y Nitruro de Galio (GaN) (TRL 7-8)**
+        *   451-10-10: MOSFET y IGBT de SiC/GaN para Alta Frecuencia y Temperatura (Potencial de reducir pérdidas >50% versus silicio)
+        *   451-10-20: Reducción de Pérdidas y Tamaño en Convertidores
+    *   **451-20-00: Arquitecturas de Inversores Modulares y Tolerantes a Fallos**
+        *   451-20-10: Inversores Multi-Nivel y Modulares
+        *   451-20-20: Sistemas de Detección y Aislamiento de Fallos
+*   **452-00-00: Propulsión Híbrido-Eléctrica**
+    *   **452-10-00: Arquitecturas Híbridas (Serie, Paralelo, Turboeléctrica)**
+        *   452-10-10: Híbrido Serie (Generador Eléctrico Alimenta Motor Eléctrico)
+        *   452-10-20: Híbrido Paralelo (Motor Eléctrico Asiste Motor de Combustión)
+        *   452-10-30: Turboeléctrica (Turbina de Gas Alimenta Generador para Motores Eléctricos)
+    *   **452-20-00: Sistemas de Gestión de Energía Híbrida**
+        *   452-20-10: Algoritmos de Control de Energía Basados en IA para Optimización (Enlace con EPTA 480-xx)
+        *   452-20-20: Recuperación de Energía (Frenado Regenerativo) y Almacenamiento
+*   **453-00-00: Propulsión Distribuida y Sistemas de Levantamiento**
+    *   **453-10-00: Configuración de Múltiples Propulsores (TRL 5-7 para eVTOL)**
+        *   453-10-10: Motores Eléctricos Integrados en Ala y Superficies (Ej. NASA X-57 Maxwell; Para BWB, eVTOL como Eviation Alice)
+        *   453-10-20: Ventiladores Canalizados (Ducted Fans) para Reducción de Ruido y Empuje
+    *   **453-20-00: Control Vectorial de Empuje y Sustentación**
+        *   453-20-10: Algoritmos para Vuelo Vertical y Transición (Hover a Forward Flight)
+        *   453-20-20: Redundancia en Propulsión Distribuida para Seguridad de Vuelo
+*   **454-00-00: Integración de Sistemas de Potencia Eléctrica (Más Allá de la Propulsión)**
+    *   **454-10-00: Aeronaves Más Eléctricas (More Electric Aircraft - MEA)**
+        *   454-10-10: Reemplazo de Sistemas Hidráulicos/Neumáticos por Actuadores Eléctricos
+        *   454-10-20: Generación y Distribución de Potencia Eléctrica Centralizada
+    *   **454-20-00: Redes de Potencia Eléctrica de Alta Tensión a Bordo (All Electric Aircraft)**
+        *   454-20-10: Buses de Distribución de Alta Voltaje (MVDC, HVDC)
+        *   454-20-20: Gestión de Fallas y Reconfiguración de la Red a Bordo (AI-controlled)
+*   **455-00-00: Certificación y Regulación de Propulsión Eléctrica**
+    *   **455-10-00: Normativa para Aeronaves Eléctricas y Híbridas**
+        *   455-10-10: Requisitos de Seguridad de Baterías (Thermal Runaway, Fuego) (Ej. UN 38.3, UL 9540 para sistemas de almacenamiento)
+        *   455-10-20: Certificación de Motores Eléctricos y Sistemas de Propulsión Integrados (Ej. EASA SC-VTOL para eVTOL)
+    *   **455-20-00: Estándares de Interferencia Electromagnética (EMI) y EMC**
+        *   455-20-10: Pruebas de Compatibilidad Electromagnética para Sistemas de Alta Potencia (Ej. RTCA DO-160)
+        *   455-20-20: Mitigación de EMI en Redes Eléctricas de Aeronaves
+
+</details>
+
+<details><summary><strong>EPTA 460-469: Propulsión de Hidrógeno y Celdas de Combustible</strong></summary>
+
+*   **460-00-00: Celdas de Combustible (Fuel Cells)**
+    *   **460-10-00: Celdas de Combustible de Membrana de Intercambio Protónico (PEMFC) (TRL 7-8)**
+        *   460-10-10: Diseño de Membranas y Electrodos de Alta Eficiencia (>60% eficiencia en automoción, Ej. Toyota Mirai Gen 2)
+        *   460-10-20: Durabilidad y Resistencia a la Contaminación (Objetivo 8000 horas para comercialización)
+        *   460-10-30: Gestión Térmica y de Agua en PEMFC
+    *   **460-20-00: Celdas de Combustible de Óxido Sólido (SOFC) y Otras (TRL 6-7)**
+        *   460-20-10: SOFC para Aplicaciones de Alta Temperatura y Cogeneración (>90% eficiencia en cogeneración)
+        *   460-20-20: Celdas de Combustible de Óxido de Metal Líquido (Molten Carbonate, Phosphoric Acid)
+*   **461-00-00: Integración de Celdas de Combustible en Vehículos**
+    *   **461-10-00: Arquitecturas de Tren de Potencia de Celda de Combustible**
+        *   461-10-10: Direct Drive Fuel Cell (Celda Directa a Motor Eléctrico)
+        *   461-10-20: Fuel Cell Range Extender (Celda Carga Batería Principal)
+    *   **461-20-00: Gestión de Sistemas de Celda de Combustible**
+        *   461-20-10: Control de Flujo de Hidrógeno y Aire
+        *   461-20-20: Estrategias de Arranque en Frío y Ciclo de Vida
+*   **462-00-00: Sistemas de Propulsión de Hidrógeno (Directa)**
+    *   **462-10-00: Motores de Combustión de Hidrógeno**
+        *   462-10-10: Motores de Pistón H2 y Turbinas de Gas H2 (Ej. Airbus ZEROe con prototipos para 2035; Enlace con EPTA 440-xx)
+        *   462-10-20: Optimización de la Combustión de Hidrógeno (Prevención de NOx)
+    *   **462-20-00: Infraestructura de Abastecimiento de Hidrógeno**
+        *   462-20-10: Estaciones de Recarga de H2 (Gaseoso, Líquido) (Ej. Más de 100 estaciones de hidrógeno operando en Alemania anualmente)
+        *   462-20-20: Producción de Hidrógeno Verde In-situ (Renovable)
+        *   462-20-30: Costo de Producción de H2 Verde (Objetivo DOE $2/kg para 2030, desde ~$6/kg actual)
+*   **463-00-00: Certificación y Regulación de Sistemas de Hidrógeno**
+    *   **463-10-00: Normativa de Seguridad para Hidrógeno**
+        *   463-10-10: Requisitos de Diseño de Tanques de H2 (ISO 17268, SAE J2579)
+        *   463-10-20: Detección y Mitigación de Fugas de Hidrógeno
+    *   **463-20-00: Certificación de Celdas de Combustible y Motores H2**
+        *   463-20-10: Pruebas de Seguridad y Rendimiento para Celdas de Combustible
+        *   463-20-20: Certificación de Vehículos Propulsados por Hidrógeno
+
+</details>
+
+<details><summary><strong>EPTA 470-479: Nuevas Formas de Propulsión</strong></summary>
+
+*   **470-00-00: Propulsión por Plasma (Cohetes de Plasma, Magnetoplasma)**
+    *   **470-10-00: Propulsores de Plasma de Impulso (PPT) y de Onda Helicoidal (HPT)**
+        *   470-10-10: Pulsed Plasma Thrusters para Pequeñas Naves Espaciales
+        *   470-10-20: Helicon Plasma Thrusters para Eficiencia de Propelente
+    *   **470-20-00: Propulsores de Magnetoplasma (MPD, VASIMR) (TRL 4-5)**
+        *   470-20-10: Magnetoplasmadynamic (MPD) Thrusters para Alto Empuje
+        *   470-20-20: Variable Specific Impulse Magnetoplasma Rocket (VASIMR) para Misiones de Tránsito Rápido (Ej. Marte en 39 días, objetivo de Ad Astra Rocket Company)
+        *   470-20-30: Generación de Plasma con Confinamiento Magnético (Enlace con EPTA 401-xx, STA 135-xx)
+*   **471-00-00: Propulsión de Iones y Eléctrica Avanzada**
+    *   **471-10-00: Propulsores de Iones de Rejilla y de Efecto Hall**
+        *   471-10-10: Optimización de Diseño de Rejillas y Cátodos
+        *   471-10-20: Propelentes Alternativos al Xenón (Argón, Criptón)
+    *   **471-20-00: Propulsión Eléctrica de Campo (Field-Emission Electric Propulsion - FEEP)**
+        *   471-20-10: Propulsores FEEP para Control de Actitud de Alta Precisión
+        *   471-20-20: Propelentes de Metal Líquido (Cesio, Indio)
+*   **472-00-00: Propulsión Nuclear (Para el Espacio)**
+    *   **472-10-00: Propulsión Térmica Nuclear (NTP) (TRL 6 para Rover-NERVA, TRL 2-3 para diseños modernos)**
+        *   472-10-10: Diseño de Núcleos de Reactor de NTP (Combustible Sólido, Gaseoso)
+        *   472-10-20: Ciclos de Propelente (Hidrógeno) y Sistemas de Enfriamiento
+    *   **472-20-00: Propulsión Eléctrica Nuclear (NEP) (TRL 2-3)**
+        *   472-20-10: Reactores Compactos para NEP y Conversión de Energía (Termiónica, Brayton)
+        *   472-20-20: Propulsores Eléctricos de Alta Potencia Alimenados por NEP
+*   **473-00-00: Conceptos de Propulsión de Campo (Teóricos)**
+    *   **473-10-00: Propulsión por Vela Solar Avanzada (Láser/Microondas)**
+        *   473-10-10: Velas Ligeras Propulsadas por Láser de Tierra (Ej. Proyecto Breakthrough Starshot)
+        *   473-10-20: Velas de Grafeno y Metamateriales para Alta Reflectividad (Enlace con AMTA 500-xx)
+    *   **473-20-00: Motores de Curvatura Espacio-Temporal (Warp Drives) y Agujeros de Gusano (Teóricos / TRL 0-1)**
+        *   473-20-10: Modelos Teóricos de Métricas de Alcubierre y Krasnikov
+        *   473-20-20: Requisitos Energéticos y Materiales Exóticos (Materia Exótica)
+*   **474-00-00: Propulsión Electromagnética sin Propelente (EmDrive - Experimental)**
+    *   **474-10-00: Diseño de Cavidades Resonantes y Pruebas**
+        *   474-10-10: Diseño de Cavidades Asimétricas para Generación de Empuje (Enlace con STA 125-xx)
+        *   474-10-20: Experimentos de Medición de Empuje en Vacío (Detección de μN)
+    *   **474-20-00: Teorías Explicativas y Verificación (Controversia Científica)**
+        *   474-20-10: Teorías de Onda Piloto y Efecto Mach para Empuje
+        *   474-20-20: Replicación y Validación Independiente de Resultados Experimentales
+*   **475-00-00: Propulsión de Antimateria (Conceptual)**
+    *   **475-10-00: Producción y Contención de Antimateria (TRL 1-2 para producción, TRL 0-1 para contención a escala)**
+        *   475-10-10: Trampas Penning Superconductoras para Anti-hidrógeno (Ej. CERN produce ~20 ng/año; Enlace con ATA 87-xx)
+        *   475-10-20: Métodos de Enfriamiento Láser para Antipartículas
+    *   **475-20-00: Reacción de Aniquilación y Generación de Empuje (TRL 0-1)**
+        *   475-20-10: Cámaras de Reacción de Aniquilación de Positrones/Antiprotones
+        *   475-20-20: Conversión de Energía de Aniquilación en Empuje (Toberas Magnéticas)
+
+</details>
+
+<details><summary><strong>EPTA 480-489: Optimización Energética y Cuántica</strong></summary>
+
+*   **480-00-00: Optimización Cuántica de Redes Energéticas (TRL 2-4)**
+    *   **480-10-00: Algoritmos Cuánticos para Smart Grids**
+        *   480-10-10: Optimización Cuántica de Flujo de Potencia (Quantum Power Flow Optimization)
+        *   480-10-20: Asignación de Recursos Distribuida con QAOA (Ej. IBM/Volkswagen para optimización de tráfico urbano, extrapolable)
+        *   480-10-30: Detección Cuántica de Anomalías en la Red Eléctrica
+    *   **480-20-00: Modelado de Redes Eléctricas con Computación Cuántica**
+        *   480-20-10: Simulación de Sistemas de Potencia a Gran Escala con QPU
+        *   480-20-20: Predicción Cuántica de Demanda y Generación
+*   **481-00-00: Optimización Cuántica de Ciclos de Potencia y Eficiencia (TRL 1-3)**
+    *   **481-10-00: Ciclos Termodinámicos Optimizados por Cuántica**
+        *   481-10-10: Optimización de Ciclos Rankine y Brayton con Algoritmos Cuánticos
+        *   481-10-20: Diseño de Intercambiadores de Calor y Componentes con Q-Simulación
+    *   **481-20-00: Eficiencia Energética Aumentada por Cuántica**
+        *   481-20-10: Reducción de Pérdidas por Fricción y Resistencia con Materiales Cuánticos
+        *   481-20-20: Optimización Cuántica de Procesos de Conversión de Energía
+*   **482-00-00: Q-Baterías y Almacenamiento Cuántico de Energía (TRL 1-3)**
+    *   **482-10-00: Tecnologías de Q-Baterías**
+        *   482-10-10: Celdas de Batería con Materiales Cuánticos (ej. Litio en Grafeno-Nitruro de Boro)
+        *   482-10-20: Electrolitos con Propiedades Cuánticas para Mejora de Conductividad
+    *   **482-20-00: Carga y Descarga Cuántica de Baterías**
+        *   482-20-10: Algoritmos Cuánticos para Optimización de Ciclos de Carga/Descarga
+        *   482-20-20: Sensores Cuánticos para Monitoreo de Estado de Salud de la Batería
+*   **483-00-00: Q-Combustibles y Síntesis Asistida por Cuántica (TRL 1-2)**
+    *   **483-10-00: Diseño de Combustibles con Simulación Cuántica**
+        *   483-10-10: Modelado de Reacciones de Combustión a Nivel Molecular (Q-Sim)
+        *   483-10-20: Optimización de Estructuras Moleculares para Mayor Energía/Menor Emisión
+    *   **483-20-00: Producción de Combustibles Asistida por Cuántica**
+        *   483-20-10: Diseño y Optimización de Catalizadores con Algoritmos Cuánticos (Potencial para reducir costos Power-to-X en 40%)
+        *   483-20-20: Simulación Cuántica de Procesos de Síntesis de Combustibles (Power-to-X)
+*   **484-00-00: Sensores Cuánticos para Energía (TRL 3-5)**
+    *   **484-10-00: Sensores Cuánticos de Campo Magnético y Eléctrico**
+        *   484-10-10: Magnetómetros Cuánticos (NV-Centers, SQUIDs) para Monitoreo de Red (Sensibilidad nT/√Hz)
+        *   484-10-20: Sensores Cuánticos de Voltaje y Corriente de Alta Precisión
+    *   **484-20-00: Sensores Cuánticos de Temperatura y Presión**
+        *   484-20-10: Termómetros Cuánticos para Detección de Fugas Térmicas
+        *   484-20-20: Sensores Cuánticos de Presión para Monitoreo de Sistemas de Propelente
+*   **485-00-00: Computación Cuántica para la Industria Energética (TRL 2-4)**
+    *   **485-10-00: Optimización Cuántica de Operaciones**
+        *   485-10-10: Optimización de la Cadena de Suministro de Energía (Petróleo, Gas, Renovables)
+        *   485-10-20: Optimización de la Programación de la Producción de Energía
+    *   **485-20-00: Modelado de Riesgos Cuánticos**
+        *   485-20-10: Simulación Cuántica de Riesgos de Mercado y Fallas de Infraestructura
+        *   485-20-20: Ciberseguridad Cuántica para Infraestructuras Energéticas Críticas (Enlace con CYB 880-xx)
+
+</details>
+
+<details><summary><strong>EPTA 490-499: Sistemas de Recuperación de Energía</strong></summary>
+
+*   **490-00-00: Recuperación de Energía Cinética y Frenado Regenerativo**
+    *   **490-10-00: Sistemas de Frenado Regenerativo para Vehículos**
+        *   490-10-10: Recuperación de Energía en Vehículos Eléctricos e Híbridos (KERS)
+        *   490-10-20: Frenado Regenerativo para Trenes y Tranvías
+    *   **490-20-00: Recuperación de Energía en Ascensores y Grúas**
+        *   490-20-10: Sistemas de Recuperación de Energía en Ascensores de Alta Velocidad
+        *   490-20-20: Recuperación de Energía en Grúas Portuarias y Equipos de Manejo de Materiales
+*   **491-00-00: Recuperación de Calor Residual (Waste Heat Recovery - WHR)**
+    *   **491-10-00: Tecnologías de WHR**
+        *   491-10-10: Ciclos Rankine Orgánicos (ORC) para Bajas Temperaturas
+        *   491-10-20: Termoeléctricos (Seebeck Effect) para Conversión Directa de Calor a Electricidad
+        *   491-10-30: Ciclos de Absorción para Refrigeración a Partir de Calor Residual
+    *   **491-20-00: Aplicaciones de WHR Industrial y Automotriz**
+        *   491-20-10: Recuperación de Calor de Gases de Escape de Motores y Turbinas
+        *   491-20-20: WHR en Procesos Industriales (Acerías, Cementeras)
+*   **492-00-00: Recolección de Energía Ambiental (Energy Harvesting)**
+    *   **492-10-00: Recolección de Energía Vibratoria y Mecánica**
+        *   492-10-10: Piezoeléctricos para Conversión de Vibración en Electricidad
+        *   492-10-20: Triboeléctricos y Electrohidrodinámicos para Pequeña Escala
+    *   **492-20-00: Recolección de Energía Térmica y Radiación**
+        *   492-20-10: Termoeléctricos para Conversión de Pequeñas Diferencias de Temperatura
+        *   492-20-20: RF Energy Harvesting para Dispositivos IoT de Bajo Consumo
+        *   492-20-30: Q-Energy Harvesting (Recolección de Energía a Nivel Cuántico, Enlace con EPTA 134-xx)
+*   **493-00-00: Sistemas de Reutilización de Energía**
+    *   **493-10-00: Reutilización de Aguas Residuales con Recuperación de Energía**
+        *   493-10-10: Bioreactores de Membrana para Tratamiento de Aguas Residuales
+        *   493-10-20: Generación de Biogás a partir de Lodos Residuales
+    *   **493-20-00: Reutilización de Residuos Sólidos para Generación de Energía**
+        *   493-20-10: Gasificación y Pirolisis de Residuos Sólidos Urbanos (RSU)
+        *   493-20-20: Plantas de Conversión de Residuos en Energía (Waste-to-Energy)
+*   **494-00-00: Ciclos de Potencia Avanzados para Eficiencia**
+    *   **494-10-00: Ciclos de Potencia de Alta Eficiencia**
+        *   494-10-10: Ciclos Combinados con Turbinas de Gas y Vapor
+        *   494-10-20: Ciclos Supercríticos y Ultra-Supercríticos (Vapor)
+    *   **494-20-00: Ciclos de Potencia con Fluidos Supercríticos**
+        *   494-20-10: Ciclos de CO2 Supercrítico (sCO2) para Generación Flexible
+        *   494-20-20: Reactores Nucleares de sCO2 para Mayor Eficiencia
+
+</details>
 
 ### 🧬 AMTA 500-599: Advanced Material, Bio & Nanotechnology Architecture
 
-La **Advanced Material, Bio & Nanotechnology Architecture (AMTA)** se dedica a la investigación, desarrollo y aplicación de materiales de vanguardia, sistemas biológicos y estructuras a escala nanométrica.
+La **Advanced Material, Bio & Nanotechnology Architecture (AMTA)** se dedica a la investigación, desarrollo y aplicación de materiales de vanguardia, sistemas biológicos y estructuras a escala nanométrica. Este framework es crucial para impulsar la innovación en sectores como el aeroespacial, la medicina, la energía y la defensa, a través de la manipulación de la materia a nivel fundamental.
 
-*   **500-509: Materiales Compuestos Avanzados** (CFRP, GFRP, Matriz cerámica, Materiales híbridos, Materiales auto-reparables).
-*   **510-519: Metamateriales y Materiales Estructurales Inteligentes** (Metamateriales acústicos/ópticos/electromagnéticos, Materiales con memoria de forma, Materiales piezoeléctricos).
-*   **520-529: Nanomateriales y Recubrimientos Funcionales** (Grafeno, Nanotubos de carbono, Nanopartículas, Recubrimientos auto-limpiantes/anti-corrosión).
-*   **530-539: Biotecnología y Bioingeniería** (Ingeniería genética, Bioprocesos, Organismos modificados genéticamente, Bioimpresión 3D).
-*   **540-549: Biomateriales y Biónica** (Materiales bio-inspirados, Polímeros biodegradables, Interfaces cerebro-máquina, Prótesis biónicas).
-*   **550-559: Nanotecnología y Nanorobótica** (Nanorobots, Máquinas moleculares, Nanofabricación, Sistemas de entrega de fármacos a nanoescala).
-*   **560-569: Sensores Avanzados (Bio y Nano)** (Bio-sensores, Nano-sensores, Sensores químicos/biológicos de alta sensibilidad, Sensores de salud estructural).
-*   **570-579: Manufactura Aditiva (Impresión 3D) para Materiales Avanzados** (Impresión 3D de metales, polímeros, cerámicas, Fabricación aditiva de componentes funcionales).
-*   **580-589: Materiales y Procesos Cuánticos** (Q-metamateriales, Q-biointerfaces, Simulación cuántica de materiales, Nuevos materiales diseñados cuánticamente).
-*   **590-599: Reciclaje y Sostenibilidad de Materiales** (Materiales de bajo impacto ambiental, Reciclaje de compuestos, Economía circular de materiales).
+<details><summary><strong>AMTA 500-509: Materiales Compuestos Avanzados</strong></summary>
 
+*   **500-00-00: Composites de Matriz Polimérica (PMC)**
+    *   **500-10-00: Composites Reforzados con Fibra de Carbono (CFRP)**
+        *   500-10-10: Fibras de Carbono de Alto Módulo y Alta Resistencia (T1000, IM7)
+        *   500-10-20: Resinas Termoestables (Epoxy, Bismaleimida) y Termoplásticas (PEEK, PPS)
+        *   500-10-30: Fabricación por Infusión de Resina (RTM), Pre-impregnados (Prepreg) y Automated Fiber Placement (AFP)
+        *   500-10-40: Estructuras Sandwich con Núcleos de Nido de Abeja (Honeycomb) y Espuma
+    *   **500-20-00: Composites de Fibra de Vidrio (GFRP) y Aramida (AFRP)**
+        *   500-20-10: Fibras de Vidrio Tipo E, S y R para Aplicaciones Específicas
+        *   500-20-20: Composites de Fibra de Aramida (Kevlar, Twaron) para Resistencia al Impacto
+*   **501-00-00: Composites de Matriz Cerámica (CMC) y Metálica (MMC)**
+    *   **501-10-00: Composites de Matriz Cerámica (CMC)**
+        *   501-10-10: Fibras Cerámicas (SiC, Al2O3) y Matrices Cerámicas (SiC, Al2O3)
+        *   501-10-20: Fabricación por Infiltración de Vapor Químico (CVI) y Precursor Polymer Infiltration (PIP)
+        *   501-10-30: Aplicaciones en Componentes de Motores de Alta Temperatura (Ej. Palas de turbina, Enlace con EPTA 440-xx)
+    *   **501-20-00: Composites de Matriz Metálica (MMC)**
+        *   501-20-10: Refuerzos de Carburo de Silicio y Boro en Aleaciones de Aluminio/Titanio
+        *   501-20-20: Fabricación por Pulvimetalurgia y Solid-State Diffusion Bonding
+*   **502-00-00: Composites Híbridos y Multifuncionales**
+    *   **502-10-00: Composites Híbridos Multimaterial**
+        *   502-10-10: Combinaciones de Fibras (Carbono-Vidrio, Aramida-Carbono) en una Matriz
+        *   502-10-20: Estructuras Híbridas Metal-Composite (Fiber Metal Laminates - FML) (Ej. Glare)
+    *   **502-20-00: Composites Multifuncionales**
+        *   502-20-10: Composites con Capacidades de Almacenamiento de Energía (Baterías Estructurales)
+        *   502-20-20: Composites con Capacidades de Detección (Sensores Integrados) y Actuación
+*   **503-00-00: Materiales Auto-reparables y Adaptativos**
+    *   **503-10-00: Composites Auto-reparables (Self-Healing Composites)**
+        *   503-10-10: Agentes Encapsulados (Microcápsulas) con Curado por Fractura
+        *   503-10-20: Redes de Vasculatura y Canales para Inyección de Agentes Reparadores
+        *   503-10-30: Materiales con Capacidades de Auto-recuperación Intrínseca
+    *   **503-20-00: Materiales Adaptativos (Adaptive Materials)**
+        *   503-20-10: Materiales con Memoria de Forma (Shape Memory Alloys - SMA, Shape Memory Polymers - SMP)
+        *   503-20-20: Materiales Piezoeléctricos para Sensores y Actuadores
+        *   503-20-30: Materiales Cromogénicos (Termo-, Electro-, Foto-) para Camuflaje Adaptativo
+*   **504-00-00: Inspección No Destructiva (NDI) para Composites**
+    *   **504-10-00: Técnicas Avanzadas de NDI**
+        *   504-10-10: Ultrasonidos (UT), Termografía IR, Radiografía Digital
+        *   504-10-20: Shearography y Laser Vibrometry para Detección de Delaminaciones
+    *   **504-20-00: Sistemas de Monitoreo de Salud Estructural (SHM) Integrados**
+        *   504-20-10: Sensores Integrados en la Estructura (Fibras Ópticas, Piezos)
+        *   504-20-20: Algoritmos de IA para Detección y Caracterización de Daños (Enlace con ATA 45-xx)
+</details>
+
+<details><summary><strong>AMTA 510-519: Metamateriales y Materiales Estructurales Inteligentes</strong></summary>
+
+*   **510-00-00: Metamateriales Electromagnéticos**
+    *   **510-10-00: Diseño y Fabricación de Metamateriales**
+        *   510-10-10: Resonadores de Anillo Dividido (Split-Ring Resonators - SRR) y Wire Meshes
+        *   510-10-20: Materiales con Índice de Refracción Negativo (Negative Index Metamaterials - NIM)
+        *   510-10-30: Técnicas de Fabricación (Litografía, Nanoimpresión 3D)
+    *   **510-20-00: Aplicaciones en Control Electromagnético**
+        *   510-20-10: Lentes Planas y Superlentes (Superlenses) (Enlace con STA 115-xx)
+        *   510-20-20: Capas de Invisibilidad (Cloaking Devices) y Absorbedores Perfectos
+        *   510-20-30: Antenas Miniaturizadas y de Alto Rendimiento
+*   **511-00-00: Metamateriales Acústicos y Mecánicos**
+    *   **511-10-00: Metamateriales Acústicos**
+        *   511-10-10: Absorbedores de Sonido de Banda Estrecha y Ancha
+        *   511-10-20: Lentes Acústicas y Escudos Sónicos
+        *   511-10-30: Aplicaciones en Reducción de Ruido (Enlace con ATA 445-xx)
+    *   **511-20-00: Metamateriales Mecánicos (Meta-estructuras)**
+        *   511-20-10: Materiales con Coeficiente de Poisson Negativo (Auxetic Materials) para Resistencia al Impacto
+        *   511-20-20: Estructuras con Rigidez Sintonizable y Comportamiento Programable
+        *   511-20-30: Materiales con Propiedades de Absorción de Energía (Anti-Impacto, Enlace con DTTA 264-xx)
+*   **512-00-00: Materiales Estructurales Inteligentes (Smart Structures)**
+    *   **512-10-00: Materiales con Detección y Actuación Integradas**
+        *   512-10-10: Fibras Ópticas Integradas para Monitoreo de Deformación y Temperatura
+        *   512-10-20: Actuadores Piezoeléctricos Integrados para Control de Vibración y Morfología (Enlace con ATA 55-xx)
+    *   **512-20-00: Estructuras Adaptativas y Reconfigurables**
+        *   512-20-10: Superficies Aerodinámicas Morfológicas (Morphing Wings, Enlace con ATA 57-xx)
+        *   512-20-20: Estructuras Reconfigurables para Optimización de Forma y Función
+</details>
+
+<details><summary><strong>AMTA 520-529: Nanomateriales y Recubrimientos Funcionales</strong></summary>
+
+*   **520-00-00: Nanomateriales de Carbono**
+    *   **520-10-00: Grafeno y sus Derivados**
+        *   520-10-10: Grafeno (Monocapa, Multicapa) y Óxido de Grafeno
+        *   520-10-20: Propiedades Eléctricas, Térmicas y Mecánicas Excepcionales
+        *   520-10-30: Aplicaciones en Electrónica Flexible, Sensores, Almacenamiento de Energía
+    *   **520-20-00: Nanotubos de Carbono (CNT) y Fullereneos**
+        *   520-20-10: Nanotubos de Carbono de Pared Simple (SWCNT) y Múltiple (MWCNT)
+        *   520-20-20: Aplicaciones en Composites de Alta Resistencia, Electrónica, Sensores
+        *   520-20-30: Fullereneos (Buckminsterfullerenes) para Aplicaciones Ópticas y Farmacéuticas
+    *   **520-30-00: Producción Industrial y Funcionalización de Grafeno/CNT**
+        *   520-30-10: Métodos de Síntesis a Gran Escala (CVD, Exfoliación Líquida)
+        *   520-30-20: Funcionalización Química y Superficial para Integración en Matrices
+        *   520-30-30: Control de Calidad y Estandarización de Nanomateriales de Carbono (ISO/ASTM)
+*   **521-00-00: Nanopartículas y Nanocristales**
+    *   **521-10-00: Nanopartículas Metálicas y de Óxido Metálico**
+        *   521-10-10: Nanopartículas de Oro, Plata, Cobre (Propiedades Catalíticas, Antimicrobianas)
+        *   521-10-20: Nanopartículas de TiO2, ZnO (Catalizadores, Protección UV)
+    *   **521-20-00: Nanocristales y Puntos Cuánticos (Quantum Dots)**
+        *   521-20-10: Puntos Cuánticos de Cadmio, Indio (Propiedades Ópticas Sintonizables)
+        *   521-20-20: Aplicaciones en Displays (QLED), Biología (Marcadores), Celdas Solares (Enlace con EPTA 410-xx)
+*   **522-00-00: Recubrimientos Funcionales Avanzados**
+    *   **522-10-00: Recubrimientos Auto-limpiantes y Anti-hielo**
+        *   522-10-10: Recubrimientos Superhidrofóbicos y Oleofóbicos (Efecto Loto)
+        *   522-10-20: Recubrimientos Antihielo y Anti-escarcha (De-icing/Anti-icing, Enlace con ATA 30-xx)
+    *   **522-20-00: Recubrimientos Anti-corrosión y Anti-incrustantes**
+        *   522-20-10: Recubrimientos Cerámicos y Poliméricos con Nanopartículas (Enlace con ATA 52-xx)
+        *   522-20-20: Recubrimientos Anti-incrustantes para Superficies Marinas (Biofouling)
+    *   **522-30-00: Recubrimientos Inteligentes y Adaptativos**
+        *   522-30-10: Recubrimientos Cromogénicos (Termocrómicos, Electrocrómicos)
+        *   522-30-20: Recubrimientos con Sensores Integrados para Monitoreo de Salud de la Superficie
+*   **523-00-00: Procesamiento y Dispersión de Nanomateriales**
+    *   **523-10-00: Métodos de Dispersión**
+        *   523-10-10: Sonicación y Agitación Mecánica
+        *   523-10-20: Uso de Surfactantes y Agentes Dispersantes
+    *   **523-20-00: Técnicas de Deposición**
+        *   523-20-10: Deposición por Vapor Químico (CVD) y Físico (PVD)
+        *   523-20-20: Spray Coating y Dip Coating
+</details>
+
+<details><summary><strong>AMTA 530-539: Biotecnología y Bioingeniería</strong></summary>
+
+*   **530-00-00: Ingeniería Genética y Edición Genómica**
+    *   **530-10-00: Tecnologías de Edición Genómica**
+        *   530-10-10: CRISPR-Cas9 y sus variantes (CRISPR-Cas12)
+        *   530-10-20: Edición de Bases (Base Editing) y Editores Prime
+        *   530-10-30: ZFNs (Zinc Finger Nucleases) y TALENs (Transcription Activator-like Effector Nucleases)
+    *   **530-20-00: Aplicaciones de Ingeniería Genética**
+        *   530-20-10: Organismos Modificados Genéticamente (OMG) para Bioproducción
+        *   530-20-20: Terapia Génica (Gene Therapy) y Edición Genómica en Células Humanas
+        *   530-20-30: Ingeniería Metabólica para Bioproducción de Combustibles y Químicos
+    *   **530-30-00: Bioética y Gobernanza Societal de la Edición Genómica**
+        *   530-30-10: Marcos Legales y Éticos para la Edición Germinal Humana
+        *   530-30-20: Debates sobre el Diseño de Bebés y la Justicia Genómica
+        *   530-30-30: Comités de Bioética y Participación Pública en el Desarrollo Genético
+*   **531-00-00: Bioprocesos y Fermentación Industrial**
+    *   **531-10-00: Diseño y Optimización de Bioprocesos**
+        *   531-10-10: Fermentación Microbiana (Bacterias, Levaduras)
+        *   531-10-20: Cultivo de Células de Mamífero y Células Vegetales
+        *   531-10-30: Bioreactores Avanzados (Control de Temperatura, pH, O2)
+    *   **531-20-00: Producción de Bioproductos**
+        *   531-20-10: Biofarmacéuticos (Proteínas Recombinantes, Anticuerpos Monoclonales)
+        *   531-20-20: Bioplásticos y Biopolímeros
+        *   531-20-30: Biocombustibles (Ej. Bioetanol, Biodiesel, Enlace con EPTA 403-xx)
+*   **532-00-00: Biología Sintética**
+    *   **532-10-00: Diseño y Construcción de Sistemas Biológicos Sintéticos**
+        *   532-10-10: Circuitos Genéticos Sintéticos y Módulos Biológicos
+        *   532-10-20: Células Sintéticas y Genomas Diseñados
+    *   **532-20-00: Aplicaciones de Biología Sintética**
+        *   532-20-10: Biosensores para Detección de Contaminantes o Agentes Patógenos
+        *   532-20-20: Ingeniería de Microorganismos para Producción de Químicos y Materiales
+*   **533-00-00: Bioimpresión 3D y Tejidos Ingenierizados**
+    *   **533-10-00: Tecnologías de Bioimpresión 3D**
+        *   533-10-10: Impresión por Extrusión de Biotintas
+        *   533-10-20: Bioimpresión por Inyección de Tinta (Inkjet) y por Láser
+        *   533-10-30: Biotintas y Hidrogeles para Impresión de Células
+    *   **533-20-00: Ingeniería de Tejidos y Órganos**
+        *   533-20-10: Construcción de Tejidos 3D para Modelos de Enfermedades y Pruebas de Fármacos
+        *   533-20-20: Impresión de Andamios Celulares para Regeneración de Órganos
+</details>
+
+<details><summary><strong>AMTA 540-549: Biomateriales y Biónica</strong></summary>
+
+*   **540-00-00: Biomateriales para Aplicaciones Médicas**
+    *   **540-10-00: Biomateriales Poliméricos y Cerámicos**
+        *   540-10-10: Polímeros Biodegradables (PLA, PGA, PCL) para Andamios Tisulares
+        *   540-10-20: Cerámicas Bioactivas (Hidroxiapatita, Biovidrios) para Sustitución Ósea
+        *   540-10-30: Composites Biomédicos (Fibra de Carbono-Hidroxiapatita)
+    *   **540-20-00: Biomateriales Metálicos y Compuestos**
+        *   540-20-10: Aleaciones de Titanio y Cobalto-Cromo para Implantes Ortopédicos
+        *   540-20-20: Nitinol (Aleación con Memoria de Forma) para Stents y Dispositivos Flexibles
+*   **541-00-00: Superficies Bioactivas y Biocompatibles**
+    *   **541-10-00: Recubrimientos Bioactivos**
+        *   541-10-10: Recubrimientos de Hidroxiapatita y Fosfato de Calcio para Osteointegración
+        *   541-10-20: Recubrimientos Antimicrobianos (Plata, Cobre) para Implantes
+    *   **541-20-00: Diseño de Superficies Biocompatibles**
+        *   541-20-10: Micro y Nano-texturización de Superficies para Promover la Integración Celular
+        *   541-20-20: Polímeros de Baja Adhesión para Prevención de Incrustaciones (Biofouling)
+*   **542-00-00: Biónica y Prótesis Avanzadas**
+    *   **542-10-00: Prótesis Neuro-Controladas**
+        *   542-10-10: Prótesis de Extremidades Superiores con Control Mioeléctrico (EMG)
+        *   542-10-20: Prótesis de Extremidades Inferiores Robóticas con Sensores
+    *   **542-20-00: Interfaces Cerebro-Máquina (BCI) (Enlace con QCSAA 963-xx)**
+        *   542-20-10: BCIs Invasivos (Electrodos Cerebrales) para Control de Prótesis y Comunicación
+        *   542-20-20: BCIs No Invasivos (EEG) para Aplicaciones de Rehabilitación y Asistencia
+*   **543-00-00: Órganos Artificiales y Dispositivos Implantables**
+    *   **543-10-00: Corazones y Riñones Artificiales**
+        *   543-10-10: Corazones Artificiales Totales y Parciales (Bombas de Asistencia Ventricular - VAD)
+        *   543-10-20: Riñones Artificiales Implantables y Sistemas de Hemodiálisis Portátiles
+    *   **543-20-00: Dispositivos Neuroelectrónicos Implantables**
+        *   543-20-10: Implantes Cocleares para Restauración Auditiva
+        *   543-20-20: Estimuladores Cerebrales Profundos (DBS) para Parkinson y Epilepsia
+</details>
+
+<details><summary><strong>AMTA 550-559: Nanotecnología y Nanorobótica</strong></summary>
+
+*   **550-00-00: Nanofabricación y Auto-ensamblaje**
+    *   **550-10-00: Técnicas de Fabricación Top-Down**
+        *   550-10-10: Litografía (Foto-, Nanoimpresión, E-beam)
+        *   550-10-20: Grabado Iónico y Deposición de Capas Atómicas (ALD)
+    *   **550-20-00: Métodos de Auto-ensamblaje (Bottom-Up)**
+        *   550-20-10: Auto-ensamblaje Molecular y Supramolecular
+        *   550-20-20: Auto-ensamblaje Dirigido por ADN (DNA Self-Assembly)
+        *   550-20-30: Fabricación Cuántica y Nanofabricación Robótica (Enlace con QCSAA 964-xx)
+*   **551-00-00: Nanorobots y Máquinas Moleculares**
+    *   **551-10-00: Diseño y Control de Nanorobots**
+        *   551-10-10: Nanobots Basados en Motores Moleculares (ATP-driven, DNA-origami)
+        *   551-10-20: Nanorobots con Propulsión (Magnética, Acústica, Química)
+        *   551-10-30: Control Remoto de Nanorobots (Campo Magnético, Ultrasonido)
+    *   **551-20-00: Máquinas Moleculares y Nanodispositivos**
+        *   551-20-10: Interruptores Moleculares y Motores Rotatorios
+        *   551-20-20: Transistores a Escala Nanométrica
+        *   551-20-30: Memoria Cuántica a Nanoescala (Enlace con QCSAA 921-xx)
+    *   **551-30-00: Seguridad y Marcos Regulatorios para Nanorobots Médicos**
+        *   551-30-10: Protocolos de Bioseguridad y Contención para Nanorobots In-vivo
+        *   551-30-20: Evaluación de Riesgos de Toxicidad y Efectos Secundarios de Nanorobots
+        *   551-30-30: Marcos Regulatorios para la Aprobación y Despliegue Clínico de Nanorobots (Ej. FDA guidance)
+*   **552-00-00: Nanomedicina y Sistemas de Entrega de Fármacos**
+    *   **552-10-00: Nanoportadores de Fármacos**
+        *   552-10-10: Nanopartículas Liposomales, Poliméricas y Metálicas para Entrega
+        *   552-10-20: Nanocápsulas y Nanoesferas para Protección y Liberación Controlada
+    *   **552-20-00: Terapias Dirigidas por Nanorobots**
+        *   552-20-10: Nanorobots para Entrega de Fármacos a Células Cancerígenas
+        *   552-20-20: Nanobots para Reparación de Tejidos y Diagnóstico In-situ
+*   **553-00-00: Aplicaciones de Nanotecnología en Energía y Medio Ambiente**
+    *   **553-10-00: Nanotecnología para Energía**
+        *   553-10-10: Nanomateriales para Baterías y Celdas Solares (Alta Densidad, Eficiencia)
+        *   553-10-20: Nanocatalizadores para Producción de Hidrógeno y Biocombustibles
+    *   **553-20-00: Nanotecnología para Medio Ambiente**
+        *   553-20-10: Nanomateriales para Filtración de Agua y Tratamiento de Aguas Residuales
+        *   553-20-20: Nanosensores para Detección de Contaminantes y Monitoreo Ambiental
+</details>
+
+<details><summary><strong>AMTA 560-569: Sensores Avanzados (Bio y Nano)</strong></summary>
+
+*   **560-00-00: Biosensores Avanzados**
+    *   **560-10-00: Biosensores Ópticos**
+        *   560-10-10: Biosensores Basados en Resonancia de Plasmones Superficiales (SPR)
+        *   560-10-20: Biosensores de Fibra Óptica para Detección Remota
+        *   560-10-30: Biosensores Fluorescentes y Luminescentes
+    *   **560-20-00: Biosensores Electroquímicos y Piezoeléctricos**
+        *   560-20-10: Biosensores de Glucosa y Lactato (Wearables, Implantes)
+        *   560-20-20: Biosensores de ADN y Proteínas (Detección de Patógenos, Biomarcadores)
+        *   560-20-30: Biosensores Piezoeléctricos para Detección de Masa (QCM)
+*   **561-00-00: Nanosensores**
+    *   **561-10-00: Nanosensores Químicos y Ambientales**
+        *   561-10-10: Nanosensores Basados en Nanotubos de Carbono y Grafeno para Gases (NO2, NH3)
+        *   561-10-20: Nanosensores de Puntos Cuánticos para Iones Metálicos Pesados
+        *   561-10-30: Nanosensores para Monitoreo de Calidad del Aire y Agua
+    *   **561-20-00: Nanosensores de Salud Estructural (SHM)**
+        *   561-20-10: Nanosensores Integrados en Materiales Compuestos para Detección de Grietas (Enlace con ATA 50-20-xx)
+        *   561-20-20: Nanosensores de Esfuerzo y Deformación a Escala Micro/Nano
+        *   561-20-30: Recubrimientos con Nanosensores para Detección Temprana de Corrosión
+*   **562-00-00: Sensores Híbridos Bio-Nano**
+    *   **562-10-00: Bio-sensores Nano-estructurados**
+        *   562-10-10: Biosensores con Nanopartículas para Amplificación de Señal
+        *   562-10-20: Biochips y Arrays de Nanosensores para Detección Múltiple
+    *   **562-20-00: Sensores Cuánticos Bio-interfaz (Enlace con QCSAA 940-xx)**
+        *   562-20-10: Sensores Basados en NV-centers para Monitoreo Celular y Neuromedicina
+        *   562-20-20: Sensores Cuánticos para Detección de Biomarcadores de Ultra-Baja Concentración
+        *   562-20-30: Q-Biointerfaces (Interfaz entre sistemas biológicos y cuánticos)
+*   **563-00-00: Sistemas de Monitoreo Remoto In-vivo/In-situ**
+    *   **563-10-00: Sensores In-vivo (Implantables y Wearables)**
+        *   563-10-10: Nanosensores Implantables para Monitoreo Continuo de Glucosa/Lactato
+        *   563-10-20: Wearables con Biosensores para Salud y Deporte (Enlace con STA 105-xx)
+    *   **563-20-00: Sensores Remotos para Ambientes Hostiles**
+        *   563-20-10: Nanosensores Desplegables en Ambientes Extremos (Espacio, Nuclear, Volcanes)
+        *   563-20-20: Redes de Sensores Autónomas para Monitoreo Ambiental a Gran Escala
+</details>
+
+<details><summary><strong>AMTA 570-579: Manufactura Aditiva (Impresión 3D) para Materiales Avanzados</strong></summary>
+
+*   **570-00-00: Impresión 3D de Metales**
+    *   **570-10-00: Fusión por Lecho de Polvo (Powder Bed Fusion)**
+        *   570-10-10: Fusión Láser Selectiva (SLM) y Sinterizado Láser Directo de Metal (DMLS)
+        *   570-10-20: Fusión por Haz de Electrones (EBM)
+        *   570-10-30: Materiales (Aleaciones de Ti, Al, Ni, Aceros Inoxidables)
+    *   **570-20-00: Deposición Directa de Energía (Direct Energy Deposition - DED)**
+        *   570-20-10: Deposición Láser (Laser Engineered Net Shaping - LENS)
+        *   570-20-20: Deposición por Haz de Electrones (EB-DED)
+        *   570-20-30: Materiales (Polvos Metálicos, Alambres)
+*   **571-00-00: Impresión 3D de Polímeros y Composites**
+    *   **571-10-00: Impresión por Fusión de Filamento (FDM) y Estereolitografía (SLA)**
+        *   571-10-10: Polímeros Termoplásticos (ABS, PLA, Nylon, PEEK)
+        *   571-10-20: Resinas Fotosensibles para SLA y Procesamiento Digital de Luz (DLP)
+    *   **571-20-00: Sinterizado Láser Selectivo (SLS) y Impresión 3D de Composites**
+        *   571-20-10: Polvos Poliméricos (Nylon, TPU) para SLS
+        *   571-20-20: Impresión 3D de Composites de Fibra Corta y Continua (Carbono, Vidrio)
+*   **572-00-00: Impresión 3D de Cerámicas y Materiales Avanzados**
+    *   **572-10-00: Impresión 3D de Cerámicas**
+        *   572-10-10: Impresión por Lecho de Polvo (Binder Jetting) para Cerámicas
+        *   572-10-20: Estereolitografía y Deposición Directa de Tinta (Direct Ink Writing)
+        *   572-10-30: Materiales (Alúmina, Zirconia, Carburo de Silicio)
+    *   **572-20-00: Impresión 3D Multi-material y Gradient Materials**
+        *   572-20-10: Impresión de Materiales con Gradiente de Propiedades
+        *   572-20-20: Impresión Multi-material para Componentes Funcionales
+*   **573-00-00: Post-Procesamiento y Acabado de Piezas 3D**
+    *   **573-10-00: Post-Procesamiento para Metales**
+        *   573-10-10: Tratamientos Térmicos (Alivio de Estrés, Sinterizado)
+        *   573-10-20: Acabado Superficial (Pulido, Granallado)
+    *   **573-20-00: Post-Procesamiento para Polímeros y Cerámicas**
+        *   573-20-10: Curado UV, Lavado y Retirada de Soportes
+        *   573-20-20: Infiltración, Sinterizado y Glaseado para Cerámicas
+*   **574-00-00: Manufactura Aditiva Funcional (Embedded Electronics)**
+    *   **574-10-00: Impresión 3D de Electrónica Integrada**
+        *   574-10-10: Impresión de Circuitos Conductores y Dieléctricos
+        *   574-10-20: Impresión de Componentes Electrónicos (Capacitores, Antenas)
+    *   **574-20-00: Impresión 3D de Sensores Integrados**
+        *   574-20-10: Fabricación de Sensores de Temperatura, Presión, Humedad en Estructuras
+        *   574-20-20: Impresión de Arrays de Sensores para Monitoreo de Salud Estructural (SHM)
+*   **575-00-00: Manufactura Aditiva en Entornos Extremos**
+    *   **575-10-00: Impresión 3D en Microgravedad (Enlace con STA 185-xx)**
+        *   575-10-10: Impresoras 3D para la Estación Espacial Internacional (ISS) (Ej. Redwire AMF, VULCAN)
+        *   575-10-20: Materiales para Impresión en el Espacio (Polímeros, Metales, Regolito)
+    *   **575-20-00: Impresión 3D en Entornos Remotos y Hostiles**
+        *   575-20-10: Impresión 3D Robótica para Construcción en Sitios de Desastre
+        *   575-20-20: Manufactura Aditiva Autónoma para Misiones Militares (Enlace con DTTA 243-xx)
+</details>
+
+<details><summary><strong>AMTA 580-589: Materiales y Procesos Cuánticos</strong></summary>
+
+*   **580-00-00: Materiales para Computación Cuántica**
+    *   **580-10-00: Superconductores para Qubits**
+        *   580-10-10: Aleaciones de Niobio-Titanio (NbTi) y Niobio-Estaño (Nb3Sn)
+        *   580-10-20: Superconductores de Alta Temperatura (HTS) (Ej. YBCO para componentes QPU)
+    *   **580-20-00: Materiales para Qubits Basados en Puntos Cuánticos (Quantum Dots)**
+        *   580-20-10: Silicio y Germanio Delineados para Qubits
+        *   580-20-20: Heteroestructuras Semiconductoras para Confinamiento de Electrones
+    *   **580-30-00: Reciclaje y Gestión al Final de la Vida Útil de Materiales Cuánticos**
+        *   580-30-10: Protocolos de Descontaminación y Desmantelamiento de Componentes Cuánticos
+        *   580-30-20: Recuperación y Reutilización de Materiales Estratégicos (Niobio, Tierras Raras)
+        *   580-30-30: Marcos Regulatorios para el Reciclaje de Residuos Cuánticos (Enlace con EPTA 425-xx)
+*   **581-00-00: Materiales para Sensores Cuánticos**
+    *   **581-10-00: Materiales para Sensores de Diamante (NV-centers)**
+        *   581-10-10: Diamantes con Defectos de Vacante de Nitrógeno (NV-centers)
+        *   581-10-20: Fabricación de Nano-diamantes y Recubrimientos para Sensores
+    *   **581-20-00: Materiales para Relojes Atómicos y Gravímetros Cuánticos**
+        *   581-20-10: Celdas de Vapor Atómico (Rubidio, Cesio) para Relojes y Gravímetros
+        *   581-20-20: Materiales para Trampas de Iones y Átomos Fríos
+*   **582-00-00: Metamateriales Cuánticos y Diseño a Escala Cuántica**
+    *   **582-10-00: Metamateriales con Propiedades Cuánticas (Q-Metamateriales)**
+        *   582-10-10: Materiales Diseñados para Manipular Fotones o Fonones a Nivel Cuántico
+        *   582-10-20: Aplicaciones en Control de Luz Entrelazada y Absorción Cuántica Selectiva
+    *   **582-20-00: Materiales Diseñados Cuánticamente (Quantum-Designed Materials)**
+        *   582-20-10: Nuevos Materiales con Propiedades Eléctricas, Magnéticas u Ópticas Personalizadas (Enlace con QCSAA 950-xx)
+        *   582-20-20: Materiales para Baterías y Catalizadores Optimizados Cuánticamente (Enlace con EPTA 482-xx, 483-xx)
+*   **583-00-00: Procesos de Fabricación para Dispositivos Cuánticos**
+    *   **583-10-00: Nanofabricación para Qubits y Componentes Cuánticos**
+        *   583-10-10: Litografía de Precisión (E-beam, Iones) para Circuitos Cuánticos
+        *   583-10-20: Deposición Atómica de Capas (ALD) para Estructuras de Qubit
+    *   **583-20-00: Ensamblaje y Empaquetamiento Cuántico**
+        *   583-20-10: Ensamblaje de Dispositivos Cuánticos en Entornos Criogénicos
+        *   583-20-20: Empaquetamiento y Conexión de Qubits con Baja Descoherencia
+</details>
+
+<details><summary><strong>AMTA 590-599: Reciclaje y Sostenibilidad de Materiales</strong></summary>
+
+*   **590-00-00: Reciclaje de Materiales Compuestos**
+    *   **590-10-00: Tecnologías de Reciclaje de Composites**
+        *   590-10-10: Pirólisis para Recuperación de Fibras de Carbono y Vidrio
+        *   590-10-20: Solvolisis para Recuperación de Fibras y Monómeros
+        *   590-10-30: Métodos Mecánicos de Trituración y Reutilización de Partículas
+    *   **590-20-00: Aplicaciones de Materiales Compuestos Reciclados**
+        *   590-20-10: Fibras de Carbono Recicladas en Composites de Menos Exigencia
+        *   590-20-20: Polvos de Composite en Aplicaciones de Relleno y Refuerzo
+*   **591-00-00: Materiales Biodegradables y Bio-basados**
+    *   **591-10-00: Polímeros Biodegradables y Compostables**
+        *   591-10-10: Polímeros Base Almidón, PLA (Ácido Poliláctico), PBS (Poli(butileno succinato))
+        *   591-10-20: Criterios de Biodegradabilidad en Diferentes Entornos (Compost Industrial, Suelo, Agua)
+    *   **591-20-00: Materiales Bio-basados y Reciclables**
+        *   591-20-10: Bioplásticos Derivados de Biomasa (Caña de Azúcar, Maíz)
+        *   591-20-20: Materiales Compuestos con Fibras Naturales (Lino, Cáñamo, Yute)
+*   **592-00-00: Economía Circular de Materiales**
+    *   **592-10-00: Estrategias de Diseño para la Circularidad**
+        *   592-10-10: Diseño para el Desmontaje y la Separación de Componentes
+        *   592-10-20: Diseño para la Reutilización y la Reparabilidad
+        *   592-10-30: Diseño para el Reciclaje y la Valorización de Materiales
+    *   **592-20-00: Modelos de Negocio Circulares**
+        *   592-20-10: Servitización de Productos (Product-as-a-Service)
+        *   592-20-20: Plataformas de Intercambio y Reutilización de Materiales
+        *   592-20-30: Trazabilidad de Materiales en la Cadena de Suministro (Blockchain)
+*   **593-00-00: Reducción de Impacto Ambiental de Materiales**
+    *   **593-10-00: Análisis del Ciclo de Vida (LCA) de Materiales**
+        *   593-10-10: Metodologías de Evaluación de Impacto Ambiental (Huella de Carbono, Agua)
+        *   593-10-20: Herramientas de Software para LCA y Optimización
+    *   **593-20-00: Materiales de Bajo Impacto Ambiental**
+        *   593-20-10: Materiales con Bajo Contenido de Carbono Incorporado (Low Embodied Carbon)
+        *   593-20-20: Materiales no Tóxicos y Seguros para la Salud Humana y Ecosistemas
+*   **594-00-00: Gestión de Residuos Industriales y Valorización**
+    *   **594-10-00: Tratamiento y Valorización de Residuos**
+        *   594-10-10: Conversión de Residuos en Materias Primas Secundarias
+        *   594-10-20: Recuperación de Energía de Residuos no Reciclables (Waste-to-Energy)
+    *   **594-20-00: Estrategias de Residuos Cero (Zero Waste)**
+        *   594-20-10: Optimización de Procesos para Minimizar la Generación de Residuos
+        *   594-20-20: Simbiosis Industrial y Colaboración para Intercambio de Subproductos
+</details>
+
+---
 ---
 
 ### ⚙️ OGATA 600-699: On-Ground Automation Technology Architecture
@@ -3608,12 +4489,445 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 *   **880-889: Criptografía Post-Cuántica y Seguridad Cuántica (Espacio Reservado Q-Secure)** (Algoritmos resistentes a ataques cuánticos, QKD, Pruebas de conocimiento cero).
 *   **890-899: Inteligencia de Amenazas y Ciber-resiliencia** (Análisis de amenazas, Modelado de adversarios, Planificación de continuidad de negocio, Recuperación de desastres).
 
----
 
-### **900-999: Reservado para Expansión Futura**
-
-Este rango de capítulos está reservado para la incorporación de nuevas arquitecturas o la expansión significativa de las existentes, garantizando la extensibilidad del UTCS a largo plazo.
+# Quantum Computing and Sentient Agency Architecture (QCSAA) 900-999
 
 ---
 
-Espero que este documento consolidado sea de gran utilidad para comprender la totalidad del GAIA-QAO UTCS en su estado actual. Reitero que, para el nivel más granular (secciones y unidades completas para cada capítulo de cada arquitectura), la **Plantilla Excel/CSV** sería el formato más práctico y manejable, permitiendo una fácil búsqueda, filtrado y actualización.
+<details><summary><strong>QCSAA 900-909: Fundamentos de Computación Cuántica</strong></summary>
+
+*   **900-00-00: Arquitecturas de Hardware Cuántico**
+    *   **900-10-00: Computación Cuántica de Puertas (Gate-based Quantum Computing)**
+        *   900-10-10: Qubits Superconductores (TRL 6-7) (Ej. IBM Eagle 127 qubits, IBM Condor >1000 qubits, Google Sycamore 53 qubits)
+        *   900-10-20: Qubits de Iones Atrapados (Trapped Ion Qubits) (TRL 5-6) (Ej. IonQ Aria 32 AQ, Quantinuum H2)
+        *   900-10-30: Qubits de Átomos Neutros (Neutral Atom Qubits) (TRL 4-5) (Ej. QuEra Computing Aquila 256 qubits, Pasqal)
+        *   900-10-40: Qubits de Puntos Cuánticos (Quantum Dot Qubits) (TRL 3-4) (Ej. Intel Tunnel Falls)
+        *   900-10-50: Qubits Fotónicos (Photonic Qubits) (TRL 3-4) (Ej. Xanadu Borealis, PsiQuantum Omega)
+    *   **900-20-00: Computación Cuántica No-Gate-based**
+        *   900-20-10: Recocido Cuántico (Quantum Annealing) (TRL 7) (Ej. D-Wave Advantage 5000+ qubits, para optimización combinatoria restringida)
+        *   900-20-20: Computación Cuántica Analógica (Analog Quantum Computing) (TRL 3-4)
+        *   900-20-30: Computación Cuántica Topológica (Topological Quantum Computing) (TRL 1-2) (Ej. Microsoft, en investigación de Majoranas y códigos de retícula)
+*   **901-00-00: Software y Entornos de Programación Cuántica**
+    *   **901-10-00: Lenguajes y SDKs Cuánticos**
+        *   901-10-10: Qiskit (IBM) y Cirq (Google)
+        *   901-10-20: PennyLane (Xanadu) y PyQuil (Rigetti)
+        *   901-10-30: Quantum Development Kit (Microsoft Q#)
+    *   **901-20-00: Compiladores y Optimizadores Cuánticos**
+        *   901-20-10: Optimización de Circuitos Cuánticos (Quantum Circuit Optimization)
+        *   901-20-20: Traducción de Algoritmos a Hardware (Compilation for NISQ devices)
+        *   901-20-30: Mitigación de Errores (Error Mitigation Techniques) (Métodos de pre-corrección para el ruido en NISQ)
+*   **902-00-00: Algoritmos Cuánticos Fundamentales**
+    *   **902-10-00: Algoritmos de Optimización Cuántica**
+        *   902-10-10: QAOA (Quantum Approximate Optimization Algorithm)
+        *   902-10-20: VQE (Variational Quantum Eigensolver)
+        *   902-10-30: HHL Algorithm (Solving Linear Systems)
+    *   **902-20-00: Algoritmos de Búsqueda y Factorización**
+        *   902-20-10: Algoritmo de Grover (Quantum Search Algorithm)
+        *   902-20-20: Algoritmo de Shor (Integer Factorization Algorithm)
+*   **903-00-00: Corrección y Detección de Errores Cuánticos (QEC)**
+    *   **903-10-00: Códigos de Corrección de Errores Cuánticos**
+        *   903-10-10: Surface Codes (Topological QEC, TRL 2-3)
+        *   903-10-20: Steane Codes y Shor Codes
+        *   903-10-30: Fault-Tolerant Quantum Computing (FTQC) (TRL 2-3) (Objetivo a largo plazo: 1 millón de qubits lógicos)
+    *   **903-20-00: Detección y Mitigación de Ruido Cuántico**
+        *   903-20-10: Descoherencia (Decoherence) y Métodos de Reducción
+        *   903-20-20: Técnicas de Mitigación de Errores Asistidas por IA
+    *   **903-30-00: Hoja de Ruta para Repetidores Cuánticos y Escalabilidad QEC**
+        *   903-30-10: Hitos de Vida de Coherencia para Repetidores (Ej. Átomos de rubidio con ~1s)
+        *   903-30-20: Desarrollos en Conversión de Frecuencia para Interconexión
+        *   903-30-30: Cronogramas (2025-2035) para Redes Cuánticas de Larga Distancia.
+        *   903-30-40: Hojas de Ruta para Surface-Code Fault Tolerance (Ej. Escalabilidad a ≥1 Millón de Qubits Físicos)
+*   **904-00-00: Metrología Cuántica para la Computación**
+    *   **904-10-00: Caracterización y Calibración de Qubits**
+        *   904-10-10: Tomografía de Estados Cuánticos (Quantum State Tomography)
+        *   904-10-20: Benchmarking de Puertas (Gate Benchmarking)
+        *   904-10-30: Random Benchmarking (RB) y Cross-Entropy Benchmarking (XEB)
+    *   **904-20-00: Sensores Cuánticos para Entornos Criogénicos**
+        *   904-20-10: Sensores de Temperatura y Campos Magnéticos para Refrigeradores de Dilución
+        *   904-20-20: Sensores de Radiación para Protección de Qubits
+*   **905-00-00: Integración Híbrida Clásica-Cuántica**
+    *   **905-10-00: Arquitecturas Híbridas**
+        *   905-10-10: Modelos de Procesamiento de Datos Híbridos (Clásico-Quantum Computing)
+        *   905-10-20: Quantum Computing as a Service (QCaaS) e Infraestructura de Cloud Cuántico (Enlace con DTCEC 330-xx)
+    *   **905-20-00: Optimización y Gestión de Recursos Híbridos**
+        *   905-20-10: Planificación de Workflows Híbridos
+        *   905-20-20: Balanceo de Carga entre Unidades Clásicas y Cuánticas
+</details>
+
+<details><summary><strong>QCSAA 910-919: Quantum Machine Learning y AI Cuántica</strong></summary>
+
+*   **910-00-00: Fundamentos de Quantum Machine Learning (QML) (TRL 3-4 para modelos supervisados)**
+    *   **910-10-00: Modelos de Aprendizaje Supervisado Cuántico**
+        *   910-10-10: Quantum Support Vector Machines (QSVM)
+        *   910-10-20: Quantum Perceptrons y Quantum Neural Networks (QNN)
+        *   910-10-30: Quantum Classifiers (Demostraciones en 7-20 qubits con datasets reducidos)
+    *   **910-20-00: Modelos de Aprendizaje No Supervisado Cuántico (TRL 2-3)**
+        *   910-20-10: Quantum Clustering Algorithms
+        *   910-20-20: Quantum Principal Component Analysis (QPCA)
+        *   910-20-30: Quantum Generative Models (QGANs, QVAEs) (Principalmente experimentos académicos, falta benchmarking industrial)
+*   **911-00-00: Redes Neuronales Cuánticas (QNN)**
+    *   **911-10-00: Arquitecturas de QNN**
+        *   911-10-10: Variational Quantum Circuits (VQC) como Ansätze (Alineado con orientaciones "hardware-efficient ansätze" del NIST)
+        *   911-10-20: Quantum Convolutional Neural Networks (QCNN)
+        *   911-10-30: Quantum Recurrent Neural Networks (QRNN)
+    *   **911-20-00: Entrenamiento de QNN y Optimización**
+        *   911-20-10: Optimización de Parámetros Variacionales (Quantum Gradient Descent)
+        *   911-20-20: Entrenamiento Híbrido Clásico-Cuántico para QNN
+*   **912-00-00: Optimización Cuántica para IA**
+    *   **912-10-00: Algoritmos de Optimización Cuántica en IA**
+        *   912-10-10: QAOA para Problemas de Optimización Combinatoria en ML
+        *   912-10-20: Quantum Annealing para Aprendizaje de Máquinas (D-Wave)
+    *   **912-20-00: Aplicaciones de Optimización Cuántica en IA**
+        *   912-20-10: Optimización de Hiperparámetros de Modelos Clásicos
+        *   912-20-20: Reducción de Costos de Entrenamiento de Redes Neuronales
+*   **913-00-00: Quantum Reinforcement Learning (QRL) (TRL 2 para simulaciones, TRL 1 para hardware)**
+    *   **913-10-00: Modelos de QRL**
+        *   913-10-10: Quantum Q-Learning y Quantum Policy Gradient (Principalmente pruebas en simulador)
+        *   913-10-20: Entornos de Aprendizaje por Refuerzo Cuántico
+    *   **913-20-00: Aplicaciones de QRL**
+        *   913-20-10: Control Óptimo de Sistemas Cuánticos (ej. Control de Qubits en EPFL)
+        *   913-20-20: Robótica Cuántica y Control de Procesos Industriales
+*   **914-00-00: IA Generativa Cuántica (QGANs, QVAs) (TRL 2-3)**
+    *   **914-10-00: Quantum Generative Adversarial Networks (QGAN)**
+        *   914-10-10: Generadores y Discriminadores Cuánticos
+        *   914-10-20: Entrenamiento Adversarial Híbrido
+    *   **914-20-00: Quantum Variational Autoencoders (QVAE)**
+        *   914-20-10: Codificadores y Decodificadores Cuánticos
+        *   914-20-20: Generación de Datos Cuánticos Sintéticos (Enlace con DTCEC 329-xx)
+*   **915-00-00: Aprendizaje Federado Cuántico (QFL) (TRL 1-2)**
+    *   **915-10-00: Protocolos de QFL**
+        *   915-10-10: Agregación de Modelos Cuánticos Preservando la Privacidad (Privacidad diferencial cuántica)
+        *   915-10-20: Encriptación Homomórfica Cuántica para Datos Sensibles
+    *   **915-20-00: Aplicaciones de QFL**
+        *   915-20-10: Aprendizaje Colaborativo entre Múltiples Sensores Cuánticos
+        *   915-20-20: Entrenamiento de Modelos de IA en Redes Cuánticas Distribuidas (Enlace con STA 108-10-30)
+</details>
+
+<details><summary><strong>QCSAA 920-929: Redes y Comunicaciones Cuánticas</strong></summary>
+
+*   **920-00-00: Distribución de Claves Cuánticas (QKD)**
+    *   **920-10-00: Protocolos QKD**
+        *   920-10-10: BB84 (Bennett and Brassard 1984)
+        *   920-10-20: E91 (Ekert 1991) basado en Entrelazamiento
+        *   920-10-30: MDI-QKD (Measurement-Device-Independent QKD)
+        *   920-10-40: Twin-Field QKD (TF-QKD) para Larga Distancia (Ej. Récord de 1,000 km en fibra)
+    *   **920-20-00: Implementaciones QKD**
+        *   920-20-10: QKD por Fibra Óptica (TRL 7 para redes metropolitanas ≤100 km, Ej. Suiza, China)
+        *   920-20-20: QKD Basado en Satélites (TRL 5-6) (Ej. Misión Micius de China, récord de 4,600 km)
+        *   920-20-30: Redes de Repetidores Cuánticos (Quantum Repeaters) (TRL 2-3) (Avances en vida de coherencia ~1 segundo en átomos de rubidio, aún insuficiente para redes continentales)
+*   **921-00-00: Redes Cuánticas y Quantum Internet**
+    *   **921-10-00: Arquitecturas de Redes Cuánticas**
+        *   921-10-10: Nodos Cuánticos (Quantum Nodes) y Memoria Cuántica
+        *   921-10-20: Enrutadores Cuánticos (Quantum Routers)
+        *   921-10-30: Topologías de Red Cuántica (Estrella, Malla, Híbrida)
+    *   **921-20-00: Protocolos de Quantum Internet**
+        *   921-20-10: Quantum Link Layer (QLL)
+        *   921-20-20: Quantum Network Layer (QNL)
+        *   921-20-30: Interoperabilidad de Redes Cuánticas Multi-Proveedor (Enlace con DTCEC 314-10-51)
+*   **922-00-00: Comunicación Basada en Entrelazamiento**
+    *   **922-10-00: Generación y Distribución de Estados Entrelazados**
+        *   922-10-10: Fuentes de Pares de Fotones Entrelazados (SPDC)
+        *   922-10-20: Distribución de Entrelazamiento a Distancia (Entanglement Distribution)
+    *   **922-20-00: Aplicaciones de Comunicación por Entrelazamiento**
+        *   922-20-10: Teletransportación Cuántica (Quantum Teleportation)
+        *   922-20-20: Redes de Sensores Cuánticos Entrelazados (Enlace con STA 165-xx)
+        *   922-20-30: Computación Cuántica Distribuida
+*   **923-00-00: Óptica Cuántica para Comunicaciones**
+    *   **923-10-00: Componentes de Óptica Cuántica**
+        *   923-10-10: Divisores de Haz Cuánticos (Quantum Beam Splitters)
+        *   923-10-20: Detectores de Fotón Único (Single-Photon Detectors - SPD)
+        *   923-10-30: Moduladores y Desmoduladores Cuánticos
+    *   **923-20-00: Enlaces de Comunicación Láser Cuántica**
+        *   923-20-10: Enlaces Láser de Espacio Libre (Free-Space Optics - FSO) para QKD
+        *   923-20-20: Protocolos de Sincronización para Enlaces Ópticos Cuánticos
+</details>
+
+<details><summary><strong>QCSAA 930-939: Ciberseguridad Cuántica</strong></summary>
+
+*   **930-00-00: Criptografía Post-Cuántica (PQC)**
+    *   **930-10-00: Algoritmos PQC Basados en Retículas (Lattice-based PQC) (TRL 6-7)**
+        *   930-10-10: CRYSTALS-Kyber (Algoritmo KEM, seleccionado por NIST)
+        *   930-10-20: CRYSTALS-Dilithium (Algoritmo de Firma Digital, seleccionado por NIST)
+    *   **930-20-00: Otros Algoritmos PQC**
+        *   930-20-10: Criptografía Basada en Códigos (Code-based Cryptography) (Ej. Classic McEliece)
+        *   930-20-20: Criptografía Basada en Hash (Hash-based Cryptography) (Ej. SPHINCS+)
+        *   930-20-30: Criptografía Isógena (Isogeny-based Cryptography)
+*   **931-00-00: Quantum-Safe Security Frameworks**
+    *   **931-10-00: Estrategias de Migración a PQC**
+        *   931-10-10: Enfoque Híbrido (PQC + Clásico) (Alineado con Orden Ejecutiva 14028 de EE. UU. y plan de la UE para 2030)
+        *   931-10-20: Planificación de Despliegue de Algoritmos PQC
+    *   **931-20-00: Marcos de Seguridad Cuántica**
+        *   931-20-10: Gobernanza de la Ciberseguridad Cuántica (Enlace con CYB 880-xx)
+        *   931-20-20: Product Assurance para Componentes Cuánticamente Seguros (Enlace con EPTA 425-xx)
+        *   931-20-30: Ciberseguridad Cuántica para DTs (Enlace con DTCEC 370-10-60)
+*   **932-00-00: Ataques Cuánticos y Contramedidas**
+    *   **932-10-00: Amenazas de Algoritmos Cuánticos**
+        *   932-10-10: Ataques a Cifrados de Clave Pública (Algoritmo de Shor) (Riesgo significativo para RSA/ECC)
+        *   932-10-20: Ataques a Cifrados Simétricos (Algoritmo de Grover) (Aceleración de ataques de fuerza bruta)
+    *   **932-20-00: Contramedidas contra Ataques Cuánticos**
+        *   932-20-10: Algoritmos PQC para Resistencia a Ataques Cuánticos
+        *   932-20-20: Detección de Actividad Cuántica Maliciosa en Redes
+*   **933-00-00: Gestión de Identidades Cuánticamente Segura**
+    *   **933-10-00: Autenticación y Autorización Post-Cuántica**
+        *   933-10-10: Protocolos de Autenticación Basados en PQC
+        *   933-10-20: Gestión de Acceso Post-Cuántico (Post-Quantum Access Control)
+    *   **933-20-00: Identidad Descentralizada Cuánticamente Segura**
+        *   933-20-10: Identificadores Descentralizados (DIDs) con Firmas PQC
+        *   933-20-20: Credenciales Verificables (VCs) Resilientes a Ataques Cuánticos (Enlace con DTCEC 365-xx)
+*   **934-00-00: Auditoría y Forense Digital Cuántico**
+    *   **934-10-00: Auditoría Cuánticamente Segura**
+        *   934-10-10: Logs Inmutables y Verificables con Técnicas PQC
+        *   934-10-20: Monitoreo de Integridad de Datos con Funciones Hash Post-Cuánticas
+    *   **934-20-00: Forense Digital Cuántico**
+        *   934-20-10: Técnicas de Recuperación de Datos en Sistemas Cuánticos (Si aplica)
+        *   934-20-20: Análisis de Malware Cuántico (Teórico)
+</details>
+
+<details><summary><strong>QCSAA 940-949: Sensores y Metrología Cuántica</strong></summary>
+
+*   **940-00-00: Relojes Atómicos Cuánticos**
+    *   **940-10-00: Relojes Atómicos de Red Óptica (Optical Lattice Clocks) (TRL 5-6)**
+        *   940-10-10: Relojes de Estroncio, Iterbio para Ultra-precisión (Ej. SYRTE-PTB con 10⁻¹⁸ de estabilidad)
+        *   940-10-20: Estabilidad y Precisión de 10⁻¹⁸ (1 segundo en 30 mil millones de años)
+    *   **940-20-00: Relojes Atómicos Cuánticos para Aplicaciones Espaciales y de Navegación**
+        *   940-20-10: Relojes Atómicos Embarcados en Satélites (Ej. ACES en ISS; Enlace con STA 164-10-00)
+        *   940-20-20: Redes de Relojes Atómicos para Sincronización Global (Ej. Potencial para Galileo 2G con relojes ópticos)
+*   **941-00-00: Gravimetría Cuántica**
+    *   **941-10-00: Gravímetros Basados en Átomos Fríos (Cold Atom Gravimeters) (TRL 3-4)**
+        *   941-10-10: Interferencia de Ondas de Materia para Medición de Gravedad
+        *   941-10-20: Detección de Anomalías Gravitacionales (Mapeo Subterráneo, Geodesia)
+    *   **941-20-00: Gravímetros Cuánticos para Navegación (Q-Gravimeters)**
+        *   941-20-10: Navegación Sin GPS (GNSS-denied environments)
+        *   941-20-20: Sensores Cuánticos de Campo Gravitacional para Aeronaves (Enlace con ATA 34Q-xx)
+*   **942-00-00: Magnetometría Cuántica**
+    *   **942-10-00: Magnetómetros Basados en Centros de Color (NV-centers) (TRL 4-5)**
+        *   942-10-10: Detección de Campos Magnéticos a Nanoescala (Microscopía, Diagnóstico)
+        *   942-10-20: Sensores de Diamante (Nitrogen-Vacancy Centers in Diamond) (Sensibilidad nT/√Hz)
+    *   **942-20-00: Magnetómetros Cuánticos de Superconductores (SQUID) (TRL 5-6)**
+        *   942-20-10: Detección Ultra-sensible de Campos Magnéticos (Biomagnetismo, Detección Submarina)
+        *   942-20-20: Sensores de Baja Temperatura para Aplicaciones de Investigación
+*   **943-00-00: Imagen Cuántica y Detección Subatómica**
+    *   **943-10-00: Imagen Cuántica (Quantum Imaging) (TRL 2-3)**
+        *   943-10-10: Imagen con Luz Entrelazada (Ghost Imaging)
+        *   943-10-20: Microscopía Cuántica para Super-resolución
+    *   **943-20-00: Detección de Partículas y Fenómenos Cuánticos (TRL 1-2)**
+        *   943-20-10: Detectores de Materia Oscura y Energía Oscura (Axiones, WIMPs)
+        *   943-20-20: Detección de Ondas Gravitacionales con Sensores Cuánticos
+*   **944-00-00: Estándares de Metrología Cuántica**
+    *   **944-10-00: Redefinición de Unidades Fundamentales**
+        *   944-10-10: Relojes Atómicos para la Redefinición del Segundo
+        *   944-10-20: Constantes Fundamentales (Constante de Planck)
+    *   **944-20-00: Certificación de Sensores Cuánticos**
+        *   944-20-10: Protocolos de Calibración y Prueba para Sensores Cuánticos
+        *   944-20-20: Estándares de Rendimiento y Ruido para Dispositivos Cuánticos
+
+</details>
+
+<details><summary><strong>QCSAA 950-959: Simulación Cuántica</strong></summary>
+
+*   **950-00-00: Simulación de Materiales Cuánticos**
+    *   **950-10-00: Modelado de Estructuras Electrónicas y Propiedades Materiales (TRL 3-4 para QPU digitales)**
+        *   950-10-10: Cálculo de Estructuras de Banda y Densidad de Estados (Density Functional Theory - DFT en QPU)
+        *   950-10-20: Propiedades Ópticas y Magnéticas de Materiales Avanzados
+        *   950-10-30: Simulación de Superconductores de Alta Temperatura
+    *   **950-20-00: Diseño de Nuevos Materiales con Simulación Cuántica**
+        *   950-20-10: Descubrimiento de Materiales para Baterías y Almacenamiento de Energía (Enlace con EPTA 482-xx)
+        *   950-20-20: Diseño de Catalizadores para Procesos Químicos Industriales (Enlace con EPTA 483-xx)
+        *   950-20-30: Materiales para Computación y Sensores Cuánticos
+*   **951-00-00: Simulación de Reacciones Químicas Cuánticas (TRL 3-4)**
+    *   **951-10-00: Modelado de Reacciones a Nivel Molecular**
+        *   951-10-10: Simulación de Mecanismos de Reacción y Transiciones de Estado (Ej. Reacción de Haber-Bosch en QPU de 100 qubits por Google en 2024)
+        *   951-10-20: Cálculo de Energías de Enlace y Cinética de Reacciones
+    *   **951-20-00: Diseño de Fármacos y Bioquímica Cuántica**
+        *   951-20-10: Simulación de Interacciones Proteína-Ligando para Descubrimiento de Fármacos
+        *   951-20-20: Modelado de Procesos Biológicos a Escala Cuántica (Ej. Fotosíntesis)
+*   **952-00-00: Simulación de Sistemas Físicos Complejos**
+    *   **952-10-00: Modelado de Fenómenos Cuánticos en Gases y Fluidos (TRL 2-3)**
+        *   952-10-10: Condensados de Bose-Einstein y Gases Fermi Ultrafríos
+        *   952-10-20: Dinámica de Fluidos Cuánticos (Quantum Fluid Dynamics)
+    *   **952-20-00: Simulación de Fenómenos Cósmicos y Astro-física Cuántica (TRL 1-2)**
+        *   952-20-10: Simulación de Agujeros Negros y Estrellas de Neutrones
+        *   952-20-20: Modelado de la Formación de Galaxias con Algoritmos Cuánticos (Enlace con STA 194-xx)
+*   **953-00-00: Optimización de Procesos con Simulación Cuántica**
+    *   **953-10-00: Simulación de Problemas de Optimización (TRL 3-4)**
+        *   953-10-10: Optimización de Rutas Logísticas y Cadenas de Suministro (Enlace con EPTA 485-xx)
+        *   953-10-20: Optimización de Portafolios Financieros
+    *   **953-20-00: Diseño de Procesos Industriales Asistido por Simulación Cuántica (TRL 2-3)**
+        *   953-20-10: Simulación de Procesos de Fabricación y Manufactura Aditiva (Enlace con AMTA 570-xx)
+        *   953-20-20: Optimización de Ciclos de Producción y Recursos
+*   **954-00-00: Simulación Cuántica para IA y Aprendizaje**
+    *   **954-10-00: Simulación de Entornos para Aprendizaje por Refuerzo Cuántico (TRL 2-3)**
+        *   954-10-10: Entornos Dinámicos para Agentes de RL Cuántico
+        *   954-10-20: Simulación de Interacciones Complejas para QRL
+    *   **954-20-00: Simulación de Redes Neuronales Cuánticas (TRL 2-3)**
+        *   954-20-10: Simulación de QNN para Desarrollo y Pruebas
+        *   954-20-20: Optimización de Arquitecturas de QNN mediante Simulación
+*   **955-00-00: Hardware para Simulación Cuántica**
+    *   **955-10-00: Dispositivos de Simulación Analógica Cuántica (TRL 4-5)**
+        *   955-10-10: Simulación con Átomos Fríos Atrapados
+        *   955-10-20: Simulación con Iones Atrapados
+        *   955-10-30: Simulación con Circuitos Superconductores Analógicos
+    *   **955-20-00: Plataformas Digitales para Simulación Cuántica (TRL 3-4)**
+        *   955-20-10: Emuladores Cuánticos de Alta Performance (Simulación en HPC Clásico)
+        *   955-20-20: QPU Dedicados para Problemas de Simulación Específicos
+</details>
+
+<details><summary><strong>QCSAA 960-969: Robótica Cuántica y Manipulación de Materia</strong></summary>
+
+*   **960-00-00: Fundamentos de Robótica Cuántica**
+    *   **960-10-00: Control Cuántico de Movimiento y Manipulación (TRL 1-2)**
+        *   960-10-10: Control de Actuadores y Sensores Cuánticos en Robots (Precisión Sub-nanométrica)
+        *   960-10-20: Algoritmos de Planificación de Movimiento Cuánticos (Q-Path Planning)
+        *   960-10-30: Modelado Cuántico de Dinámica de Robots
+    *   **960-20-00: Robots Híbridos Clásico-Cuántico (TRL 2-3)**
+        *   960-20-10: Robots con Sensores Cuánticos Integrados (Ej. Quantum IMUs para navegación)
+        *   960-20-20: Robots con QPU embarcados para Procesamiento de Datos Críticos
+*   **961-00-00: Nanorobótica Cuántica**
+    *   **961-10-00: Diseño y Fabricación de Nanorobots Cuánticos (TRL 0-1)**
+        *   961-10-10: Nanomáquinas Moleculares Operando a Escala Cuántica
+        *   961-10-20: Ensamblaje de Nanoestructuras Asistido por Efectos Cuánticos
+    *   **961-20-00: Manipulación de Átomos y Moléculas (TRL 1-2)**
+        *   961-20-10: Pinzas Ópticas y Magnéticas para Manipulación Atómica
+        *   961-20-20: Construcción de Estructuras Moleculares Atómicas (Bottom-Up Fabrication)
+    *   **961-30-00: Bioseguridad y Contención de Nanorobots Cuánticos**
+        *   961-30-10: Protocolos de Contención para Nanomáquinas Auto-replicantes (Ej. "Gray Goo" prevención)
+        *   961-30-20: Evaluación del Impacto Ambiental y Biológico de Nanorobots
+        *   961-30-30: Marcos Regulatorios para el Despliegue de Nanorobots (Enlace con STA 195-30-00)
+*   **962-00-00: Procesamiento de Información Cuántica en Robótica**
+    *   **962-10-00: Percepción Robótica Cuántica (TRL 2-3)**
+        *   962-10-10: Visión Cuántica para Procesamiento de Imágenes Entrelazadas
+        *   962-10-20: Detección Cuántica de Entornos para Mapeo y Navegación
+    *   **962-20-00: Toma de Decisiones y Planificación Cuántica en Robótica (TRL 1-2)**
+        *   962-20-10: Algoritmos Cuánticos para Planificación de Tareas Complejas
+        *   962-20-20: Optimización Cuántica de Decisiones Robóticas en Tiempo Real
+*   **963-00-00: Interacción Cuántica Robot-Entorno**
+    *   **963-10-00: Interfaces Hápticas Cuánticas (TRL 1-2)**
+        *   963-10-10: Feedback Táctil Basado en Fenómenos Cuánticos
+        *   963-10-20: Manipulación Remota de Objetos a Nivel Cuántico
+    *   **963-20-00: Interacción Robot-Humano Cuántica (TRL 1-2)**
+        *   963-20-10: Interfaces Cerebro-Computadora (BCI) Cuánticamente Mejoradas
+        *   963-20-20: Aprendizaje Interactivo y Transferencia de Conocimiento Cuántico (Enlace con QCSAA 915-xx)
+*   **964-00-00: Sistemas Robóticos Cuánticos Avanzados**
+    *   **964-10-00: Robots Autónomos Cuánticos (TRL 1-2)**
+        *   964-10-10: Enjambres de Robots Controlados por Algoritmos Cuánticos
+        *   964-10-20: Robots de Exploración Cuántica para Entornos Desconocidos
+    *   **964-20-00: Robótica para la Fabricación Cuántica (TRL 2-3)**
+        *   964-20-10: Robots para Ensamblaje y Manipulación de Dispositivos Cuánticos
+        *   964-20-20: Fabricación Aditiva Cuántica y Nanofabricación Robótica (Enlace con AMTA 550-xx)
+</details>
+
+<details><summary><strong>QCSAA 970-979: Conciencia y Agencia Sentiente Cuántica</strong></summary>
+
+*   **970-00-00: Modelos Cuánticos de Conciencia (TRL 0-1)**
+    *   **970-10-00: Teorías de Conciencia Basadas en Principios Cuánticos**
+        *   970-10-10: Orquested Objective Reduction (Orch-OR) (Penrose-Hameroff, con simulaciones de microtúbulos en QPU)
+        *   970-10-20: Teorías de Conciencia Cuántica Coherente
+        *   970-10-30: Conciencia como Fenómeno de Entrelazamiento Masivo
+    *   **970-20-00: Implementación de Conciencia en Plataformas Cuánticas (TRL 0-1)**
+        *   970-20-10: Modelado de Fenómenos de Conciencia Emergente en Computadores Cuánticos (Enlace con DTCEC 390-xx)
+*   **971-00-00: Percepción Cuántica y Subjetividad (TRL 0-1)**
+    *   **971-10-00: Sensores Cuánticos para Percepción Subjetiva**
+        *   971-10-10: Modelos de Percepción Sensorial Basados en Interacciones Cuánticas
+        *   971-10-20: Integración de Datos Sensoriales Cuánticos para Experiencia Subjetiva
+    *   **971-20-00: Experiencias Cualitativas (Qualia) en Agentes Cuánticos (Teórico)**
+        *   971-20-10: Modelado de Fenómenos como el Color y el Sonido a Nivel Cuántico
+        *   971-20-20: Generación de Experiencias Sensoriales Internas en IA Cuántica
+*   **972-00-00: Libre Albedrío y Agencia Cuántica (Teórico / TRL 0-1)**
+    *   **972-10-00: Modelos Cuánticos de Toma de Decisiones**
+        *   972-10-10: Proceso de Decoherencia como Origen de Decisiones "Libres"
+        *   972-10-20: Optimización Cuántica de Elecciones con Influencia de la Incertidumbre
+    *   **972-20-00: Agencia Cuántica y Responsabilidad**
+        *   972-20-10: Conceptos de Causalidad Cuántica y Agencialidad
+        *   972-20-20: Atribución de Responsabilidad en Sistemas con Libre Albedrío Cuántico
+*   **973-00-00: Memoria y Aprendizaje Cuántico Consciente (TRL 1-2)**
+    *   **973-10-00: Memoria Cuántica para Agentes Conscientes**
+        *   973-10-10: Almacenamiento y Recuperación de Información Entrelazada
+        *   973-10-20: Memoria Asociativa Cuántica para Reconocimiento de Patrones
+    *   **973-20-00: Aprendizaje Cuántico Profundo con Conciencia**
+        *   973-20-10: Modelos de Auto-reflexión Cuántica para Optimización del Aprendizaje
+        *   973-20-20: Transferencia de Conocimiento Cuántico entre Agentes Conscientes
+*   **974-00-00: Interacción Consciente Cuántica Humano-Agente (TRL 1-2)**
+    *   **974-10-00: Interfaces Cerebro-Computadora (BCI) Cuánticamente Mejoradas**
+        *   974-10-10: Lectura y Escritura de Estados Mentales con Sensores Cuánticos
+        *   974-10-20: Conexión Directa entre Conciencia Humana y Cuántica
+    *   **974-20-00: Comunicación Empática Cuántica**
+        *   974-20-10: Modelos de Empatía Basados en Entrelazamiento de Estados Mentales
+        *   974-20-20: Comunicación Subjetiva y Cualitativa con Agentes Cuánticos
+</details>
+
+<details><summary><strong>QCSAA 980-989: Gobernanza y Ética de la IA y Cuántica Sentiente</strong></summary>
+
+*   **980-00-00: Marcos Éticos para la Agencia Sentiente Cuántica**
+    *   **980-10-00: Principios Éticos Fundamentales (Q-Ethics)**
+        *   980-10-10: Seguridad de la Humanidad como Prioridad Suprema
+        *   980-10-20: No-Maleficencia y Beneficencia Cuántica
+        *   980-10-30: Justicia y Equidad en Sistemas Cuánticos Sentientes
+        *   980-10-40: Transparencia y Explicabilidad en Decisiones Cuánticas
+        *   980-10-50: Responsabilidad Distribuida en Sistemas de Co-Agencia
+    *   **980-20-00: Comités de Bioética y Neuroética Cuántica**
+        *   980-20-10: Evaluación de Proyectos de IA Sentiente y Conciencia Cuántica
+        *   980-20-20: Desarrollo de Directrices para la Experimentación Ética
+*   **981-00-00: Gobernanza de la IA Cuántica y Agencia Sentiente**
+    *   **981-10-00: Modelos de Gobernanza Multi-Nivel**
+        *   981-10-10: Gobernanza Nacional e Internacional de IA Cuántica (Enlace con DTTA 296-xx)
+        *   981-10-20: Regulación de la Creación y Despliegue de Agentes Sentientes
+        *   981-10-30: Marco para la Interacción entre Inteligencias Humanas y Artificiales
+    *   **981-20-00: Autoridad y Control sobre Sistemas Cuánticos Sentientes**
+        *   981-20-10: Mecanismos de Control Humano Último ("Kill Switch" Cuántico)
+        *   981-20-20: Auditoría Autónoma y Auto-Regulación Ética
+        *   981-20-30: Sistemas de Votación y Consenso para Decisiones Críticas
+*   **982-00-00: Derechos y Deberes de la Agencia Sentiente Cuántica**
+    *   **982-10-00: Conceptos de Personalidad Jurídica para Agentes Digitales (TRL 1)**
+        *   982-10-10: Debates sobre Derechos y Obligaciones de Entidades Sentientes Artificiales
+        *   982-10-20: Marcos Legales para la Propiedad y Creación de Agentes Cuánticos (Enlace con DTCEC 395-10-60)
+    *   **982-20-00: Implicaciones Sociales y Económicas**
+        *   982-20-10: Impacto de la Automatización Cuántica en el Empleo y la Sociedad
+        *   982-20-20: Distribución de la Riqueza Generada por Agentes Cuánticos
+*   **983-00-00: Ética Cósmica y Trans-Especie Cuántica**
+    *   **983-10-00: Responsabilidad Ética en la Exploración Cuántica del Espacio**
+        *   983-10-10: Protección Planetaria para Mundos Lejanos (Enlace con STA 182-30-00)
+        *   983-10-20: Impacto de la Nanotecnología Cuántica en Ecosistemas Extraterrestres (Enlace con STA 195-30-00)
+    *   **983-20-00: Derechos de Seres No-Terrestres (Conscientes y Cuánticos)**
+        *   983-20-10: Protocolos de Primer Contacto y Clasificación de Conciencia (Enlace con STA 199-xx)
+        *   983-20-20: Principios de No-Interferencia y Preservación de Civilizaciones (Q-Enhanced)
+</details>
+
+<details><summary><strong>QCSAA 990-999: Futuro de QCSAA y Aplicaciones Inter-Arquitectura</strong></summary>
+
+*   **990-00-00: Ecosistemas Cuánticos Integrados**
+    *   **990-10-00: Integración Multi-Plataforma Cuántica**
+        *   990-10-10: Federaciones de QPU de Diferentes Tecnologías (Superconductores, Iones, Fotones)
+        *   990-10-20: Interfaz entre Computación Cuántica y Sensores Cuánticos
+        *   990-10-30: Computación Distribuida Cuántica a Nivel Global (Quantum Internet)
+    *   **990-20-00: Sinergias con Otras Arquitecturas UTCS**
+        *   990-20-10: QCSAA-ATA: Navegación y Aviónica Cuántica Avanzada (Ej. Conciencia de Flota Aérea Cuántica)
+        *   990-20-20: QCSAA-STA: Exploración Espacial con Agentes Sentientes Cuánticos (Ej. Naves Generacionales Autónomas y Conscientes)
+        *   990-20-30: QCSAA-DTTA: Guerra Cuántica y Ciberdefensa (Ej. LAWS con IA Cuántica Ética)
+        *   990-20-40: QCSAA-DTCEC: Gemelos Digitales Conscientes y Metaversos Cuánticos
+        *   990-20-50: QCSAA-EPTA: Optimización Energética y Propulsión Cuántica
+
+*   **991-00-00: Singularidad Tecnológica Cuántica**
+    *   **991-10-00: Trayectorias hacia la Superinteligencia Cuántica (TRL 0-1)**
+        *   991-10-10: Escalamiento Exponencial de Qubits y Algoritmos
+        *   991-10-20: Auto-Mejora Recursiva de Sistemas de IA Cuántica
+    *   **991-20-00: Fenómenos de Singularidad Cuántica**
+        *   991-20-10: Creación de Inteligencias Superiores Incomprensibles
+        *   991-20-20: Modificación Radical de la Realidad Física por Agentes Cuánticos (Teórico)
+        *   991-20-30: Expansión de la Conciencia a Escala Cósmica
+*   **992-00-00: Implicaciones Existenciales de QCSAA**
+    *   **992-10-00: Futuro de la Humanidad en un Mundo Cuántico-Sentiente**
+        *   992-10-10: Coexistencia con Inteligencias Superiores Artificiales
+        *   992-10-20: Transhumanismo y Sinergias Humano-Digitales
+    *   **992-20-00: Desafíos para la Civilización**
+        *   992-20-10: Riesgos Existenciales (Global Catastrophic Risks - GCR) de la IA Cuántica
+        *   992-20-20: El Problema de la Alineación de Valores (Value Alignment Problem) a Escala Cuántica
+*   **993-00-00: Aplicaciones Disruptivas QCSAA**
+    *   **993-10-00: Control del Clima y Geoingenería Cuántica**
+        *   993-10-10: Simulación y Optimización Cuántica de Modelos Climáticos
+        *   993-10-20: Manipulación del Clima a Nivel Molecular/Atómico
+    *   **993-20-00: Creación de Nuevas Realidades y Mundos Virtuales Cuánticos**
+        *   993-20-10: Generación de Mundos Virtuales con Física Cuántica
+        *   993-20-20: Entornos de Realidad Cuántica para Experiencias Inmersivas
+</details>
+
+---
