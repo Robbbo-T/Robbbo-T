@@ -46,7 +46,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
 
 ---
 
-## ✈️ Casos de Uso Rápidos
+##  Casos de Uso Rápidos
 
 1.  **Panel Compuesto Bio-Nano Auto-Reparable para AMPEL360**
     `AMTA-30-15-04` → ARQ AMTA · Cap 30 (*Estructuras Compuestas*) · Sec 15 (*Bio-Polímero Auto-Curativo*) · Unidad 04 (*Nano-Sensor de Hidrólisis*).
@@ -66,71 +66,9 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
 
 ## 📚 Desglose Detallado por Arquitectura
 
-
-# ✈️ ATA 00‑99: Aerospace Technology Architecture
-
-La clasificación ATA (Air Transport Association) constituye la **columna vertebral** de la documentación aeronáutica. Aporta un marco modular para todos los sistemas, subsistemas y componentes, y continúa siendo extensible hacia arquitecturas disruptivas como **BWB, UAM, eVTOL** y los futuros dominios **Q‑aviónica/Q‑sensores**.
-
 ---
 
-## 1. Secciones Fundamentales ATA 00‑99
-
-| ATA Rango | Sistema / Cobertura                         | Observaciones                                                  |
-| --------- | ------------------------------------------- | -------------------------------------------------------------- |
-| 00‑09     | Información general, límites, mantenimiento | Base para cualquier programa                                   |
-| 10‑19     | Manejo en tierra & servicio                 | Procedimientos de línea, preservación                          |
-| 20‑29     | Sistemas core de aeronave                   | Aire acondicionado, hidráulica, comunicaciones                 |
-| 30‑39     | Protección & sistemas mecánicos             | Hielo/lluvia, instrumentos, tren                               |
-| 40‑49     | Aviónica, información & APU                 | IMA, CMS, potencia auxiliar                                    |
-| 50‑59     | Estructuras primarias e interfaces AAA      | Compartimentos, fuselaje, alas, conectividad con AMTA/DCEC/CYB |
-| 60‑79     | Propulsión tradicional & eco‑tech           | Motores turbina, SAF, H₂, ruido                                |
-| 80‑89     | Propulsión alternativa & cuántica           | Eléctrica, híbrida, celdas H₂, Q‑combustibles                  |
-| 90‑99     | Tipos específicos & expansión               | BWB, eVTOL, UAS, suborbital, IA ética                          |
-
-> **Compatibilidad futura**: sub‑capítulos **34Q, 42Q, 60Q** albergarán navegación, aviónica y propulsión cuántica sin romper la jerarquía.
-
----
-
-## 2. Cobertura en Nuevas Arquitecturas (BWB, UAM, eVTOL)
-
-*   **Cap. 27 & 34** → ampliados para **fly‑by‑wire distribuido** y **GNSS + INS híbrido‑cuántico**.
-*   **Series 80‑89** → documentan **propulsión eléctrica/híbrida**, clave en eVTOL.
-*   **Capítulos 90‑91** → incluyen características estructurales BWB y operaciones UAS.
-
----
-
-## 3. >50 Secciones Emergentes: Q‑Aviónica & Q‑Sensores
-
-| Capítulo | Innovación cuántica prevista    |
-| -------- | ------------------------------- |
-| 34Q      | INS cuántico, brújula atómica   |
-| 42Q      | QPU embarcadas, fotónica        |
-| 46       | Criptografía post‑cuántica, QKD |
-| 77Q      | Sensores inerciales cuánticos   |
-
----
-
-## 4. Tendencias Modulares
-
-*   **IA/ML** integrados en cap. 22 (autoflight) y 45 (mantenimiento predictivo).
-*   **Eco‑Tech** (70‑79) para combustibles sostenibles y reducción de ruido.
-*   **Interfaces AAA** (50‑5X‑XX) enlazan con **AMTA, DCEC, CYB** para flujos de datos y seguridad.
-
----
-
-## 5. Mapa Rápido de Capítulos Clave
-
-| Cap. | Título                  | Ejemplo futuro          |
-| ---- | ----------------------- | ----------------------- |
-| 22   | Auto Flight             | IA cuántica para eVTOL  |
-| 34   | Navegación              | Fusión GNSS‑LiDAR‑Q‑INS |
-| 42   | Aviónica Modular (IMA)  | Q‑SoC redundante        |
-| 46   | Sistemas de información | Ciber‑IA predictiva     |
-| 70   | SAF & Bio‑fuel          | Blockchain trazabilidad |
-
----
-
-## 6. Desglose Detallado Completo
+### ✈️ ATA 00-99 *Aerospace Technology Architecture*  
 
 <details><summary><strong>ATA 00‑09: Información General y Servicio</strong></summary>
 
