@@ -68,7 +68,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
 
 ---
 
-### ✈️ ATA 00-99 *Aerospace Technology Architecture*  
+## ✈️ ATA 00-99 *Aerospace Technology Architecture*  
 
 <details><summary><strong>ATA 00‑09: Información General y Servicio</strong></summary>
 
@@ -861,7 +861,7 @@ Cada arquitectura tiene un bloque de capítulos (`50-59`) dedicado a definir int
 ---
 
 
-### 🚀 STA 100-199: Space Technology Architecture
+## 🚀 STA 100-199: Space Technology Architecture
 
 La **Space Technology Architecture (STA)** se enfoca en todas las tecnologías, sistemas y componentes relacionados con las operaciones espaciales, la exploración del cosmos y la infraestructura en el espacio, desde la órbita baja terrestre (LEO) hasta las misiones interplanetarias y más allá. Este framework se alinea con la visión de la ECSS y la NASA Technology Taxonomy, incorporando las últimas innovaciones.
 
@@ -1460,7 +1460,7 @@ La **Space Technology Architecture (STA)** se enfoca en todas las tecnologías, 
 
 ---
 
-### 🛡️ DTTA 200-299: Defence Technology Type Architecture
+## 🛡️ DTTA 200-299: Defence Technology Type Architecture
 
 La **Defence Technology Type Architecture (DTTA)** abarca todos los sistemas, tecnologías y operaciones relacionadas con la defensa y la seguridad, cubriendo los dominios aéreo, marítimo, terrestre y cibernético. Este framework está diseñado para clasificar tecnologías militares desde sistemas de combate convencionales hasta capacidades de guerra cuántica y autónoma.
 
@@ -1977,7 +1977,7 @@ La **Defence Technology Type Architecture (DTTA)** abarca todos los sistemas, te
 
 ---
 
-# 🔮 DTCEC 300-399: Digital Twin, Cloud & Edge Computing Architecture
+## 🔮 DTCEC 300-399: Digital Twin, Cloud & Edge Computing Architecture
 
 La **Digital Twin, Cloud & Edge Computing Architecture (DTCEC)** abarca todas las tecnologías, metodologías y sistemas relacionados con gemelos digitales, computación en la nube y en el borde, inteligencia artificial y realidad extendida. Este framework está diseñado para clasificar tecnologías desde réplicas digitales básicas hasta ecosistemas digitales conscientes con capacidades predictivas cuánticas.
 
@@ -3460,7 +3460,7 @@ La **Digital Twin, Cloud & Edge Computing Architecture (DTCEC)** abarca todas la
 
 ---
 
-# ⚡ EPTA 400-499: Energy & Propulsion Technology Architecture
+## ⚡ EPTA 400-499: Energy & Propulsion Technology Architecture
 
 La **Energy & Propulsion Technology Architecture (EPTA)** cubre la generación, almacenamiento, conversión y sistemas de propulsión para diversas aplicaciones, con un enfoque en la sostenibilidad y la eficiencia energética. Este framework está diseñado para clasificar tecnologías desde fuentes de energía convencionales hasta propulsores cuánticos avanzados, anticipando la convergencia entre sostenibilidad, eficiencia y la innovación más disruptiva.
 
@@ -4377,7 +4377,7 @@ La **Advanced Material, Bio & Nanotechnology Architecture (AMTA)** se dedica a l
 
 ---
 
-### ⚙️ OGATA 600-699: On-Ground Automation Technology Architecture
+## ⚙️ OGATA 600-699: On-Ground Automation Technology Architecture
 
 La **On-Ground Automation Technology Architecture (OGATA)** se enfoca en la automatización, robótica y sistemas inteligentes aplicados a entornos terrestres. Este framework clasifica tecnologías que van desde robots industriales y vehículos autónomos hasta infraestructuras inteligentes y la manufactura avanzada, con un énfasis en la optimización por IA y la computación cuántica.
 
@@ -4837,7 +4837,7 @@ La **On-Ground Automation Technology Architecture (OGATA)** se enfoca en la auto
 
 ---
 
-### 🏙️ ACV 700-799: Aerial City Viability
+## 🏙️ ACV 700-799: Aerial City Viability
 
 La **Aerial City Viability (ACV)** se dedica a las tecnologías y la infraestructura necesarias para la movilidad aérea urbana (UAM) y la integración de vehículos aéreos en entornos urbanos densos. Este framework se enfoca en la sostenibilidad, la habitabilidad y la creación de un ecosistema de movilidad aérea segura y eficiente, interconectado con las ciudades inteligentes del futuro.
 
@@ -5262,7 +5262,7 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 
 ---
 
-# Quantum Computing and Sentient Agency Architecture (QCSAA) 900-999
+## 🌐 Quantum Computing and Sentient Agency Architecture (QCSAA) 900-999
 
 <details><summary><strong>QCSAA 900-909: Fundamentos de Computación Cuántica</strong></summary>
 
