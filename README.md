@@ -4438,39 +4438,872 @@ La **Advanced Material, Bio & Nanotechnology Architecture (AMTA)** se dedica a l
 </details>
 
 ---
----
 
 ### ⚙️ OGATA 600-699: On-Ground Automation Technology Architecture
 
-La **On-Ground Automation Technology Architecture (OGATA)** se enfoca en la automatización, robótica y sistemas inteligentes aplicados a entornos terrestres, incluyendo logística, manufactura e infraestructura.
+La **On-Ground Automation Technology Architecture (OGATA)** se enfoca en la automatización, robótica y sistemas inteligentes aplicados a entornos terrestres. Este framework clasifica tecnologías que van desde robots industriales y vehículos autónomos hasta infraestructuras inteligentes y la manufactura avanzada, con un énfasis en la optimización por IA y la computación cuántica.
 
-*   **600-609: Robótica Industrial y Colaborativa** (Robots manipuladores, Cobots, Sistemas de visión robótica, Automatización de procesos de ensamblaje).
-*   **610-619: Vehículos Autónomos Terrestres (AGV/AMR)** (Vehículos guiados automáticamente, Robots móviles autónomos, Logística de almacén, Vehículos de entrega).
-*   **620-629: Infraestructura Inteligente** (Ciudades inteligentes, Sensores de tráfico, Gestión de residuos automatizada, Sistemas de energía distribuida).
-*   **630-639: Fábricas 4.0 y Manufactura Avanzada** (Ciber-sistemas físicos, IIoT, Mantenimiento predictivo en manufactura, Personalización en masa).
-*   **640-649: Logística y Almacenamiento Automatizado** (Sistemas de clasificación automatizada, Almacenes autónomos, Optimización de rutas de reparto).
-*   **650-659: Agricultura de Precisión y Automatización Agrícola** (Drones agrícolas, Robots de siembra/cosecha, Sistemas de riego inteligentes).
-*   **660-669: Construcción y Demolición Automatizada** (Robots de construcción, Impresión 3D de edificios, Vehículos de demolición autónomos).
-*   **670-679: Servicios Autónomos en Entornos Cerrados** (Robots de limpieza, Robots de seguridad, Automatización en hospitales/oficinas).
-*   **680-689: Optimización con IA y Cuántica** (Q-path planning, Algoritmos cuánticos para optimización de flujos de trabajo en fábricas, IA para control predictivo).
-*   **690-699: Interacción Humano-Robot y Seguridad** (Ergonomía, Seguridad funcional, Interfaces intuitivas, Marco ético para la automatización).
+<details><summary><strong>OGATA 600-609: Robótica Industrial y Colaborativa</strong></summary>
+
+*   **600-00-00: Robots Manipuladores Industriales**
+    *   **600-10-00: Robots de Brazo Articulado y Cartesianos**
+        *   600-10-10: Robots de 6 y 7 Ejes para Tareas de Ensamblaje y Soldadura
+        *   600-10-20: Robots Cartesianos y Gantry para Tareas de Gran Alcance
+        *   600-10-30: Robots SCARA para Operaciones de Pick & Place de Alta Velocidad
+    *   **600-20-00: Controladores Robóticos y Software de Programación**
+        *   600-20-10: Controladores Basados en PLC y PC Industrial para Robótica
+        *   600-20-20: Software de Programación Offline y Simulación Robótica
+        *   600-20-30: Interfaces de Programación por Demostración (Lead-Through Programming)
+*   **601-00-00: Robots Colaborativos (Cobots)**
+    *   **601-10-00: Diseño y Funcionalidades de Cobots**
+        *   601-10-10: Cobots con Sensores de Fuerza/Torque Integrados para Detección de Colisiones (Cumple ISO/TS 15066)
+        *   601-10-20: Modos de Operación Colaborativa (Parada de Seguridad, Reducción de Velocidad)
+        *   601-10-30: Límite de Potencia y Fuerza para Interacción Segura Humano-Robot
+    *   **601-20-00: Aplicaciones Colaborativas**
+        *   601-20-10: Tareas de Ensamblaje Colaborativo Humano-Robot
+        *   601-20-20: Tareas de Control de Calidad y Empaquetado Asistido
+        *   601-20-30: Logística de Materiales en Líneas de Producción Colaborativas
+*   **602-00-00: Sistemas de Visión Robótica**
+    *   **602-10-00: Cámaras y Sensores de Visión 2D/3D**
+        *   602-10-10: Cámaras de Alta Resolución y Velocidad para Visión Robótica
+        *   602-10-20: Sensores 3D (Láser, Luz Estructurada, Tiempo de Vuelo) para Percepción de Profundidad
+    *   **602-20-00: Procesamiento de Imágenes y Reconocimiento de Objetos (AI-driven)**
+        *   602-20-10: Algoritmos de Visión por Computadora para Localización y Orientación de Piezas
+        *   602-20-20: Detección y Clasificación de Defectos con Redes Neuronales
+        *   602-20-30: Sistemas de "Bin Picking" (Reconocimiento de Piezas Desordenadas en Contenedores)
+*   **603-00-00: Automatización de Procesos de Ensamblaje**
+    *   **603-10-00: Estaciones de Ensamblaje Robotizadas**
+        *   603-10-10: Robots para Atornillado, Remachado, Pegado y Soldadura Automatizada
+        *   603-10-20: Sistemas de Alimentación y Posicionamiento de Componentes
+    *   **603-20-00: Ensamblaje Flexible y Reconfigurable**
+        *   603-20-10: Células de Ensamblaje Reconfigurables para Producción de Variantes de Productos
+        *   603-20-20: Sistemas de Visión y Robots Colaborativos para Adaptación a Pequeñas Series
+*   **604-00-00: Mantenimiento y Diagnóstico de Robots**
+    *   **604-10-00: Monitoreo de Salud de Robots (RHM)**
+        *   604-10-10: Sensores de Vibración, Temperatura y Corriente en Articulaciones de Robot
+        *   604-10-20: Análisis Predictivo de Fallas en Componentes Robóticos (AI-enhanced, Enlace con DTCEC 320-xx)
+    *   **604-20-00: Mantenimiento Predictivo Robótico**
+        *   604-20-10: Programas de Mantenimiento Basados en Condición para Robots
+        *   604-20-20: Diagnóstico Remoto y Actualizaciones de Firmware Over-the-Air (OTA)
+
+</details>
+
+<details><summary><strong>OGATA 610-619: Vehículos Autónomos Terrestres (AGV/AMR)</strong></summary>
+
+*   **610-00-00: Vehículos Guiados Automáticamente (AGV)**
+    *   **610-10-00: Tipos de AGV y Sistemas de Navegación**
+        *   610-10-10: AGV Basados en Guía por Cinta Magnética o Cable Enterrado
+        *   610-10-20: AGV con Navegación por Marcadores Ópticos o Reflectores Láser
+        *   610-10-30: AGV para Transporte de Palets, Rollos y Carros
+    *   **610-20-00: Aplicaciones de AGV en Almacenes y Fábricas**
+        *   610-20-10: Transporte de Materiales entre Líneas de Producción
+        *   610-20-20: Almacenamiento y Recuperación Automatizada de Mercancías
+        *   610-20-30: Movimiento de Cargas Pesadas en Entornos Industriales
+*   **611-00-00: Robots Móviles Autónomos (AMR)**
+    *   **611-10-00: Navegación y Percepción de AMR**
+        *   611-10-10: Sistemas SLAM (Simultaneous Localization and Mapping) Basados en LiDAR y Cámaras
+        *   611-10-20: Sensores de Obstáculos (Ultrasonidos, Infrarrojos, Cámaras 3D) y Detección de Personas
+        *   611-10-30: Planificación de Rutas Dinámicas y Evasión de Obstáculos (AI-powered)
+    *   **611-20-00: Aplicaciones de AMR en Logística y Servicios**
+        *   611-20-10: Transporte de Pequeñas Cargas y Documentos en Oficinas/Hospitales (Enlace con OGATA 670-xx)
+        *   611-20-20: Inspección y Monitoreo de Infraestructuras (AI-enhanced)
+        *   611-20-30: Robots de Inventario y Auditoría de Almacén
+*   **612-00-00: Gestión de Flotas de Vehículos Autónomos (VFA)**
+    *   **612-10-00: Software de Gestión de Flotas**
+        *   612-10-10: Optimización de Asignación de Tareas y Rutas para Flotas Heterogéneas
+        *   612-10-20: Balanceo de Carga y Coordinación entre AGV/AMR
+        *   612-10-30: Monitoreo en Tiempo Real y Diagnóstico de Flotas (AI-powered)
+    *   **612-20-00: Integración con Sistemas de Gestión de Almacenes (WMS/MES)**
+        *   612-20-10: Comunicación Bidireccional entre VFA y WMS para Gestión de Inventario
+        *   612-20-20: Intercambio de Órdenes de Movimiento y Estado de Tareas
+*   **613-00-00: Vehículos de Entrega Autónoma (Terrestre)**
+    *   **613-10-00: Robots de Última Milla (Last-Mile Delivery Robots)**
+        *   613-10-10: Robots Peatonales para Entrega en Zonas Urbanas
+        *   613-10-20: Vehículos Autónomos Pequeños para Entrega de Paquetes
+    *   **613-20-00: Camiones Autónomos para Logística y Transporte**
+        *   613-20-10: Camiones de Nivel 4/5 de Autonomía para Carreteras y Zonas Logísticas
+        *   613-20-20: Platooning (Formaciones de Camiones Conectados) para Eficiencia de Combustible
+*   **614-00-00: Seguridad y Certificación de Vehículos Autónomos Terrestres**
+    *   **614-10-00: Sistemas de Seguridad Activa y Pasiva**
+        *   614-10-10: Frenado de Emergencia Autónomo y Detección de Peatones
+        *   614-10-20: Parada de Seguridad y Vallas Virtuales
+    *   **614-20-00: Normativas y Estándares de Certificación**
+        *   614-20-10: Estándares de Seguridad para AGV/AMR (ISO 3691-4)
+        *   614-20-20: Regulaciones para Vehículos Autónomos en Espacios Públicos y Privados
+
+</details>
+
+<details><summary><strong>OGATA 620-629: Infraestructura Inteligente</strong></summary>
+
+*   **620-00-00: Ciudades Inteligentes (Smart Cities)**
+    *   **620-10-00: Plataformas de Gestión de Ciudades Inteligentes**
+        *   620-10-10: Centros de Operaciones Urbanas (UOC) con Fusión de Datos (Enlace con DTCEC 312-xx)
+        *   620-10-20: Gemelos Digitales de Ciudades (City Digital Twins) para Simulación y Planificación (Enlace con DTCEC 301-20-30)
+    *   **620-20-00: Infraestructura Urbana Conectada**
+        *   620-20-10: Iluminación Pública Inteligente y Adaptativa
+        *   620-20-20: Sensores Ambientales para Monitoreo de Calidad del Aire y Ruido
+        *   620-20-30: Bancos de Residuos Inteligentes y Sistemas de Recolección Automatizada
+*   **621-00-00: Gestión Inteligente del Tráfico y Movilidad**
+    *   **621-10-00: Sistemas Adaptativos de Control de Tráfico**
+        *   621-10-10: Semaforización Inteligente Basada en Sensores de Flujo Vehicular
+        *   621-10-20: Gestión de Carriles Reversibles y Flujo Vehicular Dinámico
+    *   **621-20-00: Movilidad como Servicio (MaaS) y Planificación Multimodal**
+        *   621-20-10: Plataformas Integradas de Transporte Público y Privado
+        *   621-20-20: Optimización de Rutas Multimodal para Ciudadanos
+*   **622-00-00: Gestión de Residuos y Saneamiento Automatizado**
+    *   **622-10-00: Sistemas de Recolección de Residuos Inteligentes**
+        *   622-10-10: Contenedores Inteligentes con Sensores de Nivel y Compactación
+        *   622-10-20: Rutas de Recolección Optimizadas por IA
+    *   **622-20-00: Plantas de Tratamiento de Residuos Automatizadas**
+        *   622-20-10: Robots para Clasificación y Separación de Residuos
+        *   622-20-20: Sistemas de Detección de Contaminantes y Optimización de Procesos
+*   **623-00-00: Gestión Inteligente de Utilities (Agua, Gas, Electricidad)**
+    *   **623-10-00: Redes de Agua Inteligentes (Smart Water Grids)**
+        *   623-10-10: Sensores de Flujo y Presión en Tuberías para Detección de Fugas
+        *   623-10-20: Monitoreo de Calidad del Agua en Tiempo Real
+    *   **623-20-00: Gestión de Redes Eléctricas Distribuida (Smart Grids)**
+        *   623-20-10: Contadores Inteligentes y Gestión de la Demanda (Enlace con EPTA 430-xx)
+        *   623-20-20: Integración de Generación Distribuida y Almacenamiento de Energía
+*   **624-00-00: Seguridad Pública y Respuesta a Emergencias (AI-powered)**
+    *   **624-10-00: Sistemas de Videovigilancia Inteligente**
+        *   624-10-10: Cámaras con Reconocimiento Facial y Detección de Comportamientos Anómalos
+        *   624-10-20: Integración de Datos de Múltiples Fuentes (Sensores, Redes Sociales)
+    *   **624-20-00: Plataformas de Respuesta a Emergencias Automatizadas**
+        *   624-20-10: Despliegue de Drones y Robots para Evaluación de Situaciones de Crisis
+        *   624-20-20: Optimización de Rutas de Rescate y Asignación de Recursos de Emergencia
+</details>
+
+<details><summary><strong>OGATA 630-639: Fábricas 4.0 y Manufactura Avanzada</strong></summary>
+
+*   **630-00-00: Ciber-Sistemas Físicos (CPS)**
+    *   **630-10-00: Integración Horizontal y Vertical**
+        *   630-10-10: Integración de Sistemas a lo Largo de la Cadena de Valor (Horizontal)
+        *   630-10-20: Integración de Niveles de Fábrica (Piso de Planta a ERP) (Vertical)
+    *   **630-20-00: Control Descentralizado y Edge Intelligence**
+        *   630-20-10: Toma de Decisiones Autónoma a Nivel de Máquina y Célula
+        *   630-20-20: Procesamiento de Datos y Analítica en el Edge (Enlace con DTCEC 313-xx)
+        *   **630-20-21: Arquitecturas de Edge-AI Específicas (Neuromórficas)**
+            *   630-20-21-01: Microcontroladores Especializados para IA en el Borde
+            *   630-20-21-02: Procesadores Neuromórficos para Aprendizaje y Deducción Rápida
+            *   630-20-21-03: Optimización de Modelos de IA para Despliegue en Recursos Limitados
+*   **631-00-00: Internet Industrial de las Cosas (IIoT)**
+    *   **631-10-00: Sensores y Actuadores IIoT**
+        *   631-10-10: Sensores Inteligentes para Monitoreo de Parámetros de Proceso y Calidad
+        *   631-10-20: Actuadores Conectados para Control de Maquinaria
+    *   **631-20-00: Conectividad y Protocolos IIoT**
+        *   631-20-10: Redes Inalámbricas Confiables (Wi-Fi 6, 5G Industrial)
+        *   631-20-20: Protocolos Estándar (OPC UA, MQTT, TSN) (Enlace con DTCEC 311-xx)
+        *   **631-20-21: Interoperabilidad 5G-Industrial (3GPP Release 16/17)**
+            *   631-20-21-01: Network Slicing para Garantía de QoS
+            *   631-20-21-02: Private 5G Networks para Fábricas
+            *   631-20-21-03: Latencia Ultra-baja y Alta Fiabilidad para Control Crítico
+*   **632-00-00: Big Data y Analítica en Manufactura**
+    *   **632-10-00: Recopilación y Almacenamiento de Datos Industriales**
+        *   632-10-10: Data Lakes y Bases de Datos de Series Temporales (Enlace con DTCEC 316-xx)
+        *   632-10-20: Integración de Datos de Múltiples Fuentes (Máquinas, ERP, SCADA)
+    *   **632-20-00: Analítica Avanzada para Manufactura (AI-powered)**
+        *   632-20-10: Diagnóstico y Predicción de Fallas en Equipos (Predictive Maintenance)
+        *   632-20-20: Optimización de Parámetros de Proceso y Control de Calidad
+*   **633-00-00: Gemelos Digitales en Manufactura (Digital Factory)**
+    *   **633-10-00: Creación y Operación de Gemelos Digitales de Fábrica/Proceso**
+        *   633-10-10: Gemelos Digitales de Líneas de Producción y Células de Trabajo (Enlace con DTCEC 309-xx)
+        *   633-10-20: Simulación de Operaciones de Fábrica para Optimización de Flujo
+    *   **633-20-00: Gemelos Digitales para Diseño de Producto**
+        *   633-20-10: Simulación de Rendimiento de Producto en el Ciclo de Vida
+        *   633-20-20: Integración con Diseño Generativo y Optimización (Enlace con DTCEC 329-xx)
+*   **634-00-00: Robótica Avanzada para Manufactura**
+    *   **634-10-00: Robots Móviles en Fábrica**
+        *   634-10-10: AGV/AMR para Transporte de Materiales Interno (Enlace con OGATA 610-xx)
+        *   634-10-20: Robots de Inspección Móviles para Calidad y Mantenimiento
+    *   **634-20-00: Robots Colaborativos y Flexibles**
+        *   634-20-10: Cobots para Tareas de Ensamblaje y Manipulación (Enlace con OGATA 601-xx)
+        *   634-20-20: Robots con Cambio Rápido de Herramientas (Quick Change Tooling) para Flexibilidad
+*   **635-00-00: Personalización en Masa y Producción Flexible**
+    *   **635-10-00: Sistemas de Producción Reconfigurables**
+        *   635-10-10: Líneas de Ensamblaje Modulares y Adaptables a Cambios de Producto
+        *   635-10-20: Maquinaria con Capacidades Multi-tarea y Ajuste Automático
+    *   **635-20-00: Manufactura bajo Demanda (On-Demand Manufacturing)**
+        *   635-20-10: Integración de Impresión 3D para Producción de Piezas Personalizadas (Enlace con AMTA 570-xx)
+        *   635-20-20: Sistemas de Gestión de Pedidos y Configuración de Productos
+*   **636-00-00: Sostenibilidad Energética en Manufactura**
+    *   **636-10-00: Medición y Optimización de la Huella de Carbono**
+        *   636-10-10: Monitoreo en Tiempo Real del Consumo Energético por Proceso/Máquina.
+        *   636-10-20: Análisis de Datos para Identificar Oportunidades de Ahorro Energético (AI-powered).
+        *   636-10-30: Cálculo y Reducción de la Huella de Carbono de la Fabricación.
+    *   **636-20-00: Integración de Energías Renovables y Reciclaje**
+        *   636-20-10: Uso de Energías Renovables (Solar, Eólica) en las Instalaciones de Manufactura.
+        *   636-20-20: Implementación de Procesos de Reciclaje de Residuos de Producción (Enlace con AMTA 590-xx).
+
+</details>
+
+<details><summary><strong>OGATA 640-649: Logística y Almacenamiento Automatizado</strong></summary>
+
+*   **640-00-00: Almacenes Inteligentes**
+    *   **640-10-00: Sistemas de Almacenamiento y Recuperación Automatizados (AS/RS)**
+        *   640-10-10: Estanterías de Palets y Miniloads Automatizadas
+        *   640-10-20: Transelevadores y Robots Shuttle para Almacenamiento de Alta Densidad
+    *   **640-20-00: Almacenes Autónomos y Operaciones de Gestión**
+        *   640-20-10: Robots Móviles Autónomos (AMR) para Transporte y Clasificación (Enlace con OGATA 611-xx)
+        *   640-20-20: Software de Gestión de Almacenes (WMS) con Optimización por IA
+*   **641-00-00: Sistemas de Clasificación y Preparación de Pedidos**
+    *   **641-10-00: Sistemas de Clasificación Automatizados**
+        *   641-10-10: Clasificadores por Cinta, Cruzados y Ruedas Inclinadas
+        *   641-10-20: Sistemas de Visión para Identificación y Clasificación de Paquetes
+    *   **641-20-00: Sistemas de Preparación de Pedidos (Picking) Automatizados**
+        *   641-20-10: Robots de Picking Colaborativos (Cobots) y Robóticos
+        *   641-20-20: Sistemas de "Goods-to-Person" para Optimizar la Recolección de Pedidos
+*   **642-00-00: Logística de Última Milla Automatizada**
+    *   **642-10-00: Vehículos de Entrega Autónoma Terrestre (Enlace con OGATA 613-xx)**
+        *   642-10-10: Robots de Entrega a Peatones y Vehículos Pequeños
+        *   642-10-20: Estaciones de Recarga y Almacenamiento para Robots de Entrega
+    *   **642-20-00: Drones para Entrega de Paquetes (Enlace con ACV 700-xx)**
+        *   642-20-10: Drones de Entrega de Última Milla para Zonas Rurales y Urbanas
+        *   642-20-20: Vertipuertos y Puntos de Entrega para Drones
+*   **643-00-00: Optimización de Rutas y Redes Logísticas**
+    *   **643-10-00: Algoritmos de Optimización de Rutas (AI/Q-powered)**
+        *   643-10-10: Optimización de Rutas para Vehículos de Reparto y Transporte
+        *   643-10-20: Planificación de Rutas Multi-vehículo y Multi-depósito
+        *   643-10-30: Optimización Cuántica de Rutas (Q-Path Planning, Enlace con OGATA 680-xx)
+    *   **643-20-00: Diseño y Simulación de Redes Logísticas**
+        *   643-20-10: Simulación de Cadenas de Suministro para Optimización de Flujos
+        *   643-20-20: Gemelos Digitales de Redes Logísticas (Enlace con DTCEC 301-20-20)
+*   **644-00-00: Logística Inteligente para Manufactura**
+    *   **644-10-00: "Just-in-Time" y "Just-in-Sequence" Automatizados**
+        *   644-10-10: Suministro de Componentes a Líneas de Ensamblaje con AGV/AMR
+        *   644-10-20: Secuenciación de Piezas para Producción Personalizada
+    *   **644-20-00: Trazabilidad de Materiales y Componentes (Blockchain)**
+        *   644-20-10: Trazabilidad de Productos desde el Origen hasta el Consumidor Final
+        *   644-20-20: Detección de Falsificaciones y Gestión de Calidad en la Cadena de Suministro (Enlace con DTTA 240-xx)
+*   **645-00-00: Sostenibilidad en Logística y Almacenamiento**
+    *   **645-10-00: Medición y Optimización de la Huella de Carbono Logística**
+        *   645-10-10: Cálculo de la Huella de Carbono de Rutas de Transporte y Operaciones de Almacén.
+        *   645-10-20: Estrategias de Reducción de Emisiones en Flotas y Centros Logísticos.
+    *   **645-20-00: Almacenes de Energía Cero y Reciclaje**
+        *   645-20-10: Almacenes con Diseño Energéticamente Eficiente y Generación Renovable.
+        *   645-20-20: Protocolos de Reciclaje de Envases y Materiales Logísticos.
+
+</details>
+
+<details><summary><strong>OGATA 650-659: Agricultura de Precisión y Automatización Agrícola</strong></summary>
+
+*   **650-00-00: Drones Agrícolas**
+    *   **650-10-00: Drones para Monitoreo y Mapeo de Cultivos**
+        *   650-10-10: Drones Multi-espectrales e Hiperespectrales para Análisis de Salud Vegetal
+        *   650-10-20: Mapeo 3D de Campos y Topografía para Planificación de Cultivos
+        *   650-10-30: Drones para Conteo de Plantas y Detección de Estrés Hídrico
+    *   **650-20-00: Drones para Aplicaciones y Pulverización**
+        *   650-20-10: Drones de Pulverización para Aplicación Precisa de Pesticidas/Fertilizantes
+        *   650-20-20: Drones para Siembra y Liberación de Agentes Biológicos
+*   **651-00-00: Robótica Agrícola**
+    *   **651-10-00: Robots para Siembra y Cosecha Autónoma**
+        *   651-10-10: Robots de Siembra de Precisión (Micro-siembra)
+        *   651-10-20: Robots de Cosecha de Frutas y Verduras (Manipuladores Suaves, Visión 3D)
+    *   **651-20-00: Robots para Deshierbe y Fumigación Dirigida**
+        *   651-20-10: Robots de Deshierbe Mecánico y Láser para Reducir Herbicidas
+        *   651-20-20: Pulverizadores Dirigidos por Visión para Aplicación Localizada
+*   **652-00-00: Sistemas de Riego Inteligente**
+    *   **652-10-00: Sensores de Suelo y Clima para Riego**
+        *   652-10-10: Sensores de Humedad de Suelo y Temperatura
+        *   652-10-20: Estaciones Meteorológicas Inteligentes y Pronóstico del Tiempo
+    *   **652-20-00: Control Automático de Riego (AI-powered)**
+        *   652-20-10: Algoritmos de Optimización de Riego Basados en Datos de Sensores y Previsión
+        *   652-20-20: Válvulas y Aspersores Controlados Remotamente
+*   **653-00-00: Analítica de Datos para Agricultura de Precisión**
+    *   **653-10-00: Plataformas de Gestión de Datos Agrícolas**
+        *   653-10-10: Fusión de Datos de Drones, Sensores Terrestres y Maquinaria Agrícola
+        *   653-10-20: Mapas de Rendimiento y Variabilidad de Cultivos
+    *   **653-20-00: Modelos Predictivos para la Agricultura (AI/ML)**
+        *   653-20-10: Predicción de Rendimiento de Cultivos y Detección de Enfermedades
+        *   653-20-20: Optimización de Fertilización y Manejo de Plagas
+*   **654-00-00: Ganadería Inteligente (Smart Livestock Farming)**
+    *   **654-10-00: Sensores y Wearables para Monitoreo de Animales**
+        *   654-10-10: Collares y Etiquetas Inteligentes para Tracking de Actividad y Salud
+        *   654-10-20: Cámaras con Visión por Computadora para Monitoreo de Comportamiento
+    *   **654-20-00: Robots para Ganadería**
+        *   654-20-10: Robots de Ordeño Autónomos
+        *   654-20-20: Robots de Alimentación y Limpieza de Estabulaciones
+</details>
+
+<details><summary><strong>OGATA 660-669: Construcción y Demolición Automatizada</strong></summary>
+
+*   **660-00-00: Robótica en Construcción**
+    *   **660-10-00: Robots para Tareas de Construcción Pesada**
+        *   660-10-10: Robots para Excavación y Movimiento de Tierras Autónomos
+        *   660-10-20: Robots para Colocación de Ladrillos y Estructuras Modulares
+    *   **660-20-00: Robots para Acabados y Detalles**
+        *   660-20-10: Robots de Pintura y Yeso Autónomos
+        *   660-20-20: Robots para Instalación de Ventanas y Fachadas
+*   **661-00-00: Impresión 3D de Edificios y Estructuras**
+    *   **661-10-00: Tecnologías de Impresión 3D en Construcción**
+        *   661-10-10: Impresión por Extrusión de Concreto y Cemento
+        *   661-10-20: Impresión 3D de Grandes Estructuras con Materiales Poliméricos/Compuestos
+    *   **661-20-00: Materiales y Procesos para Impresión 3D Constructiva**
+        *   661-20-10: Concretos y Morteros Especiales para Impresión
+        *   661-20-20: Refuerzo de Estructuras Impresas (Fibras, Barras)
+*   **662-00-00: Vehículos Autónomos de Construcción**
+    *   **662-10-00: Maquinaria Pesada Autónoma**
+        *   662-10-10: Excavadoras, Buldóceres y Dumpers Autónomos
+        *   662-10-20: Grúas y Plataformas Elevadoras Autónomas
+    *   **662-20-00: Gestión de Flotas Autónomas en Obra**
+        *   662-20-10: Software de Coordinación y Planificación de Tareas para Maquinaria Autónoma
+        *   662-20-20: Sistemas de Seguridad y Evitación de Colisiones en Entornos de Obra
+*   **663-00-00: Demolición Automatizada y Reciclaje de Residuos**
+    *   **663-10-00: Robots de Demolición Remota y Autónoma**
+        *   663-10-10: Robots Demoledores con Brazos Articulados y Herramientas Específicas
+        *   663-10-20: Demolición Selectiva y Controlada por Sensores
+    *   **663-20-00: Reciclaje Automatizado de Residuos de Construcción**
+        *   663-20-10: Robots para Clasificación y Separación de Escombros
+        *   663-20-20: Sistemas de Trituración y Reutilización de Materiales Reciclados
+*   **664-00-00: Monitoreo y Gestión de Proyectos de Construcción (AI-powered)**
+    *   **664-10-00: Drones para Inspección de Obras y Seguimiento de Progreso**
+        *   664-10-10: Mapeo 3D y Fotogrametría de Sitios de Construcción
+        *   664-10-20: Detección de Desviaciones del Plan y Anomalías
+    *   **664-20-00: Plataformas de Gestión de Proyectos con IA**
+        *   664-20-10: Predicción de Retrasos y Costos (AI-based Project Management)
+        *   664-20-20: Optimización de Programación de Tareas y Asignación de Recursos
+</details>
+
+<details><summary><strong>OGATA 670-679: Servicios Autónomos en Entornos Cerrados</strong></summary>
+
+*   **670-00-00: Robots de Limpieza y Mantenimiento de Instalaciones**
+    *   **670-10-00: Robots de Limpieza de Suelos y Superficies**
+        *   670-10-10: Robots Aspiradores y Fregadoras Autónomas para Grandes Espacios
+        *   670-10-20: Robots de Desinfección UV-C para Ambientes Críticos (Hospitales)
+    *   **670-20-00: Robots para Mantenimiento General de Edificios**
+        *   670-20-10: Robots de Inspección de Tuberías y Ductos
+        *   670-20-20: Robots para Pintura y Reparaciones Menores de Superficies
+*   **671-00-00: Robots de Seguridad y Vigilancia**
+    *   **671-10-00: Robots de Patrulla y Monitoreo**
+        *   671-10-10: Robots Móviles para Patrulla Autónoma en Oficinas, Centros Comerciales, Fábricas
+        *   671-10-20: Sensores de Detección de Intrusos (Movimiento, Térmicos, Audio)
+    *   **671-20-00: Integración con Sistemas de Seguridad Centralizados**
+        *   671-20-10: Conexión con Cámaras de Seguridad (CCTV) y Sistemas de Alarma
+        *   671-20-20: Notificación Automática a Personal de Seguridad y Policías
+*   **672-00-00: Automatización en Hospitales y Centros de Salud**
+    *   **672-10-00: Robots de Transporte de Medicamentos y Muestras**
+        *   672-10-10: Robots AGV/AMR para Transporte Interno de Suministros (Enlace con OGATA 611-xx)
+        *   672-10-20: Sistemas de Farmacia Automatizados (Dispensación de Medicamentos)
+    *   **672-20-00: Asistencia Robótica para Pacientes y Personal Médico**
+        *   672-20-10: Robots de Asistencia para Movilidad de Pacientes
+        *   672-20-20: Robots de Telepresencia para Consultas Remotas (Enlace con DTCEC 308-xx)
+*   **673-00-00: Automatización en Oficinas y Espacios Comerciales**
+    *   **673-10-00: Robots de Recepción y Atención al Cliente**
+        *   673-10-10: Robots Humanoides para Recepción y Orientación
+        *   673-10-20: Asistentes Virtuales y Chatbots para Preguntas Frecuentes
+    *   **673-20-00: Robots para Servicio de Alimentos y Retail**
+        *   673-20-10: Robots de Cocina y Preparación de Alimentos
+        *   673-20-20: Robots de Servicio en Restaurantes y Hoteles
+        *   673-20-30: Robots de Inventario y Reposición de Estantes en Tiendas
+*   **674-00-00: Automatización de Edificios y Gestión de Propiedades**
+    *   **674-10-00: Sistemas de Gestión de Edificios (BMS)**
+        *   674-10-10: Control Automatizado de Iluminación, Climatización y Ventilación
+        *   674-10-20: Optimización Energética de Edificios (Enlace con EPTA 433-xx)
+    *   **674-20-00: Mantenimiento Predictivo de Instalaciones**
+        *   674-20-10: Sensores para Monitoreo de Equipos (HVAC, Ascensores)
+        *   674-20-20: Diagnóstico Remoto y Notificación de Fallas
+
+</details>
+
+<details><summary><strong>OGATA 680-689: Optimización con IA y Cuántica</strong></summary>
+
+*   **680-00-00: Planificación de Rutas y Navegación Optimizada (AI/Q-powered)**
+    *   **680-10-00: Optimización Cuántica de Rutas (Q-Path Planning)**
+        *   680-10-10: Algoritmos Cuánticos (QAOA, VQE) para Problemas del Viajante de Comercio (TSP) y Problemas de Ruteo de Vehículos (VRP)
+        *   680-10-20: Planificación de Rutas Multi-Robot y Multi-Vehículo en Entornos Complejos
+        *   680-10-30: Optimización de Rutas para AGV/AMR en Almacenes y Fábricas (Enlace con OGATA 643-xx)
+    *   **680-20-00: Navegación Autónoma y Adaptativa**
+        *   680-20-10: Algoritmos de SLAM Asistidos por IA para Mapeo y Localización Precisa
+        *   680-20-20: Navegación Basada en Aprendizaje por Refuerzo (RL) en Entornos Dinámicos
+*   **681-00-00: Optimización Cuántica de Procesos Industriales**
+    *   **681-10-00: Optimización de Flujos de Trabajo en Fábricas**
+        *   681-10-10: Optimización de la Programación de la Producción y Asignación de Tareas
+        *   681-10-20: Balanceo de Carga y Eficiencia en Líneas de Ensamblaje (AI/Q-powered)
+    *   **681-20-00: Optimización de Recursos y Cadena de Suministro (Q-Logistics)**
+        *   681-20-10: Optimización Cuántica de Inventario y Gestión de Almacenes
+        *   681-20-20: Optimización de Rutas de Entrega y Redes Logísticas Globales
+*   **682-00-00: IA para Control Predictivo y Mantenimiento**
+    *   **682-10-00: Mantenimiento Predictivo con IA (AI-PM)**
+        *   682-10-10: Algoritmos de Machine Learning para Predecir Fallas en Maquinaria Industrial
+        *   682-10-20: Modelos de Diagnóstico Basados en Datos de Sensores (Vibración, Temperatura)
+    *   **682-20-00: Control Predictivo Avanzado (MPC)**
+        *   682-20-10: Controladores Basados en Modelos Predictivos para Procesos Industriales
+        *   682-20-20: Optimización en Tiempo Real de Parámetros de Proceso (AI-powered)
+*   **683-00-00: Simulación Cuántica para Automatización Terrestre**
+    *   **683-10-00: Simulación de Sistemas Robóticos Cuánticos**
+        *   683-10-10: Modelado de Dinámica de Robots y Efectos Cuánticos (Enlace con QCSAA 960-xx)
+        *   683-10-20: Simulación de Enjambres de Robots Controlados Cuánticamente
+    *   **683-20-00: Simulación de Escenarios de Fábrica y Logística**
+        *   683-20-10: Gemelos Digitales de Fábricas con Capacidades de Simulación Cuántica (Enlace con DTCEC 349-xx)
+        *   683-20-20: Simulación de Cadenas de Suministro para Evaluar la Resiliencia Cuántica
+        *   **683-20-21: Hojas de Ruta para Gemelos Digitales Cuánticos en Automatización**
+            *   683-20-21-01: Integración de Sensores Cuánticos en Gemelos Digitales Industriales
+            *   683-20-21-02: Desarrollo de Plataformas de Simulación Híbrida Clásico-Cuántica
+            *   683-20-21-03: Validación de Modelos de Gemelos Digitales con Datos Cuánticos
+*   **684-00-00: Detección y Respuesta Inteligente a Anomalías (AI/Q-powered)**
+    *   **684-10-00: Detección de Anomalías en Entornos Industriales**
+        *   684-10-10: Algoritmos de Detección de Anomalías Basados en IA para Maquinaria y Procesos
+        *   684-10-20: Detección Cuántica de Anomalías para Sistemas Sensibles (Enlace con QCSAA 910-xx)
+    *   **684-20-00: Respuesta Automatizada a Incidentes**
+        *   684-20-10: Sistemas de Respuesta Automática para Fallas de Equipos o Irregularidades
+        *   684-20-20: Coordinación de Robots para Intervención Autónoma en Incidentes
+</details>
+
+<details><summary><strong>OGATA 690-699: Interacción Humano-Robot y Seguridad</strong></summary>
+
+*   **690-00-00: Colaboración Humano-Robot (HRC)**
+    *   **690-10-00: Modos de Colaboración HRC**
+        *   690-10-10: Coexistencia (Humanos y Robots en el Mismo Espacio sin Contacto)
+        *   690-10-20: Colaboración Síncrona (Tareas Compartidas en el Mismo Espacio y Tiempo)
+        *   690-10-30: Colaboración Adaptativa (Robot se Ajusta al Comportamiento Humano)
+    *   **690-20-00: Interfaces Intuitivas para HRC**
+        *   690-20-10: Programación por Demostración y Voz para Robots Colaborativos
+        *   690-20-20: Feedback Táctil y Háptico para Percepción de Contacto (Enlace con AMTA 542-xx)
+*   **691-00-00: Seguridad Funcional en Sistemas de Automatización**
+    *   **691-10-00: Estándares de Seguridad Funcional**
+        *   691-10-10: ISO 13849 (Seguridad de Maquinaria - Partes de Sistemas de Control)
+        *   691-10-20: IEC 62061 (Seguridad Funcional de Maquinaria)
+        *   691-10-30: IEC 61508 (Seguridad Funcional de Sistemas Eléctricos/Electrónicos/Programables)
+    *   **691-20-00: Evaluación de Riesgos y Mitigación**
+        *   691-20-10: Análisis de Riesgos para Celdas Robóticas y AGV/AMR
+        *   691-20-20: Implementación de Sistemas de Seguridad (Sensores Láser, Vallas de Seguridad)
+*   **692-00-00: Ergonomía y Factores Humanos en Automatización**
+    *   **692-10-00: Diseño Ergonómico de Estaciones de Trabajo HRC**
+        *   692-10-10: Optimización de Layouts para Interacción Humano-Robot Fluida
+        *   692-10-20: Diseño de Herramientas y Dispositivos para Asistencia Robótica
+    *   **692-20-00: Factores Cognitivos y Psicológicos**
+        *   692-20-10: Carga Cognitiva del Operador en Sistemas Automatizados
+        *   692-20-20: Confianza en la Automatización y Resistencia al Cambio
+*   **693-00-00: Formación y Capacitación para la Automatización**
+    *   **693-10-00: Programas de Capacitación Robótica y de Automatización**
+        *   693-10-10: Formación en Operación y Mantenimiento de Robots Industriales y Cobots
+        *   693-10-20: Entrenamiento en Software de Automatización y Programación
+    *   **693-20-00: Entrenamiento Inmersivo (VR/AR) para Operadores**
+        *   693-20-10: Simulaciones VR para Entrenamiento en Entornos Industriales Peligrosos
+        *   693-20-20: Realidad Aumentada para Guía en Mantenimiento y Operación (Enlace con DTCEC 357-xx)
+*   **694-00-00: Ética y Regulación de Sistemas Autónomos Terrestres**
+    *   **694-10-00: Marcos Éticos para la Automatización (Enlace con ATA 98, QCSAA 980-xx)**
+        *   694-10-10: Principios de Seguridad Humana y No-Maleficencia en Sistemas Autónomos
+        *   694-10-20: Responsabilidad y Atribución en Casos de Fallas de Sistemas Autónomos
+    *   **694-20-00: Regulación de Vehículos Autónomos en Terreno**
+        *   694-20-10: Normativas para la Operación de AGV/AMR en Fábricas y Almacenes
+        *   694-20-20: Legislación para Vehículos Autónomos en Carreteras y Espacios Públicos
+*   **695-00-00: Ciberseguridad para Sistemas de Automatización (ICS/OT)**
+    *   **695-10-00: Protección de Redes de Control Industrial**
+        *   695-10-10: Firewalls Industriales y Segmentación de Redes (Zero Trust)
+        *   695-10-20: Sistemas de Detección de Intrusiones (IDS) para OT
+    *   **695-20-00: Seguridad de Robots y AGV/AMR**
+        *   695-20-10: Autenticación y Autorización para Acceso a Robots
+        *   695-20-20: Protección contra Malware y Ataques Remotos (Enlace con CYB 800-xx, DTTA 255-xx)
+
+</details>
 
 ---
 
 ### 🏙️ ACV 700-799: Aerial City Viability
 
-La **Aerial City Viability (ACV)** se dedica a las tecnologías y la infraestructura necesarias para la movilidad aérea urbana (UAM) y la integración de vehículos aéreos en entornos urbanos densos, con un fuerte énfasis en la sostenibilidad y la habitabilidad.
+La **Aerial City Viability (ACV)** se dedica a las tecnologías y la infraestructura necesarias para la movilidad aérea urbana (UAM) y la integración de vehículos aéreos en entornos urbanos densos. Este framework se enfoca en la sostenibilidad, la habitabilidad y la creación de un ecosistema de movilidad aérea segura y eficiente, interconectado con las ciudades inteligentes del futuro.
 
-*   **700-709: Vehículos de Movilidad Aérea Urbana (UAM)** (eVTOLs, Drones de pasajeros, Aerotaxis, Drones de carga urbana).
-*   **710-719: Infraestructura de Vertipuertos y Heli-plataformas** (Diseño de vertipuertos, Zonas de aterrizaje, Sistemas de carga/descarga, Seguridad física).
-*   **720-729: Gestión del Tráfico Aéreo Urbano (UTM)** (Sistemas de gestión del espacio aéreo de baja altitud, Detección y evitación de colisiones, Integración con ATC).
-*   **730-739: Integración de Ruido y Acústica Urbana** (Estudios de impacto acústico, Tecnologías de reducción de ruido de eVTOLs, Planificación urbana para el ruido).
-*   **740-749: Sostenibilidad Ambiental en UAM** (Emisiones cero/bajas, Eficiencia energética de vuelos urbanos, Ciclos de vida sostenibles de vehículos).
-*   **750-759: Aspectos Legales, Regulatorios y de Certificación para UAM** (Certificación de aeronaves, Licencias de operación, Marco legal para drones autónomos).
-*   **760-769: Interfaz Urbana y Aceptación Social** (Percepción pública, Integración estética, Beneficios socioeconómicos, Participación ciudadana).
-*   **770-779: Seguridad y Resiliencia de Operaciones UAM** (Seguridad operacional, Resiliencia ante fallos, Ciberseguridad de sistemas UTM).
-*   **780-789: Optimización de Tráfico Cuántico y Logística Aérea Urbana** (Q-optimización de rutas, Algoritmos cuánticos para gestión de flotas, Entrega de paquetes con drones optimizada).
-*   **790-799: Modelos de Negocio y Ecosistemas UAM** (Servicios de taxi aéreo, Redes de reparto, Colaboración entre actores).
+<details><summary><strong>ACV 700-709: Vehículos de Movilidad Aérea Urbana (UAM)</strong></summary>
+
+*   **700-00-00: eVTOLs (Electric Vertical Take-Off and Landing Aircraft)**
+    *   **700-10-00: Tipos y Configuraciones de eVTOL (TRL 7-8 para prototipos en vuelo)**
+        *   700-10-10: Lift-and-Cruise (Multirotor con Alas Fijas) (Ej. Joby Aviation S4)
+        *   700-10-20: Vectored Thrust (Rotores Inclinables) (Ej. Lilium Jet)
+        *   700-10-30: Multirotor Puro (Configuración de Dron Grande) (Ej. EHang 216)
+        *   700-10-40: Ala Giratoria (Rotary Wing) (Ej. Beta Technologies Alia)
+    *   **700-20-00: Sistemas de Propulsión y Baterías para eVTOL**
+        *   700-20-10: Motores Eléctricos de Alta Densidad de Potencia (Ej. MagniX, Wright Electric proyecta 13 kW/kg; Enlace con EPTA 450-xx)
+        *   700-20-20: Baterías de Ión-Litio de Alta Densidad Energética y Ciclo de Vida (Enlace con EPTA 420-xx)
+        *   700-20-30: Celdas de Combustible de Hidrógeno para eVTOL (Enlace con EPTA 460-xx)
+        *   700-20-40: Propulsión Distribuida y Redundancia (Enlace con EPTA 453-xx)
+*   **701-00-00: Drones de Pasajeros (Passenger Drones)**
+    *   **701-10-00: Diseño y Seguridad de Drones para Transporte Humano**
+        *   701-10-10: Cabinas Ligera y Estructuras Tolerantes a Fallos
+        *   701-10-20: Sistemas de Paracaídas Balísticos de Despliegue Automático (Ej. BRS Aerospace)
+        *   701-10-30: Sistemas de Emergencia de Aterrizaje Forzoso
+    *   **701-20-00: Autonomía y Control de Drones de Pasajeros**
+        *   701-20-10: Vuelo Autónomo (AI-piloted) y Navegación Precisa (Enlace con ATA 22-xx)
+        *   701-20-20: Control Remoto Asistido por Operador (Remote Operator Control)
+*   **702-00-00: Aerotaxis (Air Taxis)**
+    *   **702-10-00: Conceptos Operacionales de Aerotaxis**
+        *   702-10-10: Operación Piloto a Bordo (Manned Operation)
+        *   702-10-20: Operación Totalmente Autónoma (Autonomous Operation)
+        *   702-10-30: Integración con Aplicaciones de Reserva de Viajes (Ride-Sharing Apps) (Ej. Uber Elevate)
+    *   **702-20-00: Diseño Interior y Confort de Aerotaxis**
+        *   702-20-10: Cabinas Ergonómicas y Reducción de Ruido Interno
+        *   702-20-20: Sistemas de Infoentretenimiento a Bordo (In-flight Entertainment)
+*   **703-00-00: Drones de Carga Urbana (Urban Cargo Drones)**
+    *   **703-10-00: Drones para Entrega de Paquetes y Logística Última Milla**
+        *   703-10-10: Drones Multi-rotor de Gran Capacidad de Carga
+        *   703-10-20: Drones para Entrega de Emergencia (Suministros Médicos, Sangre)
+    *   **703-20-00: Sistemas de Carga/Descarga Automatizados para Drones**
+        *   703-20-10: Mecanismos de Carga y Liberación de Paquetes
+        *   703-20-20: Integración con Almacenes Automatizados (Enlace con OGATA 642-xx)
+*   **704-00-00: Sistemas de Rescate y Emergencia Aérea Urbana**
+    *   **704-10-00: Drones para Búsqueda y Rescate (SAR)**
+        *   704-10-10: Drones con Cámaras Térmicas y Sensores Multi-espectrales
+        *   704-10-20: Drones para Entrega de Suministros Básicos en Zonas Inaccesibles
+    *   **704-20-00: Drones para Extinción de Incendios y Vigilancia**
+        *   704-20-10: Drones con Mangueras de Agua y Agentes Extintores
+        *   704-20-20: Drones para Monitoreo de Incendios Urbanos y Evaluación de Daños
+</details>
+
+<details><summary><strong>ACV 710-719: Infraestructura de Vertipuertos y Heli-plataformas</strong></summary>
+
+*   **710-00-00: Diseño y Planificación de Vertipuertos**
+    *   **710-10-00: Conceptos Arquitectónicos de Vertipuertos (TRL 6-7 para prototipos)**
+        *   710-10-10: Vertipuertos Elevados (Rooftop Vertiports) (Ej. Prototipos de Skyports, Urban Movement Labs)
+        *   710-10-20: Vertipuertos a Nivel de Suelo y Flotantes (Ej. Conceptos para ciudades costeras, Dubai)
+        *   710-10-30: Diseño Modular y Escalable de Vertipuertos
+    *   **710-20-00: Planificación Urbana e Integración de Vertipuertos**
+        *   710-20-10: Ubicación Estratégica en Nodos de Transporte Multimodal
+        *   710-20-20: Análisis de Impacto Urbano (Ruido, Flujo de Pasajeros)
+        *   710-20-30: Zonas de Seguridad y Restricciones Urbanísticas
+*   **711-00-00: Zonas de Aterrizaje y Despegue (TLOF)**
+    *   **711-10-00: Superficies de Aterrizaje y Resistencia**
+        *   711-10-10: Materiales Resistentes al Calor y la Corrosión
+        *   711-10-20: Iluminación y Marcado de TLOF para Operaciones Nocturnas
+    *   **711-20-00: Sistemas de Detección de Obstáculos y Seguridad de TLOF**
+        *   711-20-10: Sensores de Detección de Objetos Extraños (FOD)
+        *   711-20-20: Sistemas de Extinción de Incendios Automatizados
+*   **712-00-00: Sistemas de Carga/Descarga y Reabastecimiento**
+    *   **712-10-00: Infraestructura de Carga de Baterías para eVTOL**
+        *   712-10-10: Puntos de Carga Rápida (DC Fast Charging) y Enchufe Automático
+        *   712-10-20: Carga Inalámbrica para eVTOLs (Wireless Charging) (Ej. WiTricity, sistemas de 11 kW)
+        *   712-10-30: Estaciones de Intercambio Rápido de Baterías (Battery Swapping)
+    *   **712-20-00: Logística de Carga Urbana en Vertipuertos**
+        *   712-20-10: Plataformas de Carga y Descarga Automatizadas para Drones de Carga
+        *   712-20-20: Almacenamiento Temporal de Paquetes y Logística Interna (AGV/AMR, Enlace con OGATA 640-xx)
+*   **713-00-00: Gestión del Flujo de Pasajeros y Seguridad Física**
+    *   **713-10-00: Infraestructura para Pasajeros**
+        *   713-10-10: Terminales de Pasajeros (Lounges, Check-in Automatizado)
+        *   713-10-20: Acceso al Vertipuerto (Puentes de Embarque, Elevadores)
+    *   **713-20-00: Seguridad Física y Perimetral**
+        *   713-20-10: Sistemas de Videovigilancia Inteligente y Control de Acceso (AI-powered)
+        *   713-20-20: Detección de Amenazas y Respuesta de Seguridad (AI-powered)
+*   **714-00-00: Heli-plataformas y Helipuertos Adaptados**
+    *   **714-10-00: Modernización de Helipuertos Existentes**
+        *   714-10-10: Adaptación para eVTOL (Carga Eléctrica, Gestión del Ruido)
+        *   714-10-20: Sistemas de Navegación y Aterrizaje para Helicópteros Híbridos
+    *   **714-20-00: Integración con Redes de Transporte Convencional**
+        *   714-20-10: Conexión con Carreteras, Trenes y Redes de Transporte Público
+        *   714-20-20: Servicios de Última Milla desde/hacia Helipuertos
+
+</details>
+
+<details><summary><strong>ACV 720-729: Gestión del Tráfico Aéreo Urbano (UTM)</strong></summary>
+
+*   **720-00-00: Sistemas de Gestión del Espacio Aéreo de Baja Altitud**
+    *   **720-10-00: Arquitecturas de UTM (Unmanned Aircraft System Traffic Management) (TRL 7-8 para pilotos)**
+        *   720-10-10: Plataformas UTM Centralizadas y Descentralizadas (Ej. Airspace Link, AiRXOS, Altitude Angel)
+        *   720-10-20: Interfaz entre UTM y Air Traffic Control (ATC) para Espacio Aéreo Controlado
+        *   720-10-30: Gestión de Vuelos por Debajo de 400 pies AGL (Above Ground Level)
+        *   720-10-40: Integración de Conectividad 5G-Industrial para C2 (3GPP Release 16/17, Enlace con OGATA 631-xx)
+    *   **720-20-00: Servicios UTM Básicos**
+        *   720-20-10: Registro e Identificación de UAS
+        *   720-20-20: Planificación y Autorización de Vuelos (Flight Planning & Authorization)
+        *   720-20-30: Conciencia Situacional (Situational Awareness) de UAS en el Espacio Aéreo
+*   **721-00-00: Detección y Evitación de Colisiones (Detect and Avoid - DAA)**
+    *   **721-10-00: Tecnologías de DAA para UAM**
+        *   721-10-10: Sensores de Bordo para Detección de Obstáculos (Radar, Lidar, Cámaras)
+        *   721-10-20: Algoritmos de Evitación de Colisiones (AI-powered) y Planificación de Trayectorias (Ej. Iris Automation, Sentient Vision)
+        *   721-10-30: "Sense-and-Avoid" para Tráfico Aéreo Convencional y No Cooperativo
+    *   **721-20-00: Sistemas de Vigilancia de Espacio Aéreo Urbano**
+        *   721-20-10: Radares de Baja Altura y Sistemas de Detección Acústica
+        *   721-20-20: Redes de Sensores Terrestres para Monitoreo de Tráfico Urbano
+*   **722-00-00: Planificación de Trayectorias y Gestión de Rutas**
+    *   **722-10-00: Optimización de Rutas Aéreas Urbanas (AI/Q-powered)**
+        *   722-10-10: Rutas de Vuelo Optimizadas por IA para Eficiencia y Ruido (Enlace con OGATA 680-xx)
+        *   722-10-20: Optimización Cuántica de Tráfico Urbano (Q-optimization Traffic, Enlace con ACV 780-xx)
+    *   **722-20-00: Gestión Dinámica del Espacio Aéreo**
+        *   722-20-10: Corredores Aéreos Dinámicos y Zonas Restringidas Temporales
+        *   722-20-20: Gestión del Tráfico Basada en la Capacidad y la Demanda
+*   **723-00-00: Coordinación de Vuelos y Gestión de Congestión**
+    *   **723-10-00: Secuenciación de Vuelos y Gestión de Despegues/Aterrizajes**
+        *   723-10-10: Optimización de Horarios de Vertipuertos y Slots
+        *   723-10-20: Algoritmos de Secuenciación para Minimizar Congestión
+    *   **723-20-00: Gestión de Eventos Anómalos y Contingencias**
+        *   723-20-10: Redirección Automática de Vuelos en Caso de Incidentes o Mal Tiempo
+        *   723-20-20: Zonas de Refugio y Aterrizaje de Emergencia Urbano
+        *   **723-20-30: Resiliencia ante Condiciones Meteorológicas Adversas (UAM Weather Resilience)**
+            *   723-20-31: Sistemas de Pronóstico Meteorológico de Alta Resolución para Zonas Urbanas.
+            *   723-20-32: Protocolos de Decisión para Vuelos UAM en Tormentas o Vientos Fuertes.
+            *   723-20-33: Infraestructura de Vertipuertos con Protección contra Fenómenos Extremos.
+*   **724-00-00: Ciberseguridad para Sistemas UTM**
+    *   **724-10-00: Protección de Infraestructura UTM**
+        *   724-10-10: Cifrado End-to-End para Comunicaciones UTM
+        *   724-10-20: Sistemas de Detección de Intrusiones y Análisis Forense (Enlace con CYB 800-xx)
+    *   **724-20-00: Seguridad de Vuelos Autónomos**
+        *   724-20-10: Protección contra Spoofing de GNSS y Jamming de Señales
+        *   724-20-20: Resiliencia del Software de Vuelo Autónomo ante Ataques Cibernéticos
+
+</details>
+
+<details><summary><strong>ACV 730-739: Integración de Ruido y Acústica Urbana</strong></summary>
+
+*   **730-00-00: Modelado y Medición de Ruido de UAM**
+    *   **730-10-00: Fuentes de Ruido de eVTOL**
+        *   730-10-10: Ruido de Rotor/Hélice (Componentes Aerodinámicos y Motores)
+        *   730-10-20: Ruido de Propulsión Eléctrica y Aerodinámica de Estructuras
+    *   **730-20-00: Modelado Acústico y Simulación**
+        *   730-20-10: Software de Predicción de Ruido para Trayectorias de Vuelo Urbano
+        *   730-20-20: Mapas de Ruido Acústico Urbano con Integración de UAM
+*   **731-00-00: Tecnologías de Reducción de Ruido de eVTOLs**
+    *   **731-10-00: Diseño de Rotores y Hélices de Bajo Ruido**
+        *   731-10-10: Palas de Geometría Optimizada y Ángulo de Ataque Variable
+        *   731-10-20: Configuración de Múltiples Rotores (Propulsión Distribuida) para Menor Ruido (Enlace con EPTA 453-xx)
+    *   **731-20-00: Atenuación Activa y Pasiva de Ruido**
+        *   731-20-10: Materiales Absorbentes de Sonido en Nacelles y Estructuras (Enlace con AMTA 511-xx)
+        *   731-20-20: Cancelación Activa de Ruido (Active Noise Cancellation - ANC) a Bordo
+*   **732-00-00: Planificación Urbana para la Integración Acústica**
+    *   **732-10-00: Zonificación Acústica y Directrices de Uso del Suelo**
+        *   732-10-10: Definición de Corredores de Ruido y Zonas de Bajo Impacto
+        *   732-10-20: Restricciones Horarias y de Trayectoria para Minimizar la Molestia
+    *   **732-20-00: Monitoreo Acústico en Tiempo Real y Feedback**
+        *   732-20-10: Redes de Sensores de Ruido en la Ciudad (Enlace con OGATA 620-xx)
+        *   732-20-20: Ajuste Dinámico de Trayectorias de Vuelo Basado en Niveles de Ruido
+*   **733-00-00: Percepción Pública del Ruido y Aceptación Social**
+    *   **733-10-00: Estudios de Percepción del Ruido**
+        *   733-10-10: Evaluación Subjetiva de la Molestia del Ruido de eVTOL (Encuestas, Grupos Focales)
+        *   733-10-20: Comparación con Ruido de Helicópteros y Tráfico Terrestre
+    *   **733-20-00: Estrategias de Comunicación y Compromiso Público**
+        *   733-20-10: Educación Pública sobre Beneficios y Mitigación del Ruido de UAM
+        *   733-20-20: Canales de Feedback Ciudadano para Monitoreo de Quejas
+
+</details>
+
+<details><summary><strong>ACV 740-749: Sostenibilidad Ambiental en UAM</strong></summary>
+
+*   **740-00-00: Emisiones Cero/Bajas de UAM**
+    *   **740-10-00: Huella de Carbono de eVTOL**
+        *   740-10-10: Análisis del Ciclo de Vida (LCA) de eVTOLs (Producción, Operación, Disposición)
+        *   740-10-20: Comparación con Emisiones de Transporte Terrestre y Aéreo Convencional
+    *   **740-20-00: Estrategias de Descarbonización**
+        *   740-20-10: Electrificación Pura y Uso de Energías Renovables para Carga (Enlace con EPTA 410-xx)
+        *   740-20-20: Adopción de Hidrógeno Verde para eVTOL (Enlace con EPTA 462-xx)
+*   **741-00-00: Eficiencia Energética de Vuelos Urbanos**
+    *   **741-10-00: Optimización Aerodinámica y Estructural**
+        *   741-10-10: Diseño Ligero con Composites Avanzados (Enlace con AMTA 500-xx)
+        *   741-10-20: Optimización de la Forma para Eficiencia en Hover y Vuelo Horizontal
+    *   **741-20-00: Gestión Energética a Bordo**
+        *   741-20-10: Sistemas de Gestión de Baterías Inteligentes (BMS) (Enlace con EPTA 420-xx)
+        *   741-20-20: Recuperación de Energía (Frenado Regenerativo)
+*   **742-00-00: Ciclos de Vida Sostenibles de Vehículos UAM**
+    *   **742-10-00: Diseño para la Circularidad**
+        *   742-10-10: Diseño para el Desmontaje, Reutilización y Reciclaje de Componentes
+        *   742-10-20: Uso de Materiales Reciclados y Bio-basados (Enlace con AMTA 590-xx)
+    *   **742-20-00: Gestión al Final de la Vida Útil (End-of-Life)**
+        *   742-20-10: Reciclaje de Baterías y Electrónica de Potencia (Ej. Redwood Materials, Li-Cycle, recuperación >95%)
+        *   742-20-20: Desmantelamiento y Recuperación de Composites (Enlace con AMTA 590-xx)
+*   **743-00-00: Impacto Ambiental Más Amplio de UAM**
+    *   **743-10-00: Ruido Urbano y Contaminación Lumínica**
+        *   743-10-10: Mitigación del Ruido en Áreas Residenciales y Sensibles
+        *   743-10-20: Diseño de Iluminación de Vertipuertos para Minimizar el Brillo Nocturno
+    *   **743-20-00: Impacto en la Biodiversidad y el Paisaje**
+        *   743-20-10: Evaluación del Impacto de Rutas de Vuelo en Aves y Vida Silvestre
+        *   743-20-20: Integración Estética de Vertipuertos en el Entorno Urbano
+</details>
+
+<details><summary><strong>ACV 750-759: Aspectos Legales, Regulatorios y de Certificación para UAM</strong></summary>
+
+*   **750-00-00: Certificación de Aeronaves UAM**
+    *   **750-10-00: Procesos de Certificación para eVTOL (EASA, FAA) (TRL 8-9)**
+        *   750-10-10: Categorías de Certificación (Special Class, Part 23/25 Modificada)
+        *   750-10-20: Requisitos Específicos para Propulsión Eléctrica y Distribuida
+        *   750-10-30: Certificación de Seguridad Funcional de Software y Hardware (Enlace con ATA 42-xx)
+    *   **750-20-00: Métodos de Demostración de Conformidad**
+        *   750-20-10: Pruebas de Vuelo y Terreno para Demostración de Rendimiento y Seguridad
+        *   750-20-20: Simulación y Modelado para Validación de Diseño (Enlace con DTCEC 340-xx)
+*   **751-00-00: Licencias de Operación y Personal**
+    *   **751-10-00: Licencias para Pilotos de eVTOL y Operadores Remotos**
+        *   751-10-10: Requisitos de Formación y Habilitaciones Específicas (Ej. EASA Part-FCL para eVTOL)
+        *   751-10-20: Entrenamiento en Simuladores y Realidad Virtual (Enlace con OGATA 693-xx)
+    *   **751-20-00: Certificación de Operadores de UAM (AOC)**
+        *   751-20-10: Requisitos para Operaciones Comerciales de UAM
+        *   751-20-20: Sistemas de Gestión de Seguridad (SMS) para Operadores UAM
+*   **752-00-00: Marco Legal para Drones Autónomos**
+    *   **752-10-00: Legislación de UAS/Drones**
+        *   752-10-10: Marco Regulatorio para Drones de Recreo y Profesionales (EASA, FAA Part 107)
+        *   752-10-20: Normativa para Operaciones Más Allá de la Línea de Vista (BVLOS)
+    *   **752-20-00: Responsabilidad y Seguros para Operaciones Autónomas**
+        *   752-20-10: Marcos Legales para la Responsabilidad en Caso de Accidentes con Drones Autónomos
+        *   752-20-20: Seguros Obligatorios y Coberturas para Operaciones UAM (Ej. Global Aerospace, Allianz, AXA)
+*   **753-00-00: Integración Regulatoria con el Espacio Aéreo Existente**
+    *   **753-10-00: Armonización con ATC y UTM**
+        *   753-10-10: Colaboración con Proveedores de Servicios de Navegación Aérea (ANSP)
+        *   753-10-20: Integración de Sistemas UTM en el Espacio Aéreo Controlado
+        *   **753-10-30: Armonización Regulatoria Internacional para UAM (ICAO)**
+            *   753-10-31: Desarrollo de Anexos y Documentos Guía de la OACI para UAM.
+            *   753-10-32: Reconocimiento Mutuo de Certificaciones de Aeronaves y Operadores entre Países.
+            *   753-10-33: Marcos Legales para Operaciones Transfronterizas de UAM.
+    *   **753-20-00: Normativa de Ruido y Emisiones**
+        *   753-20-10: Estándares de Ruido para eVTOL (Capítulo 14 de ICAO Annex 16)
+        *   753-20-20: Directrices sobre Emisiones para Vuelos Eléctricos e Híbridos
+*   **754-00-00: Estándares de Vertipuertos y Infraestructura**
+    *   **754-10-00: Normativas de Diseño y Construcción de Vertipuertos**
+        *   754-10-10: Requisitos para Zonas de Aterrizaje/Despegue, Espacios de Estacionamiento
+        *   754-10-20: Normas de Seguridad contra Incendios y Evacuación
+    *   **754-20-00: Certificación de Infraestructura de Carga Eléctrica**
+        *   754-20-10: Estándares de Seguridad para Estaciones de Carga Rápida (Ej. UL 2202)
+        *   754-20-20: Normativas para Intercambio de Baterías
+
+</details>
+
+<details><summary><strong>ACV 760-769: Interfaz Urbana y Aceptación Social</strong></summary>
+
+*   **760-00-00: Percepción Pública y Actitudes hacia la UAM**
+    *   **760-10-00: Estudios de Aceptación Social**
+        *   760-10-10: Encuestas y Grupos Focales sobre la Percepción de Seguridad y Beneficios
+        *   760-10-20: Factores que Influyen en la Aceptación (Ruido, Impacto Visual, Seguridad)
+    *   **760-20-00: Estrategias de Comunicación y Divulgación**
+        *   760-20-10: Campañas de Información Pública sobre UAM y sus Ventajas
+        *   760-20-20: Demostraciones Públicas y Vuelos de Prueba de eVTOLs
+*   **761-00-00: Integración Estética y Diseño Urbano**
+    *   **761-10-00: Diseño Estético de Vertipuertos**
+        *   761-10-10: Integración Arquitectónica con el Entorno Urbano
+        *   761-10-20: Paisajismo y Zonas Verdes en Vertipuertos
+    *   **761-20-00: Impacto Visual de Vehículos UAM**
+        *   761-20-10: Diseño de eVTOLs para Minimizar el Impacto Visual en el Cielo Urbano
+        *   761-20-20: Consideraciones de Iluminación Nocturna de Vertipuertos y Vehículos
+*   **762-00-00: Beneficios Socioeconómicos de la UAM**
+    *   **762-10-00: Impacto en la Movilidad Urbana**
+        *   762-10-10: Reducción de Congestión Terrestre y Tiempos de Viaje
+        *   762-10-20: Aumento de la Accesibilidad a Zonas Remotas o de Difícil Acceso
+    *   **762-20-00: Creación de Empleo y Desarrollo Económico**
+        *   762-20-10: Generación de Empleo en Fabricación, Mantenimiento y Operación de UAM
+        *   762-20-20: Inversión en Infraestructura y Desarrollo Tecnológico
+*   **763-00-00: Participación Ciudadana y Gobernanza Inclusiva**
+    *   **763-10-00: Mecanismos de Participación Ciudadana**
+        *   763-10-10: Foros de Debate y Consultas Públicas sobre Planificación de UAM
+        *   763-10-20: Plataformas Digitales para Recopilar Opiniones y Sugerencias
+    *   **763-20-00: Gobernanza Inclusiva y Toma de Decisiones**
+        *   763-20-10: Consideración de Necesidades de Diversos Grupos de Interés (Residentes, Empresas, ONGs)
+        *   763-20-20: Modelos de Co-creación y Diseño Participativo de Soluciones UAM
+
+</details>
+
+<details><summary><strong>ACV 770-779: Seguridad y Resiliencia de Operaciones UAM</strong></summary>
+
+*   **770-00-00: Seguridad Operacional de UAM (SMS)**
+    *   **770-10-00: Sistemas de Gestión de Seguridad (SMS) para UAM**
+        *   770-10-10: Identificación y Evaluación de Peligros Específicos de UAM
+        *   770-10-20: Evaluación de Riesgos y Medidas de Mitigación
+    *   **770-20-00: Cultura de Seguridad y Formación**
+        *   770-20-10: Programas de Formación para Personal de Operaciones y Mantenimiento de UAM
+        *   770-20-20: Reporte de Incidentes y Lecciones Aprendidas
+*   **771-00-00: Resiliencia ante Fallos de Sistemas**
+    *   **771-10-00: Arquitecturas Tolerantes a Fallos**
+        *   771-10-10: Redundancia de Sistemas Críticos (Propulsión, Control de Vuelo)
+        *   771-10-20: Degradación Graciosa (Graceful Degradation) y Modos Seguros de Fallo
+    *   **771-20-00: Recuperación de Sistemas y Continuidad Operacional**
+        *   771-20-10: Procedimientos de Recuperación Automatizada tras Fallos
+        *   771-20-20: Planificación de Continuidad de Negocio para Operadores UAM
+*   **772-00-00: Ciberseguridad de Sistemas UAM**
+    *   **772-10-00: Protección de Vehículos UAM y Plataformas de Vuelo**
+        *   772-10-10: Cifrado de Comunicaciones de Control y Telemetría
+        *   772-10-20: Hardening de Software y Firmware de Vuelo
+    *   **772-20-00: Ciberseguridad de Sistemas UTM e Infraestructura**
+        *   772-20-10: Protección contra Ataques de Denegación de Servicio (DDoS)
+        *   772-20-20: Detección de Intrusiones y Respuesta Rápida a Incidentes Cibernéticos (Enlace con CYB 800-xx)
+*   **773-00-00: Preparación para Emergencias Urbanas**
+    *   **773-10-00: Planificación de Respuesta a Emergencias en Vertipuertos**
+        *   773-10-10: Simulacros de Evacuación y Extinción de Incendios en Vertipuertos
+        *   773-10-20: Coordinación con Servicios de Emergencia Locales
+    *   **773-20-00: Gestión de Incidentes y Recuperación**
+        *   773-20-10: Centros de Mando y Control de Incidentes (AI-assisted)
+        *   773-20-20: Análisis Post-Incidente y Lecciones Aprendidas
+*   **774-00-00: Autoprotección y Defensa de eVTOLs (Conceptual)**
+    *   **774-10-00: Sistemas Anti-Colisión Avanzados**
+        *   774-10-10: Evitación de Colisiones con Drones y Aves (AI-driven)
+        *   774-10-20: Sistemas de Auto-recuperación tras Pequeños Impactos (Materiales auto-reparables, Enlace con AMTA 503-xx)
+    *   **774-20-00: Resiliencia ante Amenazas no Convencionales**
+        *   774-20-10: Detección de Spoofing de GNSS y Jamming Electrónico
+        *   774-20-20: Sistemas de Defensa Activa contra Drones Hostiles (Soft-kill, solo para autodefensa; Enlace con DTTA 209-xx)
+
+</details>
+
+<details><summary><strong>ACV 780-789: Optimización de Tráfico Cuántico y Logística Aérea Urbana</strong></summary>
+
+*   **780-00-00: Optimización Cuántica de Rutas y Horarios**
+    *   **780-10-00: Algoritmos Cuánticos para Ruteo de UAM (Q-optimization Traffic) (TRL 3-4)**
+        *   780-10-10: QAOA y VQE para Optimización de Rutas Multi-vehículo en Espacios 3D (Enlace con QCSAA 902-xx)
+        *   780-10-20: Planificación de Horarios y Asignación de Slots de Vertipuertos con Optimización Cuántica
+    *   **780-20-00: Gestión de Flotas de UAM con IA Cuántica (TRL 2-3)**
+        *   780-20-10: Algoritmos de Machine Learning Cuántico (QML) para Predicción de Demanda de Vuelos
+        *   780-20-20: Optimización Cuántica Dinámica para Reasignación de Vehículos en Tiempo Real
+*   **781-00-00: Simulación Cuántica para UTM**
+    *   **781-10-00: Modelado Cuántico de Flujo de Tráfico Aéreo Urbano (TRL 2-3)**
+        *   781-10-10: Simulación de Comportamiento Colectivo de eVTOLs en Entornos Urbanos Complejos
+        *   781-10-20: Predicción de Congestión y Anomalías de Tráfico con Modelos Cuánticos
+    *   **781-20-00: Optimización de Gestión del Espacio Aéreo con Cuántica (TRL 2-3)**
+        *   781-20-10: Algoritmos Cuánticos para Asignación Óptima de Corredores de Vuelo
+        *   781-20-20: Simulación de Escenarios de Contingencia (Fallos, Mal Tiempo) con QPU
+*   **782-00-00: Logística Aérea Urbana Optimizada por Cuántica**
+    *   **782-10-00: Entrega de Paquetes con Drones Optimizada por Cuántica (TRL 3-4)**
+        *   782-10-10: Optimización Cuántica de Rutas de Entrega Multi-dron y Multi-parada
+        *   782-10-20: Asignación de Recursos (Drones, Puntos de Carga) con Algoritmos Cuánticos
+    *   **782-20-00: Transporte Urbano de Carga y Logística Inversa (TRL 2-3)**
+        *   782-20-10: Optimización Cuántica de la Recogida de Carga y la Logística Inversa
+        *   782-20-20: Planificación de la Cadena de Suministro Urbana Aérea Integrada
+*   **783-00-00: Conciencia Situacional Cuántica para UTM**
+    *   **783-10-00: Fusión de Sensores Cuánticos para Tráfico Aéreo (TRL 2-3)**
+        *   783-10-10: Integración de Datos de Radares Cuánticos y Sensores de Gravedad (Enlace con QCSAA 941-xx)
+        *   783-10-20: Detección de Objetivos de Baja Observabilidad en Entornos Urbanos
+    *   **783-20-00: Monitoreo de Redes de UAM con Q-Sensores (TRL 2-3)**
+        *   783-20-10: Sensores Cuánticos para Detección de Interferencias Electromagnéticas en Vuelos UAM
+        *   783-20-20: Monitoreo de Ruido Acústico Urbano con Sensores Cuánticos de Ultra-precisión
+*   **784-00-00: Gestión de Flotas de UAM con Optimización Híbrida**
+    *   **784-10-00: Modelos de Optimización Híbridos Clásico-Cuántico (TRL 3-4)**
+        *   784-10-10: Combinación de Algoritmos Clásicos (Heurísticas) con Optimización Cuántica
+        *   784-10-20: Plataformas de Software para Gestión Híbrida de Flotas (Enlace con QCSAA 905-xx)
+    *   **784-20-00: Toma de Decisiones Autónoma Híbrida (TRL 3-4)**
+        *   784-20-10: Sistemas de IA para Toma de Decisiones Rápida Asistida por Optimización Cuántica
+        *   784-20-20: Resiliencia de la Flota ante Eventos Imprevistos Mediante Replanificación Cuántica
+
+</details>
+
+<details><summary><strong>ACV 790-799: Modelos de Negocio y Ecosistemas UAM</strong></summary>
+
+*   **790-00-00: Servicios de Aerotaxi y Movilidad Aérea Urbana**
+    *   **790-10-00: Modelos de Negocio de Aerotaxis**
+        *   790-10-10: Modelos de Propiedad y Operación de Flotas
+        *   790-10-20: Precios Basados en Demanda y Distancia
+        *   790-10-30: Paquetes de Suscripción y Membresía
+    *   **790-20-00: Experiencia de Usuario y Plataformas de Reserva**
+        *   790-20-10: Aplicaciones Móviles para Reserva y Seguimiento de Vuelos
+        *   790-20-20: Integración con Plataformas de Movilidad Multimodal (MaaS)
+*   **791-00-00: Redes de Reparto Aéreo Urbano**
+    *   **791-10-00: Modelos de Negocio de Entrega con Drones**
+        *   791-10-10: Servicios de Entrega de Última Milla (B2C, C2C)
+        *   791-10-20: Transporte Urgente de Productos (Médicos, Documentos)
+    *   **791-20-00: Colaboración con Empresas de Logística y Retail**
+        *   791-20-10: Partnerships con Empresas de E-commerce y Cadenas Minoristas
+        *   791-20-20: Integración de Sistemas de Gestión de Pedidos y Almacenes
+*   **792-00-00: Desarrollo de Infraestructura y Bienes Raíces**
+    *   **792-10-00: Modelos de Negocio de Vertipuertos**
+        *   792-10-10: Operación y Mantenimiento de Vertipuertos (Propiedad Privada, Pública)
+        *   792-10-20: Servicios Adicionales (Carga, Mantenimiento, Retail en Vertipuertos)
+    *   **792-20-00: Inversión en Bienes Raíces Urbanos**
+        *   792-20-10: Desarrollo de Propiedades Alrededor de Vertipuertos
+        *   792-20-20: Zonas de Desarrollo Económico Vinculadas a la UAM
+*   **793-00-00: Ecosistemas de UAM y Colaboración entre Actores**
+    *   **793-10-00: Colaboración Público-Privada (PPP)**
+        *   793-10-10: Acuerdos entre Gobiernos Locales, Empresas de UAM y Desarrolladores
+        *   793-10-20: Marcos de Gobernanza para el Ecosistema UAM
+    *   **793-20-00: Consorcios y Alianzas Industriales**
+        *   793-20-10: Alianzas entre Fabricantes de eVTOL, Operadores y Empresas Tecnológicas
+        *   793-20-20: Intercambio de Datos y Mejores Prácticas para el Desarrollo del Ecosistema
+*   **794-00-00: Seguros y Financiamiento para UAM**
+    *   **794-10-00: Productos de Seguros Específicos para UAM**
+        *   794-10-10: Seguros de Responsabilidad Civil para Operadores y Vehículos UAM
+        *   794-10-20: Seguros para Vertipuertos y Operaciones de Vuelo
+    *   **794-20-00: Modelos de Financiamiento para UAM**
+        *   794-20-10: Inversión de Capital de Riesgo y Fondos de Inversión
+        *   794-20-20: Financiamiento de Proyectos de Infraestructura UAM
+
+</details>
+
+---
 
 ---
 
@@ -4489,10 +5322,9 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 *   **880-889: Criptografía Post-Cuántica y Seguridad Cuántica (Espacio Reservado Q-Secure)** (Algoritmos resistentes a ataques cuánticos, QKD, Pruebas de conocimiento cero).
 *   **890-899: Inteligencia de Amenazas y Ciber-resiliencia** (Análisis de amenazas, Modelado de adversarios, Planificación de continuidad de negocio, Recuperación de desastres).
 
+---
 
 # Quantum Computing and Sentient Agency Architecture (QCSAA) 900-999
-
----
 
 <details><summary><strong>QCSAA 900-909: Fundamentos de Computación Cuántica</strong></summary>
 
