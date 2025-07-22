@@ -25,6 +25,51 @@ Proveer un **marco modular y extensible** para clasificar cualquier tecnología 
 | **QCSAA**   | *Quantum Computing and Sentient Agency Architecture*   | 900‑999            | Sistemas cuánticos avanzados y autonomía consciente         | Computación cuántica, IA consciente, robótica cuántica     | 
 ---
 # DESGLOSE DETALLADO
+
+```mermaid
+architecture-beta
+    group ata(cloud)[ATA]
+    group sta(cloud)[STA]
+    group dtta(cloud)[DTTA]
+    group dtcec(cloud)[DTCEC]
+    group epta(database)[EPTA]
+    group amta(database)[AMTA]
+    group ogata(server)[OGATA]
+    group acv(server)[ACV]
+    group cyb(internet)[CYB]
+    group qcsaa(internet)[QCSAA]
+
+    service avionics1(server)[Avionica] in ata
+    service flight_structures(server)[Estructuras] in ata
+    service station_life(server)[SoporteVital] in sta
+    service deep_propulsion(server)[PropulsionDeepSpace] in sta
+    service command_isr(server)[C4ISR] in dtta
+    service ai_cockpit(server)[XRCockpit] in dtcec
+    service quantum_twin(server)[QTwin] in dtcec
+    service h2_storage(database)[H2Storage] in epta
+    service electric_propulsion(database)[ElectricaHibrida] in epta
+    service nanomaterial1(database)[Nanomaterial] in amta
+    service bio_sensor(database)[BioSensor] in amta
+    service agv(server)[AGV] in ogata
+    service factory4(server)[Fabrica4_0] in ogata
+    service vertiport1(server)[Vertipuerto] in acv
+    service utm_control(server)[UTM] in acv
+    service soc(internet)[ZeroTrustSOC] in cyb
+    service pqu_crypto(internet)[CriptoPQ] in cyb
+    service q_ai(internet)[QAI] in qcsaa
+    service q_robot(internet)[QRobot] in qcsaa
+
+    avionics1:R -- L:soc
+    deep_propulsion:R -- L:h2_storage
+    ai_cockpit:B -- T:quantum_twin
+    pqu_crypto:R -- L:q_ai
+    electric_propulsion:B -- T:flight_structures
+    factory4:R -- L:bio_sensor
+    agv:B -- T:factory4
+    utm_control:R -- L:vertiport1
+    nanomaterial1:R -- L:deep_propulsion
+    q_robot:B -- T:q_ai
+```
 ---
 ## ✈️ ATA 000-099: Aerospace Technology Architecture
 
