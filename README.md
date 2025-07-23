@@ -7851,7 +7851,7 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 
 | 🔢 | **Categoría Principal** | **Descripción** | **Subcarpetas** | **Est. Archivos** |
 |-----|-------------------------|-----------------|-----------------|-------------------|
-| [00](#00-governance) | **GOVERNANCE** | Marco de Gobernanza | 15 | 150 |
+| [00](#00-governance) | **GOVERNANCE** | Marco de Gobernanza + 16 Módulos de Datos | 31 | 250 |
 | [01](#01-programs) | **PROGRAMS** | MACROProgramas AMPEL360e & AMPEL-BWB-H2 | 48 | 5,200 |
 | [02](#02-q-divisions) | **Q-DIVISIONS** | Divisiones Técnicas | 50 | 10,000 |
 | [03](#03-orb-functions) | **ORB-FUNCTIONS** | Funciones Empresariales | 30 | 2,000 |
@@ -7863,7 +7863,7 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 | [09](#09-external-partnerships) | **EXTERNAL-PARTNERSHIPS** | Partnerships Externos | - | - |
 | [10](#10-archive-legacy) | **ARCHIVE-LEGACY** | Archivo y Legacy | - | - |
 
-**Total: 559 subcarpetas | 36,101 archivos | 459 GB**
+**Total: 575 subcarpetas | 36,200 archivos | 465 GB**
 
 ---
 
@@ -7893,6 +7893,93 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 - [📋 Organizational Master Document v2.0.0](#org-master-doc)
 - [🎯 Strategic Plan 2025-2045](#strategic-plan)
 - [💼 Business Plan](#business-plan)
+
+### [🗂️ **Governance Data Modules** (From Organizational Master)](#governance-data-modules)
+
+#### [🎯 Strategic Foundation](#strategic-foundation)
+- [📜 **01-Declaración de Propósito**](#01-declaracion-proposito)
+  - [🎯 Misión](#mision)
+  - [🔮 Visión](#vision)
+  - [⭐ Valores Fundamentales](#valores-fundamentales)
+  - [🎯 Objetivos Estratégicos 2025-2045](#objetivos-estrategicos)
+- [📈 **02-Estrategia de Desarrollo por Fases**](#02-estrategia-desarrollo-fases)
+  - [🚀 Generación 1: AMPEL360e](#gen1-ampel360e)
+  - [⚛️ Generación 2: AMPEL-BWB-H2](#gen2-ampel-bwb-h2)
+  - [📊 Matriz de Riesgos por Generación](#matriz-riesgos-generacion)
+
+#### [🏗️ Organizational Architecture](#organizational-architecture)
+- [🏛️ **03-Estructura Organizacional**](#03-estructura-organizacional)
+  - [🌍 Presencia Global](#presencia-global)
+  - [📍 Justificación Estratégica por Ubicación](#justificacion-ubicaciones)
+  - [💰 Inversiones por Centro](#inversiones-centro)
+- [⚖️ **04-Sistema de Gobernanza**](#04-sistema-gobernanza)
+  - [🏛️ Consejo Supervisor](#consejo-supervisor)
+  - [🤝 Comités del Consejo](#comites-consejo)
+  - [⚡ Matriz de Autoridad](#matriz-autoridad)
+- [⚛️ **05-Divisiones Técnicas (Q-Divisions)**](#05-q-divisions)
+  - [🗄️ Q-DATAGOV](#q-datagov-detail)
+  - [🏗️ Q-STRUCTURES](#q-structures-detail)
+  - [✈️ Q-AIR](#q-air-detail)
+  - [🌱 Q-GREENTECH](#q-greentech-detail)
+  - [🏭 Q-INDUSTRY](#q-industry-detail)
+  - [💻 Q-HPC](#q-hpc-detail)
+  - [⚙️ Q-MECHANICS](#q-mechanics-detail)
+  - [🛬 Q-GROUND](#q-ground-detail)
+  - [📡 Q-SPACE](#q-space-detail)
+  - [🔬 Q-HORIZON](#q-horizon-detail)
+- [🏢 **06-Funciones Empresariales (ORB-Functions)**](#06-orb-functions)
+  - [💰 ORB-FIN](#orb-fin-detail)
+  - [📊 ORB-PMO](#orb-pmo-detail)
+  - [👥 ORB-HR](#orb-hr-detail)
+  - [📢 ORB-MKTG](#orb-mktg-detail)
+  - [🌍 ORB-CSR](#orb-csr-detail)
+  - [⚖️ ORB-LEG](#orb-leg-detail)
+
+#### [⚙️ Operational Framework](#operational-framework)
+- [🔄 **07-Modelo Operativo Integrado**](#07-modelo-operativo)
+  - [🎯 Principios de Integración](#principios-integracion)
+  - [🔄 Flujo de Trabajo](#flujo-trabajo)
+  - [🌐 Plataforma GAIA-Nexus](#plataforma-gaia-nexus)
+- [👥 **08-Gestión del Talento y Competencias**](#08-gestion-talento)
+  - [💭 Filosofía de Talento](#filosofia-talento)
+  - [🎯 Estrategia de Adquisición](#estrategia-adquisicion)
+  - [📈 Programas de Desarrollo](#programas-desarrollo)
+- [🏆 **09-Sistema de Gestión de Calidad y Seguridad**](#09-calidad-seguridad)
+  - [🏗️ Framework Integrado](#framework-integrado)
+  - [🤝 Cultura de Calidad](#cultura-calidad)
+  - [🛡️ Seguridad by Design](#seguridad-design)
+- [⚖️ **10-Marco de Cumplimiento Regulatorio**](#10-cumplimiento-regulatorio)
+  - [📋 Estructura de Cumplimiento](#estructura-cumplimiento)
+  - [✈️ Certificación de Aeronaves](#certificacion-aeronaves)
+  - [🏛️ Regulaciones Organizacionales](#regulaciones-org)
+
+#### [📊 Performance & Control](#performance-control)
+- [📈 **11-Indicadores Clave de Rendimiento (KPIs)**](#11-kpis)
+  - [🏛️ KPIs Estratégicos](#kpis-estrategicos)
+  - [⚙️ KPIs Operacionales](#kpis-operacionales)
+  - [📊 Dashboard de Métricas](#dashboard-metricas)
+- [⏰ **12-Cronograma Maestro Realista**](#12-cronograma-maestro)
+  - [🗺️ Hoja de Ruta Multi-Generacional](#hoja-ruta-multigeneracional)
+  - [🎯 Hitos y Entregables](#hitos-entregables)
+  - [📅 Gates de Revisión](#gates-revision)
+- [💰 **13-Gestión Financiera y Presupuestaria**](#13-gestion-financiera)
+  - [💰 Estructura de Capital](#estructura-capital)
+  - [📊 Control Presupuestario](#control-presupuestario)
+  - [📈 Proyecciones Financieras](#proyecciones-financieras)
+
+#### [⚠️ Risk & Implementation](#risk-implementation)
+- [⚠️ **14-Gestión de Riesgos Estratégicos**](#14-gestion-riesgos)
+  - [📋 Registro de Riesgos](#registro-riesgos)
+  - [🛡️ Estrategias de Mitigación](#estrategias-mitigacion)
+  - [📊 Matriz de Riesgos](#matriz-riesgos)
+- [📢 **15-Plan de Comunicaciones Estratégicas**](#15-comunicaciones)
+  - [📝 Estrategia de Comunicación](#estrategia-comunicacion)
+  - [🎯 Mensajes por Audiencia](#mensajes-audiencia)
+  - [📡 Canales y Frecuencias](#canales-frecuencias)
+- [🚀 **16-Hoja de Ruta de Implementación**](#16-hoja-ruta-implementacion)
+  - [📅 Roadmap 2025-2027](#roadmap-2025-2027)
+  - [🏗️ Fase de Establecimiento](#fase-establecimiento)
+  - [⚡ Hitos de Aceleración](#hitos-aceleracion)
 
 ---
 
@@ -8463,26 +8550,14 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 
 | **Métrica** | **Valor** |
 |-------------|-----------|
-| **Total Carpetas** | 559 |
-| **Total Archivos** | 36,101 |
-| **Tamaño Total** | 459 GB |
-| **Enlaces Internos** | 847 |
+| **Total Carpetas** | 575 |
+| **Total Archivos** | 36,200 |
+| **Tamaño Total** | 465 GB |
+| **Enlaces Internos** | 891 |
+| **Módulos de Governance** | 16 |
 | **Arquitecturas UTCS** | 10 (000-999) |
 | **Templates Documentales** | 251 |
 | **Q-Divisions** | 10 |
 | **ORB-Functions** | 6 |
 | **Ubicaciones Físicas** | 5 |
 | **Programas Activos** | 15+ |
-
-
-### **Control de Cambios:**
-
-| Versión | Fecha     | Cambios                           | Autor           |
-|---------|-----------|-----------------------------------|-----------------|
-| 1.0.0   | 23/07/2025| Documento inicial completo        | A. Pelliccia    |
-| 2.0.0   | 23/07/2025| Corrección nomenclatura y autoría  | A. Pelliccia    |
-
----
-
-**© 2025 Amedeo Pelliccia - GAIA-QAO ADVENT Framework**  
-*Estructura ideal para la integración sin fricción de tecnología quantum en la industria aeroespacial y el liderazgo europeo en tecnología punta y sostenibilidad aeroespacial.*
