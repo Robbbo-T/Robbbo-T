@@ -7447,697 +7447,810 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 
 ---
 
-## 00-GOVERNANCE
-**📊 Marco de Gobernanza y Políticas Corporativas**
-
-### [🏛️ Board Documents](#board-documents)
-- [📄 Consortium Agreement](#consortium-agreement)
-- [📋 Board Charter](#board-charter)
-- [🗳️ Voting Procedures](#voting-procedures)
-- [⚖️ Shareholder Rights](#shareholder-rights)
-
-### [📜 Corporate Policies](#corporate-policies)
-- [🤝 Ethics & Conduct Policy](#ethics-conduct)
-- [🔐 Information Security Policy](#info-security)
-- [🏆 Quality Policy](#quality-policy)
-- [🌍 Environmental Policy](#environmental-policy)
-- [👥 HR Policy](#hr-policy)
-
-### [⚖️ Compliance Framework](#compliance-framework)
-- [📊 Regulatory Matrix](#regulatory-matrix)
-- [🛡️ ITAR/EAR Compliance](#itar-ear-compliance)
-- [🔒 GDPR Compliance](#gdpr-compliance)
-- [✈️ Aviation Standards](#aviation-standards)
-
-### [📖 Master Documents](#master-documents)
-- [📋 Organizational Master Document v2.0.0](#org-master-doc)
-- [🎯 Strategic Plan 2025-2045](#strategic-plan)
-- [💼 Business Plan](#business-plan)
-
-### [🗂️ **Governance Data Modules** (From Organizational Master)](#governance-data-modules)
-
-#### [🎯 Strategic Foundation](#strategic-foundation)
-- [📜 **01-Declaración de Propósito**](#01-declaracion-proposito)
-  - [🎯 Misión](#mision)
-  - [🔮 Visión](#vision)
-  - [⭐ Valores Fundamentales](#valores-fundamentales)
-  - [🎯 Objetivos Estratégicos 2025-2045](#objetivos-estrategicos)
-- [📈 **02-Estrategia de Desarrollo por Fases**](#02-estrategia-desarrollo-fases)
-  - [🚀 Generación 1: AMPEL360e](#gen1-ampel360e)
-  - [⚛️ Generación 2: AMPEL-BWB-H2](#gen2-ampel-bwb-h2)
-  - [📊 Matriz de Riesgos por Generación](#matriz-riesgos-generacion)
-
-#### [🏗️ Organizational Architecture](#organizational-architecture)
-- [🏛️ **03-Estructura Organizacional**](#03-estructura-organizacional)
-  - [🌍 Presencia Global](#presencia-global)
-  - [📍 Justificación Estratégica por Ubicación](#justificacion-ubicaciones)
-  - [💰 Inversiones por Centro](#inversiones-centro)
-- [⚖️ **04-Sistema de Gobernanza**](#04-sistema-gobernanza)
-  - [🏛️ Consejo Supervisor](#consejo-supervisor)
-  - [🤝 Comités del Consejo](#comites-consejo)
-  - [⚡ Matriz de Autoridad](#matriz-autoridad)
-- [⚛️ **05-Divisiones Técnicas (Q-Divisions)**](#05-q-divisions)
-  - [🗄️ Q-DATAGOV](#q-datagov-detail)
-  - [🏗️ Q-STRUCTURES](#q-structures-detail)
-  - [✈️ Q-AIR](#q-air-detail)
-  - [🌱 Q-GREENTECH](#q-greentech-detail)
-  - [🏭 Q-INDUSTRY](#q-industry-detail)
-  - [💻 Q-HPC](#q-hpc-detail)
-  - [⚙️ Q-MECHANICS](#q-mechanics-detail)
-  - [🛬 Q-GROUND](#q-ground-detail)
-  - [📡 Q-SPACE](#q-space-detail)
-  - [🔬 Q-HORIZON](#q-horizon-detail)
-- [🏢 **06-Funciones Empresariales (ORB-Functions)**](#06-orb-functions)
-  - [💰 ORB-FIN](#orb-fin-detail)
-  - [📊 ORB-PMO](#orb-pmo-detail)
-  - [👥 ORB-HR](#orb-hr-detail)
-  - [📢 ORB-MKTG](#orb-mktg-detail)
-  - [🌍 ORB-CSR](#orb-csr-detail)
-  - [⚖️ ORB-LEG](#orb-leg-detail)
-
-#### [⚙️ Operational Framework](#operational-framework)
-- [🔄 **07-Modelo Operativo Integrado**](#07-modelo-operativo)
-  - [🎯 Principios de Integración](#principios-integracion)
-  - [🔄 Flujo de Trabajo](#flujo-trabajo)
-  - [🌐 Plataforma GAIA-Nexus](#plataforma-gaia-nexus)
-- [👥 **08-Gestión del Talento y Competencias**](#08-gestion-talento)
-  - [💭 Filosofía de Talento](#filosofia-talento)
-  - [🎯 Estrategia de Adquisición](#estrategia-adquisicion)
-  - [📈 Programas de Desarrollo](#programas-desarrollo)
-- [🏆 **09-Sistema de Gestión de Calidad y Seguridad**](#09-calidad-seguridad)
-  - [🏗️ Framework Integrado](#framework-integrado)
-  - [🤝 Cultura de Calidad](#cultura-calidad)
-  - [🛡️ Seguridad by Design](#seguridad-design)
-- [⚖️ **10-Marco de Cumplimiento Regulatorio**](#10-cumplimiento-regulatorio)
-  - [📋 Estructura de Cumplimiento](#estructura-cumplimiento)
-  - [✈️ Certificación de Aeronaves](#certificacion-aeronaves)
-  - [🏛️ Regulaciones Organizacionales](#regulaciones-org)
-
-#### [📊 Performance & Control](#performance-control)
-- [📈 **11-Indicadores Clave de Rendimiento (KPIs)**](#11-kpis)
-  - [🏛️ KPIs Estratégicos](#kpis-estrategicos)
-  - [⚙️ KPIs Operacionales](#kpis-operacionales)
-  - [📊 Dashboard de Métricas](#dashboard-metricas)
-- [⏰ **12-Cronograma Maestro Realista**](#12-cronograma-maestro)
-  - [🗺️ Hoja de Ruta Multi-Generacional](#hoja-ruta-multigeneracional)
-  - [🎯 Hitos y Entregables](#hitos-entregables)
-  - [📅 Gates de Revisión](#gates-revision)
-- [💰 **13-Gestión Financiera y Presupuestaria**](#13-gestion-financiera)
-  - [💰 Estructura de Capital](#estructura-capital)
-  - [📊 Control Presupuestario](#control-presupuestario)
-  - [📈 Proyecciones Financieras](#proyecciones-financieras)
-
-#### [⚠️ Risk & Implementation](#risk-implementation)
-- [⚠️ **14-Gestión de Riesgos Estratégicos**](#14-gestion-riesgos)
-  - [📋 Registro de Riesgos](#registro-riesgos)
-  - [🛡️ Estrategias de Mitigación](#estrategias-mitigacion)
-  - [📊 Matriz de Riesgos](#matriz-riesgos)
-- [📢 **15-Plan de Comunicaciones Estratégicas**](#15-comunicaciones)
-  - [📝 Estrategia de Comunicación](#estrategia-comunicacion)
-  - [🎯 Mensajes por Audiencia](#mensajes-audiencia)
-  - [📡 Canales y Frecuencias](#canales-frecuencias)
-- [🚀 **16-Hoja de Ruta de Implementación**](#16-hoja-ruta-implementacion)
-  - [📅 Roadmap 2025-2027](#roadmap-2025-2027)
-  - [🏗️ Fase de Establecimiento](#fase-establecimiento)
-  - [⚡ Hitos de Aceleración](#hitos-aceleracion)
-
----
-
-## 01-PROGRAMS
-**🚀 Programas de Desarrollo por Generaciones Tecnológicas**
-
-### [✈️ MACROPrograma Generación 1: AMPEL360e](#ampel360e-gen1)
-**Tecnologías Probadas - Menor Riesgo Técnico**
-
-#### [🏗️ Baseline Aircraft](#baseline-aircraft-gen1)
-- [📋 Concept Phase](#concept-phase-gen1)
-- [🔧 Preliminary Design](#prelim-design-gen1)
-- [📐 Detailed Design](#detailed-design-gen1)
-- [🧪 Testing & Certification](#testing-cert-gen1)
-- [🏭 Production Support](#production-support-gen1)
-
-#### [✅ Proven Technology Programs](#proven-tech-programs)
-- [🌆 AMPEL360-City-eVTOL](#ampel360-city-evtol)
-  - [🚁 Urban Mobility](#urban-mobility)
-  - [🔋 Battery Systems](#battery-systems-city)
-  - [🗺️ Route Planning](#route-planning-city)
-- [🌍 AMPEL360-Sky-Cleaner](#ampel360-sky-cleaner)
-  - [🔬 Environmental Remediation](#env-remediation)
-  - [🤖 Autonomous Flight](#autonomous-flight)
-  - [📊 Monitoring Systems](#monitoring-systems)
-- [⚡ **AMPEL360-BWB-e**](#ampel360-bwb-e)
-  - [🔋 100% Electric Propulsion](#electric-propulsion)
-  - [⚡ Rapid Charging Systems](#rapid-charging)
-  - [🌐 Regional Operations](#regional-operations)
-
-### [🚀 MACROPrograma Generación 2: AMPEL-BWB-H2](#ampel-bwb-h2-gen2)
-**Tecnologías Disruptivas - Salto Tecnológico**
-
-#### [🔬 Baseline BWB](#baseline-bwb-gen2)
-- [🧪 Research & Development](#rd-bwb)
-- [🎯 Technology Demonstration](#tech-demo-bwb)
-- [✅ Concept Validation](#concept-validation-bwb)
-- [🛩️ Flight Demonstrator](#flight-demo-bwb)
-
-#### [⚡ Disruptive BWB Programs](#disruptive-bwb-programs)
-- [🛡️ AMPEL360-Q300-MRTT](#ampel360-q300-mrtt) ← **QUANTUM MILITAR**
-  - [⚛️ Quantum Military Systems](#quantum-military-systems)
-  - [🚁 Tanker-Transport Capability](#tanker-transport)
-  - [🏥 Humanitarian Operations](#humanitarian-ops)
-  - [🛡️ Defense Applications](#defense-applications)
-- [🌀 AMPEL360-BWB-Q100](#ampel360-bwb-q100)
-  - [⚡ Hybrid-Electric Systems](#hybrid-electric-q100)
-  - [🧊 Hydrogen Storage](#hydrogen-storage-q100)
-  - [🌱 SAF Integration](#saf-integration-q100)
-- [🚀 AMPEL360-BWB-Q250](#ampel360-bwb-q250)
-  - [⚡ Advanced Hybrid](#advanced-hybrid-q250)
-  - [⛽ Conventional Fuel](#conventional-fuel-q250)
-  - [📈 Commercial Scale](#commercial-scale-q250)
-- [🌌 AMPEL360-Plus-Suborbital](#ampel360-plus-suborbital)
-  - [🚀 Space Tourism](#space-tourism-sub)
-  - [🛡️ Safety Systems](#safety-systems-sub)
-  - [👨‍🚀 Training Programs](#training-programs-sub)
-- [🌟 AMPEL360-PlusPlus-Orbital](#ampel360-plusplus-orbital)
-  - [🏠 Orbital Habitat](#orbital-habitat)
-  - [🔄 Life Support](#life-support-orbital)
-  - [🛰️ Docking Systems](#docking-systems)
-
-### [🛰️ Space Programs GAIA-SP](#space-programs-gaia-sp)
-
-#### [🟢 Active Programs](#active-space-programs)
-- [🚀 GAIA-SP-LV](#gaia-sp-lv) (Lanzador Reutilizable)
-- [📡 GAIA-SP-COMM](#gaia-sp-comm) (Constelación Comunicaciones)
-- [🎮 GAIA-SP-OPS](#gaia-sp-ops) (Centro Operaciones 24/7)
-- [🌍 GAIA-SP-ENVDEM](#gaia-sp-envdem) (Demostradores Ambientales)
-- [☀️ GAIA-SP-POWER-100](#gaia-sp-power-100) (Energía Solar Orbital)
-
-#### [🟡 Phase 2 Programs](#phase-2-space)
-- [🏗️ GAIA-SP-GATE-Mini](#gaia-sp-gate-mini) (Mini-Gateway)
-
-#### [🔴 Deferred Programs](#deferred-space)
-- [⛽ GAIA-SP-REFUEL](#gaia-sp-refuel) (Pospuesto)
-- [🔨 GAIA-SP-FORGE](#gaia-sp-forge) (Pospuesto)
-
-### [🏗️ Terrestrial Infrastructure ROBBBO-T](#terrestrial-infrastructure)
-
-#### [💻 Digital Ecosystem](#digital-ecosystem-robbbo)
-- [🌐 ROBBBO-T-DIGI](#robbbo-t-digi)
-  - [🖥️ HPC Systems](#hpc-systems)
-  - [📊 PLM Platform](#plm-platform)
-  - [👥 Digital Twins](#digital-twins-robbbo)
-
-#### [🔬 Testing & Certification](#testing-cert-robbbo)
-- [🧪 ROBBBO-T-TEST](#robbbo-t-test)
-  - [🌪️ Wind Tunnel](#wind-tunnel)
-  - [⚡ Electric Testing](#electric-testing)
-  - [🧊 Cryogenic Labs](#cryogenic-labs)
-
-#### [🏭 Specialized Facilities](#specialized-facilities-robbbo)
-- [🌊 ROBBBO-T-MARLAB](#robbbo-t-marlab)
-- [🏭 ROBBBO-T-FAL](#robbbo-t-fal)
-  - [🔧 Assembly Lines](#assembly-lines)
-  - [🤖 Automation](#automation-fal)
-  - [📦 Logistics](#logistics-fal)
-
-#### [📡 Operations & Control](#operations-control-robbbo)
-- [🎮 ROBBBO-T-GNDNET](#robbbo-t-gndnet)
-- [🔧 ROBBBO-T-MRO](#robbbo-t-mro)
-  - [⚡ Charging Stations](#charging-stations)
-  - [🔧 Maintenance Bays](#maintenance-bays)
-  - [📋 Service Planning](#service-planning)
-
-#### [🛡️ Support Systems](#support-systems-robbbo)
-- [🛡️ ROBBBO-T-SAFETY](#robbbo-t-safety)
-- [🌱 ROBBBO-T-SUSTAIN](#robbbo-t-sustain)
-
----
-
-## 02-Q-DIVISIONS
-**⚛️ Divisiones Técnicas Especializadas**
-
-### [🗄️ Q-DATAGOV](#q-datagov) - Gobernanza de Datos
-- [📚 S1000D Implementation](#s1000d-implementation)
-- [🏗️ Data Architecture](#data-architecture)
-- [🔧 Configuration Management](#config-management)
-- [🔐 Cybersecurity](#cybersecurity-datagov)
-- [⛓️ Blockchain Systems](#blockchain-systems)
-
-### [🏗️ Q-STRUCTURES](#q-structures) - Ingeniería Estructural
-- [🧬 Composite Materials](#composite-materials)
-- [📐 Structural Analysis](#structural-analysis)
-- [🌀 BWB Structures](#bwb-structures)
-- [🔬 Materials Lab](#materials-lab)
-- [🔄 Fatigue Testing](#fatigue-testing)
-
-### [✈️ Q-AIR](#q-air) - Aerodinámica y Sistemas de Vuelo
-- [🌪️ Aerodynamics](#aerodynamics)
-- [🎮 Flight Controls](#flight-controls)
-- [🧪 Flight Testing](#flight-testing)
-- [📊 Performance Analysis](#performance-analysis)
-- [🌪️ Wind Tunnel Data](#wind-tunnel-data)
-
-### [🌱 Q-GREENTECH](#q-greentech) - Propulsión Sostenible
-- [⚡ Hybrid Propulsion](#hybrid-propulsion)
-- [🧊 Hydrogen Systems](#hydrogen-systems)
-- [🔋 Battery Technology](#battery-technology)
-- [⛽ Sustainable Fuels](#sustainable-fuels)
-- [♻️ Lifecycle Assessment](#lifecycle-assessment)
-
-### [🏭 Q-INDUSTRY](#q-industry) - Manufactura Avanzada
-- [🔧 Manufacturing Processes](#manufacturing-processes)
-- [⛓️ Supply Chain](#supply-chain)
-- [🏆 Quality Systems](#quality-systems)
-- [📋 Production Planning](#production-planning)
-- [🤖 Automation & Robotics](#automation-robotics)
-
-### [💻 Q-HPC](#q-hpc) - Computación de Alto Rendimiento
-- [⚛️ Quantum Computing](#quantum-computing)
-- [🤖 AI/ML Systems](#ai-ml-systems)
-- [👥 Digital Twins](#digital-twins-hpc)
-- [📊 Simulation & Modeling](#simulation-modeling)
-- [✅ Software Certification](#software-certification)
-
-### [⚙️ Q-MECHANICS](#q-mechanics) - Sistemas Mecánicos
-- [💧 Hydraulic Systems](#hydraulic-systems)
-- [🦵 Landing Gear](#landing-gear)
-- [🔧 Actuators](#actuators)
-- [⚙️ Mechanical Systems](#mechanical-systems)
-- [🌡️ Thermal Management](#thermal-management)
-
-### [🛬 Q-GROUND](#q-ground) - Operaciones Terrestres
-- [🔧 GSE Equipment](#gse-equipment)
-- [📋 Maintenance Procedures](#maintenance-procedures)
-- [🎓 Training Programs](#training-programs)
-- [🛡️ Safety Systems](#safety-systems-ground)
-- [✈️ Airport Operations](#airport-operations)
-
-### [📡 Q-SPACE](#q-space) - Comunicaciones y Navegación
-- [📡 Satellite Communications](#satellite-communications)
-- [🧭 Navigation Systems](#navigation-systems)
-- [⚛️ Quantum Communications](#quantum-communications)
-- [📻 RF Engineering](#rf-engineering)
-- [📶 Antenna Design](#antenna-design)
-
-### [🔬 Q-SCIRES](#q-scires) - Investigación Avanzada
-- [🧪 Research Projects](#research-projects)
-- [🎓 University Partnerships](#university-partnerships)
-- [📜 Patent Portfolio](#patent-portfolio)
-- [🔄 Technology Transfer](#technology-transfer)
-- [💡 Innovation Lab](#innovation-lab)
-
----
-
-## 03-ORB-FUNCTIONS
-**🏢 Funciones Empresariales de Soporte**
-
-### [💰 ORB-FIN](#orb-fin) - Finanzas
-- [📊 Financial Planning](#financial-planning)
-- [💰 Budget Control](#budget-control)
-- [🏦 Treasury](#treasury)
-- [⚠️ Risk Management](#risk-management-fin)
-- [👥 Investor Relations](#investor-relations)
-
-### [📊 ORB-PMO](#orb-pmo) - Gestión de Programas
-- [📋 Program Management](#program-management)
-- [📅 Project Schedules](#project-schedules)
-- [📊 Risk Registers](#risk-registers)
-- [🤝 Stakeholder Management](#stakeholder-management)
-- [🔄 Change Control](#change-control)
-
-### [👥 ORB-HR](#orb-hr) - Recursos Humanos
-- [🎯 Talent Acquisition](#talent-acquisition)
-- [📈 Competency Development](#competency-development)
-- [📊 Performance Management](#performance-management)
-- [🎓 Training Academy](#training-academy)
-- [🌐 Mobility Programs](#mobility-programs)
-
-### [📢 ORB-MKTG](#orb-mktg) - Marketing
-- [📊 Market Analysis](#market-analysis)
-- [🤝 Customer Relations](#customer-relations)
-- [🏷️ Brand Management](#brand-management)
-- [📢 Communications](#communications)
-- [✈️ Events & Airshows](#events-airshows)
-
-### [🌍 ORB-CSR](#orb-csr) - Responsabilidad Social
-- [🌱 Sustainability](#sustainability)
-- [📊 ESG Reporting](#esg-reporting)
-- [🏘️ Community Programs](#community-programs)
-- [🌍 Carbon Management](#carbon-management)
-- [♻️ Circular Economy](#circular-economy)
-
-### [⚖️ ORB-LEG](#orb-leg) - Legal
-- [📄 Contracts](#contracts)
-- [🧠 Intellectual Property](#intellectual-property)
-- [📋 Regulatory Affairs](#regulatory-affairs)
-- [🛡️ Export Control](#export-control)
-- [🔒 Data Privacy](#data-privacy)
-
----
-
-## 04-UTCS-ARCHITECTURE
-**⚛️ Sistema Universal de Clasificación Tecnológica (000-999)**
-
-### [✈️ ATA-000-099](#ata-000-099) - Aerospace Technology
-- [📋 000-009: General Service](#ata-000-009)
-- [🚛 010-019: Ground Handling](#ata-010-019)
-- [⚙️ 020-029: Core Systems](#ata-020-029)
-- [🛡️ 030-039: Protection & Mechanical](#ata-030-039)
-- [🖥️ 040-049: Avionics & APU](#ata-040-049)
-- [🏗️ 050-059: Primary Structures](#ata-050-059)
-- [🚀 060-079: Traditional Propulsion](#ata-060-079)
-- [⚡ 080-089: Alternative & Quantum](#ata-080-089)
-- [🔮 090-099: Specific & Expansion](#ata-090-099)
-
-### [🚀 STA-100-199](#sta-100-199) - Space Technology
-- [🌬️ 100-109: Life Support](#sta-100-109)
-- [🏗️ 110-119: Space Structures](#sta-110-119)
-- [🚀 120-129: Space Propulsion](#sta-120-129)
-- [⚡ 130-139: Space Power](#sta-130-139)
-- [🖥️ 140-149: Space Avionics](#sta-140-149)
-- [📡 150-159: Space Communications](#sta-150-159)
-- [📊 160-169: Sensors & Payload](#sta-160-169)
-- [🛰️ 170-179: On-Orbit Operations](#sta-170-179)
-- [📦 180-189: Space Logistics](#sta-180-189)
-- [🔮 190-199: Future Concepts](#sta-190-199)
-
-### [🛡️ DTTA-200-299](#dtta-200-299) - Defence Technology
-- [⚔️ 200-209: Combat Systems](#dtta-200-209)
-- [📡 210-219: C4ISR](#dtta-210-219)
-- [🛡️ 220-229: Protection](#dtta-220-229)
-- [🤖 230-239: Autonomous Systems](#dtta-230-239)
-- [📦 240-249: Defense Logistics](#dtta-240-249)
-- [⚡ 250-259: Cyber & EW](#dtta-250-259)
-- [🧪 260-269: Defense Materials](#dtta-260-269)
-- [🎮 270-279: Simulation & Training](#dtta-270-279)
-- [⚛️ 280-289: Quantum Warfare](#dtta-280-289)
-- [🔮 290-299: Future Operations](#dtta-290-299)
-
-### [🔮 DTCEC-300-399](#dtcec-300-399) - Digital Twins & Cloud
-- [🏗️ 300-309: DT Fundamentals](#dtcec-300-309)
-- [📊 310-319: Sensors & IoT](#dtcec-310-319)
-- [🤖 320-329: AI & ML](#dtcec-320-329)
-- [☁️ 330-339: Cloud & Distributed](#dtcec-330-339)
-- [📊 340-349: Simulation & Modeling](#dtcec-340-349)
-- [🥽 350-359: XR & Metaverse](#dtcec-350-359)
-- [⛓️ 360-369: Blockchain](#dtcec-360-369)
-- [🔒 370-379: DT Cybersecurity](#dtcec-370-379)
-- [📊 380-389: Analytics & BI](#dtcec-380-389)
-- [🧠 390-399: Conscious DT](#dtcec-390-399)
-
-### [⚡ EPTA-400-499](#epta-400-499) - Energy & Propulsion
-- [⚡ 400-409: Conventional Energy](#epta-400-409)
-- [🌞 410-419: Renewable Energy](#epta-410-419)
-- [🔋 420-429: Energy Storage](#epta-420-429)
-- [⚙️ 430-439: Energy Management](#epta-430-439)
-- [🔥 440-449: Combustion Propulsion](#epta-440-449)
-- [⚡ 450-459: Electric & Hybrid](#epta-450-459)
-- [🧊 460-469: Hydrogen & Fuel Cells](#epta-460-469)
-- [🚀 470-479: New Propulsion](#epta-470-479)
-- [⚛️ 480-489: Quantum Optimization](#epta-480-489)
-- [♻️ 490-499: Energy Recovery](#epta-490-499)
-
-### [🧬 AMTA-500-599](#amta-500-599) - Materials, Bio & Nano
-- [🧪 500-509: Advanced Composites](#amta-500-509)
-- [🔮 510-519: Metamaterials](#amta-510-519)
-- [⚛️ 520-529: Nanomaterials](#amta-520-529)
-- [🧬 530-539: Biotechnology](#amta-530-539)
-- [🦴 540-549: Biomaterials](#amta-540-549)
-- [🔬 550-559: Nanotechnology](#amta-550-559)
-- [📊 560-569: Advanced Sensors](#amta-560-569)
-- [🖨️ 570-579: Additive Manufacturing](#amta-570-579)
-- [⚛️ 580-589: Quantum Materials](#amta-580-589)
-- [♻️ 590-599: Sustainability](#amta-590-599)
-
-### [⚙️ OGATA-600-699](#ogata-600-699) - Ground Automation
-- [🤖 600-609: Industrial Robotics](#ogata-600-609)
-- [🚗 610-619: Autonomous Vehicles](#ogata-610-619)
-- [🏗️ 620-629: Smart Infrastructure](#ogata-620-629)
-- [🏭 630-639: Industry 4.0](#ogata-630-639)
-- [📦 640-649: Automated Logistics](#ogata-640-649)
-- [🌾 650-659: Precision Agriculture](#ogata-650-659)
-- [🏗️ 660-669: Construction Automation](#ogata-660-669)
-- [🛎️ 670-679: Autonomous Services](#ogata-670-679)
-- [⚛️ 680-689: AI & Quantum Optimization](#ogata-680-689)
-- [🤝 690-699: Human-Robot Interaction](#ogata-690-699)
-
-### [🏙️ ACV-700-799](#acv-700-799) - Aerial City Viability
-- [🚁 700-709: UAM Vehicles](#acv-700-709)
-- [🏢 710-719: Vertiport Infrastructure](#acv-710-719)
-- [🎮 720-729: UTM Traffic Management](#acv-720-729)
-- [🔊 730-739: Noise & Acoustics](#acv-730-739)
-- [🌱 740-749: Environmental Sustainability](#acv-740-749)
-- [📋 750-759: Regulation & Certification](#acv-750-759)
-- [🏙️ 760-769: Urban Integration](#acv-760-769)
-- [🛡️ 770-779: Safety & Resilience](#acv-770-779)
-- [⚛️ 780-789: Quantum Traffic Optimization](#acv-780-789)
-- [💼 790-799: Business Models](#acv-790-799)
-
-### [🔒 CYB-800-899](#cyb-800-899) - Cybersecurity
-- [⚖️ 800-809: Governance & Risk](#cyb-800-809)
-- [🌐 810-819: Network Security](#cyb-810-819)
-- [💾 820-829: Data Security](#cyb-820-829)
-- [🔑 830-839: Identity & Access](#cyb-830-839)
-- [💻 840-849: Application Security](#cyb-840-849)
-- [🛡️ 850-859: Security Operations](#cyb-850-859)
-- [☁️ 860-869: Cloud & Edge Security](#cyb-860-869)
-- [🏭 870-879: Industrial Control Security](#cyb-870-879)
-- [⚛️ 880-889: Post-Quantum Crypto](#cyb-880-889)
-- [🕵️ 890-899: Threat Intelligence](#cyb-890-899)
-
-### [⚛️ QCSAA-900-999](#qcsaa-900-999) - Quantum & Sentient
-- [⚛️ 900-909: Quantum Fundamentals](#qcsaa-900-909)
-- [🤖 910-919: Quantum ML & AI](#qcsaa-910-919)
-- [📡 920-929: Quantum Networks](#qcsaa-920-929)
-- [🔒 930-939: Quantum Cybersecurity](#qcsaa-930-939)
-- [📊 940-949: Quantum Sensors](#qcsaa-940-949)
-- [🔬 950-959: Quantum Simulation](#qcsaa-950-959)
-- [🤖 960-969: Quantum Robotics](#qcsaa-960-969)
-- [🧠 970-979: Sentient Consciousness](#qcsaa-970-979)
-- [⚖️ 980-989: Quantum Ethics](#qcsaa-980-989)
-- [🔮 990-999: Future Applications](#qcsaa-990-999)
-
----
-
-## 05-DOCUMENTATION-TEMPLATES
-**📋 Templates de Documentación por Fases del Ciclo de Vida (251 Templates)**
-
-### [🔄 Lifecycle Phases](#lifecycle-phases) (142 Templates)
-- [💡 CON-Concept](#con-concept) (10 templates)
-- [📐 DES-Design](#des-design) (16 templates)
-- [🧪 TST-Testing](#tst-testing) (12 templates)
-- [✅ CRT-Certification](#crt-certification) (12 templates)
-- [🏭 PRD-Production](#prd-production) (12 templates)
-- [🔧 MNT-Maintenance](#mnt-maintenance) (12 templates)
-- [✈️ OPS-Operations](#ops-operations) (12 templates)
-- [🛠️ SUP-Support](#sup-support) (12 templates)
-- [🔧 REP-Repair](#rep-repair) (23 templates)
-- [♻️ RET-Retirement](#ret-retirement) (21 templates)
-
-### [📖 Technical Manuals](#technical-manuals) (48 Templates)
-- [🔧 AMM - Aircraft Maintenance](#amm-aircraft-maintenance) (12 templates)
-- [🏗️ SRM - Structural Repair](#srm-structural-repair) (10 templates)
-- [⚙️ CMM - Component Maintenance](#cmm-component-maintenance) (8 templates)
-- [📊 IPL - Illustrated Parts](#ipl-illustrated-parts) (15 templates)
-- [🔬 Specialized Manuals](#specialized-manuals) (13 templates)
-
-### [🏢 ORB Functions Templates](#orb-functions-templates) (48 Templates)
-- [💰 FIN-Finance](#fin-finance) (8 templates)
-- [📊 PMO-Program Management](#pmo-program-management) (8 templates)
-- [👥 HR-Human Resources](#hr-human-resources) (8 templates)
-- [📢 MKT-Marketing](#mkt-marketing) (8 templates)
-- [🌍 CSR-Sustainability](#csr-sustainability) (8 templates)
-- [⚖️ LEG-Legal](#leg-legal) (8 templates)
-
-### [🤖 Smart Templates](#smart-templates) (13 Templates)
-- [🤖 AI-Assisted Templates](#ai-assisted-templates)
-- [⚛️ Quantum-Enhanced Templates](#quantum-enhanced-templates)
-- [🔄 Adaptive Templates](#adaptive-templates)
-
----
-
-## 06-STANDARDS-COMPLIANCE
-**📋 Cumplimiento de Estándares y Normativas**
-
-### [✈️ Aerospace Standards](#aerospace-standards)
-- [🇪🇺 EASA Certification](#easa-certification)
-- [🇺🇸 FAA Certification](#faa-certification)
-- [💻 DO-178C Software](#do-178c-software)
-- [⚙️ DO-254 Hardware](#do-254-hardware)
-- [🔧 ARP4754A Development](#arp4754a-development)
-- [📚 S1000D Documentation](#s1000d-documentation)
-
-### [🏆 Quality Standards](#quality-standards)
-- [✈️ AS9100D Aerospace](#as9100d-aerospace)
-- [🏆 ISO9001 Quality](#iso9001-quality)
-- [🌍 ISO14001 Environmental](#iso14001-environmental)
-- [🛡️ ISO45001 Safety](#iso45001-safety)
-
-### [🔒 Cybersecurity Standards](#cybersecurity-standards)
-- [🔒 ISO27001 InfoSec](#iso27001-infosec)
-- [🇺🇸 NIST Cybersecurity](#nist-cybersecurity)
-- [⚛️ Post-Quantum Crypto](#post-quantum-crypto)
-
-### [🆕 Emerging Standards](#emerging-standards)
-- [⚛️ Quantum Standards](#quantum-standards)
-- [🚁 UAM Regulations](#uam-regulations)
-- [🌱 Sustainable Aviation](#sustainable-aviation)
-
----
-
-## 07-FACILITIES-LOCATIONS
-**🌍 Instalaciones Físicas Distribuidas**
-
-### [🏢 Madrid HQ](#madrid-hq)
-- [👨‍💼 Executive Offices](#executive-offices)
-- [⚖️ Legal & Compliance](#legal-compliance)
-- [💰 Finance & Treasury](#finance-treasury)
-- [📊 Strategic Planning](#strategic-planning)
-
-### [🏭 Toulouse Integration](#toulouse-integration)
-- [🔧 Final Assembly](#final-assembly)
-- [🧪 Flight Testing](#flight-testing-toulouse)
-- [🔬 Integration Lab](#integration-lab)
-- [✈️ Customer Delivery](#customer-delivery)
-
-### [🔧 Hamburg Design](#hamburg-design)
-- [🏗️ Fuselage Design](#fuselage-design)
-- [🛋️ Cabin Systems](#cabin-systems)
-- [🔬 Structures Lab](#structures-lab)
-- [🧪 Materials Testing](#materials-testing)
-
-### [🔬 Munich Research](#munich-research)
-- [⚛️ Quantum Lab](#quantum-lab)
-- [🚀 Propulsion Research](#propulsion-research)
-- [🤖 AI Development](#ai-development)
-- [🎓 University Partnerships](#university-partnerships-munich)
-
-### [🏭 Seville Manufacturing](#seville-manufacturing)
-- [🧪 Composites Production](#composites-production)
-- [🤖 Automated Assembly](#automated-assembly)
-- [🏆 Quality Control](#quality-control)
-- [⛓️ Supply Chain](#supply-chain-seville)
-
----
-
-## 08-DIGITAL-INFRASTRUCTURE
-**💻 Infraestructura Digital Integrada**
-
-### [🌐 GAIA-Nexus PLM](#gaia-nexus-plm)
-- [💾 Product Data](#product-data)
-- [🔧 Configuration Management](#configuration-management)
-- [🔄 Change Control](#change-control-digital)
-- [🤝 Collaboration Tools](#collaboration-tools)
-
-### [👥 Digital Twins](#digital-twins)
-- [✈️ Aircraft Twins](#aircraft-twins)
-- [🏭 Manufacturing Twins](#manufacturing-twins)
-- [✈️ Operational Twins](#operational-twins)
-- [⚛️ Quantum Twins](#quantum-twins)
-
-### [⚛️ Quantum Computing](#quantum-computing-infra)
-- [⚛️ QPU Systems](#qpu-systems)
-- [🧮 Quantum Algorithms](#quantum-algorithms)
-- [🔬 Quantum Simulations](#quantum-simulations)
-- [📊 Quantum Sensors](#quantum-sensors-infra)
-
-### [🛡️ Cybersecurity](#cybersecurity-infra)
-- [🛡️ Security Operations](#security-operations)
-- [👀 Threat Monitoring](#threat-monitoring)
-- [🚨 Incident Response](#incident-response)
-- [⚛️ Post-Quantum Security](#post-quantum-security)
-
-### [📊 Analytics & Reporting](#analytics-reporting)
-- [📊 Program Dashboards](#program-dashboards)
-- [📈 Performance Metrics](#performance-metrics)
-- [🔮 Predictive Analytics](#predictive-analytics)
-- [💼 Business Intelligence](#business-intelligence)
-
----
-
-## 09-EXTERNAL-PARTNERSHIPS
-**🤝 Partnerships y Colaboraciones Externas**
-
-### [🏭 Industry Partners](#industry-partners)
-- [🔧 Tier 1 Suppliers](#tier-1-suppliers)
-- [🤝 Technology Partners](#technology-partners)
-- [🏭 Manufacturing Partners](#manufacturing-partners)
-- [🛠️ Service Providers](#service-providers)
-
-### [🎓 Academic Research](#academic-research)
-- [🏫 Universities](#universities)
-- [🔬 Research Institutes](#research-institutes)
-- [💡 Innovation Labs](#innovation-labs-partnerships)
-- [🤝 Joint Projects](#joint-projects)
-
-### [🏛️ Government Agencies](#government-agencies)
-- [✈️ Aviation Authorities](#aviation-authorities)
-- [🚀 Space Agencies](#space-agencies)
-- [🛡️ Defense Ministries](#defense-ministries)
-- [💰 Funding Bodies](#funding-bodies)
-
-### [🌍 International Cooperation](#international-cooperation)
-- [🤝 Bilateral Agreements](#bilateral-agreements)
-- [🌐 Multilateral Projects](#multilateral-projects)
-- [🔄 Technology Exchange](#technology-exchange)
-- [🤝 Joint Ventures](#joint-ventures)
-
----
-
-## 10-ARCHIVE-LEGACY
-**📚 Archivo y Gestión de Legacy**
-
-### [📚 Version History](#version-history)
-- [📋 Document Versions](#document-versions)
-- [🔄 Change Logs](#change-logs)
-- [📊 Version Analytics](#version-analytics)
-
-### [📜 Deprecated Documents](#deprecated-documents)
-- [📄 Obsolete Procedures](#obsolete-procedures)
-- [📋 Legacy Standards](#legacy-standards)
-- [🗃️ Historical References](#historical-references)
-
-### [💾 Legacy Systems](#legacy-systems)
-- [🖥️ Retired Software](#retired-software)
-- [⚙️ Obsolete Hardware](#obsolete-hardware)
-- [🔄 Migration Records](#migration-records)
-
-### [📋 Historical Records](#historical-records)
-- [📊 Program Archives](#program-archives)
-- [📄 Decision Records](#decision-records)
-- [📈 Performance History](#performance-history)
-
----
-
-## 🎯 **NAVEGACIÓN RÁPIDA**
-
-| **Sección** | **Link Directo** | **Subsecciones** |
-|-------------|------------------|------------------|
-| **Gobernanza** | [00-GOVERNANCE](#00-governance) | Políticas, Compliance, Maestros |
-| **Programas** | [01-PROGRAMS](#01-programs) | AMPEL360e, AMPEL-BWB-H2, GAIA-SP, ROBBBO-T |
-| **Q-Divisions** | [02-Q-DIVISIONS](#02-q-divisions) | 10 Divisiones Técnicas |
-| **ORB-Functions** | [03-ORB-FUNCTIONS](#03-orb-functions) | 6 Funciones Empresariales |
-| **UTCS** | [04-UTCS-ARCHITECTURE](#04-utcs-architecture) | 10 Arquitecturas (000-999) |
-| **Templates** | [05-DOCUMENTATION-TEMPLATES](#05-documentation-templates) | 251 Templates |
-| **Standards** | [06-STANDARDS-COMPLIANCE](#06-standards-compliance) | Aerospace, Quality, Cyber |
-| **Facilities** | [07-FACILITIES-LOCATIONS](#07-facilities-locations) | 5 Ubicaciones Principales |
-| **Digital** | [08-DIGITAL-INFRASTRUCTURE](#08-digital-infrastructure) | PLM, Twins, Quantum, Cyber |
-| **Partnerships** | [09-EXTERNAL-PARTNERSHIPS](#09-external-partnerships) | Industria, Academia, Gobierno |
-| **Archive** | [10-ARCHIVE-LEGACY](#10-archive-legacy) | Histórico, Legacy, Versiones |
-
----
-
-## 📊 **ESTADÍSTICAS FINALES**
-
-| **Métrica** | **Valor** |
-|-------------|-----------|
-| **Total Carpetas** | 575 |
-| **Total Archivos** | 36,200 |
-| **Tamaño Total** | 465 GB |
-| **Enlaces Internos** | 891 |
-| **Módulos de Governance** | 16 |
-| **Arquitecturas UTCS** | 10 (000-999) |
-| **Templates Documentales** | 251 |
-| **Q-Divisions** | 10 |
-| **ORB-Functions** | 6 |
-| **Ubicaciones Físicas** | 5 |
-| **Programas Activos** | 15+ |
+📂 GAIA-QAO-ADVENT/
+│
+├── 📂 00-GOVERNANCE/
+│   ├── 📂 00-01-BOARD-DOCUMENTS/
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Consortium_Agreement.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Board_Charter.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Voting_Procedures.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Shareholder_Rights.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Meeting_Minutes.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Annual_Report_2025.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Governance_Framework.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Director_Appointments.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-009_Board_Resolutions.pdf
+│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Strategic_Decisions.pdf
+│   │
+│   ├── 📂 00-02-CORPORATE-POLICIES/
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-980-00-00-CON-001_Ethics_Conduct_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-800-00-00-CON-002_Information_Security_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-02-00-CON-003_Quality_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-004_Environmental_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-03-00-CON-005_HR_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Financial_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-640-00-00-CON-007_Procurement_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Risk_Management_Policy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-820-00-00-CON-009_Data_Protection_Policy.pdf
+│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Innovation_Policy.pdf
+│   │
+│   ├── 📂 00-03-COMPLIANCE-FRAMEWORK/
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Regulatory_Matrix.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-250-00-00-CON-002_ITAR_EAR_Compliance.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-820-00-00-CON-003_GDPR_Compliance.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-750-00-00-CON-004_Aviation_Standards.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-005_Environmental_Compliance.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-250-10-00-CON-006_Export_Control_Procedures.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Audit_Schedule.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Compliance_Training.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-800-10-00-CON-009_Security_Audit_Report.pdf
+│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Regulatory_Updates.pdf
+│   │
+│   ├── 📂 00-04-MASTER-DOCUMENTS/
+│   │   ├── 📄 ORB-BOB-DA-DOC-MD-000-00-00-CON-001_Organizational_Master_v2.0.0.md
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Strategic_Plan_2025_2045.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Business_Plan.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Technology_Roadmap.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-005_Sustainability_Charter.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Investment_Strategy.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Partnership_Framework.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-008_Innovation_Roadmap.pdf
+│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-009_Risk_Register.pdf
+│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_KPI_Dashboard.pdf
+│   │
+│   └── 📂 00-05-GOVERNANCE-MODULES/
+│       ├── 📂 00-05-01-Strategic-Foundation/
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Mission_Vision_Values.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Strategic_Objectives.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Success_Metrics.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Market_Position.pdf
+│       │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Competitive_Analysis.pdf
+│       │
+│       ├── 📂 00-05-02-Development-Strategy/
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Phase_1_AMPEL360e.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Phase_2_AMPEL_BWB_H2.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Risk_Matrix.pdf
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Technology_Gates.pdf
+│       │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Milestone_Schedule.pdf
+│       │
+│       └── 📂 00-05-03-Organizational-Architecture/
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Global_Presence.pdf
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Investment_Strategy.pdf
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Partnership_Framework.pdf
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Division_Structure.pdf
+│           └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Authority_Matrix.pdf
+│
+├── 📂 01-PROGRAMS/
+│   ├── 📂 01-01-AMPEL360e/
+│   │   ├── 📂 01-01-01-CONCEPTO/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-001_Market_Analysis.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-002_Requirements_Definition.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-003_Concept_Design.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-004_Feasibility_Studies.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-005_Business_Case.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-006_Technology_Assessment.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-007_Risk_Analysis.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-008_Stakeholder_Map.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-009_Concept_Validation.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-010_Program_Charter.pdf
+│   │   │
+│   │   ├── 📂 01-01-02-DISEÑO/
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-050-00-00-DES-001_Fuselage_Structure.step
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-057-00-00-DES-002_Wing_Assembly.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-020-00-00-DES-003_System_Architecture.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Digital_Twin_Model.py
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-300-00-00-DES-005_Interface_Definitions.json
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-054-00-00-DES-006_Empennage_Structure.step
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-032-00-00-DES-007_Landing_Gear_System.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-DES-008_Flight_Control_Design.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-DES-009_Control_Laws.c
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-071-00-00-DES-010_Engine_Integration.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-DES-011_Hybrid_System_Design.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-XML-000-00-00-DES-012_System_Model.xml
+│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-000-00-00-DES-013_Preliminary_BOM.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-DES-014_Electrical_Architecture.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-025-00-00-DES-015_Cabin_Layout.step
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Review_Package.pdf
+│   │   │
+│   │   ├── 📂 01-01-03-DEMOSTRADOS-SIMULADOS-TEST/
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-10-00-TST-001_CFD_Simulation.py
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-20-00-TST-002_Virtual_Test_Cases.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-003_HIL_Test_Results.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-004_Environmental_Test.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-005_Test_Report_Summary.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-053-00-00-TST-006_Structural_FEA.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-007_Wind_Tunnel_Results.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-027-00-00-TST-008_Control_System_Sim.py
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-450-00-00-TST-009_Hybrid_Performance.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-TST-010_Landing_Gear_Tests.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-TST-011_Material_Testing.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-TST-012_Quantum_Nav_Validation.pdf
+│   │   │
+│   │   ├── 📂 01-01-04-CERTIFICACION/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-001_Certification_Plan.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-002_Compliance_Matrix.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-003_Type_Certificate.pdf
+│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-CRT-004_EASA_Submission.pdf
+│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-CRT-005_FAA_Submission.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-CRT-006_DO178C_Compliance.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-007_Certification_Tests.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-008_Flight_Test_Report.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-009_Airworthiness_Directives.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-010_Type_Certificate_Data.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-800-00-00-CRT-011_Cybersecurity_Cert.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-CRT-012_Quantum_Systems_Cert.pdf
+│   │   │
+│   │   ├── 📂 01-01-05-PRODUCCION-MANUFACTURA-EMBARCADO/
+│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-000-00-00-PRD-001_Bill_Of_Materials.json
+│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-630-00-00-PRD-002_Manufacturing_Plan.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-600-00-00-PRD-003_Automation_Scripts.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-004_Quality_Control.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-PRD-005_Installation_Tool.exe
+│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-000-00-00-PRD-006_Physical_Component_Registry.pdf
+│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-570-00-00-PRD-007_Composite_Manufacturing.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-008_Assembly_Sequence.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-640-00-00-PRD-009_Production_Tracking.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-010_First_Article_Inspection.pdf
+│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-071-00-00-PRD-011_Engine_Serial_Numbers.pdf
+│   │   │   └── 📄 Q100-ALI-DA-DOC-PDF-032-00-00-PRD-012_Landing_Gear_Serials.pdf
+│   │   │
+│   │   ├── 📂 01-01-06-MANTENIMIENTO-EN-LINEA/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-APK-000-00-00-MNT-002_Mobile_Maint_App.apk
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-000-00-00-MNT-003_Predictive_Model.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-012-00-00-MNT-004_Transit_Check_Card.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-MNT-005_Troubleshooting_AI.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-006_A_Check_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-007_B_Check_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-MNT-008_MEL_CDL.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-045-00-00-MNT-009_CMS_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-071-00-00-MNT-010_Engine_Line_Maint.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-MNT-011_Hydraulic_Service.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-MNT-012_Electrical_Checks.pdf
+│   │   │
+│   │   ├── 📂 01-01-07-OPERACION-DE-VUELO/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-001_Flight_Operations_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-OPS-002_Performance_Model.json
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-OPS-003_Flight_Planning_Tool.exe
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-004_Crew_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-HC-CODE-PY-940-00-00-OPS-005_Quantum_Navigation.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-006_Weight_Balance.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-007_Emergency_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-APK-000-00-00-OPS-008_EFB_Application.apk
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-009_Route_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-OPS-010_FMS_Database.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-011_Training_Syllabus.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-012_Operations_Specifications.pdf
+│   │   │
+│   │   ├── 📂 01-01-08-SERVICIOS-Y-SOPORTE/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-001_Service_Bulletin.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-JAR-000-00-00-SUP-002_Customer_Portal.jar
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-003_Training_Materials.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-000-00-00-SUP-004_Fleet_Analytics.json
+│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-SUP-005_Warranty_Terms.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-006_Technical_Support.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-007_Spare_Parts_Catalog.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-SUP-008_Field_Service_Tool.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-009_Modification_Kits.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-010_Service_Life_Extension.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-SUP-011_Remote_Diagnostics.exe
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-012_Customer_Feedback.pdf
+│   │   │
+│   │   ├── 📂 01-01-09-REPARACION-Y-RECICLAJE/
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-051-00-00-REP-001_Structural_Repair_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-053-00-00-REP-002_Damage_Assessment.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-REP-003_Recycling_Process.py
+│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-590-00-00-REP-004_Recoverable_Materials.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-REP-005_Environmental_Compliance.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-052-00-00-REP-006_Composite_Repair.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-053-00-00-REP-007_Metal_Repair.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-056-00-00-REP-008_Window_Repair.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-009_NDT_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-071-00-00-REP-010_Engine_Overhaul.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-REP-011_Landing_Gear_Overhaul.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-REP-012_Material_Recovery_Plan.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-REP-013_Disassembly_Automation.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-REP-014_Waste_Management.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-015_Component_Grading.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-REP-016_Wire_Harness_Repair.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-REP-017_Flight_Control_Repair.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-REP-018_Hydraulic_Component_OH.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-019_Repair_Station_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-020_EASA_Form_1.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-021_FAA_8130_3.pdf
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-022_Repair_Cost_Estimate.pdf
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-023_Field_Service_Report.pdf
+│   │   │
+│   │   └── 📂 01-01-10-RETIREMENT/
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-001_End_Of_Life_Plan.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-002_Decommissioning_Procedures.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-003_Material_Recovery.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-004_Data_Archival_Plan.pdf
+│   │       ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-RET-005_Closure_Certificate.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-006_Recycling_Report.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-RET-007_Environmental_Impact.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-008_Asset_Disposal.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-009_Final_Inspection.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-010_Lessons_Learned.pdf
+│   │       ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-RET-011_Asset_Tracking.py
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-012_Circular_Economy_Report.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-013_Regulatory_Compliance.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-014_Customer_Notification.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-015_Parts_Resale_List.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-016_Hazmat_Disposal.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-017_Service_History.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-018_Maintenance_Records.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-019_Final_Audit_Report.pdf
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-020_Cost_Recovery_Analysis.pdf
+│   │       └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-021_Program_Closure.pdf
+│   │
+│   ├── 📂 01-02-AMPEL-BWB-H2/
+│   │   ├── 📂 01-02-01-CONCEPTO/
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-001_BWB_Market_Analysis.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-002_H2_Requirements.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CON-003_BWB_Concept_Design.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CON-004_Hydrogen_Feasibility.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-005_Business_Case_H2.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CON-006_H2_Storage_Tech.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-007_Risk_Analysis_BWB.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-CON-008_Airport_Infrastructure.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-009_Regulatory_Framework.pdf
+│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-010_Program_Definition.pdf
+│   │   │
+│   │   ├── 📂 01-02-02-DISEÑO/
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-053-00-00-DES-001_BWB_Structure.step
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-053-10-00-DES-002_Center_Body.step
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-057-00-00-DES-003_BWB_Wing_Integration.step
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-460-00-00-DES-004_H2_Tank_System.step
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-071-00-00-DES-005_H2_Turbine_Engine.step
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-027-00-00-DES-006_BWB_Flight_Controls.pdf
+│   │   │   ├── 📄 Q250-BOB-SC-CODE-C-027-00-00-DES-007_BWB_Control_Laws.c
+│   │   │   ├── 📄 Q250-BOB-DT-MODEL-JSON-460-00-00-DES-008_H2_System_Model.json
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-025-00-00-DES-009_BWB_Cabin_Layout.step
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-520-00-00-DES-010_Composite_Design.pdf
+│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-032-00-00-DES-011_BWB_Landing_Gear.step
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-340-00-00-DES-012_Thermal_Management.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-BOM-JSON-000-00-00-DES-013_BWB_H2_BOM.json
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-024-00-00-DES-014_Electrical_System_H2.pdf
+│   │   │   ├── 📄 Q250-BOB-DT-MODEL-XML-000-00-00-DES-015_System_Architecture.xml
+│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-DES-016_PDR_Package.pdf
+│   │   │
+│   │   ├── 📂 01-02-03-DEMOSTRADOS-SIMULADOS-TEST/
+│   │   │   ├── 📄 Q250-BOB-DT-MODEL-PY-340-00-00-TST-001_BWB_CFD_Analysis.py
+│   │   │   ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-TST-002_BWB_Structural_FEA.json
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-TST-003_H2_System_Tests.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-10-00-TST-004_Cryogenic_Tests.pdf
+│   │   │   ├── 📄 Q250-BOB-SC-CODE-PY-027-00-00-TST-005_BWB_Control_Sim.py
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-TST-006_Wind_Tunnel_BWB.pdf
+│   │   │   ├── 📄 Q250-BOB-DT-MODEL-PY-071-00-00-TST-007_H2_Engine_Sim.py
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-520-00-00-TST-008_Composite_Testing.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-340-00-00-TST-009_Thermal_Vacuum_Test.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-032-00-00-TST-010_Landing_Gear_Drop.pdf
+│   │   │   ├── 📄 Q250-BOB-SC-CODE-PY-460-00-00-TST-011_H2_Safety_Sim.py
+│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-940-00-00-TST-012_Quantum_Systems_Val.pdf
+│   │   │
+│   │   ├── 📂 01-02-04-CERTIFICACION/
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-001_BWB_Cert_Plan.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-002_H2_Cert_Strategy.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-003_Special_Conditions.pdf
+│   │   │   ├── 📄 Q250-BOB-HC-DOC-PDF-000-00-00-CRT-004_EASA_H2_Submission.pdf
+│   │   │   ├── 📄 Q250-BOB-HC-DOC-PDF-000-00-00-CRT-005_FAA_BWB_Submission.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-027-00-00-CRT-006_BWB_Control_Cert.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-007_H2_Safety_Cert.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CRT-008_Structural_Cert.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-009_Flight_Test_H2.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-010_TC_Data_Sheet_BWB.pdf
+│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-740-00-00-CRT-011_Environmental_Cert.pdf
+│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-CRT-012_Ground_Ops_Cert.pdf
+│   │   │
+│   │   └── [Continue with remaining lifecycle phases 05-10 for Q250]
+│   │
+│   ├── 📂 01-03-SPACE-PROGRAMS/
+│   │   ├── 📂 01-03-01-AMPEL360-PLUS-SUBORBITAL/
+│   │   │   ├── 📂 CONCEPTO/
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-00-00-CON-001_Space_Tourism_Concept.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-110-00-00-CON-002_Suborbital_Requirements.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-120-00-00-CON-003_Propulsion_Concept.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-130-00-00-CON-004_Power_System_Concept.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-190-00-00-CON-005_Business_Case_Tourism.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-10-00-CON-006_Safety_Analysis.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-150-00-00-CON-007_Ground_Ops_Concept.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-140-00-00-CON-008_Avionics_Concept.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-00-00-CON-009_Regulatory_Framework.pdf
+│   │   │   │   └── 📄 PLUS-BOB-DA-DOC-PDF-190-00-00-CON-010_Market_Analysis.pdf
+│   │   │   │
+│   │   │   ├── 📂 DISEÑO/
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-110-00-00-DES-001_Vehicle_Structure.step
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-120-00-00-DES-002_Rocket_Engine.step
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-10-00-DES-003_Crew_Capsule.step
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-20-00-DES-004_Life_Support.step
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-140-00-00-DES-005_GNC_Architecture.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-SC-CODE-C-140-00-00-DES-006_Flight_Software.c
+│   │   │   │   ├── 📄 PLUS-BOB-DT-MODEL-JSON-120-00-00-DES-007_Propulsion_Model.json
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-110-10-00-DES-008_Heat_Shield.step
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-130-00-00-DES-009_Power_Distribution.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-30-00-DES-010_Escape_System.step
+│   │   │   │   ├── 📄 PLUS-BOB-DA-BOM-JSON-100-00-00-DES-011_Suborbital_BOM.json
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-150-00-00-DES-012_Comms_System.pdf
+│   │   │   │   ├── 📄 PLUS-BOB-SC-CODE-PY-140-00-00-DES-013_Trajectory_Calc.py
+│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-180-00-00-DES-014_Landing_System.step
+│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-160-00-00-DES-015_Payload_Interface.pdf
+│   │   │   │   └── 📄 PLUS-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Review.pdf
+│   │   │   │
+│   │   │   └── [Continue with remaining lifecycle phases for PLUS]
+│   │   │
+│   │   ├── 📂 01-03-02-AMPEL360-PLUSPLUS-ORBITAL/
+│   │   │   ├── 📂 CONCEPTO/
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-00-00-CON-001_Orbital_Hotel_Concept.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-110-00-00-CON-002_Station_Architecture.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-20-00-CON-003_Life_Support_Extended.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-170-00-00-CON-004_Docking_System.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-180-00-00-CON-005_Logistics_Concept.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-130-00-00-CON-006_Solar_Power_System.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-140-00-00-CON-007_Station_Keeping.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-160-00-00-CON-008_Guest_Experience.pdf
+│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-00-00-CON-009_Safety_Protocols.pdf
+│   │   │   │   └── 📄 PLUSPLUS-BOB-DA-DOC-PDF-190-00-00-CON-010_Commercial_Model.pdf
+│   │   │   │
+│   │   │   └── [Continue with remaining phases for PLUSPLUS]
+│   │   │
+│   │   ├── 📂 01-03-03-GAIA-SP-LV-LAUNCHER/
+│   │   │   ├── 📂 CONCEPTO/
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-00-00-CON-001_Launcher_Concept.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-10-00-CON-002_Reusability_Study.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-20-00-CON-003_Engine_Selection.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-110-00-00-CON-004_Stage_Configuration.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-180-00-00-CON-005_Launch_Infrastructure.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-140-00-00-CON-006_GNC_Requirements.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-160-00-00-CON-007_Payload_Capacity.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-170-00-00-CON-008_Recovery_System.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-100-00-00-CON-009_Safety_Analysis.pdf
+│   │   │   │   └── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-190-00-00-CON-010_Cost_Analysis.pdf
+│   │   │   │
+│   │   │   ├── 📂 DISEÑO/
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-10-00-DES-001_First_Stage.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-10-00-DES-002_Propulsion_System.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-110-00-00-DES-003_Tank_Structure.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-SC-CODE-PY-140-00-00-DES-004_Launch_Control.py
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-MODEL-JSON-120-00-00-DES-005_Performance_Model.json
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-20-00-DES-006_Second_Stage.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-140-00-00-DES-007_Avionics_Design.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-160-00-00-DES-008_Fairing_System.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-SC-CODE-C-140-00-00-DES-009_Flight_Software.c
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-170-00-00-DES-010_Landing_Legs.step
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-BOM-JSON-120-00-00-DES-011_Launcher_BOM.json
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-920-00-00-DES-012_Quantum_Comms.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-MODEL-PY-140-00-00-DES-013_Trajectory_Sim.py
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-130-00-00-DES-014_Power_System.pdf
+│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-180-00-00-DES-015_GSE_Interface.step
+│   │   │   │   └── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-000-00-00-DES-016_PDR_Package.pdf
+│   │   │   │
+│   │   │   └── [Continue with remaining phases for GAIA-SP-LV]
+│   │   │
+│   │   ├── 📂 01-03-04-GAIA-SP-COMM-CONSTELLATION/
+│   │   │   ├── 📂 CONCEPTO/
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-00-00-CON-001_Constellation_Design.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-10-00-CON-002_Orbit_Analysis.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-920-00-00-CON-003_Quantum_Link_Study.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-20-00-CON-004_Coverage_Analysis.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-160-00-00-CON-005_Satellite_Bus.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-30-00-CON-006_Ground_Segment.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-930-00-00-CON-007_Cybersecurity.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-140-00-00-CON-008_Constellation_Mgmt.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-180-00-00-CON-009_Deployment_Plan.pdf
+│   │   │   │   └── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-190-00-00-CON-010_Service_Model.pdf
+│   │   │   │
+│   │   │   ├── 📂 DISEÑO/
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-160-00-00-DES-001_Satellite_Structure.step
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-JSON-150-10-00-DES-002_Orbit_Propagation.json
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-920-00-00-DES-003_Quantum_Protocol.py
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-150-00-00-DES-004_Antenna_System.step
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-130-00-00-DES-005_Solar_Arrays.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-C-140-00-00-DES-006_Attitude_Control.c
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-PY-150-00-00-DES-007_Link_Budget.py
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-160-10-00-DES-008_Payload_Module.step
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-940-00-00-DES-009_Quantum_Sensors.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-150-00-00-DES-010_Network_Routing.py
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-BOM-JSON-150-00-00-DES-011_Satellite_BOM.json
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-110-00-00-DES-012_Thermal_Design.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-JSON-140-00-00-DES-013_ADCS_Model.json
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-180-00-00-DES-014_Ground_Station.pdf
+│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-930-00-00-DES-015_Encryption.py
+│   │   │   │   └── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Package.pdf
+│   │   │   │
+│   │   │   └── [Continue with remaining phases for GAIA-SP-COMM]
+│   │   │
+│   │   └── 📂 01-03-05-GAIA-SP-OPS-CONTROL-CENTER/
+│   │       ├── 📂 CONCEPTO/
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-00-00-CON-001_Operations_Center.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-10-00-CON-002_Mission_Control.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-340-00-00-CON-003_Digital_Twin_Ops.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-150-00-00-CON-004_Network_Architecture.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-800-00-00-CON-005_Security_Framework.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-20-00-CON-006_Automation_Concept.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-910-00-00-CON-007_AI_Operations.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-30-00-CON-008_Redundancy_Plan.pdf
+│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-000-00-00-CON-009_Staffing_Model.pdf
+│   │       │   └── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-000-00-00-CON-010_Facility_Requirements.pdf
+│   │       │
+│   │       └── [Continue with remaining phases for GAIA-SP-OPS]
+│   │
+│   └── 📂 01-04-SPECIAL-PROGRAMS/
+│       └── 📂 01-04-01-XWLRGA-QUANTUM-WARFARE/
+│           ├── 📂 CONCEPTO/
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-280-00-00-CON-001_Quantum_Warfare_Concept.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-930-00-00-CON-002_Quantum_Defense.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-250-00-00-CON-003_Electronic_Warfare.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-980-00-00-CON-004_AI_Combat_Systems.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-200-00-00-CON-005_Weapons_Integration.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-220-00-00-CON-006_Protection_Systems.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-230-00-00-CON-007_Autonomous_Defense.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-240-00-00-CON-008_Logistics_Support.pdf
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-290-00-00-CON-009_Future_Warfare.pdf
+│           │   └── 📄 XWLRGA-BOB-DA-DOC-PDF-980-10-00-CON-010_Ethics_Framework.pdf
+│           │
+│           ├── 📂 DISEÑO/
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-930-00-00-DES-001_Quantum_Encryption.py
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-280-00-00-DES-002_Quantum_Radar.py
+│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-250-00-00-DES-003_EW_System.json
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-C-230-00-00-DES-004_Autonomous_Control.c
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-940-00-00-DES-005_Quantum_Sensors.pdf
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-970-00-00-DES-006_Sentient_AI.py
+│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-200-00-00-DES-007_Weapons_Model.json
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-250-10-00-DES-008_Cyber_Warfare.pdf
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-920-00-00-DES-009_Quantum_Comms.py
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-210-00-00-DES-010_C4ISR_Architecture.pdf
+│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-270-00-00-DES-011_Training_Sim.json
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-880-00-00-DES-012_Post_Quantum_Crypto.py
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-260-00-00-DES-013_Materials_Stealth.pdf
+│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-680-00-00-DES-014_AI_Optimization.py
+│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-290-00-00-DES-015_Future_Concepts.pdf
+│           │   └── 📄 XWLRGA-BOB-DA-DOC-PDF-000-00-00-DES-016_System_Architecture.pdf
+│           │
+│           └── [Continue with remaining phases for XWLRGA]
+│
+├── 📂 02-Q-DIVISIONS/
+│   ├── 📂 02-01-Q-DATAGOV/
+│   │   ├── 📂 02-01-01-S1000D/
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-001_S1000D_Implementation_Guide.pdf
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XML-000-00-00-DES-002_Data_Module_Template.xml
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-XSLT-000-00-00-DES-003_Transform_Scripts.xslt
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-004_CSDB_Structure.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-DES-005_Data_Validation.py
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XML-000-00-00-DES-006_Publication_Module.xml
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-007_DMC_Codes.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-JAVA-000-00-00-DES-008_CSDB_Manager.java
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XSD-000-00-00-DES-009_Schema_Definition.xsd
+│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-010_Training_Materials.pdf
+│   │   │
+│   │   ├── 📂 02-01-02-BLOCKCHAIN/
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-360-00-00-DES-001_Smart_Contract.py
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-360-00-00-DES-002_Blockchain_Architecture.json
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-JAR-360-00-00-PRD-003_Blockchain_Node.jar
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-SOL-360-00-00-DES-004_Supply_Chain_Contract.sol
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-360-00-00-DES-005_DLT_Implementation.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-360-00-00-DES-006_Consensus_Algorithm.py
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-360-00-00-DES-007_Network_Topology.json
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-EXE-360-00-00-PRD-008_Wallet_Application.exe
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-JS-360-00-00-DES-009_DApp_Frontend.js
+│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-360-00-00-DES-010_Governance_Model.pdf
+│   │   │
+│   │   └── 📂 02-01-03-CYBERSECURITY/
+│   │       ├── 📄 ORB-BOB-SC-CODE-PY-880-00-00-DES-001_Quantum_Encryption.py
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-800-00-00-CON-002_Security_Architecture.pdf
+│   │       ├── 📄 ORB-BOB-APP-EXEC-BIN-880-00-00-PRD-003_Security_Monitor.bin
+│   │       ├── 📄 ORB-BOB-SC-CODE-C-810-00-00-DES-004_Network_Security.c
+│   │       ├── 📄 ORB-BOB-SC-CODE-PY-820-00-00-DES-005_Data_Encryption.py
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-830-00-00-DES-006_IAM_Framework.pdf
+│   │       ├── 📄 ORB-BOB-SC-CODE-JAVA-840-00-00-DES-007_App_Security.java
+│   │       ├── 📄 ORB-BOB-APP-EXEC-EXE-850-00-00-PRD-008_SOC_Dashboard.exe
+│   │       ├── 📄 ORB-BOB-SC-CODE-PY-890-00-00-DES-009_Threat_Intelligence.py
+│   │       └── 📄 ORB-BOB-DA-DOC-PDF-870-00-00-DES-010_ICS_Security.pdf
+│   │
+│   ├── 📂 02-02-Q-STRUCTURES/
+│   │   ├── 📂 02-02-01-COMPOSITES/
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-520-00-00-DES-001_CFRP_Wing_Skin.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-10-00-TST-002_Material_Test_Results.pdf
+│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-570-00-00-PRD-003_Manufacturing_Process.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-520-00-00-DES-004_Laminate_Analysis.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-DES-005_Design_Allowables.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-520-00-00-DES-006_Ply_Optimization.py
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-520-00-00-PRD-007_Tooling_Design.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-REP-008_Repair_Procedures.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-520-00-00-TST-009_Failure_Analysis.py
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-010_Recycling_Methods.pdf
+│   │   │
+│   │   └── 📂 02-02-02-BWB-STRUCTURES/
+│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-00-00-DES-001_BWB_Pressure_Vessel.step
+│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-TST-002_FEA_Analysis.json
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CRT-003_Structural_Certification.pdf
+│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-10-00-DES-004_Center_Body_Structure.step
+│   │       ├── 📄 Q250-BOB-SC-CODE-PY-053-00-00-DES-005_Load_Distribution.py
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-TST-006_Static_Test_Results.pdf
+│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-DES-007_Stress_Model.json
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-MNT-008_Inspection_Procedures.pdf
+│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-20-00-DES-009_Wing_Box_Integration.step
+│   │       └── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-REP-010_BWB_Repair_Manual.pdf
+│   │
+│   ├── 📂 02-03-Q-AIR/
+│   │   ├── 📂 02-03-01-AERODYNAMICS/
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-00-00-DES-001_CFD_Model.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-002_Wind_Tunnel_Results.pdf
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-340-00-00-OPS-003_Performance_Calculator.exe
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Optimization_Algorithm.py
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-DES-005_Aero_Database.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-CRT-006_Performance_Cert.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-340-00-00-OPS-007_Real_Time_Model.c
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-00-00-TST-008_Flutter_Analysis.py
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-DES-009_Drag_Reduction.pdf
+│   │   │   └── 📄 Q100-BOB-APP-EXEC-APK-340-00-00-OPS-010_Mobile_Performance.apk
+│   │   │
+│   │   └── 📂 02-03-02-FLIGHT-CONTROLS/
+│   │       ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-DES-001_Control_Laws.c
+│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-027-00-00-PRD-002_FBW_Software.bin
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-CRT-003_DO178C_Compliance.pdf
+│   │       ├── 📄 Q100-BOB-SC-CODE-ADA-027-00-00-DES-004_Safety_Critical.ada
+│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-027-00-00-TST-005_HIL_Test_Cases.json
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-DES-006_Architecture_Doc.pdf
+│   │       ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-TST-007_Test_Harness.c
+│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-027-00-00-OPS-008_Flight_Director.bin
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-MNT-009_Troubleshooting.pdf
+│   │       └── 📄 Q100-BOB-SC-CODE-PY-027-00-00-SUP-010_Update_Tool.py
+│   │
+│   ├── 📂 02-04-Q-GREENTECH/
+│   │   ├── 📂 02-04-01-HYBRID-PROPULSION/
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-450-00-00-DES-001_Hybrid_System.step
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-450-00-00-DES-002_Energy_Management.py
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-480-00-00-OPS-003_Quantum_Optimization.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-TST-004_Performance_Tests.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-420-00-00-DES-005_Battery_Pack.step
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-450-00-00-PRD-006_Control_Software.c
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-CRT-007_Certification_Data.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-450-00-00-DES-008_Thermal_Model.py
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-450-00-00-MNT-009_Diagnostic_Tool.exe
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-DES-010_LCA_Analysis.pdf
+│   │   │
+│   │   └── 📂 02-04-02-HYDROGEN-SYSTEMS/
+│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-460-00-00-DES-001_H2_Storage_Tank.step
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-TST-002_Cryogenic_Tests.pdf
+│   │       ├── 📄 Q250-BOB-SC-CODE-PY-460-00-00-MNT-003_H2_Monitoring.py
+│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-460-00-00-DES-004_Thermal_Model.json
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-005_Safety_Certification.pdf
+│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-460-10-00-DES-006_Distribution_System.step
+│   │       ├── 📄 Q250-BOB-SC-CODE-C-460-00-00-OPS-007_Safety_Systems.c
+│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-PRD-008_Manufacturing_Spec.pdf
+│   │       ├── 📄 Q250-BOB-APP-EXEC-APK-460-00-00-MNT-009_Mobile_Monitor.apk
+│   │       └── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-DES-010_Infrastructure_Req.pdf
+│   │
+│   ├── 📂 02-05-Q-INDUSTRY/
+│   │   ├── 📂 02-05-01-MANUFACTURING/
+│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-630-00-00-PRD-001_Assembly_Process.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-640-00-00-PRD-002_Automation_Control.py
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-JAR-630-00-00-PRD-003_MES_Integration.jar
+│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-630-00-00-PRD-004_Installed_Equipment_List.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-630-00-00-PRD-005_Assembly_Jigs.step
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PLC-600-00-00-PRD-006_Robot_Programs.plc
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-630-00-00-PRD-007_Work_Instructions.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-640-00-00-PRD-008_Production_Flow.json
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-630-00-00-PRD-009_Quality_Station.exe
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-570-00-00-PRD-010_AM_Procedures.pdf
+│   │   │
+│   │   └── 📂 02-05-02-QUALITY/
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-001_AS9100_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-APP-EXEC-EXE-000-00-00-PRD-002_Quality_Dashboard.exe
+│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-PRD-003_SPC_Analytics.json
+│   │       ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-PRD-004_Statistical_Analysis.py
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-005_Inspection_Plans.pdf
+│   │       ├── 📄 ORB-BOB-APP-EXEC-APK-000-00-00-PRD-006_Mobile_Inspection.apk
+│   │       ├── 📄 ORB-BOB-SC-CODE-R-000-00-00-PRD-007_Quality_Metrics.r
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-008_CAPA_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-PRD-009_Risk_Analysis.json
+│   │       └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-010_Audit_Schedule.pdf
+│   │
+│   ├── 📂 02-06-Q-HPC/
+│   │   ├── 📂 02-06-01-QUANTUM-COMPUTING/
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-900-00-00-DES-001_QAOA_Algorithm.py
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-910-00-00-DES-002_Quantum_ML_Model.json
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-BIN-900-00-00-OPS-003_QPU_Controller.bin
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-QASM-900-00-00-DES-004_Quantum_Circuit.qasm
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-900-00-00-DES-005_QPU_Architecture.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-910-00-00-DES-006_QML_Framework.py
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-900-00-00-TST-007_Quantum_Tests.json
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-JAR-900-00-00-OPS-008_Quantum_Simulator.jar
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-950-00-00-DES-009_Quantum_Simulation.py
+│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-900-00-00-CRT-010_Quantum_Validation.pdf
+│   │   │
+│   │   └── 📂 02-06-02-DIGITAL-TWINS/
+│   │       ├── 📄 Q100-BOB-DT-MODEL-PY-390-00-00-DES-001_Conscious_Digital_Twin.py
+│   │       ├── 📄 Q100-BOB-APP-EXEC-JAR-340-00-00-OPS-002_Twin_Sync_Service.jar
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-390-00-00-SUP-003_Twin_User_Guide.pdf
+│   │       ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Twin_Architecture.py
+│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-390-00-00-DES-005_Consciousness_Model.json
+│   │       ├── 📄 Q100-BOB-APP-EXEC-EXE-340-00-00-OPS-006_Twin_Dashboard.exe
+│   │       ├── 📄 Q100-BOB-SC-CODE-JS-340-00-00-DES-007_WebGL_Viewer.js
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-TST-008_Validation_Report.pdf
+│   │       ├── 📄 Q100-BOB-SC-CODE-PY-970-00-00-DES-009_Sentient_Core.py
+│   │       └── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-MNT-010_Predictive_Model.json
+│   │
+│   ├── 📂 02-07-Q-MECHANICS/
+│   │   ├── 📂 02-07-01-HYDRAULICS/
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-029-00-00-DES-001_Hydraulic_System.step
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-MNT-002_Hydraulic_Service.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-029-00-00-PRD-003_Control_Logic.c
+│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-029-00-00-TST-004_System_Model.json
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-REP-005_OH_Manual.pdf
+│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-029-10-00-DES-006_Pump_Assembly.step
+│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-029-00-00-MNT-007_Diagnostic_Tool.exe
+│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-CRT-008_Certification.pdf
+│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-029-00-00-TST-009_Test_Scripts.py
+│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-SUP-010_Service_Bulletin.pdf
+│   │   │
+│   │   └── 📂 02-07-02-LANDING-GEAR/
+│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-032-00-00-DES-001_Landing_Gear_Assembly.step
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-TST-002_Drop_Test_Results.pdf
+│   │       ├── 📄 Q100-ALI-DA-DOC-PDF-032-00-00-PRD-003_Landing_Gear_Serial_Numbers.pdf
+│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-032-10-00-DES-004_Shock_Strut.step
+│   │       ├── 📄 Q100-BOB-SC-CODE-C-032-00-00-DES-005_Extension_Logic.c
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-MNT-006_Service_Manual.pdf
+│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-032-00-00-TST-007_Load_Analysis.json
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-REP-008_Overhaul_Manual.pdf
+│   │       ├── 📄 Q100-BOB-APP-EXEC-APK-032-00-00-MNT-009_Mobile_Check.apk
+│   │       └── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-CRT-010_Type_Cert_Data.pdf
+│   │
+│   ├── 📂 02-08-Q-GROUND/
+│   │   ├── 📂 02-08-01-GSE-EQUIPMENT/
+│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-007-00-00-DES-001_GPU_Design.step
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-PRD-002_GSE_Manufacturing.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-007-00-00-OPS-003_GSE_Control.py
+│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-007-10-00-DES-004_Tow_Bar.step
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-MNT-005_GSE_Maintenance.pdf
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-EXE-007-00-00-OPS-006_GSE_Monitor.exe
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-007-00-00-DES-007_Equipment_List.json
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-TST-008_Acceptance_Tests.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-C-007-00-00-PRD-009_Embedded_Control.c
+│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-710-00-00-DES-010_Airport_Interface.pdf
+│   │   │
+│   │   └── 📂 02-08-02-MAINTENANCE-PROCEDURES/
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-002_Heavy_Check_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-SC-CODE-PY-005-00-00-MNT-003_Planning_Tool.py
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-012-00-00-MNT-004_Servicing_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-APP-EXEC-APK-005-00-00-MNT-005_Mobile_Cards.apk
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-006_Tool_Requirements.pdf
+│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-005-00-00-MNT-007_Task_Database.json
+│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-008_Safety_Procedures.pdf
+│   │       ├── 📄 ORB-BOB-SC-CODE-SQL-005-00-00-MNT-009_Maintenance_DB.sql
+│   │       └── 📄 ORB-BOB-DA-DOC-PDF-045-00-00-MNT-010_CMS_Integration.pdf
+│   │
+│   ├── 📂 02-09-Q-SPACE/
+│   │   ├── 📂 02-09-01-QUANTUM-COMMUNICATIONS/
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-920-00-00-DES-001_QKD_Protocol.py
+│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-920-00-00-DES-002_Quantum_Antenna.step
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-930-00-00-CRT-003_Quantum_Security_Cert.pdf
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-C-920-00-00-PRD-004_QKD_Firmware.c
+│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-920-00-00-TST-005_Protocol_Tests.json
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-920-00-00-DES-006_System_Architecture.pdf
+│   │   │   ├── 📄 ORB-BOB-APP-EXEC-BIN-920-00-00-OPS-007_QKD_Controller.bin
+│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-920-00-00-MNT-008_Diagnostics.py
+│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-920-00-00-SUP-009_User_Manual.pdf
+│   │   │   └── 📄 ORB-BOB-DT-MODEL-PY-920-00-00-DES-010_Channel_Model.py
+│   │   │
+│   │   └── 📂 02-09-02-NAVIGATION/
+│   │       ├── 📄 Q100-BOB-SC-CODE-PY-940-00-00-DES-001_Quantum_Navigation.py
+│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-940-00-00-PRD-002_QNS_Firmware.bin
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-OPS-003_QNS_Operations.pdf
+│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-940-00-00-DES-004_Sensor_Array.step
+│   │       ├── 📄 Q100-BOB-SC-CODE-C-940-00-00-PRD-005_Embedded_QNS.c
+│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-940-00-00-TST-006_Accuracy_Tests.json
+│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-CRT-007_Certification.pdf
+│   │       ├── 📄 Q100-BOB-APP-EXEC-EXE-940-00-00-MNT-008_Calibration.exe
+│   │       ├── 📄 Q100-BOB-SC-CODE-PY-940-00-00-SUP-009_Update_Tool.py
+│   │       └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-REP-010_Service_Manual.pdf
+│   │
+│   └── 📂 02-10-Q-SCIRES/
+│       ├── 📂 02-10-01-RESEARCH/
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-001_Research_Roadmap.pdf
+│       │   ├── 📄 ORB-BOB-DT-MODEL-PY-950-00-00-DES-002_Quantum_Simulation.py
+│       │   ├── 📄 ORB-BOB-HC-DOC-PDF-980-00-00-CON-003_Ethics_Framework.pdf
+│       │   ├── 📄 ORB-BOB-SC-CODE-PY-990-00-00-DES-004_Future_Tech.py
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-005_University_Partners.pdf
+│       │   ├── 📄 ORB-BOB-DT-MODEL-JSON-990-00-00-DES-006_Research_Projects.json
+│       │   ├── 📄 ORB-BOB-SC-CODE-R-990-00-00-DES-007_Statistical_Analysis.r
+│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-SUP-008_Grant_Applications.pdf
+│       │   ├── 📄 ORB-BOB-HC-DOC-PDF-990-00-00-CON-009_Publications.pdf
+│       │   └── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-010_Conference_Papers.pdf
+│       │
+│       └── 📂 02-10-02-PATENTS/
+│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-CON-001_Patent_Portfolio.pdf
+│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-002_IP_Strategy.pdf
+│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-003_Licensing_Terms.pdf
+│           ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-SUP-004_Patent_Search.py
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-005_Invention_Disclosures.pdf
+│           ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-SUP-006_Patent_Database.json
+│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-007_Trade_Secrets.pdf
+│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-008_IP_Valuation.pdf
+│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-009_Technology_Transfer.pdf
+│           └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-010_Royalty_Agreements.pdf
+│
+├── 📂 03-ORB-FUNCTIONS/
+│   ├── 📂 03-01-ORB-FIN/
+│   │   ├── 📂 03-01-01-Financial-Planning/
+│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-001_Annual_Budget.xls
+│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-002_Financial_Strategy.pdf
+│   │   │   ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-003_Budget_Model.py
+│   │   │   ├── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Forecast_Model.json
+│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-005_Investment_Plan.pdf
+│   │   │   ├── 📄 ORB-FIN-BOB-APP-EXEC-EXE-000-00-00-OPS-006_Planning_Tool.exe
+│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-007_Cash_Flow.xls
+│   │   │   ├── 📄 ORB-FIN-BOB-SC-CODE-R-000-00-00-OPS-008_Risk_Analysis.r
+│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-009_ROI_Analysis.pdf
+│   │   │   └── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-010_Scenario_Planning.json
+│   │   │
+│   │   └── 📂 03-01-02-Budget-Control/
+│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-001_Budget_Guidelines.pdf
+│   │       ├── 📄 ORB-FIN-BOB-APP-EXEC-JAR-000-00-00-OPS-002_EVM_System.jar
+│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-003_Cost_Tracking.py
+│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-004_Cost_Reports.xls
+│   │       ├── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Budget_Dashboard.json
+│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-SQL-000-00-00-OPS-006_Financial_DB.sql
+│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-007_Variance_Analysis.pdf
+│   │       ├── 📄 ORB-FIN-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Approvals.apk
+│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-009_Alert_System.py
+│   │       └── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-010_Monthly_Report.pdf
+│   │
+│   ├── 📂 03-02-ORB-PMO/
+│   │   ├── 📂 03-02-01-Program-Management/
+│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-001_Program_Charter.pdf
+│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-MSP-000-00-00-OPS-002_Master_Schedule.msp
+│   │   │   ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-003_Schedule_Analysis.py
+│   │   │   ├── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Resource_Model.json
+│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-005_Risk_Register.pdf
+│   │   │   ├── 📄 ORB-PMO-BOB-APP-EXEC-JAR-000-00-00-OPS-006_PMO_Dashboard.jar
+│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-007_Status_Report.pdf
+│   │   │   ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-008_Risk_Analysis.py
+│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-009_Stakeholder_Plan.pdf
+│   │   │   └── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-010_KPI_Tracking.json
+│   │   │
+│   │   └── 📂 03-02-02-Change-Control/
+│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-001_Change_Process.pdf
+│   │       ├── 📄 ORB-PMO-BOB-APP-EXEC-EXE-000-00-00-OPS-002_CCB_System.exe
+│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-003_Impact_Analysis.py
+│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-004_Change_Forms.pdf
+│   │       ├── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Change_Log.json
+│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-SQL-000-00-00-OPS-006_Change_Database.sql
+│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-007_CCB_Minutes.pdf
+│   │       ├── 📄 ORB-PMO-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Review.apk
+│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-009_Workflow_Engine.py
+│   │       └── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-010_Approval_Matrix.pdf
+│   │
+│   ├── 📂 03-03-ORB-HR/
+│   │   ├── 📂 03-03-01-Talent-Acquisition/
+│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-001_Recruitment_Strategy.pdf
+│   │   │   ├── 📄 ORB-HR-BOB-APP-EXEC-JAR-000-00-00-OPS-002_ATS_System.jar
+│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-003_Candidate_Screening.py
+│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-004_Job_Descriptions.pdf
+│   │   │   ├── 📄 ORB-HR-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Talent_Pipeline.json
+│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-PY-910-00-00-OPS-006_AI_Matching.py
+│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-007_Interview_Guide.pdf
+│   │   │   ├── 📄 ORB-HR-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Interview.apk
+│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-SQL-000-00-00-OPS-009_Candidate_DB.sql
+│   │   │   └── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-OPS-010_Onboarding_Pack.pdf
+│   │   │
+│   │   └── 📂 03-03-02-Competency-Development/
+│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-001_Competency_Matrix.pdf
+│   │       ├── 📄 ORB-HR-BOB-APP-EXEC-EXE-000-00-00-OPS-002_LMS_Platform.exe
+│   │       ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-003_Skill_Assessment.py
+│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-004_Training_Catalog.pdf
+│   │       ├── 📄 ORB-HR-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Career_Paths.json
+│   │       ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-006_Gap_Analysis.py
+│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-007_GAIA_Academy.pdf
+│   │       ├── 📄 ORB-HR-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Learning.apk
+│   │       ├── 📄 ORB-HR-BOB-SC-CODE-R-000-00-00-OPS-009_Performance_Analytics.r
+│   │       └── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-SUP-010_Certification_Program.pdf
+│   │
+│   ├── 📂 03-04-ORB-MKTG/
+│   │   ├── 📂 03-04-01-Market-Analysis/
+│   │   │   ├── 📄 ORB-MKTG-BOB-DA-DOC-PDF-000-00-00-CON-001_Market_Research.pdf
+│   │   │   ├── 📄 ORB-MKTG-BOB-SC-CODE-PY-000-00-00-OPS-002_Market_Analytics.py
+│   │   │   ├── 📄 ORB-MKTG-BOB-DT-MODEL-JSON-000-00-00-OPS-003_Competitor_Analysis.json
+│   │   │
