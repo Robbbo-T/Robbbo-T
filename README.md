@@ -8210,5 +8210,453 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 │   │
 │   └── 📂 02-10-Q-SCIRES/
 │       ├── 📂 02-10-01-RESEARCH/
-│       │   ├──
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-00-00-DES-001_Research_Strategy.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-SC-CODE-PY-990-00-00-DES-002_Research_Analytics.py
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-00-00-CON-003_Technology_Roadmap.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-00-00-DES-004_Research_Projects.json
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-00-00-SUP-005_Grant_Applications.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-SC-CODE-R-990-00-00-DES-006_Statistical_Analysis.r
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-00-00-CON-007_Innovation_Pipeline.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-SC-APP-JAR-990-00-00-OPS-008_Research_Portal.jar
+│       │   ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-00-00-DES-009_TRL_Assessment.json
+│       │   └── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-00-00-SUP-010_Publications_List.pdf
+│       │
+│       ├── 📂 02-10-02-IP-MANAGEMENT/
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-10-00-CON-001_IP_Strategy.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-10-00-OPS-002_Patent_Portfolio.json
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-10-00-SUP-003_Patent_Applications.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-SC-CODE-PY-990-10-00-OPS-004_IP_Tracking.py
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-10-00-CON-005_License_Agreements.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-SC-APP-EXE-990-10-00-OPS-006_IP_Database.exe
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-10-00-SUP-007_Trade_Secrets.pdf
+│       │   ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-10-00-OPS-008_IP_Analytics.json
+│       │   ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-10-00-CON-009_Technology_Transfer.pdf
+│       │   └── 📄 QSCR-CORP-BOB-SC-CODE-SQL-990-10-00-OPS-010_IP_Registry.sql
+│       │
+│       └── 📂 02-10-03-UNIVERSITY-PARTNERSHIPS/
+│           ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-20-00-CON-001_University_Network.pdf
+│           ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-20-00-OPS-002_Research_Collaborations.json
+│           ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-20-00-SUP-003_PhD_Programs.pdf
+│           ├── 📄 QSCR-CORP-BOB-SC-CODE-PY-990-20-00-OPS-004_Collaboration_Platform.py
+│           ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-20-00-CON-005_Joint_Research.pdf
+│           ├── 📄 QSCR-CORP-BOB-SC-APP-JAR-990-20-00-OPS-006_Academic_Portal.jar
+│           ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-20-00-SUP-007_Internship_Program.pdf
+│           ├── 📄 QSCR-CORP-BOB-DT-MODEL-JSON-990-20-00-OPS-008_Research_Metrics.json
+│           ├── 📄 QSCR-CORP-ALI-DP-DOC-PDF-990-20-00-CON-009_Knowledge_Exchange.pdf
+│           └── 📄 QSCR-CORP-BOB-SC-CODE-PY-990-20-00-OPS-010_Publication_Tracker.py
+│
+├── 📂 03-ORB-FUNCTIONS/
+│   ├── 📂 03-01-ORB-FIN/
+│   │   ├── 📂 03-01-01-STRATEGIC-FINANCE/
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Strategic_Financial_Plan.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-PY-000-00-00-OPS-002_Financial_Model.py
+│   │   │   ├── 📄 OFIN-CORP-BOB-DT-MODEL-XLSX-000-00-00-OPS-003_Capital_Structure.xlsx
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Investment_Strategy.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-APP-JAR-000-00-00-OPS-005_Treasury_System.jar
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-R-000-00-00-OPS-006_Risk_Analysis.r
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-00-00-OPS-007_Budget_Guidelines.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-008_KPI_Dashboard.json
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-SQL-000-00-00-OPS-009_Financial_DB.sql
+│   │   │   └── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-010_Investor_Relations.pdf
 │   │   │
+│   │   ├── 📂 03-01-02-ACCOUNTING/
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-001_Accounting_Policies.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-APP-EXE-000-10-00-OPS-002_ERP_System.exe
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-PY-000-10-00-OPS-003_GL_Integration.py
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-004_Chart_Accounts.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-005_Cost_Centers.json
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-SQL-000-10-00-OPS-006_Accounting_DB.sql
+│   │   │   ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-007_Month_End_Process.pdf
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-APP-APK-000-10-00-OPS-008_Mobile_Approval.apk
+│   │   │   ├── 📄 OFIN-CORP-BOB-SC-CODE-PY-000-10-00-OPS-009_Reconciliation.py
+│   │   │   └── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-10-00-SUP-010_Audit_Trail.pdf
+│   │   │
+│   │   └── 📂 03-01-03-FP&A/
+│   │       ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-20-00-CON-001_Planning_Process.pdf
+│   │       ├── 📄 OFIN-CORP-BOB-SC-CODE-PY-000-20-00-OPS-002_Forecast_Model.py
+│   │       ├── 📄 OFIN-CORP-BOB-DT-MODEL-XLSX-000-20-00-OPS-003_Budget_Template.xlsx
+│   │       ├── 📄 OFIN-CORP-BOB-SC-APP-JAR-000-20-00-OPS-004_Planning_Platform.jar
+│   │       ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-20-00-OPS-005_Variance_Analysis.pdf
+│   │       ├── 📄 OFIN-CORP-BOB-SC-CODE-R-000-20-00-OPS-006_Predictive_Analytics.r
+│   │       ├── 📄 OFIN-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-007_Scenarios.json
+│   │       ├── 📄 OFIN-CORP-BOB-SC-CODE-PY-000-20-00-OPS-008_Consolidation.py
+│   │       ├── 📄 OFIN-CORP-ALI-DP-DOC-PDF-000-20-00-SUP-009_Reports_Package.pdf
+│   │       └── 📄 OFIN-CORP-BOB-SC-APP-EXE-000-20-00-OPS-010_Dashboard.exe
+│   │
+│   ├── 📂 03-02-ORB-PMO/
+│   │   ├── 📂 03-02-01-PROGRAM-MANAGEMENT/
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Program_Charter.pdf
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-00-00-OPS-002_Schedule_Engine.py
+│   │   │   ├── 📄 OPMO-CORP-BOB-DT-MODEL-MPP-000-00-00-OPS-003_Master_Schedule.mpp
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-00-00-OPS-004_Risk_Register.pdf
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-APP-JAR-000-00-00-OPS-005_PMO_Portal.jar
+│   │   │   ├── 📄 OPMO-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-006_Resource_Matrix.json
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-00-00-OPS-007_Status_Reports.py
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-00-00-OPS-008_Stakeholder_Plan.pdf
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-SQL-000-00-00-OPS-009_PMO_Database.sql
+│   │   │   └── 📄 OPMO-CORP-BOB-SC-APP-APK-000-00-00-OPS-010_Mobile_PMO.apk
+│   │   │
+│   │   ├── 📂 03-02-02-RISK-MANAGEMENT/
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-10-00-CON-001_Risk_Framework.pdf
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-10-00-OPS-002_Risk_Analytics.py
+│   │   │   ├── 📄 OPMO-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-003_Risk_Matrix.json
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-APP-EXE-000-10-00-OPS-004_Risk_Dashboard.exe
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-005_Mitigation_Plans.pdf
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-R-000-10-00-OPS-006_Monte_Carlo.r
+│   │   │   ├── 📄 OPMO-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-007_Risk_Scenarios.json
+│   │   │   ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-10-00-OPS-008_Risk_Scoring.py
+│   │   │   ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-10-00-SUP-009_Risk_Reports.pdf
+│   │   │   └── 📄 OPMO-CORP-BOB-SC-CODE-SQL-000-10-00-OPS-010_Risk_History.sql
+│   │   │
+│   │   └── 📂 03-02-03-CHANGE-CONTROL/
+│   │       ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-20-00-CON-001_Change_Process.pdf
+│   │       ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-20-00-OPS-002_Change_Workflow.py
+│   │       ├── 📄 OPMO-CORP-BOB-SC-APP-JAR-000-20-00-OPS-003_CCB_System.jar
+│   │       ├── 📄 OPMO-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-004_Change_Log.json
+│   │       ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-20-00-OPS-005_Impact_Analysis.pdf
+│   │       ├── 📄 OPMO-CORP-BOB-SC-CODE-SQL-000-20-00-OPS-006_Change_Database.sql
+│   │       ├── 📄 OPMO-CORP-BOB-SC-APP-APK-000-20-00-OPS-007_Mobile_Approval.apk
+│   │       ├── 📄 OPMO-CORP-BOB-SC-CODE-PY-000-20-00-OPS-008_Notification.py
+│   │       ├── 📄 OPMO-CORP-ALI-DP-DOC-PDF-000-20-00-SUP-009_Change_Metrics.pdf
+│   │       └── 📄 OPMO-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-010_Approval_Matrix.json
+│   │
+│   ├── 📂 03-03-ORB-HR/
+│   │   ├── 📂 03-03-01-TALENT-ACQUISITION/
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_TA_Strategy.pdf
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-CODE-PY-000-00-00-OPS-002_ATS_Integration.py
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-APP-JAR-000-00-00-OPS-003_Recruiting_Portal.jar
+│   │   │   ├── 📄 OHRB-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Job_Descriptions.json
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-00-00-OPS-005_Interview_Guide.pdf
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-CODE-PY-000-00-00-OPS-006_Candidate_Scoring.py
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-APP-APK-000-00-00-OPS-007_Mobile_Interview.apk
+│   │   │   ├── 📄 OHRB-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-008_Talent_Pipeline.json
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-009_Onboarding_Process.pdf
+│   │   │   └── 📄 OHRB-CORP-BOB-SC-CODE-SQL-000-00-00-OPS-010_Candidate_DB.sql
+│   │   │
+│   │   ├── 📂 03-03-02-LEARNING-DEVELOPMENT/
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-10-00-CON-001_L&D_Strategy.pdf
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-APP-JAR-000-10-00-OPS-002_LMS_Platform.jar
+│   │   │   ├── 📄 OHRB-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-003_Competency_Matrix.json
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-CODE-PY-000-10-00-OPS-004_Training_Analytics.py
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-10-00-SUP-005_Training_Catalog.pdf
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-APP-APK-000-10-00-OPS-006_Mobile_Learning.apk
+│   │   │   ├── 📄 OHRB-CORP-BOB-DT-MODEL-SCORM-000-10-00-SUP-007_E_Learning.zip
+│   │   │   ├── 📄 OHRB-CORP-BOB-SC-CODE-JS-350-00-00-SUP-008_VR_Training.js
+│   │   │   ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-009_Career_Paths.pdf
+│   │   │   └── 📄 OHRB-CORP-BOB-SC-CODE-SQL-000-10-00-OPS-010_Training_Records.sql
+│   │   │
+│   │   └── 📂 03-03-03-PERFORMANCE-MANAGEMENT/
+│   │       ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-20-00-CON-001_Performance_Framework.pdf
+│   │       ├── 📄 OHRB-CORP-BOB-SC-CODE-PY-000-20-00-OPS-002_Performance_System.py
+│   │       ├── 📄 OHRB-CORP-BOB-SC-APP-JAR-000-20-00-OPS-003_Review_Platform.jar
+│   │       ├── 📄 OHRB-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-004_Goals_Tracking.json
+│   │       ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-20-00-OPS-005_Review_Guidelines.pdf
+│   │       ├── 📄 OHRB-CORP-BOB-SC-CODE-R-000-20-00-OPS-006_Analytics.r
+│   │       ├── 📄 OHRB-CORP-BOB-SC-APP-APK-000-20-00-OPS-007_Mobile_Feedback.apk
+│   │       ├── 📄 OHRB-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-008_Succession_Plan.json
+│   │       ├── 📄 OHRB-CORP-ALI-DP-DOC-PDF-000-20-00-SUP-009_Development_Plans.pdf
+│   │       └── 📄 OHRB-CORP-BOB-SC-CODE-SQL-000-20-00-OPS-010_Performance_DB.sql
+│   │
+│   ├── 📂 03-04-ORB-MKTG/
+│   │   ├── 📂 03-04-01-MARKETING-STRATEGY/
+│   │   │   ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Marketing_Strategy.pdf
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-CODE-PY-000-00-00-OPS-002_Market_Analytics.py
+│   │   │   ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-003_Customer_Segments.json
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-APP-JAR-000-00-00-OPS-004_CRM_System.jar
+│   │   │   ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-00-00-OPS-005_Brand_Guidelines.pdf
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-CODE-R-000-00-00-OPS-006_Market_Research.r
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-APP-EXE-000-00-00-OPS-007_Campaign_Manager.exe
+│   │   │   ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-008_Competitor_Analysis.json
+│   │   │   ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-009_Marketing_Calendar.pdf
+│   │   │   └── 📄 OMKT-CORP-BOB-SC-CODE-SQL-000-00-00-OPS-010_Marketing_DB.sql
+│   │   │
+│   │   ├── 📂 03-04-02-DIGITAL-MARKETING/
+│   │   │   ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-10-00-CON-001_Digital_Strategy.pdf
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-CODE-PY-000-10-00-OPS-002_SEO_Analytics.py
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-APP-JAR-000-10-00-OPS-003_Social_Media_Tool.jar
+│   │   │   ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-004_Content_Calendar.json
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-CODE-JS-000-10-00-OPS-005_Web_Analytics.js
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-APP-APK-000-10-00-OPS-006_Mobile_Marketing.apk
+│   │   │   ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-10-00-OPS-007_Email_Templates.pdf
+│   │   │   ├── 📄 OMKT-CORP-BOB-SC-CODE-PY-000-10-00-OPS-008_Marketing_Automation.py
+│   │   │   ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-009_Campaign_Metrics.json
+│   │   │   └── 📄 OMKT-CORP-BOB-SC-CODE-SQL-000-10-00-OPS-010_Analytics_DB.sql
+│   │   │
+│   │   └── 📂 03-04-03-EVENTS-PR/
+│   │       ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-20-00-CON-001_Events_Strategy.pdf
+│   │       ├── 📄 OMKT-CORP-BOB-SC-CODE-PY-000-20-00-OPS-002_Event_Management.py
+│   │       ├── 📄 OMKT-CORP-BOB-SC-APP-JAR-000-20-00-OPS-003_Registration_Platform.jar
+│   │       ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-004_Event_Calendar.json
+│   │       ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-20-00-OPS-005_PR_Guidelines.pdf
+│   │       ├── 📄 OMKT-CORP-BOB-SC-CODE-PY-000-20-00-OPS-006_Media_Monitoring.py
+│   │       ├── 📄 OMKT-CORP-BOB-SC-APP-APK-000-20-00-OPS-007_Event_App.apk
+│   │       ├── 📄 OMKT-CORP-BOB-DT-MODEL-JSON-000-20-00-OPS-008_Press_Contacts.json
+│   │       ├── 📄 OMKT-CORP-ALI-DP-DOC-PDF-000-20-00-SUP-009_Crisis_Comms.pdf
+│   │       └── 📄 OMKT-CORP-BOB-SC-CODE-SQL-000-20-00-OPS-010_Events_DB.sql
+│   │
+│   ├── 📂 03-05-ORB-CSR/
+│   │   ├── 📂 03-05-01-SUSTAINABILITY/
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-740-00-00-CON-001_ESG_Strategy.pdf
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-CODE-PY-740-00-00-OPS-002_Carbon_Calculator.py
+│   │   │   ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-740-00-00-OPS-003_ESG_Metrics.json
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-APP-JAR-740-00-00-OPS-004_Sustainability_Portal.jar
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-740-00-00-SUP-005_Sustainability_Report.pdf
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-CODE-R-740-00-00-OPS-006_Impact_Analysis.r
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-APP-EXE-740-00-00-OPS-007_ESG_Dashboard.exe
+│   │   │   ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-590-00-00-OPS-008_Circular_Economy.json
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-740-00-00-CRT-009_ISO14001_Cert.pdf
+│   │   │   └── 📄 OCSR-CORP-BOB-SC-CODE-SQL-740-00-00-OPS-010_ESG_Database.sql
+│   │   │
+│   │   ├── 📂 03-05-02-COMMUNITY-ENGAGEMENT/
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-000-10-00-CON-001_Community_Strategy.pdf
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-CODE-PY-000-10-00-OPS-002_Volunteer_Platform.py
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-APP-JAR-000-10-00-OPS-003_Community_Portal.jar
+│   │   │   ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-004_Programs_List.json
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-000-10-00-SUP-005_Partnership_Guide.pdf
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-APP-APK-000-10-00-OPS-006_Volunteer_App.apk
+│   │   │   ├── 📄 OCSR-CORP-BOB-SC-CODE-PY-000-10-00-OPS-007_Impact_Tracking.py
+│   │   │   ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-000-10-00-OPS-008_Social_Impact.json
+│   │   │   ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-000-10-00-SUP-009_Grant_Process.pdf
+│   │   │   └── 📄 OCSR-CORP-BOB-SC-CODE-SQL-000-10-00-OPS-010_Community_DB.sql
+│   │   │
+│   │   └── 📂 03-05-03-ETHICS-COMPLIANCE/
+│   │       ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-980-00-00-CON-001_Ethics_Framework.pdf
+│   │       ├── 📄 OCSR-CORP-BOB-SC-CODE-PY-980-00-00-OPS-002_Ethics_Hotline.py
+│   │       ├── 📄 OCSR-CORP-BOB-SC-APP-JAR-980-00-00-OPS-003_Compliance_System.jar
+│   │       ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-980-00-00-OPS-004_Ethics_Cases.json
+│   │       ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-980-00-00-SUP-005_Code_of_Conduct.pdf
+│   │       ├── 📄 OCSR-CORP-BOB-SC-APP-APK-980-00-00-OPS-006_Ethics_Training.apk
+│   │       ├── 📄 OCSR-CORP-BOB-SC-CODE-PY-980-00-00-OPS-007_Compliance_Monitor.py
+│   │       ├── 📄 OCSR-CORP-ALI-DP-DOC-PDF-980-00-00-SUP-008_Supplier_Code.pdf
+│   │       ├── 📄 OCSR-CORP-BOB-DT-MODEL-JSON-980-00-00-OPS-009_Audit_Results.json
+│   │       └── 📄 OCSR-CORP-BOB-SC-CODE-SQL-980-00-00-OPS-010_Ethics_DB.sql
+│   │
+│   └── 📂 03-06-ORB-LEG/
+│       ├── 📂 03-06-01-CORPORATE-LEGAL/
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Legal_Framework.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-000-00-00-OPS-002_Contract_Management.py
+│       │   ├── 📄 OLEG-CORP-BOB-SC-APP-JAR-000-00-00-OPS-003_Legal_Portal.jar
+│       │   ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Contract_Registry.json
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-005_Legal_Templates.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-SC-APP-EXE-000-00-00-OPS-006_Document_Manager.exe
+│       │   ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-000-00-00-OPS-007_Litigation_Tracker.py
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-008_Corporate_Structure.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-000-00-00-OPS-009_Legal_Calendar.json
+│       │   └── 📄 OLEG-CORP-BOB-SC-CODE-SQL-000-00-00-OPS-010_Legal_Database.sql
+│       │
+│       ├── 📂 03-06-02-REGULATORY-COMPLIANCE/
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-750-00-00-CON-001_Regulatory_Matrix.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-750-00-00-OPS-002_Compliance_Tracker.py
+│       │   ├── 📄 OLEG-CORP-BOB-SC-APP-JAR-750-00-00-OPS-003_Regulatory_Portal.jar
+│       │   ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-750-00-00-OPS-004_Compliance_Calendar.json
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-250-00-00-SUP-005_ITAR_Procedures.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-SC-APP-APK-750-00-00-OPS-006_Mobile_Compliance.apk
+│       │   ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-820-00-00-OPS-007_GDPR_Monitor.py
+│       │   ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-750-00-00-CRT-008_Type_Cert_Process.pdf
+│       │   ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-750-00-00-OPS-009_Audit_Schedule.json
+│       │   └── 📄 OLEG-CORP-BOB-SC-CODE-SQL-750-00-00-OPS-010_Compliance_DB.sql
+│       │
+│       └── 📂 03-06-03-IP-MANAGEMENT/
+│           ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-990-10-00-CON-001_IP_Strategy.pdf
+│           ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-990-10-00-OPS-002_Patent_Tracker.py
+│           ├── 📄 OLEG-CORP-BOB-SC-APP-JAR-990-10-00-OPS-003_IP_Management.jar
+│           ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-990-10-00-OPS-004_Patent_Portfolio.json
+│           ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-990-10-00-SUP-005_Filing_Procedures.pdf
+│           ├── 📄 OLEG-CORP-BOB-SC-CODE-PY-990-10-00-OPS-006_Trademark_Monitor.py
+│           ├── 📄 OLEG-CORP-BOB-SC-APP-EXE-990-10-00-OPS-007_IP_Dashboard.exe
+│           ├── 📄 OLEG-CORP-ALI-DP-DOC-PDF-990-10-00-SUP-008_License_Templates.pdf
+│           ├── 📄 OLEG-CORP-BOB-DT-MODEL-JSON-990-10-00-OPS-009_IP_Analytics.json
+│           └── 📄 OLEG-CORP-BOB-SC-CODE-SQL-990-10-00-OPS-010_IP_Database.sql
+│
+├── 📂 04-UTCS-ARCHITECTURE/
+│   ├── 📂 04-01-ATA-000-099/
+│   │   ├── 📂 04-01-01-ATA-000-009-GENERAL/
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-000-00-00-DES-001_General_Information.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-001-00-00-MNT-002_Weight_Balance.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-002-00-00-OPS-003_Operating_Limits.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-003-00-00-OPS-004_Emergency_Equipment.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-004-00-00-CRT-005_Airworthiness_Limits.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-005-00-00-MNT-006_Time_Limits_Checks.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-006-00-00-DES-007_Dimensions_Areas.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-007-00-00-MNT-008_Lifting_Shoring.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-008-00-00-MNT-009_Leveling_Weighing.pdf
+│   │   │   └── 📄 UTCS-ATA-ALI-DP-DOC-PDF-009-00-00-MNT-010_Towing_Taxiing.pdf
+│   │   │
+│   │   ├── 📂 04-01-02-ATA-010-019-SERVICING/
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-010-00-00-MNT-001_Parking_Storage.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-011-00-00-MNT-002_Placards_Markings.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-012-00-00-MNT-003_Servicing_Routine.pdf
+│   │   │   └── 📄 UTCS-ATA-ALI-DP-DOC-PDF-018-00-00-OPS-004_Vibration_Analysis.pdf
+│   │   │
+│   │   ├── 📂 04-01-03-ATA-020-029-STANDARD-PRACTICES/
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-020-00-00-MNT-001_Standard_Practices.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-021-00-00-OPS-002_Air_Conditioning.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-022-00-00-OPS-003_Auto_Flight.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-023-00-00-OPS-004_Communications.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-024-00-00-MNT-005_Electrical_Power.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-025-00-00-OPS-006_Equipment_Furnishings.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-026-00-00-OPS-007_Fire_Protection.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-027-00-00-OPS-008_Flight_Controls.pdf
+│   │   │   ├── 📄 UTCS-ATA-ALI-DP-DOC-PDF-028-00-00-MNT-009_Fuel_System.pdf
+│   │   │   └── 📄 UTCS-ATA-ALI-DP-DOC-PDF-029-00-00-MNT-010_Hydraulic_Power.pdf
+│   │   │
+│   │   └── [Continue con ATA 030-099]
+│   │
+│   ├── 📂 04-02-STA-100-199/
+│   │   ├── 📂 04-02-01-STA-100-109-GENERAL-SPACE/
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-100-00-00-DES-001_Space_Systems_Overview.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-101-00-00-DES-002_Life_Support_Systems.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-102-00-00-OPS-003_EVA_Systems.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-103-00-00-OPS-004_Crew_Systems.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-104-00-00-MNT-005_Maintenance_Space.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-105-00-00-OPS-006_Emergency_Systems.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-106-00-00-DES-007_Habitat_Design.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-107-00-00-OPS-008_Medical_Systems.pdf
+│   │   │   ├── 📄 UTCS-STA-ALI-DP-DOC-PDF-108-00-00-OPS-009_Food_Water_Systems.pdf
+│   │   │   └── 📄 UTCS-STA-ALI-DP-DOC-PDF-109-00-00-OPS-010_Waste_Management.pdf
+│   │   │
+│   │   └── [Continue con STA 110-199]
+│   │
+│   ├── 📂 04-03-DTTA-200-299/
+│   │   └── [Estructura similar para sistemas de defensa]
+│   │
+│   ├── 📂 04-04-DTCEC-300-399/
+│   │   └── [Estructura similar para digital twins y cloud]
+│   │
+│   ├── 📂 04-05-EPTA-400-499/
+│   │   └── [Estructura similar para energía y propulsión]
+│   │
+│   ├── 📂 04-06-AMTA-500-599/
+│   │   └── [Estructura similar para materiales avanzados]
+│   │
+│   ├── 📂 04-07-OGATA-600-699/
+│   │   └── [Estructura similar para automatización terrestre]
+│   │
+│   ├── 📂 04-08-ACV-700-799/
+│   │   └── [Estructura similar para movilidad aérea urbana]
+│   │
+│   ├── 📂 04-09-CYB-800-899/
+│   │   └── [Estructura similar para ciberseguridad]
+│   │
+│   └── 📂 04-10-QCSAA-900-999/
+│       └── [Estructura similar para computación cuántica]
+│
+├── 📂 05-DOCUMENTATION-TEMPLATES/
+│   ├── 📂 05-01-PHASE-TEMPLATES/
+│   │   ├── 📂 05-01-01-CONCEPT-PHASE/
+│   │   │   ├── 📄 CON-001_Market_Research_Analysis_Report.docx
+│   │   │   ├── 📄 CON-002_Concept_Definition_Document.docx
+│   │   │   ├── 📄 CON-003_Business_Case_Analysis.xlsx
+│   │   │   ├── 📄 CON-004_Technology_Readiness_Assessment.docx
+│   │   │   ├── 📄 CON-005_Preliminary_Requirements_Specification.docx
+│   │   │   ├── 📄 CON-006_Stakeholder_Analysis_Matrix.xlsx
+│   │   │   ├── 📄 CON-007_Risk_Assessment_Preliminary.xlsx
+│   │   │   ├── 📄 CON-008_Competitive_Analysis_Report.pptx
+│   │   │   ├── 📄 CON-009_Value_Proposition_Canvas.pptx
+│   │   │   └── 📄 CON-010_Concept_Validation_Plan.docx
+│   │   │
+│   │   ├── 📂 05-01-02-DESIGN-PHASE/
+│   │   │   ├── 📄 DES-001_System_Architecture_Document.docx
+│   │   │   ├── 📄 DES-002_Design_Requirements_Specification.docx
+│   │   │   ├── 📄 DES-003_Interface_Control_Document.docx
+│   │   │   ├── 📄 DES-004_Functional_Block_Diagram.vsdx
+│   │   │   ├── 📄 DES-005_Mechanical_Drawing_Template.dwg
+│   │   │   ├── 📄 DES-006_Electrical_Wiring_Diagram_Template.dwg
+│   │   │   ├── 📄 DES-007_Electronic_Schematics_Sheet.sch
+│   │   │   ├── 📄 DES-008_PCB_Layout_Drawing.pcb
+│   │   │   ├── 📄 DES-009_Bill_of_Materials.xlsx
+│   │   │   ├── 📄 DES-010_Part_Numbering_Configuration_Control.xlsx
+│   │   │   ├── 📄 DES-011_Materials_Processes_Specification.docx
+│   │   │   ├── 📄 DES-012_Software_Requirements_Specification.docx
+│   │   │   ├── 📄 DES-013_Software_Design_Description.docx
+│   │   │   ├── 📄 DES-014_Design_Review_Checklist.xlsx
+│   │   │   ├── 📄 DES-015_CAD_Model_Standards.docx
+│   │   │   └── 📄 DES-016_Design_Verification_Plan.docx
+│   │   │
+│   │   └── [Continue con fases TST, CRT, PRD, MNT, OPS, SUP, REP, RET]
+│   │
+│   ├── 📂 05-02-TECHNICAL-MANUALS/
+│   │   └── [48 templates de manuales técnicos]
+│   │
+│   └── 📂 05-03-ORB-TEMPLATES/
+│       └── [48 templates de funciones ORB]
+│
+├── 📂 06-STANDARDS-COMPLIANCE/
+│   ├── 📂 06-01-AEROSPACE-STANDARDS/
+│   │   ├── 📄 STD-AER-001_AS9100_Implementation.pdf
+│   │   ├── 📄 STD-AER-002_DO178C_Software.pdf
+│   │   ├── 📄 STD-AER-003_DO254_Hardware.pdf
+│   │   ├── 📄 STD-AER-004_ARP4754A_Systems.pdf
+│   │   ├── 📄 STD-AER-005_Part25_Certification.pdf
+│   │   ├── 📄 STD-AER-006_CS25_EASA_Requirements.pdf
+│   │   ├── 📄 STD-AER-007_S1000D_Documentation.pdf
+│   │   ├── 📄 STD-AER-008_ATA_iSpec2200.pdf
+│   │   ├── 📄 STD-AER-009_MSG3_Maintenance.pdf
+│   │   └── 📄 STD-AER-010_RTCA_Standards.pdf
+│   │
+│   ├── 📂 06-02-QUALITY-STANDARDS/
+│   │   ├── 📄 STD-QUA-001_ISO9001_Quality.pdf
+│   │   ├── 📄 STD-QUA-002_ISO14001_Environmental.pdf
+│   │   ├── 📄 STD-QUA-003_ISO45001_Safety.pdf
+│   │   ├── 📄 STD-QUA-004_ISO27001_Security.pdf
+│   │   ├── 📄 STD-QUA-005_ISO50001_Energy.pdf
+│   │   └── 📄 STD-QUA-006_AS9100_Aerospace_Quality.pdf
+│   │
+│   ├── 📂 06-03-REGULATORY/
+│   │   ├── 📄 STD-REG-001_FAA_Regulations.pdf
+│   │   ├── 📄 STD-REG-002_EASA_Regulations.pdf
+│   │   ├── 📄 STD-REG-003_ITAR_Compliance.pdf
+│   │   ├── 📄 STD-REG-004_EAR_Compliance.pdf
+│   │   └── 📄 STD-REG-005_GDPR_Privacy.pdf
+│   │
+│   └── 📂 06-04-INTERNAL-STANDARDS/
+│       ├── 📄 STD-INT-001_GAIA_QAO_Nomenclature.pdf
+│       ├── 📄 STD-INT-002_UTCS_Framework.pdf
+│       ├── 📄 STD-INT-003_Digital_Twin_Standards.pdf
+│       ├── 📄 STD-INT-004_Quantum_Systems_Standards.pdf
+│       └── 📄 STD-INT-005_Sustainability_Standards.pdf
+│
+├── 📂 07-FACILITIES-LOCATIONS/
+│   ├── 📂 07-01-MADRID-HQ/
+│   │   ├── 📄 FAC-MAD-001_Facility_Overview.pdf
+│   │   ├── 📄 FAC-MAD-002_Organization_Chart.pdf
+│   │   ├── 📄 FAC-MAD-003_Floor_Plans.dwg
+│   │   ├── 📄 FAC-MAD-004_Security_Procedures.pdf
+│   │   └── 📄 FAC-MAD-005_Emergency_Plans.pdf
+│   │
+│   ├── 📂 07-02-TOULOUSE-INTEGRATION/
+│   │   ├── 📄 FAC-TLS-001_FAL_Layout.dwg
+│   │   ├── 📄 FAC-TLS-002_Assembly_Procedures.pdf
+│   │   ├── 📄 FAC-TLS-003_Test_Facilities.pdf
+│   │   ├── 📄 FAC-TLS-004_Quality_Stations.pdf
+│   │   └── 📄 FAC-TLS-005_Logistics_Plan.pdf
+│   │
+│   ├── 📂 07-03-HAMBURG-DESIGN/
+│   │   ├── 📄 FAC-HAM-001_Design_Center.pdf
+│   │   ├── 📄 FAC-HAM-002_Cabin_Lab.pdf
+│   │   ├── 📄 FAC-HAM-003_VR_Center.pdf
+│   │   ├── 📄 FAC-HAM-004_Mockup_Facility.pdf
+│   │   └── 📄 FAC-HAM-005_Innovation_Lab.pdf
+│   │
+│   ├── 📂 07-04-MUNICH-QUANTUM/
+│   │   ├── 📄 FAC-MUC-001_Quantum_Lab.pdf
+│   │   ├── 📄 FAC-MUC-002_QPU_Facility.pdf
+│   │   ├── 📄 FAC-MUC-003_Clean_Room.pdf
+│   │   ├── 📄 FAC-MUC-004_Research_Center.pdf
+│   │   └── 📄 FAC-MUC-005_Test_Equipment.pdf
+│   │
+│   └── 📂 07-05-SEVILLA-COMPOSITES/
+│       ├── 📄 FAC-SEV-001_Composite_Plant.pdf
+│       ├── 📄 FAC-SEV-002_Autoclave_Specs.pdf
+│       ├── 📄 FAC-SEV-003_NDT_Facility.pdf
+│       ├── 📄 FAC-SEV-004_Material_Lab.pdf
+│       └── 📄 FAC-SEV-005_Production_Flow.pdf
+│
+├── 📂 08-DIGITAL-INFRASTRUCTURE/
+│   └── [Por definir según necesidades específicas]
+│
+├── 📂 09-EXTERNAL-PARTNERSHIPS/
+│   └── [Por definir según acuerdos establecidos]
+│
+└── 📂 10-ARCHIVE-LEGACY/
+    └── [Documentación histórica y versiones anteriores]
