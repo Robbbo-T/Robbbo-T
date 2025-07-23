@@ -1,6 +1,8 @@
 # GAIA-QAO ADVENT: Documento Organizacional Maestro 
 ## Marco Estratégico para el Liderazgo Aeroespacial Sostenible Europeo
 
+[GAIA QAO Document Explorer](https://gaia-qao-document-explorer-779891248177.us-west1.run.app/)
+
 **Identificador del Documento:** GAIA-QAO-ORG-MASTER-001
 **Versión:** 2.0.0
 **Fecha:** 23 de julio de 2025
@@ -63,7 +65,7 @@
 
 # 1. DECLARACIÓN DE PROPÓSITO
 
-## 1.1 Misión
+## 1.1 Misión [View the mission page](https://g.co/gemini/share/60d745288907)
 
 La **Global Assets and Industrial Architecture for Quantum and Aerospace Organizations Advanced Ventures (GAIA-QAO ADVENT)** es una estructura ideal pensada por **Amedeo Pelliccia** para la integración sin fricción de la tecnología quantum en la industria aeroespacial y el liderazgo del continente europeo en tecnología punta y sostenibilidad aeroespacial. Nuestra **misión** es desarrollar y certificar una nueva generación de aeronaves comerciales que establezcan el estándar global en eficiencia, seguridad y responsabilidad ambiental, utilizando un enfoque por fases que integre progresivamente tecnologías disruptivas. Esta misión no solo busca un avance tecnológico, sino también la revitalización y consolidación de la base industrial aeroespacial europea, asegurando su competitividad a largo plazo.
 
