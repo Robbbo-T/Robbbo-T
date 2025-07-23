@@ -699,8 +699,20 @@ flowchart TD
 ##### Estructura General
 
 ```
-[PROGRAMA]-[TIPO]-[ARTEFACTO]-[NATURALEZA]-[FORMATO]-UTCS-[CAPÍTULO]-[SUBCAPs]-[FASE]-[ID]_[DESCRIPCIÓN].[ext]
+[division]-[PROGRAMA]-[TIPO]-[ARTEFACTO]-[NATURALEZA]-[FORMATO]-UTCS-[CAPÍTULO]-[SUBCAPs]-[FASE]-[ID]_[DESCRIPCIÓN].[ext]
 ```
+| Código           | Nombre Oficial Completo               | Subunidades Principales                                         | 
+| ---------------- | ------------------------------------- | --------------------------------------------------------------- | 
+| **Q-DATAGOV**    | Data Governance & Standards           | Standards Team, Data Architecture, Cybersecurity, Documentation | 
+| **Q-STRUCTURES** | Airframe & Structural Systems         | Airframe Design, Materials Lab, Stress Analysis, Testing        | 
+| **Q-AIR**        | Aerospace Systems                     | Aerodynamics, Flight Controls, Performance, Flight Test         | 
+| **Q-GREENTECH**  | Green Propulsion & Sustainability     | Propulsion, Energy Systems, Environmental, Circular Economy     |
+| **Q-INDUSTRY**   | Manufacturing & Industrial Systems    | Manufacturing Engineering, Quality, Production, Supply Chain    | 
+| **Q-HPC**        | High Performance Computing & Software | Quantum Computing, AI/ML, Digital Twin, Software                | 
+| **Q-MECHANICS**  | Mechanical Subsystems Integration     | Hydraulics, Landing Gear, Flight Controls, Integration          | 
+| **Q-GROUND**     | Ground Systems & Logistics            | GSE Development, Operations, Training, Logistics                | 
+| **Q-SPACE**      | Orbital Systems & Communications      | Communications, Navigation, Antennas                            | 
+| **Q-SCIRES**     | Scientific Research & Innovation      | Research, IP Management, University Relations                   | 
 
 ##### Campos Definidos
 
@@ -7446,811 +7458,757 @@ La **Cybersecurity Architecture (CYB)** se centra en la protección de la inform
 **Total: 575 subcarpetas | 36,200 archivos | 465 GB**
 
 ---
-
+```
 📂 GAIA-QAO-ADVENT/
 │
 ├── 📂 00-GOVERNANCE/
 │   ├── 📂 00-01-BOARD-DOCUMENTS/
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Consortium_Agreement.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Board_Charter.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Voting_Procedures.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Shareholder_Rights.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Meeting_Minutes.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Annual_Report_2025.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Governance_Framework.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Director_Appointments.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-009_Board_Resolutions.pdf
-│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Strategic_Decisions.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Consortium_Agreement.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-002_Board_Charter.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-003_Voting_Procedures.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Shareholder_Rights.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-005_Meeting_Minutes.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-006_Annual_Report_2025.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-007_Governance_Framework.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-008_Director_Appointments.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-009_Board_Resolutions.pdf
+│   │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-010_Strategic_Decisions.pdf
 │   │
 │   ├── 📂 00-02-CORPORATE-POLICIES/
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-980-00-00-CON-001_Ethics_Conduct_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-800-00-00-CON-002_Information_Security_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-02-00-CON-003_Quality_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-004_Environmental_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-03-00-CON-005_HR_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Financial_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-640-00-00-CON-007_Procurement_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Risk_Management_Policy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-820-00-00-CON-009_Data_Protection_Policy.pdf
-│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Innovation_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-980-00-00-CON-001_Ethics_Conduct_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-800-00-00-CON-002_Information_Security_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-02-00-CON-003_Quality_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-740-00-00-CON-004_Environmental_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-03-00-CON-005_HR_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-006_Financial_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-640-00-00-CON-007_Procurement_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-008_Risk_Management_Policy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-820-00-00-CON-009_Data_Protection_Policy.pdf
+│   │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-010_Innovation_Policy.pdf
 │   │
 │   ├── 📂 00-03-COMPLIANCE-FRAMEWORK/
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Regulatory_Matrix.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-250-00-00-CON-002_ITAR_EAR_Compliance.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-820-00-00-CON-003_GDPR_Compliance.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-750-00-00-CON-004_Aviation_Standards.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-005_Environmental_Compliance.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-250-10-00-CON-006_Export_Control_Procedures.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Audit_Schedule.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-008_Compliance_Training.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-800-10-00-CON-009_Security_Audit_Report.pdf
-│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_Regulatory_Updates.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Regulatory_Matrix.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-250-00-00-CON-002_ITAR_EAR_Compliance.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-820-00-00-CON-003_GDPR_Compliance.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-750-00-00-CON-004_Aviation_Standards.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-740-00-00-CON-005_Environmental_Compliance.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-250-10-00-CON-006_Export_Control_Procedures.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-007_Audit_Schedule.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-008_Compliance_Training.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-800-10-00-CON-009_Security_Audit_Report.pdf
+│   │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-010_Regulatory_Updates.pdf
 │   │
 │   ├── 📂 00-04-MASTER-DOCUMENTS/
-│   │   ├── 📄 ORB-BOB-DA-DOC-MD-000-00-00-CON-001_Organizational_Master_v2.0.0.md
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Strategic_Plan_2025_2045.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Business_Plan.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Technology_Roadmap.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-740-00-00-CON-005_Sustainability_Charter.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-006_Investment_Strategy.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-007_Partnership_Framework.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-008_Innovation_Roadmap.pdf
-│   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-009_Risk_Register.pdf
-│   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-010_KPI_Dashboard.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-MD-000-00-00-CON-001_Organizational_Master_v2.0.0.md
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-002_Strategic_Plan_2025_2045.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-003_Business_Plan.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Technology_Roadmap.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-740-00-00-CON-005_Sustainability_Charter.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-006_Investment_Strategy.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-007_Partnership_Framework.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-990-00-00-CON-008_Innovation_Roadmap.pdf
+│   │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-009_Risk_Register.pdf
+│   │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-010_KPI_Dashboard.pdf
 │   │
 │   └── 📂 00-05-GOVERNANCE-MODULES/
 │       ├── 📂 00-05-01-Strategic-Foundation/
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Mission_Vision_Values.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Strategic_Objectives.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Success_Metrics.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Market_Position.pdf
-│       │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Competitive_Analysis.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Mission_Vision_Values.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-002_Strategic_Objectives.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-003_Success_Metrics.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Market_Position.pdf
+│       │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-005_Competitive_Analysis.pdf
 │       │
 │       ├── 📂 00-05-02-Development-Strategy/
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Phase_1_AMPEL360e.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Phase_2_AMPEL_BWB_H2.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Risk_Matrix.pdf
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Technology_Gates.pdf
-│       │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Milestone_Schedule.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Phase_1_AMPEL360e.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-002_Phase_2_AMPEL_BWB_H2.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-003_Risk_Matrix.pdf
+│       │   ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Technology_Gates.pdf
+│       │   └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-005_Milestone_Schedule.pdf
 │       │
 │       └── 📂 00-05-03-Organizational-Architecture/
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-001_Global_Presence.pdf
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-002_Investment_Strategy.pdf
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-003_Partnership_Framework.pdf
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-004_Division_Structure.pdf
-│           └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-CON-005_Authority_Matrix.pdf
+│           ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-001_Global_Presence.pdf
+│           ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-002_Investment_Strategy.pdf
+│           ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-003_Partnership_Framework.pdf
+│           ├── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-004_Division_Structure.pdf
+│           └── 📄 ORB-CORP-ALI-DP-DOC-PDF-000-00-00-CON-005_Authority_Matrix.pdf
 │
 ├── 📂 01-PROGRAMS/
 │   ├── 📂 01-01-AMPEL360e/
 │   │   ├── 📂 01-01-01-CONCEPTO/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-001_Market_Analysis.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-002_Requirements_Definition.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-003_Concept_Design.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-004_Feasibility_Studies.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-005_Business_Case.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-006_Technology_Assessment.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-007_Risk_Analysis.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-008_Stakeholder_Map.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-009_Concept_Validation.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CON-010_Program_Charter.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-001_Market_Analysis.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-002_Requirements_Definition.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-003_Concept_Design.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-004_Feasibility_Studies.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-006_Technology_Assessment.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-008_Stakeholder_Map.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-009_Concept_Validation.pdf
+│   │   │   └── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Charter.pdf
 │   │   │
 │   │   ├── 📂 01-01-02-DISEÑO/
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-050-00-00-DES-001_Fuselage_Structure.step
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-057-00-00-DES-002_Wing_Assembly.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-020-00-00-DES-003_System_Architecture.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Digital_Twin_Model.py
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-300-00-00-DES-005_Interface_Definitions.json
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-054-00-00-DES-006_Empennage_Structure.step
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-032-00-00-DES-007_Landing_Gear_System.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-DES-008_Flight_Control_Design.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-DES-009_Control_Laws.c
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-071-00-00-DES-010_Engine_Integration.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-DES-011_Hybrid_System_Design.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-XML-000-00-00-DES-012_System_Model.xml
-│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-000-00-00-DES-013_Preliminary_BOM.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-DES-014_Electrical_Architecture.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-025-00-00-DES-015_Cabin_Layout.step
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Review_Package.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-050-00-00-DES-001_Fuselage_Structure.step
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-057-00-00-DES-002_Wing_Assembly.step
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-020-00-00-DES-003_System_Architecture.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-CODE-PY-340-00-00-DES-004_Digital_Twin_Model.py
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-JSON-300-00-00-DES-005_Interface_Definitions.json
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-054-00-00-DES-006_Empennage_Structure.step
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-CAD-STEP-032-00-00-DES-007_Landing_Gear_System.step
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-DES-008_Flight_Control_Design.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-C-027-00-00-DES-009_Control_Laws.c
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-CAD-STEP-071-00-00-DES-010_Engine_Integration.step
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-450-00-00-DES-011_Hybrid_System_Design.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-XML-000-00-00-DES-012_System_Model.xml
+│   │   │   ├── 📄 QIND-360e-ALI-DP-BOM-JSON-000-00-00-DES-013_Preliminary_BOM.json
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-024-00-00-DES-014_Electrical_Architecture.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-025-00-00-DES-015_Cabin_Layout.step
+│   │   │   └── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-DES-016_Design_Review_Package.pdf
 │   │   │
 │   │   ├── 📂 01-01-03-DEMOSTRADOS-SIMULADOS-TEST/
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-10-00-TST-001_CFD_Simulation.py
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-20-00-TST-002_Virtual_Test_Cases.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-003_HIL_Test_Results.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-004_Environmental_Test.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-005_Test_Report_Summary.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-053-00-00-TST-006_Structural_FEA.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-007_Wind_Tunnel_Results.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-027-00-00-TST-008_Control_System_Sim.py
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-450-00-00-TST-009_Hybrid_Performance.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-TST-010_Landing_Gear_Tests.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-TST-011_Material_Testing.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-TST-012_Quantum_Nav_Validation.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-PY-340-10-00-TST-001_CFD_Simulation.py
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-JSON-340-20-00-TST-002_Virtual_Test_Cases.json
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-TST-003_HIL_Test_Results.pdf
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-000-00-00-TST-004_Environmental_Test.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-TST-005_Test_Report_Summary.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-MODEL-PY-053-00-00-TST-006_Structural_FEA.py
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-TST-007_Wind_Tunnel_Results.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-PY-027-00-00-TST-008_Control_System_Sim.py
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-MODEL-JSON-450-00-00-TST-009_Hybrid_Performance.json
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-TST-010_Landing_Gear_Tests.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-520-00-00-TST-011_Material_Testing.pdf
+│   │   │   └── 📄 QSPC-360e-ALI-DP-DOC-PDF-940-00-00-TST-012_Quantum_Nav_Validation.pdf
 │   │   │
 │   │   ├── 📂 01-01-04-CERTIFICACION/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-001_Certification_Plan.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-002_Compliance_Matrix.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-003_Type_Certificate.pdf
-│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-CRT-004_EASA_Submission.pdf
-│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-CRT-005_FAA_Submission.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-CRT-006_DO178C_Compliance.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-007_Certification_Tests.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-008_Flight_Test_Report.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-009_Airworthiness_Directives.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-CRT-010_Type_Certificate_Data.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-800-00-00-CRT-011_Cybersecurity_Cert.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-CRT-012_Quantum_Systems_Cert.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-CRT-001_Certification_Plan.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-CRT-002_Compliance_Matrix.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-CRT-003_Type_Certificate.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-CRT-004_EASA_Submission.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-CRT-005_FAA_Submission.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-CRT-006_DO178C_Compliance.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CRT-007_Certification_Tests.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CRT-008_Flight_Test_Report.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CRT-009_Airworthiness_Directives.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-CRT-010_Type_Certificate_Data.pdf
+│   │   │   ├── 📄 QHPC-360e-ALI-DP-DOC-PDF-800-00-00-CRT-011_Cybersecurity_Cert.pdf
+│   │   │   └── 📄 QSPC-360e-ALI-DP-DOC-PDF-940-00-00-CRT-012_Quantum_Systems_Cert.pdf
 │   │   │
 │   │   ├── 📂 01-01-05-PRODUCCION-MANUFACTURA-EMBARCADO/
-│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-000-00-00-PRD-001_Bill_Of_Materials.json
-│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-630-00-00-PRD-002_Manufacturing_Plan.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-600-00-00-PRD-003_Automation_Scripts.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-004_Quality_Control.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-PRD-005_Installation_Tool.exe
-│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-000-00-00-PRD-006_Physical_Component_Registry.pdf
-│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-570-00-00-PRD-007_Composite_Manufacturing.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-008_Assembly_Sequence.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-640-00-00-PRD-009_Production_Tracking.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-PRD-010_First_Article_Inspection.pdf
-│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-071-00-00-PRD-011_Engine_Serial_Numbers.pdf
-│   │   │   └── 📄 Q100-ALI-DA-DOC-PDF-032-00-00-PRD-012_Landing_Gear_Serials.pdf
+│   │   │   ├── 📄 QIND-360e-ALI-DP-BOM-JSON-000-00-00-PRD-001_Bill_Of_Materials.json
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-630-00-00-PRD-002_Manufacturing_Plan.pdf
+│   │   │   ├── 📄 QIND-360e-BOB-SC-CODE-PY-600-00-00-PRD-003_Automation_Scripts.py
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-PRD-004_Quality_Control.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-EXE-000-00-00-PRD-005_Installation_Tool.exe
+│   │   │   ├── 📄 QIND-360e-ALI-HW-COMP-REG-000-00-00-PRD-006_Physical_Component_Registry.xml
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-570-00-00-PRD-007_Composite_Manufacturing.pdf
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-PRD-008_Assembly_Sequence.pdf
+│   │   │   ├── 📄 QIND-360e-BOB-SC-CODE-PY-640-00-00-PRD-009_Production_Tracking.py
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-PRD-010_First_Article_Inspection.pdf
+│   │   │   ├── 📄 QGRN-360e-ALI-HW-ENG-SN-071-00-00-PRD-011_Engine_Serial_Numbers.xml
+│   │   │   └── 📄 QMEC-360e-ALI-HW-LDG-SN-032-00-00-PRD-012_Landing_Gear_Serials.xml
 │   │   │
 │   │   ├── 📂 01-01-06-MANTENIMIENTO-EN-LINEA/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-APK-000-00-00-MNT-002_Mobile_Maint_App.apk
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-000-00-00-MNT-003_Predictive_Model.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-012-00-00-MNT-004_Transit_Check_Card.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-MNT-005_Troubleshooting_AI.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-006_A_Check_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-005-00-00-MNT-007_B_Check_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-MNT-008_MEL_CDL.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-045-00-00-MNT-009_CMS_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-071-00-00-MNT-010_Engine_Line_Maint.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-MNT-011_Hydraulic_Service.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-MNT-012_Electrical_Checks.pdf
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Manual.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-APK-000-00-00-MNT-002_Mobile_Maint_App.apk
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-JSON-000-00-00-MNT-003_Predictive_Model.json
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-012-00-00-MNT-004_Transit_Check_Card.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-CODE-PY-000-00-00-MNT-005_Troubleshooting_AI.py
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-005-00-00-MNT-006_A_Check_Procedures.pdf
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-005-00-00-MNT-007_B_Check_Procedures.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-MNT-008_MEL_CDL.pdf
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-045-00-00-MNT-009_CMS_Manual.pdf
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-071-00-00-MNT-010_Engine_Line_Maint.pdf
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-MNT-011_Hydraulic_Service.pdf
+│   │   │   └── 📄 QMEC-360e-ALI-DP-DOC-PDF-024-00-00-MNT-012_Electrical_Checks.pdf
 │   │   │
 │   │   ├── 📂 01-01-07-OPERACION-DE-VUELO/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-001_Flight_Operations_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-OPS-002_Performance_Model.json
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-OPS-003_Flight_Planning_Tool.exe
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-004_Crew_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-HC-CODE-PY-940-00-00-OPS-005_Quantum_Navigation.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-006_Weight_Balance.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-007_Emergency_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-APK-000-00-00-OPS-008_EFB_Application.apk
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-009_Route_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-OPS-010_FMS_Database.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-011_Training_Syllabus.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-OPS-012_Operations_Specifications.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-001_Flight_Operations_Manual.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-JSON-340-00-00-OPS-002_Performance_Model.json
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-APP-EXE-000-00-00-OPS-003_Flight_Planning_Tool.exe
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-004_Crew_Procedures.pdf
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-CODE-PY-940-00-00-OPS-005_Quantum_Navigation.py
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-006_Weight_Balance.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-007_Emergency_Procedures.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-APP-APK-000-00-00-OPS-008_EFB_Application.apk
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-009_Route_Manual.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-PY-000-00-00-OPS-010_FMS_Database.py
+│   │   │   ├── 📄 QHRB-360e-ALI-DP-DOC-PDF-000-00-00-OPS-011_Training_Syllabus.pdf
+│   │   │   └── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-OPS-012_Operations_Specifications.pdf
 │   │   │
 │   │   ├── 📂 01-01-08-SERVICIOS-Y-SOPORTE/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-001_Service_Bulletin.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-JAR-000-00-00-SUP-002_Customer_Portal.jar
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-003_Training_Materials.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-000-00-00-SUP-004_Fleet_Analytics.json
-│   │   │   ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-SUP-005_Warranty_Terms.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-006_Technical_Support.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-007_Spare_Parts_Catalog.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-000-00-00-SUP-008_Field_Service_Tool.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-009_Modification_Kits.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-010_Service_Life_Extension.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-000-00-00-SUP-011_Remote_Diagnostics.exe
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-SUP-012_Customer_Feedback.pdf
+│   │   │   ├── 📄 QDGO-360e-ALI-DP-DOC-PDF-000-00-00-SUP-001_Service_Bulletin.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-JAR-000-00-00-SUP-002_Customer_Portal.jar
+│   │   │   ├── 📄 QHRB-360e-ALI-DP-DOC-PDF-000-00-00-SUP-003_Training_Materials.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-JSON-000-00-00-SUP-004_Fleet_Analytics.json
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-SUP-005_Warranty_Terms.pdf
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-000-00-00-SUP-006_Technical_Support.pdf
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-SUP-007_Spare_Parts_Catalog.pdf
+│   │   │   ├── 📄 QGRD-360e-BOB-SC-CODE-PY-000-00-00-SUP-008_Field_Service_Tool.py
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-000-00-00-SUP-009_Modification_Kits.pdf
+│   │   │   ├── 📄 QSCR-360e-ALI-DP-DOC-PDF-000-00-00-SUP-010_Service_Life_Extension.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-EXE-000-00-00-SUP-011_Remote_Diagnostics.exe
+│   │   │   └── 📄 QMKT-360e-ALI-DP-DOC-PDF-000-00-00-SUP-012_Customer_Feedback.pdf
 │   │   │
 │   │   ├── 📂 01-01-09-REPARACION-Y-RECICLAJE/
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-051-00-00-REP-001_Structural_Repair_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-053-00-00-REP-002_Damage_Assessment.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-REP-003_Recycling_Process.py
-│   │   │   ├── 📄 Q100-BOB-DA-BOM-JSON-590-00-00-REP-004_Recoverable_Materials.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-REP-005_Environmental_Compliance.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-052-00-00-REP-006_Composite_Repair.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-053-00-00-REP-007_Metal_Repair.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-056-00-00-REP-008_Window_Repair.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-009_NDT_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-071-00-00-REP-010_Engine_Overhaul.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-REP-011_Landing_Gear_Overhaul.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-REP-012_Material_Recovery_Plan.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-REP-013_Disassembly_Automation.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-REP-014_Waste_Management.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-015_Component_Grading.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-024-00-00-REP-016_Wire_Harness_Repair.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-REP-017_Flight_Control_Repair.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-REP-018_Hydraulic_Component_OH.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-019_Repair_Station_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-020_EASA_Form_1.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-021_FAA_8130_3.pdf
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-022_Repair_Cost_Estimate.pdf
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-REP-023_Field_Service_Report.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-051-00-00-REP-001_Structural_Repair_Manual.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-053-00-00-REP-002_Damage_Assessment.pdf
+│   │   │   ├── 📄 QGRN-360e-BOB-SC-CODE-PY-590-00-00-REP-003_Recycling_Process.py
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-BOM-JSON-590-00-00-REP-004_Recoverable_Materials.json
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-740-00-00-REP-005_Environmental_Compliance.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-052-00-00-REP-006_Composite_Repair.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-053-00-00-REP-007_Metal_Repair.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-056-00-00-REP-008_Window_Repair.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-000-00-00-REP-009_NDT_Procedures.pdf
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-071-00-00-REP-010_Engine_Overhaul.pdf
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-REP-011_Landing_Gear_Overhaul.pdf
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-REP-012_Material_Recovery_Plan.pdf
+│   │   │   ├── 📄 QIND-360e-BOB-SC-CODE-PY-590-00-00-REP-013_Disassembly_Automation.py
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-REP-014_Waste_Management.pdf
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-REP-015_Component_Grading.pdf
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-024-00-00-REP-016_Wire_Harness_Repair.pdf
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-REP-017_Flight_Control_Repair.pdf
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-REP-018_Hydraulic_Component_OH.pdf
+│   │   │   ├── 📄 QGRD-360e-ALI-DP-DOC-PDF-000-00-00-REP-019_Repair_Station_Manual.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-REP-020_EASA_Form_1.pdf
+│   │   │   ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-REP-021_FAA_8130_3.pdf
+│   │   │   ├── 📄 QFIN-360e-ALI-DP-DOC-PDF-000-00-00-REP-022_Repair_Cost_Estimate.pdf
+│   │   │   └── 📄 QGRD-360e-ALI-DP-DOC-PDF-000-00-00-REP-023_Field_Service_Report.pdf
 │   │   │
 │   │   └── 📂 01-01-10-RETIREMENT/
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-001_End_Of_Life_Plan.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-002_Decommissioning_Procedures.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-003_Material_Recovery.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-004_Data_Archival_Plan.pdf
-│   │       ├── 📄 Q100-BOB-HC-DOC-PDF-000-00-00-RET-005_Closure_Certificate.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-006_Recycling_Report.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-RET-007_Environmental_Impact.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-008_Asset_Disposal.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-009_Final_Inspection.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-010_Lessons_Learned.pdf
-│   │       ├── 📄 Q100-BOB-SC-CODE-PY-590-00-00-RET-011_Asset_Tracking.py
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-012_Circular_Economy_Report.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-013_Regulatory_Compliance.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-014_Customer_Notification.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-015_Parts_Resale_List.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-016_Hazmat_Disposal.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-017_Service_History.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-018_Maintenance_Records.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-019_Final_Audit_Report.pdf
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-020_Cost_Recovery_Analysis.pdf
-│   │       └── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-RET-021_Program_Closure.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-000-00-00-RET-001_End_Of_Life_Plan.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-000-00-00-RET-002_Decommissioning_Procedures.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-RET-003_Material_Recovery.pdf
+│   │       ├── 📄 QDGO-360e-ALI-DP-DOC-PDF-000-00-00-RET-004_Data_Archival_Plan.pdf
+│   │       ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-RET-005_Closure_Certificate.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-RET-006_Recycling_Report.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-740-00-00-RET-007_Environmental_Impact.pdf
+│   │       ├── 📄 QFIN-360e-ALI-DP-DOC-PDF-000-00-00-RET-008_Asset_Disposal.pdf
+│   │       ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-RET-009_Final_Inspection.pdf
+│   │       ├── 📄 QSCR-360e-ALI-DP-DOC-PDF-000-00-00-RET-010_Lessons_Learned.pdf
+│   │       ├── 📄 QIND-360e-BOB-SC-CODE-PY-590-00-00-RET-011_Asset_Tracking.py
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-RET-012_Circular_Economy_Report.pdf
+│   │       ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-RET-013_Regulatory_Compliance.pdf
+│   │       ├── 📄 QMKT-360e-ALI-DP-DOC-PDF-000-00-00-RET-014_Customer_Notification.pdf
+│   │       ├── 📄 QIND-360e-ALI-DP-DOC-PDF-000-00-00-RET-015_Parts_Resale_List.pdf
+│   │       ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-590-00-00-RET-016_Hazmat_Disposal.pdf
+│   │       ├── 📄 QDGO-360e-ALI-DP-DOC-PDF-000-00-00-RET-017_Service_History.pdf
+│   │       ├── 📄 QDGO-360e-ALI-DP-DOC-PDF-000-00-00-RET-018_Maintenance_Records.pdf
+│   │       ├── 📄 QLEG-360e-ALI-DP-DOC-PDF-000-00-00-RET-019_Final_Audit_Report.pdf
+│   │       ├── 📄 QFIN-360e-ALI-DP-DOC-PDF-000-00-00-RET-020_Cost_Recovery_Analysis.pdf
+│   │       └── 📄 QPMO-360e-ALI-DP-DOC-PDF-000-00-00-RET-021_Program_Closure.pdf
 │   │
-│   ├── 📂 01-02-AMPEL-BWB-H2/
+│   ├── 📂 01-02-AMPEL360-BWB-Q100/
 │   │   ├── 📂 01-02-01-CONCEPTO/
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-001_BWB_Market_Analysis.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-002_H2_Requirements.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CON-003_BWB_Concept_Design.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CON-004_Hydrogen_Feasibility.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-005_Business_Case_H2.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CON-006_H2_Storage_Tech.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-007_Risk_Analysis_BWB.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-CON-008_Airport_Infrastructure.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-009_Regulatory_Framework.pdf
-│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CON-010_Program_Definition.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-001_Market_Analysis.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-002_Requirements_Definition.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-003_Concept_Design.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-004_Feasibility_Studies.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-006_Technology_Assessment.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-008_Stakeholder_Map.pdf
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-009_Concept_Validation.pdf
+│   │   │   └── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Charter.pdf
 │   │   │
 │   │   ├── 📂 01-02-02-DISEÑO/
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-053-00-00-DES-001_BWB_Structure.step
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-053-10-00-DES-002_Center_Body.step
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-057-00-00-DES-003_BWB_Wing_Integration.step
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-460-00-00-DES-004_H2_Tank_System.step
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-071-00-00-DES-005_H2_Turbine_Engine.step
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-027-00-00-DES-006_BWB_Flight_Controls.pdf
-│   │   │   ├── 📄 Q250-BOB-SC-CODE-C-027-00-00-DES-007_BWB_Control_Laws.c
-│   │   │   ├── 📄 Q250-BOB-DT-MODEL-JSON-460-00-00-DES-008_H2_System_Model.json
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-025-00-00-DES-009_BWB_Cabin_Layout.step
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-520-00-00-DES-010_Composite_Design.pdf
-│   │   │   ├── 📄 Q250-BOB-DT-CAD-STEP-032-00-00-DES-011_BWB_Landing_Gear.step
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-340-00-00-DES-012_Thermal_Management.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-BOM-JSON-000-00-00-DES-013_BWB_H2_BOM.json
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-024-00-00-DES-014_Electrical_System_H2.pdf
-│   │   │   ├── 📄 Q250-BOB-DT-MODEL-XML-000-00-00-DES-015_System_Architecture.xml
-│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-DES-016_PDR_Package.pdf
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-050-00-00-DES-001_Fuselage_Structure.step
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-057-00-00-DES-002_Wing_Assembly.step
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-020-00-00-DES-003_System_Architecture.pdf
+│   │   │   ├── 📄 QHPC-Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Digital_Twin_Model.py
+│   │   │   ├── 📄 QHPC-Q100-BOB-DT-MODEL-JSON-300-00-00-DES-005_Interface_Definitions.json
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-054-00-00-DES-006_Empennage_Structure.step
+│   │   │   ├── 📄 QMEC-Q100-BOB-DT-CAD-STEP-032-00-00-DES-007_Landing_Gear_System.step
+│   │   │   ├── 📄 QAIR-Q100-ALI-DP-DOC-PDF-027-00-00-DES-008_Flight_Control_Design.pdf
+│   │   │   ├── 📄 QAIR-Q100-BOB-SC-CODE-C-027-00-00-DES-009_Control_Laws.c
+│   │   │   ├── 📄 QGRN-Q100-BOB-DT-CAD-STEP-071-00-00-DES-010_Engine_Integration.step
+│   │   │   ├── 📄 QGRN-Q100-ALI-DP-DOC-PDF-450-00-00-DES-011_Hybrid_System_Design.pdf
+│   │   │   ├── 📄 QHPC-Q100-BOB-DT-MODEL-XML-000-00-00-DES-012_System_Model.xml
+│   │   │   ├── 📄 QIND-Q100-ALI-DP-BOM-JSON-000-00-00-DES-013_Preliminary_BOM.json
+│   │   │   ├── 📄 QMEC-Q100-ALI-DP-DOC-PDF-024-00-00-DES-014_Electrical_Architecture.pdf
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-025-00-00-DES-015_Cabin_Layout.step
+│   │   │   └── 📄 QAIR-Q100-ALI-DP-DOC-PDF-000-00-00-DES-016_Design_Review_Package.pdf
 │   │   │
-│   │   ├── 📂 01-02-03-DEMOSTRADOS-SIMULADOS-TEST/
-│   │   │   ├── 📄 Q250-BOB-DT-MODEL-PY-340-00-00-TST-001_BWB_CFD_Analysis.py
-│   │   │   ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-TST-002_BWB_Structural_FEA.json
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-TST-003_H2_System_Tests.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-10-00-TST-004_Cryogenic_Tests.pdf
-│   │   │   ├── 📄 Q250-BOB-SC-CODE-PY-027-00-00-TST-005_BWB_Control_Sim.py
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-TST-006_Wind_Tunnel_BWB.pdf
-│   │   │   ├── 📄 Q250-BOB-DT-MODEL-PY-071-00-00-TST-007_H2_Engine_Sim.py
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-520-00-00-TST-008_Composite_Testing.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-340-00-00-TST-009_Thermal_Vacuum_Test.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-032-00-00-TST-010_Landing_Gear_Drop.pdf
-│   │   │   ├── 📄 Q250-BOB-SC-CODE-PY-460-00-00-TST-011_H2_Safety_Sim.py
-│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-940-00-00-TST-012_Quantum_Systems_Val.pdf
-│   │   │
-│   │   ├── 📂 01-02-04-CERTIFICACION/
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-001_BWB_Cert_Plan.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-002_H2_Cert_Strategy.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-003_Special_Conditions.pdf
-│   │   │   ├── 📄 Q250-BOB-HC-DOC-PDF-000-00-00-CRT-004_EASA_H2_Submission.pdf
-│   │   │   ├── 📄 Q250-BOB-HC-DOC-PDF-000-00-00-CRT-005_FAA_BWB_Submission.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-027-00-00-CRT-006_BWB_Control_Cert.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-007_H2_Safety_Cert.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CRT-008_Structural_Cert.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-009_Flight_Test_H2.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-000-00-00-CRT-010_TC_Data_Sheet_BWB.pdf
-│   │   │   ├── 📄 Q250-BOB-DA-DOC-PDF-740-00-00-CRT-011_Environmental_Cert.pdf
-│   │   │   └── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-CRT-012_Ground_Ops_Cert.pdf
-│   │   │
-│   │   └── [Continue with remaining lifecycle phases 05-10 for Q250]
+│   │   └── [Continue con las fases 03-10 para Q100]
 │   │
-│   ├── 📂 01-03-SPACE-PROGRAMS/
-│   │   ├── 📂 01-03-01-AMPEL360-PLUS-SUBORBITAL/
-│   │   │   ├── 📂 CONCEPTO/
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-00-00-CON-001_Space_Tourism_Concept.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-110-00-00-CON-002_Suborbital_Requirements.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-120-00-00-CON-003_Propulsion_Concept.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-130-00-00-CON-004_Power_System_Concept.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-190-00-00-CON-005_Business_Case_Tourism.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-10-00-CON-006_Safety_Analysis.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-150-00-00-CON-007_Ground_Ops_Concept.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-140-00-00-CON-008_Avionics_Concept.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-100-00-00-CON-009_Regulatory_Framework.pdf
-│   │   │   │   └── 📄 PLUS-BOB-DA-DOC-PDF-190-00-00-CON-010_Market_Analysis.pdf
-│   │   │   │
-│   │   │   ├── 📂 DISEÑO/
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-110-00-00-DES-001_Vehicle_Structure.step
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-120-00-00-DES-002_Rocket_Engine.step
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-10-00-DES-003_Crew_Capsule.step
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-20-00-DES-004_Life_Support.step
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-140-00-00-DES-005_GNC_Architecture.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-SC-CODE-C-140-00-00-DES-006_Flight_Software.c
-│   │   │   │   ├── 📄 PLUS-BOB-DT-MODEL-JSON-120-00-00-DES-007_Propulsion_Model.json
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-110-10-00-DES-008_Heat_Shield.step
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-130-00-00-DES-009_Power_Distribution.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-100-30-00-DES-010_Escape_System.step
-│   │   │   │   ├── 📄 PLUS-BOB-DA-BOM-JSON-100-00-00-DES-011_Suborbital_BOM.json
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-150-00-00-DES-012_Comms_System.pdf
-│   │   │   │   ├── 📄 PLUS-BOB-SC-CODE-PY-140-00-00-DES-013_Trajectory_Calc.py
-│   │   │   │   ├── 📄 PLUS-BOB-DT-CAD-STEP-180-00-00-DES-014_Landing_System.step
-│   │   │   │   ├── 📄 PLUS-BOB-DA-DOC-PDF-160-00-00-DES-015_Payload_Interface.pdf
-│   │   │   │   └── 📄 PLUS-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Review.pdf
-│   │   │   │
-│   │   │   └── [Continue with remaining lifecycle phases for PLUS]
+│   ├── 📂 01-03-AMPEL360-BWB-Q250/
+│   │   ├── 📂 01-03-01-CONCEPTO/
+│   │   │   ├── 📄 QAIR-Q250-ALI-DP-DOC-PDF-000-00-00-CON-001_BWB_Market_Analysis.pdf
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-000-00-00-CON-002_H2_Requirements.pdf
+│   │   │   ├── 📄 QSTR-Q250-ALI-DP-DOC-PDF-053-00-00-CON-003_BWB_Concept_Design.pdf
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-460-00-00-CON-004_Hydrogen_Feasibility.pdf
+│   │   │   ├── 📄 QFIN-Q250-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case_H2.pdf
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-460-00-00-CON-006_H2_Storage_Tech.pdf
+│   │   │   ├── 📄 QPMO-Q250-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis_BWB.pdf
+│   │   │   ├── 📄 QGRD-Q250-ALI-DP-DOC-PDF-710-00-00-CON-008_Airport_Infrastructure.pdf
+│   │   │   ├── 📄 QLEG-Q250-ALI-DP-DOC-PDF-000-00-00-CON-009_Regulatory_Framework.pdf
+│   │   │   └── 📄 QPMO-Q250-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Definition.pdf
 │   │   │
-│   │   ├── 📂 01-03-02-AMPEL360-PLUSPLUS-ORBITAL/
-│   │   │   ├── 📂 CONCEPTO/
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-00-00-CON-001_Orbital_Hotel_Concept.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-110-00-00-CON-002_Station_Architecture.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-20-00-CON-003_Life_Support_Extended.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-170-00-00-CON-004_Docking_System.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-180-00-00-CON-005_Logistics_Concept.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-130-00-00-CON-006_Solar_Power_System.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-140-00-00-CON-007_Station_Keeping.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-160-00-00-CON-008_Guest_Experience.pdf
-│   │   │   │   ├── 📄 PLUSPLUS-BOB-DA-DOC-PDF-100-00-00-CON-009_Safety_Protocols.pdf
-│   │   │   │   └── 📄 PLUSPLUS-BOB-DA-DOC-PDF-190-00-00-CON-010_Commercial_Model.pdf
-│   │   │   │
-│   │   │   └── [Continue with remaining phases for PLUSPLUS]
-│   │   │
-│   │   ├── 📂 01-03-03-GAIA-SP-LV-LAUNCHER/
-│   │   │   ├── 📂 CONCEPTO/
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-00-00-CON-001_Launcher_Concept.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-10-00-CON-002_Reusability_Study.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-120-20-00-CON-003_Engine_Selection.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-110-00-00-CON-004_Stage_Configuration.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-180-00-00-CON-005_Launch_Infrastructure.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-140-00-00-CON-006_GNC_Requirements.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-160-00-00-CON-007_Payload_Capacity.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-170-00-00-CON-008_Recovery_System.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-100-00-00-CON-009_Safety_Analysis.pdf
-│   │   │   │   └── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-190-00-00-CON-010_Cost_Analysis.pdf
-│   │   │   │
-│   │   │   ├── 📂 DISEÑO/
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-10-00-DES-001_First_Stage.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-10-00-DES-002_Propulsion_System.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-110-00-00-DES-003_Tank_Structure.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-SC-CODE-PY-140-00-00-DES-004_Launch_Control.py
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-MODEL-JSON-120-00-00-DES-005_Performance_Model.json
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-120-20-00-DES-006_Second_Stage.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-140-00-00-DES-007_Avionics_Design.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-160-00-00-DES-008_Fairing_System.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-SC-CODE-C-140-00-00-DES-009_Flight_Software.c
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-170-00-00-DES-010_Landing_Legs.step
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-BOM-JSON-120-00-00-DES-011_Launcher_BOM.json
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-920-00-00-DES-012_Quantum_Comms.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-MODEL-PY-140-00-00-DES-013_Trajectory_Sim.py
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-130-00-00-DES-014_Power_System.pdf
-│   │   │   │   ├── 📄 GAIA-SP-LV-BOB-DT-CAD-STEP-180-00-00-DES-015_GSE_Interface.step
-│   │   │   │   └── 📄 GAIA-SP-LV-BOB-DA-DOC-PDF-000-00-00-DES-016_PDR_Package.pdf
-│   │   │   │
-│   │   │   └── [Continue with remaining phases for GAIA-SP-LV]
-│   │   │
-│   │   ├── 📂 01-03-04-GAIA-SP-COMM-CONSTELLATION/
-│   │   │   ├── 📂 CONCEPTO/
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-00-00-CON-001_Constellation_Design.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-10-00-CON-002_Orbit_Analysis.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-920-00-00-CON-003_Quantum_Link_Study.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-20-00-CON-004_Coverage_Analysis.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-160-00-00-CON-005_Satellite_Bus.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-150-30-00-CON-006_Ground_Segment.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-930-00-00-CON-007_Cybersecurity.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-140-00-00-CON-008_Constellation_Mgmt.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-180-00-00-CON-009_Deployment_Plan.pdf
-│   │   │   │   └── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-190-00-00-CON-010_Service_Model.pdf
-│   │   │   │
-│   │   │   ├── 📂 DISEÑO/
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-160-00-00-DES-001_Satellite_Structure.step
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-JSON-150-10-00-DES-002_Orbit_Propagation.json
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-920-00-00-DES-003_Quantum_Protocol.py
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-150-00-00-DES-004_Antenna_System.step
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-130-00-00-DES-005_Solar_Arrays.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-C-140-00-00-DES-006_Attitude_Control.c
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-PY-150-00-00-DES-007_Link_Budget.py
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-CAD-STEP-160-10-00-DES-008_Payload_Module.step
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-940-00-00-DES-009_Quantum_Sensors.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-150-00-00-DES-010_Network_Routing.py
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-BOM-JSON-150-00-00-DES-011_Satellite_BOM.json
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-110-00-00-DES-012_Thermal_Design.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DT-MODEL-JSON-140-00-00-DES-013_ADCS_Model.json
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-180-00-00-DES-014_Ground_Station.pdf
-│   │   │   │   ├── 📄 GAIA-SP-COMM-BOB-SC-CODE-PY-930-00-00-DES-015_Encryption.py
-│   │   │   │   └── 📄 GAIA-SP-COMM-BOB-DA-DOC-PDF-000-00-00-DES-016_Design_Package.pdf
-│   │   │   │
-│   │   │   └── [Continue with remaining phases for GAIA-SP-COMM]
-│   │   │
-│   │   └── 📂 01-03-05-GAIA-SP-OPS-CONTROL-CENTER/
-│   │       ├── 📂 CONCEPTO/
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-00-00-CON-001_Operations_Center.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-10-00-CON-002_Mission_Control.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-340-00-00-CON-003_Digital_Twin_Ops.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-150-00-00-CON-004_Network_Architecture.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-800-00-00-CON-005_Security_Framework.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-20-00-CON-006_Automation_Concept.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-910-00-00-CON-007_AI_Operations.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-170-30-00-CON-008_Redundancy_Plan.pdf
-│   │       │   ├── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-000-00-00-CON-009_Staffing_Model.pdf
-│   │       │   └── 📄 GAIA-SP-OPS-BOB-DA-DOC-PDF-000-00-00-CON-010_Facility_Requirements.pdf
-│   │       │
-│   │       └── [Continue with remaining phases for GAIA-SP-OPS]
+│   │   └── [Continue con las fases 02-10 para Q250]
 │   │
-│   └── 📂 01-04-SPECIAL-PROGRAMS/
-│       └── 📂 01-04-01-XWLRGA-QUANTUM-WARFARE/
-│           ├── 📂 CONCEPTO/
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-280-00-00-CON-001_Quantum_Warfare_Concept.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-930-00-00-CON-002_Quantum_Defense.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-250-00-00-CON-003_Electronic_Warfare.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-980-00-00-CON-004_AI_Combat_Systems.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-200-00-00-CON-005_Weapons_Integration.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-220-00-00-CON-006_Protection_Systems.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-230-00-00-CON-007_Autonomous_Defense.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-240-00-00-CON-008_Logistics_Support.pdf
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-290-00-00-CON-009_Future_Warfare.pdf
-│           │   └── 📄 XWLRGA-BOB-DA-DOC-PDF-980-10-00-CON-010_Ethics_Framework.pdf
-│           │
-│           ├── 📂 DISEÑO/
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-930-00-00-DES-001_Quantum_Encryption.py
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-280-00-00-DES-002_Quantum_Radar.py
-│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-250-00-00-DES-003_EW_System.json
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-C-230-00-00-DES-004_Autonomous_Control.c
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-940-00-00-DES-005_Quantum_Sensors.pdf
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-970-00-00-DES-006_Sentient_AI.py
-│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-200-00-00-DES-007_Weapons_Model.json
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-250-10-00-DES-008_Cyber_Warfare.pdf
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-920-00-00-DES-009_Quantum_Comms.py
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-210-00-00-DES-010_C4ISR_Architecture.pdf
-│           │   ├── 📄 XWLRGA-BOB-DT-MODEL-JSON-270-00-00-DES-011_Training_Sim.json
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-880-00-00-DES-012_Post_Quantum_Crypto.py
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-260-00-00-DES-013_Materials_Stealth.pdf
-│           │   ├── 📄 XWLRGA-BOB-SC-CODE-PY-680-00-00-DES-014_AI_Optimization.py
-│           │   ├── 📄 XWLRGA-BOB-DA-DOC-PDF-290-00-00-DES-015_Future_Concepts.pdf
-│           │   └── 📄 XWLRGA-BOB-DA-DOC-PDF-000-00-00-DES-016_System_Architecture.pdf
-│           │
-│           └── [Continue with remaining phases for XWLRGA]
+│   ├── 📂 01-04-AMPEL360-BWB-e/
+│   │   ├── 📂 01-04-01-CONCEPTO/
+│   │   │   ├── 📄 QAIR-BWBe-ALI-DP-DOC-PDF-000-00-00-CON-001_Electric_BWB_Market.pdf
+│   │   │   ├── 📄 QGRN-BWBe-ALI-DP-DOC-PDF-420-00-00-CON-002_Battery_Requirements.pdf
+│   │   │   ├── 📄 QSTR-BWBe-ALI-DP-DOC-PDF-053-00-00-CON-003_BWB_Electric_Design.pdf
+│   │   │   ├── 📄 QGRN-BWBe-ALI-DP-DOC-PDF-420-00-00-CON-004_Energy_Storage_Study.pdf
+│   │   │   ├── 📄 QFIN-BWBe-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case_Electric.pdf
+│   │   │   ├── 📄 QGRN-BWBe-ALI-DP-DOC-PDF-420-10-00-CON-006_Solid_State_Battery.pdf
+│   │   │   ├── 📄 QPMO-BWBe-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis_Electric.pdf
+│   │   │   ├── 📄 QGRD-BWBe-ALI-DP-DOC-PDF-710-00-00-CON-008_Charging_Infrastructure.pdf
+│   │   │   ├── 📄 QLEG-BWBe-ALI-DP-DOC-PDF-000-00-00-CON-009_Regulatory_Electric.pdf
+│   │   │   └── 📄 QPMO-BWBe-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Definition_e.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para BWBe]
+│   │
+│   ├── 📂 01-05-AMPEL360-Q300-MRTT/
+│   │   ├── 📂 01-05-01-CONCEPTO/
+│   │   │   ├── 📄 QAIR-Q300-ALI-DP-DOC-PDF-200-00-00-CON-001_MRTT_Concept.pdf
+│   │   │   ├── 📄 QAIR-Q300-ALI-DP-DOC-PDF-200-10-00-CON-002_Tanker_Requirements.pdf
+│   │   │   ├── 📄 QAIR-Q300-ALI-DP-DOC-PDF-200-20-00-CON-003_Medical_Evac_Design.pdf
+│   │   │   ├── 📄 QPMO-Q300-ALI-DP-DOC-PDF-240-00-00-CON-004_Logistics_Analysis.pdf
+│   │   │   ├── 📄 QFIN-Q300-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case_MRTT.pdf
+│   │   │   ├── 📄 QAIR-Q300-ALI-DP-DOC-PDF-200-30-00-CON-006_Refueling_Systems.pdf
+│   │   │   ├── 📄 QPMO-Q300-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis_Military.pdf
+│   │   │   ├── 📄 QHPC-Q300-ALI-DP-DOC-PDF-210-00-00-CON-008_C4ISR_Integration.pdf
+│   │   │   ├── 📄 QLEG-Q300-ALI-DP-DOC-PDF-250-00-00-CON-009_Defense_Standards.pdf
+│   │   │   └── 📄 QPMO-Q300-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Charter_MRTT.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para Q300]
+│   │
+│   ├── 📂 01-06-AMPEL360-City-eVTOL/
+│   │   ├── 📂 01-06-01-CONCEPTO/
+│   │   │   ├── 📄 QAIR-CITY-ALI-DP-DOC-PDF-700-00-00-CON-001_UAM_Market_Analysis.pdf
+│   │   │   ├── 📄 QAIR-CITY-ALI-DP-DOC-PDF-700-10-00-CON-002_eVTOL_Requirements.pdf
+│   │   │   ├── 📄 QAIR-CITY-ALI-DP-DOC-PDF-700-20-00-CON-003_Urban_Operations.pdf
+│   │   │   ├── 📄 QGRD-CITY-ALI-DP-DOC-PDF-710-00-00-CON-004_Vertiport_Interface.pdf
+│   │   │   ├── 📄 QFIN-CITY-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case_UAM.pdf
+│   │   │   ├── 📄 QGRN-CITY-ALI-DP-DOC-PDF-450-00-00-CON-006_Hybrid_Propulsion.pdf
+│   │   │   ├── 📄 QAIR-CITY-ALI-DP-DOC-PDF-730-00-00-CON-007_Noise_Analysis.pdf
+│   │   │   ├── 📄 QAIR-CITY-ALI-DP-DOC-PDF-720-00-00-CON-008_UTM_Integration.pdf
+│   │   │   ├── 📄 QLEG-CITY-ALI-DP-DOC-PDF-750-00-00-CON-009_Certification_UAM.pdf
+│   │   │   └── 📄 QPMO-CITY-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Charter_City.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para CITY]
+│   │
+│   ├── 📂 01-07-AMPEL360-Sky-Cleaner/
+│   │   ├── 📂 01-07-01-CONCEPTO/
+│   │   │   ├── 📄 QGRN-SKYCL-ALI-DP-DOC-PDF-740-00-00-CON-001_Environmental_Mission.pdf
+│   │   │   ├── 📄 QGRN-SKYCL-ALI-DP-DOC-PDF-740-10-00-CON-002_Remediation_Tech.pdf
+│   │   │   ├── 📄 QSTR-SKYCL-ALI-DP-DOC-PDF-560-00-00-CON-003_Nano_Capture_System.pdf
+│   │   │   ├── 📄 QGRN-SKYCL-ALI-DP-DOC-PDF-740-20-00-CON-004_Atmospheric_Analysis.pdf
+│   │   │   ├── 📄 QFIN-SKYCL-ALI-DP-DOC-PDF-000-00-00-CON-005_Business_Case_Clean.pdf
+│   │   │   ├── 📄 QSTR-SKYCL-ALI-DP-DOC-PDF-560-10-00-CON-006_Filter_Technology.pdf
+│   │   │   ├── 📄 QPMO-SKYCL-ALI-DP-DOC-PDF-000-00-00-CON-007_Risk_Analysis_Drone.pdf
+│   │   │   ├── 📄 QHPC-SKYCL-ALI-DP-DOC-PDF-140-00-00-CON-008_Autonomous_Navigation.pdf
+│   │   │   ├── 📄 QGRN-SKYCL-ALI-DP-DOC-PDF-740-00-00-CON-009_Impact_Assessment.pdf
+│   │   │   └── 📄 QPMO-SKYCL-ALI-DP-DOC-PDF-000-00-00-CON-010_Program_Charter_Clean.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para SKYCL]
+│   │
+│   ├── 📂 01-08-AMPEL360-Plus-Suborbital/
+│   │   ├── 📂 01-08-01-CONCEPTO/
+│   │   │   ├── 📄 QSCR-PLUS-ALI-DP-DOC-PDF-100-00-00-CON-001_Space_Tourism_Concept.pdf
+│   │   │   ├── 📄 QSCR-PLUS-ALI-DP-DOC-PDF-110-00-00-CON-002_Suborbital_Requirements.pdf
+│   │   │   ├── 📄 QGRN-PLUS-ALI-DP-DOC-PDF-120-00-00-CON-003_Propulsion_Concept.pdf
+│   │   │   ├── 📄 QGRN-PLUS-ALI-DP-DOC-PDF-130-00-00-CON-004_Power_System_Concept.pdf
+│   │   │   ├── 📄 QFIN-PLUS-ALI-DP-DOC-PDF-190-00-00-CON-005_Business_Case_Tourism.pdf
+│   │   │   ├── 📄 QAIR-PLUS-ALI-DP-DOC-PDF-100-10-00-CON-006_Safety_Analysis.pdf
+│   │   │   ├── 📄 QGRD-PLUS-ALI-DP-DOC-PDF-150-00-00-CON-007_Ground_Ops_Concept.pdf
+│   │   │   ├── 📄 QHPC-PLUS-ALI-DP-DOC-PDF-140-00-00-CON-008_Avionics_Concept.pdf
+│   │   │   ├── 📄 QLEG-PLUS-ALI-DP-DOC-PDF-100-00-00-CON-009_Regulatory_Framework.pdf
+│   │   │   └── 📄 QMKT-PLUS-ALI-DP-DOC-PDF-190-00-00-CON-010_Market_Analysis.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para PLUS]
+│   │
+│   ├── 📂 01-09-AMPEL360-PlusPlus-Orbital/
+│   │   ├── 📂 01-09-01-CONCEPTO/
+│   │   │   ├── 📄 QSCR-PLUSPLUS-ALI-DP-DOC-PDF-100-00-00-CON-001_Orbital_Hotel_Concept.pdf
+│   │   │   ├── 📄 QSTR-PLUSPLUS-ALI-DP-DOC-PDF-110-00-00-CON-002_Station_Architecture.pdf
+│   │   │   ├── 📄 QGRN-PLUSPLUS-ALI-DP-DOC-PDF-100-20-00-CON-003_Life_Support_Extended.pdf
+│   │   │   ├── 📄 QMEC-PLUSPLUS-ALI-DP-DOC-PDF-170-00-00-CON-004_Docking_System.pdf
+│   │   │   ├── 📄 QGRD-PLUSPLUS-ALI-DP-DOC-PDF-180-00-00-CON-005_Logistics_Concept.pdf
+│   │   │   ├── 📄 QGRN-PLUSPLUS-ALI-DP-DOC-PDF-130-00-00-CON-006_Solar_Power_System.pdf
+│   │   │   ├── 📄 QSPC-PLUSPLUS-ALI-DP-DOC-PDF-140-00-00-CON-007_Station_Keeping.pdf
+│   │   │   ├── 📄 QMKT-PLUSPLUS-ALI-DP-DOC-PDF-160-00-00-CON-008_Guest_Experience.pdf
+│   │   │   ├── 📄 QLEG-PLUSPLUS-ALI-DP-DOC-PDF-100-00-00-CON-009_Safety_Protocols.pdf
+│   │   │   └── 📄 QFIN-PLUSPLUS-ALI-DP-DOC-PDF-190-00-00-CON-010_Commercial_Model.pdf
+│   │   │
+│   │   └── [Continue con las fases 02-10 para PLUSPLUS]
+│   │
+│   ├── 📂 01-10-GAIA-SP-Programs/
+│   │   ├── 📂 01-10-01-GAIA-SP-LV-Launcher/
+│   │   │   ├── 📄 QSCR-GSPLV-ALI-DP-DOC-PDF-120-00-00-CON-001_Launcher_Concept.pdf
+│   │   │   ├── 📄 QSCR-GSPLV-ALI-DP-DOC-PDF-120-10-00-CON-002_Reusability_Study.pdf
+│   │   │   ├── 📄 QGRN-GSPLV-ALI-DP-DOC-PDF-120-20-00-CON-003_Engine_Selection.pdf
+│   │   │   ├── 📄 QSTR-GSPLV-ALI-DP-DOC-PDF-110-00-00-CON-004_Stage_Configuration.pdf
+│   │   │   ├── 📄 QGRD-GSPLV-ALI-DP-DOC-PDF-180-00-00-CON-005_Launch_Infrastructure.pdf
+│   │   │   ├── 📄 QHPC-GSPLV-ALI-DP-DOC-PDF-140-00-00-CON-006_GNC_Requirements.pdf
+│   │   │   ├── 📄 QSCR-GSPLV-ALI-DP-DOC-PDF-160-00-00-CON-007_Payload_Capacity.pdf
+│   │   │   ├── 📄 QMEC-GSPLV-ALI-DP-DOC-PDF-170-00-00-CON-008_Recovery_System.pdf
+│   │   │   ├── 📄 QLEG-GSPLV-ALI-DP-DOC-PDF-100-00-00-CON-009_Safety_Analysis.pdf
+│   │   │   └── 📄 QFIN-GSPLV-ALI-DP-DOC-PDF-190-00-00-CON-010_Cost_Analysis.pdf
+│   │   │
+│   │   ├── 📂 01-10-02-GAIA-SP-COMM-Constellation/
+│   │   │   ├── 📄 QSPC-GSPCOM-ALI-DP-DOC-PDF-150-00-00-CON-001_Constellation_Design.pdf
+│   │   │   ├── 📄 QSPC-GSPCOM-ALI-DP-DOC-PDF-150-10-00-CON-002_Orbit_Analysis.pdf
+│   │   │   ├── 📄 QSPC-GSPCOM-ALI-DP-DOC-PDF-920-00-00-CON-003_Quantum_Link_Study.pdf
+│   │   │   ├── 📄 QSPC-GSPCOM-ALI-DP-DOC-PDF-150-20-00-CON-004_Coverage_Analysis.pdf
+│   │   │   ├── 📄 QSTR-GSPCOM-ALI-DP-DOC-PDF-160-00-00-CON-005_Satellite_Bus.pdf
+│   │   │   ├── 📄 QGRD-GSPCOM-ALI-DP-DOC-PDF-150-30-00-CON-006_Ground_Segment.pdf
+│   │   │   ├── 📄 QDGO-GSPCOM-ALI-DP-DOC-PDF-930-00-00-CON-007_Cybersecurity.pdf
+│   │   │   ├── 📄 QHPC-GSPCOM-ALI-DP-DOC-PDF-140-00-00-CON-008_Constellation_Mgmt.pdf
+│   │   │   ├── 📄 QGRD-GSPCOM-ALI-DP-DOC-PDF-180-00-00-CON-009_Deployment_Plan.pdf
+│   │   │   └── 📄 QMKT-GSPCOM-ALI-DP-DOC-PDF-190-00-00-CON-010_Service_Model.pdf
+│   │   │
+│   │   └── [Continue con otros programas GAIA-SP]
+│   │
+│   └── 📂 01-11-XWLRGA-Special-Programs/
+│       └── 📂 01-11-01-XWLRGA-Quantum-Warfare/
+│           ├── 📄 QHPC-XWLRGA-ALI-DP-DOC-PDF-280-00-00-CON-001_Quantum_Warfare_Concept.pdf
+│           ├── 📄 QHPC-XWLRGA-ALI-DP-DOC-PDF-930-00-00-CON-002_Quantum_Defense.pdf
+│           ├── 📄 QHPC-XWLRGA-ALI-DP-DOC-PDF-250-00-00-CON-003_Electronic_Warfare.pdf
+│           ├── 📄 QHPC-XWLRGA-ALI-DP-DOC-PDF-980-00-00-CON-004_AI_Combat_Systems.pdf
+│           ├── 📄 QMEC-XWLRGA-ALI-DP-DOC-PDF-200-00-00-CON-005_Weapons_Integration.pdf
+│           ├── 📄 QSTR-XWLRGA-ALI-DP-DOC-PDF-220-00-00-CON-006_Protection_Systems.pdf
+│           ├── 📄 QHPC-XWLRGA-ALI-DP-DOC-PDF-230-00-00-CON-007_Autonomous_Defense.pdf
+│           ├── 📄 QGRD-XWLRGA-ALI-DP-DOC-PDF-240-00-00-CON-008_Logistics_Support.pdf
+│           ├── 📄 QSCR-XWLRGA-ALI-DP-DOC-PDF-290-00-00-CON-009_Future_Warfare.pdf
+│           └── 📄 QLEG-XWLRGA-ALI-DP-DOC-PDF-980-10-00-CON-010_Ethics_Framework.pdf
 │
 ├── 📂 02-Q-DIVISIONS/
 │   ├── 📂 02-01-Q-DATAGOV/
 │   │   ├── 📂 02-01-01-S1000D/
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-001_S1000D_Implementation_Guide.pdf
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XML-000-00-00-DES-002_Data_Module_Template.xml
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-XSLT-000-00-00-DES-003_Transform_Scripts.xslt
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-004_CSDB_Structure.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-DES-005_Data_Validation.py
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XML-000-00-00-DES-006_Publication_Module.xml
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-007_DMC_Codes.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-JAVA-000-00-00-DES-008_CSDB_Manager.java
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-XSD-000-00-00-DES-009_Schema_Definition.xsd
-│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-DES-010_Training_Materials.pdf
+│   │   │   ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-000-00-00-DES-001_S1000D_Implementation_Guide.pdf
+│   │   │   ├── 📄 QDGO-CORP-BOB-DT-MODEL-XML-000-00-00-DES-002_Data_Module_Template.xml
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-XSLT-000-00-00-DES-003_Transform_Scripts.xslt
+│   │   │   ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-000-00-00-DES-004_CSDB_Structure.pdf
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-000-00-00-DES-005_Data_Validation.py
+│   │   │   ├── 📄 QDGO-CORP-BOB-DT-MODEL-XML-000-00-00-DES-006_Publication_Module.xml
+│   │   │   ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-000-00-00-DES-007_DMC_Codes.pdf
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-JAVA-000-00-00-DES-008_CSDB_Manager.java
+│   │   │   ├── 📄 QDGO-CORP-BOB-DT-MODEL-XSD-000-00-00-DES-009_Schema_Definition.xsd
+│   │   │   └── 📄 QDGO-CORP-ALI-DP-DOC-PDF-000-00-00-DES-010_Training_Materials.pdf
 │   │   │
 │   │   ├── 📂 02-01-02-BLOCKCHAIN/
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-360-00-00-DES-001_Smart_Contract.py
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-360-00-00-DES-002_Blockchain_Architecture.json
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-JAR-360-00-00-PRD-003_Blockchain_Node.jar
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-SOL-360-00-00-DES-004_Supply_Chain_Contract.sol
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-360-00-00-DES-005_DLT_Implementation.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-360-00-00-DES-006_Consensus_Algorithm.py
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-360-00-00-DES-007_Network_Topology.json
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-EXE-360-00-00-PRD-008_Wallet_Application.exe
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-JS-360-00-00-DES-009_DApp_Frontend.js
-│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-360-00-00-DES-010_Governance_Model.pdf
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-360-00-00-DES-001_Smart_Contract.py
+│   │   │   ├── 📄 QDGO-CORP-BOB-DT-MODEL-JSON-360-00-00-DES-002_Blockchain_Architecture.json
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-APP-JAR-360-00-00-PRD-003_Blockchain_Node.jar
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-SOL-360-00-00-DES-004_Supply_Chain_Contract.sol
+│   │   │   ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-360-00-00-DES-005_DLT_Implementation.pdf
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-360-00-00-DES-006_Consensus_Algorithm.py
+│   │   │   ├── 📄 QDGO-CORP-BOB-DT-MODEL-JSON-360-00-00-DES-007_Network_Topology.json
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-APP-EXE-360-00-00-PRD-008_Wallet_Application.exe
+│   │   │   ├── 📄 QDGO-CORP-BOB-SC-CODE-JS-360-00-00-DES-009_DApp_Frontend.js
+│   │   │   └── 📄 QDGO-CORP-ALI-DP-DOC-PDF-360-00-00-DES-010_Governance_Model.pdf
 │   │   │
 │   │   └── 📂 02-01-03-CYBERSECURITY/
-│   │       ├── 📄 ORB-BOB-SC-CODE-PY-880-00-00-DES-001_Quantum_Encryption.py
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-800-00-00-CON-002_Security_Architecture.pdf
-│   │       ├── 📄 ORB-BOB-APP-EXEC-BIN-880-00-00-PRD-003_Security_Monitor.bin
-│   │       ├── 📄 ORB-BOB-SC-CODE-C-810-00-00-DES-004_Network_Security.c
-│   │       ├── 📄 ORB-BOB-SC-CODE-PY-820-00-00-DES-005_Data_Encryption.py
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-830-00-00-DES-006_IAM_Framework.pdf
-│   │       ├── 📄 ORB-BOB-SC-CODE-JAVA-840-00-00-DES-007_App_Security.java
-│   │       ├── 📄 ORB-BOB-APP-EXEC-EXE-850-00-00-PRD-008_SOC_Dashboard.exe
-│   │       ├── 📄 ORB-BOB-SC-CODE-PY-890-00-00-DES-009_Threat_Intelligence.py
-│   │       └── 📄 ORB-BOB-DA-DOC-PDF-870-00-00-DES-010_ICS_Security.pdf
+│   │       ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-880-00-00-DES-001_Quantum_Encryption.py
+│   │       ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-800-00-00-CON-002_Security_Architecture.pdf
+│   │       ├── 📄 QDGO-CORP-BOB-SC-APP-BIN-880-00-00-PRD-003_Security_Monitor.bin
+│   │       ├── 📄 QDGO-CORP-BOB-SC-CODE-C-810-00-00-DES-004_Network_Security.c
+│   │       ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-820-00-00-DES-005_Data_Encryption.py
+│   │       ├── 📄 QDGO-CORP-ALI-DP-DOC-PDF-830-00-00-DES-006_IAM_Framework.pdf
+│   │       ├── 📄 QDGO-CORP-BOB-SC-CODE-JAVA-840-00-00-DES-007_App_Security.java
+│   │       ├── 📄 QDGO-CORP-BOB-SC-APP-EXE-850-00-00-PRD-008_SOC_Dashboard.exe
+│   │       ├── 📄 QDGO-CORP-BOB-SC-CODE-PY-890-00-00-DES-009_Threat_Intelligence.py
+│   │       └── 📄 QDGO-CORP-ALI-DP-DOC-PDF-870-00-00-DES-010_ICS_Security.pdf
 │   │
 │   ├── 📂 02-02-Q-STRUCTURES/
 │   │   ├── 📂 02-02-01-COMPOSITES/
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-520-00-00-DES-001_CFRP_Wing_Skin.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-10-00-TST-002_Material_Test_Results.pdf
-│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-570-00-00-PRD-003_Manufacturing_Process.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-520-00-00-DES-004_Laminate_Analysis.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-DES-005_Design_Allowables.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-520-00-00-DES-006_Ply_Optimization.py
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-520-00-00-PRD-007_Tooling_Design.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-520-00-00-REP-008_Repair_Procedures.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-520-00-00-TST-009_Failure_Analysis.py
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-590-00-00-RET-010_Recycling_Methods.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-520-00-00-DES-001_CFRP_Wing_Skin.step
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-520-10-00-TST-002_Material_Test_Results.pdf
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-570-00-00-PRD-003_Manufacturing_Process.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-MODEL-JSON-520-00-00-DES-004_Laminate_Analysis.json
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-520-00-00-DES-005_Design_Allowables.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-SC-CODE-PY-520-00-00-DES-006_Ply_Optimization.py
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-CAD-STEP-520-00-00-PRD-007_Tooling_Design.step
+│   │   │   ├── 📄 QSTR-360e-ALI-DP-DOC-PDF-520-00-00-REP-008_Repair_Procedures.pdf
+│   │   │   ├── 📄 QSTR-360e-BOB-DT-MODEL-PY-520-00-00-TST-009_Failure_Analysis.py
+│   │   │   └── 📄 QSTR-360e-ALI-DP-DOC-PDF-590-00-00-RET-010_Recycling_Methods.pdf
 │   │   │
-│   │   └── 📂 02-02-02-BWB-STRUCTURES/
-│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-00-00-DES-001_BWB_Pressure_Vessel.step
-│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-TST-002_FEA_Analysis.json
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-CRT-003_Structural_Certification.pdf
-│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-10-00-DES-004_Center_Body_Structure.step
-│   │       ├── 📄 Q250-BOB-SC-CODE-PY-053-00-00-DES-005_Load_Distribution.py
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-TST-006_Static_Test_Results.pdf
-│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-053-00-00-DES-007_Stress_Model.json
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-MNT-008_Inspection_Procedures.pdf
-│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-053-20-00-DES-009_Wing_Box_Integration.step
-│   │       └── 📄 Q250-BOB-DA-DOC-PDF-053-00-00-REP-010_BWB_Repair_Manual.pdf
+│   │   ├── 📂 02-02-02-BWB-STRUCTURES/
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-053-00-00-DES-001_BWB_Pressure_Vessel.step
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-MODEL-JSON-053-00-00-TST-002_FEA_Analysis.json
+│   │   │   ├── 📄 QSTR-Q100-ALI-DP-DOC-PDF-053-00-00-CRT-003_Structural_Certification.pdf
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-053-10-00-DES-004_Center_Body_Structure.step
+│   │   │   ├── 📄 QSTR-Q100-BOB-SC-CODE-PY-053-00-00-DES-005_Load_Distribution.py
+│   │   │   ├── 📄 QSTR-Q100-ALI-DP-DOC-PDF-053-00-00-TST-006_Static_Test_Results.pdf
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-MODEL-JSON-053-00-00-DES-007_Stress_Model.json
+│   │   │   ├── 📄 QSTR-Q100-ALI-DP-DOC-PDF-053-00-00-MNT-008_Inspection_Procedures.pdf
+│   │   │   ├── 📄 QSTR-Q100-BOB-DT-CAD-STEP-053-20-00-DES-009_Wing_Box_Integration.step
+│   │   │   └── 📄 QSTR-Q100-ALI-DP-DOC-PDF-053-00-00-REP-010_BWB_Repair_Manual.pdf
+│   │   │
+│   │   └── 📂 02-02-03-QUANTUM-MATERIALS/
+│   │       ├── 📄 QSTR-CORP-ALI-DP-DOC-PDF-580-00-00-DES-001_Quantum_Materials_Overview.pdf
+│   │       ├── 📄 QSTR-CORP-BOB-SC-CODE-PY-580-10-00-DES-002_Graphene_Simulation.py
+│   │       ├── 📄 QSTR-CORP-BOB-DT-MODEL-JSON-580-20-00-TST-003_Metamaterial_Tests.json
+│   │       ├── 📄 QSTR-CORP-ALI-DP-DOC-PDF-580-30-00-DES-004_Nano_Composite_Design.pdf
+│   │       ├── 📄 QSTR-CORP-BOB-SC-CODE-MAT-580-00-00-DES-005_Material_Properties.mat
+│   │       ├── 📄 QSTR-CORP-BOB-DT-CAD-STEP-580-00-00-PRD-006_Quantum_Structure.step
+│   │       ├── 📄 QSTR-CORP-ALI-DP-DOC-PDF-580-00-00-CRT-007_Material_Certification.pdf
+│   │       ├── 📄 QSTR-CORP-BOB-SC-CODE-PY-580-00-00-TST-008_Property_Analysis.py
+│   │       ├── 📄 QSTR-CORP-BOB-DT-MODEL-JSON-580-00-00-DES-009_Quantum_Properties.json
+│   │       └── 📄 QSTR-CORP-ALI-DP-DOC-PDF-580-00-00-REP-010_Processing_Guide.pdf
 │   │
 │   ├── 📂 02-03-Q-AIR/
 │   │   ├── 📂 02-03-01-AERODYNAMICS/
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-00-00-DES-001_CFD_Model.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-000-00-00-TST-002_Wind_Tunnel_Results.pdf
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-340-00-00-OPS-003_Performance_Calculator.exe
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Optimization_Algorithm.py
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-DES-005_Aero_Database.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-CRT-006_Performance_Cert.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-340-00-00-OPS-007_Real_Time_Model.c
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-340-00-00-TST-008_Flutter_Analysis.py
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-DES-009_Drag_Reduction.pdf
-│   │   │   └── 📄 Q100-BOB-APP-EXEC-APK-340-00-00-OPS-010_Mobile_Performance.apk
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-PY-340-00-00-DES-001_CFD_Model.py
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-000-00-00-TST-002_Wind_Tunnel_Results.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-APP-EXE-340-00-00-OPS-003_Performance_Calculator.exe
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-PY-340-00-00-DES-004_Optimization_Algorithm.py
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-JSON-340-00-00-DES-005_Aero_Database.json
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-340-00-00-CRT-006_Performance_Cert.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-C-340-00-00-OPS-007_Real_Time_Model.c
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-PY-340-00-00-TST-008_Flutter_Analysis.py
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-340-00-00-DES-009_Drag_Reduction.pdf
+│   │   │   └── 📄 QAIR-360e-BOB-SC-APP-APK-340-00-00-OPS-010_Mobile_Performance.apk
 │   │   │
-│   │   └── 📂 02-03-02-FLIGHT-CONTROLS/
-│   │       ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-DES-001_Control_Laws.c
-│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-027-00-00-PRD-002_FBW_Software.bin
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-CRT-003_DO178C_Compliance.pdf
-│   │       ├── 📄 Q100-BOB-SC-CODE-ADA-027-00-00-DES-004_Safety_Critical.ada
-│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-027-00-00-TST-005_HIL_Test_Cases.json
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-DES-006_Architecture_Doc.pdf
-│   │       ├── 📄 Q100-BOB-SC-CODE-C-027-00-00-TST-007_Test_Harness.c
-│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-027-00-00-OPS-008_Flight_Director.bin
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-027-00-00-MNT-009_Troubleshooting.pdf
-│   │       └── 📄 Q100-BOB-SC-CODE-PY-027-00-00-SUP-010_Update_Tool.py
+│   │   ├── 📂 02-03-02-FLIGHT-CONTROLS/
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-C-027-00-00-DES-001_Control_Laws.c
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-APP-BIN-027-00-00-PRD-002_FBW_Software.bin
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-CRT-003_DO178C_Compliance.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-ADA-027-00-00-DES-004_Safety_Critical.ada
+│   │   │   ├── 📄 QAIR-360e-BOB-DT-MODEL-JSON-027-00-00-TST-005_HIL_Test_Cases.json
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-DES-006_Architecture_Doc.pdf
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-CODE-C-027-00-00-TST-007_Test_Harness.c
+│   │   │   ├── 📄 QAIR-360e-BOB-SC-APP-BIN-027-00-00-OPS-008_Flight_Director.bin
+│   │   │   ├── 📄 QAIR-360e-ALI-DP-DOC-PDF-027-00-00-MNT-009_Troubleshooting.pdf
+│   │   │   └── 📄 QAIR-360e-BOB-SC-CODE-PY-027-00-00-SUP-010_Update_Tool.py
+│   │   │
+│   │   └── 📂 02-03-03-FLIGHT-TEST/
+│   │       ├── 📄 QAIR-CORP-ALI-DP-DOC-PDF-000-00-00-TST-001_Flight_Test_Program.pdf
+│   │       ├── 📄 QAIR-CORP-BOB-SC-CODE-PY-000-00-00-TST-002_Data_Acquisition.py
+│   │       ├── 📄 QAIR-CORP-BOB-SC-APP-EXE-000-00-00-TST-003_Telemetry_System.exe
+│   │       ├── 📄 QAIR-CORP-BOB-DT-MODEL-JSON-000-00-00-TST-004_Test_Matrix.json
+│   │       ├── 📄 QAIR-CORP-ALI-DP-DOC-PDF-000-00-00-TST-005_Test_Cards.pdf
+│   │       ├── 📄 QAIR-CORP-BOB-SC-CODE-MAT-000-00-00-TST-006_Data_Analysis.mat
+│   │       ├── 📄 QAIR-CORP-BOB-SC-APP-APK-000-00-00-TST-007_Mobile_Monitor.apk
+│   │       ├── 📄 QAIR-CORP-ALI-DP-DOC-PDF-000-00-00-TST-008_Safety_Procedures.pdf
+│   │       ├── 📄 QAIR-CORP-BOB-SC-CODE-PY-000-00-00-TST-009_Post_Processing.py
+│   │       └── 📄 QAIR-CORP-ALI-DP-DOC-PDF-000-00-00-CRT-010_Test_Reports.pdf
 │   │
 │   ├── 📂 02-04-Q-GREENTECH/
 │   │   ├── 📂 02-04-01-HYBRID-PROPULSION/
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-450-00-00-DES-001_Hybrid_System.step
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-450-00-00-DES-002_Energy_Management.py
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-480-00-00-OPS-003_Quantum_Optimization.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-TST-004_Performance_Tests.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-420-00-00-DES-005_Battery_Pack.step
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-450-00-00-PRD-006_Control_Software.c
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-450-00-00-CRT-007_Certification_Data.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-PY-450-00-00-DES-008_Thermal_Model.py
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-450-00-00-MNT-009_Diagnostic_Tool.exe
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-740-00-00-DES-010_LCA_Analysis.pdf
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-CAD-STEP-450-00-00-DES-001_Hybrid_System.step
+│   │   │   ├── 📄 QGRN-360e-BOB-SC-CODE-PY-450-00-00-DES-002_Energy_Management.py
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-MODEL-JSON-480-00-00-OPS-003_Quantum_Optimization.json
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-450-00-00-TST-004_Performance_Tests.pdf
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-CAD-STEP-420-00-00-DES-005_Battery_Pack.step
+│   │   │   ├── 📄 QGRN-360e-BOB-SC-CODE-C-450-00-00-PRD-006_Control_Software.c
+│   │   │   ├── 📄 QGRN-360e-ALI-DP-DOC-PDF-450-00-00-CRT-007_Certification_Data.pdf
+│   │   │   ├── 📄 QGRN-360e-BOB-DT-MODEL-PY-450-00-00-DES-008_Thermal_Model.py
+│   │   │   ├── 📄 QGRN-360e-BOB-SC-APP-EXE-450-00-00-MNT-009_Diagnostic_Tool.exe
+│   │   │   └── 📄 QGRN-360e-ALI-DP-DOC-PDF-740-00-00-DES-010_LCA_Analysis.pdf
 │   │   │
-│   │   └── 📂 02-04-02-HYDROGEN-SYSTEMS/
-│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-460-00-00-DES-001_H2_Storage_Tank.step
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-TST-002_Cryogenic_Tests.pdf
-│   │       ├── 📄 Q250-BOB-SC-CODE-PY-460-00-00-MNT-003_H2_Monitoring.py
-│   │       ├── 📄 Q250-BOB-DT-MODEL-JSON-460-00-00-DES-004_Thermal_Model.json
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-CRT-005_Safety_Certification.pdf
-│   │       ├── 📄 Q250-BOB-DT-CAD-STEP-460-10-00-DES-006_Distribution_System.step
-│   │       ├── 📄 Q250-BOB-SC-CODE-C-460-00-00-OPS-007_Safety_Systems.c
-│   │       ├── 📄 Q250-BOB-DA-DOC-PDF-460-00-00-PRD-008_Manufacturing_Spec.pdf
-│   │       ├── 📄 Q250-BOB-APP-EXEC-APK-460-00-00-MNT-009_Mobile_Monitor.apk
-│   │       └── 📄 Q250-BOB-DA-DOC-PDF-710-00-00-DES-010_Infrastructure_Req.pdf
+│   │   ├── 📂 02-04-02-HYDROGEN-SYSTEMS/
+│   │   │   ├── 📄 QGRN-Q250-BOB-DT-CAD-STEP-460-00-00-DES-001_H2_Storage_Tank.step
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-460-00-00-TST-002_Cryogenic_Tests.pdf
+│   │   │   ├── 📄 QGRN-Q250-BOB-SC-CODE-PY-460-00-00-MNT-003_H2_Monitoring.py
+│   │   │   ├── 📄 QGRN-Q250-BOB-DT-MODEL-JSON-460-00-00-DES-004_Thermal_Model.json
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-460-00-00-CRT-005_Safety_Certification.pdf
+│   │   │   ├── 📄 QGRN-Q250-BOB-DT-CAD-STEP-460-10-00-DES-006_Distribution_System.step
+│   │   │   ├── 📄 QGRN-Q250-BOB-SC-CODE-C-460-00-00-OPS-007_Safety_Systems.c
+│   │   │   ├── 📄 QGRN-Q250-ALI-DP-DOC-PDF-460-00-00-PRD-008_Manufacturing_Spec.pdf
+│   │   │   ├── 📄 QGRN-Q250-BOB-SC-APP-APK-460-00-00-MNT-009_Mobile_Monitor.apk
+│   │   │   └── 📄 QGRN-Q250-ALI-DP-DOC-PDF-710-00-00-DES-010_Infrastructure_Req.pdf
+│   │   │
+│   │   └── 📂 02-04-03-SUSTAINABILITY/
+│   │       ├── 📄 QGRN-CORP-ALI-DP-DOC-PDF-740-00-00-CON-001_Sustainability_Strategy.pdf
+│   │       ├── 📄 QGRN-CORP-BOB-SC-CODE-PY-740-10-00-OPS-002_Carbon_Calculator.py
+│   │       ├── 📄 QGRN-CORP-BOB-DT-MODEL-JSON-740-20-00-OPS-003_Emission_Model.json
+│   │       ├── 📄 QGRN-CORP-ALI-DP-DOC-PDF-740-30-00-SUP-004_LCA_Methodology.pdf
+│   │       ├── 📄 QGRN-CORP-BOB-SC-APP-JAR-740-00-00-OPS-005_ESG_Dashboard.jar
+│   │       ├── 📄 QGRN-CORP-BOB-SC-CODE-R-740-00-00-OPS-006_Impact_Analysis.r
+│   │       ├── 📄 QGRN-CORP-ALI-DP-DOC-PDF-590-00-00-CON-007_Circular_Economy.pdf
+│   │       ├── 📄 QGRN-CORP-BOB-DT-MODEL-JSON-740-00-00-OPS-008_Sustainability_KPIs.json
+│   │       ├── 📄 QGRN-CORP-BOB-SC-CODE-PY-410-00-00-DES-009_Renewable_Integration.py
+│   │       └── 📄 QGRN-CORP-ALI-DP-DOC-PDF-740-00-00-CRT-010_ISO14001_Compliance.pdf
 │   │
 │   ├── 📂 02-05-Q-INDUSTRY/
 │   │   ├── 📂 02-05-01-MANUFACTURING/
-│   │   │   ├── 📄 Q100-BOB-DP-DOC-PDF-630-00-00-PRD-001_Assembly_Process.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-640-00-00-PRD-002_Automation_Control.py
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-JAR-630-00-00-PRD-003_MES_Integration.jar
-│   │   │   ├── 📄 Q100-ALI-DA-DOC-PDF-630-00-00-PRD-004_Installed_Equipment_List.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-630-00-00-PRD-005_Assembly_Jigs.step
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PLC-600-00-00-PRD-006_Robot_Programs.plc
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-630-00-00-PRD-007_Work_Instructions.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-640-00-00-PRD-008_Production_Flow.json
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-630-00-00-PRD-009_Quality_Station.exe
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-570-00-00-PRD-010_AM_Procedures.pdf
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-630-00-00-PRD-001_Assembly_Process.pdf
+│   │   │   ├── 📄 QIND-360e-BOB-SC-CODE-PY-640-00-00-PRD-002_Automation_Control.py
+│   │   │   ├── 📄 QIND-360e-BOB-SC-APP-JAR-630-00-00-PRD-003_MES_Integration.jar
+│   │   │   ├── 📄 QIND-360e-ALI-HW-EQUIP-LIST-630-00-00-PRD-004_Installed_Equipment.xml
+│   │   │   ├── 📄 QIND-360e-BOB-DT-CAD-STEP-630-00-00-PRD-005_Assembly_Jigs.step
+│   │   │   ├── 📄 QIND-360e-BOB-SC-CODE-PLC-600-00-00-PRD-006_Robot_Programs.plc
+│   │   │   ├── 📄 QIND-360e-ALI-DP-DOC-PDF-630-00-00-PRD-007_Work_Instructions.pdf
+│   │   │   ├── 📄 QIND-360e-BOB-DT-MODEL-JSON-640-00-00-PRD-008_Production_Flow.json
+│   │   │   ├── 📄 QIND-360e-BOB-SC-APP-EXE-630-00-00-PRD-009_Quality_Station.exe
+│   │   │   └── 📄 QIND-360e-ALI-DP-DOC-PDF-570-00-00-PRD-010_AM_Procedures.pdf
 │   │   │
-│   │   └── 📂 02-05-02-QUALITY/
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-001_AS9100_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-APP-EXEC-EXE-000-00-00-PRD-002_Quality_Dashboard.exe
-│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-PRD-003_SPC_Analytics.json
-│   │       ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-PRD-004_Statistical_Analysis.py
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-005_Inspection_Plans.pdf
-│   │       ├── 📄 ORB-BOB-APP-EXEC-APK-000-00-00-PRD-006_Mobile_Inspection.apk
-│   │       ├── 📄 ORB-BOB-SC-CODE-R-000-00-00-PRD-007_Quality_Metrics.r
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-008_CAPA_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-PRD-009_Risk_Analysis.json
-│   │       └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-PRD-010_Audit_Schedule.pdf
+│   │   ├── 📂 02-05-02-QUALITY/
+│   │   │   ├── 📄 QIND-CORP-ALI-DP-DOC-PDF-000-00-00-PRD-001_AS9100_Procedures.pdf
+│   │   │   ├── 📄 QIND-CORP-BOB-SC-APP-EXE-000-00-00-PRD-002_Quality_Dashboard.exe
+│   │   │   ├── 📄 QIND-CORP-BOB-DT-MODEL-JSON-000-00-00-PRD-003_SPC_Analytics.json
+│   │   │   ├── 📄 QIND-CORP-BOB-SC-CODE-PY-000-00-00-PRD-004_Statistical_Analysis.py
+│   │   │   ├── 📄 QIND-CORP-ALI-DP-DOC-PDF-000-00-00-PRD-005_Inspection_Plans.pdf
+│   │   │   ├── 📄 QIND-CORP-BOB-SC-APP-APK-000-00-00-PRD-006_Mobile_Inspection.apk
+│   │   │   ├── 📄 QIND-CORP-BOB-SC-CODE-R-000-00-00-PRD-007_Quality_Metrics.r
+│   │   │   ├── 📄 QIND-CORP-ALI-DP-DOC-PDF-000-00-00-PRD-008_CAPA_Procedures.pdf
+│   │   │   ├── 📄 QIND-CORP-BOB-DT-MODEL-JSON-000-00-00-PRD-009_Risk_Analysis.json
+│   │   │   └── 📄 QIND-CORP-ALI-DP-DOC-PDF-000-00-00-PRD-010_Audit_Schedule.pdf
+│   │   │
+│   │   └── 📂 02-05-03-SUPPLY-CHAIN/
+│   │       ├── 📄 QIND-CORP-ALI-DP-DOC-PDF-640-00-00-OPS-001_Supply_Chain_Strategy.pdf
+│   │       ├── 📄 QIND-CORP-BOB-SC-CODE-PY-640-10-00-OPS-002_Supplier_Portal.py
+│   │       ├── 📄 QIND-CORP-BOB-SC-APP-JAR-640-00-00-OPS-003_SCM_System.jar
+│   │       ├── 📄 QIND-CORP-BOB-DT-MODEL-JSON-640-00-00-OPS-004_Supply_Network.json
+│   │       ├── 📄 QIND-CORP-ALI-DP-DOC-PDF-640-00-00-OPS-005_Vendor_Management.pdf
+│   │       ├── 📄 QIND-CORP-BOB-SC-CODE-SQL-640-00-00-OPS-006_Inventory_DB.sql
+│   │       ├── 📄 QIND-CORP-BOB-SC-APP-EXE-640-00-00-OPS-007_Procurement_Tool.exe
+│   │       ├── 📄 QIND-CORP-BOB-DT-MODEL-JSON-640-00-00-OPS-008_Risk_Assessment.json
+│   │       ├── 📄 QIND-CORP-BOB-SC-CODE-PY-360-00-00-OPS-009_Blockchain_Track.py
+│   │       └── 📄 QIND-CORP-ALI-DP-DOC-PDF-640-00-00-CRT-010_Supplier_Audit.pdf
 │   │
 │   ├── 📂 02-06-Q-HPC/
 │   │   ├── 📂 02-06-01-QUANTUM-COMPUTING/
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-900-00-00-DES-001_QAOA_Algorithm.py
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-910-00-00-DES-002_Quantum_ML_Model.json
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-BIN-900-00-00-OPS-003_QPU_Controller.bin
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-QASM-900-00-00-DES-004_Quantum_Circuit.qasm
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-900-00-00-DES-005_QPU_Architecture.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-910-00-00-DES-006_QML_Framework.py
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-900-00-00-TST-007_Quantum_Tests.json
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-JAR-900-00-00-OPS-008_Quantum_Simulator.jar
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-950-00-00-DES-009_Quantum_Simulation.py
-│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-900-00-00-CRT-010_Quantum_Validation.pdf
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-CODE-PY-900-00-00-DES-001_QAOA_Algorithm.py
+│   │   │   ├── 📄 QHPC-CORP-BOB-DT-MODEL-JSON-910-00-00-DES-002_Quantum_ML_Model.json
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-APP-BIN-900-00-00-OPS-003_QPU_Controller.bin
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-CODE-QASM-900-00-00-DES-004_Quantum_Circuit.qasm
+│   │   │   ├── 📄 QHPC-CORP-ALI-DP-DOC-PDF-900-00-00-DES-005_QPU_Architecture.pdf
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-CODE-PY-910-00-00-DES-006_QML_Framework.py
+│   │   │   ├── 📄 QHPC-CORP-BOB-DT-MODEL-JSON-900-00-00-TST-007_Quantum_Tests.json
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-APP-JAR-900-00-00-OPS-008_Quantum_Simulator.jar
+│   │   │   ├── 📄 QHPC-CORP-BOB-SC-CODE-PY-950-00-00-DES-009_Quantum_Simulation.py
+│   │   │   └── 📄 QHPC-CORP-ALI-DP-DOC-PDF-900-00-00-CRT-010_Quantum_Validation.pdf
 │   │   │
-│   │   └── 📂 02-06-02-DIGITAL-TWINS/
-│   │       ├── 📄 Q100-BOB-DT-MODEL-PY-390-00-00-DES-001_Conscious_Digital_Twin.py
-│   │       ├── 📄 Q100-BOB-APP-EXEC-JAR-340-00-00-OPS-002_Twin_Sync_Service.jar
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-390-00-00-SUP-003_Twin_User_Guide.pdf
-│   │       ├── 📄 Q100-BOB-SC-CODE-PY-340-00-00-DES-004_Twin_Architecture.py
-│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-390-00-00-DES-005_Consciousness_Model.json
-│   │       ├── 📄 Q100-BOB-APP-EXEC-EXE-340-00-00-OPS-006_Twin_Dashboard.exe
-│   │       ├── 📄 Q100-BOB-SC-CODE-JS-340-00-00-DES-007_WebGL_Viewer.js
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-340-00-00-TST-008_Validation_Report.pdf
-│   │       ├── 📄 Q100-BOB-SC-CODE-PY-970-00-00-DES-009_Sentient_Core.py
-│   │       └── 📄 Q100-BOB-DT-MODEL-JSON-340-00-00-MNT-010_Predictive_Model.json
+│   │   ├── 📂 02-06-02-DIGITAL-TWINS/
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-PY-390-00-00-DES-001_Conscious_Digital_Twin.py
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-JAR-340-00-00-OPS-002_Twin_Sync_Service.jar
+│   │   │   ├── 📄 QHPC-360e-ALI-DP-DOC-PDF-390-00-00-SUP-003_Twin_User_Guide.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-CODE-PY-340-00-00-DES-004_Twin_Architecture.py
+│   │   │   ├── 📄 QHPC-360e-BOB-DT-MODEL-JSON-390-00-00-DES-005_Consciousness_Model.json
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-APP-EXE-340-00-00-OPS-006_Twin_Dashboard.exe
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-CODE-JS-340-00-00-DES-007_WebGL_Viewer.js
+│   │   │   ├── 📄 QHPC-360e-ALI-DP-DOC-PDF-340-00-00-TST-008_Validation_Report.pdf
+│   │   │   ├── 📄 QHPC-360e-BOB-SC-CODE-PY-970-00-00-DES-009_Sentient_Core.py
+│   │   │   └── 📄 QHPC-360e-BOB-DT-MODEL-JSON-340-00-00-MNT-010_Predictive_Model.json
+│   │   │
+│   │   └── 📂 02-06-03-AI-ML/
+│   │       ├── 📄 QHPC-CORP-BOB-SC-CODE-PY-910-00-00-DES-001_AI_Framework.py
+│   │       ├── 📄 QHPC-CORP-BOB-DT-MODEL-H5-910-00-00-DES-002_Neural_Network.h5
+│   │       ├── 📄 QHPC-CORP-BOB-SC-APP-JAR-910-00-00-OPS-003_ML_Pipeline.jar
+│   │       ├── 📄 QHPC-CORP-BOB-SC-CODE-PY-910-10-00-DES-004_Deep_Learning.py
+│   │       ├── 📄 QHPC-CORP-BOB-DT-MODEL-JSON-910-00-00-OPS-005_Training_Config.json
+│   │       ├── 📄 QHPC-CORP-ALI-DP-DOC-PDF-910-00-00-DES-006_AI_Architecture.pdf
+│   │       ├── 📄 QHPC-CORP-BOB-SC-CODE-CUDA-910-00-00-OPS-007_GPU_Kernels.cu
+│   │       ├── 📄 QHPC-CORP-BOB-SC-APP-EXE-910-00-00-OPS-008_AI_Workbench.exe
+│   │       ├── 📄 QHPC-CORP-BOB-DT-MODEL-ONNX-910-00-00-PRD-009_Production_Model.onnx
+│   │       └── 📄 QHPC-CORP-ALI-DP-DOC-PDF-980-00-00-DES-010_XAI_Framework.pdf
 │   │
 │   ├── 📂 02-07-Q-MECHANICS/
 │   │   ├── 📂 02-07-01-HYDRAULICS/
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-029-00-00-DES-001_Hydraulic_System.step
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-MNT-002_Hydraulic_Service.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-C-029-00-00-PRD-003_Control_Logic.c
-│   │   │   ├── 📄 Q100-BOB-DT-MODEL-JSON-029-00-00-TST-004_System_Model.json
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-REP-005_OH_Manual.pdf
-│   │   │   ├── 📄 Q100-BOB-DT-CAD-STEP-029-10-00-DES-006_Pump_Assembly.step
-│   │   │   ├── 📄 Q100-BOB-APP-EXEC-EXE-029-00-00-MNT-007_Diagnostic_Tool.exe
-│   │   │   ├── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-CRT-008_Certification.pdf
-│   │   │   ├── 📄 Q100-BOB-SC-CODE-PY-029-00-00-TST-009_Test_Scripts.py
-│   │   │   └── 📄 Q100-BOB-DA-DOC-PDF-029-00-00-SUP-010_Service_Bulletin.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-CAD-STEP-029-00-00-DES-001_Hydraulic_System.step
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-MNT-002_Hydraulic_Service.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-SC-CODE-C-029-00-00-PRD-003_Control_Logic.c
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-MODEL-JSON-029-00-00-TST-004_System_Model.json
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-REP-005_OH_Manual.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-CAD-STEP-029-10-00-DES-006_Pump_Assembly.step
+│   │   │   ├── 📄 QMEC-360e-BOB-SC-APP-EXE-029-00-00-MNT-007_Diagnostic_Tool.exe
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-CRT-008_Certification.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-SC-CODE-PY-029-00-00-TST-009_Test_Scripts.py
+│   │   │   └── 📄 QMEC-360e-ALI-DP-DOC-PDF-029-00-00-SUP-010_Service_Bulletin.pdf
 │   │   │
-│   │   └── 📂 02-07-02-LANDING-GEAR/
-│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-032-00-00-DES-001_Landing_Gear_Assembly.step
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-TST-002_Drop_Test_Results.pdf
-│   │       ├── 📄 Q100-ALI-DA-DOC-PDF-032-00-00-PRD-003_Landing_Gear_Serial_Numbers.pdf
-│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-032-10-00-DES-004_Shock_Strut.step
-│   │       ├── 📄 Q100-BOB-SC-CODE-C-032-00-00-DES-005_Extension_Logic.c
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-MNT-006_Service_Manual.pdf
-│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-032-00-00-TST-007_Load_Analysis.json
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-REP-008_Overhaul_Manual.pdf
-│   │       ├── 📄 Q100-BOB-APP-EXEC-APK-032-00-00-MNT-009_Mobile_Check.apk
-│   │       └── 📄 Q100-BOB-DA-DOC-PDF-032-00-00-CRT-010_Type_Cert_Data.pdf
+│   │   ├── 📂 02-07-02-LANDING-GEAR/
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-CAD-STEP-032-00-00-DES-001_Landing_Gear_Assembly.step
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-TST-002_Drop_Test_Results.pdf
+│   │   │   ├── 📄 QMEC-360e-ALI-HW-LDG-SN-032-00-00-PRD-003_Landing_Gear_Serials.xml
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-CAD-STEP-032-10-00-DES-004_Shock_Strut.step
+│   │   │   ├── 📄 QMEC-360e-BOB-SC-CODE-C-032-00-00-DES-005_Extension_Logic.c
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-MNT-006_Service_Manual.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-DT-MODEL-JSON-032-00-00-TST-007_Load_Analysis.json
+│   │   │   ├── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-REP-008_Overhaul_Manual.pdf
+│   │   │   ├── 📄 QMEC-360e-BOB-SC-APP-APK-032-00-00-MNT-009_Mobile_Check.apk
+│   │   │   └── 📄 QMEC-360e-ALI-DP-DOC-PDF-032-00-00-CRT-010_Type_Cert_Data.pdf
+│   │   │
+│   │   └── 📂 02-07-03-ACTUATION/
+│   │       ├── 📄 QMEC-CORP-BOB-DT-CAD-STEP-027-10-00-DES-001_Actuator_Design.step
+│   │       ├── 📄 QMEC-CORP-BOB-SC-CODE-C-027-10-00-DES-002_Control_Algorithm.c
+│   │       ├── 📄 QMEC-CORP-ALI-DP-DOC-PDF-027-10-00-TST-003_Performance_Tests.pdf
+│   │       ├── 📄 QMEC-CORP-BOB-DT-MODEL-JSON-027-10-00-DES-004_Dynamic_Model.json
+│   │       ├── 📄 QMEC-CORP-BOB-SC-APP-BIN-027-10-00-PRD-005_Firmware.bin
+│   │       ├── 📄 QMEC-CORP-ALI-DP-DOC-PDF-027-10-00-MNT-006_Maintenance_Guide.pdf
+│   │       ├── 📄 QMEC-CORP-BOB-SC-CODE-PY-027-10-00-TST-007_Test_Suite.py
+│   │       ├── 📄 QMEC-CORP-BOB-DT-CAD-STEP-027-10-00-PRD-008_Manufacturing_Jig.step
+│   │       ├── 📄 QMEC-CORP-ALI-DP-DOC-PDF-027-10-00-CRT-009_Qualification.pdf
+│   │       └── 📄 QMEC-CORP-BOB-SC-CODE-MAT-027-10-00-DES-010_Simulation.mat
 │   │
 │   ├── 📂 02-08-Q-GROUND/
 │   │   ├── 📂 02-08-01-GSE-EQUIPMENT/
-│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-007-00-00-DES-001_GPU_Design.step
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-PRD-002_GSE_Manufacturing.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-007-00-00-OPS-003_GSE_Control.py
-│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-007-10-00-DES-004_Tow_Bar.step
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-MNT-005_GSE_Maintenance.pdf
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-EXE-007-00-00-OPS-006_GSE_Monitor.exe
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-007-00-00-DES-007_Equipment_List.json
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-007-00-00-TST-008_Acceptance_Tests.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-C-007-00-00-PRD-009_Embedded_Control.c
-│   │   │   └── 📄 ORB-BOB-DA-DOC-PDF-710-00-00-DES-010_Airport_Interface.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-DT-CAD-STEP-007-00-00-DES-001_GPU_Design.step
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-007-00-00-PRD-002_GSE_Manufacturing.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-CODE-PY-007-00-00-OPS-003_GSE_Control.py
+│   │   │   ├── 📄 QGRD-CORP-BOB-DT-CAD-STEP-007-10-00-DES-004_Tow_Bar.step
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-007-00-00-MNT-005_GSE_Maintenance.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-APP-EXE-007-00-00-OPS-006_GSE_Monitor.exe
+│   │   │   ├── 📄 QGRD-CORP-BOB-DT-MODEL-JSON-007-00-00-DES-007_Equipment_List.json
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-007-00-00-TST-008_Acceptance_Tests.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-CODE-C-007-00-00-PRD-009_Embedded_Control.c
+│   │   │   └── 📄 QGRD-CORP-ALI-DP-DOC-PDF-710-00-00-DES-010_Airport_Interface.pdf
 │   │   │
-│   │   └── 📂 02-08-02-MAINTENANCE-PROCEDURES/
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-002_Heavy_Check_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-SC-CODE-PY-005-00-00-MNT-003_Planning_Tool.py
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-012-00-00-MNT-004_Servicing_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-APP-EXEC-APK-005-00-00-MNT-005_Mobile_Cards.apk
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-006_Tool_Requirements.pdf
-│   │       ├── 📄 ORB-BOB-DT-MODEL-JSON-005-00-00-MNT-007_Task_Database.json
-│   │       ├── 📄 ORB-BOB-DA-DOC-PDF-005-00-00-MNT-008_Safety_Procedures.pdf
-│   │       ├── 📄 ORB-BOB-SC-CODE-SQL-005-00-00-MNT-009_Maintenance_DB.sql
-│   │       └── 📄 ORB-BOB-DA-DOC-PDF-045-00-00-MNT-010_CMS_Integration.pdf
+│   │   ├── 📂 02-08-02-MAINTENANCE-PROCEDURES/
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-005-00-00-MNT-001_Line_Maintenance_Procedures.pdf
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-005-00-00-MNT-002_Heavy_Check_Procedures.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-CODE-PY-005-00-00-MNT-003_Planning_Tool.py
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-012-00-00-MNT-004_Servicing_Procedures.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-APP-APK-005-00-00-MNT-005_Mobile_Cards.apk
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-005-00-00-MNT-006_Tool_Requirements.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-DT-MODEL-JSON-005-00-00-MNT-007_Task_Database.json
+│   │   │   ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-005-00-00-MNT-008_Safety_Procedures.pdf
+│   │   │   ├── 📄 QGRD-CORP-BOB-SC-CODE-SQL-005-00-00-MNT-009_Maintenance_DB.sql
+│   │   │   └── 📄 QGRD-CORP-ALI-DP-DOC-PDF-045-00-00-MNT-010_CMS_Integration.pdf
+│   │   │
+│   │   └── 📂 02-08-03-TRAINING/
+│   │       ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-001_Training_Program.pdf
+│   │       ├── 📄 QGRD-CORP-BOB-SC-APP-JAR-000-00-00-SUP-002_E_Learning_Platform.jar
+│   │       ├── 📄 QGRD-CORP-BOB-DT-MODEL-JSON-000-00-00-SUP-003_Course_Structure.json
+│   │       ├── 📄 QGRD-CORP-BOB-SC-CODE-JS-350-00-00-SUP-004_VR_Training.js
+│   │       ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-005_Certification_Path.pdf
+│   │       ├── 📄 QGRD-CORP-BOB-SC-APP-APK-000-00-00-SUP-006_Mobile_Training.apk
+│   │       ├── 📄 QGRD-CORP-BOB-DT-MODEL-SCORM-000-00-00-SUP-007_SCORM_Package.zip
+│   │       ├── 📄 QGRD-CORP-BOB-SC-CODE-PY-000-00-00-SUP-008_Progress_Tracking.py
+│   │       ├── 📄 QGRD-CORP-ALI-DP-DOC-PDF-000-00-00-SUP-009_Instructor_Guide.pdf
+│   │       └── 📄 QGRD-CORP-BOB-SC-APP-EXE-350-00-00-SUP-010_AR_Assistant.exe
 │   │
 │   ├── 📂 02-09-Q-SPACE/
 │   │   ├── 📂 02-09-01-QUANTUM-COMMUNICATIONS/
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-920-00-00-DES-001_QKD_Protocol.py
-│   │   │   ├── 📄 ORB-BOB-DT-CAD-STEP-920-00-00-DES-002_Quantum_Antenna.step
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-930-00-00-CRT-003_Quantum_Security_Cert.pdf
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-C-920-00-00-PRD-004_QKD_Firmware.c
-│   │   │   ├── 📄 ORB-BOB-DT-MODEL-JSON-920-00-00-TST-005_Protocol_Tests.json
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-920-00-00-DES-006_System_Architecture.pdf
-│   │   │   ├── 📄 ORB-BOB-APP-EXEC-BIN-920-00-00-OPS-007_QKD_Controller.bin
-│   │   │   ├── 📄 ORB-BOB-SC-CODE-PY-920-00-00-MNT-008_Diagnostics.py
-│   │   │   ├── 📄 ORB-BOB-DA-DOC-PDF-920-00-00-SUP-009_User_Manual.pdf
-│   │   │   └── 📄 ORB-BOB-DT-MODEL-PY-920-00-00-DES-010_Channel_Model.py
+│   │   │   ├── 📄 QSPC-CORP-BOB-SC-CODE-PY-920-00-00-DES-001_QKD_Protocol.py
+│   │   │   ├── 📄 QSPC-CORP-BOB-DT-CAD-STEP-920-00-00-DES-002_Quantum_Antenna.step
+│   │   │   ├── 📄 QSPC-CORP-ALI-DP-DOC-PDF-930-00-00-CRT-003_Quantum_Security_Cert.pdf
+│   │   │   ├── 📄 QSPC-CORP-BOB-SC-CODE-C-920-00-00-PRD-004_QKD_Firmware.c
+│   │   │   ├── 📄 QSPC-CORP-BOB-DT-MODEL-JSON-920-00-00-TST-005_Protocol_Tests.json
+│   │   │   ├── 📄 QSPC-CORP-ALI-DP-DOC-PDF-920-00-00-DES-006_System_Architecture.pdf
+│   │   │   ├── 📄 QSPC-CORP-BOB-SC-APP-BIN-920-00-00-OPS-007_QKD_Controller.bin
+│   │   │   ├── 📄 QSPC-CORP-BOB-SC-CODE-PY-920-00-00-MNT-008_Diagnostics.py
+│   │   │   ├── 📄 QSPC-CORP-ALI-DP-DOC-PDF-920-00-00-SUP-009_User_Manual.pdf
+│   │   │   └── 📄 QSPC-CORP-BOB-DT-MODEL-PY-920-00-00-DES-010_Channel_Model.py
 │   │   │
-│   │   └── 📂 02-09-02-NAVIGATION/
-│   │       ├── 📄 Q100-BOB-SC-CODE-PY-940-00-00-DES-001_Quantum_Navigation.py
-│   │       ├── 📄 Q100-BOB-APP-EXEC-BIN-940-00-00-PRD-002_QNS_Firmware.bin
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-OPS-003_QNS_Operations.pdf
-│   │       ├── 📄 Q100-BOB-DT-CAD-STEP-940-00-00-DES-004_Sensor_Array.step
-│   │       ├── 📄 Q100-BOB-SC-CODE-C-940-00-00-PRD-005_Embedded_QNS.c
-│   │       ├── 📄 Q100-BOB-DT-MODEL-JSON-940-00-00-TST-006_Accuracy_Tests.json
-│   │       ├── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-CRT-007_Certification.pdf
-│   │       ├── 📄 Q100-BOB-APP-EXEC-EXE-940-00-00-MNT-008_Calibration.exe
-│   │       ├── 📄 Q100-BOB-SC-CODE-PY-940-00-00-SUP-009_Update_Tool.py
-│   │       └── 📄 Q100-BOB-DA-DOC-PDF-940-00-00-REP-010_Service_Manual.pdf
+│   │   ├── 📂 02-09-02-NAVIGATION/
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-CODE-PY-940-00-00-DES-001_Quantum_Navigation.py
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-APP-BIN-940-00-00-PRD-002_QNS_Firmware.bin
+│   │   │   ├── 📄 QSPC-360e-ALI-DP-DOC-PDF-940-00-00-OPS-003_QNS_Operations.pdf
+│   │   │   ├── 📄 QSPC-360e-BOB-DT-CAD-STEP-940-00-00-DES-004_Sensor_Array.step
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-CODE-C-940-00-00-PRD-005_Embedded_QNS.c
+│   │   │   ├── 📄 QSPC-360e-BOB-DT-MODEL-JSON-940-00-00-TST-006_Accuracy_Tests.json
+│   │   │   ├── 📄 QSPC-360e-ALI-DP-DOC-PDF-940-00-00-CRT-007_Certification.pdf
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-APP-EXE-940-00-00-MNT-008_Calibration.exe
+│   │   │   ├── 📄 QSPC-360e-BOB-SC-CODE-PY-940-00-00-SUP-009_Update_Tool.py
+│   │   │   └── 📄 QSPC-360e-ALI-DP-DOC-PDF-940-00-00-REP-010_Service_Manual.pdf
+│   │   │
+│   │   └── 📂 02-09-03-SATCOM/
+│   │       ├── 📄 QSPC-CORP-BOB-DT-CAD-STEP-023-00-00-DES-001_Antenna_System.step
+│   │       ├── 📄 QSPC-CORP-BOB-SC-CODE-C-023-00-00-DES-002_Modem_Firmware.c
+│   │       ├── 📄 QSPC-CORP-ALI-DP-DOC-PDF-023-00-00-OPS-003_Operations_Manual.pdf
+│   │       ├── 📄 QSPC-CORP-BOB-DT-MODEL-JSON-023-00-00-DES-004_Link_Budget.json
+│   │       ├── 📄 QSPC-CORP-BOB-SC-APP-BIN-023-00-00-PRD-005_Controller.bin
+│   │       ├── 📄 QSPC-CORP-BOB-SC-CODE-PY-023-00-00-TST-006_Test_Suite.py
+│   │       ├── 📄 QSPC-CORP-ALI-DP-DOC-PDF-023-00-00-MNT-007_Maintenance.pdf
+│   │       ├── 📄 QSPC-CORP-BOB-DT-CAD-STEP-023-10-00-DES-008_Radome.step
+│   │       ├── 📄 QSPC-CORP-BOB-SC-APP-APK-023-00-00-OPS-009_Mobile_Monitor.apk
+│   │       └── 📄 QSPC-CORP-ALI-DP-DOC-PDF-023-00-00-CRT-010_Certification.pdf
 │   │
 │   └── 📂 02-10-Q-SCIRES/
 │       ├── 📂 02-10-01-RESEARCH/
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-001_Research_Roadmap.pdf
-│       │   ├── 📄 ORB-BOB-DT-MODEL-PY-950-00-00-DES-002_Quantum_Simulation.py
-│       │   ├── 📄 ORB-BOB-HC-DOC-PDF-980-00-00-CON-003_Ethics_Framework.pdf
-│       │   ├── 📄 ORB-BOB-SC-CODE-PY-990-00-00-DES-004_Future_Tech.py
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-005_University_Partners.pdf
-│       │   ├── 📄 ORB-BOB-DT-MODEL-JSON-990-00-00-DES-006_Research_Projects.json
-│       │   ├── 📄 ORB-BOB-SC-CODE-R-990-00-00-DES-007_Statistical_Analysis.r
-│       │   ├── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-SUP-008_Grant_Applications.pdf
-│       │   ├── 📄 ORB-BOB-HC-DOC-PDF-990-00-00-CON-009_Publications.pdf
-│       │   └── 📄 ORB-BOB-DA-DOC-PDF-990-00-00-CON-010_Conference_Papers.pdf
-│       │
-│       └── 📂 02-10-02-PATENTS/
-│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-CON-001_Patent_Portfolio.pdf
-│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-002_IP_Strategy.pdf
-│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-003_Licensing_Terms.pdf
-│           ├── 📄 ORB-BOB-SC-CODE-PY-000-00-00-SUP-004_Patent_Search.py
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-005_Invention_Disclosures.pdf
-│           ├── 📄 ORB-BOB-DT-MODEL-JSON-000-00-00-SUP-006_Patent_Database.json
-│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-007_Trade_Secrets.pdf
-│           ├── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-008_IP_Valuation.pdf
-│           ├── 📄 ORB-BOB-HC-DOC-PDF-000-00-00-SUP-009_Technology_Transfer.pdf
-│           └── 📄 ORB-BOB-DA-DOC-PDF-000-00-00-SUP-010_Royalty_Agreements.pdf
-│
-├── 📂 03-ORB-FUNCTIONS/
-│   ├── 📂 03-01-ORB-FIN/
-│   │   ├── 📂 03-01-01-Financial-Planning/
-│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-001_Annual_Budget.xls
-│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-002_Financial_Strategy.pdf
-│   │   │   ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-003_Budget_Model.py
-│   │   │   ├── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Forecast_Model.json
-│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-005_Investment_Plan.pdf
-│   │   │   ├── 📄 ORB-FIN-BOB-APP-EXEC-EXE-000-00-00-OPS-006_Planning_Tool.exe
-│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-007_Cash_Flow.xls
-│   │   │   ├── 📄 ORB-FIN-BOB-SC-CODE-R-000-00-00-OPS-008_Risk_Analysis.r
-│   │   │   ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-009_ROI_Analysis.pdf
-│   │   │   └── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-010_Scenario_Planning.json
-│   │   │
-│   │   └── 📂 03-01-02-Budget-Control/
-│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-001_Budget_Guidelines.pdf
-│   │       ├── 📄 ORB-FIN-BOB-APP-EXEC-JAR-000-00-00-OPS-002_EVM_System.jar
-│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-003_Cost_Tracking.py
-│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-XLS-000-00-00-OPS-004_Cost_Reports.xls
-│   │       ├── 📄 ORB-FIN-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Budget_Dashboard.json
-│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-SQL-000-00-00-OPS-006_Financial_DB.sql
-│   │       ├── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-007_Variance_Analysis.pdf
-│   │       ├── 📄 ORB-FIN-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Approvals.apk
-│   │       ├── 📄 ORB-FIN-BOB-SC-CODE-PY-000-00-00-OPS-009_Alert_System.py
-│   │       └── 📄 ORB-FIN-BOB-DA-DOC-PDF-000-00-00-OPS-010_Monthly_Report.pdf
-│   │
-│   ├── 📂 03-02-ORB-PMO/
-│   │   ├── 📂 03-02-01-Program-Management/
-│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-001_Program_Charter.pdf
-│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-MSP-000-00-00-OPS-002_Master_Schedule.msp
-│   │   │   ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-003_Schedule_Analysis.py
-│   │   │   ├── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-004_Resource_Model.json
-│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-005_Risk_Register.pdf
-│   │   │   ├── 📄 ORB-PMO-BOB-APP-EXEC-JAR-000-00-00-OPS-006_PMO_Dashboard.jar
-│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-007_Status_Report.pdf
-│   │   │   ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-008_Risk_Analysis.py
-│   │   │   ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-009_Stakeholder_Plan.pdf
-│   │   │   └── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-010_KPI_Tracking.json
-│   │   │
-│   │   └── 📂 03-02-02-Change-Control/
-│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-001_Change_Process.pdf
-│   │       ├── 📄 ORB-PMO-BOB-APP-EXEC-EXE-000-00-00-OPS-002_CCB_System.exe
-│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-003_Impact_Analysis.py
-│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-004_Change_Forms.pdf
-│   │       ├── 📄 ORB-PMO-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Change_Log.json
-│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-SQL-000-00-00-OPS-006_Change_Database.sql
-│   │       ├── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-007_CCB_Minutes.pdf
-│   │       ├── 📄 ORB-PMO-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Review.apk
-│   │       ├── 📄 ORB-PMO-BOB-SC-CODE-PY-000-00-00-OPS-009_Workflow_Engine.py
-│   │       └── 📄 ORB-PMO-BOB-DA-DOC-PDF-000-00-00-OPS-010_Approval_Matrix.pdf
-│   │
-│   ├── 📂 03-03-ORB-HR/
-│   │   ├── 📂 03-03-01-Talent-Acquisition/
-│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-001_Recruitment_Strategy.pdf
-│   │   │   ├── 📄 ORB-HR-BOB-APP-EXEC-JAR-000-00-00-OPS-002_ATS_System.jar
-│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-003_Candidate_Screening.py
-│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-004_Job_Descriptions.pdf
-│   │   │   ├── 📄 ORB-HR-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Talent_Pipeline.json
-│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-PY-910-00-00-OPS-006_AI_Matching.py
-│   │   │   ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-007_Interview_Guide.pdf
-│   │   │   ├── 📄 ORB-HR-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Interview.apk
-│   │   │   ├── 📄 ORB-HR-BOB-SC-CODE-SQL-000-00-00-OPS-009_Candidate_DB.sql
-│   │   │   └── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-OPS-010_Onboarding_Pack.pdf
-│   │   │
-│   │   └── 📂 03-03-02-Competency-Development/
-│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-001_Competency_Matrix.pdf
-│   │       ├── 📄 ORB-HR-BOB-APP-EXEC-EXE-000-00-00-OPS-002_LMS_Platform.exe
-│   │       ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-003_Skill_Assessment.py
-│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-004_Training_Catalog.pdf
-│   │       ├── 📄 ORB-HR-BOB-DT-MODEL-JSON-000-00-00-OPS-005_Career_Paths.json
-│   │       ├── 📄 ORB-HR-BOB-SC-CODE-PY-000-00-00-OPS-006_Gap_Analysis.py
-│   │       ├── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-CON-007_GAIA_Academy.pdf
-│   │       ├── 📄 ORB-HR-BOB-APP-EXEC-APK-000-00-00-OPS-008_Mobile_Learning.apk
-│   │       ├── 📄 ORB-HR-BOB-SC-CODE-R-000-00-00-OPS-009_Performance_Analytics.r
-│   │       └── 📄 ORB-HR-BOB-DA-DOC-PDF-000-00-00-SUP-010_Certification_Program.pdf
-│   │
-│   ├── 📂 03-04-ORB-MKTG/
-│   │   ├── 📂 03-04-01-Market-Analysis/
-│   │   │   ├── 📄 ORB-MKTG-BOB-DA-DOC-PDF-000-00-00-CON-001_Market_Research.pdf
-│   │   │   ├── 📄 ORB-MKTG-BOB-SC-CODE-PY-000-00-00-OPS-002_Market_Analytics.py
-│   │   │   ├── 📄 ORB-MKTG-BOB-DT-MODEL-JSON-000-00-00-OPS-003_Competitor_Analysis.json
+│       │   ├──
 │   │   │
