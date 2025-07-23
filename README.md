@@ -359,6 +359,14 @@ flowchart TB
 | **Cloud Architecture** | Avanzado | 50% | AWS/Azure |
 | **Quantum Cryptography** | Intermedio | 30% | Research Cert |
 
+```mermaid
+xychart-beta
+    title "Radar de Competencias Q-DATAGOV"
+    x-axis ["S1000D", "Data Arch", "Blockchain", "API Mgmt", "Cybersec", "XML/XSLT", "Config Mgmt", "Tech Writing", "Cloud Arch", "Q Cryptography"] 
+    y-axis "Porcentaje de Personal" 0 --> 100
+    bar [80, 100, 40, 60, 70, 100, 90, 100, 50, 30]
+```
+
 **Roles Críticos**:
 - Chief Data Architect
 - S1000D Lead (3)
