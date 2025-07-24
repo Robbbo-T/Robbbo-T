@@ -2,107 +2,107 @@
 
 ## 🌟 Visión
 
-**GAIA-QAO ADVENT**, creado por Amedeo Pelliccia, es un marco estratégico diseñado para integrar tecnologías cuánticas en la aviación comercial europea, estableciendo un liderazgo global en sostenibilidad e innovación tecnológica aeroespacial.
+GAIA-QAO ADVENT, creado por Amedeo Pelliccia, establece un marco estratégico destinado a liderar globalmente en la aviación comercial europea mediante la integración pionera de tecnologías cuánticas, sostenibilidad ambiental e innovación tecnológica aeroespacial.
 
 ## 🎯 Misión
 
-Desarrollar aeronaves comerciales avanzadas con estándares insuperables en eficiencia energética, seguridad operacional, sostenibilidad ambiental e integración de tecnologías cuánticas.
+Desarrollar aeronaves comerciales avanzadas con estándares excepcionales en eficiencia energética, seguridad operacional, sostenibilidad ambiental e integración de tecnologías cuánticas.
 
 ## 🚩 Objetivos Estratégicos (2025–2045)
 
-* **AMPEL360e (2038):** Certificación de aeronave híbrida-eléctrica con 50% menos consumo de combustible.
-* **AMPEL-BWB-H2 (2040):** Validación de aeronave cero emisiones usando hidrógeno líquido.
-* **Liderazgo Cuántico (2035):** Implementación de soluciones cuánticas en diseño y operaciones.
-* **Neutralidad de Carbono (2030):** Alcance en operaciones terrestres.
-* **Impacto Socioeconómico:** Creación de más de 5,000 empleos directos de alta tecnología.
+* **AMPEL360e (2038)**: Aeronave híbrida-eléctrica certificada con reducción del 50% en consumo de combustible.
+* **AMPEL-BWB-H2 (2040)**: Aeronave cero emisiones con propulsión de hidrógeno líquido.
+* **Liderazgo Cuántico (2035)**: Soluciones cuánticas aplicadas al diseño y operaciones aeronáuticas.
+* **Neutralidad de Carbono (2030)**: En operaciones terrestres.
+* **Impacto Socioeconómico**: Más de 5,000 empleos directos en alta tecnología.
 
 ## 📅 Desarrollo por Fases
 
 ### Generación 1: AMPEL360e (2025-2038)
 
-* Aeronave híbrida-eléctrica (180-220 pasajeros), eVTOL para movilidad urbana, drone limpiador de cielos.
-* Propulsión híbrida paralela con reducción del 50% en consumo combustible, 75% en ruido.
-* Posicionamiento de mercado: Reemplazo directo de A320/B737.
+* Aeronave híbrida-eléctrica (180-220 pasajeros).
+* Propulsión híbrida paralela (50% menos combustible, 75% menos ruido).
+* Reemplazo de mercado: A320/B737.
 
 ### Generación 2: AMPEL-BWB-H2 (2035-2045+)
 
-* Aeronave BWB con propulsión a hidrógeno líquido, varios programas y modelos (Q100, Q250, Q300MRTT).
-* Aviación comercial de cero emisiones en largo alcance.
-* Desafíos clave: almacenamiento criogénico y desarrollo de infraestructura.
+* Aeronave BWB propulsada por hidrógeno líquido.
+* Aviación de cero emisiones de largo alcance.
 
 ## 🏛️ Organización Estratégica
 
-| Ubicación   | Función Principal          | Personal | Inversión 2025–2030 |
-| ----------- | -------------------------- | -------- | ------------------- |
-| Madrid (HQ) | Central, Finanzas, Legal   | 500      | €150M               |
-| Getafe      | Integración Final, Pruebas | 1,200    | €400M               |
-| Nápoles     | Diseño Fuselaje, Cabina    | 800      | €300M               |
-| Turín       | I+D Cuántico, Propulsión   | 400      | €250M               |
-| Sevilla     | Manufactura Composites     | 600      | €350M               |
+| Ubicación | Función Principal          | Personal | Inversión (2025–2030) |
+| --------- | -------------------------- | -------- | --------------------- |
+| Madrid    | Central, Finanzas, Legal   | 500      | €150M                 |
+| Getafe    | Integración Final, Pruebas | 1,200    | €400M                 |
+| Nápoles   | Diseño Fuselaje, Cabina    | 800      | €300M                 |
+| Turín     | I+D Cuántico, Propulsión   | 400      | €250M                 |
+| Sevilla   | Manufactura Composites     | 600      | €350M                 |
 
 ## 🧩 Divisiones Técnicas (Q-Divisions)
 
-* **Q-DATAGOV:** Gobernanza digital y ciberseguridad.
-* **Q-STRUCTURES:** Materiales avanzados y estructuras.
-* **Q-AIR:** Aerodinámica y control de vuelo.
-* **Q-GREENTECH:** Propulsión sostenible y gestión ambiental.
-* **Q-INDUSTRY:** Manufactura digital e inteligente.
-* **Q-HPC:** Computación cuántica, IA y Digital Twin.
-* **Q-MECHANICS:** Integración de sistemas mecánicos.
-* **Q-GROUND:** Operaciones, logística y entrenamiento terrestre.
-* **Q-SPACE:** Sistemas espaciales, comunicaciones y navegación.
-* **Q-SCIRES:** Investigación estratégica e innovación tecnológica.
+* **Q-DATAGOV**: Gobernanza digital, ciberseguridad.
+* **Q-STRUCTURES**: Materiales avanzados, estructuras.
+* **Q-AIR**: Aerodinámica, control vuelo.
+* **Q-GREENTECH**: Propulsión sostenible.
+* **Q-INDUSTRY**: Manufactura inteligente.
+* **Q-HPC**: Computación cuántica, IA, Digital Twin.
+* **Q-MECHANICS**: Integración mecánica.
+* **Q-GROUND**: Operaciones, logística.
+* **Q-SPACE**: Comunicaciones espaciales.
+* **Q-SCIRES**: Investigación estratégica.
 
 ## 💰 Estructura Financiera
 
-* **Inversión total (Fase 1, 2025–2038): €25 mil millones**
+* Inversión total (2025–2038): €25B
 
   * Gobiernos: €10B (40%)
   * Socios industriales: €5B (20%)
-  * Bancos de fomento: €6B (24%)
+  * Bancos fomento: €6B (24%)
   * Capital privado: €4B (16%)
-* Break-even previsto entre 2043-2045.
-* Pedidos objetivo AMPEL360e: 200 aeronaves en 2040.
-* ROI esperado positivo desde 2042.
+* Break-even previsto: 2043-2045
+* Pedidos objetivo AMPEL360e: 200 aeronaves en 2040
+* ROI positivo desde 2042
 
-## ⚛️ Tecnologías Quantum
+## ⚛️ Tecnologías Cuánticas
 
-* **QPU:** Optimización de rutas y diseño estructural.
-* **QNS:** Navegación precisa ±0.1m independiente del GPS.
-* **QDS:** Diagnóstico predictivo superior al 95%.
-* **QSM:** Monitoreo estructural en tiempo real.
-* **QKD:** Seguridad avanzada en comunicaciones.
+* **QPU**: Optimización de rutas y estructuras.
+* **QNS**: Navegación precisa ±0.1m.
+* **QDS**: Diagnóstico predictivo >95%.
+* **QSM**: Monitoreo estructural en tiempo real.
+* **QKD**: Seguridad cuántica en comunicaciones.
 
 ## 🌱 Compromiso Ambiental
 
-* Reducción de CO₂ del 75% respecto a baseline 2005.
-* Reducción del 90% de NOₓ frente a estándares actuales.
-* Compatibilidad total con SAF (Sustainable Aviation Fuel).
-* Carbono negativo tras 2,500 horas de vuelo.
-* Implementación integral de economía circular.
+* Reducción CO₂: 75% respecto a 2005.
+* Reducción NOₓ: 90% frente a estándares actuales.
+* Compatibilidad total con SAF.
+* Carbono negativo tras 2,500 horas vuelo.
+* Economía circular integral.
 
 ## 📊 Indicadores Estratégicos (KPIs)
 
-| Indicador                  | 2028  | 2035  | 2040  |
-| -------------------------- | ----- | ----- | ----- |
-| Cumplimiento AMPEL360e     | PDR   | CDR   | EIS   |
-| Madurez Tecnológica BWB-H2 | TRL 3 | TRL 5 | TRL 6 |
-| Ejecución Presupuestaria   | >0.95 | >0.98 | >0.98 |
-| Pedidos en firme           | 0     | 50    | 200   |
-| Reducción de Emisiones     | N/A   | N/A   | -40%  |
+| Indicador                | 2028  | 2035  | 2040  |
+| ------------------------ | ----- | ----- | ----- |
+| Cumplimiento AMPEL360e   | PDR   | CDR   | EIS   |
+| Madurez BWB-H2           | TRL 3 | TRL 5 | TRL 6 |
+| Ejecución Presupuestaria | >0.95 | >0.98 | >0.98 |
+| Pedidos Firmes           | 0     | 50    | 200   |
+| Reducción de Emisiones   | N/A   | N/A   | -40%  |
 
 ## 🚀 Próximos Pasos Clave (2025-2027)
 
-* **Q3 2025:** Lanzamiento oficial del proyecto y acuerdos estratégicos.
-* **Q4 2025:** Conformación del equipo ejecutivo y sedes.
-* **2026:** Contratación de personal clave y despliegue del sistema PLM.
-* **2027:** Inicio diseño preliminar AMPEL360e y despliegue del programa Q-SCIRES.
+* **Q3 2025**: Lanzamiento oficial y acuerdos.
+* **Q4 2025**: Formación del equipo ejecutivo.
+* **2026**: Contratación clave, despliegue PLM.
+* **2027**: Diseño preliminar AMPEL360e, inicio Q-SCIRES.
 
 ## 🌍 Propuesta de Valor
 
-GAIA-QAO ADVENT representa una integración pionera de tecnologías cuánticas con la aviación comercial, impulsando la sostenibilidad, innovación responsable y desarrollo económico de alta tecnología en Europa.
+GAIA-QAO ADVENT representa la integración pionera de tecnologías cuánticas en la aviación comercial europea, impulsando sostenibilidad, innovación y crecimiento económico tecnológico responsable.
 
-*"Ab initio, non ad exhibitionem" – Desde el principio, no para exhibición.*
+> "Ab initio, non ad exhibitionem" – Desde el principio, no para exhibición.
+
 
 
 ---
@@ -328,26 +328,7 @@ flowchart TB
 
 ### B.1 Q-DATAGOV: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **S1000D Expertise** | Experto | 80% | S1000D Certified Professional |
-| **Data Architecture** | Experto | 100% | TOGAF/DAMA |
-| **Blockchain Development** | Avanzado | 40% | Blockchain Council |
-| **API Management** | Avanzado | 60% | REST/GraphQL |
-| **Cybersecurity** | Experto | 70% | CISSP/CEH |
-| **XML/XSLT** | Experto | 100% | W3C Standards |
-| **Configuration Mgmt** | Experto | 90% | CM2 Professional |
-| **Technical Writing** | Avanzado | 100% | STE Certified |
-| **Cloud Architecture** | Avanzado | 50% | AWS/Azure |
-| **Quantum Cryptography** | Intermedio | 30% | Research Cert |
-
-```mermaid
-xychart-beta
-    title "Radar de Competencias Q-DATAGOV"
-    x-axis ["S1000D", "Data Arch", "Blockchain", "API Mgmt", "Cybersec", "XML/XSLT", "Config Mgmt", "Tech Writing", "Cloud Arch", "Q Cryptography"] 
-    y-axis "Porcentaje de Personal" 0 --> 100
-    bar [80, 100, 40, 60, 70, 100, 90, 100, 50, 30]
-```
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/05a1cc0e-79f8-445b-8bbf-a63584c9fbdd" />
 
 **Roles Críticos**:
 - Chief Data Architect
@@ -358,18 +339,7 @@ xychart-beta
 
 ### B.2 Q-STRUCTURES: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **FEA/FEM Analysis** | Experto | 90% | ANSYS/Abaqus Professional |
-| **Composite Materials** | Experto | 80% | Advanced Composites Cert |
-| **CAD (CATIA V6)** | Experto | 100% | CATIA Expert |
-| **Fatigue & DT** | Experto | 70% | FAA DER |
-| **BWB Aerodynamics** | Avanzado | 60% | Specialized Training |
-| **Materials Science** | Experto | 85% | ASM International |
-| **NDT Methods** | Avanzado | 50% | ASNT Level II/III |
-| **Manufacturing Processes** | Avanzado | 70% | SME Certified |
-| **Certification Standards** | Experto | 40% | Part 25 Expert |
-| **Quantum Materials** | Básico | 20% | University Course |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/80c8b3cc-44ef-4344-8d82-709e7d59342e" />
 
 **Roles Críticos**:
 - Chief Structural Engineer
@@ -380,18 +350,7 @@ xychart-beta
 
 ### B.3 Q-AIR: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **CFD Analysis** | Experto | 85% | ANSYS Fluent/Star-CCM+ |
-| **Flight Testing** | Experto | 70% | SFTE Member/TPS Grad |
-| **Control Laws** | Experto | 80% | Control Systems PE |
-| **CS-25 Compliance** | Experto | 100% | DER Flight |
-| **Flight Dynamics** | Experto | 90% | Aerospace Engineering |
-| **Avionics Integration** | Avanzado | 60% | DO-178C/254 |
-| **Performance Analysis** | Experto | 100% | Professional Training |
-| **Flight Manual Writing** | Avanzado | 40% | ATA 2200 |
-| **Simulation** | Experto | 70% | Real-time Systems |
-| **Quantum Navigation** | Intermedio | 25% | Emerging Tech |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/0d2bf4ba-760e-4e21-8107-d90d8701f67c" />
 
 **Roles Críticos**:
 - Chief Aerodynamicist
@@ -402,18 +361,7 @@ xychart-beta
 
 ### B.4 Q-GREENTECH: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **LCA Methodology** | Experto | 90% | ISO 14040 Practitioner |
-| **Hydrogen Systems** | Avanzado | 60% | H2 Safety Certificate |
-| **Electric Propulsion** | Experto | 70% | IEEE Power Electronics |
-| **Battery Technology** | Experto | 65% | Battery University |
-| **Emissions Analysis** | Experto | 80% | EPA Methods |
-| **Sustainable Materials** | Avanzado | 75% | Green Materials |
-| **Energy Management** | Experto | 85% | CEM Certified |
-| **Thermal Systems** | Experto | 70% | ASHRAE |
-| **Circular Economy** | Avanzado | 60% | Ellen MacArthur |
-| **Carbon Accounting** | Experto | 100% | GHG Protocol |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/4e755f98-6c72-4d6a-81d7-612deaf0038f" />
 
 **Roles Críticos**:
 - Chief Sustainability Officer
@@ -424,18 +372,7 @@ xychart-beta
 
 ### B.5 Q-INDUSTRY: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **AS9100 Systems** | Experto | 100% | AS9100 Lead Auditor |
-| **Lean Manufacturing** | Experto | 90% | Six Sigma Black Belt |
-| **Production Planning** | Experto | 85% | APICS CPIM |
-| **Automation/Robotics** | Avanzado | 60% | Industry 4.0 |
-| **Supply Chain Mgmt** | Experto | 80% | APICS CSCP |
-| **Quality Engineering** | Experto | 100% | ASQ CQE |
-| **Assembly Processes** | Experto | 95% | IPC Standards |
-| **ERP Systems** | Avanzado | 70% | SAP PP/MM |
-| **Statistical Analysis** | Avanzado | 80% | Six Sigma |
-| **Additive Manufacturing** | Intermedio | 40% | AM Certification |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/54371055-d74f-4874-b6af-6e3346996fd3" />
 
 **Roles Críticos**:
 - VP Manufacturing
@@ -446,18 +383,7 @@ xychart-beta
 
 ### B.6 Q-HPC: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **Quantum Computing** | Experto | 70% | IBM Qiskit/PhD Physics |
-| **AI/ML Development** | Experto | 85% | Google ML/AWS ML |
-| **DO-178C Software** | Experto | 90% | DO-178C Training |
-| **Cybersecurity** | Experto | 100% | CISSP/CEH |
-| **Digital Twin Tech** | Experto | 80% | Siemens/PTC |
-| **Python/C++** | Experto | 100% | Professional Dev |
-| **Cloud Computing** | Avanzado | 70% | AWS/Azure Architect |
-| **Real-time Systems** | Experto | 60% | RTOS Certification |
-| **Data Science** | Experto | 75% | Data Science Prof |
-| **Quantum Algorithms** | Avanzado | 50% | Research Background |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/47aaf72c-bcb0-4bd4-91aa-aa915287b596" />
 
 **Roles Críticos**:
 - Quantum Computing Lead
@@ -468,18 +394,7 @@ xychart-beta
 
 ### B.7 Q-MECHANICS: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **Hydraulic Systems** | Experto | 85% | IFPS Certification |
-| **Pneumatic Systems** | Experto | 80% | SMC Certification |
-| **Actuator Design** | Experto | 75% | Motion Control |
-| **Landing Gear** | Experto | 70% | SAE A-5 Committee |
-| **System Integration** | Experto | 90% | Systems Engineering |
-| **Mechanical Design** | Experto | 100% | PE License |
-| **Tribology** | Avanzado | 50% | STLE Member |
-| **Vibration Analysis** | Avanzado | 60% | ISO 18436-2 |
-| **Thermal Management** | Avanzado | 65% | Heat Transfer |
-| **Cryogenics** | Intermedio | 30% | Cryo Society |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/c89ac0cd-d49c-417b-8690-e358cc34687d" />
 
 **Roles Críticos**:
 - Chief Mechanical Engineer
@@ -490,18 +405,7 @@ xychart-beta
 
 ### B.8 Q-GROUND: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **GSE Design** | Avanzado | 70% | Equipment Design |
-| **Airport Operations** | Experto | 85% | ACI Diploma |
-| **Ground Handling** | Experto | 90% | IATA DGR |
-| **Logistics Management** | Experto | 80% | APICS CLTD |
-| **Safety Management** | Experto | 100% | SMS Trained |
-| **Training Development** | Avanzado | 60% | ASTD/ATD |
-| **Electric Vehicles** | Avanzado | 50% | EV Technology |
-| **Automation** | Intermedio | 40% | Automation Cert |
-| **Emergency Response** | Experto | 100% | ARFF Certified |
-| **Maintenance Planning** | Avanzado | 70% | Planning Cert |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/095340bb-f1ec-459a-8864-7523c19f7d15" />
 
 **Roles Críticos**:
 - VP Ground Operations
@@ -512,18 +416,7 @@ xychart-beta
 
 ### B.9 Q-SPACE: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **Satellite Comm** | Experto | 80% | SatCom Professional |
-| **RF Engineering** | Experto | 85% | IEEE RFID |
-| **Antenna Design** | Experto | 75% | Antenna Engineering |
-| **Quantum Comm** | Avanzado | 60% | QKD Research |
-| **Navigation Systems** | Experto | 90% | ION GNSS+ |
-| **EMI/EMC** | Avanzado | 80% | NARTE EMC |
-| **Link Budget** | Experto | 85% | Professional |
-| **SDR Technology** | Avanzado | 60% | SDR Forum |
-| **Space Qualification** | Avanzado | 50% | Space Standards |
-| **Signal Processing** | Experto | 70% | DSP Certification |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/42a3e58d-d5c5-4ba1-8197-977acd32a135" />
 
 **Roles Críticos**:
 - Communications Director
@@ -534,18 +427,7 @@ xychart-beta
 
 ### B.10 Q-SCIRES: Competencias Requeridas
 
-| Competencia | Nivel | % Personal | Certificación Requerida |
-|-------------|-------|------------|------------------------|
-| **Research Methods** | Experto | 100% | PhD Required |
-| **Patent Law** | Avanzado | 70% | Patent Agent |
-| **Tech Transfer** | Avanzado | 80% | AUTM Certified |
-| **Grant Writing** | Experto | 60% | GPC Certification |
-| **Scientific Writing** | Experto | 100% | Publications |
-| **Innovation Mgmt** | Avanzado | 70% | Innovation Cert |
-| **Lab Management** | Avanzado | 50% | Lab Manager |
-| **Statistics** | Experto | 90% | Statistical SW |
-| **Quantum Physics** | Experto | 40% | Physics PhD |
-| **Materials Science** | Avanzado | 60% | Materials Degree |
+<img width="2400" height="1600" alt="image" src="https://github.com/user-attachments/assets/19887a80-6395-45c2-9c4b-5c1eb3ddfa06" />
 
 **Roles Críticos**:
 - Chief Research Officer
