@@ -153,10 +153,6 @@ flowchart TB
         dataarch["Data Architecture (15)"]
         csec["Cybersecurity (10)"]
         docu["Documentation (10)"]
-        datastan
-        dataarch
-        csec
-        docu
     end
 
     subgraph QSTRUCT["Q-STRUCTURES (85)"]
@@ -164,10 +160,6 @@ flowchart TB
         matlab["Materials Lab (20)"]
         stress["Stress Analysis (20)"]
         test["Testing (20)"]
-        airframe
-        matlab
-        stress
-        test
     end
 
     subgraph QAIR["Q-AIR (65)"]
@@ -175,10 +167,6 @@ flowchart TB
         flightctrl["Flight Controls (15)"]
         perf["Performance (15)"]
         ftest["Flight Test (15)"]
-        aero
-        flightctrl
-        perf
-        ftest
     end
 
     subgraph QGREEN["Q-GREENTECH (55)"]
@@ -186,10 +174,6 @@ flowchart TB
         energy["Energy Systems (15)"]
         env["Environmental (10)"]
         circ["Circular Economy (10)"]
-        prop
-        energy
-        env
-        circ
     end
 
     subgraph QIND["Q-INDUSTRY (120)"]
@@ -197,10 +181,6 @@ flowchart TB
         qual["Quality (30)"]
         prod["Production (30)"]
         supp["Supply Chain (20)"]
-        maneng
-        qual
-        prod
-        supp
     end
 
     subgraph QHPC["Q-HPC (40)"]
@@ -208,10 +188,6 @@ flowchart TB
         aiml["AI/ML (10)"]
         twin["Digital Twin (10)"]
         soft["Software (5)"]
-        quantum
-        aiml
-        twin
-        soft
     end
 
     subgraph QMECH["Q-MECHANICS (75)"]
@@ -219,10 +195,6 @@ flowchart TB
         ldg["Landing Gear (20)"]
         flightctrl2["Flight Controls (20)"]
         integ["Integration (15)"]
-        hydr
-        ldg
-        flightctrl2
-        integ
     end
 
     subgraph QGROUND["Q-GROUND (90)"]
@@ -230,28 +202,18 @@ flowchart TB
         ops["Operations (30)"]
         train["Training (20)"]
         logi["Logistics (10)"]
-        gse
-        ops
-        train
-        logi
     end
 
     subgraph QSPACE["Q-SPACE (35)"]
         comm["Communications (15)"]
         nav["Navigation (10)"]
         ant["Antennas (10)"]
-        comm
-        nav
-        ant
     end
 
     subgraph QSCIRES["Q-SCIRES (30)"]
         res["Research (15)"]
         ip["IP Management (10)"]
         univ["University Relations (5)"]
-        res
-        ip
-        univ
     end
 
     CTO --> QDATAGOV
