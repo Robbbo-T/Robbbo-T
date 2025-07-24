@@ -440,270 +440,203 @@ flowchart TB
 
 ## ANEXO C: POLÍTICAS Y PROCEDIMIENTOS CLAVE
 
-### C.1 Política de Ética y Conducta
-
-#### Principios Fundamentales
-1. **Integridad**: Actuar con honestidad en todas las interacciones
-2. **Respeto**: Valorar la diversidad y dignidad humana
-3. **Responsabilidad**: Asumir las consecuencias de nuestras acciones
-4. **Transparencia**: Comunicar abierta y honestamente
-5. **Excelencia**: Buscar la mejora continua
-
-#### Código de Conducta
-- Conflictos de interés: Declaración obligatoria
-- Regalos y entretenimiento: Límite €100
-- Información confidencial: NDA obligatorio
-- Uso de recursos: Solo fines corporativos
-- Redes sociales: Guidelines específicas
-
-### C.2 Política de Seguridad de la Información
-
-#### Clasificación de Información
-1. **Público**: Sin restricciones
-2. **Interno**: Solo empleados
-3. **Confidencial**: Need-to-know
-4. **Secreto**: Autorización especial
-5. **Quantum-Safe**: Encriptación cuántica
-
-#### Controles de Seguridad
-- Autenticación: Multi-factor obligatorio
-- Encriptación: AES-256 mínimo
-- Backup: 3-2-1 rule + quantum
-- Incident response: <1 hora
-- Auditorías: Mensuales
-
-### C.3 Política de Calidad
-
-#### Compromisos
-1. Cumplir todos los requisitos aplicables
-2. Mejorar continuamente el SGC
-3. Satisfacer necesidades del cliente
-4. Prevenir defectos vs. detectar
-5. Empoderar empleados para calidad
-
-#### Objetivos de Calidad 2025
-- First Pass Yield: >95%
-- Customer Satisfaction: >4.5/5
-- On-Time Delivery: >90%
-- Audit Findings: <5 minor/year
-- Training Hours: >40/employee
-
-### C.4 Política Ambiental
-
-#### Compromisos Ambientales
-1. Reducir huella de carbono 75% para 2030
-2. Cero residuos a vertedero 2028
-3. 100% energía renovable 2027
-4. Cadena suministro sostenible
-5. Biodiversidad positiva
-
-#### Targets Específicos
-- Emisiones Scope 1+2: -50% by 2027
-- Emisiones Scope 3: -30% by 2027
-- Agua: -40% consumo by 2026
-- Residuos: 95% reciclaje by 2026
-- Certificaciones: ISO 14001, 50001
-
-### C.5 Política de Recursos Humanos
-
-#### Principios de Gestión de Personas
-1. **Meritocracia**: Promoción por resultados
-2. **Diversidad**: 40% mujeres en leadership
-3. **Desarrollo**: 5% payroll en training
-4. **Bienestar**: Work-life balance
-5. **Reconocimiento**: Quarterly awards
-
-#### Beneficios Clave
-- Seguro médico premium (familia)
-- Stock options (todos los niveles)
-- Trabajo flexible (2 días/semana)
-- Sabático (3 meses/5 años)
-- Formación continua (€5k/año)
+```mermaid
+mindmap
+  root((Políticas Corporativas))
+    ética(Ética y Conducta)
+      principios(Principios Fundamentales)
+        INTEGRIDAD(Integridad: Honestidad)
+        RESPETO(Respeto: Diversidad y dignidad)
+        RESPONSABILIDAD(Responsabilidad: Consecuencias)
+        TRANSPARENCIA(Transparencia: Comunicación abierta)
+        EXCELENCIA(Excelencia: Mejora continua)
+      conduct(Código de Conducta)
+        conflictos(Conflictos de interés: Declaración)
+        regalos(Regalos/Entretenimiento: €100 máx)
+        confidencial(Info confidencial: NDA)
+        recursos(Uso recursos: Solo corporativos)
+        redes(Redes sociales: Guidelines)
+    seguridad(Seguridad de la Información)
+      clasificación(Clasificación de Información)
+        publico(Público: Sin restricciones)
+        interno(Interno: Solo empleados)
+        confidencial(Confidencial: Need-to-know)
+        secreto(Secreto: Autorización especial)
+        quantum(Quantum-Safe: Encriptación cuántica)
+      controles(Controles de Seguridad)
+        mfa(Autenticación: Multi-factor)
+        aes(Encriptación: AES-256 min.)
+        backup(Backup: 3-2-1 + quantum)
+        respuesta(Incident response: <1h)
+        auditorías(Auditorías: Mensuales)
+    calidad(Calidad)
+      compromisos(Compromisos)
+        req(Cumplir requisitos)
+        sgc(Mejora continua SGC)
+        cliente(Satisfacer cliente)
+        defectos(Prevenir vs. detectar defectos)
+        empoderar(Empoderar empleados)
+      objetivos(Objetivos 2025)
+        yield(First Pass Yield: >95%)
+        satisfacción(Customer Sat: >4.5/5)
+        otif(On-Time Delivery: >90%)
+        audit(Audit Findings: <5 menores/año)
+        training(Training: >40h/empleado)
+    ambiental(Ambiental)
+      compromisosA(Compromisos Ambientales)
+        huella(reducir huella 75% 2030)
+        residuo(Cero residuos 2028)
+        energia(100% renovable 2027)
+        cadena(Cadena suministro sostenible)
+        biodiversidad(Biodiversidad positiva)
+      targets(Targets)
+        scope1(Emisiones 1+2: -50% 2027)
+        scope3(Emisiones 3: -30% 2027)
+        agua(Agua: -40% 2026)
+        reciclaje(Residuos: 95% reciclaje 2026)
+        iso(Cert: ISO 14001/50001)
+    rrhh(Recursos Humanos)
+      principiosRH(Principios de Gestión)
+        meritocracia(Meritocracia: Promo por resultados)
+        diversidad(Diversidad: 40% mujeres liderazgo)
+        desarrollo(Desarrollo: 5% payroll training)
+        bienestar(Bienestar: Work-life balance)
+        reconocimiento(Reconocimiento: Premios trimestre)
+      beneficios(Beneficios Clave)
+        seguro(Seguro médico premium)
+        stock(Stock options todos niveles)
+        flexible(Trabajo flexible 2 días/semana)
+        sabatico(Sabático 3meses/5años)
+        formacion(Formación continua €5k/año)
+```
 
 ---
 
-## ANEXO D: SISTEMA DE DOCUMENTACIÓN TÉCNICA
+# D.2 – Sistema de Nomenclatura Oficial GAIA-QAO v2.4
 
-### D.1 Arquitectura Documental S1000D
-
-```mermaid
-flowchart TD
-    CSDB["CSDB (Common Source Database)"]
-
-    subgraph DM ["Data Modules (DM)"]
-      descript["Descriptive (-00A)"]
-      proced["Procedural (-200)"]
-      ipd["IPD (-941)"]
-      wiring["Wiring (-400)"]
-      fault["Fault (-700)"]
-      process["Process (-300)"]
-    end
-
-    subgraph ICN ["Information Control Numbers (ICN)"]
-      illus["Technical Illustrations"]
-      media["Multimedia Objects"]
-      models["3D Models"]
-    end
-
-    subgraph PM ["Publication Modules (PM)"]
-      front["Front Matter"]
-      content["Content"]
-      app["Applicability"]
-    end
-
-    CSDB --> DM
-    CSDB --> ICN
-    CSDB --> PM
-```
-
-### 📘 D.2 – Sistema de Nomenclatura Oficial GAIA-QAO v2.4
-
-**Versión:** 2.4
-**Sistema:** AMPEL360 / GAIA-QAO
-**Clasificación:** UTCS / ALICE–BOB / GQOIS
-**Referencia:** GQAQA-STD-NOM-002
+**Versión:** 2.4  
+**Sistema:** AMPEL360 / GAIA-QAO  
+**Clasificación:** UTCS / ALICE–BOB / GQOIS  
+**Referencia:** GQAQA-STD-NOM-002  
 **Estado:** Aprobado
 
----
+## 1. Regla General de Nomenclatura
 
-#### 🔹 Regla de Nomenclatura Estándar
-
-##### Estructura General
-
+```plaintext
+[DIVISIÓN]-[PROGRAMA]-[TIPO]-[ARTEFACTO]-[NATURALEZA]-[FORMATO]-UTCS-[CAPÍTULO]-[SUBCAPs]-[FASE]-[ID]_[DESCRIPCIÓN].[ext]
 ```
-[division]-[PROGRAMA]-[TIPO]-[ARTEFACTO]-[NATURALEZA]-[FORMATO]-UTCS-[CAPÍTULO]-[SUBCAPs]-[FASE]-[ID]_[DESCRIPCIÓN].[ext]
+
+### Definición de Campos
+
+| Campo         | Descripción                                                                                  | Ejemplos / Tipos Manuales                                |
+|---------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| **DIVISIÓN**   | División técnica principal                                                                  | Q-HPC, Q-AIR, Q-INDUSTRY                                 |
+| **PROGRAMA**   | Identificador del programa/proyecto                                                         | Q100, Q250, PLUS, XWLRGA                                 |
+| **TIPO**       | ALI: hardware/documentación técnica asociadaBOB: digital twin, agente digital o software| ALI, BOB                                                 |
+| **ARTEFACTO**  | Tipo lógico de entregable: DP, DT, APP, SC                                                 | DP, DT, APP, SC                                          |
+| **NATURALEZA** | Función técnica**Incluye manuales técnicos:**AMM, CMM, SRM, IPD/IPL, TSM, AFM, FCOM, WDM, QSM, SB, AD, etc. | CAD, BOM, AGENT, AMM, CMM, SRM, ...                      |
+| **FORMATO**    | Formato del archivo                                                                        | PDF, JSON, STEP, PY, APK, EXE                            |
+| **UTCS-[CAPÍTULO]** | Código clasificador UTCS principal (000-999)                                               | 053, 025, 071, etc.                                      |
+| **SUBCAPs**    | Subcapítulos extendidos de UTCS                                                            | 057-40-00                                                |
+| **FASE**       | Ciclo de vida: CON, DES, TST, CRT, PRD, OPS, etc.                                          | DES, TST, CRT, ...                                       |
+| **ID**         | Número único correlativo por fase/capítulo                                                 | 001, 002, ...                                            |
+| **DESCRIPCIÓN**| Breve descriptor bilingüe, guiones bajos                                                   | Cabin_Layout, System_Architecture                        |
+| **.ext**       | Extensión asociada al formato                                                              | .pdf, .json, .md, .step, etc.                            |
+
+**Ejemplo:**  
+```plaintext
+Q-STRUCTURES-Q250-BOB-DP-AMM-PDF-053-00-01-DES-001_Aircraft_Maintenance_Manual_Base.pdf
 ```
-| Código           | Nombre Oficial Completo               | Subunidades Principales                                         | 
-| ---------------- | ------------------------------------- | --------------------------------------------------------------- | 
-| **Q-DATAGOV**    | Data Governance & Standards           | Standards Team, Data Architecture, Cybersecurity, Documentation | 
-| **Q-STRUCTURES** | Airframe & Structural Systems         | Airframe Design, Materials Lab, Stress Analysis, Testing        | 
-| **Q-AIR**        | Aerospace Systems                     | Aerodynamics, Flight Controls, Performance, Flight Test         | 
-| **Q-GREENTECH**  | Green Propulsion & Sustainability     | Propulsion, Energy Systems, Environmental, Circular Economy     |
-| **Q-INDUSTRY**   | Manufacturing & Industrial Systems    | Manufacturing Engineering, Quality, Production, Supply Chain    | 
-| **Q-HPC**        | High Performance Computing & Software | Quantum Computing, AI/ML, Digital Twin, Software                | 
-| **Q-MECHANICS**  | Mechanical Subsystems Integration     | Hydraulics, Landing Gear, Flight Controls, Integration          | 
-| **Q-GROUND**     | Ground Systems & Logistics            | GSE Development, Operations, Training, Logistics                | 
-| **Q-SPACE**      | Orbital Systems & Communications      | Communications, Navigation, Antennas                            | 
-| **Q-SCIRES**     | Scientific Research & Innovation      | Research, IP Management, University Relations                   | 
 
-##### Campos Definidos
+## 2. Divisiones Técnicas GAIA-QAO
 
-| Campo         | Descripción                                                                                  |
-| ------------- | -------------------------------------------------------------------------------------------- |
-| `PROGRAMA`    | Identificador del programa: `Q100`, `Q250`, `PLUS`, `PLUSPLUS`, `XWLRGA`, etc.               |
-| `TIPO`        | Tipo de entidad: `ALI` (componente físico + software embebido), `BOB` (gemelo digital)       |
-| `ARTEFACTO`   | Tipo lógico de entregable: `DP`, `DT`, `DA`, `SC`, `HC`, `APP`                               |
-| `NATURALEZA`  | Clasificación funcional: `CAD`, `BOM`, `DOC`, `AGENT`, `CODE`, `MODEL`, `EXEC`, etc.         |
-| `FORMATO`     | Formato técnico: `BIN`, `HEX`, `PDF`, `MD`, `STEP`, `JSON`, `PY`, `JAR`, `EXE`, `APK`, etc.  |
-| `UTCS`        | Capítulo UTCS principal (`000`–`999`)                                                        |
-| `SUBCAPs`     | Subcapítulos UTCS extendidos (`040-10-20`)                                                   |
-| `FASE`        | Fase del ciclo de vida: `CON`, `DES`, `TST`, `CRT`, `PRD`, `OPS`, `MNT`, `SUP`, `REP`, `RET` |
-| `ID`          | Número correlativo único por fase y capítulo                                                 |
-| `DESCRIPCIÓN` | Breve descripción legible (inglés/español con guiones bajos)                                 |
-| `.ext`        | Extensión del archivo asociada al formato: `.md`, `.bin`, `.c`, `.step`, `.json`, etc.       |
+| División        | Nombre Completo                       | Subáreas Principales                                     |
+|-----------------|--------------------------------------|----------------------------------------------------------|
+| Q-DATAGOV       | Data Governance & Standards           | Arquitectura, S1000D, Ciberseguridad, Documentación      |
+| Q-STRUCTURES    | Airframe & Structural Systems         | Diseño estructural, Stress, FEA, Materiales              |
+| Q-AIR           | Aerospace Systems                     | Aerodinámica, Flight Test, Performance                   |
+| Q-GREENTECH     | Sustainable Propulsion & Energy       | Hidrógeno, Batería, Circularidad energética              |
+| Q-INDUSTRY      | Manufacturing & Production            | Lean, Additive, Supply chain, Calidad                    |
+| Q-HPC           | High-Performance Computing            | AI/ML, Digital Twin, Quantum, Software                   |
+| Q-MECHANICS     | Mechanical System Integration         | Actuadores, Hidráulica, Tren de aterrizaje               |
+| Q-GROUND        | Ground Systems & Logistics            | GSE, Mantenimiento, Seguridad, Training                  |
+| Q-SPACE         | Orbital Systems & Communications      | SatCom, RF, Navigation                                   |
+| Q-SCIRES        | Research & Innovation                 | Transferencia tecnológica, IP, Proyectos                  |
 
----
+## 3. UTCS – Unified Technical Classification System (000–999)
 
-#### 🧭 UTCS 000–999 – Dominios Tecnológicos GAIA-QAO
+| Código  | Grupo Principal   | Rango      | Enfoque                        | Ejemplos                      |
+|---------|-------------------|------------|--------------------------------|-------------------------------|
+| ATA     | Aerospace Tech    | 000–099    | Aviónica, estructuras, BWB     | Flight controls, BWB          |
+| STA     | Space Tech        | 100–199    | Operación/Exploración espacial | Propulsión, ISRU              |
+| DTTA    | Defence Tech      | 200–299    | Defensa multiámbito            | MRTT, C4ISR                   |
+| DTCEC   | Digital Twin/Cloud| 300–399    | AI/ML, XR, simulación          | Digital twins, AR/MR          |
+| EPTA    | Energy & Propuls. | 400–499    | Energía/propu. avanzada        | H₂, híbrido, fuel-cell, etc.  |
+| AMTA    | Mater./Bio/Nano   | 500–599    | Comp., biotec, nanotec         | Grafeno, nano-sensores        |
+| OGATA   | On-Ground Auto.   | 600–699    | Robótica/logística/infra       | Smart Factories, A-GVs        |
+| ACV     | Aerial City       | 700–799    | UAM, UTM, infraestructura      | Vertipuertos, eVTOL           |
+| CYB     | Cybersecurity     | 800–899    | Seguridad avanzada, QKD        | Cripto post-cuántica          |
+| QCSAA   | Quantum & Sentient| 900–999    | Autonomía/AIs cuánticas        | IA cuántica, QPU              |
 
-| Código UTCS | Nombre Completo                                    | Rango   | Enfoque Primario                           | Ejemplos/Dominios                          |
-| ----------- | -------------------------------------------------- | ------- | ------------------------------------------ | ------------------------------------------ |
-| `ATA`       | Aerospace Technology Architecture                  | 000–099 | Aeronáutica tradicional, BWB, UAM, eVTOL   | Flight controls, estructuras, aviónica     |
-| `STA`       | Space Technology Architecture                      | 100–199 | Exploración y operaciones espaciales       | Propulsión deep‑space, hábitats, ISRU      |
-| `DTTA`      | Defence Technology Type Architecture               | 200–299 | Sistemas de defensa multisector (aire‑mar‑tierra‑ciber) | Submarinos, MRTT, sistemas antidesastre    |
-| `DTCEC`     | Digital Twins, Cloud & Edge Computing              | 300–399 | TIC, AI/ML, simulación cuántica, XR        | Digital twins, AR/MR cockpits              |
-| `EPTA`      | Energy & Propulsion Technology Architecture        | 400–499 | Generación, almacenamiento y propulsión    | H₂, nucleares, eléctricos, scramjet        |
-| `AMTA`      | Advanced Material, Bio & Nanotechnology Architecture | 500–599 | Materiales avanzados, biotecnología y nanotecnología | CFRP‑grafeno, metamateriales, bio‑polímeros, nano‑sensores |
-| `OGATA`     | On‑Ground Automation Technology Architecture       | 600–699 | Automatización industrial, robótica, infra | Fábricas 4.0, drones logísticos, A‑GVs     |
-| `ACV`       | Aerial City Viability                              | 700–799 | Movilidad aérea urbana & infraestructura   | Vertipuertos, UTM, ruido, sostenibilidad   |
-| `CYB`       | Cybersecurity Architecture                         | 800–899 | Seguridad de sistemas, post-quantum crypto | Zero Trust, QKD, IA robusta                |
-| `QCSAA`     | Quantum Computing and Sentient Agency Architecture | 900–999 | Autonomía consciente, QPU, percepción      | QPU embebidos, IA cuántica, sensores qubit |
+## 4. Tipos de Documentos Técnicos Estandarizados
 
-### D.3 Tipos de Documentos Técnicos
+| Código   | Tipo                             | Descripción                         | División Responsable   |
+|----------|----------------------------------|-------------------------------------|-----------------------|
+| DOC-AMM  | Aircraft Maintenance Manual      | Manual básico de mantenimiento      | Q-DATAGOV             |
+| DOC-CMM  | Component Maintenance Manual     | Manual mantenimiento de componentes | Q-INDUSTRY            |
+| DOC-SRM  | Structural Repair Manual         | Manual reparación estructural       | Q-STRUCTURES          |
+| DOC-IPD  | Illustrated Parts Data           | Información ilustrada de partes     | Q-DATAGOV / Q-GROUND  |
+| DOC-WDM  | Wiring Diagram Manual            | Manual de diagramas eléctricos      | Q-MECHANICS           |
+| DOC-TSM  | Troubleshooting Manual           | Manual de diagnóstico               | Q-HPC                 |
+| DOC-SB   | Service Bulletin                 | Boletín de servicio                 | Q-DATAGOV             |
+| DOC-AFM  | Aircraft Flight Manual           | Manual de operación de aeronave     | Q-AIR                 |
+| DOC-FCOM | Flight Crew Operating Manual     | Manual de cabina/vuelo              | Q-AIR                 |
+| DOC-QSM  | Quantum Systems Manual           | Manual de sistemas cuánticos        | Q-HPC                 |
+| DOC-AD   | Airworthiness Directive          | Directiva aeronavegabilidad         | ORB-LEG               |
 
-| Tipo | Código | Descripción | Responsable |
-|------|--------|-------------|-------------|
-| **AMM** | DOC-AMM | Aircraft Maintenance Manual | Q-DATAGOV |
-| **CMM** | DOC-CMM | Component Maintenance Manual | Q-INDUSTRY |
-| **SRM** | DOC-SRM | Structure Repair Manual | Q-STRUCTURES |
-| **IPC** | DOC-IPC | Illustrated Parts Catalog | Q-DATAGOV |
-| **WDM** | DOC-WDM | Wiring Diagram Manual | Q-MECHANICS |
-| **TSM** | DOC-TSM | Troubleshooting Manual | Q-HPC |
-| **SB** | DOC-SB | Service Bulletin | Q-DATAGOV |
-| **AFM** | DOC-AFM | Aircraft Flight Manual | Q-AIR |
-| **FCOM** | DOC-FCOM | Flight Crew Operating Manual | Q-AIR |
-| **QSM** | DOC-QSM | Quantum Systems Manual | Q-HPC |
+> **Nota:** En el campo NATURALEZA pueden usarse manuales técnicos tipo AMM, CMM, SRM, IPD, TSM, WDM, AFM, FCOM, QSM, SB, AD, entre otros.
 
----
+## 5. Plantillas Técnicas – Resumen por Fase
 
-## ANEXO E: GLOSARIO DE TÉRMINOS
+| Fase / Categoría            | Código Base | Número | Principales Áreas de Uso              |
+|-----------------------------|-------------|--------|---------------------------------------|
+| Concepto                    | CON         | 10     | Marketing, Stakeholders, Sci. Review  |
+| Diseño                      | DES         | 16     | Arquitectura, Requisitos, Verificación|
+| Pruebas                     | TST         | 12     | Pruebas, Validación, Análisis         |
+| Certificación               | CRT         | 12     | Compliance, Regulatory, Ensayos       |
+| Producción                  | PRD         | 12     | Manufactura, Gestión, Control calidad |
+| Mantenimiento (Línea)       | MNT         | 12     | Planning, Release, Checklist, Troubleshoot |
+| Operaciones de Vuelo        | OPS         | 12     | Regulación, Performance, Safety       |
+| Soporte en Servicio         | SUP         | 12     | ADs, Cambios, Monitoreo en campo      |
+| Reparación y Mantenim.      | REP         | 23     | Field Service, Repair, QA, Lessons    |
+| Retiro y Circularidad       | RET         | 21     | Disposición, Reciclaje, EOL           |
+| Manuales Técnicos           | MAN         | 48     | AMM, SRM, CMM, IPL, TSM, QSM...       |
+| Sistema Ilustrado de Partes | IPL         | 15     | Listas, Esquemáticos, Despiece        |
+| Plantillas ORB              | ORB         | 48     | Finanzas, Programas, Legal, HR, etc.   |
+| **Total Plantillas Activas**| —           | 251    | —                                     |
 
-### E.1 Acrónimos Organizacionales
+## 6. Uso de Plantillas por Fase de Programa
 
-| Acrónimo | Definición | Contexto |
-|----------|------------|----------|
-| **GAIA-QAO** | Global Aerospace Innovation Advent - Quantum Aerospace Organization | Nombre completo organización |
-| **Q-Division** | Quantum-enabled Technical Division | Divisiones técnicas |
-| **ORB** | Organizational Resource Branch | Funciones empresariales |
-| **BWB** | Blended Wing Body | Configuración aeronave |
-| **AMPEL360** | Advanced Multi-Purpose Electric Aircraft 360° | Programa aeronave |
+| Etapa Programa               | Fases Aplicables         | Plantillas | Criticidad |
+|------------------------------|-------------------------|------------|------------|
+| Conceptualización 2025–2027  | CON, FIN, MKTG          | 34         | Alta       |
+| Diseño Preliminar 2027–2030  | DES, TST prep           | 40         | Crítica    |
+| Prototipo/Ensamblaje         | PRD, TST, CSR           | 36         | Crítica    |
+| Validación y Pruebas Finales | TST, CRT, LEG           | 35         | Crítica    |
+| Certificación Formal         | CRT, MAN, LEG           | 73         | Crítica    |
+| Producción en Serie          | PRD, OPS, MNT           | 84         | Alta       |
+| Operación y Soporte (2040+)  | SUP, REP, RET           | 56         | Media      |
 
-### E.2 Términos Técnicos Clave
+## 7. Glosa y Observaciones Finales
 
-| Término | Definición | Aplicación |
-|---------|------------|------------|
-| **Quantum Coherence** | Tiempo que un qubit mantiene superposición | QPU performance |
-| **L/D Ratio** | Lift-to-Drag ratio (eficiencia aerodinámica) | Diseño ala |
-| **TRL** | Technology Readiness Level (1-9) | Madurez tecnología |
-| **MTBF** | Mean Time Between Failures | Confiabilidad |
-| **First Pass Yield** | % productos correctos primera vez | Calidad producción |
-| **CASK** | Cost per Available Seat Kilometer | Economía operación |
-| **ESG** | Environmental, Social, Governance | Sostenibilidad |
-| **NRE** | Non-Recurring Engineering | Costos desarrollo |
-| **EIS** | Entry Into Service | Hito programa |
-| **PDR/CDR** | Preliminary/Critical Design Review | Gates diseño |
+- **ALI** proviene de “Alice” y denota hardware físico y documentación técnica asociada (manuales, diagramas, certificados, etc.), siguiendo la convención de emisor clásico en los protocolos de comunicación y teoría cuántica.
+- **BOB**, inspirado en “Bob” como receptor o sistema digital en canales cuánticos, refiere siempre a gemelos digitales, agentes digitales, software específico o módulos de simulación y control.
+- El campo **NATURALEZA** incluye todos los manuales técnicos claves: AMM, CMM, SRM, IPD, IPL, TSM, WDM, AFM, FCOM, QSM, SB, AD, permitiendo granularidad y compatibilidad con ATA iSpec 2200 y S1000D.
+- El sistema UTCS facilita la organización unificada y la interoperabilidad integral PLM/ERP.
+- La estructura general anticipa tecnologías emergentes (Quantum, Twin, XR, Circularidad) y asegura la trazabilidad total del ciclo de vida documental.
+- El estándar GQAQA-STD-NOM-002 está alineado con normas internacionales (ATA, S1000D, IEEE, ARP4754A, DO-178C, etc.), y sus nomenclaturas pueden ser automatizadas en generadores de nombres o integradas en sistemas de gestión documental.
 
-### E.3 Roles y Responsabilidades
-
-| Rol | Acrónimo | Responsabilidad Principal |
-|-----|----------|--------------------------|
-| **Chief Executive Officer** | CEO | Dirección estratégica general |
-| **Chief Technology Officer** | CTO | Dirección técnica y Q-Divisions |
-| **Chief Financial Officer** | CFO | Gestión financiera y ORB-FIN |
-| **Chief Operating Officer** | COO | Operaciones y producción |
-| **Chief Human Resources Officer** | CHRO | Talento y ORB-HR |
-| **Chief Compliance Officer** | CCO | Cumplimiento y governance |
-| **Chief Legal Officer** | CLO | Asuntos legales y ORB-LEG |
-| **Chief Sustainability Officer** | CSO | Sostenibilidad y ORB-CSR |
-
----
-
-**INFORMACIÓN DE CONTROL DEL DOCUMENTO**
-
-**Documento**: GAIA-QAO-ORG-MASTER-001  
-**Versión**: 1.0.0  
-**Fecha Creación**: 23 de julio de 2025  
-**Próxima Revisión**: 23 de enero de 2026  
-**Propietario**: Office of the CEO  
-**Clasificación**: Confidencial - Distribución Controlada  
-
-**Aprobaciones**:
-- CEO: _______________________
-- Board Chairman: _____________
-- General Counsel: ____________
-
-**Distribución**:
-- Board of Directors
-- Executive Committee  
-- Division Directors
-- Key Stakeholders
-
-**Control de Cambios**:
-| Versión | Fecha | Cambios | Autor |
-|---------|-------|---------|-------|
-| 1.0.0 | 23/07/2025 | Documento inicial completo | A. Pelliccia |
-
----
+## ANEXO E: para generar
 
 ## ANEXO F: LISTA COMPLETA DE TEMPLATES DE DOCUMENTACIÓN TÉCNICA
 
