@@ -5127,8 +5127,6 @@ graph LR
 
 ---
 
-## 🛩️ ATA 000-099: Aerospace Technology Architecture
-
 <details>
 <summary><h2>ATA 000-099: Aerospace Technology Architecture</h2></summary>
 
@@ -6097,8 +6095,6 @@ graph LR
 
 ---
 
-## 🚀 STA 100-199: Space Technology Architecture
-
 <details>
 <summary><h2>STA 100-199: Space Technology Architecture</h2></summary>
 
@@ -7040,8 +7036,6 @@ graph LR
 </details>
 
 ---
-
-## 🛡️ DTTA 200-299: Defence Technology Architecture
 
 <details>
 <summary><h2>DTTA 200-299: Defence Technology Architecture</h2></summary>
@@ -8056,8 +8050,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 
 ---
 
-- ##  DTCEC (300-399) (Digital Twin, Cloud, Edge Computing)
-
 <details>
 <summary><h2>DTCEC 300-399: Digital Twin, Cloud, Edge Computing</h2></summary>
 
@@ -9036,8 +9028,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 
 ---
 
-## ⚡ EPTA 400-499: Energy, Propulsion, Turbomachinery, Actuation
-
 <details>
 <summary><h2>EPTA 400-499: Energy, Propulsion, Turbomachinery, Actuation</h2></summary>
 
@@ -9982,8 +9972,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 
 ---
 
-### 🔬 AMTA 500-599: Advanced Materials Technology Architecture
-
 <details>
 <summary><h2>AMTA 500-599: Advanced Materials Technology Architecture</h2></summary>
 
@@ -10917,8 +10905,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 </details>
 
 ---
-
-### 🏭 OGATA 600-699: On-Ground Automation Technology Architecture
 
 <details>
 <summary><h2>OGATA 600-699: On-Ground Automation Technology Architecture</h2></summary>
@@ -11859,8 +11845,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 </details>
 
 ---
-
-### 🏙️ ACV 700-799: Aerial City Viability
 
 <details>
 <summary><h2>ACV 700-799: Aerial City Viability</h2></summary>
@@ -12969,8 +12953,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 
 ---
 
-### 🔐 CYB 800-899: Cybersecurity Architecture
-
 <details>
 <summary><h2>CYB 800-899: Cybersecurity Architecture</h2></summary>
 
@@ -13931,8 +13913,6 @@ This section details the Chapters (200-299) of the Defence Technology Architectu
 </details>
 
 ---
-
-### ⚛️ QCSAA 900-999: Quantum Computing, Sensing, Algorithms, Applications
 
 <details>
 <summary><h2>QCSAA 900-999: Quantum Computing, Sensing, Algorithms, Applications</h2></summary>
