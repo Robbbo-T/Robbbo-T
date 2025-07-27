@@ -20208,6 +20208,430 @@ This framework document provides structural guidance only. Actual terms, valuati
 
 ---
 
+# 📋 ANNEX M: Code Artifacts & Development Standards v1.2
+## AQUA V. Comprehensive Programming Language Reference & Artifact Classification
+
+---
+
+**📚 PURPOSE**: This document establishes the official programming languages, file extensions, development environments, and artifact classification mappings for the AQUA V. €40B quantum aerospace program.  
+**✅ UPDATE**: Version 1.2 corrects UTCS code for proper document classification
+
+---
+
+## 📑 Table of Contents
+
+- [M.1 Source Code Languages](#m1-source-code-languages)
+- [M.2 Compiled & Intermediate Code](#m2-compiled--intermediate-code)
+- [M.3 Security & Cryptographic Code](#m3-security--cryptographic-code)
+- [M.4 Scripting & Automation](#m4-scripting--automation)
+- [M.5 Database & Web Technologies](#m5-database--web-technologies)
+- [M.6 Hardware & Embedded Systems](#m6-hardware--embedded-systems)
+- [M.7 Quantum Computing Languages](#m7-quantum-computing-languages)
+- [M.8 Specialized Domain Languages](#m8-specialized-domain-languages)
+- [M.9 Code-to-Artifact Classification Matrix](#m9-code-to-artifact-classification-matrix)
+
+---
+
+## M.1 Source Code Languages
+
+### Primary Development Languages
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 1 | Python | VSCode, PyCharm, Jupyter | `.py` | AI/ML, Data Analysis, Quantum | R&I, TEC, CDG |
+| 2 | C | GCC, Clang, Visual Studio | `.c`, `.h` | Embedded Systems, RTOS | TEC |
+| 3 | C++ | Clang, Visual Studio, QtCreator | `.cpp`, `.hpp` | Flight Control, Simulation | TEC |
+| 4 | Java | Eclipse, IntelliJ, JDK | `.java` | Enterprise Systems | ORG |
+| 5 | JavaScript | Browsers, Node.js | `.js`, `.mjs` | UI/UX, Web Services | CES |
+| 6 | TypeScript | VSCode, TSC | `.ts` | Type-Safe Web Development | CES |
+| 7 | Rust | Cargo, rustc | `.rs` | Safety-Critical Systems | TEC |
+
+### Web Technologies
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 8 | HTML | Browsers | `.html`, `.htm` | User Interfaces | CES |
+| 9 | CSS | Browsers | `.css` | UI Styling | CES |
+| 23 | HTML/CSS/JS | Browsers, Web Servers | `.html`, `.css`, `.js` | Full Stack Web | CES |
+
+### Modern Languages
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 31 | Swift | Xcode, LLDB | `.swift` | iOS Applications | CES |
+| 32 | Objective-C/C++ | Xcode, Clang | `.m`, `.mm`, `.h` | Legacy iOS | CES |
+| 33 | Kotlin | Android Studio, JVM | `.kt`, `.kts` | Android Development | CES |
+| 34 | Scala | JVM, IntelliJ, sbt | `.scala` | Big Data Processing | CDG |
+| 35 | Go | Go CLI, VSCode | `.go` | Microservices | ORG |
+| 36 | PHP | Apache, Nginx, CLI | `.php` | Legacy Web Systems | CES |
+| 37 | Ruby | JRuby, VSCode | `.rb` | DevOps Scripts | ORG |
+| 38 | Perl | Perl interpreter | `.pl`, `.pm` | Text Processing | CDG |
+| 39 | Lua | Game/Simulation Engines | `.lua` | Embedded Scripting | TEC |
+
+### Scientific Computing
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 40 | R | RStudio, Rscript | `.r`, `.R` | Statistical Analysis | R&I |
+| 41 | MATLAB/Octave | MATLAB, GNU Octave | `.m` | Engineering Computation | TEC |
+
+---
+
+## M.2 Compiled & Intermediate Code
+
+### Binary Formats
+
+| # | Type | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|------|-------------------|-----------|---------------|------------------|
+| 10 | Native Binary | CPU | `.exe`, `.out`, `.elf` | Production Executables | TEC |
+| 11 | Java Bytecode | JVM | `.class`, `.jar` | JVM Applications | ORG |
+| 12 | .NET Bytecode | CLR | `.dll`, `.exe` | Windows Applications | ORG |
+| 13 | WebAssembly | Browsers, WASM Runtimes | `.wasm` | High-Performance Web | CES |
+| 14 | Machine Code | CPU | (binary) | Direct Hardware Control | TEC |
+
+### Low-Level Code
+
+| # | Type | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|------|-------------------|-----------|---------------|------------------|
+| 15 | Assembly | NASM, MASM, GNU Assembler | `.asm`, `.s` | Performance-Critical Code | TEC |
+
+---
+
+## M.3 Security & Cryptographic Code
+
+### Cryptographic Artifacts
+
+| # | Type | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|------|-------------------|-----------|---------------|------------------|
+| 16 | Hash Functions | OpenSSL, Hashlib | `.hash`, `.txt` | Data Integrity | REG |
+| 17 | Cryptography | OpenSSL, Libsodium | `.pem`, `.key`, `.enc` | Quantum-Safe Encryption | REG |
+| 18 | Error Correction | Protocols, Storage | Integrated | Data Reliability | TEC |
+
+---
+
+## M.4 Scripting & Automation
+
+### System Scripts
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 19 | Bash | Linux/Unix Terminal | `.sh` | System Automation | ORG |
+| 20 | PowerShell | PowerShell (Windows) | `.ps1` | Windows Automation | ORG |
+| 21 | Python Script | Terminal/Python | `.py` | General Automation | ORG |
+| 42 | Windows Batch | CMD Shell | `.bat`, `.cmd` | Legacy Windows | ORG |
+
+### Configuration Languages
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 43 | YAML/Ansible | Ansible, K8s, CI/CD | `.yml`, `.yaml` | Infrastructure as Code | ORG |
+| 44 | JSON | Web APIs, Node.js | `.json` | Configuration Files | CDG |
+| 54 | INI | Simulators | `.ini` | Legacy Config | CDG |
+| 56 | TOML | Modern Config | `.toml` | Rust/Modern Apps | CDG |
+
+---
+
+## M.5 Database & Web Technologies
+
+### Data Languages
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 22 | SQL | MySQL, PostgreSQL, SQLite | `.sql` | Relational Databases | CDG |
+
+### UI Frameworks
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 24 | JSX/TSX | React, Flutter | `.jsx`, `.tsx` | Component-Based UI | CES |
+| 24 | XML Android | Android Studio | `.xml` | Android Layouts | CES |
+
+---
+
+## M.6 Hardware & Embedded Systems
+
+### Hardware Description Languages
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 25 | VHDL/Verilog | Vivado, Quartus | `.vhdl`, `.v`, `.sv` | FPGA Development | TEC |
+| 51 | SystemC | HW OOP Design (EDA) | `.sc` | System Modeling | TEC |
+| 52 | Chisel | HDL from Scala | `.chisel` | Modern HDL | TEC |
+
+### Embedded Code
+
+| # | Type | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|------|-------------------|-----------|---------------|------------------|
+| 30 | Firmware | Keil, STM32Cube | `.hex`, `.bin`, `.elf` | Microcontrollers | TEC |
+
+### GPU Programming
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 29 | GLSL/HLSL | GPU Toolchains | `.glsl`, `.frag`, `.vert` | Graphics Shaders | TEC |
+
+---
+
+## M.7 Quantum Computing Languages 🔮
+
+### Quantum Development Frameworks
+
+| # | Framework | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|-----------|-------------------|-----------|---------------|------------------|
+| 26 | Qiskit | IBM Qiskit | `.py`, `.ipynb` | **Primary Quantum Dev** | R&I |
+| 27 | Q# | Microsoft QDK | `.qs` | Quantum Algorithms | R&I |
+| 28 | Cirq | Google Cirq | `.py` | Quantum Circuits | R&I |
+
+---
+
+## M.8 Specialized Domain Languages
+
+### Infrastructure as Code
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 45 | Terraform | Terraform CLI | `.tf`, `.tf.json` | Cloud Infrastructure | ORG |
+| 46 | Dockerfile | Docker Engine | `Dockerfile` | Containerization | ORG |
+| 47 | Makefile/CMake | make, cmake | `Makefile`, `.cmake` | Build Automation | TEC |
+
+### Documentation
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 48 | Markdown | MkDocs, GitHub | `.md` | Technical Docs | CES |
+| 49 | reStructuredText | Sphinx | `.rst` | Python Docs | CES |
+| 50 | Jupyter Notebook | JupyterLab | `.ipynb` | Interactive Docs | R&I |
+| 57 | R Markdown | RStudio | `.Rmd` | Statistical Reports | R&I |
+| 58 | Quarto | Multi-language | `.qmd` | Modern Notebooks | R&I |
+| 65 | LaTeX | TeX editors | `.tex` | Academic Papers | R&I |
+
+### Aerospace-Specific DSLs
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 59 | ASN.1 | Protocol Modeling | `.asn` | Avionics Protocols | FUN |
+| 60 | SysML/Modelica | System Modeling | `.sysml`, `.mo` | Physical Systems | MBE |
+| 61 | BPMN/UML | Process Diagrams | `.bpmn`, `.uml` | System Design | MBE |
+
+### Simulation & Analysis
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 53 | Tcl | Synopsys, Cadence | `.tcl` | EDA Scripting | TEC |
+| 55 | CAS | Ansys, Fluent | `.cas` | CFD Simulation | TEC |
+| 62 | SPICE | Circuit Modeling | `.sp`, `.cir` | Electronics | TEC |
+
+### CI/CD & DevOps
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 63 | GitHub Actions | GitHub | `.yml` | Automated Workflows | ORG |
+| 63 | GitLab CI | GitLab | `.yml` | CI/CD Pipelines | ORG |
+
+### Functional & Verification
+
+| # | Language | Typical Environment | Extension | AQUA V. Usage | Primary Artifact |
+|---|----------|-------------------|-----------|---------------|------------------|
+| 64 | Haskell/F# | Functional Verification | `.hs`, `.fs` | Formal Methods | REG |
+| 66 | SVA/PSL | HDL Verification | `.sva`, `.psl` | Hardware Verification | REG |
+
+---
+
+## M.9 Code-to-Artifact Classification Matrix
+
+### 🗂️ AQUA V. Artifact Categories
+
+From **ANNEX D: Official Nomenclature System v3.1**:
+
+| Code | Category | Description | Typical Code Types |
+|------|----------|-------------|-------------------|
+| **TEC** | Technical Artifacts | Engineering drawings, specifications, test procedures | C/C++, VHDL, MATLAB, Assembly |
+| **ORG** | Organizational Artifacts | Policies, procedures, org charts, training materials | Scripts, CI/CD, Java Enterprise |
+| **FIN** | Financial Artifacts | Budgets, cost analyses, pricing models | Python/R analytics, SQL |
+| **FUN** | Functional Specifications | Requirements, use cases, functional descriptions | ASN.1, Protocol definitions |
+| **R&I** | Research & Innovation | Research papers, patents, innovation proposals | Quantum code, Notebooks, ML |
+| **REG** | Regulatory & Certification | Compliance docs, certification evidence | Formal verification, Security |
+| **IND** | Industrial & Manufacturing | Production procedures, quality plans | PLC, Robotics, CNC |
+| **CES** | Customer Experience & Support | User manuals, service bulletins | Web frontend, Mobile, Docs |
+| **MRO** | Maintenance, Repair & Overhaul | Maintenance procedures, repair manuals | Diagnostic scripts, IoT |
+| **MBE** | Model-Based Engineering | 3D models, simulations, digital twins | SysML, Modelica, BPMN |
+| **S&L** | Supply Chain & Logistics | Procurement specs, logistics plans | Integration APIs, Tracking |
+| **CDG** | Common Data Ground | Data schemas, ontologies, master data | Databases, ETL, Config |
+
+### 📐 Classification Decision Tree
+
+```mermaid
+graph TD
+    START[Code Artifact] --> Q1{Is it for<br/>engineering<br/>analysis?}
+    Q1 -->|Yes| TEC[TEC: Technical]
+    Q1 -->|No| Q2{Is it for<br/>research/<br/>innovation?}
+    Q2 -->|Yes| RI[R&I: Research]
+    Q2 -->|No| Q3{Is it for<br/>customer<br/>interface?}
+    Q3 -->|Yes| CES[CES: Customer]
+    Q3 -->|No| Q4{Is it for<br/>data<br/>management?}
+    Q4 -->|Yes| CDG[CDG: Data Ground]
+    Q4 -->|No| Q5{Is it for<br/>manufacturing?}
+    Q5 -->|Yes| IND[IND: Industrial]
+    Q5 -->|No| OTHER[Check other<br/>categories]
+```
+
+### Priority Classification Rules
+
+1. **Primary Function First**: Classify by the code's main purpose
+2. **Quantum Always R&I**: All quantum computing code → R&I first
+3. **Safety-Critical → TEC**: Flight control, embedded → TEC
+4. **User-Facing → CES**: UI/UX code → CES
+5. **Data Processing → CDG**: ETL, databases → CDG
+6. **Business Logic → ORG**: Enterprise systems → ORG
+
+### 📊 Multi-Category Code Usage
+
+Some languages serve multiple artifact categories:
+
+| Language | Primary | Secondary | Tertiary | Example Use Cases |
+|----------|---------|-----------|----------|-------------------|
+| **Python** | R&I | TEC | CDG | Research, Engineering analysis, Data processing |
+| **JavaScript/TypeScript** | CES | CDG | ORG | User interfaces, APIs, Business logic |
+| **SQL** | CDG | FIN | S&L | Data management, Financial analysis, Supply chain |
+| **C/C++** | TEC | MRO | IND | Embedded systems, Maintenance tools, Factory control |
+| **Java** | ORG | CES | S&L | Enterprise systems, Web services, Integration |
+| **YAML/JSON** | CDG | ORG | IND | Configuration, CI/CD, Manufacturing config |
+
+### 🏷️ Classification Examples
+
+```yaml
+examples:
+  flight_control_system:
+    file: "flight_controller.cpp"
+    language: "C++"
+    primary_artifact: "TEC"
+    secondary: ["REG", "MRO"]
+    justification: "Safety-critical embedded system"
+    
+  quantum_route_optimizer:
+    file: "route_optimizer.py"
+    language: "Qiskit/Python"
+    primary_artifact: "R&I"
+    secondary: ["TEC"]
+    justification: "Quantum algorithm research"
+    
+  customer_dashboard:
+    file: "dashboard.tsx"
+    language: "TypeScript/React"
+    primary_artifact: "CES"
+    secondary: ["CDG"]
+    justification: "Customer-facing interface"
+    
+  manufacturing_robot:
+    file: "assembly_robot.py"
+    language: "Python/ROS"
+    primary_artifact: "IND"
+    secondary: ["TEC", "MRO"]
+    justification: "Factory automation system"
+    
+  financial_model:
+    file: "cost_analysis.py"
+    language: "Python/Pandas"
+    primary_artifact: "FIN"
+    secondary: ["CDG"]
+    justification: "Financial analysis tool"
+```
+
+### 📊 Code Distribution Summary
+
+| Artifact Category | # Code Types | % of Portfolio | Key Languages |
+|------------------|--------------|----------------|---------------|
+| **TEC** | 22 | 33% | C/C++, VHDL, MATLAB, Assembly |
+| **R&I** | 12 | 18% | Qiskit, Q#, Python, Notebooks |
+| **CDG** | 15 | 23% | SQL, JSON, YAML, ETL Scripts |
+| **CES** | 10 | 15% | JavaScript, TypeScript, Swift |
+| **ORG** | 10 | 15% | Java, Go, CI/CD, Scripts |
+| **IND** | 8 | 12% | PLC, Robot code, CNC |
+| **MBE** | 6 | 9% | SysML, Modelica, BPMN |
+| **REG** | 6 | 9% | Formal verification, Security |
+| **FIN** | 4 | 6% | Python/R analytics, SQL |
+| **MRO** | 5 | 8% | Diagnostic scripts, IoT |
+| **FUN** | 6 | 9% | Protocol specs, Requirements |
+| **S&L** | 4 | 6% | Integration APIs, Logistics |
+
+---
+
+## 📊 Language Usage by Division
+
+### Primary Languages by Q-Division
+
+| Division | Primary Languages | Secondary Languages | Artifact Focus |
+|----------|------------------|-------------------|----------------|
+| **QSTR** | C++, Python, MATLAB | Fortran, Julia | TEC, MBE |
+| **QAIR** | C++, Python, OpenFOAM | Tcl, CAS | TEC, R&I |
+| **QMEC** | C, C++, Rust | VHDL, SystemC | TEC, IND |
+| **QPOW** | C, Rust, Python | Assembly, SPICE | TEC, REG |
+| **QDAT** | Python, SQL, R | JavaScript, TypeScript | CDG, FIN |
+| **QHPC** | C++, CUDA, Python | MPI, OpenMP | TEC, R&I |
+| **QCOM** | C, C++, ASN.1 | VHDL, Protocol Buffers | TEC, FUN |
+| **QGRE** | Python, R, Julia | MATLAB, Modelica | R&I, MBE |
+| **QSCI** | **Qiskit, Q#, Cirq** | Python, C++ | R&I, TEC |
+| **QIND** | Python, C++, PLC | Ladder Logic | IND, MRO |
+| **QGRO** | Java, Python, SQL | JavaScript, YAML | ORG, CES |
+| **QSPA** | C++, Python, Rust | Assembly, CUDA | TEC, R&I |
+
+---
+
+## 🔒 Security & Compliance
+
+### Code Security Standards
+
+```yaml
+security_requirements:
+  static_analysis:
+    - SonarQube for all languages
+    - Coverity for C/C++/Java
+    - Bandit for Python
+    - ESLint for JavaScript/TypeScript
+    
+  dynamic_analysis:
+    - Valgrind for memory safety
+    - AFL++ for fuzzing
+    - QARK for mobile security
+    
+  quantum_code_security:
+    - Quantum circuit verification
+    - No-cloning theorem compliance
+    - Quantum error correction validation
+    
+  artifact_security:
+    - Code classification review
+    - Export control compliance (ITAR/EAR)
+    - IP protection verification
+```
+
+### Compliance Matrix
+
+| Standard | Applicable Languages | Requirements | Artifact Types |
+|----------|---------------------|--------------|----------------|
+| **DO-178C** | C, C++, Ada | Avionics software | TEC, REG |
+| **ISO 26262** | C, C++, Rust | Automotive safety | TEC, REG |
+| **MISRA C** | C, C++ | Safety-critical | TEC, REG |
+| **Common Criteria** | All | Security evaluation | REG, TEC |
+
+---
+
+**Document Status**: APPROVED  
+**Version**: 1.2  
+**Issue Date**: 2025-07-27  
+**Owner**: Chief Technology Officer  
+**Next Review**: 2026-01-27
+
+**Document ID**: `AQV-DOC-25MA0001-PRD-BOB-TEC-TD-DTCEC-304-00-01-TPL-TEC-001-QDAT-v1.2.0`
+
+**Change Log**: 
+- v1.1: Added comprehensive code-to-artifact classification matrix (Section M.9)
+- v1.2: Corrected UTCS code from DTCEC-350 (XR/Metaverse) to DTCEC-304 (Standards and Ontologies) for proper document classification
+
+---
+
+**[END OF ANNEX M - CODE ARTIFACTS & DEVELOPMENT STANDARDS v1.2]**
+
 **Master Annex Index Status**: CURRENT  
 **Version**: 7.6  
 **Classification**: AQUA V. INTERNAL  
