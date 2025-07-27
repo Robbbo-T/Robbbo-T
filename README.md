@@ -15204,7 +15204,7 @@ version_history:
     
   v1.1:
     date: "2025-07-01"
-    changes: "Incorporated quantum extensions (Chapters 090-099, 119, 190-199, 319, 380-389, 409, 419, 429, 459, 469, 479, 490-499, 509, 529, 540-549, 569, 599, 609, 620.05, 629, 639.03, 649, 650.05, 659, 669, 690-699, 701.05, 702.05, 703.05, 706.05, 709, 712.05, 713.05, 714.05, 719, 723.05, 724.05, 728.05, 729, 737.05, 738, 739.04, 740.05, 749.05, 759, 765.05, 766.05, 767.05, 769.05, 770.05, 771.05, 772.05, 773.05, 774.05, 775.05, 776.05, 777.05, 778.05, 779.05, 780.05, 781.05, 782.05, 783, 789.05, 790, 795.05, 797.05, 798.05, 799.05, 809, 818, 829, 839, 848, 859, 869, 870-879, 880-889, 898, 900-999). This involved significant expansion into previously reserved or nascent areas."
+    changes: "Incorporated quantum extensions (Chapters 090-099, 119, 190-199, 319, 380-389, 409, 419, 429, 459, 469, 479, 490-499, 509, 529, 540-549, 569, 599, 609, 620.05, 629, 639.03, 649, 650.05, 659, 669, 690-699, 701.05, 702.05, 703.05, 705.05, 706.05, 709, 712.05, 713.05, 714.05, 719, 723.05, 724.05, 728.05, 729, 737.05, 738, 739.04, 740.05, 749.05, 759, 765.05, 766.05, 767.05, 769.05, 770.05, 771.05, 772.05, 773.05, 774.05, 775.05, 776.05, 777.05, 778.05, 779.05, 780.05, 781.05, 782.05, 783, 789.05, 790, 795.05, 797.05, 798.05, 799.05, 809, 818, 829, 839, 848, 859, 869, 870-879, 880-889, 898, 900-999). This involved significant expansion into previously reserved or nascent areas."
     
   v1.2:
     date: "2025-08-01"
@@ -15221,20 +15221,43 @@ The UTCS Committee, composed of senior technical and research leaders, oversees 
 
 ```mermaid
 graph TD
-    UTC[UTCS Committee<br/>Chief Technology Officer (Chair)<br/>Chief Quantum Officer<br/>Chief Sustainability Officer<br/>Chief Data Officer<br/>VP Engineering]
+    UTC[UTCS Committee]
+    UTC_Members("Chief Technology Officer (Chair)<br/>Chief Quantum Officer<br/>Chief Sustainability Officer<br/>Chief Data Officer<br/>VP Engineering")
+    UTC --- UTC_Members
+
+    UTC --> TWG[Technical Working Groups]
+    UTC --> IAB[Industry Advisory Board]
+    UTC --> RRB[Regulatory Review Board]
     
-    UTC --> TWG[Technical Working Groups<br/>(Domain-Specific Experts from Q-Divisions)]
-    UTC --> IAB[Industry Advisory Board<br/>(External Experts, Partners)]
-    UTC --> RRB[Regulatory Review Board<br/>(EASA, FAA, ICAO Liaisons)]
-    
-    TWG --> PROP[Proposals for Changes/Additions<br/>(Detailed Technical Justification)]
+    TWG --> PROP[Proposals for Changes/Additions]
     IAB --> PROP
     RRB --> PROP
     
-    PROP --> REV[Review Cycle<br/>(Impact Assessment, Feasibility)]
-    REV --> APP[Formal Approval<br/>(Committee Vote)]
-    APP --> IMP[Implementation<br/>(Database Update, Training)]
+    PROP --> REV[Review Cycle]
+    REV --> APP[Formal Approval]
+    APP --> IMP[Implementation]
+
+    %% Styles for clarity (optional)
+    style UTC fill:#f9f,stroke:#333,stroke-width:2px
+    style UTC_Members fill:#cef,stroke:#333,stroke-width:1px
+    style APP fill:#9f9,stroke:#333,stroke-width:2px
 ```
+**UTC Committee Members:**
+*   Chief Technology Officer (Chair)
+*   Chief Quantum Officer
+*   Chief Sustainability Officer
+*   Chief Data Officer
+*   VP Engineering
+
+**Node Descriptions:**
+*   **UTC (UTCS Committee):** The primary governing body for the Universal Technology Classification System.
+*   **TWG (Technical Working Groups):** Domain-specific expert groups from relevant Q-Divisions providing detailed technical justification for proposals.
+*   **IAB (Industry Advisory Board):** External experts and partners providing industry relevance and strategic guidance.
+*   **RRB (Regulatory Review Board):** Liaisons with EASA, FAA, ICAO ensuring compliance and regulatory alignment.
+*   **PROP (Proposals for Changes/Additions):** Detailed technical justifications for UTCS modifications.
+*   **REV (Review Cycle):** Internal process for impact assessment and feasibility studies of proposed changes.
+*   **APP (Formal Approval):** Final approval stage by the UTCS Committee, based on review outcomes.
+*   **IMP (Implementation):** Execution phase, including database updates and training for new classifications.
 
 ---
 
