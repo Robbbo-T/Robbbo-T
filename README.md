@@ -1,4 +1,156 @@
-<!--
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&pause=1000&color=F75C7E&center=true&vCenter=true&random=false&width=435&lines=Hi+%F0%9F%91%8B%2C+I'm+Robbbo-T;Full+Stack+Developer;Open+Source+Enthusiast;Always+Learning+New+Things" alt="Typing SVG" />
+</div>
+
+<h3 align="center">A passionate developer building innovative solutions</h3>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=robbbo-t&label=Profile%20views&color=0e75b6&style=flat" alt="robbbo-t" />
+  <a href="https://github.com/Robbbo-T?tab=followers">
+    <img src="https://img.shields.io/github/followers/Robbbo-T?label=Followers&style=social" alt="GitHub Badge">
+  </a>
+</p>
+
+---
+
+## 🎯 Current Focus
+
+- 🔭 I'm currently working on **[Your Current Project]**
+- 🌱 I'm currently learning **[Technologies you're learning]**
+- 👯 I'm looking to collaborate on **[Types of projects]**
+- 🤔 I'm looking for help with **[Areas where you need assistance]**
+- 💬 Ask me about **[Your areas of expertise]**
+- 📫 How to reach me: **[Your email or preferred contact]**
+- ⚡ Fun fact: **[Something interesting about you]**
+
+## 🛠️ Tech Stack
+
+### Languages
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+### Frontend
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### Backend
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+
+### Database
+![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
+
+### DevOps & Cloud
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+
+### Tools
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+## 🚀 Featured Projects
+
+<div align="center">
+  <a href="https://github.com/Robbbo-T/[PROJECT-1]">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Robbbo-T&repo=[PROJECT-1]&theme=radical" />
+  </a>
+  <a href="https://github.com/Robbbo-T/[PROJECT-2]">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Robbbo-T&repo=[PROJECT-2]&theme=radical" />
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/Robbbo-T/[PROJECT-3]">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Robbbo-T&repo=[PROJECT-3]&theme=radical" />
+  </a>
+  <a href="https://github.com/Robbbo-T/[PROJECT-4]">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Robbbo-T&repo=[PROJECT-4]&theme=radical" />
+  </a>
+</div>
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Robbbo-T&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Robbbo-T&theme=radical&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Robbbo-T&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages" />
+</div>
+
+## 📈 Contribution Graph
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Robbbo-T&theme=react-dark&hide_border=true&area=true" alt="Contribution Graph" />
+</div>
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Robbbo-T&theme=radical&no-frame=true&no-bg=false&margin-w=4&row=1" alt="GitHub Trophies" />
+</div>
+
+## 📰 Recent Activity
+
+<!--START_SECTION:activity-->
+1. 🎉 Merged PR [#1] in [Repository]
+2. 💪 Opened PR [#2] in [Repository]
+3. 🗣 Commented on [#3] in [Repository]
+4. ⭐ Starred [Repository]
+5. 🎉 Merged PR [#4] in [Repository]
+<!--END_SECTION:activity-->
+
+## 📝 Latest Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+- [Your Blog Post Title 1](https://your-blog-url)
+- [Your Blog Post Title 2](https://your-blog-url)
+- [Your Blog Post Title 3](https://your-blog-url)
+<!-- BLOG-POST-LIST:END -->
+
+## 🤝 Connect with Me
+
+<div align="center">
+  <a href="https://linkedin.com/in/[YOUR-LINKEDIN]">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://twitter.com/[YOUR-TWITTER]">
+    <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white" alt="Twitter" />
+  </a>
+  <a href="https://dev.to/[YOUR-DEVTO]">
+    <img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white" alt="Dev.to" />
+  </a>
+  <a href="mailto:[YOUR-EMAIL]">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://[YOUR-WEBSITE]">
+    <img src="https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" />
+  </a>
+</div>
+
+---
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" />
+</div>
+
+<div align="center">
+  <b>Thanks for visiting my profile! Have a great day! 😊</b>
+</div><!--
 █▀▀ █▀█ █▄▄ █▄▄ █▀▀ ▀█▀ █▄▄ █ █▀█ █▄░█ █▀
 █▄▄ █▄█ █▄█ █▄█ █▄▄ ░█░ █▄█ █ █▄█ █░▀█ ▄█
 Amedeo “Robbbo-T” Pelliccia — Quantum-Aerospace Engineer, Theoretical Physicist & Tech Leader
