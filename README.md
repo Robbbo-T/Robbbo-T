@@ -1,6 +1,6 @@
 # Amedeo Pelliccia
 
-**Quantum Aerospace Pioneer | Theoretical Physicist | Technology Leader**
+**Quantum Aerospace Engineer | Theoretical Physicist | Technology Leader**
 
 Project Coordinator at Capgemini Engineering (Madrid) | Founder, GAIA Quantum Aerospace | MBA Candidate, EAE Business School
 
@@ -11,67 +11,53 @@ Project Coordinator at Capgemini Engineering (Madrid) | Founder, GAIA Quantum Ae
 
 -----
 
-## Professional Summary
+## Summary
 
-Aerospace engineer specializing in quantum technology applications for aviation. Architect of GAIA AIR v1.3.0, a quantum-AI digital twin platform for zero-emission aircraft. Author of HUT, NEURONBIT, AQUA V. and other cross-disciplinary frameworks. Champion of sustainable aviation including hydrogen fuel-cell turbofans, BWB-Q100, and eVTOL roadmaps.
+Aerospace engineer working on quantum technology applications for aviation. Developer of GAIA AIR v1.3.0 quantum-AI platform. Author of HUT, NEURONBIT, and AQUA V. frameworks. Focus on sustainable aviation: hydrogen propulsion, BWB aircraft, and eVTOL systems.
 
-## Technical Expertise
+## Technical Skills
 
-### Core Domains
+- **Quantum Systems**: Quantum annealing, QSM, QuComs, flight optimization, Q-CNS/QNS
+- **Aerospace**: BWB design, zero-emission propulsion, structural monitoring
+- **Software**: Python, TypeScript, MATLAB, GraphQL, Digital-Twin APIs, Cloud architectures
+- **Standards**: DO-178C, DO-254, AS9100D, ISO 21434, EASA/FAA, S1000D, ATA-iSpec 2200
+- **Management**: Agile/Scrum, cross-functional teams, venture development
 
-- **Quantum-Aerospace**: Quantum annealing, QSM, QuComs, flight-route optimization, Quantum Navigation Systems (Q-CNS, QNS)
-- **Aircraft Engineering**: BWB design, zero-emission propulsion, structural monitoring
-- **Software & Data**: Python, TypeScript, MATLAB, GraphQL, Digital-Twin APIs, Cloud-native architectures
-- **Standards & Certifications**: DO-178C, DO-254, AS9100D, ISO 21434, EASA/FAA regulations, S1000D, ATA-iSpec 2200
-- **Leadership**: Agile/Scrum, €40 Bn venture cases, cross-functional teams
+## Current Projects
 
-## Featured Projects
+**GAIA AIR v1.3.0**  
+Quantum-AI platform for route optimization and digital twin integration
 
-### GAIA AIR (v1.3.0)
+**BWB-Q100**  
+180-seat blended-wing aircraft prototype with H₂ fuel-cell hybrid propulsion
 
-Quantum-AI optimization platform aims to achieve >30% route efficiency with real-time digital twin capabilities.
+**AQUA V. v9.0**  
+Venture framework with 12 specialized divisions
 
-### BWB-Q100 (Prototype)
+**Q-CNS Blueprint**  
+Quantum-classical navigation system framework
 
-180-seat blended-wing aircraft design featuring H₂ fuel-cell hybrid propulsion with quantum energy management.
-
-### AQUA V. (v9.0)
-
-€40 Bn blueprint featuring 12 “Q-Divisions” with projected 2050 revenue targets.
-
-### Q-CNS Blueprint (Framework)
-
-Quantum-classical navigation system targeting ≤ 1 × 10⁻⁹ rad/s drift.
-
-### Hyperbolic Universe Theory (Research)
-
-Negative-curvature cosmos theory 
+**Hyperbolic Universe Theory**  
+Theoretical physics research on negative-curvature cosmology
 
 ## Publications
 
-- **2025**: “Quantum Entanglement in Aerospace Navigation Systems” (pre-print)
-- **2025**: AQUA V. – Aerospace & Quantum United Advanced Venture v9.0
-- **2024**: “Hyperbolic Universe Theory” (HUT)
-- **2024**: “Sustainable Industrial Optimisation Algorithm”
+- 2025: “Quantum Entanglement in Aerospace Navigation Systems” (pre-print)
+- 2025: AQUA V. – Aerospace & Quantum United Advanced Venture v9.0
+- 2024: “Hyperbolic Universe Theory” (HUT)
+- 2024: “Sustainable Industrial Optimisation Algorithm”
 
-## 2025 Roadmap
+## Active Development
 
-### Q3-Q4 Milestones
+- GAIA Platform v1.4.0
+- API v2 Documentation
+- Q-CNS Blueprint v3
+- NEURONBIT v2 Paper
+- MBA Capstone Project
 
-- **GAIA Platform**: v1.4.0 Release (Aug 15 - Sep 14)
-- **GAIA Platform**: API v2 Draft (Sep 15 - Oct 30)
-- **Theoretical Work**: Q-CNS Blueprint v3 (Aug 15 - Sep 29)
-- **Theoretical Work**: NEURONBIT v2 Paper (Oct 1 - Nov 15)
-- **MBA @ EAE**: Capstone Project (Oct 1 - Nov 30)
+## Repository Overview
 
-## Collaboration Opportunities
-
-|Area                     |Looking For                     |Contact Method|
-|-------------------------|--------------------------------|--------------|
-|Quantum Navigation Theory|Physicists & Aerospace Engineers|GitHub Issues |
-|BWB-Q100                 |Partners / Investors            |LinkedIn DM   |
-|GAIA Open Source         |Full-stack & DevOps Engineers   |GitHub Issues |
-|Guest Lectures           |Universities & Conferences      |LinkedIn DM   |
+150+ repositories covering quantum aerospace, theoretical physics, and software development.
 
 -----
 
