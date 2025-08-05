@@ -10,7 +10,6 @@ MBA Candidate, EAE Business School
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Robbbo-T)
 [![Academia.edu](https://img.shields.io/badge/Academia-222222?style=flat&logo=academia&logoColor=white)](https://independent.academia.edu/AmedeoPelliccia)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/robbbot)
------
 
 ## Summary
 
