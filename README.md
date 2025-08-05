@@ -4,7 +4,7 @@
 
 Project Coordinator at Capgemini Engineering (Madrid) | Founder, GAIA Quantum Aerospace | MBA Candidate, EAE Business School
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amedeo-pelliccia-94154435/)
+[![LinkedIn]<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Robbbo-T)
 [![Academia.edu](https://img.shields.io/badge/Academia-222222?style=flat&logo=academia&logoColor=white)](https://independent.academia.edu/AmedeoPelliccia)
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/robbbot)
