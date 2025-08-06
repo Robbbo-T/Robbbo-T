@@ -65,5 +65,6 @@ Theoretical physics research on negative-curvature cosmology
 *“Design aircraft that respect the planet, write code that respects the engineer, and craft theories that respect the cosmos.”*
 
 **AQUA V. - AGUA QUE VUELA - FLYING FLUIDITY**
-
+```
+AQUA V. (Aerospace and Quantum United Aspirational Venture) is a next-generation digital-industrial and business intelligence framework, architected as a quantum-enhanced, virtual infrastructure. It serves as a convergence platform for the most advanced technological domains—across aerospace, quantum systems, AI, and cyber-physical integration—seeking to synthesize their potential into the most optimized, implementable fusion of capabilities. Through this model, AQUA V. enables the invention of entirely new technological assets and paradigms, while radically enhancing existing systems and value chains.
 Made with hydrogen, qubits & espresso in Madrid 🇪🇸
