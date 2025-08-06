@@ -610,28 +610,6 @@ graph LR
 
 ---
 
-## **CONTACT INFORMATION**
-
-### **AQUA V. Headquarters**
-
-**Aerospace and Quantum United Aspirational Venture**
-
-📍 **Madrid Aerospace Hub**  
-Quantum Technology Center  
-Madrid, Spain
-
-📧 **Technical Inquiries**  
-technical@aqua-v.aero
-
-📧 **Business Development**  
-partnerships@aqua-v.aero
-
-📧 **Investor Relations**  
-investors@aqua-v.aero
-
-🌐 **Web**  
-www.aqua-v.aero
-
 **Chief Architect**  
 Amedeo Pelliccia  
 Quantum Aerospace Engineer  
