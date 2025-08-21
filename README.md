@@ -834,7 +834,7 @@ The operational manifestation of the 3xI doctrine. The Integrity agents create "
 
 **The Regenerative Conversion Flow:**
 
-1.  **Prevention:** Integrity agents prevent fraud/corruption (e.g., Capgemini invoicing, Airbus inventories).
+1.  **Prevention:** Integrity agents prevent fraud/corruption 
 2.  **Recovery:** Resources that would have been lost are quantified and captured.
 3.  **Multiplication:** Innovation agents allocate these resources using quantum optimization.
 4.  **Growth:** The system guarantees a 3x-10x ROI on the saved resources, fueling regenerative growth within P²AF.
@@ -850,14 +850,14 @@ The initialization of the Public-Private Autonomous Finance system.
 *   **Action:** Deployment of the Genesis Block, activating the P²AF core, the 3xI engine, and the initial collective treasury.
 *   **Verification:** The P²AF Birth Certificate (`AQUA-FIN-GENESIS-20082025-001`) is immutably recorded in the DET and the genesis block.
 
-### 5.2 Integrity Agent Pilot: Cap Invoicing (P0.1)
+### 5.2 Integrity Agent Pilot: Cap Stone Project - Invoicing (P0.1)
 
 *   **Objective:** Detect and prevent anomalies, fraud, and inefficiencies in monthly invoicing reports.
 *   **Implementation:** Deployment of the Integrity Agent (Ethics Observer specialization) configured for DAL-B financial processes.
 *   **Mechanism:** 2oo3 voting applied to invoice validation.
 *   **Outcome:** Identified savings (€100K+/month) are automatically transferred to a Business Safe Space for innovation funding.
 
-### 5.3 Integrity Agent Pilot: Air Inventories (P0.2)
+### 5.3 Integrity Agent Pilot: Air vehicles Inventories (P0.2)
 
 *   **Objective:** Ensure integrity and optimize aerospace parts inventory, complying with DO-254 (hardware equivalent of DO-178C).
 *   **Implementation:** Integration of the Integrity Agent with the Supply Buyer Agent (utilizing SICOCA/QUBO).
