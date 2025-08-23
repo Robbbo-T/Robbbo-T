@@ -172,11 +172,14 @@ def demo_voting_system():
         altitude_data = {"pressure": scenario["pressure"]}
         result, vote_result, details = voting.vote(altitude_data)
         
+        result_str = f"{result:7.2f}" if result is not None else "   None"
         print(f"  {scenario['name']:12} ({scenario['pressure']:7.2f} hPa): "
-              f"Result={result:7.2f}m, Vote={vote_result.value:9}")
+              f"Result={result_str}m, Vote={vote_result.value:9}")
         
         if vote_result == VotingResult.MAJORITY:
             print(f"               ⚠️  Fault detected and tolerated")
+        elif vote_result == VotingResult.NO_CONSENSUS:
+            print(f"               🚨 No consensus - safety fallback required")
     
     # Show system health
     status = voting.get_system_status()
