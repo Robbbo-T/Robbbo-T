@@ -35,7 +35,7 @@ Aerospace engineer working on quantum technology applications for aviation. Deve
 **Document ID:** AQUART-ARCH-SAD-AMEDEO-v1.0
 **Version:** 1.0
 **Date:** August 20, 2025
-**Classification:** Controlled Unclassified Information (CUI)
+**Classification:** Controlled Open Information (COI)
 **UTCS-MI v5.0+:** EstándarUniversal:Documento-Hibrida-AMEDEO-00.00-SystemArchitecture-0001-v1.0-AMEDEOSystems-GeneracionHibrida-CROSS-Architecture-a1b2c3d4-Certificacion
 
 ---
@@ -62,50 +62,9 @@ AMEDEO is built upon a doctrine that transcends traditional technological bounda
 
 AMEDEO employs a hybrid, multi-domain architecture bridging classical deterministic systems with quantum computational capabilities, orchestrated by deep agents.
 
-```mermaid
-flowchart TD
-
-    subgraph AL ["Application Layer - Domains"]
-        A1["BWB-Q100 Aerospace Operations"]
-        A2["P²AF Autonomous Finance"]
-        A3["Enterprise Business Safe Spaces"]
-    end
-
-    subgraph III ["3xI Engine - Deep Agents: >=729x Impact"]
-        B1["Intelligence: Planner, Capital Markets"]
-        B2["Integrity: Ethics Observer, Buyer"]
-        B3["Innovation: Ops Pilot, Scheduler"]
-    end
-
-    subgraph AQ ["AQUA-OS/ADT - The Bridge"]
-        C1["AQUA-BRIDGE Protocol"]
-        C2["Cross-Domain Validator, 2oo3"]
-        C3["AEIC/SEAL: Sync/Security"]
-    end
-
-    subgraph FL ["Foundation Layer"]
-        D1["GAIA AIR-RTOS: Deterministic DAL-A"]
-        D2["Quantum Stack: QAL, NISQ, QEC"]
-        D3["Aerospace Hardware"]
-    end
-
-    E["DET: Digital Evidence Twin"]
-
-    %% Connections
-    A1 & A2 & A3 --> B1 & B2 & B3
-    B1 & B2 & B3 --> C1
-    C1 --> C2 --> C3
-    C3 --> D1 & D2 & D3
-    D1 & D2 & D3 & C1 & B1 & B2 & B3 --> E
-```
-
-
-# AMEDEO Enhanced System Diagrams
-## With Digital, Environmental & Operational Components
-
 ---
 
-## 1) Enhanced System-of-Systems Architecture
+## 1) System-of-Systems Architecture
 
 ```mermaid
 graph TB
