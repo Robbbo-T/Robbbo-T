@@ -1,0 +1,178 @@
+# AMPEL360 H₂-BWB-Q Change Request Process
+# REQ-DES-CFG-002 Evidence Artifact
+
+change_request_process:
+  version: "1.0.0"
+  effective_date: "2025-08-29"
+  
+  classification_system:
+    major_changes:
+      criteria:
+        - Cost impact > $100K
+        - Schedule impact > 30 days
+        - Safety/certification impact
+        - Interface changes affecting multiple systems
+        - Performance parameter changes > 5%
+      classification_sla: 24  # hours
+      review_authority: "CCB"
+      approval_authority: "Program Manager"
+      
+    minor_changes:
+      criteria:
+        - Cost impact < $100K
+        - Schedule impact < 30 days
+        - Single system impact only
+        - No safety/certification implications
+      classification_sla: 24  # hours
+      review_authority: "Technical Lead"
+      approval_authority: "Chief Engineer"
+      
+    emergency_changes:
+      criteria:
+        - Safety-critical issues
+        - Regulatory compliance requirements
+        - Production-stopping defects
+        - Customer-critical issues
+      classification_sla: 4  # hours
+      review_authority: "Emergency Board"
+      approval_authority: "Program Manager"
+  
+  process_workflow:
+    step_1_initiation:
+      description: "Change request submitted"
+      responsible_party: "Originator"
+      deliverables:
+        - Completed change request form
+        - Problem statement/opportunity description
+        - Proposed solution outline
+        - Initial impact assessment
+      time_limit: "immediate"
+      
+    step_2_classification:
+      description: "Change request classified"
+      responsible_party: "Configuration Manager"
+      deliverables:
+        - Classification determination
+        - Review path assignment
+        - Priority assignment
+        - Resource allocation estimate
+      time_limit: 24  # hours (all changes)
+      
+    step_3_analysis:
+      description: "Detailed impact analysis"
+      responsible_party: "Assigned Engineering Team"
+      deliverables:
+        - Technical impact analysis
+        - Cost impact assessment
+        - Schedule impact assessment
+        - Risk assessment
+        - Implementation plan
+      time_limit:
+        major: 72  # hours
+        minor: 48  # hours
+        emergency: 12  # hours
+        
+    step_4_review:
+      description: "Review and recommendation"
+      responsible_party: "Review Authority"
+      deliverables:
+        - Review findings
+        - Recommendation (approve/disapprove/modify)
+        - Conditions and constraints
+      time_limit:
+        major: 48  # hours
+        minor: 24  # hours
+        emergency: 8  # hours
+        
+    step_5_approval:
+      description: "Final approval decision"
+      responsible_party: "Approval Authority"
+      deliverables:
+        - Approval decision
+        - Implementation authorization
+        - Resource allocation approval
+      time_limit:
+        major: 24  # hours
+        minor: 12  # hours
+        emergency: 4  # hours
+        
+    step_6_implementation:
+      description: "Change implementation"
+      responsible_party: "Implementation Team"
+      deliverables:
+        - Implementation plan execution
+        - Configuration updates
+        - Documentation updates
+        - Verification completion
+      time_limit: "per implementation plan"
+      
+    step_7_closeout:
+      description: "Change closeout verification"
+      responsible_party: "Configuration Manager"
+      deliverables:
+        - Implementation verification
+        - Configuration update confirmation
+        - Lessons learned capture
+        - Metrics update
+      time_limit: 48  # hours post-implementation
+  
+  performance_metrics:
+    processing_sla_adherence:
+      target: 95  # percent
+      measurement: "percentage of changes processed within SLA"
+      reporting_frequency: "weekly"
+      
+    approval_rate_metrics:
+      overall_target: 80  # percent
+      first_pass_approval: 70  # percent
+      approval_with_modifications: 25  # percent
+      rejection_rate: 5  # percent maximum
+      
+    quality_metrics:
+      rework_rate: 5  # percent maximum
+      implementation_success_rate: 95  # percent minimum
+      customer_satisfaction: 4.5  # out of 5.0
+      
+    efficiency_metrics:
+      average_cycle_time:
+        major: 120  # hours target
+        minor: 60   # hours target
+        emergency: 24  # hours target
+      resource_utilization: 85  # percent target
+      cost_per_change: "tracked and trending"
+  
+  governance_controls:
+    review_boards:
+      technical_review_board:
+        composition: ["Technical Leads", "Systems Engineers"]
+        authority: "Technical recommendation"
+        meeting_frequency: "twice weekly"
+        
+      configuration_control_board:
+        composition: ["CCB Members"]
+        authority: "Approval up to $1M"
+        meeting_frequency: "weekly"
+        
+      program_review_board:
+        composition: ["Program Leadership"]
+        authority: "Approval >$1M or major scope"
+        meeting_frequency: "monthly"
+    
+    audit_and_compliance:
+      process_audits: "quarterly"
+      compliance_checks: "monthly"
+      metrics_review: "weekly"
+      effectiveness_assessment: "annually"
+      
+    continuous_improvement:
+      process_optimization: "quarterly review"
+      tool_enhancement: "bi-annual assessment"
+      training_updates: "annual refresh"
+      lessons_learned_integration: "continuous"
+  
+  success_criteria:
+    process_maturity: "Level 3 (Defined)"
+    cycle_time_improvement: "20% year-over-year"
+    quality_improvement: "10% reduction in rework"
+    stakeholder_satisfaction: ">4.5/5.0"
+    configuration_integrity: "100% baseline compliance"
