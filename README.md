@@ -44,6 +44,44 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 *   **Formal Output:** A definitive, risk-optimized aircraft configuration ready for detailed design within the AQUA-OS environment.
 
+  ```mermaid
+flowchart TD
+    %% OPTIME Framework at the top
+    OPTIME["OPTIME Meta-Framework"]
+    OPTIME --> A360
+    OPTIME --> AQUAOS
+    OPTIME --> GAIA
+
+    %% AMPEL360
+    subgraph A360[AMPEL360 Algorithmic Design]
+        A360OPTIM["MILP/CP-SAT Optimizers"]
+        A360CVaR["CVaR Risk Model"]
+        A360OPTIM --> A360CVaR
+    end
+
+    %% AQUA-OS BRIDGE
+    subgraph AQUAOS[AQUA-OS BRIDGE]
+        AQUACTL["Deterministic Control Plane"]
+        DET["Digital Evidence Twin (DET)"]
+        QAL["Quantum Abstraction Layer (QAL)"]
+        AQUACTL --> DET
+        AQUACTL --> QAL
+    end
+
+    %% GAIA AIR RTOS
+    subgraph GAIA[GAIA AIR RTOS]
+        GAIAARINC["ARINC 653 Partitioning"]
+        INFRANET["GAIA AIR INFRANET"]
+        GAIAARINC --> INFRANET
+    end
+
+    %% Interpillar interactions
+    A360CVaR --> AQUACTL
+    AQUACTL --> GAIAARINC
+    AQUACTL --> INFRANET
+    DET --> QAL
+```
+
 ---
 
 ### **2. AQUA-OS BRIDGE: Mixed Operating System (MOS)**
@@ -120,6 +158,54 @@ OPTIME-FRAMEWORK/
 ├── M2-MACHINE/                        # Automation/ML static, simulation, runtimes
 └── E4-EXECUTING/                      # Operational runtime, modes, telemetry, DET
 
+```
+
+```mermaid
+mindmap
+  root(("OPTIME-Framework Initiative\nComplejidad y Alcance"))
+    Technology Stack
+      AMPEL360 (Algorithmic Design)
+        MILP/CP-SAT Optimization
+        Risk-based Selection (CVaR)
+        Mass-configuration Search
+      AQUA-OS BRIDGE
+        Deterministic Control Plane
+        Digital Evidence Twin (DET)
+        Quantum Abstraction Layer (QAL)
+        Integration with Design/Prod/Ops
+      GAIA AIR RTOS
+        ARINC 653 Partitioning
+        Real-Time Scheduling
+        Infranet Deterministic Data Exchange
+    Program Lifecycle
+      Requirements & Governance
+      Design & Optimization
+      Build & Prototyping
+      V&V (Verification & Validation)
+      Certification & Safety
+      Production & Ops
+      MRO & EOL (End of Life)
+      Full Evidence Chain (WORM, DET)
+    Regulatory Complexity
+      ARINC 653
+      DO-178C, DO-254, DO-326A
+      CS-25, FAR 25, EASA/FAA
+      ISO 9001, AS9100D
+      Cybersecurity, Quality, Traceability
+    Multi-domain Scope
+      Airframes, Aerodynamics
+      Mechanical, Energy, Electronics
+      OS/Navigation/HPC
+      Cryogenics, Hydrogen, Quantum
+      Cockpit/Cabin/Cargo, Airport Ops
+      Intelligent Systems, Machine Learning, AI
+      MRO, Logistics, Digital Twin, Blockchain
+    Ecosystem & Impact
+      Partners and Suppliers
+      Regulatory Authorities
+      Quantum & Digital Twin Research
+      Industry and Market Reach
+      Energy as Policy & Sustainability
 ```
 
 > **Path convention for OS links**  
