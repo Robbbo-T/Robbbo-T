@@ -9,31 +9,31 @@ The E4 pillar provides the operational runtime environment where digital twins s
 ## Component Areas (ATA 45: 10-90)
 
 ### Runtime Mode Management
-- **CA-E4-45-10-RUNTIME-MODES** - Mode managers (normal/inhibit/emergency), authorization/RBAC bindings, safe state transitions, fleet policy synchronization, readiness/health gates
+- **[CA-E4-45-10-RUNTIME-MODES](./CA-E4-45-10-RUNTIME-MODES/)** - Mode managers (normal/inhibit/emergency), authorization/RBAC bindings, safe state transitions, fleet policy synchronization, readiness/health gates
 
 ### Command & Control Gates
-- **CA-E4-45-20-COMMAND-GATES** - Procedure gateways, context checks/inhibits, human approval flows, rollback/quarantine mechanisms, DET decision trails
+- **[CA-E4-45-20-COMMAND-GATES](./CA-E4-45-20-COMMAND-GATES/)** - Procedure gateways, context checks/inhibits, human approval flows, rollback/quarantine mechanisms, DET decision trails
 
 ### Telemetry & Data Flow
-- **CA-E4-45-30-TELEMETRY-BUS** - Topic schemas, rate/QoS management, edge buffering, replay/reconstruction, export to AOC/ATM
+- **[CA-E4-45-30-TELEMETRY-BUS](./CA-E4-45-30-TELEMETRY-BUS/)** - Topic schemas, rate/QoS management, edge buffering, replay/reconstruction, export to AOC/ATM
 
 ### Digital Evidence Twin (DET)
-- **CA-E4-45-40-DET-EVIDENCE-WORM** - Digital signing/anchoring, tracepoint/KPI collection, WORM retention, evidence packs (post-flight), audit portals
+- **[CA-E4-45-40-DET-EVIDENCE-WORM](./CA-E4-45-40-DET-EVIDENCE-WORM/)** - Digital signing/anchoring, tracepoint/KPI collection, WORM retention, evidence packs (post-flight), audit portals
 
 ### Electronic Flight Bag & Maintenance
-- **CA-E4-45-50-EFB-MAINT-APPS** - Offline/immutable models, workpack view/edit, DET attachments, role-based views, delta updates
+- **[CA-E4-45-50-EFB-MAINT-APPS](./CA-E4-45-50-EFB-MAINT-APPS/)** - Offline/immutable models, workpack view/edit, DET attachments, role-based views, delta updates
 
 ### MRO & Line Operations
-- **CA-E4-45-60-MRO-LINE-OPS** - Job cards/airworthiness, tool/lot traceability, findings/NCR to PLM, certification signoff, recycle/EOL routes
+- **[CA-E4-45-60-MRO-LINE-OPS](./CA-E4-45-60-MRO-LINE-OPS/)** - Job cards/airworthiness, tool/lot traceability, findings/NCR to PLM, certification signoff, recycle/EOL routes
 
 ### ATM & Airport Coordination
-- **CA-E4-45-70-A-CDM-ATM-EXCHANGE** - Data links (AIDX old/new), turnaround milestones, CTOT/slot coordination, IRROPS playbooks, live feeds to AOC
+- **[CA-E4-45-70-A-CDM-ATM-EXCHANGE](./CA-E4-45-70-A-CDM-ATM-EXCHANGE/)** - Data links (AIDX old/new), turnaround milestones, CTOT/slot coordination, IRROPS playbooks, live feeds to AOC
 
 ### Energy-as-Policy Enforcement
-- **CA-E4-45-80-EAP-ENFORCER-ENERGY** - Policy ingestion, runtime budgets, throttling/shaping, DET energy packs, CO2 reporting
+- **[CA-E4-45-80-EAP-ENFORCER-ENERGY](./CA-E4-45-80-EAP-ENFORCER-ENERGY/)** - Policy ingestion, runtime budgets, throttling/shaping, DET energy packs, CO2 reporting
 
 ### Incident & Alert Handling
-- **CA-E4-45-90-INCIDENT-ALERT-HANDLING** - Severity/mitigation, correlation engine, paging/escalation, postmortems/DET, lessons learned to policy
+- **[CA-E4-45-90-INCIDENT-ALERT-HANDLING](./CA-E4-45-90-INCIDENT-ALERT-HANDLING/)** - Severity/mitigation, correlation engine, paging/escalation, postmortems/DET, lessons learned to policy
 
 ## Key Capabilities
 

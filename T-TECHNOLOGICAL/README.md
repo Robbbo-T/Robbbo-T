@@ -7,29 +7,29 @@ This directory contains the technological components of the OPTIME framework, im
 The technological stack is organized into 15 specialized domains:
 
 ### Core Aircraft Systems
-- **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS** - Aircraft structures, aerodynamics, BWB configuration
-- **M-MECHANICAL_AND_CONTROL** - Mechanical systems, flight controls, actuation
-- **P-PROPULSION_AND_FUELS** - Hydrogen propulsion, fuel systems, engine integration
+- **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](./A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/)** - Aircraft structures, aerodynamics, BWB configuration
+- **[M-MECHANICAL_AND_CONTROL](./M-MECHANICAL_AND_CONTROL/)** - Mechanical systems, flight controls, actuation
+- **[P-PROPULSION_AND_FUELS](./P-PROPULSION_AND_FUELS/)** - Hydrogen propulsion, fuel systems, engine integration
 
 ### Environmental & Safety
-- **E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY** - Environmental compliance, circular economy
-- **D-DEFENCE_CYBERSECURITY_SAFETY** - Security, safety systems, threat protection
-- **E2-ENERGY_AND_RENEWABLE** - Energy systems, renewable integration, power management
+- **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](./E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/)** - Environmental compliance, circular economy
+- **[D-DEFENCE_CYBERSECURITY_SAFETY](./D-DEFENCE_CYBERSECURITY_SAFETY/)** - Security, safety systems, threat protection
+- **[E2-ENERGY_AND_RENEWABLE](./E2-ENERGY_AND_RENEWABLE/)** - Energy systems, renewable integration, power management
 
 ### Digital Systems & Communications
-- **O-OPERATING_SYSTEMS_NAVIGATION_HPC** - AQUA-OS Bridge, navigation, high-performance computing
-- **E3-ELECTRONICS_DIGITAL_INSTRUMENTS** - Avionics, digital instruments, electronic systems
-- **L2-LINKS_AND_COMMUNICATIONS** - Communication systems, data links, connectivity
+- **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](./O-OPERATING_SYSTEMS_NAVIGATION_HPC/)** - AQUA-OS Bridge, navigation, high-performance computing
+- **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](./E3-ELECTRONICS_DIGITAL_INSTRUMENTS/)** - Avionics, digital instruments, electronic systems
+- **[L2-LINKS_AND_COMMUNICATIONS](./L2-LINKS_AND_COMMUNICATIONS/)** - Communication systems, data links, connectivity
 
 ### Operations & Logistics
-- **L1-LOGISTICS_INTEGRATED_BLOCKCHAIN** - Supply chain, blockchain integration, logistics
-- **I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS** - Ground infrastructure, value chains
-- **A2-AIRPORTS_ADAPTATIONS** - Airport compatibility, ground operations, H2 infrastructure
+- **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](./L1-LOGISTICS_INTEGRATED_BLOCKCHAIN/)** - Supply chain, blockchain integration, logistics
+- **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](./I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/)** - Ground infrastructure, value chains
+- **[A2-AIRPORTS_ADAPTATIONS](./A2-AIRPORTS_ADAPTATIONS/)** - Airport compatibility, ground operations, H2 infrastructure
 
 ### Cabin & Specialized Systems  
-- **C1-COCKPIT_CABIN_CARGO_SYSTEMS** - Cockpit systems, cabin configuration, cargo handling
-- **C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS** - Hydrogen storage, cryogenic systems, quantum interfaces
-- **I2-INTELLIGENT_SYSTEMS_ONBOARD_AI** - Onboard AI, intelligent systems, autonomous functions
+- **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](./C1-COCKPIT_CABIN_CARGO_SYSTEMS/)** - Cockpit systems, cabin configuration, cargo handling
+- **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](./C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/)** - Hydrogen storage, cryogenic systems, quantum interfaces
+- **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](./I2-INTELLIGENT_SYSTEMS_ONBOARD_AI/)** - Onboard AI, intelligent systems, autonomous functions
 
 ## Component Architecture (CA/CI Structure)
 
