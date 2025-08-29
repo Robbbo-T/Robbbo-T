@@ -7,52 +7,52 @@ This directory contains the procedural aspects of the OPTIME framework, covering
 The procedural framework encompasses:
 
 ### Process Architecture
-- **CA-P2-00-70-PROCESS-ARCHITECTURE** - Process catalog, BPMN meta-model, lifecycle mapping, RACI matrix
+- **[CA-P2-00-70-PROCESS-ARCHITECTURE](./CA-P2-00-70-PROCESS-ARCHITECTURE/)** - Process catalog, BPMN meta-model, lifecycle mapping, RACI matrix
 
 ### Gates & Reviews
-- **CA-P2-00-71-GATES-AND-REVIEWS** - System requirements review (SRR), preliminary design review (PDR), critical design review (CDR), test readiness review (TRR), flight readiness review (FRR)
+- **[CA-P2-00-71-GATES-AND-REVIEWS](./CA-P2-00-71-GATES-AND-REVIEWS/)** - System requirements review (SRR), preliminary design review (PDR), critical design review (CDR), test readiness review (TRR), flight readiness review (FRR)
 
 ### Change & Configuration Management
-- **CA-P2-00-72-CHANGE-MANAGEMENT** - Engineering change request (ECR) workflow, engineering change order (ECO) implementation, change control board (CCB) charter
+- **[CA-P2-00-72-CHANGE-MANAGEMENT](./CA-P2-00-72-CHANGE-MANAGEMENT/)** - Engineering change request (ECR) workflow, engineering change order (ECO) implementation, change control board (CCB) charter
 
 ### Verification & Validation
-- **CA-P2-00-73-VV-PLANNING-AND-RTM** - V&V planning, requirements traceability matrix (RTM), test readiness reviews, test data management
+- **[CA-P2-00-73-VV-PLANNING-AND-RTM](./CA-P2-00-73-VV-PLANNING-AND-RTM/)** - V&V planning, requirements traceability matrix (RTM), test readiness reviews, test data management
 
 ### Safety & Certification Processes
-- **CA-P2-00-74-SAFETY-CERTIFICATION-PROCESSES** - ARP4754A processes, ARP4761 safety assessment, DO-178C software processes, DO-254 hardware processes, DO-326A cybersecurity, safety case GSN templates
+- **[CA-P2-00-74-SAFETY-CERTIFICATION-PROCESSES](./CA-P2-00-74-SAFETY-CERTIFICATION-PROCESSES/)** - ARP4754A processes, ARP4761 safety assessment, DO-178C software processes, DO-254 hardware processes, DO-326A cybersecurity, safety case GSN templates
 
 ### Quality & Compliance
-- **CA-P2-00-75-QUALITY-NCR-CAPA** - Non-conformance report (NCR) workflow, corrective and preventive action (CAPA) procedures, first article inspection (FAI), audit programs
+- **[CA-P2-00-75-QUALITY-NCR-CAPA](./CA-P2-00-75-QUALITY-NCR-CAPA/)** - Non-conformance report (NCR) workflow, corrective and preventive action (CAPA) procedures, first article inspection (FAI), audit programs
 
 ### Supply Chain & Procurement
-- **CA-P2-00-76-SUPPLIER-AND-PROCUREMENT** - Supplier qualification, statement of work (SOW) templates, incoming inspection, SLA/KPI frameworks
+- **[CA-P2-00-76-SUPPLIER-AND-PROCUREMENT](./CA-P2-00-76-SUPPLIER-AND-PROCUREMENT/)** - Supplier qualification, statement of work (SOW) templates, incoming inspection, SLA/KPI frameworks
 
 ### Security & Incident Response
-- **CA-P2-00-77-SECURITY-INCIDENT-RESPONSE** - Computer security incident response team (CSIRT) runbooks, vulnerability management, software bill of materials (SBOM) policy, key rotation procedures
+- **[CA-P2-00-77-SECURITY-INCIDENT-RESPONSE](./CA-P2-00-77-SECURITY-INCIDENT-RESPONSE/)** - Computer security incident response team (CSIRT) runbooks, vulnerability management, software bill of materials (SBOM) policy, key rotation procedures
 
 ### Data Governance & Digital Evidence Twin (DET)
-- **CA-P2-00-78-DATA-GOVERNANCE-AND-DET** - Data classification, retention schedules, DET evidence packaging, privacy impact assessments
+- **[CA-P2-00-78-DATA-GOVERNANCE-AND-DET](./CA-P2-00-78-DATA-GOVERNANCE-AND-DET/)** - Data classification, retention schedules, DET evidence packaging, privacy impact assessments
 
 ### CI/CD & Release Management
-- **CA-P2-00-79-CI-CD-AND-RELEASE** - Branching models, build promotion gates, release cutover, rollback playbooks
+- **[CA-P2-00-79-CI-CD-AND-RELEASE](./CA-P2-00-79-CI-CD-AND-RELEASE/)** - Branching models, build promotion gates, release cutover, rollback playbooks
 
 ### Training & Competence
-- **CA-P2-00-80-TRAINING-AND-COMPETENCE** - Competency matrix, training curriculum, authorization to work
+- **[CA-P2-00-80-TRAINING-AND-COMPETENCE](./CA-P2-00-80-TRAINING-AND-COMPETENCE/)** - Competency matrix, training curriculum, authorization to work
 
 ### MRO & End-of-Life
-- **CA-P2-00-81-MRO-EOL-PROCEDURES** - MRO workpack generation, end-of-life sorting and recovery, hazmat handling
+- **[CA-P2-00-81-MRO-EOL-PROCEDURES](./CA-P2-00-81-MRO-EOL-PROCEDURES/)** - MRO workpack generation, end-of-life sorting and recovery, hazmat handling
 
 ### Energy as Policy
-- **CA-P2-00-82-ENERGY-AS-POLICY** - Energy budgeting, scheduling constraints, reporting procedures
+- **[CA-P2-00-82-ENERGY-AS-POLICY](./CA-P2-00-82-ENERGY-AS-POLICY/)** - Energy budgeting, scheduling constraints, reporting procedures
 
 ### Risk Management
-- **CA-P2-00-83-RISK-MANAGEMENT** - Risk register, bowtie analysis, mitigation plans
+- **[CA-P2-00-83-RISK-MANAGEMENT](./CA-P2-00-83-RISK-MANAGEMENT/)** - Risk register, bowtie analysis, mitigation plans
 
 ### Document Control
-- **CA-P2-00-84-DOCUMENT-CONTROL** - Document templates, approval workflows, versioning, distribution
+- **[CA-P2-00-84-DOCUMENT-CONTROL](./CA-P2-00-84-DOCUMENT-CONTROL/)** - Document templates, approval workflows, versioning, distribution
 
 ### Operations Handover
-- **CA-P2-00-85-OPERATIONS-HANDOVER** - Operational readiness review (ORR) checklist, service transition, operational manual acceptance
+- **[CA-P2-00-85-OPERATIONS-HANDOVER](./CA-P2-00-85-OPERATIONS-HANDOVER/)** - Operational readiness review (ORR) checklist, service transition, operational manual acceptance
 
 ## Standards & Regulations
 

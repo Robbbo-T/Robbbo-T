@@ -7,23 +7,23 @@ This directory contains the organizational aspects of the OPTIME framework, cove
 The organizational framework is built around key areas:
 
 ### Governance & Compliance
-- **CA-O2-00-10-GOVERNANCE** - Program governance framework, quality management, certification roadmap
-- **CA-O2-00-11-REGULATORY-INTERFACE** - Authority liaison, certification basis, means of compliance
-- **CA-O2-00-12-CONFIGURATION-MANAGEMENT** - Baseline control, change management, version control
+- **[CA-O2-00-10-GOVERNANCE](./CA-O2-00-10-GOVERNANCE/)** - Program governance framework, quality management, certification roadmap
+- **[CA-O2-00-11-REGULATORY-INTERFACE](./CA-O2-00-11-REGULATORY-INTERFACE/)** - Authority liaison, certification basis, means of compliance
+- **[CA-O2-00-12-CONFIGURATION-MANAGEMENT](./CA-O2-00-12-CONFIGURATION-MANAGEMENT/)** - Baseline control, change management, version control
 
 ### Data & Knowledge Management  
-- **CA-O2-00-13-DATA-MANAGEMENT** - Data governance, master data management, security classification
-- **CA-O2-00-14-KNOWLEDGE-MANAGEMENT** - Lessons learned, best practices, training programs
+- **[CA-O2-00-13-DATA-MANAGEMENT](./CA-O2-00-13-DATA-MANAGEMENT/)** - Data governance, master data management, security classification
+- **[CA-O2-00-14-KNOWLEDGE-MANAGEMENT](./CA-O2-00-14-KNOWLEDGE-MANAGEMENT/)** - Lessons learned, best practices, training programs
 
 ### Operations & Control
-- **CA-O2-00-15-SUPPLIER-MANAGEMENT** - Supplier qualification, performance monitoring, contracts
-- **CA-O2-00-20-FINANCIAL-CONTROL** - Budget tracking, lifecycle cost models, financial reporting
-- **CA-O2-00-30-KPI-MONITORING** - Performance indicators, risk dashboard, traceability metrics
+- **[CA-O2-00-15-SUPPLIER-MANAGEMENT](./CA-O2-00-15-SUPPLIER-MANAGEMENT/)** - Supplier qualification, performance monitoring, contracts
+- **[CA-O2-00-20-FINANCIAL-CONTROL](./CA-O2-00-20-FINANCIAL-CONTROL/)** - Budget tracking, lifecycle cost models, financial reporting
+- **[CA-O2-00-30-KPI-MONITORING](./CA-O2-00-30-KPI-MONITORING/)** - Performance indicators, risk dashboard, traceability metrics
 
 ### Structure & Strategy
-- **CA-O2-00-40-ORGANIZATIONAL-STRUCTURE** - Org chart, roles & responsibilities, decision rights
-- **CA-O2-00-50-STEERING-COMMITTEES** - Technical board, safety board, certification board
-- **CA-O2-00-60-STRATEGIC-ALIGNMENT** - Vision/mission, strategic objectives, roadmap milestones
+- **[CA-O2-00-40-ORGANIZATIONAL-STRUCTURE](./CA-O2-00-40-ORGANIZATIONAL-STRUCTURE/)** - Org chart, roles & responsibilities, decision rights
+- **[CA-O2-00-50-STEERING-COMMITTEES](./CA-O2-00-50-STEERING-COMMITTEES/)** - Technical board, safety board, certification board
+- **[CA-O2-00-60-STRATEGIC-ALIGNMENT](./CA-O2-00-60-STRATEGIC-ALIGNMENT/)** - Vision/mission, strategic objectives, roadmap milestones
 
 ## Standards & Regulations
 

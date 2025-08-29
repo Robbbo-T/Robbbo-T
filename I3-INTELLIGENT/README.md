@@ -9,28 +9,28 @@ The I3 pillar implements AI and autonomous systems for aerospace operations whil
 ## Component Areas
 
 ### Core Autonomy Architecture
-- **CA-I3-46-10-OUTBOARD-AUTONOMY-ARCH** - Autonomy layers, role arbitration, hazard mapping, failsafe modes, policy hierarchy
+- **[CA-I3-46-10-OUTBOARD-AUTONOMY-ARCH](./CA-I3-46-10-OUTBOARD-AUTONOMY-ARCH/)** - Autonomy layers, role arbitration, hazard mapping, failsafe modes, policy hierarchy
 
 ### Fleet & Operations Optimization  
-- **CA-I3-46-20-FLEET-AOC-OPTIMIZATION** - Turnaround forecasting, crew/tail pairing, irregular operations (IRROPS) decision support, slot/CTOT sensitivity analysis, AOC synchronization
+- **[CA-I3-46-20-FLEET-AOC-OPTIMIZATION](./CA-I3-46-20-FLEET-AOC-OPTIMIZATION/)** - Turnaround forecasting, crew/tail pairing, irregular operations (IRROPS) decision support, slot/CTOT sensitivity analysis, AOC synchronization
 
 ### Predictive Analytics for MRO
-- **CA-I3-46-30-PREDICTIVE-ANALYTICS-MRO** - Remaining useful life (RUL) estimation, anomaly detection, workpack auto-generation, spares optimization, cost/risk CVaR analysis
+- **[CA-I3-46-30-PREDICTIVE-ANALYTICS-MRO](./CA-I3-46-30-PREDICTIVE-ANALYTICS-MRO/)** - Remaining useful life (RUL) estimation, anomaly detection, workpack auto-generation, spares optimization, cost/risk CVaR analysis
 
 ### Energy & CO2 Advisory Systems
-- **CA-I3-46-40-ENERGY-CO2-ADVISORS** - Energy-as-Policy (EAP) bindings, FOQA CO2 estimation, flight profile suggestions, CO2 risk trading, DET energy evidence
+- **[CA-I3-46-40-ENERGY-CO2-ADVISORS](./CA-I3-46-40-ENERGY-CO2-ADVISORS/)** - Energy-as-Policy (EAP) bindings, FOQA CO2 estimation, flight profile suggestions, CO2 risk trading, DET energy evidence
 
 ### Agent Mesh Operations
-- **CA-I3-46-50-AGENT-MESH-OPS** - Skills/tools registry, memory/RAG limits, coordination/negotiation, human-robot interaction (HRI), DET rationale capture
+- **[CA-I3-46-50-AGENT-MESH-OPS](./CA-I3-46-50-AGENT-MESH-OPS/)** - Skills/tools registry, memory/RAG limits, coordination/negotiation, human-robot interaction (HRI), DET rationale capture
 
 ### Explainability & Audit
-- **CA-I3-46-60-EXPLAINABILITY-DET** - Rationale templates, input reference logging, model hazard cards, audit pack generation, human-readable summaries
+- **[CA-I3-46-60-EXPLAINABILITY-DET](./CA-I3-46-60-EXPLAINABILITY-DET/)** - Rationale templates, input reference logging, model hazard cards, audit pack generation, human-readable summaries
 
 ### MLOps & Assurance
-- **CA-I3-46-70-MLOPS-ASSURANCE** - Model SBOM signing, versioning/immutability, drift monitoring, data lineage (UTCS-MI), tool qualification (TQL)
+- **[CA-I3-46-70-MLOPS-ASSURANCE](./CA-I3-46-70-MLOPS-ASSURANCE/)** - Model SBOM signing, versioning/immutability, drift monitoring, data lineage (UTCS-MI), tool qualification (TQL)
 
 ### Edge Acceleration
-- **CA-I3-46-80-EDGE-ACCELERATION** - Static inference budgets, quantization/pruning policies, WCET/thermal limits, memory safety/isolation, benchmark suites
+- **[CA-I3-46-80-EDGE-ACCELERATION](./CA-I3-46-80-EDGE-ACCELERATION/)** - Static inference budgets, quantization/pruning policies, WCET/thermal limits, memory safety/isolation, benchmark suites
 
 ## Key Principles
 

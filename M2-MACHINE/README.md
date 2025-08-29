@@ -13,41 +13,41 @@ The M2 components are distributed across multiple ATA chapters to align with aer
 ### ATA 05 - Manufacturing & Quality (10-40)
 
 #### Test Rigs & Hardware-in-the-Loop
-- **CA-M2-05-10-TEST-RIGS-HIL** - Rig control DAU, scenario runners, signal injection/faults, latency/throughput profiling, DET run packs
+- **[CA-M2-05-10-TEST-RIGS-HIL](./CA-M2-05-10-TEST-RIGS-HIL/)** - Rig control DAU, scenario runners, signal injection/faults, latency/throughput profiling, DET run packs
 
 #### Quality & Metrology  
-- **CA-M2-05-20-QUALITY-METROLOGY** - CMM scan processes, tolerance stackup analysis, capability indices (Cp/Cpk), NCR/concessions, PLM feedback loops
+- **[CA-M2-05-20-QUALITY-METROLOGY](./CA-M2-05-20-QUALITY-METROLOGY/)** - CMM scan processes, tolerance stackup analysis, capability indices (Cp/Cpk), NCR/concessions, PLM feedback loops
 
 #### CNC & Manufacturing
-- **CA-M2-05-30-NC-CNC-TOOLCHAIN** - G-code/STEP-NC generation, post-processors, verification probes, tool life management, PLM traceability
+- **[CA-M2-05-30-NC-CNC-TOOLCHAIN](./CA-M2-05-30-NC-CNC-TOOLCHAIN/)** - G-code/STEP-NC generation, post-processors, verification probes, tool life management, PLM traceability
 
 #### Traceability & Audit
-- **CA-M2-05-40-TRACEABILITY-QAUDIT** - UTCS-MI IDs, SBOM/MBOM/DBOM management, digital signatures/attestation, ledger anchoring, compliance queries
+- **[CA-M2-05-40-TRACEABILITY-QAUDIT](./CA-M2-05-40-TRACEABILITY-QAUDIT/)** - UTCS-MI IDs, SBOM/MBOM/DBOM management, digital signatures/attestation, ledger anchoring, compliance queries
 
 ### ATA 45 - Digital Infrastructure (100-130)
 
 #### Digital Twin Runtimes
-- **CA-M2-45-100-DIGITAL-TWIN-RUNTIMES** - Contract APIs/states, synchronization protocols, state reconcilers, safety boundaries, replay/what-if analysis
+- **[CA-M2-45-100-DIGITAL-TWIN-RUNTIMES](./CA-M2-45-100-DIGITAL-TWIN-RUNTIMES/)** - Contract APIs/states, synchronization protocols, state reconcilers, safety boundaries, replay/what-if analysis
 
 #### Orchestration & HPC
-- **CA-M2-45-110-ORCHESTRATION-HPC** - Job schedulers (HPC/K8s), resource QoS management, checkpoint/resume, reproducibility controls, observability/metrics
+- **[CA-M2-45-110-ORCHESTRATION-HPC](./CA-M2-45-110-ORCHESTRATION-HPC/)** - Job schedulers (HPC/K8s), resource QoS management, checkpoint/resume, reproducibility controls, observability/metrics
 
 #### Inference Serving
-- **CA-M2-45-120-INFERENCE-SERVING** - Model artifact stores, immutable runtimes, A/B testing, drift alerts, GPU/DSP dispatch
+- **[CA-M2-45-120-INFERENCE-SERVING](./CA-M2-45-120-INFERENCE-SERVING/)** - Model artifact stores, immutable runtimes, A/B testing, drift alerts, GPU/DSP dispatch
 
 #### Adapter Systems
-- **CA-M2-45-130-ROS2-SCADA-ADAPTERS** - OPC UA gateways, ROS 2 bridges, schema mapping, rate limiting/isolation, DET adapter logs
+- **[CA-M2-45-130-ROS2-SCADA-ADAPTERS](./CA-M2-45-130-ROS2-SCADA-ADAPTERS/)** - OPC UA gateways, ROS 2 bridges, schema mapping, rate limiting/isolation, DET adapter logs
 
 ### ATA 46 - Data & ML Platform (90-110)
 
 #### Data Platform
-- **CA-M2-46-90-DATA-PLATFORM** - Data catalogs, ETL/ELT pipelines, schema registries, quality gates, ledger writers
+- **[CA-M2-46-90-DATA-PLATFORM](./CA-M2-46-90-DATA-PLATFORM/)** - Data catalogs, ETL/ELT pipelines, schema registries, quality gates, ledger writers
 
 #### Training Pipelines
-- **CA-M2-46-100-TRAINING-PIPELINES** - Batch/stream training, distributed hyperparameter optimization (HPO), data prep/validation, metrics tracking
+- **[CA-M2-46-100-TRAINING-PIPELINES](./CA-M2-46-100-TRAINING-PIPELINES/)** - Batch/stream training, distributed hyperparameter optimization (HPO), data prep/validation, metrics tracking
 
 #### Model Registry
-- **CA-M2-46-110-MODEL-REGISTRY** - Versioning/stages, model SBOM, approval workflows, audit exports, reproducibility controls
+- **[CA-M2-46-110-MODEL-REGISTRY](./CA-M2-46-110-MODEL-REGISTRY/)** - Versioning/stages, model SBOM, approval workflows, audit exports, reproducibility controls
 
 ## Key Capabilities
 
