@@ -1,0 +1,98 @@
+# AMPEL360 H₂-BWB-Q Design Review Gates
+# REQ-DES-GOV-002 Evidence Artifact
+
+design_review_gates:
+  version: "1.0.0"
+  effective_date: "2025-08-29"
+  
+  gate_definitions:
+    system_requirements_review:
+      id: "SRR"
+      phase: "requirements"
+      completion_threshold: 95  # percent
+      decision_time_sla: 72  # hours
+      
+      entry_criteria:
+        - Stakeholder requirements collected (100%)
+        - Requirements traceability matrix established
+        - Initial risk assessment completed
+        - Standards compliance mapping done
+        
+      exit_criteria:
+        - System requirements baseline approved
+        - Requirements verification methods defined
+        - Risk register populated (≥90% risks identified)
+        - Technical performance measures established
+        
+      evidence_requirements:
+        completeness: 100  # percent
+        verification_coverage: 100  # percent
+        traceability_integrity: 100  # percent
+        
+    preliminary_design_review:
+      id: "PDR"
+      phase: "preliminary_design"
+      completion_threshold: 95  # percent
+      decision_time_sla: 72  # hours
+      
+      entry_criteria:
+        - System requirements approved
+        - Design concepts evaluated
+        - Technology readiness assessed
+        - Interface definitions preliminary
+        
+      exit_criteria:
+        - Preliminary design approved
+        - Interface control documents baseline
+        - Design verification plan approved
+        - Manufacturing feasibility confirmed
+        
+    critical_design_review:
+      id: "CDR"
+      phase: "detailed_design"
+      completion_threshold: 95  # percent
+      decision_time_sla: 72  # hours
+      
+      entry_criteria:
+        - Preliminary design approved
+        - Detailed analysis completed
+        - Component specifications finalized
+        - Manufacturing plans developed
+        
+      exit_criteria:
+        - Final design configuration approved
+        - Production readiness verified
+        - Quality plans established
+        - Configuration baseline locked
+        
+  gate_procedures:
+    preparation_phase:
+      duration_days: 14
+      deliverable_freeze: 7  # days before review
+      
+    review_execution:
+      presentation_duration: 4  # hours max
+      review_panel_size: 5-7  # members
+      technical_depth_requirement: "detailed"
+      
+    decision_process:
+      decision_options:
+        - "Proceed"
+        - "Proceed with Actions"
+        - "Conditional Proceed"
+        - "Repeat Review"
+        
+      action_item_resolution:
+        critical_actions: 30  # days
+        standard_actions: 60  # days
+        
+  success_metrics:
+    gate_pass_rate: 95  # percent target
+    first_time_pass_rate: 80  # percent target
+    decision_timing_adherence: 95  # percent target
+    evidence_completeness: 100  # percent required
+    
+  governance_oversight:
+    review_authority: "Design Review Board"
+    approval_authority: "Chief Engineer"
+    escalation_path: "Program Board"

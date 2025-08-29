@@ -1,0 +1,16 @@
+Risk_ID,Risk_Description,Category,Probability,Impact,Risk_Score,Status,Owner,Mitigation_Plan,Target_Date,Last_Review
+RSK-DES-001,Hydrogen system integration complexity,Technical,Medium,High,8,Open,Systems Engineer,Detailed interface analysis and testing protocol,2025-10-15,2025-08-29
+RSK-DES-002,Blended wing body aerodynamics uncertainty,Technical,Medium,High,8,Open,Aerodynamics Lead,Wind tunnel validation and CFD correlation,2025-09-30,2025-08-29
+RSK-DES-003,Certification authority acceptance,Regulatory,Low,Very High,7,Open,Certification Manager,Early engagement and pre-consultation,2025-09-15,2025-08-29
+RSK-DES-004,Fuel cell technology maturity,Technical,Medium,Medium,6,Open,Propulsion Engineer,Technology demonstration and supplier assessment,2025-10-01,2025-08-29
+RSK-DES-005,Weight and balance challenges,Technical,High,Medium,7,Open,Structures Lead,Detailed mass properties analysis,2025-09-20,2025-08-29
+RSK-DES-006,Environmental control system complexity,Technical,Medium,Medium,6,Open,Environmental Engineer,System architecture trade studies,2025-10-10,2025-08-29
+RSK-DES-007,Supply chain for specialized components,Commercial,Medium,High,8,Open,Supply Chain Manager,Supplier qualification and dual sourcing,2025-11-01,2025-08-29
+RSK-DES-008,Quantum computing integration challenges,Technical,High,Medium,7,Open,Computing Systems Lead,Proof of concept development,2025-12-01,2025-08-29
+RSK-DES-009,Maintenance accessibility in BWB configuration,Operational,Medium,Medium,6,Open,Maintenance Engineer,Maintainability analysis and design,2025-10-30,2025-08-29
+RSK-DES-010,Electromagnetic compatibility issues,Technical,Low,High,6,Open,EMC Engineer,Early EMC analysis and testing,2025-09-25,2025-08-29
+RSK-DES-011,Manufacturing feasibility for complex geometry,Manufacturing,Medium,High,8,Open,Manufacturing Engineer,Manufacturability assessment,2025-10-20,2025-08-29
+RSK-DES-012,Software integration and cybersecurity,Technical,Medium,High,8,Open,Software Manager,Security architecture design,2025-10-05,2025-08-29
+RSK-DES-013,Pilot training and certification requirements,Operational,Medium,Medium,6,Open,Training Manager,Training program development,2025-11-15,2025-08-29
+RSK-DES-014,Ground support equipment compatibility,Operational,Low,Medium,5,Open,GSE Engineer,Requirements definition and design,2025-10-15,2025-08-29
+RSK-DES-015,Noise certification compliance,Regulatory,Medium,High,8,Open,Acoustics Engineer,Noise prediction and mitigation,2025-09-30,2025-08-29

@@ -1,0 +1,77 @@
+# AMPEL360 H₂-BWB-Q Program Board Charter
+# REQ-DES-GOV-001 Evidence Artifact
+
+program_board:
+  name: "AMPEL360 H₂-BWB-Q Program Board"
+  charter_version: "1.0.0"
+  effective_date: "2025-08-29"
+  
+  authority_level: 3  # Level 3 Decision Rights
+  
+  composition:
+    voting_members: 7
+    required_roles:
+      - Program Manager (Chair)
+      - Chief Engineer
+      - Systems Engineering Lead
+      - Quality Manager
+      - Risk Manager
+      - Configuration Manager
+      - Customer Representative
+    
+  governance:
+    quorum_requirement: 75  # percent
+    meeting_frequency: "weekly"
+    decision_threshold: "majority"
+    
+    tie_break_mechanism:
+      authority: "Program Manager"
+      escalation_path: "Program Sponsor -> Executive Board"
+      
+  decision_rights:
+    level_3_authorities:
+      - Technical baseline approval
+      - Risk acceptance (medium level)
+      - Change request authorization ($100K-$1M)
+      - Resource allocation decisions
+      - Schedule milestone approval
+      - Supplier selection approval
+      
+  escalation_paths:
+    level_4_escalation:
+      triggers:
+        - Budget variance >10%
+        - Schedule slip >30 days
+        - Technical risk score >8
+        - Quality issues (safety impact)
+      authority: "Program Sponsor"
+      
+    level_5_escalation:
+      triggers:
+        - Program termination consideration
+        - Major contract changes
+        - Regulatory compliance issues
+      authority: "Executive Board"
+      
+  meeting_procedures:
+    standard_agenda:
+      - Risk review
+      - Schedule status
+      - Budget status
+      - Technical issues
+      - Change requests
+      - Action items review
+      
+    decision_timing:
+      target_sla: 72  # hours
+      critical_decisions: 24  # hours
+      
+  performance_metrics:
+    decision_timing_cpk: 1.33  # target
+    attendance_rate: 95  # percent target
+    action_closure_rate: 90  # percent target
+    
+  approval:
+    approved_by: "Program Sponsor"
+    approval_date: "2025-08-29"
+    next_review: "2025-11-29"
