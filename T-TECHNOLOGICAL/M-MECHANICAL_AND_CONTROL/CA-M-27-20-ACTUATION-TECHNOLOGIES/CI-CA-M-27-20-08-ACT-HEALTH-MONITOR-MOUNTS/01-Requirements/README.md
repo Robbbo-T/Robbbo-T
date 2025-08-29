@@ -1,4 +1,4 @@
-# Lifecycle Phase Documentation
+# 01 — Requirements
 
 This directory contains documentation and artifacts for this specific lifecycle phase of the component.
 

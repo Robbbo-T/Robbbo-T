@@ -1,0 +1,17 @@
+# CA-I-99-78: Sustainability Water
+
+Component Area: CA-I-99-78-SUSTAINABILITY-WATER
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-I-99-78-01-RAINWATER-HARVEST](./CI-CA-I-99-78-01-RAINWATER-HARVEST/)** - Component Implementation: CI-CA-I-99-78-01-RAINWATER-HARVEST
+- **[CI-CA-I-99-78-02-GREYWATER-REUSE](./CI-CA-I-99-78-02-GREYWATER-REUSE/)** - Component Implementation: CI-CA-I-99-78-02-GREYWATER-REUSE
+- **[CI-CA-I-99-78-03-HVAC-RECOVERY](./CI-CA-I-99-78-03-HVAC-RECOVERY/)** - Component Implementation: CI-CA-I-99-78-03-HVAC-RECOVERY
+- **[CI-CA-I-99-78-04-PV-CANOPIES](./CI-CA-I-99-78-04-PV-CANOPIES/)** - Component Implementation: CI-CA-I-99-78-04-PV-CANOPIES
+- **[CI-CA-I-99-78-05-LCA-KPIS](./CI-CA-I-99-78-05-LCA-KPIS/)** - Component Implementation: CI-CA-I-99-78-05-LCA-KPIS
+
+---
+
+**[← Back to I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](../)**

@@ -1,0 +1,22 @@
+# CA-A-57-20: Outboard Wing Transition
+
+Component Area: CA-A-57-20-OUTBOARD-WING-TRANSITION
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-A-57-20-01-OB-ROOT-JOINT](./CI-CA-A-57-20-01-OB-ROOT-JOINT/)** - Component Implementation: CI-CA-A-57-20-01-OB-ROOT-JOINT
+- **[CI-CA-A-57-20-02-OB-SPAR-CAPS](./CI-CA-A-57-20-02-OB-SPAR-CAPS/)** - Component Implementation: CI-CA-A-57-20-02-OB-SPAR-CAPS
+- **[CI-CA-A-57-20-03-OB-RIBS](./CI-CA-A-57-20-03-OB-RIBS/)** - Component Implementation: CI-CA-A-57-20-03-OB-RIBS
+- **[CI-CA-A-57-20-04-OB-LEADING-EDGE](./CI-CA-A-57-20-04-OB-LEADING-EDGE/)** - Component Implementation: CI-CA-A-57-20-04-OB-LEADING-EDGE
+- **[CI-CA-A-57-20-05-OB-TRAILING-EDGE](./CI-CA-A-57-20-05-OB-TRAILING-EDGE/)** - Component Implementation: CI-CA-A-57-20-05-OB-TRAILING-EDGE
+- **[CI-CA-A-57-20-06-OB-PANEL-JOINS](./CI-CA-A-57-20-06-OB-PANEL-JOINS/)** - Component Implementation: CI-CA-A-57-20-06-OB-PANEL-JOINS
+- **[CI-CA-A-57-20-07-OB-SYSTEMS-ROUTING](./CI-CA-A-57-20-07-OB-SYSTEMS-ROUTING/)** - Component Implementation: CI-CA-A-57-20-07-OB-SYSTEMS-ROUTING
+- **[CI-CA-A-57-20-08-OB-FAIRINGS](./CI-CA-A-57-20-08-OB-FAIRINGS/)** - Component Implementation: CI-CA-A-57-20-08-OB-FAIRINGS
+- **[CI-CA-A-57-20-09-OB-LPS](./CI-CA-A-57-20-09-OB-LPS/)** - Component Implementation: CI-CA-A-57-20-09-OB-LPS
+- **[CI-CA-A-57-20-10-OB-INSPECTION-PANELS](./CI-CA-A-57-20-10-OB-INSPECTION-PANELS/)** - Component Implementation: CI-CA-A-57-20-10-OB-INSPECTION-PANELS
+
+---
+
+**[← Back to A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](../)**

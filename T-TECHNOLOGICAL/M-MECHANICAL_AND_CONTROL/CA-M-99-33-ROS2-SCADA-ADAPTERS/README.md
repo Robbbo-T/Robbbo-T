@@ -1,0 +1,17 @@
+# CA-M-99-33: Ros2 Scada Adapters
+
+Component Area: CA-M-99-33-ROS2-SCADA-ADAPTERS
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-M-99-33-01-OPC-UA-GATEWAYS](./CI-CA-M-99-33-01-OPC-UA-GATEWAYS/)** - Component Implementation: CI-CA-M-99-33-01-OPC-UA-GATEWAYS
+- **[CI-CA-M-99-33-02-ROS2-BRIDGES](./CI-CA-M-99-33-02-ROS2-BRIDGES/)** - Component Implementation: CI-CA-M-99-33-02-ROS2-BRIDGES
+- **[CI-CA-M-99-33-03-SCHEMA-MAPPING](./CI-CA-M-99-33-03-SCHEMA-MAPPING/)** - Component Implementation: CI-CA-M-99-33-03-SCHEMA-MAPPING
+- **[CI-CA-M-99-33-04-RATE-LIMIT-ISOLATION](./CI-CA-M-99-33-04-RATE-LIMIT-ISOLATION/)** - Component Implementation: CI-CA-M-99-33-04-RATE-LIMIT-ISOLATION
+- **[CI-CA-M-99-33-05-DET-ADAPTER-LOGS](./CI-CA-M-99-33-05-DET-ADAPTER-LOGS/)** - Component Implementation: CI-CA-M-99-33-05-DET-ADAPTER-LOGS
+
+---
+
+**[← Back to M-MECHANICAL_AND_CONTROL](../)**

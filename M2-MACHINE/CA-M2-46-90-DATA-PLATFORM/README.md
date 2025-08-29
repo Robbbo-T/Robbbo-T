@@ -1,0 +1,17 @@
+# CA-M2-46-90: Data Platform
+
+Component Area: CA-M2-46-90-DATA-PLATFORM
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-M2-46-90-01-DATA-CATALOG](./CI-CA-M2-46-90-01-DATA-CATALOG/)** - Component Implementation: CI-CA-M2-46-90-01-DATA-CATALOG
+- **[CI-CA-M2-46-90-02-PIPELINES-ETL-ELT](./CI-CA-M2-46-90-02-PIPELINES-ETL-ELT/)** - Component Implementation: CI-CA-M2-46-90-02-PIPELINES-ETL-ELT
+- **[CI-CA-M2-46-90-03-SCHEMA-REGISTRY](./CI-CA-M2-46-90-03-SCHEMA-REGISTRY/)** - Component Implementation: CI-CA-M2-46-90-03-SCHEMA-REGISTRY
+- **[CI-CA-M2-46-90-04-QUALITY-GATES](./CI-CA-M2-46-90-04-QUALITY-GATES/)** - Component Implementation: CI-CA-M2-46-90-04-QUALITY-GATES
+- **[CI-CA-M2-46-90-05-LEDGER-WRITERS](./CI-CA-M2-46-90-05-LEDGER-WRITERS/)** - Component Implementation: CI-CA-M2-46-90-05-LEDGER-WRITERS
+
+---
+
+**[← Back to M2-MACHINE](../)**
