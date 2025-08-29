@@ -1,0 +1,4 @@
+# CA-P-011-TRAINING-AND-COMPETENCE
+
+## Overview
+Process framework for TRAINING-AND-COMPETENCE in the AMPEL360 H2 BWB QNNN program.
