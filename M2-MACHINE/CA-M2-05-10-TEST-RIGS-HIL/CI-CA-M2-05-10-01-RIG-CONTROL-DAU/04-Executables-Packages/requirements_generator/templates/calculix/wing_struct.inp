@@ -1,0 +1,48 @@
+*HEADING
+H2-BWB-Q Structural Analysis Template
+**
+** Basic structural model for requirements validation
+**
+*NODE
+1, 0.0, 0.0, 0.0
+2, 1.0, 0.0, 0.0
+3, 1.0, 1.0, 0.0
+4, 0.0, 1.0, 0.0
+5, 0.0, 0.0, 1.0
+6, 1.0, 0.0, 1.0
+7, 1.0, 1.0, 1.0
+8, 0.0, 1.0, 1.0
+**
+*ELEMENT, TYPE=C3D8, ELSET=WING_STRUCT
+1, 1, 2, 3, 4, 5, 6, 7, 8
+**
+** Material properties - Aluminum 5083 (H2 compatible)
+*MATERIAL, NAME=AL5083
+*ELASTIC
+70000.0, 0.33
+*DENSITY
+2650.0
+**
+** Section properties
+*SOLID SECTION, ELSET=WING_STRUCT, MATERIAL=AL5083
+**
+** Boundary conditions
+*NSET, NSET=FIXED
+1, 4, 5, 8
+*NSET, NSET=LOADED
+2, 3, 6, 7
+**
+*STEP, NAME=STATIC_LOAD
+*STATIC
+*BOUNDARY
+FIXED, 1, 3, 0.0
+*CLOAD
+LOADED, 3, 1000.0
+**
+** Output requests
+*NODE FILE
+U
+*EL FILE
+S, E
+**
+*END STEP

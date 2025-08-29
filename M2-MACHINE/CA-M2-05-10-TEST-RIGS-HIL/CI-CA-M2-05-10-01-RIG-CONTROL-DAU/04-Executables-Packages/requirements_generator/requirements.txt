@@ -1,0 +1,30 @@
+# Requirements Generator Dependencies
+# Core dependencies
+pyyaml>=6.0
+dataclasses-json>=0.5.9
+
+# Optional dependencies for external solver integration
+# (These would be needed if actual solvers are used)
+# Note: OpenFOAM and CalculiX are external packages not available via pip
+
+# For regulatory data fetching
+requests>=2.28.0
+lxml>=4.9.0
+
+# For enhanced error handling and logging
+colorlog>=6.7.0
+
+# For configuration management
+configparser>=5.3.0
+
+# For data validation
+jsonschema>=4.17.0
+
+# For scientific computing (if needed for post-processing)
+numpy>=1.21.0
+scipy>=1.9.0
+
+# For testing (development)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0

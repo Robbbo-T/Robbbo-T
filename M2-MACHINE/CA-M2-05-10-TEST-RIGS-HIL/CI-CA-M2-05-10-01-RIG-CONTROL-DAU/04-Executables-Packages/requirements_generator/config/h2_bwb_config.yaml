@@ -1,0 +1,67 @@
+# H2-BWB-Q Configuration for Requirements Generator
+project:
+  name: "H2-BWB-Q"
+  version: "1.0.0"
+  description: "Hydrogen-powered Blended Wing Body aircraft requirements"
+  standards:
+    - "CS-25"
+    - "FAR-25"
+    - "RTCA-DO-178C"
+    - "ASTM F3022"
+
+validation:
+  physics_domains:
+    - "aerodynamic"
+    - "structural"
+    - "thermal"
+    - "hydrogen"
+  
+  safety_factors:
+    structural: 1.5
+    pressure: 2.0
+    temperature: 1.2
+    hydrogen_embrittlement: 2.5
+  
+  material_limits:
+    max_stress_ratio: 0.67  # % of yield strength
+    max_temperature: 150    # Celsius for H2 service
+    max_permeation_rate: 1e-17  # mol/m²/s/Pa
+
+solvers:
+  cfd:
+    executable: "simpleFoam"
+    timeout: 600
+    convergence_criteria: 1e-5
+    
+  fea:
+    executable: "ccx"
+    timeout: 900
+    convergence_criteria: 1e-6
+    
+  thermal:
+    timeout: 300
+    max_iterations: 1000
+
+templates:
+  openfoam_dir: "templates/openfoam/"
+  calculix_dir: "templates/calculix/"
+  
+output:
+  format: "json"
+  include_validation_details: true
+  generate_reports: true
+  
+plugins:
+  enabled:
+    - "h2_compatibility"
+  
+regulatory:
+  sources:
+    cs25: "regulatory/cs25_amendment_28.xml"
+    far25: "regulatory/far25_latest.json"
+    
+logging:
+  level: "INFO"
+  file: "requirements_generator.log"
+  max_size: "10MB"
+  backup_count: 3
