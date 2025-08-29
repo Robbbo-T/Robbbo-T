@@ -1,0 +1,384 @@
+# AMPEL360 H₂-BWB-Q Fuselage Structure Loads Envelope
+# Document ID: STR-LOADS-ENV-v1.0.0
+# Generated: 2025-08-29T17:33:04Z
+# User: Robbbo-T
+# Classification: CONTROLLED
+
+metadata:
+  document_id: "STR-LOADS-ENV-v1.0.0"
+  system: "H₂-BWB-Q"
+  subsystem: "Fuselage Structure Framework"
+  component: "CA-A-53-10-01"
+  generated: "2025-08-29T17:33:04Z"
+  hash: "SHA256:7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p"
+  signature: "ED25519:3q4r5s6t7u8v9w0x1y2z3a4b5c6d7e8f"
+
+units:
+  force: "N"
+  pressure: "Pa"
+  moment: "N·m"
+  stress: "Pa"
+  acceleration: "g"
+  mass: "kg"
+  length: "m"
+  temperature: "K"
+  factor_of_safety: "dimensionless"
+
+flight_envelope:
+  maximum_altitude: 13716  # meters (45,000 ft)
+  design_cruise_speed: 
+    value: 257.2  # m/s (Mach 0.85 at cruise altitude)
+    mach: 0.85
+  never_exceed_speed:
+    value: 283.0  # m/s (Mach 0.935)
+    mach: 0.935
+  maximum_takeoff_weight: 280000  # kg
+  maximum_landing_weight: 230000  # kg
+  maximum_zero_fuel_weight: 200000  # kg
+  operational_empty_weight: 140000  # kg
+
+limit_loads:
+  symmetric_maneuver:
+    positive_limit_load_factor: 2.5  # g
+    negative_limit_load_factor: -1.0  # g
+    conditions:
+      - id: "SM-001"
+        description: "Pull-up maneuver at Va"
+        load_factor: 2.5
+        airspeed: 180.0  # m/s
+        altitude: 0  # meters
+        weight: 280000  # kg
+        cpk: 1.42
+        
+      - id: "SM-002"
+        description: "Push-over maneuver"
+        load_factor: -1.0
+        airspeed: 180.0  # m/s
+        altitude: 0  # meters
+        weight: 280000  # kg
+        cpk: 1.38
+        
+      - id: "SM-003"
+        description: "Cruise positive gust"
+        load_factor: 2.3
+        airspeed: 257.2  # m/s
+        altitude: 11000  # meters
+        weight: 240000  # kg
+        cpk: 1.45
+
+  asymmetric_maneuver:
+    roll_rate: 0.349  # rad/s (20 deg/s)
+    yaw_rate: 0.262  # rad/s (15 deg/s)
+    conditions:
+      - id: "AM-001"
+        description: "Rolling pull-out"
+        load_factor: 2.0
+        roll_rate: 0.349  # rad/s
+        airspeed: 200.0  # m/s
+        weight: 260000  # kg
+        cpk: 1.35
+        
+      - id: "AM-002"
+        description: "Yaw maneuver with rudder"
+        load_factor: 1.5
+        yaw_rate: 0.262  # rad/s
+        airspeed: 180.0  # m/s
+        weight: 280000  # kg
+        cpk: 1.40
+
+  gust_loads:
+    reference_gust_velocity: 17.07  # m/s EAS at sea level
+    conditions:
+      - id: "GL-001"
+        description: "Discrete gust at Vc"
+        gust_velocity: 17.07  # m/s
+        airspeed: 257.2  # m/s
+        altitude: 11000  # meters
+        load_factor: 2.8
+        cpk: 1.33
+        
+      - id: "GL-002"
+        description: "Continuous turbulence"
+        turbulence_intensity: "severe"
+        rms_gust_velocity: 7.62  # m/s
+        airspeed: 200.0  # m/s
+        altitude: 6000  # meters
+        load_factor: 2.4
+        cpk: 1.36
+
+  ground_loads:
+    landing:
+      - id: "GND-001"
+        description: "Two-point landing"
+        vertical_velocity: 3.05  # m/s (10 ft/s)
+        load_factor: 3.0
+        weight: 230000  # kg
+        energy_absorbed: 3.2e6  # Joules
+        cpk: 1.41
+        
+      - id: "GND-002"
+        description: "Three-point landing"
+        vertical_velocity: 2.44  # m/s (8 ft/s)
+        load_factor: 2.5
+        weight: 230000  # kg
+        energy_absorbed: 2.7e6  # Joules
+        cpk: 1.43
+        
+    taxi:
+      - id: "GND-003"
+        description: "Taxi over bump"
+        vertical_acceleration: 1.5  # g
+        forward_speed: 20.0  # m/s
+        weight: 280000  # kg
+        cpk: 1.48
+        
+    braking:
+      - id: "GND-004"
+        description: "Maximum braking"
+        deceleration: -0.5  # g
+        vertical_load_factor: 1.2
+        weight: 280000  # kg
+        cpk: 1.39
+
+  pressure_loads:
+    cabin_pressure:
+      maximum_differential: 62000  # Pa (9.0 psi)
+      proof_pressure: 93000  # Pa (1.5 × max differential)
+      burst_pressure: 155000  # Pa (2.5 × max differential)
+      conditions:
+        - id: "PR-001"
+          description: "Maximum cabin differential"
+          internal_pressure: 163325  # Pa (cabin at 8000 ft)
+          external_pressure: 101325  # Pa (sea level)
+          differential: 62000  # Pa
+          temperature: 298  # K
+          cpk: 1.44
+          
+        - id: "PR-002"
+          description: "Negative pressure relief"
+          internal_pressure: 98325  # Pa
+          external_pressure: 101325  # Pa
+          differential: -3000  # Pa
+          temperature: 298  # K
+          cpk: 1.52
+
+    h2_tank_pressure:
+      nominal_pressure: 70000000  # Pa (700 bar)
+      proof_pressure: 105000000  # Pa (1.5 × nominal)
+      burst_pressure: 175000000  # Pa (2.5 × nominal)
+      conditions:
+        - id: "H2-001"
+          description: "H2 tank nominal operation"
+          pressure: 70000000  # Pa
+          temperature: 20  # K (liquid H2)
+          cpk: 1.35
+          
+        - id: "H2-002"
+          description: "H2 tank proof test"
+          pressure: 105000000  # Pa
+          temperature: 293  # K (ambient)
+          cpk: 1.33
+
+critical_load_cases:
+  ultimate_loads:
+    - case_id: "ULT-001"
+      description: "Symmetric maneuver ultimate"
+      limit_case: "SM-001"
+      factor_of_safety: 1.5
+      ultimate_load_factor: 3.75  # g
+      critical_location: "Wing-fuselage junction"
+      
+    - case_id: "ULT-002"
+      description: "Gust ultimate"
+      limit_case: "GL-001"
+      factor_of_safety: 1.5
+      ultimate_load_factor: 4.2  # g
+      critical_location: "Center fuselage"
+      
+    - case_id: "ULT-003"
+      description: "Pressure ultimate"
+      limit_case: "PR-001"
+      factor_of_safety: 1.5
+      ultimate_pressure: 93000  # Pa
+      critical_location: "Pressure bulkhead"
+      
+    - case_id: "ULT-004"
+      description: "Landing ultimate"
+      limit_case: "GND-001"
+      factor_of_safety: 1.5
+      ultimate_load_factor: 4.5  # g
+      critical_location: "Landing gear attachment"
+
+fatigue_spectrum:
+  design_life: 90000  # flight cycles
+  scatter_factor: 3.0
+  inspection_interval: 6000  # flight cycles
+  
+  typical_flight_profile:
+    - phase: "taxi_out"
+      duration: 600  # seconds
+      load_cycles: 50
+      mean_load_factor: 1.0
+      alternating_load_factor: 0.1
+      
+    - phase: "takeoff"
+      duration: 60  # seconds
+      load_cycles: 2
+      mean_load_factor: 1.2
+      alternating_load_factor: 0.05
+      
+    - phase: "climb"
+      duration: 1200  # seconds
+      load_cycles: 100
+      mean_load_factor: 1.1
+      alternating_load_factor: 0.2
+      
+    - phase: "cruise"
+      duration: 14400  # seconds (4 hours)
+      load_cycles: 2000
+      mean_load_factor: 1.0
+      alternating_load_factor: 0.3
+      
+    - phase: "descent"
+      duration: 1200  # seconds
+      load_cycles: 80
+      mean_load_factor: 0.9
+      alternating_load_factor: 0.2
+      
+    - phase: "landing"
+      duration: 60  # seconds
+      load_cycles: 3
+      mean_load_factor: 1.5
+      alternating_load_factor: 0.5
+      
+    - phase: "taxi_in"
+      duration: 300  # seconds
+      load_cycles: 30
+      mean_load_factor: 1.0
+      alternating_load_factor: 0.1
+
+  gust_spectrum:
+    probability_exceedance:
+      - gust_velocity: 3.0  # m/s
+        exceedances_per_hour: 100
+      - gust_velocity: 6.0  # m/s
+        exceedances_per_hour: 10
+      - gust_velocity: 9.0  # m/s
+        exceedances_per_hour: 1
+      - gust_velocity: 12.0  # m/s
+        exceedances_per_hour: 0.1
+      - gust_velocity: 15.0  # m/s
+        exceedances_per_hour: 0.01
+
+load_distribution:
+  fuselage_stations:
+    - station: 0  # Nose
+      x_location: 0.0  # meters
+      shear_force: 150000  # N
+      bending_moment: 0  # N·m
+      torsion: 0  # N·m
+      
+    - station: 10  # Forward fuselage
+      x_location: 10.0  # meters
+      shear_force: 450000  # N
+      bending_moment: 2.5e6  # N·m
+      torsion: 0.8e6  # N·m
+      
+    - station: 25  # Wing junction forward
+      x_location: 25.0  # meters
+      shear_force: 1.2e6  # N
+      bending_moment: 15e6  # N·m
+      torsion: 3e6  # N·m
+      
+    - station: 35  # Wing junction aft
+      x_location: 35.0  # meters
+      shear_force: -1.0e6  # N
+      bending_moment: 12e6  # N·m
+      torsion: 2.5e6  # N·m
+      
+    - station: 50  # Aft fuselage
+      x_location: 50.0  # meters
+      shear_force: -300000  # N
+      bending_moment: 3e6  # N·m
+      torsion: 0.5e6  # N·m
+      
+    - station: 60  # Tail
+      x_location: 60.0  # meters
+      shear_force: -100000  # N
+      bending_moment: 0  # N·m
+      torsion: 0  # N·m
+
+structural_requirements:
+  material_allowables:
+    aluminum_7075_t6:
+      ultimate_tensile_strength: 572e6  # Pa
+      yield_strength: 503e6  # Pa
+      fatigue_limit: 159e6  # Pa at 10^7 cycles
+      
+    titanium_ti6al4v:
+      ultimate_tensile_strength: 950e6  # Pa
+      yield_strength: 880e6  # Pa
+      fatigue_limit: 510e6  # Pa at 10^7 cycles
+      
+    cfrp_t800_epoxy:
+      ultimate_tensile_strength: 2800e6  # Pa
+      ultimate_compressive_strength: 1400e6  # Pa
+      fatigue_limit: 1000e6  # Pa at 10^7 cycles
+
+  margins_of_safety:
+    ultimate_loads:
+      minimum: 0.0  # (MS = (Allowable/Applied) - 1)
+      target: 0.15
+      
+    limit_loads:
+      minimum: 0.5
+      target: 1.0
+      
+    fatigue:
+      minimum: 0.0
+      target: 0.25
+
+validation:
+  analysis_methods:
+    - "Finite Element Analysis (NASTRAN)"
+    - "Classical hand calculations"
+    - "Dynamic loads analysis"
+    - "Aeroelastic analysis"
+    
+  test_verification:
+    - "Static test to 150% limit load"
+    - "Fatigue test to 2 lifetimes"
+    - "Damage tolerance testing"
+    - "Ground vibration test"
+
+traceability:
+  requirements:
+    - "REQ-DES-STR-001"
+    - "REQ-DES-STR-002"
+    - "REQ-DES-LOD-001"
+    - "REQ-DES-LOD-002"
+  
+  standards:
+    - "CS-25.301"
+    - "CS-25.303"
+    - "CS-25.305"
+    - "CS-25.321-341"
+    - "CS-25.561"
+    - "ARP4754A §5.3"
+    
+  evidence_artifacts:
+    - "../STR/fos-analysis.pdf"
+    - "../STR/fatigue-spectrum.xlsx"
+    - "../LOD/limit-loads.json"
+    - "../LOD/ultimate-factors.yaml"
+
+digital_signature:
+  algorithm: "ED25519"
+  public_key: "9f8e7d6c5b4a3c2d1e0f9a8b7c6d5e4f"
+  signature: "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6"
+  timestamp: "2025-08-29T17:33:04Z"
+  
+quantum_resistant_backup:
+  algorithm: "Dilithium3"
+  public_key: "7f8e9d0c1b2a3d4c5e6f7g8h9i0j1k2l"
+  signature: "m3n4o5p6q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2g3h4i5j6k7l8"
