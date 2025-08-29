@@ -19,11 +19,7 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ## What I'm building
 
-Of course. Based on the comprehensive descriptions provided, here is a formalized and structured definition of the AMPEL360-BWB-Q program and its constituent systems.
-
----
-
-### **Formalization: The AMPEL360-BWB-Q Program**
+### **The AMPEL360-BWB-Q Program**
 
 **Program Name:** AMPEL360-BWB-Q
 **Program Type:** Integrated Aerospace Development Program
