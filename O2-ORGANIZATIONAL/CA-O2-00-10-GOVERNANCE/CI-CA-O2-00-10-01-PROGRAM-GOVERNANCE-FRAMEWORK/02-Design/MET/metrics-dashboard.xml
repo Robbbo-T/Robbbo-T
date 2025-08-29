@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AMPEL360 H₂-BWB-Q Design Metrics Dashboard Configuration -->
+<!-- REQ-DES-MET-001 Evidence Artifact -->
+
+<metrics_dashboard>
+  <header>
+    <document_id>MET-DASH-v1.0.0</document_id>
+    <effective_date>2025-08-29</effective_date>
+    <classification>CONTROLLED</classification>
+    <update_frequency>24</update_frequency> <!-- hours -->
+  </header>
+  
+  <system_configuration>
+    <data_sources>
+      <source id="plm_system" type="Product Lifecycle Management">
+        <connection_string>https://plm.ampel360.com/api/v1</connection_string>
+        <refresh_interval>1</refresh_interval> <!-- hours -->
+        <data_completeness_threshold>98</data_completeness_threshold> <!-- percent -->
+      </source>
+      <source id="project_management" type="Project Management">
+        <connection_string>https://pm.ampel360.com/api/v2</connection_string>
+        <refresh_interval>2</refresh_interval> <!-- hours -->
+        <data_completeness_threshold>98</data_completeness_threshold> <!-- percent -->
+      </source>
+      <source id="risk_management" type="Risk Management">
+        <connection_string>https://risk.ampel360.com/api/v1</connection_string>
+        <refresh_interval>4</refresh_interval> <!-- hours -->
+        <data_completeness_threshold>98</data_completeness_threshold> <!-- percent -->
+      </source>
+      <source id="quality_system" type="Quality Management">
+        <connection_string>https://qms.ampel360.com/api/v1</connection_string>
+        <refresh_interval>6</refresh_interval> <!-- hours -->
+        <data_completeness_threshold>98</data_completeness_threshold> <!-- percent -->
+      </source>
+    </data_sources>
+    
+    <availability_requirements>
+      <target_availability>99.5</target_availability> <!-- percent -->
+      <maximum_downtime>3.6</maximum_downtime> <!-- hours per month -->
+      <recovery_time_objective>15</recovery_time_objective> <!-- minutes -->
+      <backup_frequency>4</backup_frequency> <!-- hours -->
+    </availability_requirements>
+  </system_configuration>
+  
+  <dashboard_panels>
+    <panel id="program_health" priority="1">
+      <title>Program Health Overview</title>
+      <metrics>
+        <metric name="overall_health_score" unit="percent" target="90">
+          <calculation>weighted_average(schedule_health, budget_health, risk_health, quality_health)</calculation>
+          <weights>schedule=0.3,budget=0.3,risk=0.2,quality=0.2</weights>
+        </metric>
+        <metric name="schedule_performance_index" unit="dimensionless" target="1.0">
+          <source>project_management</source>
+          <calculation>earned_value / planned_value</calculation>
+        </metric>
+        <metric name="cost_performance_index" unit="dimensionless" target="1.0">
+          <source>project_management</source>
+          <calculation>earned_value / actual_cost</calculation>
+        </metric>
+      </metrics>
+      <refresh_rate>1</refresh_rate> <!-- hours -->
+    </panel>
+    
+    <panel id="design_progress" priority="2">
+      <title>Design Progress Metrics</title>
+      <metrics>
+        <metric name="requirements_completion" unit="percent" target="100">
+          <source>plm_system</source>
+          <calculation>approved_requirements / total_requirements * 100</calculation>
+        </metric>
+        <metric name="design_maturity" unit="percent" target="95">
+          <source>plm_system</source>
+          <calculation>completed_designs / total_designs * 100</calculation>
+        </metric>
+        <metric name="interface_definition_status" unit="percent" target="100">
+          <source>plm_system</source>
+          <calculation>defined_interfaces / total_interfaces * 100</calculation>
+        </metric>
+        <metric name="verification_plan_completion" unit="percent" target="100">
+          <source>plm_system</source>
+          <calculation>completed_vv_plans / total_vv_plans * 100</calculation>
+        </metric>
+      </metrics>
+      <refresh_rate>2</refresh_rate> <!-- hours -->
+    </panel>
+    
+    <panel id="risk_management" priority="3">
+      <title>Risk Management Metrics</title>
+      <metrics>
+        <metric name="high_risk_count" unit="count" target="0">
+          <source>risk_management</source>
+          <calculation>count(risk_score >= 8)</calculation>
+        </metric>
+        <metric name="medium_risk_count" unit="count" target="&lt;5">
+          <source>risk_management</source>
+          <calculation>count(risk_score >= 6 AND risk_score &lt; 8)</calculation>
+        </metric>
+        <metric name="risk_mitigation_effectiveness" unit="percent" target="95">
+          <source>risk_management</source>
+          <calculation>successful_mitigations / total_mitigations * 100</calculation>
+        </metric>
+        <metric name="overdue_actions" unit="count" target="0">
+          <source>risk_management</source>
+          <calculation>count(action_due_date &lt; current_date AND status != 'closed')</calculation>
+        </metric>
+      </metrics>
+      <refresh_rate>4</refresh_rate> <!-- hours -->
+    </panel>
+    
+    <panel id="quality_metrics" priority="4">
+      <title>Quality Performance</title>
+      <metrics>
+        <metric name="design_review_pass_rate" unit="percent" target="95">
+          <source>quality_system</source>
+          <calculation>passed_reviews / total_reviews * 100</calculation>
+        </metric>
+        <metric name="rework_percentage" unit="percent" target="&lt;5">
+          <source>quality_system</source>
+          <calculation>rework_items / total_deliverables * 100</calculation>
+        </metric>
+        <metric name="document_control_compliance" unit="percent" target="100">
+          <source>quality_system</source>
+          <calculation>compliant_documents / total_documents * 100</calculation>
+        </metric>
+        <metric name="audit_findings_open" unit="count" target="0">
+          <source>quality_system</source>
+          <calculation>count(finding_status = 'open')</calculation>
+        </metric>
+      </metrics>
+      <refresh_rate>6</refresh_rate> <!-- hours -->
+    </panel>
+    
+    <panel id="change_management" priority="5">
+      <title>Change Management</title>
+      <metrics>
+        <metric name="change_request_cycle_time" unit="hours" target="&lt;120">
+          <source>plm_system</source>
+          <calculation>average(approval_date - submission_date)</calculation>
+        </metric>
+        <metric name="change_approval_rate" unit="percent" target="80">
+          <source>plm_system</source>
+          <calculation>approved_changes / total_changes * 100</calculation>
+        </metric>
+        <metric name="pending_changes" unit="count" target="&lt;10">
+          <source>plm_system</source>
+          <calculation>count(change_status = 'pending')</calculation>
+        </metric>
+      </metrics>
+      <refresh_rate>8</refresh_rate> <!-- hours -->
+    </panel>
+  </dashboard_panels>
+  
+  <alerting_system>
+    <alerts>
+      <alert id="data_completeness" severity="high">
+        <condition>data_completeness &lt; 98</condition>
+        <notification>immediate</notification>
+        <recipients>Data Manager, IT Support</recipients>
+      </alert>
+      <alert id="system_availability" severity="critical">
+        <condition>availability &lt; 99.5</condition>
+        <notification>immediate</notification>
+        <recipients>System Administrator, Dashboard Owner</recipients>
+      </alert>
+      <alert id="metric_threshold" severity="medium">
+        <condition>any_metric_outside_threshold</condition>
+        <notification>daily_summary</notification>
+        <recipients>Program Manager, Functional Leads</recipients>
+      </alert>
+    </alerts>
+  </alerting_system>
+  
+  <reporting_configuration>
+    <automated_reports>
+      <report id="daily_metrics" frequency="daily">
+        <time>08:00</time>
+        <recipients>Program Manager, Functional Leads</recipients>
+        <content>dashboard_summary, exceptions, trends</content>
+      </report>
+      <report id="weekly_executive" frequency="weekly">
+        <time>Monday 09:00</time>
+        <recipients>Program Sponsor, Executive Team</recipients>
+        <content>executive_summary, key_metrics, actions_required</content>
+      </report>
+    </automated_reports>
+  </reporting_configuration>
+  
+  <performance_requirements>
+    <data_accuracy>98</data_accuracy> <!-- percent minimum -->
+    <system_availability>99.5</system_availability> <!-- percent minimum -->
+    <response_time>3</response_time> <!-- seconds maximum -->
+    <data_latency>1</data_latency> <!-- hours maximum -->
+  </performance_requirements>
+  
+  <governance>
+    <owner>Data Manager</owner>
+    <approval_authority>Program Manager</approval_authority>
+    <review_frequency>monthly</review_frequency>
+    <update_authority>Dashboard Administrator</update_authority>
+  </governance>
+</metrics_dashboard>
