@@ -1,0 +1,17 @@
+# CA-L2-23-10: Vhf Uhf Hf Comms
+
+Component Area: CA-L2-23-10-VHF-UHF-HF-COMMS
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-L2-23-10-01-VHF-AM-VOICE](./CI-CA-L2-23-10-01-VHF-AM-VOICE/)** - Component Implementation: CI-CA-L2-23-10-01-VHF-AM-VOICE
+- **[CI-CA-L2-23-10-02-UHF-AM-OPS](./CI-CA-L2-23-10-02-UHF-AM-OPS/)** - Component Implementation: CI-CA-L2-23-10-02-UHF-AM-OPS
+- **[CI-CA-L2-23-10-03-HF-SSB-DATALINK](./CI-CA-L2-23-10-03-HF-SSB-DATALINK/)** - Component Implementation: CI-CA-L2-23-10-03-HF-SSB-DATALINK
+- **[CI-CA-L2-23-10-04-SELCAL-CODING](./CI-CA-L2-23-10-04-SELCAL-CODING/)** - Component Implementation: CI-CA-L2-23-10-04-SELCAL-CODING
+- **[CI-CA-L2-23-10-05-EMERG-CHAN-PROFILES](./CI-CA-L2-23-10-05-EMERG-CHAN-PROFILES/)** - Component Implementation: CI-CA-L2-23-10-05-EMERG-CHAN-PROFILES
+
+---
+
+**[← Back to L2-LINKS_AND_COMMUNICATIONS](../)**

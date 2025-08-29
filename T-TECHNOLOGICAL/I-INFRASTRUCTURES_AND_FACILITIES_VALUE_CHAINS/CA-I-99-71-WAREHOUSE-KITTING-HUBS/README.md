@@ -1,0 +1,17 @@
+# CA-I-99-71: Warehouse Kitting Hubs
+
+Component Area: CA-I-99-71-WAREHOUSE-KITTING-HUBS
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-I-99-71-01-DOCKS-STAGING](./CI-CA-I-99-71-01-DOCKS-STAGING/)** - Component Implementation: CI-CA-I-99-71-01-DOCKS-STAGING
+- **[CI-CA-I-99-71-02-AUTOSTORE-ROBOTICS](./CI-CA-I-99-71-02-AUTOSTORE-ROBOTICS/)** - Component Implementation: CI-CA-I-99-71-02-AUTOSTORE-ROBOTICS
+- **[CI-CA-I-99-71-03-ULD-RACKS-TUG-ROUTES](./CI-CA-I-99-71-03-ULD-RACKS-TUG-ROUTES/)** - Component Implementation: CI-CA-I-99-71-03-ULD-RACKS-TUG-ROUTES
+- **[CI-CA-I-99-71-04-HAZMAT-ROOMS](./CI-CA-I-99-71-04-HAZMAT-ROOMS/)** - Component Implementation: CI-CA-I-99-71-04-HAZMAT-ROOMS
+- **[CI-CA-I-99-71-05-WMS-EDI](./CI-CA-I-99-71-05-WMS-EDI/)** - Component Implementation: CI-CA-I-99-71-05-WMS-EDI
+
+---
+
+**[← Back to I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](../)**

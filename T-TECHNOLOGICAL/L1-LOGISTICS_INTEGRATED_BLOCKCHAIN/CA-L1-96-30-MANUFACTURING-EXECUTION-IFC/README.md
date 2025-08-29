@@ -1,0 +1,17 @@
+# CA-L1-96-30: Manufacturing Execution Ifc
+
+Component Area: CA-L1-96-30-MANUFACTURING-EXECUTION-IFC
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-L1-96-30-01-WO-RTE-MES-BRIDGE](./CI-CA-L1-96-30-01-WO-RTE-MES-BRIDGE/)** - Component Implementation: CI-CA-L1-96-30-01-WO-RTE-MES-BRIDGE
+- **[CI-CA-L1-96-30-02-OPC-UA-SCADA](./CI-CA-L1-96-30-02-OPC-UA-SCADA/)** - Component Implementation: CI-CA-L1-96-30-02-OPC-UA-SCADA
+- **[CI-CA-L1-96-30-03-WIP-TRACK-ANDON](./CI-CA-L1-96-30-03-WIP-TRACK-ANDON/)** - Component Implementation: CI-CA-L1-96-30-03-WIP-TRACK-ANDON
+- **[CI-CA-L1-96-30-04-KANBAN-KITTING](./CI-CA-L1-96-30-04-KANBAN-KITTING/)** - Component Implementation: CI-CA-L1-96-30-04-KANBAN-KITTING
+- **[CI-CA-L1-96-30-05-MES-DET-STAMPS](./CI-CA-L1-96-30-05-MES-DET-STAMPS/)** - Component Implementation: CI-CA-L1-96-30-05-MES-DET-STAMPS
+
+---
+
+**[← Back to L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](../)**

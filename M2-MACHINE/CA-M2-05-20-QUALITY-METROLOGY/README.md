@@ -1,0 +1,17 @@
+# CA-M2-05-20: Quality Metrology
+
+Component Area: CA-M2-05-20-QUALITY-METROLOGY
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-M2-05-20-01-CMM-SCAN-PROCESS](./CI-CA-M2-05-20-01-CMM-SCAN-PROCESS/)** - Component Implementation: CI-CA-M2-05-20-01-CMM-SCAN-PROCESS
+- **[CI-CA-M2-05-20-02-TOL-STACKUP](./CI-CA-M2-05-20-02-TOL-STACKUP/)** - Component Implementation: CI-CA-M2-05-20-02-TOL-STACKUP
+- **[CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk](./CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk/)** - Component Implementation: CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk
+- **[CI-CA-M2-05-20-04-NCR-CONCESSIONS](./CI-CA-M2-05-20-04-NCR-CONCESSIONS/)** - Component Implementation: CI-CA-M2-05-20-04-NCR-CONCESSIONS
+- **[CI-CA-M2-05-20-05-FEEDBACK-TO-PLM](./CI-CA-M2-05-20-05-FEEDBACK-TO-PLM/)** - Component Implementation: CI-CA-M2-05-20-05-FEEDBACK-TO-PLM
+
+---
+
+**[← Back to M2-MACHINE](../)**

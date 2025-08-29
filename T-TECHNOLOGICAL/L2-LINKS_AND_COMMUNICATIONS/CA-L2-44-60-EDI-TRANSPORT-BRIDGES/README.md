@@ -1,0 +1,17 @@
+# CA-L2-44-60: Edi Transport Bridges
+
+Component Area: CA-L2-44-60-EDI-TRANSPORT-BRIDGES
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-L2-44-60-01-AS2-SMIME-TLS](./CI-CA-L2-44-60-01-AS2-SMIME-TLS/)** - Component Implementation: CI-CA-L2-44-60-01-AS2-SMIME-TLS
+- **[CI-CA-L2-44-60-02-SFTP-OFTP2](./CI-CA-L2-44-60-02-SFTP-OFTP2/)** - Component Implementation: CI-CA-L2-44-60-02-SFTP-OFTP2
+- **[CI-CA-L2-44-60-03-QUEUE-GATEWAY](./CI-CA-L2-44-60-03-QUEUE-GATEWAY/)** - Component Implementation: CI-CA-L2-44-60-03-QUEUE-GATEWAY
+- **[CI-CA-L2-44-60-04-THROTTLE-RETRY](./CI-CA-L2-44-60-04-THROTTLE-RETRY/)** - Component Implementation: CI-CA-L2-44-60-04-THROTTLE-RETRY
+- **[CI-CA-L2-44-60-05-MONITOR-ALERTS](./CI-CA-L2-44-60-05-MONITOR-ALERTS/)** - Component Implementation: CI-CA-L2-44-60-05-MONITOR-ALERTS
+
+---
+
+**[← Back to L2-LINKS_AND_COMMUNICATIONS](../)**
