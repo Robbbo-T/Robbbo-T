@@ -1,4 +1,0 @@
-# CA-P-007-SUPPLIER-AND-PROCUREMENT
-
-## Overview
-Process framework for SUPPLIER-AND-PROCUREMENT in the AMPEL360 H2 BWB QNNN program.
