@@ -1,0 +1,33 @@
+# Requirements Generator - .gitignore
+# Exclude build artifacts and temporary files
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Work directories for physics solvers
+work/
+output/
+errors/
+
+# Temporary files
+*.tmp
+*.log
+*.backup
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependencies
+.env
+venv/
+env/
