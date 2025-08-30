@@ -1,0 +1,6 @@
+requirement_id: REQ-PKG-CFG-001
+session_id: P01-20250830-025616
+timestamp: 2025-08-30T02:56:16.922956+00:00
+evidence_type: YAML
+compliance_status: PASS
+digital_signature: 8110be47e4aad6bc26f4ed04b01ff2902131fe152745e1d0ffdfd7fb22947149

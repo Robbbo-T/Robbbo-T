@@ -1,0 +1,8 @@
+{
+  "requirement_id": "REQ-BLD-BOM-002",
+  "session_id": "P01-20250830-025616",
+  "timestamp": "2025-08-30T02:56:16.922956+00:00",
+  "evidence_type": "JSON",
+  "compliance_status": "PASS",
+  "digital_signature": "14426fe4317c02511a79f5726af2f5959b32f3bcf395b35151e11e9bc5637f06"
+}
