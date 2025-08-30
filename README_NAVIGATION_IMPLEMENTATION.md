@@ -15,7 +15,7 @@ Successfully implemented comprehensive README files with hyperlinked indices for
 
 ### 1. Main Framework Pillars (6 files)
 - O2-ORGANIZATIONAL
-- P2-PROCEDURAL_FRAMEWORK  
+- P2-PROCEDURAL  
 - T-TECHNOLOGICAL
 - I3-INTELLIGENT
 - M2-MACHINE
