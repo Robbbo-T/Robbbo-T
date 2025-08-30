@@ -1,0 +1,8 @@
+{
+  "requirement_id": "REQ-DES-CYA-001",
+  "session_id": "P01-20250830-025616",
+  "timestamp": "2025-08-30T02:56:16.922956+00:00",
+  "evidence_type": "JSON",
+  "compliance_status": "PASS",
+  "digital_signature": "4095885da2bb463403b6ad92f3bd06882456f2612eeff7a100ffb4b9dda7537b"
+}
