@@ -1,0 +1,15 @@
+# CA-P2-00-82: Energy As Policy
+
+Component Area: CA-P2-00-82-ENERGY-AS-POLICY
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-P2-00-82-01-EAP-BUDGETING](./CI-CA-P2-00-82-01-EAP-BUDGETING/)** - Component Implementation: CI-CA-P2-00-82-01-EAP-BUDGETING
+- **[CI-CA-P2-00-82-02-EAP-SCHEDULING-CONSTRAINTS](./CI-CA-P2-00-82-02-EAP-SCHEDULING-CONSTRAINTS/)** - Component Implementation: CI-CA-P2-00-82-02-EAP-SCHEDULING-CONSTRAINTS
+- **[CI-CA-P2-00-82-03-EAP-REPORTING](./CI-CA-P2-00-82-03-EAP-REPORTING/)** - Component Implementation: CI-CA-P2-00-82-03-EAP-REPORTING
+
+---
+
+**[← Back to P2-PROCEDURAL](../)**

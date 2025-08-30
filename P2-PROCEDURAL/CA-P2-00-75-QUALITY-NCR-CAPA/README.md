@@ -1,0 +1,16 @@
+# CA-P2-00-75: Quality Ncr Capa
+
+Component Area: CA-P2-00-75-QUALITY-NCR-CAPA
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-P2-00-75-01-NCR-WORKFLOW](./CI-CA-P2-00-75-01-NCR-WORKFLOW/)** - Component Implementation: CI-CA-P2-00-75-01-NCR-WORKFLOW
+- **[CI-CA-P2-00-75-02-CAPA-PROCEDURE](./CI-CA-P2-00-75-02-CAPA-PROCEDURE/)** - Component Implementation: CI-CA-P2-00-75-02-CAPA-PROCEDURE
+- **[CI-CA-P2-00-75-03-FAI-FIRST-ARTICLE](./CI-CA-P2-00-75-03-FAI-FIRST-ARTICLE/)** - Component Implementation: CI-CA-P2-00-75-03-FAI-FIRST-ARTICLE
+- **[CI-CA-P2-00-75-04-AUDIT-PROGRAM](./CI-CA-P2-00-75-04-AUDIT-PROGRAM/)** - Component Implementation: CI-CA-P2-00-75-04-AUDIT-PROGRAM
+
+---
+
+**[← Back to P2-PROCEDURAL](../)**

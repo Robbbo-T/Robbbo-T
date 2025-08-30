@@ -15,7 +15,7 @@ Complete organizational framework with 11 component areas:
 - Organizational structure & steering committees
 - Strategic alignment
 
-### ✅ P2-PROCEDURAL_FRAMEWORK  
+### ✅ P2-PROCEDURAL  
 Complete procedural framework with 16 component areas:
 - Process architecture & gates/reviews
 - Change management & V&V planning
@@ -106,7 +106,7 @@ Operating system components properly located under T-TECHNOLOGICAL/O-OPERATING_S
 
 All links referenced in the main README.md file now point to existing directories:
 - ✅ All `./O2-ORGANIZATIONAL/...` paths exist
-- ✅ All `./P2-PROCEDURAL_FRAMEWORK/...` paths exist  
+- ✅ All `./P2-PROCEDURAL/...` paths exist  
 - ✅ All `./T-TECHNOLOGICAL/...` paths exist
 - ✅ All `./I3-INTELLIGENT/...` paths exist
 - ✅ All `./M2-MACHINE/...` paths exist

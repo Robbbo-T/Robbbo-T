@@ -1,0 +1,15 @@
+# CA-P2-00-85: Operations Handover
+
+Component Area: CA-P2-00-85-OPERATIONS-HANDOVER
+
+## Contents
+
+### Subfolders
+
+- **[CI-CA-P2-00-85-01-ORR-CHECKLIST](./CI-CA-P2-00-85-01-ORR-CHECKLIST/)** - Component Implementation: CI-CA-P2-00-85-01-ORR-CHECKLIST
+- **[CI-CA-P2-00-85-02-SERVICE-TRANSITION](./CI-CA-P2-00-85-02-SERVICE-TRANSITION/)** - Component Implementation: CI-CA-P2-00-85-02-SERVICE-TRANSITION
+- **[CI-CA-P2-00-85-03-OP-MANUAL-ACCEPTANCE](./CI-CA-P2-00-85-03-OP-MANUAL-ACCEPTANCE/)** - Component Implementation: CI-CA-P2-00-85-03-OP-MANUAL-ACCEPTANCE
+
+---
+
+**[← Back to P2-PROCEDURAL](../)**

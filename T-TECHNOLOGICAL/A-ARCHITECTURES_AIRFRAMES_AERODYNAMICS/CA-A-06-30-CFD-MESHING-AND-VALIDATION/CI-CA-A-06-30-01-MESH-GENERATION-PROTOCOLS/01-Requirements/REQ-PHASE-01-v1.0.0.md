@@ -80,7 +80,7 @@ units:
 | [REQ-BLD-PROC-001](#req-bld-proc-001) | Manufacturing process capability | [M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk/03-Building-Prototyping/PROC/cpk-data.json](M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk/03-Building-Prototyping/PROC/cpk-data.json) |
 | [REQ-BLD-PROC-002](#req-bld-proc-002) | Assembly sequence validation | [M2-MACHINE/CA-M2-05-30-NC-CNC-TOOLCHAIN/CI-CA-M2-05-30-02-POSTS-PP/03-Building-Prototyping/PROC/assembly-seq.xml](M2-MACHINE/CA-M2-05-30-NC-CNC-TOOLCHAIN/CI-CA-M2-05-30-02-POSTS-PP/03-Building-Prototyping/PROC/assembly-seq.xml) |
 | [REQ-BLD-QA-001](#req-bld-qa-001) | Quality acceptance criteria | [M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-04-NCR-CONCESSIONS/03-Building-Prototyping/QA/acceptance.yaml](M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-04-NCR-CONCESSIONS/03-Building-Prototyping/QA/acceptance.yaml) |
-| [REQ-BLD-QA-002](#req-bld-qa-002) | First Pass Yield targets | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv) |
+| [REQ-BLD-QA-002](#req-bld-qa-002) | First Pass Yield targets | [P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv](P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv) |
 
 ### 4.3 Packaging Phase (PKG)
 
@@ -88,36 +88,36 @@ units:
 |---|---|---|
 | [REQ-PKG-CFG-001](#req-pkg-cfg-001) | Configuration baseline | [O2-ORGANIZATIONAL/CA-O2-00-12-CONFIGURATION-MANAGEMENT/CI-CA-O2-00-12-01-BASELINE-CONTROL/04-Executables-Packages/CFG/baseline.json](O2-ORGANIZATIONAL/CA-O2-00-12-CONFIGURATION-MANAGEMENT/CI-CA-O2-00-12-01-BASELINE-CONTROL/04-Executables-Packages/CFG/baseline.json) |
 | [REQ-PKG-CFG-002](#req-pkg-cfg-002) | Version control requirements | [O2-ORGANIZATIONAL/CA-O2-00-12-CONFIGURATION-MANAGEMENT/CI-CA-O2-00-12-03-VERSION-CONTROL/04-Executables-Packages/CFG/version-ctrl.yaml](O2-ORGANIZATIONAL/CA-O2-00-12-CONFIGURATION-MANAGEMENT/CI-CA-O2-00-12-03-VERSION-CONTROL/04-Executables-Packages/CFG/version-ctrl.yaml) |
-| [REQ-PKG-ART-001](#req-pkg-art-001) | Artifact packaging standards | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml) |
+| [REQ-PKG-ART-001](#req-pkg-art-001) | Artifact packaging standards | [P2-PROCEDURAL/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml](P2-PROCEDURAL/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml) |
 | [REQ-PKG-SIG-001](#req-pkg-sig-001) | Digital signature requirements | [T-TECHNOLOGICAL/D-DEFENCE_CYBERSECURITY_SAFETY/CA-D-91-30-CYBERSECURITY/CI-CA-D-91-30-03-PKI-SIGNING/04-Executables-Packages/SIG/sig-policy.pdf](T-TECHNOLOGICAL/D-DEFENCE_CYBERSECURITY_SAFETY/CA-D-91-30-CYBERSECURITY/CI-CA-D-91-30-03-PKI-SIGNING/04-Executables-Packages/SIG/sig-policy.pdf) |
-| [REQ-PKG-DOC-001](#req-pkg-doc-001) | Documentation completeness | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv) |
+| [REQ-PKG-DOC-001](#req-pkg-doc-001) | Documentation completeness | [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv) |
 
 ### 4.4 Verification & Validation Phase (VV)
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-VV-PLAN-001](#req-vv-plan-001) | V&V planning requirements | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf) |
-| [REQ-VV-PROC-001](#req-vv-proc-001) | Test procedure standards | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml) |
+| [REQ-VV-PLAN-001](#req-vv-plan-001) | V&V planning requirements | [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf) |
+| [REQ-VV-PROC-001](#req-vv-proc-001) | Test procedure standards | [P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml](P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml) |
 | [REQ-VV-COV-001](#req-vv-cov-001) | Coverage analysis requirements | [T-TECHNOLOGICAL/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CA-O-31-10-AQUA-OS-CORE/CI-CA-O-31-10-04-SCHEDULER-RTOS/05-Verification-Validation/COV/coverage.json](T-TECHNOLOGICAL/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CA-O-31-10-AQUA-OS-CORE/CI-CA-O-31-10-04-SCHEDULER-RTOS/05-Verification-Validation/COV/coverage.json) |
-| [REQ-VV-TRACE-001](#req-vv-trace-001) | Traceability matrix | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx) |
+| [REQ-VV-TRACE-001](#req-vv-trace-001) | Traceability matrix | [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx) |
 | [REQ-VV-TST-001](#req-vv-tst-001) | Test execution criteria | [M2-MACHINE/CA-M2-05-10-TEST-RIGS-HIL/CI-CA-M2-05-10-02-SCENARIO-RUNNER/05-Verification-Validation/TST/test-criteria.xml](M2-MACHINE/CA-M2-05-10-TEST-RIGS-HIL/CI-CA-M2-05-10-02-SCENARIO-RUNNER/05-Verification-Validation/TST/test-criteria.xml) |
-| [REQ-VV-REPORT-001](#req-vv-report-001) | Test reporting requirements | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md) |
+| [REQ-VV-REPORT-001](#req-vv-report-001) | Test reporting requirements | [P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md](P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md) |
 
 ### 4.5 Integration Phase (INT)
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-INT-INT-001](#req-int-int-001) | System integration sequence | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml) |
+| [REQ-INT-INT-001](#req-int-int-001) | System integration sequence | [P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml](P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml) |
 | [REQ-INT-ENV-001](#req-int-env-001) | Integration environment specs | [M2-MACHINE/CA-M2-05-10-TEST-RIGS-HIL/CI-CA-M2-05-10-01-RIG-CONTROL-DAU/06-Integration-Qualification/ENV/env-specs.json](M2-MACHINE/CA-M2-05-10-TEST-RIGS-HIL/CI-CA-M2-05-10-01-RIG-CONTROL-DAU/06-Integration-Qualification/ENV/env-specs.json) |
 | [REQ-INT-SAF-001](#req-int-saf-001) | Safety assessment integration | [T-TECHNOLOGICAL/D-DEFENCE_CYBERSECURITY_SAFETY/CA-D-91-20-SAFETY-ENGINEERING/CI-CA-D-91-20-01-SAFETY-ANALYSIS/06-Integration-Qualification/SAF/safety-assess.pdf](T-TECHNOLOGICAL/D-DEFENCE_CYBERSECURITY_SAFETY/CA-D-91-20-SAFETY-ENGINEERING/CI-CA-D-91-20-01-SAFETY-ANALYSIS/06-Integration-Qualification/SAF/safety-assess.pdf) |
-| [REQ-INT-QUAL-001](#req-int-qual-001) | Qualification test requirements | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx) |
+| [REQ-INT-QUAL-001](#req-int-qual-001) | Qualification test requirements | [P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx](P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx) |
 
 ### 4.6 Certification Phase (CRT)
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-CRT-REG-001](#req-crt-reg-001) | Regulatory compliance matrix | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv) |
-| [REQ-CRT-COM-001](#req-crt-com-001) | Compliance demonstration | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf) |
+| [REQ-CRT-REG-001](#req-crt-reg-001) | Regulatory compliance matrix | [P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv](P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv) |
+| [REQ-CRT-COM-001](#req-crt-com-001) | Compliance demonstration | [P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf](P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf) |
 | [REQ-CRT-DO178-001](#req-crt-do178-001) | DO-178C software compliance | [T-TECHNOLOGICAL/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CA-O-31-10-AQUA-OS-CORE/CI-CA-O-31-10-03-DO178C-COMPLIANCE/07-Certification-Security/DO178/sw-compliance.yaml](T-TECHNOLOGICAL/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CA-O-31-10-AQUA-OS-CORE/CI-CA-O-31-10-03-DO178C-COMPLIANCE/07-Certification-Security/DO178/sw-compliance.yaml) |
 | [REQ-CRT-AUD-001](#req-crt-aud-001) | Audit readiness criteria | [O2-ORGANIZATIONAL/CA-O2-00-10-GOVERNANCE/CI-CA-O2-00-10-05-AUDIT-SCHEDULE/07-Certification-Security/AUD/audit-checklist.xlsx](O2-ORGANIZATIONAL/CA-O2-00-10-GOVERNANCE/CI-CA-O2-00-10-05-AUDIT-SCHEDULE/07-Certification-Security/AUD/audit-checklist.xlsx) |
 
@@ -125,16 +125,16 @@ units:
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-PROD-PLAN-001](#req-prod-plan-001) | Production planning requirements | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml) |
+| [REQ-PROD-PLAN-001](#req-prod-plan-001) | Production planning requirements | [P2-PROCEDURAL/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml](P2-PROCEDURAL/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml) |
 | [REQ-PROD-SPC-001](#req-prod-spc-001) | Statistical process control | [M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk/08-Production-Scale/SPC/control-charts.json](M2-MACHINE/CA-M2-05-20-QUALITY-METROLOGY/CI-CA-M2-05-20-03-CAPABILITY-INDEX-Cp-Cpk/08-Production-Scale/SPC/control-charts.json) |
-| [REQ-PROD-QA-001](#req-prod-qa-001) | Production quality assurance | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv) |
+| [REQ-PROD-QA-001](#req-prod-qa-001) | Production quality assurance | [P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv](P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv) |
 | [REQ-PROD-TRACE-001](#req-prod-trace-001) | Production traceability | [M2-MACHINE/CA-M2-05-40-TRACEABILITY-QAUDIT/CI-CA-M2-05-40-01-UTCS-MI-IDS/08-Production-Scale/TRACE/serial-tracking.db](M2-MACHINE/CA-M2-05-40-TRACEABILITY-QAUDIT/CI-CA-M2-05-40-01-UTCS-MI-IDS/08-Production-Scale/TRACE/serial-tracking.db) |
 
 ### 4.8 Operations Phase (OPS)
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-OPS-SOP-001](#req-ops-sop-001) | Standard operating procedures | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf) |
+| [REQ-OPS-SOP-001](#req-ops-sop-001) | Standard operating procedures | [P2-PROCEDURAL/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf](P2-PROCEDURAL/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf) |
 | [REQ-OPS-DET-001](#req-ops-det-001) | Operational data collection | [E4-EXECUTING/CA-E4-45-40-DET-EVIDENCE-WORM/CI-CA-E4-45-40-02-TRACEPOINTS-KPI/09-Ops-Services/DET/data-specs.yaml](E4-EXECUTING/CA-E4-45-40-DET-EVIDENCE-WORM/CI-CA-E4-45-40-02-TRACEPOINTS-KPI/09-Ops-Services/DET/data-specs.yaml) |
 | [REQ-OPS-REPORT-001](#req-ops-report-001) | Operations reporting requirements | [E4-EXECUTING/CA-E4-45-80-EAP-ENFORCER-ENERGY/CI-CA-E4-45-80-05-CO2-REPORTS/09-Ops-Services/REPORT/report-format.xml](E4-EXECUTING/CA-E4-45-80-EAP-ENFORCER-ENERGY/CI-CA-E4-45-80-05-CO2-REPORTS/09-Ops-Services/REPORT/report-format.xml) |
 
@@ -142,7 +142,7 @@ units:
 
 | ID | Description | Primary Evidence |
 |---|---|---|
-| [REQ-MRO-INTERVAL-001](#req-mro-interval-001) | Maintenance interval requirements | [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv) |
+| [REQ-MRO-INTERVAL-001](#req-mro-interval-001) | Maintenance interval requirements | [P2-PROCEDURAL/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv](P2-PROCEDURAL/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv) |
 | [REQ-MRO-TOOL-001](#req-mro-tool-001) | Tooling and equipment specs | [E4-EXECUTING/CA-E4-45-60-MRO-LINE-OPS/CI-CA-E4-45-60-02-TOOL-LOT-TRACE/10-MRO/TOOL/tool-list.json](E4-EXECUTING/CA-E4-45-60-MRO-LINE-OPS/CI-CA-E4-45-60-02-TOOL-LOT-TRACE/10-MRO/TOOL/tool-list.json) |
 | [REQ-MRO-NCR-001](#req-mro-ncr-001) | Non-conformance resolution | [E4-EXECUTING/CA-E4-45-60-MRO-LINE-OPS/CI-CA-E4-45-60-03-FINDINGS-NCR-TO-PLM/10-MRO/NCR/ncr-process.yaml](E4-EXECUTING/CA-E4-45-60-MRO-LINE-OPS/CI-CA-E4-45-60-03-FINDINGS-NCR-TO-PLM/10-MRO/NCR/ncr-process.yaml) |
 
@@ -332,7 +332,7 @@ units:
 **REQ-BLD-QA-002: First Pass Yield Targets**
 - **Description:** Manufacturing shall achieve FPY ≥ 95% for standard operations, ≥ 90% for complex assemblies
 - **Method:** A (Analysis)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv](P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-01-QA-FRAMEWORK/03-Building-Prototyping/QA/fpy-metrics.csv)
 - **Rationale:** Cost-effective production requires high first-pass success
 - **Acceptance Criteria:** 3-month rolling average meets targets
 - **Standards:** AS9100D §9.1.1, ARP4754A §6.4
@@ -361,7 +361,7 @@ units:
 **REQ-PKG-ART-001: Artifact Packaging Standards**
 - **Description:** Artifacts shall be packaged with SHA-256 integrity verification and compression ratio ≥ 3:1
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml](P2-PROCEDURAL/CA-P2-00-92-CICD-DEVOPS-FRAMEWORKS/CI-CA-P2-00-92-01-CI-PIPELINE/04-Executables-Packages/ART/pkg-standards.xml)
 - **Rationale:** Ensures artifact integrity and efficient storage
 - **Acceptance Criteria:** 100% artifact verification success rate
 - **Standards:** DO-178C §7.2.9, ARP4754A §6.7
@@ -379,7 +379,7 @@ units:
 **REQ-PKG-DOC-001: Documentation Completeness**
 - **Description:** Documentation package shall achieve 100% coverage of deliverable items with ≤ 0.1% error rate
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/04-Executables-Packages/DOC/doc-matrix.csv)
 - **Rationale:** Complete documentation required for certification
 - **Acceptance Criteria:** Zero missing documents at release gate
 - **Standards:** ARP4754A §8.1, AS9100D §7.5.1
@@ -390,7 +390,7 @@ units:
 **REQ-VV-PLAN-001: V&V Planning Requirements**
 - **Description:** V&V plan shall define test coverage ≥ 100% of requirements with risk-based prioritization
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-01-VV-PLAN/05-Verification-Validation/PLAN/vv-plan.pdf)
 - **Rationale:** Comprehensive verification essential for certification
 - **Acceptance Criteria:** All requirements mapped to verification method
 - **Standards:** ARP4754A §6.7, DO-178C §6.1
@@ -399,7 +399,7 @@ units:
 **REQ-VV-PROC-001: Test Procedure Standards**
 - **Description:** Test procedures shall define pass/fail criteria with measurement uncertainty ≤ 2%
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml](P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-01-TEST-STANDARDS/05-Verification-Validation/PROC/test-stds.yaml)
 - **Rationale:** Clear criteria essential for objective verification
 - **Acceptance Criteria:** 100% of procedures reviewed and approved
 - **Standards:** DO-160G §3, ARP4754A §6.8
@@ -417,7 +417,7 @@ units:
 **REQ-VV-TRACE-001: Traceability Matrix**
 - **Description:** Bidirectional traceability shall link 100% requirements to test cases with zero orphans
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx](P2-PROCEDURAL/CA-P2-00-73-VV-PLANNING-AND-RTM/CI-CA-P2-00-73-02-REQUIREMENTS-TRACEABILITY-RTM/05-Verification-Validation/TRACE/trace-matrix.xlsx)
 - **Rationale:** Complete traceability required for certification credit
 - **Acceptance Criteria:** Zero gaps in requirement-to-test mapping
 - **Standards:** ARP4754A §5.5, DO-178C §6.3.1
@@ -435,7 +435,7 @@ units:
 **REQ-VV-REPORT-001: Test Reporting Requirements**
 - **Description:** Test reports shall be generated within 4 hours of completion with automated anomaly flagging
 - **Method:** D (Demonstration)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md](P2-PROCEDURAL/CA-P2-00-74-TEST-PROCEDURES/CI-CA-P2-00-74-02-TEST-EXECUTION/05-Verification-Validation/REPORT/report-template.md)
 - **Rationale:** Rapid feedback essential for development efficiency
 - **Acceptance Criteria:** 95% of reports meet timing requirement
 - **Standards:** AS9100D §8.6, ARP4754A §6.8.4
@@ -446,7 +446,7 @@ units:
 **REQ-INT-INT-001: System Integration Sequence**
 - **Description:** Integration shall follow defined sequence with stage gates achieving ≥ 95% completion
 - **Method:** D (Demonstration)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml](P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-01-INTEGRATION-FRAMEWORK/06-Integration-Qualification/INT/sequence.yaml)
 - **Rationale:** Controlled integration reduces risk and rework
 - **Acceptance Criteria:** All stage gates passed on first attempt
 - **Standards:** ARP4754A §6.3, AS9100D §8.5.1
@@ -473,7 +473,7 @@ units:
 **REQ-INT-QUAL-001: Qualification Test Requirements**
 - **Description:** Qualification testing shall demonstrate margin ≥ 20% above operational limits
 - **Method:** T (Test)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx](P2-PROCEDURAL/CA-P2-00-75-INTEGRATION-QUALIFICATION/CI-CA-P2-00-75-02-QUALIFICATION-TESTING/06-Integration-Qualification/QUAL/qual-matrix.xlsx)
 - **Rationale:** Margin ensures robustness to operational variations
 - **Acceptance Criteria:** All qualification tests passed without failure
 - **Standards:** DO-160G §4.5, CS-25.1301
@@ -484,7 +484,7 @@ units:
 **REQ-CRT-REG-001: Regulatory Compliance Matrix**
 - **Description:** Compliance shall be demonstrated for 100% of applicable CS-25 requirements
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv](P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-01-CERTIFICATION-FRAMEWORK/07-Certification-Security/REG/compliance.csv)
 - **Rationale:** Full compliance required for type certification
 - **Acceptance Criteria:** All means of compliance accepted by authority
 - **Standards:** CS-25 all applicable, EASA Part 21
@@ -493,7 +493,7 @@ units:
 **REQ-CRT-COM-001: Compliance Demonstration**
 - **Description:** Compliance demonstration shall use approved methods with witness rate ≥ 30%
 - **Method:** D (Demonstration)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf](P2-PROCEDURAL/CA-P2-00-76-CERTIFICATION-COMPLIANCE/CI-CA-P2-00-76-02-COMPLIANCE-VERIFICATION/07-Certification-Security/COM/demo-plan.pdf)
 - **Rationale:** Authority confidence requires witnessed testing
 - **Acceptance Criteria:** All critical tests witnessed by authority
 - **Standards:** CS-25.21, ARP4754A §8.1
@@ -522,7 +522,7 @@ units:
 **REQ-PROD-PLAN-001: Production Planning Requirements**
 - **Description:** Production plan shall achieve rate of 2 aircraft/month with learning curve improvement ≥ 85%
 - **Method:** A (Analysis)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml](P2-PROCEDURAL/CA-P2-00-83-PRODUCTION-SUPPORT/CI-CA-P2-00-83-01-PRODUCTION-FRAMEWORK/08-Production-Scale/PLAN/prod-plan.xml)
 - **Rationale:** Economic viability requires efficient production
 - **Acceptance Criteria:** Rate achieved by unit #50
 - **Standards:** AS9100D §8.1, ARP4754A §6.2
@@ -540,7 +540,7 @@ units:
 **REQ-PROD-QA-001: Production Quality Assurance**
 - **Description:** Production QA shall achieve defect rate ≤ 50 PPM with zero safety-critical escapes
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv](P2-PROCEDURAL/CA-P2-00-82-QUALITY-ASSURANCE/CI-CA-P2-00-82-02-QUALITY-GATES/08-Production-Scale/QA/qa-metrics.csv)
 - **Rationale:** High quality essential for airworthiness
 - **Acceptance Criteria:** Sustained over 12-month period
 - **Standards:** AS9100D §8.2.1, CS-25.1309
@@ -560,7 +560,7 @@ units:
 **REQ-OPS-SOP-001: Standard Operating Procedures**
 - **Description:** SOPs shall cover 100% of normal and emergency procedures with revision cycle ≤ 90 days
 - **Method:** I (Inspection)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf](P2-PROCEDURAL/CA-P2-00-95-OPERATIONS-HANDOVER/CI-CA-P2-00-95-01-OPS-FRAMEWORK/09-Ops-Services/SOP/procedures.pdf)
 - **Rationale:** Complete procedures ensure safe operation
 - **Acceptance Criteria:** All procedures validated in simulator
 - **Standards:** CS-25.1585, EASA Part-ORO
@@ -589,7 +589,7 @@ units:
 **REQ-MRO-INTERVAL-001: Maintenance Interval Requirements**
 - **Description:** Maintenance intervals shall be based on MSG-3 analysis with condition monitoring coverage ≥ 80%
 - **Method:** A (Analysis)
-- **Evidence:** [P2-PROCEDURAL_FRAMEWORK/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv](P2-PROCEDURAL_FRAMEWORK/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv)
+- **Evidence:** [P2-PROCEDURAL/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv](P2-PROCEDURAL/CA-P2-00-84-MRO-SUPPORT/CI-CA-P2-00-84-01-MRO-FRAMEWORK/10-MRO/INTERVAL/schedule.csv)
 - **Rationale:** Data-driven maintenance optimizes cost and safety
 - **Acceptance Criteria:** All maintenance tasks justified by analysis
 - **Standards:** MSG-3 Rev 2019.1, EASA Part-145
