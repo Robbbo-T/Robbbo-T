@@ -1,6 +1,8 @@
 # ASI-T2
 ## ARTIFICIAL SUPER INTELLIGENCE TRANSPONDERS for AEROSPACE SUSTAINABLE INDUSTRY TRANSITION
 
+> **For complete implementation see [robbbo-t/ASI-T2/README.md](https://github.com/Robbbo-T/ASI-T2/blob/main/README.md)**
+
 Master portfolio for ASI-T2 under strict TFA architecture. This README provides a comprehensive hyperlinkable index to all **fields**, **environments**, and **products** with their complete directory structure.
 
 ---
