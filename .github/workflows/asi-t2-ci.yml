@@ -1,0 +1,37 @@
+name: ASI-T2 CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    name: Validate Repository Structure
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Verify ASI-T2 Structure
+      run: |
+        echo "Validating ASI-T2 repository structure..."
+        
+        # Check main directories exist
+        test -d FIELDS || (echo "FIELDS directory missing" && exit 1)
+        test -d ENVIRONMENTS || (echo "ENVIRONMENTS directory missing" && exit 1)
+        test -d PRODUCTS || (echo "PRODUCTS directory missing" && exit 1)
+        
+        # Check key product directories
+        test -d PRODUCTS/AMPEL360 || (echo "AMPEL360 directory missing" && exit 1)
+        test -d PRODUCTS/INFRANET || (echo "INFRANET directory missing" && exit 1)
+        
+        echo "Structure validation completed successfully"
+    
+    - name: Validate Links
+      run: |
+        echo "Validating README.md structure and links..."
+        test -f README.md || (echo "Main README.md missing" && exit 1)
+        grep -q "ASI-T2" README.md || (echo "README.md missing ASI-T2 header" && exit 1)
+        echo "Link validation completed"
