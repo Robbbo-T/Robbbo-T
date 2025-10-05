@@ -45,17 +45,10 @@
 
 **Entity types**
 
-- **Family** — related products sharing a common baseline (e.g., **AMPEL360**)  
-- **Model** — concrete configuration within a family (e.g., **BWB-Q100**)  
-- **Variant** — specialization of a model (e.g., **AMPEL360 PLUS**)  
-- **Program** — sustained line of work (e.g., **INFRANET**, **HYDROBOTS** under GAIA-AIR)
-
-**Canonical truths**
-
-- **AMPEL360** is a **family of aircraft models**. **BWB-Q100** is a **model**; **AMPEL360 PLUS** is a **variant** (Space Tourism).  
-- **GAIA** is a **family of multi-domain robotic systems** with sub-families **GAIA-AIR/SEA/SPACE**. **HYDROBOTS** is a **program under GAIA-AIR**.  
-- **QAIM-2** is the **CAx ↔ QOx bridge**, emitting **signed attestations** consumable by **UTCS/CXP**.  
-- **INFRANET** groups **infrastructure & OS** products (e.g., **AQUA_OS_AIRCRAFT**, **LH2_CORRIDOR**).
+- **Family** — related products sharing a common baseline (**GAIA**; **AMPEL360**). There are 3 families: Manned Vehicles, Unmanned Vehicles, Infrastructure Systems 
+- **Model** — concrete configuration within a family (e.g., **BWB** Blended Wing Body Hydrogen Hybrid**)  
+- **Variant** — specialization of a model (e.g., **Q100**) quantum enhahnced, for 100 passengers. 
+- **Program** — sustained line of work (e.g., **INFRANET**, **H2-CHAIN-VALUE**, GAIA-AIR-DRONES, GAIA-SEA-HYDROBOTS, GAIA-SPACE-IDENTITY, AMPEL360 BWB-Q100. AMPEL360 PLUS
 
 ---
 
