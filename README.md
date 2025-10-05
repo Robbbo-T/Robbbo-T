@@ -10,26 +10,26 @@
 
 > **Principle:** If it didn’t run in **CI**, it doesn’t count as **evidence**.
 
-- **Public framework:** [**IDEALE Evidence Framework (IEF)**](#ideale-evidence-framework-ief)  
-- **Primary sector profile:** [**TFA (Aerospace)**](#tfa--aerospace-domain-profile)  
-- **Reference implementation (code/templates):** [**ASI-T2**](#asi-t2-reference-implementation)
+* **Public framework:** [**IDEALE Evidence Framework (IEF)**](#ideale-evidence-framework-ief)
+* **Primary sector profile:** [**TFA (Aerospace)**](#tfa--aerospace-domain-profile)
+* **Reference implementation (code/templates):** [**ASI-T2**](#asi-t2-reference-implementation)
 
 ---
 
 ## 📚 Quick Nav
 
-- [What is IDEALE?](#what-is-ideale)
-- [Naming Canon](#naming-canon)
-- [IDEALE Evidence Framework (IEF)](#ideale-evidence-framework-ief)
-- [Visual Overview](#visual-overview)
-- [Sector Profiles](#sector-profiles)
-- [ASI-T2 (Reference Implementation)](#asi-t2-reference-implementation)
-- [Programs & Families (Aerospace-first)](#programs--families-aerospace-first)
-- [Evidence Objects](#evidence-objects)
-- [Conformance Ladder](#conformance-ladder)
-- [Roadmap Phases](#roadmap-phases)
-- [Contact & Pilots](#contact--pilots)
-- [Link Map](#link-map-for-clustered-keywords)
+* [What is IDEALE?](#what-is-ideale)
+* [Naming Canon](#naming-canon)
+* [IDEALE Evidence Framework (IEF)](#ideale-evidence-framework-ief)
+* [Visual Overview](#visual-overview)
+* [Sector Profiles](#sector-profiles)
+* [ASI-T2 (Reference Implementation)](#asi-t2-reference-implementation)
+* [Programs & Families (Aerospace-first)](#programs--families-aerospace-first)
+* [Evidence Objects](#evidence-objects)
+* [Conformance Ladder](#conformance-ladder)
+* [Roadmap Phases](#roadmap-phases)
+* [Contact & Pilots](#contact--pilots)
+* [Link Map](#link-map-for-clustered-keywords)
 
 ---
 
@@ -45,10 +45,10 @@
 
 **Entity types**
 
-- **Family** — related products sharing a common baseline (**GAIA**; **AMPEL360**). There are 3 types of families: Manned Vehicles, Unmanned Vehicles, Infrastructure Systems (INFRANET) 
-- **Model** — concrete configuration within a family (e.g., **BWB** Blended Wing Body Hydrogen Hybrid)  
-- **Variant** — specialization of a model (e.g., **Q100**) quantum enhahnced, for 100 passengers. 
-- **Program** — sustained line of work (e.g., **H2-CHAIN-VALUE**, GAIA-AIR-DRONES, GAIA-SEA-HYDROBOTS, GAIA-SPACE-IDENTITY, AMPEL360 BWB-Q100. AMPEL360 PLUS
+* **Family** — related products sharing a common baseline (**GAIA**, **AMPEL360**). Families are grouped into **Manned Vehicles**, **Unmanned Vehicles**, and **Infrastructure Systems (INFRANET)**.
+* **Model** — the product baseline within a family (e.g., **BWB** under AMPEL360: Blended-Wing-Body, hydrogen-hybrid baseline).
+* **Variant** — a **configured model** (mission/capacity configuration of a model; e.g., **Q100** under BWB for ~100 passengers, quantum-enhanced).
+* **Program** — a sustained line of work or capability stream (e.g., **LH2_CORRIDOR**, **GAIA-AIR/DRONES**, **GAIA-SEA/HYDROBOTS**, **GAIA-SPACE/IDENTITY**).
 
 ---
 
@@ -56,17 +56,17 @@
 
 A reusable **evidence & verification layer** adoptable in stages.
 
-- **Manifests:** **UTCS** (UiX Threading Context/Content/Cache & Structure/Style/Sheet) / **CXP** (Context Exchange Profile)  
-- **SBOM:** **SPDX 2.3 JSON**  
-- **Verify & Replay:** policy-pinned verification, hash-chained logs, reproducibility  
-- **Badges:** human-readable status + machine endpoints for procurement/regulatory portals
+* **Manifests:** **UTCS** (UiX Threading Context/Content/Cache & Structure/Style/Sheet) / **CXP** (Context Exchange Profile)
+* **SBOM:** **SPDX 2.3 JSON**
+* **Verify & Replay:** policy-pinned verification, hash-chained logs, reproducibility
+* **Badges:** human-readable status + machine endpoints for procurement/regulatory portals
 
 **Open evidence flow (UTCS → SPDX → Verify → Badge)**
 
-1) **UTCS/CXP** anchor who/what/where/when/why.  
-2) **SPDX SBOM** records components & licenses.  
-3) **Verify (CI)** enforces policy and emits a replayable log.  
-4) **Badge** publishes status and links to evidence blobs.
+1. **UTCS/CXP** anchor who/what/where/when/why.
+2. **SPDX SBOM** records components & licenses.
+3. **Verify (CI)** enforces policy and emits a replayable log.
+4. **Badge** publishes status and links to evidence blobs.
 
 ---
 
@@ -92,9 +92,10 @@ graph TD
   ASI --> INFR
 
   AMP --> AT[AMPEL360 Air Transport Sub-family]
-  AT  --> BWB[BWB-Q100 Model]
+  AT  --> BWB[BWB Model]
+  BWB --> Q100[Q100 Variant]
   AMP --> ST[Space Tourism]
-  ST  --> PLUS[AMPEL360 PLUS Variant]
+  ST  --> PLUS[AMPEL360 PLUS Configured Model]
 
   GAIA --> GAIR[GAIA-AIR]
   GAIR --> EEUV[ETHICS-EMPATHY-UAV Program]
@@ -108,8 +109,7 @@ graph TD
   INFR --> AQUA[AQUA_OS_AIRCRAFT]
   INFR --> LH2[LH2_CORRIDOR]
   INFR --> QAIM[QAIM / QAIM-2 Bridge]
-
-````
+```
 
 ---
 
@@ -141,8 +141,10 @@ Profiles specialize IEF per regulatory domain. First up:
 ## Programs & Families (Aerospace-first)
 
 * <a id="ampel360"></a>**AMPEL360 — Family of aircraft models**
-  **Sub-family & models:** **AMPEL360 Air Transport** → **BWB-Q100** (model).
-  **Variant:** **AMPEL360 PLUS** (Space Tourism). Evidence wiring: **UTCS → SPDX → Verify → Badge** aligned to **ATA**.
+  **Sub-family & model:** **AMPEL360 Air Transport** → **BWB** (model).
+  **Variant:** **Q100** — configured model for ~100 passengers (quantum-enhanced).
+  **Additional configured model:** **AMPEL360 PLUS** for Space-Tourism.
+  Evidence wiring: **UTCS → SPDX → Verify → Badge** aligned to **ATA**.
 
 * <a id="gaia-systems"></a>**GAIA — Family of multi-domain robotic systems**
   **Sub-families:** **GAIA-AIR** (UAV/UAM; includes **ETHICS-EMPATHY-UAV**, **HYDROBOTS**), **GAIA-SEA** (e.g., **GAIA-SOUND**), **GAIA-SPACE** (e.g., **ORBITAL-MACHINES**, **SAT-CONSTELLATIONS**). All expose **IEF badges** for readiness and safety lifecycle states.
@@ -150,8 +152,8 @@ Profiles specialize IEF per regulatory domain. First up:
 * <a id="qaim-2"></a>**QAIM-2 — CAx ↔ QOx bridge**
   Integrates classical engineering pipelines with quantum/hybrid optimization and generates **signed attestations** for **UTCS/CXP** replay.
 
-* <a id="hydrobots"></a>**HYDROBOTS — (under GAIA-AIR)**
-  Program for autonomous platforms with **evidence-first** maintenance, safety logs, and provenance manifests (lives in `GAIA-AIR/HYDROBOTS`).
+* <a id="hydrobots"></a>**HYDROBOTS — under GAIA-AIR**
+  Program for autonomous platforms with **evidence-first** maintenance, safety logs, and provenance manifests (`GAIA-AIR/HYDROBOTS`).
 
 * **INFRANET — Infrastructure & OS**
   Includes **AQUA_OS_AIRCRAFT** (ARINC/IMA partitions, AFDX/TSN/TTE, UTCS/QS sealing) and **LH2_CORRIDOR** (H₂ infrastructure). **QAIM** also lives here as a cross-cutting bridge.
@@ -184,8 +186,8 @@ context:
     owner: <contact@domain>
   what:
     product_family: <AMPEL360|GAIA|INFRANET>
-    product_model: <e.g., BWB-Q100>
-    variant: <e.g., PLUS|NULL>
+    product_model: <e.g., BWB>
+    variant: <e.g., Q100|PLUS|NULL>
   where:
     env: <OB|OFF|SIM|LAB|FLIGHT>
     region: <EU|US|...>
@@ -255,27 +257,29 @@ Interested in a 2-week pilot (Aerospace/Energy/Defense/Logistics)?
 ## Link Map (for clustered keywords)
 
 * **IDEALE.eu** → [https://ideale.eu](https://ideale.eu)
+* **What is IDEALE?** → #what-is-ideale
+* **Naming Canon** → #naming-canon
 * **IEF (IDEALE Evidence Framework)** → #ideale-evidence-framework-ief
+* **Visual Overview** → #visual-overview
 * **Sector Profiles** → #sector-profiles
 * **TFA (Aerospace Domain Profile)** → #tfa--aerospace-domain-profile
 * **ASI-T2 (Reference Implementation)** → #asi-t2-reference-implementation
 * **Programs & Families** → #programs--families-aerospace-first
+
+  * **AMPEL360** → #ampel360
+  * **GAIA** → #gaia-systems
+  * **QAIM-2** → #qaim-2
+  * **HYDROBOTS** → #hydrobots
 * **Evidence Objects** → #evidence-objects
 
-  * **UTCS** → #utcs-manifest-skeleton-yaml
+  * **UTCS (manifest skeleton)** → #utcs-manifest-skeleton-yaml
   * **CXP** → #evidence-objects
   * **SBOM** → #evidence-objects
   * **Verify / Badge** → #evidence-objects
-* **AMPEL360 (family)** → #ampel360
-* **GAIA (family)** → #gaia-systems
-* **QAIM-2 (bridge)** → #qaim-2
-* **HYDROBOTS (program under GAIA-AIR)** → #hydrobots
+* **Conformance Ladder** → #conformance-ladder
+* **Roadmap** → #roadmap-phases
 * **Contact & Pilots** → #contact--pilots
 * **SPDX** → [https://spdx.dev](https://spdx.dev)
-
-```
-
-
 
 
 
