@@ -1,437 +1,288 @@
----
-id: ASIT2-README.md
-project: ASI-T2
-artifact: Repository Master README
-llc: GENESIS
-classification: INTERNAL–EVIDENCE-REQUIRED
-version: 1.0.6
-release_date: "2025-10-01"
-maintainer: "ASI-T Architecture Team"
-bridge: "CB→QB→UE→FE→FWD→QS"
-ethics_guard: MAL-EEM
-utcs_mi: v5.0
-framework: IDEALE.eu
-ideale_pillars:
-  - Intelligence
-  - Defense
-  - Energy
-  - Aerospace
-  - Logistics
-  - ESG
-  - Europe
-canonical_hash: pending
----
+# IDEALE.eu — Intelligence • Defense • Energy • Aerospace • Logistics • ESG
 
-# ASI-T2
+[![CI · Evidence Verify](https://github.com/Robbbo-T/IDEALE-IEF/actions/workflows/verify.yml/badge.svg)](https://github.com/Robbbo-T/IDEALE-IEF/actions/workflows/verify.yml)
+[![SPDX 2.3](https://img.shields.io/badge/SBOM-SPDX_2.3-informational)](https://spdx.dev/specifications/)
+![UTCS v5.0](https://img.shields.io/badge/UTCS-v5.0-blue)
+![Policy-Pinned Verify](https://img.shields.io/badge/Verify-policy--pinned-success)
+![Trust Mark · Pilot](https://img.shields.io/badge/IDEALE_Trust_Mark-pilot-lightgrey)
 
-[![Sponsor](https://img.shields.io/github/sponsors/Robbbo-T?style=social)](https://github.com/sponsors/Robbbo-T)
+[**IDEALE.eu**](https://ideale.eu) is a federated **brand & standards** program for **verifiable critical systems**. We prioritize **evidence over assertions** and publish portable formats and vendor-neutral CI hooks.
 
-## ARTIFICIAL SUPER INTELLIGENCE TRANSPONDERS for AEROSPACE SUSTAINABLE INDUSTRY TRANSITION
+> **Principle:** If it didn’t run in **CI**, it doesn’t count as **evidence**.
 
-**Master portfolio** under strict **TFA** architecture. This README defines the **CAX·QOX·PAX·ATA operating contract**, the **UTCS/QS evidence model**, and provides a **hyperlinked index** to fields, environments, and products.
-
-> **Classification:** `INTERNAL–EVIDENCE-REQUIRED` · Access and publication require **UTCS MI v5.0** anchors and **MAL-EEM** conformance.
+- **Public framework:** [**IDEALE Evidence Framework (IEF)**](#ideale-evidence-framework-ief)  
+- **Primary sector profile:** [**TFA (Aerospace)**](#tfa--aerospace-domain-profile)  
+- **Reference implementation (code/templates):** [**ASI-T2**](#asi-t2-reference-implementation)
 
 ---
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/b006bc29-c043-4e84-ad62-e13896f68789" />
+## 📚 Quick Nav
+
+- [What is IDEALE?](#what-is-ideale)
+- [Naming Canon](#naming-canon)
+- [IDEALE Evidence Framework (IEF)](#ideale-evidence-framework-ief)
+- [Visual Overview](#visual-overview)
+- [Sector Profiles](#sector-profiles)
+- [ASI-T2 (Reference Implementation)](#asi-t2-reference-implementation)
+- [Programs & Families (Aerospace-first)](#programs--families-aerospace-first)
+- [Evidence Objects](#evidence-objects)
+- [Conformance Ladder](#conformance-ladder)
+- [Roadmap Phases](#roadmap-phases)
+- [Contact & Pilots](#contact--pilots)
+- [Link Map](#link-map-for-clustered-keywords)
 
 ---
 
-## 🧭 Quick Nav
+## What is IDEALE?
 
-- [Purpose & Mission](#purpose--mission)
-- [CAX·QOX·PAX·ATA Contract](#cax--qox--pax--ata-contract-unambiguous--auditable)
-- [Mandatory Traceability](#mandatory-traceability)
-- [Motivation](#motivation)
-- [IDEALE Framework](#ideale-framework)
-- [Repository Hyperlinked Index](#-repository-hyperlinked-index)
-  - [Fields](#-fields)
-  - [Environments](#-environments)
-  - [Products Portfolio](#-products-portfolio)
-  - [Dev & Ops](#-dev--ops)
-- [Product Architecture (Domain → Process → ATA)](#product-architecture-domain--process--ata)
-- [PAx — Packaging & Applications](#pax--packaging--applications)
-- [BWB-Q100 — Transport Civil × Air](#bwb-q100--transport-civil--air)
-- [QAIM-2 — CAX ↔ QOx Bridge](#qaim-2--cax--qox-bridge)
-- [AQUA OS — INFRANET](#aqua-os-aircraft-extension--infranet)
-- [Standardized Structure (Minimum Viable Layout)](#standardized-structure-minimum-viable-layout)
-- [Compliance & Standards](#compliance--standards)
-- [CI/CD & Repo Hygiene](#cicd--repo-hygiene)
-- [Contributing](#contributing)
-- [Security, Ethics, and Licensing](#security-ethics-and-licensing)
+**IDEALE.eu** is an open **brand + standards** initiative that enables **verifiability** across Europe’s strategic sectors (Intelligence, Defense, Energy, Aerospace, Logistics, ESG). The specifications let teams produce **verifiable artifacts** that travel between tools and organizations without vendor lock-in.
+
+> **Bridge flow (TFA canon):** **QS→FWD→UE→FE→CB→QB**.
 
 ---
 
-## Purpose & Mission
+## Naming Canon
 
-The **ASI-T2** repository accelerates a sustainable aerospace transition by integrating:
+**Entity types**
 
-- **Classical engineering (CAx)** with high-performance computing,
-- **Quantum optimization (QOx)** and AI assistance,
-- **Operational packaging (PAx)** for on-board/off-board deployments,
-- **Regulatory documentation (ATA)** with **UTCS** traceability and **QS** sealing,
-- Ethical safeguards via **MAL-EEM** across all pipelines.
+- **Family** — related products sharing a common baseline (e.g., **AMPEL360**)  
+- **Model** — concrete configuration within a family (e.g., **BWB-Q100**)  
+- **Variant** — specialization of a model (e.g., **AMPEL360 PLUS**)  
+- **Program** — sustained line of work (e.g., **INFRANET**, **HYDROBOTS** under GAIA-AIR)
 
-This portfolio and development proposal is built on the **IDEALE.eu** pillars (**Intelligence, Defense, Energy, Aerospace, Logistics, ESG, Europe**), guiding strategy, structure, and evidence across the stack.
+**Canonical truths**
 
----
-
-## CAX · QOX · PAX · ATA Contract (unambiguous & auditable)
-
-- **CAX** — *Classical / CAx (design & engineering)*  
-  CAD/CFD/FEA, scripts, meshes, notebooks, HPC pipelines.  
-  **Outputs:** geometries, meshes, results, auto-generated reports.
-
-- **QOX** — *Quantum Optimization & hybrids*  
-  **QUBO/BQM** encodings, **QAOA/VQE**, problem→solver wrappers, simulator/QPU orchestration, benchmarks and validations.  
-  **Outputs:** instances, runs with metrics, comparisons vs. CAX baselines.
-
-- **PAX** — *Packaging & Applications*  
-  Packaging for **on-board (OB)** and **off-board (OFF)** execution: ARINC-653/IMA partitions, A661/A664/A429, OCI/Kubernetes descriptors, release candidates, **SBOM**, signatures, in-toto attestations (SLSA).  
-  **Outputs:** images/packages, manifests, release notes, QS/UTCS signatures.
-
-- **ATA** — *Regulatory & technical documentation*  
-  **Source of truth for documents**: S1000D (DMRL/DMs/BREX), CS-25/DO-xxx matrices, hazard logs (ARP4761), checklists, analyses, and conformity records.  
-  **Outputs:** S1000D XML, matrices, CI-generated annexes, IETP assets.
-
-**Golden rule:** **knowledge lives in ATA; compute lives in CAX/QOX; deployable delivery lives in PAX.**
+- **AMPEL360** is a **family of aircraft models**. **BWB-Q100** is a **model**; **AMPEL360 PLUS** is a **variant** (Space Tourism).  
+- **GAIA** is a **family of multi-domain robotic systems** with sub-families **GAIA-AIR/SEA/SPACE**. **HYDROBOTS** is a **program under GAIA-AIR**.  
+- **QAIM-2** is the **CAx ↔ QOx bridge**, emitting **signed attestations** consumable by **UTCS/CXP**.  
+- **INFRANET** groups **infrastructure & OS** products (e.g., **AQUA_OS_AIRCRAFT**, **LH2_CORRIDOR**).
 
 ---
 
-## Mandatory Traceability
+## IDEALE Evidence Framework (IEF)
 
-1. **From CAX/QOX/PAX → ATA**: each computational artifact ships an `artifact.manifest.yaml` referencing ATA DMs.  
-2. **From ATA → CAX/QOX/PAX**: each DM records repo paths + commits of inputs/outputs and links to PAX SBOM/packages.  
-3. **CI fail-closed**  
-   - Forbid long documents inside CAX/QOX (allow only short `README.md` + artifacts).  
-   - Forbid datasets/results stored in ATA (use references + CI-generated annexes).  
-   - Require `artifact.manifest.yaml`, SBOM and QS signature for all publishable artifacts.
+A reusable **evidence & verification layer** adoptable in stages.
 
-**Minimal template — `artifact.manifest.yaml`**
-```yaml
-id: UTCS-MI:v5.0:<PRODUCT>:<CAX|QOX|PAX>:<DOMAIN>:<ATA>:<artifact-id>
-llc: SYSTEMS
-bridge: CB→QB→UE→FE→FWD→QS
-source:
-  repo_path: <relative/path/to/artifact>
-  commit: <git-sha>
-inputs:
-  - path: <path/to/input>
-outputs:
-  - type: <mesh|report|package|run>
-    path: <path/to/output>
-evidence:
-  ata_dm_refs:
-    - <DMC-...-EN-US>
-provenance:
-  sbom: <path/to/spdx_or_cyclonedx.json>
-  signatures:
-    qs_anchor: <sha256>
-ethics_guard: MAL-EEM
+- **Manifests:** **UTCS** (UiX Threading Context/Content/Cache & Structure/Style/Sheet) / **CXP** (Context Exchange Profile)  
+- **SBOM:** **SPDX 2.3 JSON**  
+- **Verify & Replay:** policy-pinned verification, hash-chained logs, reproducibility  
+- **Badges:** human-readable status + machine endpoints for procurement/regulatory portals
+
+**Open evidence flow (UTCS → SPDX → Verify → Badge)**
+
+1) **UTCS/CXP** anchor who/what/where/when/why.  
+2) **SPDX SBOM** records components & licenses.  
+3) **Verify (CI)** enforces policy and emits a replayable log.  
+4) **Badge** publishes status and links to evidence blobs.
+
+---
+
+## Visual Overview
+
+```mermaid
+graph TD
+  IDEALE[IDEALE.eu Brand & Standards]
+  IEF[IEF Evidence Framework]
+  TFA[TFA Aerospace Profile]
+  ASI[ASI-T2 Reference Implementation]
+
+  IDEALE --> IEF --> TFA --> ASI
+
+  subgraph Families & Programs
+    AMP[AMPEL360 Family]
+    GAIA[GAIA Family]
+    INFR[INFRANET Programs]
+  end
+
+  ASI --> AMP
+  ASI --> GAIA
+  ASI --> INFR
+
+  AMP --> AT[AMPEL360 Air Transport Sub-family]
+  AT  --> BWB[BWB-Q100 Model]
+  AMP --> ST[Space Tourism]
+  ST  --> PLUS[AMPEL360 PLUS Variant]
+
+  GAIA --> GAIR[GAIA-AIR]
+  GAIR --> EEUV[ETHICS-EMPATHY-UAV Program]
+  GAIR --> HYD[HYDROBOTS Program]
+  GAIA --> GSEA[GAIA-SEA]
+  GSEA --> SOUND[GAIA-SOUND Program]
+  GAIA --> GSPACE[GAIA-SPACE]
+  GSPACE --> ORB[ORBITAL-MACHINES]
+  GSPACE --> SAT[SAT-CONSTELLATIONS]
+
+  INFR --> AQUA[AQUA_OS_AIRCRAFT]
+  INFR --> LH2[LH2_CORRIDOR]
+  INFR --> QAIM[QAIM / QAIM-2 Bridge]
+
 ````
 
 ---
 
-## Motivation
+## Sector Profiles
 
-* **Sustainability**: **BWB-Q100** targets ~100-pax BWB with lower fuel burn, emissions, and noise, and higher circularity.
-* **Quantum acceleration (QAIM-2)**: maps CAx processes to QOx to shorten design cycles, lower energy cost, and improve sustainability metrics.
-* **Ethics & traceability**: **MAL-EEM** + UTCS/QS evidence (with **SBOM**) are mandatory for any design change or quantum run.
+Profiles specialize IEF per regulatory domain. First up:
 
----
+### TFA — Aerospace Domain Profile
 
-## IDEALE Framework
-
-**IDEALE.eu pillars and their repository mapping:**
-
-* **Intelligence** — analytics, AI/ML, quantum intelligence, decision support
-  *Maps to:* [`FIELDS/intelligence/`](./FIELDS/intelligence/), [`FIELDS/quantum-intelligence/`](./FIELDS/quantum-intelligence/), [`PRODUCTS/INFRANET/QAIM/`](./PRODUCTS/INFRANET/QAIM/), domain **IIS**.
-
-* **Defense** — safety, security, resilience, dual-use governance
-  *Maps to:* [`FIELDS/defense/`](./FIELDS/defense/), [`FIELDS/cyberdefense/`](./FIELDS/cyberdefense/), [`FIELDS/cybersecurity/`](./FIELDS/cybersecurity/), [`PRODUCTS/GAIA-AIR/ETHICS-EMPATHY-UAV/`](./PRODUCTS/GAIA-AIR/ETHICS-EMPATHY-UAV/), **MAL-EEM** guardrails.
-
-* **Energy** — efficiency, emissions, propulsion energy systems, hydrogen corridors
-  *Maps to:* **EER** (Environmental, Emissions & Remediation) and **EEE** (Electrical, Hydraulic & Energy) domains, [`PRODUCTS/INFRANET/LH2_CORRIDOR/`](./PRODUCTS/INFRANET/LH2_CORRIDOR/), [`PRODUCTS/GAIA-SEA/GAIA-SOUND/`](./PRODUCTS/GAIA-SEA/GAIA-SOUND/).
-
-* **Aerospace** — certified transport and advanced platforms
-  *Maps to:* [`PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/) (domains **AAA**, **PPP**, …), [`AMPEL360_SPACE_TOURISM/PLUS/`](./PRODUCTS/AMPEL360/AMPEL360_SPACE_TOURISM/PLUS/).
-
-* **Logistics** — supply, maintenance, evidence, and software delivery chains
-  *Maps to:* domain **LIB**, **PAx** packaging (OB/OFF, SBOM, attestations), **UTCS/QS** evidence.
-
-* **ESG** — environmental, social, and governance accountability, reporting, and provenance
-  *Maps to:* **UTCS/QS** anchors, **SBOM**/**SLSA** (supply chain), **C2PA** (content provenance), sustainability artifacts (e.g., LCA/EPD) maintained under `ATA` and linked from `PAX`.
-
-* **Europe** — standards alignment, certification pathways, and ecosystem integration
-  *Maps to:* CS-25, EASA processes, S1000D/IETP practices, and cross-member collaboration.
+* Aligns **UTCS** fields to aviation semantics (ATA, safety, maintainability)
+* Adds aerospace-specific **policy pins** and **conformance gates**
+* Ships **reference badges** and **regulatory report layouts**
 
 ---
 
-## 📚 Repository Hyperlinked Index
+## ASI-T2 (Reference Implementation)
 
-### 🧭 Fields
+**ASI-T2** is the **reference repository** showing how to wire IEF in a real organization (templates, workflows, examples).
 
-* **[`FIELDS/`](./FIELDS/)**
+* **Bundle:** `UTCS_BUNDLE/` (manifests, attestations)
+* **Docs:** `WHITEPAPERS/` (architecture & interfaces)
+* **Profiles:** TFA (aerospace)
+* **Evidence:** `sbom/`, `badges/`, `.github/workflows/` (Verify)
 
-  * [`air_manned/`](./FIELDS/air_manned/) → [`transport/`](./FIELDS/air_manned/transport/) · [`mobility/`](./FIELDS/air_manned/mobility/)
-  * [`air_unmanned/`](./FIELDS/air_unmanned/) → [`cargo/`](./FIELDS/air_unmanned/cargo/) · [`retail/`](./FIELDS/air_unmanned/retail/)
-  * [`communications/`](./FIELDS/communications/)
-  * [`cross/`](./FIELDS/cross/) → [`process_engineering/QAIM-2/`](./FIELDS/cross/process_engineering/QAIM-2/)
-  * [`cyberdefense/`](./FIELDS/cyberdefense/) · [`cybersecurity/`](./FIELDS/cybersecurity/)
-  * [`defense/`](./FIELDS/defense/) · [`intelligence/`](./FIELDS/intelligence/)
-  * [`quantum-intelligence/`](./FIELDS/quantum-intelligence/)
-  * [`space_tourism/`](./FIELDS/space_tourism/) · [`transport-civil/`](./FIELDS/transport-civil/)
-
-### 🌍 Environments
-
-* **[`ENVIRONMENTS/`](./ENVIRONMENTS/)**
-
-  * **[`DIGITAL/CONTEXT/`](./ENVIRONMENTS/DIGITAL/CONTEXT/)** → [`VIRTUAL/`](./ENVIRONMENTS/DIGITAL/CONTEXT/VIRTUAL/) · [`QUANTUM/`](./ENVIRONMENTS/DIGITAL/CONTEXT/QUANTUM/) · [`AUGMENTATION/`](./ENVIRONMENTS/DIGITAL/CONTEXT/AUGMENTATION/) · [`EXTENSION/`](./ENVIRONMENTS/DIGITAL/CONTEXT/EXTENSION/) · [`PROJECTION/`](./ENVIRONMENTS/DIGITAL/CONTEXT/PROJECTION/) · [`MIX/`](./ENVIRONMENTS/DIGITAL/CONTEXT/MIX/) · [`CROSS/`](./ENVIRONMENTS/DIGITAL/CONTEXT/CROSS/)
-  * **[`PHYSICAL/CONTEXT/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/)** → [`AIR/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/AIR/) · [`SEA/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/SEA/) · [`DEEP_SEA/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/DEEP_SEA/) · [`GROUND/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/GROUND/) · [`SPACE/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/SPACE/) · [`DEEP_SPACE/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/DEEP_SPACE/) · [`CYBER/`](./ENVIRONMENTS/PHYSICAL/CONTEXT/CYBER/)
-
-### 🛠️ Products Portfolio
-
-* **[`PRODUCTS/`](./PRODUCTS/)**
-
-  #### AMPEL360 — Manned Aerospace (Certified Passenger Transport)
-
-  * **[`AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/)**
-
-    * [`domains/AAA/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/) — Aerodynamics & Airframes
-
-      * **ATA**: [`ata/ATA-57/S1000D/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/ata/ATA-57/S1000D/)
-      * **CAX**: [`cax/CAD/wing_baseline_model/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/cax/CAD/wing_baseline_model/)
-      * **QOX**: [`qox/CAD/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/qox/CAD/)
-      * **PAX**: [`pax/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/pax/) → [`OB/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/pax/OB/) · [`OFF/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAA/pax/OFF/)
-
-    * Additional domains (present/underway):
-      [`AAP/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/AAP/) ·
-      [`CCC/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/CCC/) ·
-      [`CQH/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/CQH/) ·
-      [`DDD/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/DDD/) ·
-      [`EDI/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/EDI/) ·
-      [`EEE/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/EEE/) ·
-      [`EER/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/EER/) ·
-      [`IIF/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/IIF/) ·
-      [`IIS/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/IIS/) ·
-      [`LCC/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/LCC/) *(planned)* ·
-      [`LIB/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/LIB/) *(planned)* ·
-      [`MEC/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/MEC/) *(planned)* ·
-      [`OOO/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/OOO/) *(planned)* ·
-      [`PPP/`](./PRODUCTS/AMPEL360/AMPEL360_AIR_TRANSPORT/BWB-Q100/domains/PPP/) *(planned)*
-
-  * **[`AMPEL360/AMPEL360_SPACE_TOURISM/PLUS/`](./PRODUCTS/AMPEL360/AMPEL360_SPACE_TOURISM/PLUS/)** — Space Tourism Aircraft AMPEL360PLUS
-
-  #### GAIA-AIR — Unmanned Air (UAM/UAV)
-
-  * **[`GAIA-AIR/ETHICS-EMPATHY-UAV/`](./PRODUCTS/GAIA-AIR/ETHICS-EMPATHY-UAV/)**
-  * **[`GAIA-AIR/HYDROBOTS/`](./PRODUCTS/GAIA-AIR/HYDROBOTS/)**
-
-  #### GAIA-SPACE — Space-only
-
-  * **[`GAIA-SPACE/ORBITAL-MACHINES/`](./PRODUCTS/GAIA-SPACE/ORBITAL-MACHINES/)**
-  * **[`GAIA-SPACE/SAT-CONSTELLATIONS/`](./PRODUCTS/GAIA-SPACE/SAT-CONSTELLATIONS/)**
-
-  #### GAIA-SEA — Marine & Ocean Systems
-
-  * **[`GAIA-SEA/GAIA-SOUND/`](./PRODUCTS/GAIA-SEA/GAIA-SOUND/)**
-
-  #### INFRANET — Infrastructure & Network Systems
-
-  * **[`INFRANET/AQUA_OS_AIRCRAFT/`](./PRODUCTS/INFRANET/AQUA_OS_AIRCRAFT/)** → [`components/`](./PRODUCTS/INFRANET/AQUA_OS_AIRCRAFT/components/)
-  * **[`INFRANET/LH2_CORRIDOR/`](./PRODUCTS/INFRANET/LH2_CORRIDOR/)**
-  * **[`INFRANET/QAIM/`](./PRODUCTS/INFRANET/QAIM/)**
-  * **[`INFRANET/Shared/_templates/`](./PRODUCTS/INFRANET/Shared/_templates/)**
-  * **[`_migration/`](./PRODUCTS/_migration/)**
-
-### 🔧 Dev & Ops
-
-* **[`scripts/`](./scripts/)** — automation & build helpers
-* **[`.github/workflows/`](./.github/workflows/)** — CI/CD pipelines (structure, S1000D/BREX, PAx, UTCS/QS, repo hygiene)
+> Treat it as a **living reference**: copy what you need; keep your own governance.
 
 ---
 
-## Product Architecture (Domain → Process → ATA)
+## Programs & Families (Aerospace-first)
 
-Every **product** is organized into **domains**. Each domain contains **three processes**:
+* <a id="ampel360"></a>**AMPEL360 — Family of aircraft models**
+  **Sub-family & models:** **AMPEL360 Air Transport** → **BWB-Q100** (model).
+  **Variant:** **AMPEL360 PLUS** (Space Tourism). Evidence wiring: **UTCS → SPDX → Verify → Badge** aligned to **ATA**.
 
-* `cax/` → classical engineering (CAD, CAE, CFD, CAM/CAPP, VP, PDM-PLM)
-* `qox/` → quantum counterpart with QUBO/BQM, QAOA/Annealing/VQE
-* `ata/` → ATA documentation (S1000D, compliance, matrices)
+* <a id="gaia-systems"></a>**GAIA — Family of multi-domain robotic systems**
+  **Sub-families:** **GAIA-AIR** (UAV/UAM; includes **ETHICS-EMPATHY-UAV**, **HYDROBOTS**), **GAIA-SEA** (e.g., **GAIA-SOUND**), **GAIA-SPACE** (e.g., **ORBITAL-MACHINES**, **SAT-CONSTELLATIONS**). All expose **IEF badges** for readiness and safety lifecycle states.
 
-**Domain catalog (examples)**
+* <a id="qaim-2"></a>**QAIM-2 — CAx ↔ QOx bridge**
+  Integrates classical engineering pipelines with quantum/hybrid optimization and generates **signed attestations** for **UTCS/CXP** replay.
 
-| Code | Description                         |
-| :--: | ----------------------------------- |
-|  AAA | Aerodynamics & Airframes            |
-|  PPP | Propulsion & Fuel Systems           |
-|  LCC | Linkages, Control & Communications  |
-|  DDD | Drainage, Dehumidification & Drying |
-|  EEE | Electrical, Hydraulic & Energy      |
-|  IIS | Integrated Intelligence & Software  |
-|  CQH | Cryogenics, Quantum & H₂            |
-|  MEC | Mechanical Systems Modules          |
-|   …  | (see `PRODUCTS/.../domains/`)       |
+* <a id="hydrobots"></a>**HYDROBOTS — (under GAIA-AIR)**
+  Program for autonomous platforms with **evidence-first** maintenance, safety logs, and provenance manifests (lives in `GAIA-AIR/HYDROBOTS`).
+
+* **INFRANET — Infrastructure & OS**
+  Includes **AQUA_OS_AIRCRAFT** (ARINC/IMA partitions, AFDX/TSN/TTE, UTCS/QS sealing) and **LH2_CORRIDOR** (H₂ infrastructure). **QAIM** also lives here as a cross-cutting bridge.
 
 ---
 
-## PAx — Packaging & Applications
+## Evidence Objects
 
-**Standard structure**
+* **UTCS / CXP** — machine-readable context (e.g., `UTCS/context.manifest.json`)
+* **SPDX SBOM** — generated on build/release (`sbom/`)
+* **Verify (CI)** — policy-pinned workflows under `.github/workflows/`
+* **Badge + Replay** — status + links to replayable logs (`badges/`)
 
-```
-pax/
-├── OB/                 # On-Board (A653/IMA, A661 CDS, A664/AFDX, A429)
-│   └── manifests/
-├── OFF/                # Off-Board (OCI/edge/cloud)
-│   └── oci/
-├── schemas/            # JSON Schemas for manifests
-└── scripts/            # PAx validators/linters
+<details>
+  <summary><strong>UTCS manifest skeleton (YAML)</strong></summary>
+
+```yaml
+id: UTCS-MI:v5.0:<PRODUCT>:<CAX|QOX|PAX>:<DOMAIN>:<ATA>:<artifact-id>
+llc: SYSTEMS
+framework: IDEALE.eu
+bridge: QS→FWD→UE→FE→CB→QB      # TFA canon
+source:
+  repo_path: <relative/path/to/artifact>
+  commit: <git-sha>
+  created_at: <iso8601>
+context:
+  who:
+    org: <org-name>
+    team: <team-name>
+    owner: <contact@domain>
+  what:
+    product_family: <AMPEL360|GAIA|INFRANET>
+    product_model: <e.g., BWB-Q100>
+    variant: <e.g., PLUS|NULL>
+  where:
+    env: <OB|OFF|SIM|LAB|FLIGHT>
+    region: <EU|US|...>
+  when:
+    ts_build: <iso8601>
+    ts_verify: <iso8601>
+  why:
+    objective: <design|safety|compliance|maintenance|...>
+    ticket_ref: <issue-id or URL>
+inputs:
+  - path: <path/to/input>
+    digest: <sha256>
+outputs:
+  - type: <mesh|report|package|run|sbom>
+    path: <path/to/output>
+    digest: <sha256>
+evidence:
+  ata_dm_refs:
+    - <DMC-...-EN-US>
+  sbom:
+    format: SPDX-2.3
+    path: <sbom/<artifact>.spdx.json>
+  verify_log: <.evidence/logs/<run-id>.jsonl>
+provenance:
+  signatures:
+    qs_anchor: <sha256>
+    sigstore_bundle: <path/to/intoto.jsonl>
+ethics_guard: MAL-EEM
+classification: INTERNAL–EVIDENCE-REQUIRED
 ```
 
-**Quality standards**
-
-* **SBOM mandatory** (SPDX/CycloneDX) for all OB/OFF components
-* **Signatures & attestations** (sigstore/cosign, in-toto, SLSA-L3)
-* **UTCS/QS**: `canonical_hash` and QS anchors in manifests
-* **Security**: least privilege, read-only FS, non-root
+</details>
 
 ---
 
-## BWB-Q100 — Transport Civil × Air
+## Conformance Ladder
 
-**Generic operational flow**
+| Level | Name           | Requirements (summary)                                                    |
+| ----: | -------------- | ------------------------------------------------------------------------- |
+|     1 | **Baseline**   | Valid **UTCS** + one **SPDX** per release + visible **Badge**             |
+|     2 | **Replayable** | Policy-pinned **Verify** + hash-chained logs + retention policy           |
+|     3 | **Assured**    | Third-party attestation + sector **profile** (e.g., **TFA**) + revocation |
+|     4 | **Certified**  | **IDEALE Trust Mark** aligned to EU frameworks                            |
 
-1. **Model (CAX)** → commit under `domains/<code>/cax/`
-2. **Encode (QOX)** → problems under `qox/<phase>/problems/`
-3. **Solve (QOX)** → runs under `qox/<phase>/runs/<timestamp>/` with UTCS evidence
-4. **Document (ATA)** → DMs under `ata/ATA-xx/` with cross-refs to CAX/QOX/PAX
-5. **Gate (CI)** → quality checks, UTCS/QS anchors, **MAL-EEM** guard
-
-**Program KPIs (targets)**
-`+5–15%` fuel-efficiency · `−10–20%` emissions · `−20–50%` development time
+> Progress is **evidence-driven**; each level adds traceability without lock-in.
 
 ---
 
-## QAIM-2 — CAX ↔ QOx Bridge
+## Roadmap Phases
 
-Classical CAx is sequential & siloed; **QAIM-2** integrates multi-disciplinary exploration with AI+Q hybrids and deterministic CB fallbacks (TRL < 9 on QPUs).
-See → [`FIELDS/cross/process_engineering/QAIM-2/`](./FIELDS/cross/process_engineering/QAIM-2/)
-
----
-
-## AQUA OS (Aircraft Extension) — INFRANET
-
-* **ARINC-653** partitioning; deterministic RT networking (A664/AFDX, TSN/TTE)
-* Time/synchronization (PTP/TTE), Security/KMS with optional **QKD**
-* Evidence sealing via **UTCS/QS** and health monitoring
-* Typical partitions: QAFbW, NAV/ADC, HMI, MX/QA, UTCS_QS, …
-
-See → [`PRODUCTS/INFRANET/AQUA_OS_AIRCRAFT/`](./PRODUCTS/INFRANET/AQUA_OS_AIRCRAFT/)
+1. **Standards** — freeze **MVS v0.1** (UTCS/CXP schema, SPDX baseline, Verify action, Badge endpoint)
+2. **Services** — Verification-as-a-Service (SaaS), data residency, signed attestations
+3. **Trust Mark** — Levels, controls, assessor marketplace, revocation
+4. **Policy Alignment** — Map primitives to EU requirements; public-sector pilots
 
 ---
 
-## Standardized Structure (Minimum Viable Layout)
+## Contact & Pilots
 
-> Canonical tree for convergence. **Existing** nodes are live; **(planned)** nodes are placeholders under active development.
+Interested in a 2-week pilot (Aerospace/Energy/Defense/Logistics)?
+
+* Email: **[pilots@ideale.eu](mailto:pilots@ideale.eu)**
+* Issues: **[Open a Pilot request](https://github.com/Robbbo-T/IDEALE-IEF/issues/new?title=Pilot%3A%20Org)**
+
+---
+
+## Link Map (for clustered keywords)
+
+* **IDEALE.eu** → [https://ideale.eu](https://ideale.eu)
+* **IEF (IDEALE Evidence Framework)** → #ideale-evidence-framework-ief
+* **Sector Profiles** → #sector-profiles
+* **TFA (Aerospace Domain Profile)** → #tfa--aerospace-domain-profile
+* **ASI-T2 (Reference Implementation)** → #asi-t2-reference-implementation
+* **Programs & Families** → #programs--families-aerospace-first
+* **Evidence Objects** → #evidence-objects
+
+  * **UTCS** → #utcs-manifest-skeleton-yaml
+  * **CXP** → #evidence-objects
+  * **SBOM** → #evidence-objects
+  * **Verify / Badge** → #evidence-objects
+* **AMPEL360 (family)** → #ampel360
+* **GAIA (family)** → #gaia-systems
+* **QAIM-2 (bridge)** → #qaim-2
+* **HYDROBOTS (program under GAIA-AIR)** → #hydrobots
+* **Contact & Pilots** → #contact--pilots
+* **SPDX** → [https://spdx.dev](https://spdx.dev)
 
 ```
-├── FIELDS/
-├── ENVIRONMENTS/
-├── PRODUCTS/
-│   ├── AMPEL360/
-│   │   ├── AMPEL360_AIR_TRANSPORT/
-│   │   │   └── BWB-Q100/
-│   │   │       └── domains/
-│   │   │           ├── AAA/        # Airframes Aerodynamics and Airworthiness (Contains Material)
-│   │   │           ├── AAP/        # Airport Adaptable Platforms
-│   │   │           ├── CCC/        # Cockpit, Cabin & Cargo
-│   │   │           ├── CQH/        # Cryogenics, Quantum & H₂
-│   │   │           ├── DDD/        # Drainage, Dehumidification & Drying
-│   │   │           ├── EDI/        # Electronics & Digital Instruments
-│   │   │           ├── EEE/        # Renewable Energy, Harvesting & Circulation
-│   │   │           ├── EER/        # Environmental, Emissions & Remediation
-│   │   │           ├── IIF/        # Industrial Infrastructure & Facilities
-│   │   │           ├── IIS/        # Information Systems and Intelligence Softwares
-│   │   │           ├── LCC/        # Linkages, Control & Communications
-│   │   │           ├── LIB/        # Logistics, Inventory & Blockchain
-│   │   │           ├── MEC/        # Mechanical Systems Modules
-│   │   │           ├── OOO/        # OS, Ontologies & Office Interfaces (planned)
-│   │   │           └── PPP/        # Propulsion & Fuel Systems (planned)
-│   │   │
-│   │   │       # Per-domain canonical layout
-│   │   │       domains/<CODE>/
-│   │   │       ├── ata/ATA-xx/        # S1000D (BREX, DMRL, DMs, figures, pubs)
-│   │   │       ├── cax/<DISCIPLINE>/  # CAD/CAE/CFD/... with manifests
-│   │   │       ├── qox/<PHASE>/       # problems/, runs/<ts>/, benchmarks/
-│   │   │       ├── pax/{OB,OFF}/      # manifests/, sbom/, signatures/
-│   │   │       ├── index.extracted.yaml
-│   │   │       └── README.md
-│   │   └── AMPEL360_SPACE_TOURISM/PLUS/
-│   ├── GAIA-AIR/
-│   ├── GAIA-SPACE/
-│   ├── GAIA-SEA/
-│   └── INFRANET/
-│       ├── AQUA_OS_AIRCRAFT/
-│       ├── LH2_CORRIDOR/
-│       ├── QAIM/
-│       └── Shared/_templates/
-├── scripts/
-└── .github/workflows/
-```
 
----
 
-## Compliance & Standards
-
-* **S1000D Issue 6.0** — XML **must validate** against official XSDs (XSD-first). BREX/Schematron recommended for project rules.
-* **CS-25 / 14 CFR** — certification matrices stored under `ATA`.
-* **DO-178C / DO-254 / ARP4754A / ARP4761** — process evidence and hazard analyses.
-* **SLSA / SBOM (SPDX or CycloneDX)** — supply chain integrity for PAx.
-* **UTCS/QS** — evidence anchoring, `canonical_hash`, and signatures across artifacts.
-* **MAL-EEM** — ethics, safety, and export-compliance guardrails.
-
----
-
-## CI/CD & Repo Hygiene
-
-* **Pipelines:** [`.github/workflows/`](./.github/workflows/)
-
-  * XML XSD validation (S1000D 6.0)
-  * BREX/Schematron (if provided)
-  * YAML/JSON lint
-  * SBOM and signature checks (PAx)
-  * UTCS/QS anchor verification
-
-* **Fail-closed defaults:** missing `artifact.manifest.yaml`, invalid XSD, or absent SBOM **blocks the build**.
-
----
-
-## Contributing
-
-1. Propose artifacts via **issue** with scope, UTCS plan, and ethics assessment.
-2. Fork/branch; place assets under the correct **domain/process** path.
-3. Include **`artifact.manifest.yaml`**, **SBOM**, and **QS** signatures.
-4. Ensure **XSD-valid** S1000D (for ATA) and pass CI.
-5. Open PR; attach evidence and reference ATA DMs.
-
-> Use `PRODUCTS/INFRANET/Shared/_templates/` where applicable.
-
----
-
-## Security, Ethics, and Licensing
-
-* **Classification:** `INTERNAL–EVIDENCE-REQUIRED` — redistribution prohibited without written approval.
-* **Ethics:** all contributions must comply with **MAL-EEM**.
-* **Export Control:** contributors are responsible for screening; do not commit controlled technical data.
-* **License:** Internal Use (see repository-level policy).
-
----
-
-```
-::contentReference[oaicite:0]{index=0}
-```
 
 
 
