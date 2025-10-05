@@ -35,8 +35,8 @@
 
 ## What is IDEALE?
 
-Headline: Open standards for verifiable European industry
-Subhead: IDEALE.eu lets Europe’s strategic sectors—Intelligence, Defense, Energy, Aerospace, Logistics, and ESG—produce verifiable, portable artifacts that move across tools and organizations without vendor lock-in. Teams can participate, contribute, and earn via a selectable tokenomics mark (team, cross-org, or ad-hoc clusters). The roadmap adds high-quality generative design graphics cryptographically tied to inputs, models, and approvals—transparent from concept to operation.
+### Open standards for verifiable European industry
+####  IDEALE.eu lets Europe’s strategic sectors—Intelligence, Defense, Energy, Aerospace, Logistics, and ESG—produce verifiable, portable artifacts that move across tools and organizations without vendor lock-in. Teams can participate, contribute, and earn via a selectable tokenomics mark (team, cross-org, or ad-hoc clusters). The roadmap adds high-quality generative design graphics cryptographically tied to inputs, models, and approvals—transparent from concept to operation.
 
 > **Bridge flow (TFA canon):** **QS→FWD→UE→FE→CB→QB**.
 
