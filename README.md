@@ -45,7 +45,7 @@
 
 **Entity types**
 
-- **Family** — related products sharing a common baseline (**GAIA**; **AMPEL360**). There are 3 families: Manned Vehicles, Unmanned Vehicles, Infrastructure Systems (INFRANET) 
+- **Family** — related products sharing a common baseline (**GAIA**; **AMPEL360**). There are 3 types of families: Manned Vehicles, Unmanned Vehicles, Infrastructure Systems (INFRANET) 
 - **Model** — concrete configuration within a family (e.g., **BWB** Blended Wing Body Hydrogen Hybrid**)  
 - **Variant** — specialization of a model (e.g., **Q100**) quantum enhahnced, for 100 passengers. 
 - **Program** — sustained line of work (e.g., **H2-CHAIN-VALUE**, GAIA-AIR-DRONES, GAIA-SEA-HYDROBOTS, GAIA-SPACE-IDENTITY, AMPEL360 BWB-Q100. AMPEL360 PLUS
