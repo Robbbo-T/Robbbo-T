@@ -1,0 +1,61 @@
+name: UTCS + Gates
+
+on:
+  pull_request:
+  push:
+    branches: [ main, trunk, develop ]
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history for diff analysis
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install gate dependencies
+        run: pip install -r ci/requirements.txt
+
+      - name: 🔗 Validate Markdown links and paths
+        run: python ci/gates/link_path_validator.py
+
+      - name: 🛡️ Enforce FCR, UTCS, and NAME‑LOCK gates
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          python ci/gates/fcr_enforcer.py \
+            --base "$BASE_SHA" \
+            --head "$HEAD_SHA" \
+            --allowlist ci/gates/NAME_LOCK_ALLOWLIST.txt
+
+      - name: 🧪 Validate checklist CSVs (optional)
+        run: python ci/gates/validate_checklists.py
+
+      - name: 🏅 Emit badge descriptor
+        if: success()
+        run: |
+          mkdir -p ci/badges
+          echo '{
+            "badge": {
+              "name": "UTCS + Gates Passed",
+              "color": "green",
+              "icon": "check-circle",
+              "issued_at": "'"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"'",
+              "issuer": "IDEALE.eu CI",
+              "scope": "products/, governance/, docs/"
+            }
+          }' > ci/badges/utcs_gates_badge.json
+
+      - name: 📤 Upload badge artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: utcs-gates-badge
+          path: ci/badges/utcs_gates_badge.json
