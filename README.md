@@ -1,188 +1,234 @@
 # ROBBBO‑T · BOOTSTRAP REPO (TFA V2 / ASI‑T2)
 
-> **SSoT & Guardrails:** Este repo aplica **ASI‑T · Universal Injection Prompt (v1)** como fuente única de verdad para acciones de agentes y humanos. Se aplican **MAL‑EEM** (ética & empatía) y **UTCS** (UiX Threading Context/Content/Cache and Structure/Style/Sheet) para trazabilidad total.
+> **SSoT & Guardrails:** This repository applies **ASI‑T · Universal Injection Prompt (v1)** as the **single source of truth** for all agent and human actions. **MAL‑EEM** (ethics & empathy) and **UTCS** (UiX Threading Context/Content/Cache and Structure/Style/Sheet) enforce full provenance and safety.
 
-**TFA FLOW (Canon):** `QS → FWD → UE → FE → CB → QB`
+**TFA FLOW (Canon):** `QS → FWD → UE → FE → CB → QB`  
 **PAx Orientation Markers:** `ONB` (Onboard), `OUT` (Outboard)
 
 ---
 
-## 0) MANIFIESTO DEL PORTFOLIO
+## NAME‑LOCK (SSoT)
 
-* **Tesis:** Transporte Aéreo y Espacial con **H₂ híbrido‑eléctrico** y **Quantum‑enhanced**, con verificación física, gobernanza climática y trazabilidad UTCS.
-* **Líneas de producto (T = transport, tripulado):**
+Canonical product names are locked and must be used verbatim across code, docs, and CI:
 
-  * **AMPEL360‑T‑Air**: BWB H₂ hybrid‑electric (Quantum‑enhanced)
-  * **AMPEL360‑T‑Space**: Transporte espacial tripulado (suborbital → orbital)
+- **AMPEL360‑AIR‑T** (Air: BWB H₂ hybrid‑electric, quantum‑enhanced)
+- **AMPEL360‑SPACE‑T** (Space: crewed transport, suborbital → orbital)
+
+> Any PR using alternative spellings (e.g., AMPEL360‑T‑Air / AMPEL360‑T‑Space) will be rejected by CI gates.
 
 ---
 
-## 1) ESTRUCTURA DE REPOSITORIO (MOD‑STACK / MOD‑PACK)
+## 0) PORTFOLIO MANIFESTO
+
+**Thesis:** Air & Space transport using **hybrid‑electric hydrogen** and **quantum‑enhanced systems**, with physics‑based verification, climate governance, and UTCS traceability.
+
+**Product lines (T = transport, crewed):**
+- **AMPEL360‑AIR‑T**: BWB H₂ hybrid‑electric (quantum‑enhanced)
+- **AMPEL360‑SPACE‑T**: Crewed space transport (suborbital → orbital)
+
+---
+
+## 1) REPOSITORY STRUCTURE (MOD‑STACK / MOD‑PACK)
 
 ```text
 robbbo-t/
 ├── canon/                         # CANON & GENESIS (SSoT)
-│   ├── GENESIS_ASI-T2.md          # Texto canónico (GENESIS) marcado por el usuario
-│   ├── CANON_FACTS.md             # Hechos canon (TFA flow, UTCS, Domains AAA…PPP, PAx)
-│   └── INJECTION_PROMPT_v1.md     # ASI‑T · Universal Injection Prompt (v1)
+│   ├── GENESIS_ASI-T2.md
+│   ├── CANON_FACTS.md
+│   └── INJECTION_PROMPT_v1.md
 ├── governance/
-│   ├── MAL-EEM/                   # Ética/Seguridad (políticas, checklists)
-│   ├── UTCS/                      # Estructuras de trazabilidad, SSoT, plantillas
-│   └── COMPLIANCE/                # Rutas de certificación (EASA/ESA/NASA), Means of Compliance
+│   ├── MAL-EEM/                   # Ethics/Safety (policies, checklists)
+│   ├── UTCS/                      # Traceability structures, SSoT templates
+│   │   ├── SCHEMA.json
+│   │   ├── README.md
+│   │   └── records/
+│   │       └── 2025-10-06_init.json
+│   └── COMPLIANCE/                # Certification routes (EASA/ESA/NASA), Means of Compliance
 ├── ci/
 │   ├── gates/
-│   │   ├── FCR-1_checklist.md     # Follow‑up Chain Rule 1 (inputs/paths válidos)
-│   │   ├── FCR-2_checklist.md     # Follow‑up Chain Rule 2 (trazabilidad QS/UTCS)
-│   │   ├── link_path_validator.py # Validador de enlaces/rutas (CI gate)
-│   │   └── fcr_enforcer.py        # Enforcers CI (bloqueo de PR si no cumple)
-│   └── workflows/                 # YAML de CI/CD (lint, build, sim, docs)
+│   │   ├── FCR-1_checklist.md
+│   │   ├── FCR-2_checklist.md
+│   │   ├── link_path_validator.py
+│   │   ├── fcr_enforcer.py
+│   │   └── NAME_LOCK_ALLOWLIST.txt
+│   ├── requirements.txt
+│   └── workflows/
+│       └── ci.yml
 ├── docs/
-│   ├── ROADMAP.md                 # Roadmap 12–18 meses (Air/Space)
-│   ├── PARTNERS.md                # Proveedores/partners
-│   ├── FUNDING_EU.md              # Grants UE (Clean Aviation, SESAR, ESA, etc.)
-│   └── PLAYBOOKS/                 # Operación, seguridad H₂, GSE, flight test
-├── domains/                       # AAA…PPP (15 dominios TFA)
-│   ├── AAA/ …                     # (placeholder de todos los dominios canon)
+│   ├── ROADMAP.md
+│   ├── PARTNERS.md
+│   ├── FUNDING_EU.md
+│   └── PLAYBOOKS/
+│       └── H2_SAFETY.md
+├── domains/                       # AAA…PPP (15 TFA domains)
+│   ├── AAA/ …                     # (placeholders for all canonical domains)
 │   └── PPP/
 ├── products/
-│   ├── ampel360-t-air/
+│   ├── ampel360-air-t/
 │   │   ├── README.md              # One‑pager + KPIs + TRLs
-│   │   ├── QS/                    # Gemelos, optimización, mission planning
-│   │   ├── FWD/                   # Aero BWB, criogenia, integración energética
-│   │   ├── UE/                    # Cabina/sistemas, HMI, safety/evacuación
-│   │   ├── FE/                    # Integración propulsión, thermal, BMS, avionics
-│   │   ├── CB/                    # Certificación (EASA CS‑25 + SC H₂/eléctrico)
-│   │   └── QB/                    # Pruebas HIL/SIL, ensayos criogénicos, e‑fans
-│   └── ampel360-t-space/
-│       ├── README.md              # One‑pager + Fases A/B/C, human‑rating path
-│       ├── QS/
-│       ├── FWD/
-│       ├── UE/
-│       ├── FE/
-│       ├── CB/                    # Human‑rating, estándares ESA/NASA
-│       └── QB/
+│   │   ├── QS/  FWD/  UE/  FE/  CB/  QB/
+│   └── ampel360-space-t/
+│       ├── README.md
+│       ├── QS/  FWD/  UE/  FE/  CB/  QB/
 ├── sim/
-│   ├── air/                       # Modelos de sistema (propulsión H₂‑eléctrica), e‑fan
-│   └── space/                     # GNC suborbital/orbital, entry‑guidance
-├── cax/                           # CAE/CAD/CFD/FEA (enlaces y outputs)
-├── qox/                           # Quality Ops eXchange: datos, métricas, ensayos
-├── data/                          # Datasets (UTCS‑indexed)
+│   ├── air/
+│   └── space/
+├── cax/
+├── qox/
+│   └── metrics.yaml
+├── data/
 └── tools/
-    ├── templates/                 # Plantillas (MoC, PDR/CDR, hazard logs, etc.)
-    └── cli/rtx.py                 # CLI para crear estructuras QS→FWD→UE→FE→CB→QB
+    ├── templates/
+    │   ├── MoC_TEMPLATE.md
+    │   ├── HAZARD_LOG_TEMPLATE.csv
+    │   └── REVIEW_PDR_TEMPLATE.md
+    └── cli/
+        └── rtx.py                 # CLI to create QS→FWD→UE→FE→CB→QB scaffolds
 ```
 
-> **Regla:** Todo módulo de producto debe respetar el **orden canónico** `QS→FWD→UE→FE→CB→QB`. Los PR que rompan el orden o no actualicen UTCS serán rechazados por **CI gates**.
+> **Rule:** Every product module must respect the **canonical order** `QS→FWD→UE→FE→CB→QB`. PRs that break the order or fail to update UTCS will be blocked by **CI gates**.
 
 ---
 
-## 2) CHECKLISTS (por capa TFA)
+## 2) CHECKLISTS (by TFA layer)
 
-* **QS:**
+**QS**
 
-  * [ ] Modelos de demanda/energía; sizing H₂; rutas; sensibilidad climática.
-  * [ ] Objetivos de ruido, NOx, CO₂ (well‑to‑wake); escenarios de grid H₂.
-* **FWD:**
+* [ ] Demand/energy models; H₂ sizing; routes; climate sensitivity.
+* [ ] Noise, NOx, CO₂ targets (well‑to‑wake); H₂ grid scenarios.
 
-  * [ ] Integración BWB (Air) / estructura y TPS (Space).
-  * [ ] Gestión criogénica (aislamiento, ventilación, inertización).
-* **UE:**
+**FWD**
 
-  * [ ] HMI crew/pax, evac, ergonomía, accesibilidad; aborts (Space).
-* **FE:**
+* [ ] BWB integration (AIR) / structure & TPS (SPACE).
+* [ ] Cryogenic management (insulation, ventilation, inerting).
 
-  * [ ] Propulsión H₂‑eléctrica, BMS, thermal, e‑fans; LSS/docking (Space).
-* **CB:**
+**UE**
 
-  * [ ] Matriz de cumplimiento (EASA SC eléctricos/H₂; ESA/NASA HRP).
-* **QB:**
+* [ ] Crew/pax HMI, evacuation, ergonomics, accessibility; aborts (SPACE).
 
-  * [ ] HIL/SIL, bancos de ensayo, pruebas taxi, drop/hover tests.
+**FE**
 
----
+* [ ] H₂‑electric propulsion, BMS, thermal, distributed e‑fans; LSS/docking (SPACE).
 
-## 3) ONE‑PAGER · AMPEL360‑T‑AIR (BWB H₂ Hybrid‑Electric, Quantum‑Enhanced)
+**CB**
 
-**Propuesta de valor**
+* [ ] Compliance matrix (EASA electric/H₂ SC; ESA/NASA HRP).
 
-* 30–60% ↓ energía pax‑km vs cilíndrico; cero CO₂ en uso; ruido muy bajo taxi/despegue.
-* “Quantum‑enhanced”: optimización energética/rota y mantenimiento predictivo.
+**QB**
 
-**Arquitectura (QS→FWD→UE→FE→CB→QB)**
-
-* **QS:** Gemelo cuántico‑híbrido; sizing tanque H₂L; rutas y clima; KPIs.
-* **FWD:** BWB con tanques conformales ONB; distribución masas; seguridad H₂.
-* **UE:** Cabina, evacuación, ergonomía; HMI energía/flight.
-* **FE:** Pila(s) + turbogenerador H₂ (pico/reserva) → e‑fans distribuidos; thermal.
-* **CB:** CS‑25 + SC eléctricos/H₂; AMC emergentes; safety cases.
-* **QB:** Iron‑bird eléctrico; banco criogénico; demo e‑fan; taxi full‑electric.
-
-**KPIs iniciales**
-
-* E_pax‑km ↓ ≥ 40%; Turnaround ≤ 30 min; MTBUR ↑; ruido SEL ↓ 10–15 dB.
-
-**TRLs & Hitos (12–18 m)**
-
-* TRL3–4: subescala BWB + loop criogénico.
-* TRL5–6: HIL/SIL powertrain; taxi.
-* TRL6–7: prototipo vuelo + SC H₂/eléctrico.
-
-**Riesgos clave**
-
-* Densidad energética efectiva H₂L + masa aislamiento; gestión térmica; certificación SC.
+* [ ] HIL/SIL, benches, taxi tests, drop/hover tests.
 
 ---
 
-## 4) ONE‑PAGER · AMPEL360‑T‑SPACE (Transporte Tripulado)
+## 3) ONE‑PAGER · AMPEL360‑AIR‑T (BWB H₂ Hybrid‑Electric, Quantum‑Enhanced)
 
-**Estrategia evolutiva**
+**Value proposition**
 
-* **Fase A (Suborbital):** 6–10 pax, retorno rápido, ops tipo aeropuerto espacial.
-* **Fase B (LEO):** Taxi/logística ligera; docking; life support.
-* **Fase C (LEO‑GTO/Gateway):** Reabastecimiento H₂/O₂; federación con partners.
+* 30–60% lower energy per pax‑km vs. cylindrical fuselage baseline (BWB advantages).
+* Zero CO₂ in use (H₂) and strongly reduced NOx; very low noise in taxi/take‑off with electric modes.
+* **Quantum‑enhanced**: hybrid quantum‑classical optimization for energy, routing, maintenance, certification cases.
 
-**Arquitectura (QS→FWD→UE→FE→CB→QB)**
+**Architecture (QS→FWD→UE→FE→CB→QB)**
 
-* **QS:** Planificación misión/aborts; márgenes térmicos; entry‑guidance asistido.
-* **FWD:** Estructura presurizada; TPS reutilizable; GNC alto rendimiento.
-* **UE:** Factores humanos; escape/aborto; recuperación rápida.
-* **FE:** Integración etapas; ground segment; LSS; docking.
-* **CB:** Ruta human‑rating (ESA/NASA); flight safety; verificación independiente.
-* **QB:** Drop/hover; captive carry; vuelos libres; post‑flight inspection.
+* **QS:** Hybrid/quantum digital twin; H₂L tank sizing; mission & climate scenarios; KPI dashboards.
+* **FWD:** BWB airframe with conformal ONB cryogenic tanks; mass distribution; H₂ safety (inerting, ventilation, detection).
+* **UE:** Cabin layout, evacuation, ergonomics; flight/energy HMI and procedures.
+* **FE:** Fuel cell stack(s) + H₂ turbogenerator (peak/reserve) → distributed e‑fans; thermal management & icing control.
+* **CB:** EASA CS‑25 baseline + special conditions for H₂/electric; emerging AMC; safety cases & compliance matrices.
+* **QB:** Electric iron‑bird; cryogenic loop testbed; e‑fan demo; full‑electric taxi trials.
 
-**KPIs iniciales**
+**Initial KPIs**
 
-* Cadencia ≥ X/mes; turnaround < 2 semanas (Fase A); confiabilidad abort‑safe.
+* ≥ 40% reduction in E_pax‑km; ≤ 30 min turnaround; ↑ MTBUR; 10–15 dB SEL noise reduction in critical ops phases.
 
-**Riesgos clave**
+**TRLs & milestones (12–18 months)**
 
-* TPS reusable a costos razonables; aborts seguros; coordinación regulatoria.
+* TRL 3–4: BWB subscale + cryogenic loop bench.
+* TRL 5–6: HIL/SIL powertrain; electric taxi demonstration.
+* TRL 6–7: Flight‑test prototype + special conditions for H₂/electric.
+
+**Key risks**
+
+* Effective energy density incl. insulation mass; thermal management; maturity of special conditions & MoC.
 
 ---
 
-## 5) RUTA REGULATORIA Y PARTNERS
+## 4) ONE‑PAGER · AMPEL360‑SPACE‑T (Crewed Transport)
 
-* **Air:** Pre‑aplicaciones EASA; definición SC H₂/eléctrico; safety cases.
-* **Space:** ESA/NASA HRP, estándares espaciales; autoridades nacionales.
-* **Partners clave:** criogenia, pilas H₂, e‑fans, TPS, puertos aeroespaciales.
+**Evolutive strategy**
+
+* **Phase A (Suborbital):** 6–10 pax; rapid turnaround; spaceport‑style ops; high‑reliability abort and recovery.
+* **Phase B (LEO):** Light crew logistics; docking & on‑orbit ops; life support integration.
+* **Phase C (LEO→GTO/Gateway):** H₂/O₂ refueled stages; **federated** architecture (FE) with partners & depots.
+
+**Architecture (QS→FWD→UE→FE→CB→QB)**
+
+* **QS:** Mission planning, abort envelopes, thermal margins; assisted entry‑guidance; reliability modeling.
+* **FWD:** Pressurized structure; reusable TPS; high‑performance GNC and aero‑propulsive integration.
+* **UE:** Human factors; escape/abort systems; fast recovery and line maintenance.
+* **FE:** Stage integration; ground segment; life support; docking & interfaces.
+* **CB:** ESA/NASA human‑rating path; flight safety; independent verification.
+* **QB:** Drop/hover tests; captive carry; free flights; post‑flight inspection workflows.
+
+**Initial KPIs**
+
+* Cadence ≥ X/month; turnaround < 2 weeks (Phase A); abort‑safe reliability targets.
+
+**Milestones**
+
+* Progressive flight envelope expansion: uncrewed → crewed.
+* Validated abort/escape; established recovery ops (sea/land).
+
+**Key risks**
+
+* Reusable TPS at sustainable cost; robust aborts; multi‑agency regulatory coordination.
+
+---
+
+## 5) REGULATORY PATH & PARTNERS
+
+* **AIR:** Early EASA pre‑applications; special conditions for H₂/electric; safety cases & MoC.
+* **SPACE:** ESA/NASA human‑rating, space standards; national authorities.
+* **Key partners:** cryogenics, fuel cells, e‑fans, TPS, and spaceport operators.
 
 ---
 
 ## 6) CI GATES (PR/Commit Conventions)
 
-* **Convenciones PR:** prefijos por capa (`QS/`, `FWD/` …), vínculo UTCS; checklist MAL‑EEM.
-* **Validadores:** `link_path_validator.py` y `fcr_enforcer.py` obligatorios; fallo → bloquea merge.
-* **Artefactos:** cada PR debe actualizar UTCS (estructura/estilo/hoja) y matrices CB.
+* **PR conventions:** layer prefixes (`QS/`, `FWD/` …), UTCS links; MAL‑EEM checklist.
+* **Validators:** `link_path_validator.py` and `fcr_enforcer.py` are mandatory; failures block merges.
+* **Artifacts:** every PR must update UTCS (structure/style/sheet) and CB matrices.
 
 ---
 
-## 7) Siguientes pasos
+## 7) NEXT STEPS
 
-1. Crear archivos *README.md* de producto con estas plantillas dentro de `products/…`.
-2. Sembrar **GENESIS** y **CANON_FACTS** en `canon/` (ya marcados por el usuario).
-3. Inicializar **workflows** de CI (lint + UTCS check + FCR gates).
-4. Cargar primeras plantillas de MoC y hazard logs en `tools/templates/`.
-5. Abrir *issues* por capa TFA para cada producto (backlog inicial).
+1. Generate product‑level *README.md* files using templates inside `products/…`.
+2. Seed **GENESIS** and **CANON_FACTS** in `canon/` (as marked by the user).
+3. Initialize **CI workflows** (lint + UTCS check + FCR gates).
+4. Add initial MoC and hazard‑log templates under `tools/templates/`.
+5. Open **issues** per TFA layer for each product (initial backlog).
+
+---
+
+## Quickstart (developer)
+
+```bash
+# 1) Install pre-commit for local guardrails
+pipx install pre-commit || pip install pre-commit
+pre-commit install
+
+# 2) Run CI gates locally (same as Action)
+make gate
+
+# 3) Scaffold a product or a new TFA layer module
+python tools/cli/rtx.py scaffold product ampel360-air-t
+python tools/cli/rtx.py scaffold layer products/ampel360-air-t FE
+```
+
+**Contribution & Security**
+
+* See `CONTRIBUTING.md`, `SECURITY.md`, and `governance/MAL-EEM/` for ethics & safety.
 
 
 
