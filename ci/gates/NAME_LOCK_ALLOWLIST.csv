@@ -2,3 +2,4 @@ Path Pattern,Purpose,CI Enforcement
 README.md,Top-level documentation and onboarding,Allow non-canonical names
 docs/**.md,Extended documentation, guides, examples,Allow non-canonical names
 canon/**.md,Canonical references and naming guides,Allow non-canonical names
+
