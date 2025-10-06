@@ -1,0 +1,26 @@
+# Means of Compliance (MoC) — Example
+moc_id: MOC-2025-045
+product: AMPEL360-AIR-T
+layer: FWD
+regulatory_basis:
+  - CS‑25 SC H₂/electric
+  - ESA/NASA HRP
+  - ISO 21384‑3 (UAS operational risk)
+  - EASA Part 21 Subpart G
+method_of_compliance:
+  - Analysis
+  - Inspection
+  - Test
+  - Similarity
+references:
+  - DMC‑ATA57‑STRUCT‑INSPECT‑EN
+  - SBOM: sbom/AMPEL360‑AIR‑T.spdx.json
+  - Policy: policies/AMPEL360‑MoC‑v1.2.md
+acceptance_criteria:
+  - Quality score ≥ 0.95
+  - Risk score ≤ 0.08
+  - Conformance: IEF‑0.1, TFA‑ATA‑57
+traceability:
+  utcs_record_id: UTCS‑MI:v5.0:AMPEL360:PAX:AAA:ATA‑57:evt‑045
+  passport_ref: evidence/passports/AAA/SN‑000123.json
+  verify_log: .evidence/logs/evt‑045.jsonl
