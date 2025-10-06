@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# CI/CD
+.github/agents/
+
+# Build artifacts
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+
+# CAx outputs (large files - use Git LFS or external storage)
+*.step
+*.stp
+*.iges
+*.igs
+*.stl
+*.obj
+*.3dm
+*.prt
+*.asm
+
+# CFD/FEA (large result files)
+*.res
+*.rst
+*.cas
+*.dat
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+/tmp/
+.temp/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Documentation build
+docs/_build/
+site/
+
+# Node (if used for tooling)
+node_modules/
+package-lock.json
+
+# Data files (use external storage for large datasets)
+*.h5
+*.hdf5
+*.mat
+
+# Secrets
+.env
+*.key
+*.pem
+credentials.json
+secrets/
