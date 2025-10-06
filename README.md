@@ -1,289 +1,188 @@
-# IDEALE.eu — Intelligence • Defense • Energy • Aerospace • Logistics • ESG
+# ROBBBO‑T · BOOTSTRAP REPO (TFA V2 / ASI‑T2)
 
-[![CI · Evidence Verify](https://github.com/Robbbo-T/IDEALE-IEF/actions/workflows/verify.yml/badge.svg)](https://github.com/Robbbo-T/IDEALE-IEF/actions/workflows/verify.yml)
-[![SPDX 2.3](https://img.shields.io/badge/SBOM-SPDX_2.3-informational)](https://spdx.dev/specifications/)
-![UTCS v5.0](https://img.shields.io/badge/UTCS-v5.0-blue)
-![Policy-Pinned Verify](https://img.shields.io/badge/Verify-policy--pinned-success)
-![Trust Mark · Pilot](https://img.shields.io/badge/IDEALE_Trust_Mark-pilot-lightgrey)
+> **SSoT & Guardrails:** Este repo aplica **ASI‑T · Universal Injection Prompt (v1)** como fuente única de verdad para acciones de agentes y humanos. Se aplican **MAL‑EEM** (ética & empatía) y **UTCS** (UiX Threading Context/Content/Cache and Structure/Style/Sheet) para trazabilidad total.
 
-[**IDEALE.eu**](https://ideale.eu) is a federated **brand & standards** program for **verifiable critical systems**. We prioritize **evidence over assertions** and publish portable formats and vendor-neutral CI hooks.
-
-> **Principle:** If it didn’t run in **CI**, it doesn’t count as **evidence**.
-
-* **Public framework:** [**IDEALE Evidence Framework (IEF)**](#ideale-evidence-framework-ief)
-* **Primary sector profile:** [**TFA (Aerospace)**](#tfa--aerospace-domain-profile)
-* **Reference implementation (code/templates):** [**ASI-T2**](#asi-t2-reference-implementation)
+**TFA FLOW (Canon):** `QS → FWD → UE → FE → CB → QB`
+**PAx Orientation Markers:** `ONB` (Onboard), `OUT` (Outboard)
 
 ---
 
-## 📚 Quick Nav
+## 0) MANIFIESTO DEL PORTFOLIO
 
-* [What is IDEALE?](#what-is-ideale)
-* [Naming Canon](#naming-canon)
-* [IDEALE Evidence Framework (IEF)](#ideale-evidence-framework-ief)
-* [Visual Overview](#visual-overview)
-* [Sector Profiles](#sector-profiles)
-* [ASI-T2 (Reference Implementation)](#asi-t2-reference-implementation)
-* [Programs & Families (Aerospace-first)](#programs--families-aerospace-first)
-* [Evidence Objects](#evidence-objects)
-* [Conformance Ladder](#conformance-ladder)
-* [Roadmap Phases](#roadmap-phases)
-* [Contact & Pilots](#contact--pilots)
-* [Link Map](#link-map-for-clustered-keywords)
+* **Tesis:** Transporte Aéreo y Espacial con **H₂ híbrido‑eléctrico** y **Quantum‑enhanced**, con verificación física, gobernanza climática y trazabilidad UTCS.
+* **Líneas de producto (T = transport, tripulado):**
+
+  * **AMPEL360‑T‑Air**: BWB H₂ hybrid‑electric (Quantum‑enhanced)
+  * **AMPEL360‑T‑Space**: Transporte espacial tripulado (suborbital → orbital)
 
 ---
 
-## What is IDEALE?
+## 1) ESTRUCTURA DE REPOSITORIO (MOD‑STACK / MOD‑PACK)
 
-### Open standards for a verifiable European industry
-
-IDEALE.eu enables Europe’s strategic sectors—**Intelligence, Defense, Energy, Aerospace, Logistics, and ESG**—to produce **verifiable, portable artifacts** that move across tools and organizations **without vendor lock-in**. Teams can **participate, contribute, and earn** via a selectable **tokenomics mark** (team, cross-org, or ad-hoc clusters). The roadmap adds **high-fidelity generative design graphics** cryptographically tied to inputs, models, and approvals—**transparent from concept to operation**—with **automated provenance** suitable for **defensible IP roadmaps**.
-
-
-> **Bridge flow (TFA canon):** **QS→FWD→UE→FE→CB→QB**.
-
----
-
-## Naming Canon
-
-**Entity types**
-
-* **Family** — related products sharing a common baseline (**GAIA**, **AMPEL360**). Families are grouped into **Manned Vehicles**, **Unmanned Vehicles**, and **Infrastructure Systems (INFRANET)**.
-* **Model** — the product baseline within a family (e.g., **BWB** under AMPEL360: Blended-Wing-Body, hydrogen-hybrid baseline).
-* **Variant** — a **configured model** (mission/capacity configuration of a model; e.g., **Q100** under BWB for ~100 passengers, quantum-enhanced).
-* **Program** — a sustained line of work or capability stream (e.g., **LH2_CORRIDOR**, **GAIA-AIR/DRONES**, **GAIA-SEA/HYDROBOTS**, **GAIA-SPACE/IDENTITY**).
-
----
-
-## IDEALE Evidence Framework (IEF)
-
-A reusable **evidence & verification layer** adoptable in stages.
-
-* **Manifests:** **UTCS** (UiX Threading Context/Content/Cache & Structure/Style/Sheet) / **CXP** (Context Exchange Profile)
-* **SBOM:** **SPDX 2.3 JSON**
-* **Verify & Replay:** policy-pinned verification, hash-chained logs, reproducibility
-* **Badges:** human-readable status + machine endpoints for procurement/regulatory portals
-
-**Open evidence flow (UTCS → SPDX → Verify → Badge)**
-
-1. **UTCS/CXP** anchor who/what/where/when/why.
-2. **SPDX SBOM** records components & licenses.
-3. **Verify (CI)** enforces policy and emits a replayable log.
-4. **Badge** publishes status and links to evidence blobs.
-
----
-
-## Visual Overview
-
-```mermaid
-graph TD
-  IDEALE[IDEALE.eu Brand & Standards]
-  IEF[IEF Evidence Framework]
-  TFA[TFA Aerospace Profile]
-  ASI[ASI-T2 Reference Implementation]
-
-  IDEALE --> IEF --> TFA --> ASI
-
-  subgraph Families & Programs
-    AMP[AMPEL360 Family]
-    GAIA[GAIA Family]
-    INFR[INFRANET Programs]
-  end
-
-  ASI --> AMP
-  ASI --> GAIA
-  ASI --> INFR
-
-  AMP --> AT[AMPEL360 Air Transport Sub-family]
-  AT  --> BWB[BWB Model]
-  BWB --> Q100[Q100 Variant]
-  AMP --> ST[Space Tourism]
-  ST  --> PLUS[AMPEL360 PLUS Configured Model]
-
-  GAIA --> GAIR[GAIA-AIR]
-  GAIR --> EEUV[ETHICS-EMPATHY-UAV Program]
-  GAIR --> HYD[HYDROBOTS Program]
-  GAIA --> GSEA[GAIA-SEA]
-  GSEA --> SOUND[GAIA-SOUND Program]
-  GAIA --> GSPACE[GAIA-SPACE]
-  GSPACE --> ORB[ORBITAL-MACHINES]
-  GSPACE --> SAT[SAT-CONSTELLATIONS]
-
-  INFR --> AQUA[AQUA_OS_AIRCRAFT]
-  INFR --> LH2[LH2_CORRIDOR]
-  INFR --> QAIM[QAIM / QAIM-2 Bridge]
+```text
+robbbo-t/
+├── canon/                         # CANON & GENESIS (SSoT)
+│   ├── GENESIS_ASI-T2.md          # Texto canónico (GENESIS) marcado por el usuario
+│   ├── CANON_FACTS.md             # Hechos canon (TFA flow, UTCS, Domains AAA…PPP, PAx)
+│   └── INJECTION_PROMPT_v1.md     # ASI‑T · Universal Injection Prompt (v1)
+├── governance/
+│   ├── MAL-EEM/                   # Ética/Seguridad (políticas, checklists)
+│   ├── UTCS/                      # Estructuras de trazabilidad, SSoT, plantillas
+│   └── COMPLIANCE/                # Rutas de certificación (EASA/ESA/NASA), Means of Compliance
+├── ci/
+│   ├── gates/
+│   │   ├── FCR-1_checklist.md     # Follow‑up Chain Rule 1 (inputs/paths válidos)
+│   │   ├── FCR-2_checklist.md     # Follow‑up Chain Rule 2 (trazabilidad QS/UTCS)
+│   │   ├── link_path_validator.py # Validador de enlaces/rutas (CI gate)
+│   │   └── fcr_enforcer.py        # Enforcers CI (bloqueo de PR si no cumple)
+│   └── workflows/                 # YAML de CI/CD (lint, build, sim, docs)
+├── docs/
+│   ├── ROADMAP.md                 # Roadmap 12–18 meses (Air/Space)
+│   ├── PARTNERS.md                # Proveedores/partners
+│   ├── FUNDING_EU.md              # Grants UE (Clean Aviation, SESAR, ESA, etc.)
+│   └── PLAYBOOKS/                 # Operación, seguridad H₂, GSE, flight test
+├── domains/                       # AAA…PPP (15 dominios TFA)
+│   ├── AAA/ …                     # (placeholder de todos los dominios canon)
+│   └── PPP/
+├── products/
+│   ├── ampel360-t-air/
+│   │   ├── README.md              # One‑pager + KPIs + TRLs
+│   │   ├── QS/                    # Gemelos, optimización, mission planning
+│   │   ├── FWD/                   # Aero BWB, criogenia, integración energética
+│   │   ├── UE/                    # Cabina/sistemas, HMI, safety/evacuación
+│   │   ├── FE/                    # Integración propulsión, thermal, BMS, avionics
+│   │   ├── CB/                    # Certificación (EASA CS‑25 + SC H₂/eléctrico)
+│   │   └── QB/                    # Pruebas HIL/SIL, ensayos criogénicos, e‑fans
+│   └── ampel360-t-space/
+│       ├── README.md              # One‑pager + Fases A/B/C, human‑rating path
+│       ├── QS/
+│       ├── FWD/
+│       ├── UE/
+│       ├── FE/
+│       ├── CB/                    # Human‑rating, estándares ESA/NASA
+│       └── QB/
+├── sim/
+│   ├── air/                       # Modelos de sistema (propulsión H₂‑eléctrica), e‑fan
+│   └── space/                     # GNC suborbital/orbital, entry‑guidance
+├── cax/                           # CAE/CAD/CFD/FEA (enlaces y outputs)
+├── qox/                           # Quality Ops eXchange: datos, métricas, ensayos
+├── data/                          # Datasets (UTCS‑indexed)
+└── tools/
+    ├── templates/                 # Plantillas (MoC, PDR/CDR, hazard logs, etc.)
+    └── cli/rtx.py                 # CLI para crear estructuras QS→FWD→UE→FE→CB→QB
 ```
 
----
-
-## Sector Profiles
-
-Profiles specialize IEF per regulatory domain. First up:
-
-### TFA — Aerospace Domain Profile
-
-* Aligns **UTCS** fields to aviation semantics (ATA, safety, maintainability)
-* Adds aerospace-specific **policy pins** and **conformance gates**
-* Ships **reference badges** and **regulatory report layouts**
+> **Regla:** Todo módulo de producto debe respetar el **orden canónico** `QS→FWD→UE→FE→CB→QB`. Los PR que rompan el orden o no actualicen UTCS serán rechazados por **CI gates**.
 
 ---
 
-## ASI-T2 (Reference Implementation)
+## 2) CHECKLISTS (por capa TFA)
 
-**ASI-T2** is the **reference repository** showing how to wire IEF in a real organization (templates, workflows, examples).
+* **QS:**
 
-* **Bundle:** `UTCS_BUNDLE/` (manifests, attestations)
-* **Docs:** `WHITEPAPERS/` (architecture & interfaces)
-* **Profiles:** TFA (aerospace)
-* **Evidence:** `sbom/`, `badges/`, `.github/workflows/` (Verify)
+  * [ ] Modelos de demanda/energía; sizing H₂; rutas; sensibilidad climática.
+  * [ ] Objetivos de ruido, NOx, CO₂ (well‑to‑wake); escenarios de grid H₂.
+* **FWD:**
 
-> Treat it as a **living reference**: copy what you need; keep your own governance.
+  * [ ] Integración BWB (Air) / estructura y TPS (Space).
+  * [ ] Gestión criogénica (aislamiento, ventilación, inertización).
+* **UE:**
 
----
+  * [ ] HMI crew/pax, evac, ergonomía, accesibilidad; aborts (Space).
+* **FE:**
 
-## Programs & Families (Aerospace-first)
+  * [ ] Propulsión H₂‑eléctrica, BMS, thermal, e‑fans; LSS/docking (Space).
+* **CB:**
 
-* <a id="ampel360"></a>**AMPEL360 — Family of aircraft models**
-  **Sub-family & model:** **AMPEL360 Air Transport** → **BWB** (model).
-  **Variant:** **Q100** — configured model for ~100 passengers (quantum-enhanced).
-  **Additional configured model:** **AMPEL360 PLUS** for Space-Tourism.
-  Evidence wiring: **UTCS → SPDX → Verify → Badge** aligned to **ATA**.
+  * [ ] Matriz de cumplimiento (EASA SC eléctricos/H₂; ESA/NASA HRP).
+* **QB:**
 
-* <a id="gaia-systems"></a>**GAIA — Family of multi-domain robotic systems**
-  **Sub-families:** **GAIA-AIR** (UAV/UAM; includes **ETHICS-EMPATHY-UAV**, **HYDROBOTS**), **GAIA-SEA** (e.g., **GAIA-SOUND**), **GAIA-SPACE** (e.g., **ORBITAL-MACHINES**, **SAT-CONSTELLATIONS**). All expose **IEF badges** for readiness and safety lifecycle states.
-
-* <a id="qaim-2"></a>**QAIM-2 — CAx ↔ QOx bridge**
-  Integrates classical engineering pipelines with quantum/hybrid optimization and generates **signed attestations** for **UTCS/CXP** replay.
-
-* <a id="hydrobots"></a>**HYDROBOTS — under GAIA-AIR**
-  Program for autonomous platforms with **evidence-first** maintenance, safety logs, and provenance manifests (`GAIA-AIR/HYDROBOTS`).
-
-* **INFRANET — Infrastructure & OS**
-  Includes **AQUA_OS_AIRCRAFT** (ARINC/IMA partitions, AFDX/TSN/TTE, UTCS/QS sealing) and **LH2_CORRIDOR** (H₂ infrastructure). **QAIM** also lives here as a cross-cutting bridge.
+  * [ ] HIL/SIL, bancos de ensayo, pruebas taxi, drop/hover tests.
 
 ---
 
-## Evidence Objects
+## 3) ONE‑PAGER · AMPEL360‑T‑AIR (BWB H₂ Hybrid‑Electric, Quantum‑Enhanced)
 
-* **UTCS / CXP** — machine-readable context (e.g., `UTCS/context.manifest.json`)
-* **SPDX SBOM** — generated on build/release (`sbom/`)
-* **Verify (CI)** — policy-pinned workflows under `.github/workflows/`
-* **Badge + Replay** — status + links to replayable logs (`badges/`)
+**Propuesta de valor**
 
-<details>
-  <summary><strong>UTCS manifest skeleton (YAML)</strong></summary>
+* 30–60% ↓ energía pax‑km vs cilíndrico; cero CO₂ en uso; ruido muy bajo taxi/despegue.
+* “Quantum‑enhanced”: optimización energética/rota y mantenimiento predictivo.
 
-```yaml
-id: UTCS-MI:v5.0:<PRODUCT>:<CAX|QOX|PAX>:<DOMAIN>:<ATA>:<artifact-id>
-llc: SYSTEMS
-framework: IDEALE.eu
-bridge: QS→FWD→UE→FE→CB→QB      # TFA canon
-source:
-  repo_path: <relative/path/to/artifact>
-  commit: <git-sha>
-  created_at: <iso8601>
-context:
-  who:
-    org: <org-name>
-    team: <team-name>
-    owner: <contact@domain>
-  what:
-    product_family: <AMPEL360|GAIA|INFRANET>
-    product_model: <e.g., BWB>
-    variant: <e.g., Q100|PLUS|NULL>
-  where:
-    env: <OB|OFF|SIM|LAB|FLIGHT>
-    region: <EU|US|...>
-  when:
-    ts_build: <iso8601>
-    ts_verify: <iso8601>
-  why:
-    objective: <design|safety|compliance|maintenance|...>
-    ticket_ref: <issue-id or URL>
-inputs:
-  - path: <path/to/input>
-    digest: <sha256>
-outputs:
-  - type: <mesh|report|package|run|sbom>
-    path: <path/to/output>
-    digest: <sha256>
-evidence:
-  ata_dm_refs:
-    - <DMC-...-EN-US>
-  sbom:
-    format: SPDX-2.3
-    path: <sbom/<artifact>.spdx.json>
-  verify_log: <.evidence/logs/<run-id>.jsonl>
-provenance:
-  signatures:
-    qs_anchor: <sha256>
-    sigstore_bundle: <path/to/intoto.jsonl>
-ethics_guard: MAL-EEM
-classification: INTERNAL–EVIDENCE-REQUIRED
-```
+**Arquitectura (QS→FWD→UE→FE→CB→QB)**
 
-</details>
+* **QS:** Gemelo cuántico‑híbrido; sizing tanque H₂L; rutas y clima; KPIs.
+* **FWD:** BWB con tanques conformales ONB; distribución masas; seguridad H₂.
+* **UE:** Cabina, evacuación, ergonomía; HMI energía/flight.
+* **FE:** Pila(s) + turbogenerador H₂ (pico/reserva) → e‑fans distribuidos; thermal.
+* **CB:** CS‑25 + SC eléctricos/H₂; AMC emergentes; safety cases.
+* **QB:** Iron‑bird eléctrico; banco criogénico; demo e‑fan; taxi full‑electric.
+
+**KPIs iniciales**
+
+* E_pax‑km ↓ ≥ 40%; Turnaround ≤ 30 min; MTBUR ↑; ruido SEL ↓ 10–15 dB.
+
+**TRLs & Hitos (12–18 m)**
+
+* TRL3–4: subescala BWB + loop criogénico.
+* TRL5–6: HIL/SIL powertrain; taxi.
+* TRL6–7: prototipo vuelo + SC H₂/eléctrico.
+
+**Riesgos clave**
+
+* Densidad energética efectiva H₂L + masa aislamiento; gestión térmica; certificación SC.
 
 ---
 
-## Conformance Ladder
+## 4) ONE‑PAGER · AMPEL360‑T‑SPACE (Transporte Tripulado)
 
-| Level | Name           | Requirements (summary)                                                    |
-| ----: | -------------- | ------------------------------------------------------------------------- |
-|     1 | **Baseline**   | Valid **UTCS** + one **SPDX** per release + visible **Badge**             |
-|     2 | **Replayable** | Policy-pinned **Verify** + hash-chained logs + retention policy           |
-|     3 | **Assured**    | Third-party attestation + sector **profile** (e.g., **TFA**) + revocation |
-|     4 | **Certified**  | **IDEALE Trust Mark** aligned to EU frameworks                            |
+**Estrategia evolutiva**
 
-> Progress is **evidence-driven**; each level adds traceability without lock-in.
+* **Fase A (Suborbital):** 6–10 pax, retorno rápido, ops tipo aeropuerto espacial.
+* **Fase B (LEO):** Taxi/logística ligera; docking; life support.
+* **Fase C (LEO‑GTO/Gateway):** Reabastecimiento H₂/O₂; federación con partners.
 
----
+**Arquitectura (QS→FWD→UE→FE→CB→QB)**
 
-## Roadmap Phases
+* **QS:** Planificación misión/aborts; márgenes térmicos; entry‑guidance asistido.
+* **FWD:** Estructura presurizada; TPS reutilizable; GNC alto rendimiento.
+* **UE:** Factores humanos; escape/aborto; recuperación rápida.
+* **FE:** Integración etapas; ground segment; LSS; docking.
+* **CB:** Ruta human‑rating (ESA/NASA); flight safety; verificación independiente.
+* **QB:** Drop/hover; captive carry; vuelos libres; post‑flight inspection.
 
-1. **Standards** — freeze **MVS v0.1** (UTCS/CXP schema, SPDX baseline, Verify action, Badge endpoint)
-2. **Services** — Verification-as-a-Service (SaaS), data residency, signed attestations
-3. **Trust Mark** — Levels, controls, assessor marketplace, revocation
-4. **Policy Alignment** — Map primitives to EU requirements; public-sector pilots
+**KPIs iniciales**
 
----
+* Cadencia ≥ X/mes; turnaround < 2 semanas (Fase A); confiabilidad abort‑safe.
 
-## Contact & Pilots
+**Riesgos clave**
 
-Interested in a 2-week pilot (Aerospace/Energy/Defense/Logistics)?
-
-* Email: **[pilots@ideale.eu](mailto:pilots@ideale.eu)**
-* Issues: **[Open a Pilot request](https://github.com/Robbbo-T/IDEALE-IEF/issues/new?title=Pilot%3A%20Org)**
+* TPS reusable a costos razonables; aborts seguros; coordinación regulatoria.
 
 ---
 
-## Link Map (for clustered keywords)
+## 5) RUTA REGULATORIA Y PARTNERS
 
-* **IDEALE.eu** → [https://ideale.eu](https://ideale.eu)
-* **What is IDEALE?** → #what-is-ideale
-* **Naming Canon** → #naming-canon
-* **IEF (IDEALE Evidence Framework)** → #ideale-evidence-framework-ief
-* **Visual Overview** → #visual-overview
-* **Sector Profiles** → #sector-profiles
-* **TFA (Aerospace Domain Profile)** → #tfa--aerospace-domain-profile
-* **ASI-T2 (Reference Implementation)** → #asi-t2-reference-implementation
-* **Programs & Families** → #programs--families-aerospace-first
+* **Air:** Pre‑aplicaciones EASA; definición SC H₂/eléctrico; safety cases.
+* **Space:** ESA/NASA HRP, estándares espaciales; autoridades nacionales.
+* **Partners clave:** criogenia, pilas H₂, e‑fans, TPS, puertos aeroespaciales.
 
-  * **AMPEL360** → #ampel360
-  * **GAIA** → #gaia-systems
-  * **QAIM-2** → #qaim-2
-  * **HYDROBOTS** → #hydrobots
-* **Evidence Objects** → #evidence-objects
+---
 
-  * **UTCS (manifest skeleton)** → #utcs-manifest-skeleton-yaml
-  * **CXP** → #evidence-objects
-  * **SBOM** → #evidence-objects
-  * **Verify / Badge** → #evidence-objects
-* **Conformance Ladder** → #conformance-ladder
-* **Roadmap** → #roadmap-phases
-* **Contact & Pilots** → #contact--pilots
-* **SPDX** → [https://spdx.dev](https://spdx.dev)
+## 6) CI GATES (PR/Commit Conventions)
 
+* **Convenciones PR:** prefijos por capa (`QS/`, `FWD/` …), vínculo UTCS; checklist MAL‑EEM.
+* **Validadores:** `link_path_validator.py` y `fcr_enforcer.py` obligatorios; fallo → bloquea merge.
+* **Artefactos:** cada PR debe actualizar UTCS (estructura/estilo/hoja) y matrices CB.
+
+---
+
+## 7) Siguientes pasos
+
+1. Crear archivos *README.md* de producto con estas plantillas dentro de `products/…`.
+2. Sembrar **GENESIS** y **CANON_FACTS** en `canon/` (ya marcados por el usuario).
+3. Inicializar **workflows** de CI (lint + UTCS check + FCR gates).
+4. Cargar primeras plantillas de MoC y hazard logs en `tools/templates/`.
+5. Abrir *issues* por capa TFA para cada producto (backlog inicial).
 
 
 
