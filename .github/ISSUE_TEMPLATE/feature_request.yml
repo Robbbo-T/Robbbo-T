@@ -1,0 +1,28 @@
+name: Feature request (TFA layer)
+description: Request or propose a change scoped to a TFA layer
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Affected Layer
+      description: Select the TFA layer impacted by this request
+      options:
+        - QS (Quantum Signature)
+        - FWD (Forward Design)
+        - UE (User Environment)
+        - FE (Field Execution)
+        - CB (Compliance Bridge)
+        - QB (Quantum Bridge)
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary of the Request
+      description: Briefly describe the proposed change and its rationale
+      placeholder: e.g. Improve badge issuance logic for FE layer based on real-time risk score
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define what success looks like for this feature
+      placeholder: e.g. Risk score < 0.08, badge issued within 5s, verified by CI pipeline
