@@ -9,8 +9,8 @@
 | Path Pattern       | Purpose                                  |
 |--------------------|-------------------------------------------|
 | `README.md`        | Top-level documentation and onboarding    |
-| `docs/**.md`       | Extended documentation, guides, examples  |
-| `canon/**.md`      | Canonical references, naming guides       |
+| `docs/**.md`       | Extended documentation and guide examples  |
+| `canon/**.md`      | Canonical references and naming guides       |
 
 ---
 
