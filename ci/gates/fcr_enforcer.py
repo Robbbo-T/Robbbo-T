@@ -229,7 +229,11 @@ def main():
             # Handle glob patterns
             files.extend(repo_root.glob(pattern))
         else:
-            files.append(Path(pattern))
+            # Convert to absolute path if relative
+            file_path = Path(pattern)
+            if not file_path.is_absolute():
+                file_path = repo_root / file_path
+            files.append(file_path)
     
     print(f"🔍 Validating FCR-2 for PR: {args.pr_title}")
     print(f"📁 Checking {len(files)} files...")
