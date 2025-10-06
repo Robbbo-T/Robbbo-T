@@ -1,0 +1,14 @@
+ID,Rule,Category,Layer Scope,Required,Notes
+FCR-1.1,Files must reside only in QS/FWD/UE/FE/CB/QB,Structure,products/,Yes,Reject orphan folders
+FCR-1.2,No orphan artifacts under products/,Structure,products/,Yes,Must match canonical layer folders
+FCR-1.3,File must include valid layer: metadata,Metadata,products/,Yes,Used for traceability and badge logic
+FCR-1.4,Component UID must follow canonical format,Metadata,products/,Yes,Format: urn:ideale:component:<DOMAIN>:<MIC>:<PART>:<SN>
+FCR-1.5,File must be referenced in UTCS record,Traceability,products/,Yes,Ensures lifecycle anchoring
+FCR-1.6,UTCS record must pass schema validation,Traceability,governance/UTCS/records/,Yes,Validated via jsonschema
+FCR-1.7,No duplicate asset paths or UID collisions,Integrity,products/,Yes,CI gate enforces uniqueness
+FCR-1.8,Referenced inputs must pass hash reproducibility,Evidence,products/,Yes,Used in HUELL∆ replay
+FCR-1.9,Badge logic must reside in correct layer,Governance,products/,Yes,Layer must match badge origin
+FCR-1.10,Canonical product names must be used,Semantics,all text files,Yes,NAME‑LOCK enforced
+FCR-1.11,Disallowed variants must not appear,Semantics,all text files,Yes,Regex match triggers gate failure
+FCR-1.12,Soft warning if canonical names absent,Semantics,all text files,No,Encourages semantic integrity
+FCR-1.13,Mixed product families must declare bridge:,Structure,products/,Conditional,Required if multiple families coexist
