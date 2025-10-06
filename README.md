@@ -13,7 +13,7 @@
 
 ### Final README Structure (Applying the Glossary)
 
-I will now update all eight project READMEs one last time with the finalized glossary.
+/update all eight project READMEs one last time with the finalized glossary.
 
 ---
 
