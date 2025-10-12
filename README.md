@@ -1,540 +1,732 @@
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+# IDEALEEU.EU
+[![Structure](https://img.shields.io/badge/CI-Structure-blue)](#)
+[![Links](https://img.shields.io/badge/CI-Links-blue)](#)
+[![UTCS](https://img.shields.io/badge/UTCS-QS→FWD→UE→FE→CB→QB-grey)](#)
 
-### Final README Structure (Applying the Glossary)
+https://www.idealeeu.eu
 
-/update all eight project READMEs one last time with the finalized glossary.
+# Math Foundation: Lagrangian Mechanics + Laplace
+
+## 1) Lagrangian core
+
+**Action**
+$$
+S[q] = \int_{t_0}^{t_1} L(q, \dot{q}, t) \, dt, \quad \delta S = 0
+$$
+
+**Euler–Lagrange with nonconservative forces**
+$$
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = Q_i, \quad L = T - V
+$$
+
+**Constraints**
+
+* Holonomic $(g(q,t)=0)$:
+  $$
+  \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) - \frac{\partial L}{\partial q} = \Phi^\top \lambda, \quad \Phi = \frac{\partial g}{\partial q}
+  $$
+* Nonholonomic $(A(q,t) \dot{q} = b(q,t))$: multipliers at velocity level.
+
+**Dissipation**
+Rayleigh $(R(\dot{q}) \Rightarrow)$ add $\left( \frac{\partial R}{\partial \dot{q}} \right)$.
+
+**Linear small-signal**
+$$
+M \ddot{q} + C \dot{q} + K q = B u
+$$
+
+## 2) Laplace transform
+
+$$
+\mathcal{L}\{f\}(s) = \int_{0}^{\infty} e^{-st} f(t) \, dt
+$$
+Rules: $(\mathcal{L}\{f'\} = s F - f(0))$, $(\mathcal{L}\{f \cdot g\} = F G)$.
+
+Initial value: $(\lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s))$.
+Final value (stable; no RHP poles of $s F(s)$): $(\lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s))$.
+
+Pairs: $(1 \leftrightarrow 1/s)$, $(t \leftrightarrow 1/s^2)$, $(\delta \leftrightarrow 1)$,
+$(\sin \omega t \leftrightarrow \omega / (s^2 + \omega^2))$, $(e^{-a t} u \leftrightarrow 1/(s+a))$.
+
+## 3) Bridge to $G(s)$
+
+State $(x = [q^\top \ \dot{q}^\top]^\top)$.
+$$
+A = \begin{bmatrix} 0 & I \\ -M^{-1} K & -M^{-1} C \end{bmatrix}, \quad
+B = \begin{bmatrix} 0 \\ M^{-1} B \end{bmatrix}
+$$
+$$
+G(s) = C (s I - A)^{-1} B + D
+$$
+
+## 4) 1-DOF example
+
+$(m \ddot{x} + c \dot{x} + k x = u \Rightarrow G(s) = X/U = 1/(m s^2 + c s + k))$.
+Poles solve $(m s^2 + c s + k = 0)$. Natural frequency $(\omega_n = \sqrt{k/m})$, $(f_n = \omega_n / (2\pi))$.
+
+## 5) Control and discretization
+
+Loop shaping on $G(s)$. Routh–Hurwitz or Nyquist for stability.
+Tustin: $(s \approx \frac{2}{T_s} \frac{1 - z^{-1}}{1 + z^{-1}})$.
 
 ---
 
-### Update 1: `3-PROJECTS-USE-CASES/AMPEL360-AIR-MANNED/README.md`
+# Capture & Harvest Control Foundation
 
-```markdown
-# AMPEL360-AIR-T — Manned Air Vehicle Platform
+## 1) Domains
 
-This project defines the complete lifecycle data and operational architecture for the **AMPEL360-AIR-T** (Manned Air Transport) platform, a commercial aviation system utilizing Blended Wing Body (BWB) and H₂ hybrid-electric propulsion.
+Solar, thermal, vibration/piezo, fluidic micro-turbine, hybrid nodes with storage.
 
-The work is executed under the core principles of **QAFbW** (Quantum-Augmented Flight for BWB) and strictly adheres to EASA CS-25/Special Conditions targets.
+## 2) Lagrangian electromechanics
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+$$
+m \ddot{q} + c \dot{q} + k q + \lambda v = F_{\text{aero}}, \quad
+C_p \dot{v} + G v - \lambda \dot{q} = 0
+$$
+Linearize at trim to get $(M, C, K, \Lambda)$.
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Process Execution & Data Management |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+## 3) Converter + MPPT (Laplace domain)
 
-## Traceability & Compliance
-All artifacts must include a **UTCS record** for indexing (`governance/UTCS/`).
-Compliance documents must meet the **MAL-EEM** checklist and include hazard-log entries where applicable.
+Design $G_{\text{conv}}(s) = V_o / I_{\text{harv}}$.
+PI/PR for regulation and MPPT. Verify phase margin and bandwidth.
 
-## Product Variant
-- **Canonical Name:** `bwb-q100`
-- **Path:** `products/ampel360-air-t/variants/bwb-q100/`
+## 4) State-space and TF
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for forecasting, constrained solving, and uncertainty estimation.
-- **MAP-SERVICES:** Management and planning tailored for commercial flight operations.
+$(x = [q \ \dot{q} \ v]^\top)$. Build $(A, B, C, D)$.
+$$
+G_{vF}(s) = C (s I - A)^{-1} B
+$$
 
-## 📖 Glossary of Terms and Acronyms
+## 5) Architecture
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
+* Local: MPPT and bus regulation per node.
+* Node controller: source arbitration and buffer control.
+* Network manager: TBUS distribution, demand response, FDIR.
+* Gate logic: JT_ID health and performance badges.
+
+## 6) Digital-twin pipeline
+
+Symbolic $(L)$ → auto-linearize $((M, C, K, \Lambda))$ → state-space $((A, B, C, D))$ → $(G(s))$ → controller synthesis → SIL checks → deploy.
+
+## 7) CSV schemas
+
+**Harvest nodes**
+
+```
+Harvest_ID,Domain,Sensor_In,Converter_Out,Controller_ID,λ,QoS,Notes
+PV-WING-01,Solar,I_V curve,DC-28V,CTRL-MPPT-01,,Q2,Wing-tip panels
+TH-CORE-02,Thermal,DeltaT,DC-12V,CTRL-TEC-02,,Q3,Exhaust heat
+PE-WING-03,Vib/Piezo,q;qdot,AC-Rectified,CTRL-MPPT-03,0.015,Q1,Mode #1
 ```
 
-### Update 2: `3-PROJECTS-USE-CASES/AMPEL360-SPACE-MANNED/README.md`
+**Worked piezo TF (zero ICs)**
+$$
+\frac{V(s)}{F_{\text{aero}}(s)} = \frac{\lambda s}{C_p s + G} \left/ \left( m s^2 + \frac{c}{m} s + \frac{k}{m} + \frac{\lambda^2 s}{m (C_p s + G)} \right) \right.
+$$
 
-```markdown
-# AMPEL360-SPACE-T — Manned Space Vehicle Platform
+## 8) Acceptance gates
 
-This project defines the complete lifecycle data and operational architecture for the **AMPEL360-SPACE-T** (Manned Space Transport) platform, targeting human-rating and tourism. It emphasizes advanced PLM for extreme environments and suborbital/orbital trajectory optimization.
+E–L residuals near zero, converter gain accuracy, MPPT convergence, margins ≥ target, JT_ID issuance.
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+---
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Process Execution & Data Management |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+# 10) Event Encapsulation: UTCS-MI anchors
 
-## Traceability & Compliance
-All artifacts must include a **UTCS record** for indexing (`governance/UTCS/`).
-Compliance documents must meet the **MAL-EEM** checklist and include hazard-log entries where applicable.
+Each capture event is a signed package bound to a material passport and the grid.
 
-## Product Variant
-- **Canonical Name:** `plus`
-- **Path:** `products/ampel360-space-t/variants/plus/`
+**CSV header**
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for trajectory optimization and real-time failure prediction in space.
-- **MAP-SERVICES:** Management and planning tailored for crewed space operations.
-
-## 📖 Glossary of Terms and Acronyms
-
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
+```
+Event_ID,Passport_ID,Initial_State,Transformed_State,Federation_Node,JT_ID,Timestamp,Integrity,Security,Size_Desc,Notes
 ```
 
-### Update 3: `3-PROJECTS-USE-CASES/ASI-T2-INTELLIGENCE/README.md`
+**Example**
 
-```markdown
-# ASI-T2-INTELLIGENCE — Advanced Intelligence and Information Systems
-
-This project establishes the foundation for T2 operational intelligence systems that manage and augment the AMPEL360 product lines. Its primary function is providing integrated intelligence and adaptive control leveraging quantum-enhanced capability across all domains.
-
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
-
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Intelligence Model Application |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Data Consumption & Decision Support |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
-
-## Traceability & Compliance
-All generated intelligence artifacts must include a **UTCS record** for indexing (`governance/UTCS/`).
-All intelligence models must meet the **MAL-EEM** checklist (Ethics, Empathy, Explainability, Mitigation) and contribute to hazard-log entries where new risks are identified.
-
-## Service Mappings
-- **MAL-SERVICES:** Core AI/ML services for deep analysis and adaptive decision-making.
-- **MAP-SERVICES:** Intelligence-driven management and planning services.
-
-## 📖 Glossary of Terms and Acronyms
-
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
+```
+EV-CAP-001,UTCS-MI-ANCH-1234,"psi0","E=4.8 J @ 28 V",GRID-A1-B4,JT-105,2025-10-12T14:50:00Z,sha3-256:9a1b...,"AES-GCM-256",512B,"piezo wing mode #1"
 ```
 
-### Update 4: `3-PROJECTS-USE-CASES/GAIA-AIR-UNMANNED/README.md`
+**Rules**
 
-```markdown
-# GAIA-AIR-UNMANNED — Unmanned Air Vehicle (UAV) Platform
+* `Passport_ID` is a UTCS-MI anchor. Immutable.
+* `Integrity` is a full-package hash or MAC.
+* `Security` declares crypto. Example: AES-GCM-256.
+* Validate package before badge issuance.
 
-This project documents the complete lifecycle management and operational framework for the GAIA Unmanned Air Vehicle, focusing on lean, agile development, and maximizing autonomous mission capability.
+> **Mission:** Design, certify, manufacture, and industrialise next-gen **aircraft**, **spacecraft**, and **aerospace full assets** with a closed-loop digital thread—from concept to fleet ops.
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+---
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Process Execution & Data Management |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+## Primary Folders
 
-## Traceability & Compliance
-All artifacts must include a **UTCS record** for indexing (`governance/UTCS/`).
-Compliance documents must meet the **MAL-EEM** checklist (especially for autonomous decision models) and include hazard-log entries where applicable.
+* **[00-PROGRAM](./00-PROGRAM/)** — Governance, CM, QMS, standards, supply chain
+* **[01-FLEET](./01-FLEET/)** — Operational Data Hub, MRO strategy, federated learning
+* **[02-AIRCRAFT](./02-AIRCRAFT/)** — AIR-T (ATA) baselines, domain integration, twin
+* **[03-SPACECRAFT](./03-SPACECRAFT/)** — STA baselines, domain integration, AIT/mission
+* **[04-SATELLITES](./04-SATELLITES/)** — STA-aligned satellite product structures
+* **[05-TELESCOPES](./05-TELESCOPES/)** — Observatory payload/domain structures
+* **[06-PROBES](./06-PROBES/)** — Deep-space probes (STA)
+* **[07-DRONES](./07-DRONES/)** — UAS/UAM product lines
+* **[08-LAUNCHERS](./08-LAUNCHERS/)** — Launch vehicles (stages, GSE, range)
+* **[09-STM-SPACE-STATION-MODULES](./09-STM-SPACE-STATION-MODULES/)** — Station modules/segments
+* **[10-BUSINESS](./10-BUSINESS/)** — Market, partnerships, finance
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models specialized for autonomous operation, navigation, and mission forecasting.
-- **MAP-SERVICES:** Management and planning services optimized for UAV fleet management.
+> **Note:** **02–09 are TFA product stacks** (Top Final Assembly, where products live).
 
-## 📖 Glossary of Terms and Acronyms
+---
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+## Core Architectures
 
-### Update 5: `3-PROJECTS-USE-CASES/GAIA-GROUND-RETAILS/README.md`
+### AIR-T (Aircraft • ATA-aligned)
 
-```markdown
-# GAIA-GROUND-RETAILS — Ground & Retail Logistics Platform
+* **Common pattern (AIR-T & STA):**  
+  `DOMAIN_INTEGRATION/PRODUCTS/<PRODUCT>/MODELS/<MODEL>/VERSION/<Qn>/SYSTEMS/…`
 
-This project documents the application of the GAIA technical stack to ground-based assets and retail logistics supply chains, with heavy emphasis on inventory, infrastructure, and complex distribution optimization.
+* **Examples**
+  * Config baselines: **[02-AIRCRAFT/CONFIGURATION_BASE](./02-AIRCRAFT/CONFIGURATION_BASE/)**
+  * Domain integration (15 domains): **[02-AIRCRAFT/DOMAIN_INTEGRATION](./02-AIRCRAFT/DOMAIN_INTEGRATION/)**
+  * Cross-system integration: **[02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/)**
+  * Digital twin: **[02-AIRCRAFT/DIGITAL_TWIN_MODEL](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/)**
+  * Reference product: `AMPEL360-AIR-T / MODELS / BWB-H2-Hy-E / VERSION / Q100`
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+* **Aircraft 15 Domains (primary ATA)**  
+  AAA(06,50–57) · PPP(28,49,54,60–61,70–73,75,78,81–82) · MEC(27,29,32,36–37,63,67,79,83) ·  
+  LCC(08,22–23,44–45,76,93) · EDI(31,34,42,77,84,94) · EEE(24,33,39,74,80,97) ·  
+  EER(15,26,38,85) · DDD(09,21,30,41) · CCC(11,25,35,43,50) · IIS(16,46,91) ·  
+  LIB(01,04–05,12) · AAP(10) · CQH(47) · IIF(07) · OOO(13,20,+reserved)
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Logistics and Infrastructure Management |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+### STA (Spacecraft • Space-chapter aligned)
 
-## Traceability & Compliance
-All inventory and transaction records must include a **UTCS record** for indexing (`governance/UTCS/`).
-Optimization models must meet the **MAL-EEM** checklist and relevant safety/compliance logs.
+* **Same product/model/version pattern** as AIR-T.
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for logistics network optimization and demand forecasting.
-- **MAP-SERVICES:** Management services dedicated to retail supply chain planning and infrastructure lifecycle.
+* **Examples**
+  * Spacecraft DI: **[03-SPACECRAFT/DOMAIN_INTEGRATION](./03-SPACECRAFT/DOMAIN_INTEGRATION/)**
+  * Satellites DI: **[04-SATELLITES/DOMAIN_INTEGRATION](./04-SATELLITES/DOMAIN_INTEGRATION/)**
+  * Telescopes DI: **[05-TELESCOPES/DOMAIN_INTEGRATION](./05-TELESCOPES/DOMAIN_INTEGRATION/)**
 
-## 📖 Glossary of Terms and Acronyms
+* **Key STA groupings (condensed)**  
+  Structures & Mechanisms (06,50–57,66,94) · Thermal/TPS (21,30) · Power/EPS/Harness (24,39,49,97) ·  
+  **Comms/TT&C (23,33,48)** · Nav/Time/C&DH (31,34,41) · **Avionics/FSW/Databus (40,42,93)** ·  
+  Control/Autonomy/FDIR (22,44,45) · ECLSS/Crew/Payload (25,35–38) ·  
+  Propulsion/Fluids (28–29,47,60–61,70–85) · Docking/Sampling/Robotics (58–59) ·  
+  Environment/Safety/Traffic (15,26,86–87,90) · Ground/Integration/Ops (07,10,16,32,46,92) ·  
+  Program/Compliance (01,04–05,11–14,17–20,98–99)
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+---
 
-### Update 6: `3-PROJECTS-USE-CASES/GAIA-SEA-PROBES/README.md`
+## Ways of Working
 
-```markdown
-# GAIA-SEA-PROBES — Unmanned Sea Probe (USP/AUV) Platform
+* **Baselines & releases:**  
+  [04-BASELINES](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/) · [07-RELEASES](./00-PROGRAM/CONFIG_MGMT/07-RELEASES/)
 
-This project documents the lifecycle management and operational architecture for GAIA Unmanned Sea Probes and AUVs. The technical focus is on deep-sea resilience, complex navigation, and the integration of cryogenic/H2 power solutions.
+* **Changes (ECR/ECO + CCB):**  
+  [06-CHANGES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/) · [05-CCB](./00-PROGRAM/CONFIG_MGMT/05-CCB/)
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+* **Traceability & ICDs:**  
+  [10-TRACEABILITY](./00-PROGRAM/CONFIG_MGMT/10-TRACEABILITY/) · [09-INTERFACES](./00-PROGRAM/CONFIG_MGMT/09-INTERFACES/)  
+  • **UTCS Registry:** [10-TRACEABILITY/UTCS/](./00-PROGRAM/CONFIG_MGMT/10-TRACEABILITY/UTCS/)  
+  • **IEF Manifests:** each Q10 system ships `PLM/.ief/<system>.ief.json`  
+  • **UTCS anchors:** each system declares `utcs://<PRODUCT>/<SYS>/<Qn>`
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Process Execution (Maritime) |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+* **Compliance & security:**  
+  **Badge Registry:** [11-BADGES/](./00-PROGRAM/CONFIG_MGMT/11-BADGES/) · **Ethical ML (MAL-EEM):** [13-GOVERNANCE/MAL-EEM/](./00-PROGRAM/13-GOVERNANCE/MAL-EEM/)
 
-## Traceability & Compliance
-All mission and deep-sea data must include a **UTCS record** for indexing (`governance/UTCS/`).
-Autonomy models must meet the **MAL-EEM** checklist and critical failure scenarios must be tracked in the hazard log.
+* **Contribution & reviews:**  
+  **CI validators:** [12-CI/validate-structure.sh](./00-PROGRAM/CONFIG_MGMT/12-CI/validate-structure.sh)
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for mission planning, deep-sea navigation, and structural integrity monitoring.
-- **MAP-SERVICES:** Management services tailored for distributed sea fleet operations.
+---
 
-## 📖 Glossary of Terms and Acronyms
+## Metrics
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+Coverage ≥ 99% · Defect escape ≤ target · Mass within margins · Schedule variance ≤ target · Unit cost ≤ target · Dispatch reliability / mission success ≥ target.  
+Dashboards: [Program metrics](./00-PROGRAM/DIGITAL_THREAD/10-METRICS/) · [Fleet KPIs](./01-FLEET/ANALYTICS_AND_AI/DASHBOARD_SPECS/)
 
-### Update 7: `3-PROJECTS-USE-CASES/GAIA-SPACE-SATELLITES/README.md`
+---
 
-```markdown
-# GAIA-SPACE-SATELLITES — Space Satellite Systems
+## Get Started
 
-This project focuses on the development, deployment, and operation of GAIA satellite constellations. It addresses unique challenges in space environments, radiation tolerance, orbital trajectory, and long-duration mission planning.
+1. Read **Governance** → [00-PROGRAM/GOVERNANCE.md](./00-PROGRAM/GOVERNANCE.md)
+2. Review **CM Plan** → [01-CM_PLAN.md](./00-PROGRAM/CONFIG_MGMT/01-CM_PLAN.md)
+3. Use **ICD template** → [ICD-XXXX.md](./00-PROGRAM/CONFIG_MGMT/09-INTERFACES/ICD-XXXX.md)
+4. File **ECR** → [06-CHANGES/05-ECR](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/05-ECR/)
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+---
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | Technical Data, Models, Specs |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Process Execution (Space) |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+## Glossary (scoped)
 
-## Traceability & Compliance
-All design and orbital data must include a **UTCS record** for indexing (`governance/UTCS/`).
-AI/ML models for autonomous maneuvers must meet the **MAL-EEM** checklist and compliance with international space debris mitigation standards must be documented.
+* **AIR-T** — Air Transport Architecture (ATA-aligned aircraft architecture)
+* **STA** — Space Transport Architecture (space chapter mapping for spacecraft)
+* **ATA** — Air Transport Association chapter taxonomy (aircraft systems)
+* **IMA** — Integrated Modular Avionics (ARINC-653 partitions; ATA-42)
+* **EWIS** — Electrical Wiring Interconnection System (aircraft wiring; ATA-92)
+* **PLM / CAx** — Product Lifecycle Mgmt; CAD · CAE · CAM · **CAI (Integration)** · **CAV (Validation)** · **CAP (Process planning/industrialisation)** · **CAS (Service & sustainment)** · **C[...]
+* **ECR / ECO / CCB** — Change Request, Change Order, Config Control Board
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for trajectory optimization, collision avoidance, and predictive component degradation.
-- **MAP-SERVICES:** Management services dedicated to orbital asset tracking and mission sequencing.
+---
 
-## 📖 Glossary of Terms and Acronyms
+**Program site:** https://www.idealeeu.eu  
+**Ownership:** Program & Configuration Management (see [CCB](./00-PROGRAM/CONFIG_MGMT/05-CCB/))
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+# IDELAEEU · Repository Index
 
-### Update 8: `3-PROJECTS-USE-CASES/H2-CHAIN-MRO/README.md`
+Top: [00-PROGRAM](#00-program) · [01-FLEET](#01-fleet) · [02-AIRCRAFT](#02-aircraft)
 
-```markdown
-# H2-CHAIN-MRO — Hydrogen MRO and Lifecycle Management
+---
 
-This project establishes the Maintenance, Repair, and Overhaul (MRO) lifecycle management framework specifically for H₂-based propulsion systems and cryogenic assets. It heavily relies on advanced CAS (Customer Aftermarket Service) data and quantum optimization for supply chain efficiency.
+## 00-PROGRAM
+- [COMPLIANCE](./00-PROGRAM/COMPLIANCE/)
+- [CONFIG_MGMT](./00-PROGRAM/CONFIG_MGMT/)
+  - [04-BASELINES](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/)
+    - [CDR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/CDR/)
+    - [COMMON](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/COMMON/) · [CHECKLISTS](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/COMMON/CHECKLISTS/) · [TEMPLATES](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/COMMON/TEMP[...]
+    - [FRR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/FRR/)
+    - [MCR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/MCR/)
+    - [ORR_EIS](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/ORR_EIS/)
+    - [PDR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/PDR/)
+    - [PRR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/PRR/)
+    - [SRR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/SRR/)
+    - [TRR](./00-PROGRAM/CONFIG_MGMT/04-BASELINES/TRR/)
+  - [05-CCB](./00-PROGRAM/CONFIG_MGMT/05-CCB/) · [02-MINUTES](./00-PROGRAM/CONFIG_MGMT/05-CCB/02-MINUTES/)
+  - [06-CHANGES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/)
+    - [01-POLICY](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/01-POLICY/)
+    - [02-WORKFLOW](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/02-WORKFLOW/)
+    - [03-REGISTERS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/03-REGISTERS/)
+    - [04-TEMPLATES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/04-TEMPLATES/) · [CHECKLISTS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/04-TEMPLATES/CHECKLISTS/)
+    - [05-ECR](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/05-ECR/) · [ACTIVE](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/05-ECR/ACTIVE/) · [CLOSED](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/05-ECR/CLOSED/) · [INBOX](.[...]
+    - [06-ECO](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/06-ECO/) · [ACTIVE](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/06-ECO/ACTIVE/) · [CLOSED](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/06-ECO/CLOSED/)
+    - [07-DEVIATIONS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/07-DEVIATIONS/) · [OPEN](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/07-DEVIATIONS/OPEN/) · [CLOSED](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/07-DEVIATIO[...]
+    - [08-WAIVERS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/08-WAIVERS/) · [OPEN](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/08-WAIVERS/OPEN/) · [CLOSED](./00-PROGRAM/CONFIG_MGMT/06-WAIVERS/CLOSED/)
+    - [09-MRB](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/09-MRB/) · [DECISIONS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/09-MRB/DECISIONS/)
+    - [10-IMPACTS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/10-IMPACTS/) · [CERTIFICATION](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/10-IMPACTS/CERTIFICATION/) · [COST_SCHEDULE](./00-PROGRAM/CONFIG_MGMT/06-CHA[...]
+    - [11-SOFTWARE_CHANGES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/11-SOFTWARE_CHANGES/)
+    - [12-INTERFACE_CHANGES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/12-INTERFACE_CHANGES/)
+    - [13-AUTOMATION](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/13-AUTOMATION/) · [SCRIPTS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/13-AUTOMATION/SCRIPTS/)
+    - [14-METRICS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/14-METRICS/)
+    - [15-AUDIT](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/15-AUDIT/) · [SNAPSHOTS](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/15-AUDIT/SNAPSHOTS/)
+    - [16-CHANGE_PACKAGES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/16-CHANGE_PACKAGES/)
+    - [17-NOTICES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/17-NOTICES/) · [CUSTOMER_NOTICES](./00-PROGRAM/CONFIG_MGMT/06-CHANGES/17-NOTICES/CUSTOMER_NOTICES/) · [REGULATORY_NOTICES](./00-PROGRAM/CONFIG_[...]
+  - [07-RELEASES](./00-PROGRAM/CONFIG_MGMT/07-RELEASES/)
+    - [01-POLICY](./00-PROGRAM/CONFIG_MGMT/07-RELEASES/01-POLICY/) · [02-WORKFLOW](./00-PROGRAM/CONFIG_MGMT/07-RELEASES/02-WORKFLOW/) · [03-REGISTERS](./00-PROGRAM/CONFIG_MGMT/07-RELEASES/03-REGISTE[...]
+  - [08-ITEM_MASTER](./00-PROGRAM/CONFIG_MGMT/08-ITEM_MASTER/)
+  - [09-INTERFACES](./00-PROGRAM/CONFIG_MGMT/09-INTERFACES/)
+  - [10-TRACEABILITY](./00-PROGRAM/CONFIG_MGMT/10-TRACEABILITY/) · [UTCS](./00-PROGRAM/CONFIG_MGMT/10-TRACEABILITY/UTCS/) · [INDEX](./00-PROGRAM/CONFIG_MGMT/10-TRACEABILITY/UTCS/INDEX/) · [SCHEMAS][...]
+  - [11-AUDITS](./00-PROGRAM/CONFIG_MGMT/11-AUDITS/)
+  - [11-BADGES](./00-PROGRAM/CONFIG_MGMT/11-BADGES/) · [LOG](./00-PROGRAM/CONFIG_MGMT/11-BADGES/LOG/) · [TEMPLATES](./00-PROGRAM/CONFIG_MGMT/11-BADGES/TEMPLATES/)
+  - [12-CI](./00-PROGRAM/CONFIG_MGMT/12-CI/) · [12-CI_CD_RULES](./00-PROGRAM/CONFIG_MGMT/12-CI_CD_RULES/)
+  - [13-TEMPLATES](./00-PROGRAM/CONFIG_MGMT/13-TEMPLATES/)
+- [DIGITAL_THREAD](./00-PROGRAM/DIGITAL_THREAD/)
+  - [01-STRATEGY](./00-PROGRAM/DIGITAL_THREAD/01-STRATEGY/) · [02-STANDARDS](./00-PROGRAM/DIGITAL_THREAD/02-STANDARDS/) · [03-ARCHITECTURE](./00-PROGRAM/DIGITAL_THREAD/03-ARCHITECTURE/) · [DATA_FLO[...]
+  - [04-MBSE](./00-PROGRAM/DIGITAL_THREAD/04-MBSE/) · [INTERFACE_DEFINITIONS](./00-PROGRAM/DIGITAL_THREAD/04-MBSE/INTERFACE_DEFINITIONS/) · [MODEL_BASELINES](./00-PROGRAM/DIGITAL_THREAD/04-MBSE/MODE[...]
+  - [05-DIGITAL_TWIN](./00-PROGRAM/DIGITAL_THREAD/05-DIGITAL_TWIN/) · [AIRCRAFT_TWIN](./00-PROGRAM/DIGITAL_THREAD/05-DIGITAL_TWIN/AIRCRAFT_TWIN/) · [SPACECRAFT_TWIN](./00-PROGRAM/DIGITAL_THREAD/05-D[...]
+  - [06-DATA_MANAGEMENT](./00-PROGRAM/DIGITAL_THREAD/06-DATA_MANAGEMENT/) · [METADATA_REGISTRY](./00-PROGRAM/DIGITAL_THREAD/06-DATA_MANAGEMENT/METADATA_REGISTRY/)
+  - [07-INTEGRATIONS](./00-PROGRAM/DIGITAL_THREAD/07-INTEGRATIONS/)
+  - [08-AUTOMATION](./00-PROGRAM/DIGITAL_THREAD/08-AUTOMATION/)
+  - [09-GOVERNANCE](./00-PROGRAM/DIGITAL_THREAD/09-GOVERNANCE/) · [10-METRICS](./00-PROGRAM/DIGITAL_THREAD/10-METRICS/)
+- [GOVERNANCE](./00-PROGRAM/GOVERNANCE/) · [MAL-EEM](./00-PROGRAM/GOVERNANCE/MAL-EEM/) · [bias_fairness](./00-PROGRAM/GOVERNANCE/MAL-EEM/bias_fairness/) · [data_sheets](./00-PROGRAM/GOVERNANCE/MAL-[...]
+- [INDUSTRIALISATION](./00-PROGRAM/INDUSTRIALISATION/)
+- [QUALITY_QMS](./00-PROGRAM/QUALITY_QMS/)
+- [REVIEW_BOARDS](./00-PROGRAM/REVIEW_BOARDS/) · [CCB](./00-PROGRAM/REVIEW_BOARDS/CCB/) · [DATA_PROTECTION](./00-PROGRAM/REVIEW_BOARDS/DATA_PROTECTION/) · [ETHICS](./00-PROGRAM/REVIEW_BOARDS/ETHICS[...]
+- [SECURITY](./00-PROGRAM/SECURITY/)
+- [STANDARDS](./00-PROGRAM/STANDARDS/) · [01-REGISTER](./00-PROGRAM/STANDARDS/01-REGISTER/) · [02-AIRCRAFT](./00-PROGRAM/STANDARDS/02-AIRCRAFT/) · [03-SPACECRAFT](./00-PROGRAM/STANDARDS/03-SPACECRA[...]
+- [SUPPLY_CHAIN](./00-PROGRAM/SUPPLY_CHAIN/)
+- [TEMPLATES](./00-PROGRAM/TEMPLATES/) · [DPIA](./00-PROGRAM/TEMPLATES/DPIA/) · [IEF](./00-PROGRAM/TEMPLATES/IEF/) · [MAL-EEM](./00-PROGRAM/TEMPLATES/MAL-EEM/) · [NCR_CAPA](./00-PROGRAM/TEMPLATES/[...]
 
-## Core Architectural Layers
-The project utilizes the unified Domain → Process → ATA framework.
+---
 
-| Layer | Focus Area | TFA Reference Flow |
-| :--- | :--- | :--- |
-| **DOMAINS** | AAA, AAP, CCC, CQH, DDD, EDI, EEE, EER, IIF, IIS, LCC, LIB, MEC, OOO, PPP | MRO Documentation and Data |
-| **PLM (CAx)** | CAD, CAE, CAO, CAM, CAI, CAV, CAS, CMP | Maintenance Workflow Execution |
-| **TFA Flow** | Canonical computational sequence ensuring data integrity and optimization. | **QS → FWD → UE → FE → CB → QB** |
+## 01-FLEET
+- [FEDERATED_LEARNING](./01-FLEET/FEDERATED_LEARNING/)
+  - [01-ARCHITECTURE](./01-FLEET/FEDERATED_LEARNING/01-ARCHITECTURE/) · [DATA_CONTRACTS](./01-FLEET/FEDERATED_LEARNING/01-ARCHITECTURE/DATA_CONTRACTS/)
+  - [02-ORCHESTRATION](./01-FLEET/FEDERATED_LEARNING/02-ORCHESTRATION/) · [JOB_SPECS](./01-FLEET/FEDERATED_LEARNING/02-ORCHESTRATION/JOB_SPECS/)
+  - [03-CLIENTS](./01-FLEET/FEDERATED_LEARNING/03-CLIENTS/) · [AIRCRAFT_EDGE](./01-FLEET/FEDERATED_LEARNING/03-CLIENTS/AIRCRAFT_EDGE/) · [GROUND_STATIONS](./01-FLEET/FEDERATED_LEARNING/03-CLIENTS/GR[...]
+  - [04-ALGORITHMS](./01-FLEET/FEDERATED_LEARNING/04-ALGORITHMS/) · [05-PRIVACY_SECURITY](./01-FLEET/FEDERATED_LEARNING/05-PRIVACY_SECURITY/) · [06-MODELS](./01-FLEET/FEDERATED_LEARNING/06-MODELS/) [...]
+- [FLEET_OPTIMISATION](./01-FLEET/FLEET_OPTIMISATION/)
+- [MRO_STRATEGY](./01-FLEET/MRO_STRATEGY/)
+- [OPERATIONAL_DATA_HUB](./01-FLEET/OPERATIONAL_DATA_HUB/)
 
-## Traceability & Compliance
-All maintenance records and parts provenance must include a **UTCS record** for indexing (`governance/UTCS/`).
-Repair and logistics optimization models must meet the **MAL-EEM** checklist, and all H₂ handling procedures must be cross-referenced with the hazard log.
+---
 
-## Service Mappings
-- **MAL-SERVICES:** AI/ML models for component degradation tracking and maintenance scheduling optimization.
-- **MAP-SERVICES:** Specialized management services for MRO logistics, resource planning, and facility allocation.
+### 02-AIRCRAFT · CONFIGURATION_BASE
+- [00-COMMON](./02-AIRCRAFT/CONFIGURATION_BASE/00-COMMON/)
+  · [SCHEMAS](./02-AIRCRAFT/CONFIGURATION_BASE/00-COMMON/SCHEMAS/)
+  · [TEMPLATES](./02-AIRCRAFT/CONFIGURATION_BASE/00-COMMON/TEMPLATES/)
+  · [UTCS_INDEX](./02-AIRCRAFT/CONFIGURATION_BASE/00-COMMON/UTCS_INDEX/)
 
-## 📖 Glossary of Terms and Acronyms
+- [ATA-05_TIME_LIMITS_MAINT_CHECKS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/)
+  · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/BASELINE/)
+  · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/CHANGE_LOG/)
+  · [HW_CONFIG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/HW_CONFIG/)
+  · [ICD](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/ICD/)
+  · [PARAMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/PARAMS/)
+  · [SW_BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/SW_BASELINE/)
+  · [VERIFICATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-05_TIME_LIMITS_MAINT_CHECKS/VERIFICATION/)
 
-| Acronym/Term | Category | Definition |
-| :--- | :--- | :--- |
-| **AAA** | Domain | Airframes, Aerodynamics, Airworthiness: Covers structural design, flight physics, and regulatory compliance. |
-| **AAP** | Domain | Airport Adaptable Platforms: Covers compatibility and operational readiness with various ground infrastructure systems. |
-| **CCC** | Domain | Cockpit, Cabin, Cargo: Covers HMI, passenger experience (PAx), and payload management systems. |
-| **CQH** | Domain | Cryogenics, Quantum, H2: Covers extreme temperature fluid storage (Hydrogen), and integrated quantum hardware/software. |
-| **DDD** | Domain | Drainage, Dehumidification, Drying: Covers environmental control, moisture management, and fluid drainage systems. |
-| **EDI** | Domain | Electronics, Digital, Instruments: Covers digital systems, avionics, sensors, and flight instrumentation. |
-| **EEE** | Domain | Electrical, Endotransponders, Circulation: Covers power generation, distribution, transponders, and circulation mechanics. |
-| **EER** | Domain | Environmental, Emissions, Remediation: Covers ecological impact, noise, emissions, and sustainable practices. |
-| **IIF** | Domain | Industrial Infrastructure, Facilities: Covers manufacturing plants, tooling, and maintenance facilities requirements. |
-| **IIS** | Domain | Information, Intelligence, Systems: Covers data management, advanced analytics, AI, and operational intelligence. |
-| **LCC** | Domain | Linkages, Control, Communications: Covers mechanical linkages, control laws, and internal/external communication systems. |
-| **LIB** | Domain | Logistics, Inventory, Blockchain: Covers supply chain management, spares inventory, and decentralized ledger technology (DLT) for provenance. |
-| **MEC** | Domain | Mechanical Systems, Modules: Covers non-propulsive mechanical components (hydraulics, landing gear, actuators). |
-| **OOO** | Domain | OS, Ontologies, Office Interfaces: Covers operating system requirements, data semantics (ontologies), and enterprise IT integration. |
-| **PPP** | Domain | Propulsion, Fuel Systems: Covers engines, motors, energy generation, and fuel management (including H₂). |
-| **---** | **PLM/CAx** | **---** |
-| **CAD** | CAx | Computer-Aided Design: Geometric modeling, parts, and assemblies. |
-| **CAE** | CAx | Computer-Aided Engineering: Simulation and analysis (CFD, FEM, MBD, EMI). |
-| **CAO** | CAx | Computer-Aided Optimization: Requirements management and early-stage systems engineering. |
-| **CAM** | CAx | Computer-Aided Manufacturing: NC programming, toolpath generation, and machining setup. |
-| **CAI** | CAx | Computer-Aided Integration: Assembly planning, installation procedures, and interface control. |
-| **CAV** | CAx | Computer-Aided Verification: Quality assurance, metrology, inspection planning, and certification evidence. |
-| **CAS** | CAx | Customer Aftermarket Service: Maintenance (AMM), repair (SRM), spare parts (IPD), and in-service data (EIS). |
-| **CMP** | CAx | Compliance/Corporate Management: EOL, ESG, process automation, and digital thread management (CAP). |
-| **---** | **TFA/MAL** | **---** |
-| **TFA** | Architecture | Technology and Functional Architecture: The core underlying system design integrating classical and quantum-inspired computational layers. |
-| **QS** | TFA Flow | **Quantum Superposition State (QS):** The initial, probabilistic, high-dimensional state space defining all possible solutions and operational scenarios. Used for massive data provenance. |
-| **FWD** | TFA Flow | **Forward Wave Dynamics (FWD):** The analysis layer responsible for predictability, uncertainty management, and high-level decision framing based on modeling the propagation of possibilities from the QS. |
-| **UE** | TFA Flow | **Unit/Unique Element (UE):** The point where the 'wave function collapses.' It represents a specific, verifiable, and deterministic snapshot of a component or system state for classical processing. |
-| **FE** | TFA Flow | **Federation Entanglement (FE):** The decision chain mechanism linking and coordinating multiple UEs. Ensures coordinated, traceable decision-making across distributed elements. |
-| **CB** | TFA Flow | **Classical Bit / Solver (CB):** The deterministic layer utilizing classical processing and algorithms (e.g., MILP, GA) to enforce known physical constraints. |
-| **QB** | TFA Flow | **Qubit Inspired Solver (QB):** The core optimization engine utilizing quantum or quantum-inspired methods (e.g., QUBO, QAOA) to find optimal solutions within the constrained space defined by the CB layer. |
-| **MAL-EEM** | Policy | Machine Learning **Ethics, Empathy, Explainability**, and Mitigation: Mandatory checklist ensuring human-centric design, transparency, and risk management for ML models. |
-| **UTCS** | Policy | Universal Traceability and Certification Standard: System used to index all artifacts to requirements and evidence. |
-```
+- [ATA-06_DIMENSIONS_AREAS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/)
+  · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/BASELINE/)
+  · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/CHANGE_LOG/)
+  · [HW_CONFIG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/HW_CONFIG/)
+  · [ICD](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/ICD/)
+  · [PARAMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/PARAMS/)
+  · [SW_BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/SW_BASELINE/)
+  · [VERIFICATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-06_DIMENSIONS_AREAS/VERIFICATION/)
+
+- [ATA-08_LEVELING_WEIGHING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/)
+  · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/BASELINE/)
+  · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/CHANGE_LOG/)
+  · [HW_CONFIG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/HW_CONFIG/)
+  · [ICD](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/ICD/)
+  · [PARAMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/PARAMS/)
+  · [SW_BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/SW_BASELINE/)
+  · [VERIFICATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-08_LEVELING_WEIGHING/VERIFICATION/)
+
+- [ATA-11_PLACARDS_MARKINGS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/)
+  · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/BASELINE/)
+  · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/CHANGE_LOG/)
+  · [HW_CONFIG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/HW_CONFIG/)
+  · [ICD](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/ICD/)
+  · [PARAMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/PARAMS/)
+  · [SW_BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/SW_BASELINE/)
+  · [VERIFICATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-11_PLACARDS_MARKINGS/VERIFICATION/)
+
+- [ATA-12_SERVICING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/)
+  · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/BASELINE/)
+  · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/CHANGE_LOG/)
+  · [HW_CONFIG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/HW_CONFIG/)
+  · [ICD](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/ICD/)
+  · [PARAMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/PARAMS/)
+  · [SW_BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/SW_BASELINE/)
+  · [VERIFICATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-12_SERVICING/VERIFICATION/)
+
+- [ATA-20_STANDARD_PRACTICES](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-20_STANDARD_PRACTICES/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-20_STANDARD_PRACTICES/BASELINE/) · [CHANGE_LOG](./02-AIRC[...]
+- [ATA-21_AIR_CONDITIONING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-21_AIR_CONDITIONING/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-21_AIR_CONDITIONING/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/C[...]
+- [ATA-22_AUTO_FLIGHT](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-22_AUTO_FLIGHT/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-22_AUTO_FLIGHT/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BA[...]
+- [ATA-23_COMMUNICATIONS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-23_COMMUNICATIONS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-23_COMMUNICATIONS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGU[...]
+- [ATA-24_ELECTRICAL_POWER](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-24_ELECTRICAL_POWER/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-24_ELECTRICAL_POWER/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/C[...]
+- [ATA-25_EQUIPMENT_FURNISHINGS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-25_EQUIPMENT_FURNISHINGS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-25_EQUIPMENT_FURNISHINGS/BASELINE/) · [CHANGE_LOG]([...]
+- [ATA-26_FIRE_PROTECTION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-26_FIRE_PROTECTION/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-26_FIRE_PROTECTION/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONF[...]
+- [ATA-27_FLIGHT_CONTROLS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-27_FLIGHT_CONTROLS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-27_FLIGHT_CONTROLS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONF[...]
+- [ATA-28_FUEL](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-28_FUEL/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-28_FUEL/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-28_FUEL/CHANGE[...]
+- [ATA-29_HYDRAULIC_POWER](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-29_HYDRAULIC_POWER/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-29_HYDRAULIC_POWER/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONF[...]
+- [ATA-30_ICE_RAIN_PROTECTION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-30_ICE_RAIN_PROTECTION/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-30_ICE_RAIN_PROTECTION/BASELINE/) · [CHANGE_LOG](./02-A[...]
+- [ATA-31_INDICATING_RECORDING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-31_INDICATING_RECORDING/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-31_INDICATING_RECORDING/BASELINE/) · [CHANGE_LOG](./0[...]
+- [ATA-32_LANDING_GEAR](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-32_LANDING_GEAR/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-32_LANDING_GEAR/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION[...]
+- [ATA-33_LIGHTS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-33_LIGHTS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-33_LIGHTS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-33_LIGHT[...]
+- [ATA-34_NAVIGATION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-34_NAVIGATION/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-34_NAVIGATION/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/[...]
+- [ATA-35_OXYGEN](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-35_OXYGEN/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-35_OXYGEN/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-35_OXYGE[...]
+- [ATA-36_PNEUMATIC](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-36_PNEUMATIC/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-36_PNEUMATIC/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA[...]
+- [ATA-38_WATER_WASTE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-38_WATER_WASTE/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-38_WATER_WASTE/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BA[...]
+- [ATA-42_INTEGRATED_MODULAR_AVIONICS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-42_INTEGRATED_MODULAR_AVIONICS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-42_INTEGRATED_MODULAR_AVIONICS/BASELINE/[...]
+- [ATA-44_CABIN_SYSTEMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-44_CABIN_SYSTEMS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-44_CABIN_SYSTEMS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURAT[...]
+- [ATA-45_CENTRAL_MAINTENANCE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-45_CENTRAL_MAINTENANCE/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-45_CENTRAL_MAINTENANCE/BASELINE/) · [CHANGE_LOG](./02-A[...]
+- [ATA-46_INFORMATION_SYSTEMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-46_INFORMATION_SYSTEMS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-46_INFORMATION_SYSTEMS/BASELINE/) · [CHANGE_LOG](./02-A[...]
+- [ATA-47_INERT_GAS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-47_INERT_GAS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-47_INERT_GAS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA[...]
+- [ATA-49_APU](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-49_APU/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-49_APU/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-49_APU/CHANGE_LOG[...]
+- [ATA-50_CARGO_LOAD_SYSTEMS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-50_CARGO_LOAD_SYSTEMS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-50_CARGO_LOAD_SYSTEMS/BASELINE/) · [CHANGE_LOG](./02-AIRC[...]
+- [ATA-51_STRUCTURES_GENERAL](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-51_STRUCTURES_GENERAL/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-51_STRUCTURES_GENERAL/BASELINE/) · [CHANGE_LOG](./02-AIRC[...]
+- [ATA-52_DOORS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-52_DOORS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-52_DOORS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-52_DOORS/CH[...]
+- [ATA-53_FUSELAGE-STRUCTURES](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-53_FUSELAGE-STRUCTURES/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-53_FUSELAGE-STRUCTURES/BASELINE/) · [CHANGE_LOG](./02-AIRC[...]
+- [ATA-54_NACELLES_PYLONS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-54_NACELLES_PYLONS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-54_NACELLES_PYLONS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONF[...]
+- [ATA-55_STABILIZERS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-55_STABILIZERS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-55_STABILIZERS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BA[...]
+- [ATA-56_WINDOWS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-56_WINDOWS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-56_WINDOWS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-56_WI[...]
+- [ATA-57_WINGS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-57_WINGS/CH[...]
+- [ATA-70_POWERPLANT_PRACTICES](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-70_POWERPLANT_PRACTICES/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-70_POWERPLANT_PRACTICES/BASELINE/) · [CHANGE_LOG](./0[...]
+- [ATA-71_POWERPLANT](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-71_POWERPLANT/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-71_POWERPLANT/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/[...]
+- [ATA-72_ENGINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-72_ENGINE/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-72_ENGINE/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-72_ENGIN[...]
+- [ATA-73_ENGINE_FUEL_CONTROL](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-73_ENGINE_FUEL_CONTROL/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-73_ENGINE_FUEL_CONTROL/BASELINE/) · [CHANGE_LOG](./02-A[...]
+- [ATA-74_IGNITION](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-74_IGNITION/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-74_IGNITION/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-74[...]
+- [ATA-75_BLEED_AIR](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-75_BLEED_AIR/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-75_BLEED_AIR/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA[...]
+- [ATA-76_ENGINE_CONTROLS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-76_ENGINE_CONTROLS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-76_ENGINE_CONTROLS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONF[...]
+- [ATA-77_ENGINE_INDICATING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-77_ENGINE_INDICATING/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-77_ENGINE_INDICATING/BASELINE/) · [CHANGE_LOG](./02-AIRCRAF[...]
+- [ATA-78_EXHAUST](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-78_EXHAUST/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-78_EXHAUST/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-78_EX[...]
+- [ATA-79_OIL](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-79_OIL/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-79_OIL/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-79_OIL/CHANGE_LOG[...]
+- [ATA-80_STARTING](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-80_STARTING/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-80_STARTING/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-80[...]
+- [ATA-92_EWIS](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-92_EWIS/) · [BASELINE](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-92_EWIS/BASELINE/) · [CHANGE_LOG](./02-AIRCRAFT/CONFIGURATION_BASE/ATA-92_EWIS/CHANGE[...]
+
+---
+
+### 02-AIRCRAFT · CROSS_SYSTEM_INTEGRATION
+- [01-ARCHITECTURE_END2END](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/01-ARCHITECTURE_END2END/)
+  · [FUNCTIONAL_CHAINS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/01-ARCHITECTURE_END2END/FUNCTIONAL_CHAINS/)
+  · [INTERFACE_MATRIX](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/01-ARCHITECTURE_END2END/INTERFACE_MATRIX/)
+  · [SYSTEM_CONTEXT](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/01-ARCHITECTURE_END2END/SYSTEM_CONTEXT/)
+- [02-NETWORKS_DATA_BUS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/02-NETWORKS_DATA_BUS/)
+  · [LOGICAL](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/02-NETWORKS_DATA_BUS/LOGICAL/)
+  · [PHYSICAL](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/02-NETWORKS_DATA_BUS/PHYSICAL/)
+  · [QOS_TIMING](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/02-NETWORKS_DATA_BUS/QOS_TIMING/)
+- [03-TIME_SYNCHRONISATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/03-TIME_SYNCHRONISATION/)
+- [04-POWER_THERMAL_CROSSLOAD](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/04-POWER_THERMAL_CROSSLOAD/)
+- [05-IMA_INTEGRATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/05-IMA_INTEGRATION/)
+  · [SCHEDULE_TABLES](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/05-IMA_INTEGRATION/SCHEDULE_TABLES/)
+- [06-SOFTWARE_INTEGRATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/06-SOFTWARE_INTEGRATION/)
+- [07-INTEGRATION_TEST](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/07-INTEGRATION_TEST/)
+- [08-SAFETY_SECURITY](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/08-SAFETY_SECURITY/)
+- [09-CONFIG_BASELINES_HANDOFF](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/09-CONFIG_BASELINES_HANDOFF/)
+  · [INTEGRATION_BASELINES](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/09-CONFIG_BASELINES_HANDOFF/INTEGRATION_BASELINES/)
+  · [IBL-2025-Q3](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/09-CONFIG_BASELINES_HANDOFF/INTEGRATION_BASELINES/IBL-2025-Q3/)
+  · [LINKS_TO_ATA](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/09-CONFIG_BASELINES_HANDOFF/LINKS_TO_ATA/)
+- [10-ICD_LINKS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/10-ICD_LINKS/)
+- [11-MODELS_SIMULATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/11-MODELS_SIMULATION/)
+- [12-OPERATIONS_FLEET_FEEDBACK](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/12-OPERATIONS_FLEET_FEEDBACK/)
+- [13-DATA](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/13-DATA/) · [SCHEMAS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/13-DATA/SCHEMAS/)
+- [14-METRICS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/14-METRICS/)
+- [15-AUTOMATION](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/15-AUTOMATION/) · [SCRIPTS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/15-AUTOMATION/SCRIPTS/)
+- [16-COMPLIANCE](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/16-COMPLIANCE/) · [AUDIT_CHECKLISTS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/16-COMPLIANCE/AUDIT_CHECKLISTS/)
+- [17-LINKS](./02-AIRCRAFT/CROSS_SYSTEM_INTEGRATION/17-LINKS/)
+
+---
+
+### 02-AIRCRAFT · DIGITAL_TWIN_MODEL
+- [01-ARCHITECTURE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/)
+  · [analysis](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/analysis/)
+  · [notebooks](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/analysis/notebooks/)
+  · [scripts](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/analysis/scripts/)
+  · [api](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/api/)
+  · [grpc](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/api/grpc/)
+  · [rest](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/api/rest/)
+  · [ci](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/ci/)
+  · [compliance](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/compliance/) · [IEF](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/compliance/IEF/)
+  · [configuration](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/configuration/) · [calibration](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/configuration/calibration/)
+  · [coords](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/coords/) · [transforms](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/coords/transforms/)
+  · [data_contracts](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/data_contracts/) · [api](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/data_contracts/api/) · [schemas](./02-AIRCRAFT/DIGITA[...]
+  · [execution](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/execution/) · [docker](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/execution/docker/) · [orchestration](./02-AIRCRAFT/DIGITAL_T[...]
+  · [interfaces](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/interfaces/) · [dds](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/interfaces/dds/) · [idl](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-[...]
+  · [kpis](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/kpis/)
+  · [mapping](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/mapping/)
+  · [models](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/models/) · [fmu](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/models/fmu/) · [modelica](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITE[...]
+  · [ontologies](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/ontologies/)
+  · [packaging](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/packaging/) · [sbom](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/packaging/sbom/)
+  · [requirements](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/requirements/)
+  · [security](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/security/)
+  · [validation](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/validation/) · [reports](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/01-ARCHITECTURE/validation/reports/)
+- [02-MODELS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/)
+  · [BEHAVIORAL](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/BEHAVIORAL/) · [CONTROL_LOGIC](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/BEHAVIORAL/CONTROL_LOGIC/) · [STATE_MACHINES](./02-AIRCRAFT/DIG[...]
+  · [CO_SIMULATION](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/CO_SIMULATION/) · [FMU_FMI](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/CO_SIMULATION/FMU_FMI/)
+  · [DATA_DRIVEN](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/DATA_DRIVEN/) · [ANOMALY_DETECTORS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/DATA_DRIVEN/ANOMALY_DETECTORS/) · [ONNX_MODELS](./02-AIRC[...]
+  · [PHYSICS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/PHICS/) · [AERODYNAMICS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-MODELS/PHYSICS/AERODYNAMICS/) · [ENERGY_H2](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/02-M[...]
+- [03-INTERFACES_APIS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/03-INTERFACES_APIS/)
+  · [STREAMS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/03-INTERFACES_APIS/STREAMS/) · [INPUTS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/03-INTERFACES_APIS/STREAMS/INPUTS/) · [OUTPUTS](./02-AIRCRAFT/DIGITAL_TWIN_MO[...]
+- [04-VERSIONING_CONFIG](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/04-VERSIONING_CONFIG/)
+  · [PARAMETER_SETS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/04-VERSIONING_CONFIG/PARAMETER_SETS/) · [BASELINE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/04-VERSIONING_CONFIG/PARAMETER_SETS/BASELINE/) · [VARIANTS][...]
+  · [SERIALIZED_INSTANCES](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/04-VERSIONING_CONFIG/SERIALIZED_INSTANCES/)
+- [05-CALIBRATION_ALIGNMENT](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/05-CALIBRATION_ALIGNMENT/)
+  · [ALIGNMENT_REPORTS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/05-CALIBRATION_ALIGNMENT/ALIGNMENT_REPORTS/)
+  · [DATASETS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/05-CALIBRATION_ALIGNMENT/DATASETS/) · [FLIGHT_TEST](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/05-CALIBRATION_ALIGNMENT/DATASETS/FLIGHT_TEST/) · [GROUND_TEST]([...]
+- [06-VALIDATION_VERIFICATION](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/06-VALIDATION_VERIFICATION/)
+  · [RESULTS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/06-VALIDATION_VERIFICATION/RESULTS/)
+  · [TEST_CASES](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/06-VALIDATION_VERIFICATION/TEST_CASES/)
+- [07-RUNTIME_DEPLOYMENT](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/07-RUNTIME_DEPLOYMENT/)
+  · [RUNTIME_PROFILES](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/07-RUNTIME_DEPLOYMENT/RUNTIME_PROFILES/) · [EDGE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/07-RUNTIME_DEPLOYMENT/RUNTIME_PROFILES/EDGE/) · [GROUND](.[...]
+- [08-SYNCHRONISATION](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/08-SYNCHRONISATION/)
+- [09-INTEGRATIONS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/09-INTEGRATIONS/)
+- [10-METRICS](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/10-METRICS/)
+- [11-SAFETY_COMPLIANCE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/11-SAFETY_COMPLIANCE/) · [ASSURANCE_CASE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/11-SAFETY_COMPLIANCE/ASSURANCE_CASE/)
+- [12-CODE](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/12-CODE/) · [CI_CD](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/12-CODE/CI_CD/) · [INFERENCE_RUNTIME](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/12-CODE/INFERENCE_RUNTIME/) �[...]
+- [13-TEMPLATES](./02-AIRCRAFT/DIGITAL_TWIN_MODEL/13-TEMPLATES/)
+
+### 02-AIRCRAFT › [DOMAIN_INTEGRATION](./02-AIRCRAFT/DOMAIN_INTEGRATION/)
+- [PRODUCTS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/)
+  - [AMPEL360-AIR-T](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/)
+    - [MODELS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/)
+      - [BWB-H2-Hy-E](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/)
+        - [VERSION](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/)
+          - [Q100](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/)
+            - [00-CONFIG](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/00-CONFIG/)
+              - [CONFIG_SETS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/00-CONFIG/CONFIG_SETS/)
+              - [SCHEMAS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/00-CONFIG/SCHEMAS/)
+            - [01-EFFECTIVITY](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/01-EFFECTIVITY/)
+              - [BLOCKS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/01-EFFECTIVITY/BLOCKS/)
+              - [MODS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/01-EFFECTIVITY/MODS/)
+            - [02-RELEASE_TAGS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/02-RELEASE_TAGS/)
+            - [03-TRACEABILITY](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/03-TRACEABILITY/)
+            - [04-ICD_LINKS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/04-ICD_LINKS/)
+            - [DOMAINS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/)
+              - **AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/)
+                  - [06-DIMENSIONS-STATIONS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/06-DIMENS[...]
+                    - [INTERFACE_MATRIX](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/06-DIMENSIONS[...]
+                    - [SUBSYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/06-DIMENSIONS-STATI[...]
+                      - [06-00_GENERAL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEM[...]
+                      - [06-20_FUSELAGE_STATIONS_FS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORT[...]
+                      - [06-30_WATERLINES_WL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/[...]
+                      - [06-40_BUTTOCK_LINES_BL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINE[...]
+                      - [06-50_WING_STATIONS_WS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINE[...]
+                      - [06-60_LDG_GEAR_REF_POINTS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTH[...]
+                      - [06-90_TOOLS_FIXTURES_GSE › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHI[...]
+                  - [51-STRUCTURES-GENERAL](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/51-STRUCTU[...]
+                    - [INTERFACE_MATRIX](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/51-STRUCTURES[...]
+                    - [SUBSYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/51-STRUCTURES-GENER[...]
+                      - [51-00_GENERAL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEM[...]
+                  - [52-DOORS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/52-DOORS/)
+                    - [INTERFACE_MATRIX](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/52-DOORS/INTE[...]
+                    - [SUBSYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/52-DOORS/SUBSYSTEMS[...]
+                      - [52-10_PASSENGER-DOORS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINES[...]
+                  - [53-FUSELAGE-STRUCTURES](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/53-FUSELA[...]
+                    - [INTERFACE_MATRIX](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/53-FUSELAGE-S[...]
+                    - [SUBSYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SYSTEMS/53-FUSELAGE-STRUCTU[...]
+                      - [53-10_CENTER-BODY › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SY[...]
+                      - [53-20_NOSE_SECTION › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/S[...]
+                      - [53-30_AFT_SECTION › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SY[...]
+                      - [53-40_BULKHEADS_FRAMES › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINE[...]
+                      - [53-50_SKIN_PANELS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/SY[...]
+                      - [53-60_DOORS_HATCHES › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHINESS/[...]
+                      - [53-70_MOUNTING_INTERFACES › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTH[...]
+                      - [53-80_MATERIALS_COATINGS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTHI[...]
+                      - [53-90_QUALIFICATION_TESTS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAA-AIRFRAMES-AERODYNAMICS-AIRWORTH[...]
+              - **AAP-AIRPORT-ADAPTABLE-PLATFORMS**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTEMS/)
+                  - [10-PARKING.MOORING](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTEMS/10-PARKING.MOORING/)
+                    - [INTERFACE_MATRIX](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTEMS/10-PARKING.MOORING/INT[...]
+                    - [SUBSYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTEMS/10-PARKING.MOORING/SUBSYSTEM[...]
+                      - [10-10_MOORING_ANCHORS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTEMS[...]
+                      - [10-20_AUTONOMOUS_DOCKING_GUIDE › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORM[...]
+                      - [10-30_GROUND_UMBILICALS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYSTE[...]
+                      - [10-40_WEATHER_WIND_SENSORS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SY[...]
+                      - [10-50_MOORING_STATUS_MONITOR › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/[...]
+                      - [10-60_SAFEHOLD_INTERLOCKS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYS[...]
+                      - [10-70_GSE_COMMUNICATION_IF › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SY[...]
+                      - [10-90_PROCEDURES_TRAINING › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/AAP-AIRPORT-ADAPTABLE-PLATFORMS/SYS[...]
+              - **CCC-COCKPIT-CABIN-CARGO**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CCC-COCKPIT-CABIN-CARGO/SYSTEMS/)
+                  - [25-EQUIPMENT_FURNISHINGS › SUBSYSTEMS › 25-10_SEATS_PASSENGER › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CCC-COC[...]
+                  - [35-OXYGEN › SUBSYSTEMS › 35-10_FLIGHTCREW_FIXED_OXYGEN › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CCC-COCKPIT-CA[...]
+                  - [43-CABIN_SYSTEMS › SUBSYSTEMS › 43-31_EMERGENCY_LIGHTING_EL › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CCC-COCKP[...]
+                  - [44-CABIN_CONTROL › SUBSYSTEMS › 44-10_CMS_CORE_CONTROLLER_IMA_PARTITIONS › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMA[...]
+              - **CQH-CRYOGENICS-QUANTUM-H2**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CQH-CRYOGENICS-QUANTUM-H2/SYSTEMS/)
+                  - [47-20_LH2_AUX_THERMAL_CONDITIONING › SUBSYSTEMS › 47-21_SUBCOOLER_COLD_BOX › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION[...]
+                  - [47-40_AUX_VALVES_MANIFOLDS › SUBSYSTEMS › 47-41_CRYO_SHUTOFF_VALVES_SOV › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q1[...]
+                  - [47-60_N2_PURGE_SUPPLY › SUBSYSTEMS › 47-61_PURGE_MANIFOLD › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/CQH[...]
+              - **DDD-DRAINAGE-DEHUMIDIFICATION-DRYING**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/DDD-DRAINAGE-DEHUMIDIFICATION-DRYING/SYSTEMS/)
+                  - [09-SURFACE_PROTECTION_DRAINAGE › SUBSYSTEMS › 09-30_DRAIN_HOLES_GUARDS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q10[...]
+                  - [21-DEHUMIDIFICATION_ECS › SUBSYSTEMS › 21-10_AIR_DRYERS_DESICCANT_PACKS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q1[...]
+              - **EDI-ELECTRONICS-DIGITAL-INSTRUMENTS**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EDI-ELECTRONICS-DIGITAL-INSTRUMENTS/SYSTEMS/)
+                  - [31-INDICATING_RECORDING › SUBSYSTEMS › 31-30_RECORDERS_FDR_CVR › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EDI-EL[...]
+                  - [42-INTEGRATED_MODULAR_AVIONICS › SUBSYSTEMS › 42-30_TIME_SYNC_PTP_IRIG › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAIN[...]
+              - **EEE-ELECTRICAL-ENDOTRANSPONDERS-CIRCULATION**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EEE-ELECTRICAL-ENDOTRANSPONDERS-CIRCULATION/SYSTEMS/)
+                  - [24-ELECTRICAL-POWER › SUBSYSTEMS › 24-00_STANDARDS_GENERAL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EE[...]
+                  - [33-LIGHTS › SUBSYSTEMS › 33-10_EXTERNAL_NAV_STROBE_BEACON › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EEE[...]
+                  - [80-STARTING › SUBSYSTEMS › 80-10_STARTER_GENERATORS_SG_PMSM › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/E[...]
+              - **EER-ENVIRONMENTAL-EMISSIONS-REMEDIATION**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EER-ENVIRONMENTAL-EMISSIONS-REMEDIATION/SYSTEMS/)
+                  - [26-FIRE_PROTECTION › SUBSYSTEMS › 26-20_SUPPRESSION_BOTTLES_LINES › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EER[...]
+                  - [38-WATER_WASTE › SUBSYSTEMS › 38-40_FREEZE_PROTECTION_HEAT › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/EER-ENVIRO[...]
+              - **IIF-INDUSTRIAL-INFRASTRUCTURE-FACILITIES**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/IIF-INDUSTRIAL-INFRASTRUCTURE-FACILITIES/SYSTEMS/)
+                  - [07-LIFTING-SHORING › SUBSYSTEMS › 07-10_AIRCRAFT_TRIPOD_JACKS › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/IIF-IND[...]
+              - **IIS-INFORMATION-INTELLIGENCE-SYSTEMS**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/IIS-INFORMATION-INTELLIGENCE-SYSTEMS/SYSTEMS/)
+                  - [46-INFORMATION-SYSTEMS › SUBSYSTEMS › 46-10_NETWORK › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/IIS-INFORMATION-I[...]
+              - **LCC-LINKAGES-CONTROL-COMMUNICATIONS**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/LCC-LINKAGES-CONTROL-COMMUNICATIONS/SYSTEMS/)
+                  - [22-AUTO_FLIGHT › SUBSYSTEMS › 22-10_AFCS_FLIGHT_CONTROL_COMPUTERS › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/LCC[...]
+              - **LIB-LOGISTICS-INVENTORY-BLOCKCHAIN**
+                - [SYSTEMS](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/LIB-LOGISTICS-INVENTORY-BLOCKCHAIN/SYSTEMS/)
+                  - [01-INTRODUCTION › SUBSYSTEMS › 01-00_STANDARDS_GENERAL › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/LIB-LO[...]
+                  - [04-AIRWORTHINESS_LIMITATIONS › SUBSYSTEMS › 04-10_LIMITATIONS_MATRIX_LEDGER › PLM](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/D[...]
+                  - [05-TIME-LIMITS › SUBSYSTEMS › 05-10_SCHEDULES_CALENDAR_TASKS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/[...]
+                  - [100-GENERAL › SUBSYSTEMS › 100-10_METADATA_SCHEMAS_QMS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/LIB-LO[...]
+                  - [12-SERVICING › SUBSYSTEMS › 12-10_LINE_BASE_SOPS_CHECKLISTS › PLM › CAx](./02-AIRCRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-AIR-T/MODELS/BWB-H2-Hy-E/VERSION/Q100/DOMAINS/L[...]
+              
+* [03-SPACECRAFT](./03-SPACECRAFT)
+  * [DOMAIN_INTEGRATION](./03-SPACECRAFT/DOMAIN_INTEGRATION)
+    * [PRODUCTS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS)
+      * [AMPEL360-SPACE-T](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T)
+        * [MODELS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS)
+          * [PLUS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS)
+            * [VERSION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION)
+              * [Q10](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10)
+                * [DOMAINS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS)
+                  * [STA-A-STRUCTURES-MECHANISMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS)
+                      * [06_DIMENSIONS_ALIGNMENTS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/06_DIMENSIONS_ALIGNM[...]
+                      * [50_PAYLOAD_STRUCTURES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/50_PAYLOAD_STRUCTURES)
+                      * [51_PRIMARY_STRUCTURE](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/51_PRIMARY_STRUCTURE)
+                      * [52_DOORS_HATCHES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/52_DOORS_HATCHES)
+                      * [53_STRUCTURAL_BODY](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/53_STRUCTURAL_BODY)
+                      * [55_ADCS_STRUCTURES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/55_ADCS_STRUCTURES)
+                      * [56_WINDOWS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/56_WINDOWS)
+                      * [57_SOLAR_ARRAYS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/57_SOLAR_ARRAYS)
+                      * [66_MECHANISMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/66_MECHANISMS)
+                      * [94_QUALIFICATION_ACCEPTANCE](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-A-STRUCTURES-MECHANISMS/SYSTEMS/94_QUALIFICATION_[...]
+                  * [STA-B-THERMAL-TPS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-B-THERMAL-TPS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-B-THERMAL-TPS/SYSTEMS)
+                      * [21-THERMAL_CONTROL](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-B-THERMAL-TPS/SYSTEMS/21-THERMAL_CONTROL)
+                      * [30-ICE_DEW_PREVENTION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-B-THERMAL-TPS/SYSTEMS/30-ICE_DEW_PREVENTION)
+                  * [STA-C-POWER-EPS-HARNESS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS/SYSTEMS)
+                      * [24-ELECTRICAL_POWER](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS/SYSTEMS/24-ELECTRICAL_POWER)
+                      * [39-POWER_CONTROL_PANELS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS/SYSTEMS/39-POWER_CONTROL_PANELS)
+                      * [49-AUXILIARY_POWER](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS/SYSTEMS/49-AUXILIARY_POWER)
+                      * [97-HARNESS_EWIS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-C-POWER-EPS-HARNESS/SYSTEMS/97-HARNESS_EWIS)
+                  * [STA-D-COMMUNICATIONS-TTANDC](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-D-COMMUNICATIONS-TTANDC)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-D-COMMUNICATIONS-TTANDC/SYSTEMS)
+                      * [23-COMMUNICATIONS_RF_LINKS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-D-COMMUNICATIONS-TTANDC/SYSTEMS/23-COMMUNICATIONS_[...]
+                      * [33-TELEMETRY_TELECOMMAND](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-D-COMMUNICATIONS-TTANDC/SYSTEMS/33-TELEMETRY_TELECOM[...]
+                      * [48-ANTENNAS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-D-COMMUNICATIONS-TTANDC/SYSTEMS/48-ANTENNAS)
+                  * [STA-E-NAVIGATION-TIME-DATA](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-E-NAVIGATION-TIME-DATA)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-E-NAVIGATION-TIME-DATA/SYSTEMS)
+                      * [31_NAV_SENSORS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-E-NAVIGATION-TIME-DATA/SYSTEMS/31_NAV_SENSORS)
+                      * [34_NAVIGATION_COMPUTATION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-E-NAVIGATION-TIME-DATA/SYSTEMS/34_NAVIGATION_COMPUT[...]
+                      * [41_TIME_SYNCHRONIZATION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-E-NAVIGATION-TIME-DATA/SYSTEMS/41_TIME_SYNCHRONIZATIO[...]
+                  * [STA-F-AVIONICS-FSW-DATABUS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-F-AVIONICS-FSW-DATABUS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-F-AVIONICS-FSW-DATABUS/SYSTEMS)
+                      * [40-FLIGHT_SOFTWARE](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-F-AVIONICS-FSW-DATABUS/SYSTEMS/40-FLIGHT_SOFTWARE)
+                      * [42-AVIONICS_COMPUTERS_IMA](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-F-AVIONICS-FSW-DATABUS/SYSTEMS/42-AVIONICS_COMPUTER[...]
+                      * [93-DATABUS_NETWORKS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-F-AVIONICS-FSW-DATABUS/SYSTEMS/93-DATABUS_NETWORKS)
+                  * [STA-G-CONTROL-AUTONOMY-FDIR](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-G-CONTROL-AUTONOMY-FDIR)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-G-CONTROL-AUTONOMY-FDIR/SYSTEMS)
+                      * [22-AUTONOMY_MODES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-G-CONTROL-AUTONOMY-FDIR/SYSTEMS/22-AUTONOMY_MODES)
+                      * [44-GNC_GUIDANCE_NAV_CONTROL](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-G-CONTROL-AUTONOMY-FDIR/SYSTEMS/44-GNC_GUIDANCE_N[...]
+                      * [45-FDIR_FAULT_PROTECTION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-G-CONTROL-AUTONOMY-FDIR/SYSTEMS/45-FDIR_FAULT_PROTEC[...]
+                  * [STA-H-ECLSS-CREW-PAYLOAD](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-H-ECLSS-CREW-PAYLOAD)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-H-ECLSS-CREW-PAYLOAD/SYSTEMS)
+                      * [25_ECLSS_CABIN_ENVIRONMENT](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-H-ECLSS-CREW-PAYLOAD/SYSTEMS/25_ECLSS_CABIN_ENVIRO[...]
+                  * [STA-I-PROPULSION-FLUIDS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS)
+                      * [28-PROPELLANT_SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/28-PROPELLANT_SYSTEMS)
+                      * [29-PNEUMATIC_HYDRAULIC_POWER](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/29-PNEUMATIC_HYDRAUL[...]
+                      * [54-PROPULSION_STRUCTURES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/54-PROPULSION_STRUCTURES[...]
+                      * [61-RCS_ATTITUDE_CONTROL](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/61-RCS_ATTITUDE_CONTROL)
+                      * [72-PROPULSION_THRUST_DEVICES](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/72-PROPULSION_THRUST[...]
+                      * [84-ELECTRIC_PROPULSION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-I-PROPULSION-FLUIDS/SYSTEMS/84-ELECTRIC_PROPULSION)
+                  * [STA-J-DOCKING-SAMPLING-ROBOTICS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-J-DOCKING-SAMPLING-ROBOTICS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-J-DOCKING-SAMPLING-ROBOTICS/SYSTEMS)
+                      * [58-DOCKING_SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-J-DOCKING-SAMPLING-ROBOTICS/SYSTEMS/58-DOCKING_SYSTEMS)
+                      * [59-SAMPLING_ROBOTICS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-J-DOCKING-SAMPLING-ROBOTICS/SYSTEMS/59-SAMPLING_ROBOTICS[...]
+                  * [STA-K-ENVIRONMENT-SAFETY-TRAFFIC](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS)
+                      * [15_ENVIRONMENT_CONTROL_MONITORING](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS/15_ENV[...]
+                      * [26_FIRE_SAFETY_ORDNANCE](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS/26_FIRE_SAFETY_O[...]
+                      * [86_PLANETARY_PROTECTION](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS/86_PLANETARY_PRO[...]
+                      * [87_RADIATION_ENVIRONMENT](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS/87_RADIATION_EN[...]
+                      * [90_SPACE_TRAFFIC_MANAGEMENT](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-K-ENVIRONMENT-SAFETY-TRAFFIC/SYSTEMS/90_SPACE_TRA[...]
+                  * [STA-L-GROUND-INTEGRATION-OPS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS)
+                    * [SYSTEMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS)
+                      * [07-GSE_HANDLING_LIFTING](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/07-GSE_HANDLING_LIFT[...]
+                      * [10-EGSE_POWER_COMMS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/10-EGSE_POWER_COMMS)
+                      * [16-INTEGRATION_AND_TEST](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/16-INTEGRATION_AND_T[...]
+                      * [32-EDL_LANDING_OPERATIONS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/32-EDL_LANDING_OPE[...]
+                      * [46-GROUND_MOC_INTERFACE](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/46-GROUND_MOC_INTERF[...]
+                      * [92-CALIBRATION_DATA_ARCHIVAL](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-L-GROUND-INTEGRATION-OPS/SYSTEMS/92-CALIBRATION_[...]
+                  * [STA-M-PROGRAM-COMPLIANCE-RECORDS](./03-SPACECRAFT/DOMAIN_INTEGRATION/PRODUCTS/AMPEL360-SPACE-T/MODELS/PLUS/VERSION/Q10/DOMAINS/STA-M-PROGRAM-COMPLIANCE-RECORDS)
+
+
+### 10-BUSINESS
+- [10-BUSINESS](./10-BUSINESS/)
+
+### scripts
+- [scripts](./scripts/)
+
+### tools
+- [tools](./tools/)
+
+
+
+
+> **Mission:** Design, certify, manufacture, and industrialise next-gen **aircraft**, **spacecraft**, and **aerospace full assets** with a closed-loop digital thread—from concept to fleet ops.
+
+--- 
+
+To optimize your approach, modularize the mathematical foundations into reusable snippets, parameterize examples with YAML schemas, and automate model linearization using symbolic tools like SymPy. This ensures consistency and traceability in the digital-twin pipeline. For next steps, create a concrete template for a new harvester node or a script for symbolic-to-state-space export as demonstrated. If you have access to the repo, you could commit these changes directly. Let me know how you'd like to proceed!
